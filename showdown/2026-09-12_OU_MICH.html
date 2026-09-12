@@ -82,6 +82,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
   .rail,.noprint{display:none !important;}
   main{max-width:none;padding:0;}
   .panel,.appendix{display:block !important;page-break-after:always;}
+  .game-report,.value-board,.player-book{display:block !important;}
   .appendix{page-break-after:auto;}
   table{background:#fff;page-break-inside:avoid;}
   th{background:#eee;color:#333;}
@@ -95,20 +96,25 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 }
 @page{margin:.5in;}
 #v-report:checked ~ .shell .rail label[for=v-report]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-value:checked ~ .shell .rail label[for=v-value]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
-.player-book{display:none;}
-#v-book:checked ~ .shell main{max-width:none;}
-#v-book:checked ~ .shell main .game-report{display:none;}
+.player-book,.value-board{display:none;}
+#v-book:checked ~ .shell main,#v-value:checked ~ .shell main{max-width:none;}
+#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .value-board{display:none;}
 #v-book:checked ~ .shell main .player-book{display:block;}
+#v-value:checked ~ .shell main .game-report,#v-value:checked ~ .shell main .player-book{display:none;}
+#v-value:checked ~ .shell main .value-board{display:block;}
 </style>
 </head><body>
 <input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-value"/>
 <input class="tab" type="radio" name="v" id="v-book"/>
 <div class="shell">
 <aside class="rail noprint">
 <p class="brand">CFB SHOWDOWN<br/>2026-09-12<br/>Oklahoma @ Michigan</p>
 <div class="view-row">
 <label class="pill" for="v-report">Report</label>
+<label class="pill" for="v-value">Value</label>
 <label class="pill" for="v-book">Player book</label>
 </div>
 <form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
@@ -267,8 +273,91 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tbody>
 <tr><td>Tory Blaylock</td><td>Oklahoma</td><td>Expected available vs Michigan.</td></tr>
 </tbody></table>
-<h3>OUR VALUE — Oklahoma @ Michigan</h3>
-<p>Every salary-board skill player with a <b>real</b> book number (yardage or receptions). Junk 0.5, scrape ceilings, and anytime-TD only are omitted. <b>1.00× is even.</b> Sorted highest value first.</p>
+<h3>SCRIPT SIX</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>John Mateer</td><td>Oklahoma</td><td>QB</td><td>$16,200</td><td class="val">0.85×</td><td>passing yards 229.5</td></tr>
+<tr><td>FLEX</td><td>Bryce Underwood</td><td>Michigan</td><td>QB</td><td>$9,800</td><td class="val">0.69×</td><td>passing yards 169.5</td></tr>
+<tr><td>FLEX</td><td>Isaiah Sategna III</td><td>Oklahoma</td><td>WR</td><td>$8,400</td><td class="val">0.71×</td><td>receiving yards 59.5</td></tr>
+<tr><td>FLEX</td><td>Trell Harris</td><td>Oklahoma</td><td>WR</td><td>$6,600</td><td class="val">0.73×</td><td>receiving yards 48.5</td></tr>
+<tr><td>FLEX</td><td>JJ Buchanan</td><td>Michigan</td><td>WR</td><td>$6,200</td><td class="val">0.77×</td><td>receiving yards 47.5</td></tr>
+<tr><td>FLEX</td><td>Parker Livingstone</td><td>Oklahoma</td><td>WR</td><td>$2,400</td><td class="val">1.10×</td><td>receiving yards 26.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $400  (spent $49,600 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>John Mateer is captain. 11/17 225 3 scores vs UTEP. ESPN: all 225 vs blitz; 0 of 4 vs four-man. He runs and throws. That was a quiet rushing night, not who he is. If he is captain, his rushing yards count extra.</li>
+<li>Bryce Underwood. 12/22 170 1 scores 1 INT plus 9-47-TD rush vs WMU. Pass Over is the trap vs OU front. He runs and throws.</li>
+<li>Isaiah Sategna III. 4-76-TD plus 88-yd punt return TD vs UTEP. 215 all-purpose. Stack with John Mateer.</li>
+<li>JJ Buchanan. Utah transfer. 6-126-TD including Hail Mary vs WMU. Stack with Bryce Underwood.</li>
+<li>Trell Harris. Last week 2-61-1. Stack with John Mateer.</li>
+<li>Parker Livingstone. Texas portal WR. Cleared concussion; 19 snaps vs UTEP, 1-6. Cheap at $2,400 so the expensive names still fit. Stack with John Mateer.</li>
+</ul>
+<p>Projected points on this six: 91.19. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 1</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>John Mateer</td><td>Oklahoma</td><td>QB</td><td>$16,200</td><td class="val">0.85×</td><td>passing yards 229.5</td></tr>
+<tr><td>FLEX</td><td>Bryce Underwood</td><td>Michigan</td><td>QB</td><td>$9,800</td><td class="val">0.69×</td><td>passing yards 169.5</td></tr>
+<tr><td>FLEX</td><td>Isaiah Sategna III</td><td>Oklahoma</td><td>WR</td><td>$8,400</td><td class="val">0.71×</td><td>receiving yards 59.5</td></tr>
+<tr><td>FLEX</td><td>Trell Harris</td><td>Oklahoma</td><td>WR</td><td>$6,600</td><td class="val">0.73×</td><td>receiving yards 48.5</td></tr>
+<tr><td>FLEX</td><td>JJ Buchanan</td><td>Michigan</td><td>WR</td><td>$6,200</td><td class="val">0.77×</td><td>receiving yards 47.5</td></tr>
+<tr><td>FLEX</td><td>Parker Livingstone</td><td>Oklahoma</td><td>WR</td><td>$2,400</td><td class="val">1.10×</td><td>receiving yards 26.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $400  (spent $49,600 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>John Mateer is captain. 11/17 225 3 scores vs UTEP. ESPN: all 225 vs blitz; 0 of 4 vs four-man. He runs and throws. That was a quiet rushing night, not who he is. If he is captain, his rushing yards count extra.</li>
+<li>Bryce Underwood. 12/22 170 1 scores 1 INT plus 9-47-TD rush vs WMU. Pass Over is the trap vs OU front. He runs and throws.</li>
+<li>Isaiah Sategna III. 4-76-TD plus 88-yd punt return TD vs UTEP. 215 all-purpose. Stack with John Mateer.</li>
+<li>JJ Buchanan. Utah transfer. 6-126-TD including Hail Mary vs WMU. Stack with Bryce Underwood.</li>
+<li>Trell Harris. Last week 2-61-1. Stack with John Mateer.</li>
+<li>Parker Livingstone. Texas portal WR. Cleared concussion; 19 snaps vs UTEP, 1-6. Cheap at $2,400 so the expensive names still fit. Stack with John Mateer.</li>
+<li>DK priced John Mateer + Bryce Underwood + Isaiah Sategna III + Xavier Robinson $400 short — you sit JJ Buchanan and keep the punt.</li>
+<li>DK priced John Mateer + Bryce Underwood + Isaiah Sategna III + Savion Hiter $800 short — you sit JJ Buchanan and keep the punt.</li>
+</ul>
+<p>Projected points on this six: 91.19. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 2</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Bryce Underwood</td><td>Michigan</td><td>QB</td><td>$14,700</td><td class="val">0.69×</td><td>passing yards 169.5</td></tr>
+<tr><td>FLEX</td><td>John Mateer</td><td>Oklahoma</td><td>QB</td><td>$10,800</td><td class="val">0.85×</td><td>passing yards 229.5</td></tr>
+<tr><td>FLEX</td><td>Isaiah Sategna III</td><td>Oklahoma</td><td>WR</td><td>$8,400</td><td class="val">0.71×</td><td>receiving yards 59.5</td></tr>
+<tr><td>FLEX</td><td>Savion Hiter</td><td>Michigan</td><td>RB</td><td>$7,400</td><td class="val">0.40×</td><td>rushing yards 29.5</td></tr>
+<tr><td>FLEX</td><td>JJ Buchanan</td><td>Michigan</td><td>WR</td><td>$6,200</td><td class="val">0.77×</td><td>receiving yards 47.5</td></tr>
+<tr><td>FLEX</td><td>Parker Livingstone</td><td>Oklahoma</td><td>WR</td><td>$2,400</td><td class="val">1.10×</td><td>receiving yards 26.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Bryce Underwood is captain. 12/22 170 1 scores 1 INT plus 9-47-TD rush vs WMU. Pass Over is the trap vs OU front. He runs and throws. If he is captain, his rushing yards count extra.</li>
+<li>John Mateer. 11/17 225 3 scores vs UTEP. ESPN: all 225 vs blitz; 0 of 4 vs four-man. He runs and throws. That was a quiet rushing night, not who he is.</li>
+<li>Isaiah Sategna III. 4-76-TD plus 88-yd punt return TD vs UTEP. 215 all-purpose. Stack with John Mateer.</li>
+<li>JJ Buchanan. Utah transfer. 6-126-TD including Hail Mary vs WMU. Stack with Bryce Underwood.</li>
+<li>Savion Hiter. Listed back last week (5 carries). Also caught 1 for -1.</li>
+<li>Parker Livingstone. Texas portal WR. Cleared concussion; 19 snaps vs UTEP, 1-6. Cheap at $2,400 so the expensive names still fit. Stack with John Mateer.</li>
+<li>DK priced Bryce Underwood + John Mateer + Isaiah Sategna III + Savion Hiter $300 short — you sit JJ Buchanan and keep the punt.</li>
+<li>DK priced Bryce Underwood + John Mateer + Isaiah Sategna III + Savion Hiter + Xavier Robinson $700 short — you sit JJ Buchanan and keep the punt.</li>
+</ul>
+<p>Projected points on this six: 83.93. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 3</h3>
+<p>None this contest — no distinct legal six at this rank.</p>
+<h3>SITS</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Why</th></tr></thead>
+<tbody>
+<tr><td>Michael Fasusi</td><td>—</td><td>out. Shoulder</td></tr>
+<tr><td>Micah Ka&#x27;apana</td><td>Michigan</td><td>out</td></tr>
+<tr><td>Whitt Newbauer / Tommy Carr</td><td>—</td><td>backups priced like starters. Sit</td></tr>
+<tr><td>Tory Blaylock as a second Oklahoma back</td><td>—</td><td>expected to play, limited debut. Do not stack him next to Avant</td></tr>
+<tr><td>Kickers</td><td>—</td><td>sitting both sides on a 43.5 grind</td></tr>
+</tbody></table>
+</div>
+<div class="value-board"><h3>OUR VALUE</h3>
+<p>Every salary-board skill player — not a Top 20. <b>Value</b> is our book number versus DraftKings salary (<b>1.00× is even</b>). Below even and no posted line stay on the table (—). This is not ETR. Sorted highest value first.</p>
 <table class="sortable" data-default-sort="Value">
 <thead><tr><th scope="col" data-col="0">#</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
@@ -285,9 +374,75 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tr><td>11</td><td>Hayden Hansen</td><td>Oklahoma</td><td>WR</td><td>$2,800</td><td class="val">0.52×</td><td>receiving yards 14.5</td></tr>
 <tr><td>12</td><td>Savion Hiter</td><td>Michigan</td><td>RB</td><td>$7,400</td><td class="val">0.40×</td><td>rushing yards 29.5</td></tr>
 <tr><td>13</td><td>Xavier Robinson</td><td>Oklahoma</td><td>RB</td><td>$7,000</td><td class="val">0.32×</td><td>rushing yards 22.5</td></tr>
+<tr><td>14</td><td>Andy Bass</td><td>Oklahoma</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>15</td><td>Ben McCreary</td><td>Oklahoma</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>16</td><td>Braydon Alford</td><td>Michigan</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>17</td><td>Bryce Wilcox</td><td>Michigan</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>18</td><td>Bryson Kuzdzal</td><td>Michigan</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>19</td><td>CJ Nickson</td><td>Oklahoma</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>20</td><td>Crandall Quinn</td><td>Michigan</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>21</td><td>Daniel Odom</td><td>Oklahoma</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>22</td><td>DeZephen Walker</td><td>Oklahoma</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>23</td><td>Deakon Tonielli</td><td>Michigan</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>24</td><td>Donovan Johnson</td><td>Michigan</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>25</td><td>Eli Merck</td><td>Oklahoma</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>26</td><td>Eli Owens</td><td>Michigan</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>27</td><td>Gabe Sawchuk</td><td>Oklahoma</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>28</td><td>Gary Stacy</td><td>Michigan</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>29</td><td>Ivan Carreon</td><td>Oklahoma</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>30</td><td>Jack Van Dorselaer</td><td>Oklahoma</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>31</td><td>Jacob Jordan</td><td>Oklahoma</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>32</td><td>Jacob Washington</td><td>Michigan</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>33</td><td>Jahsiear Rogers</td><td>Oklahoma</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>34</td><td>Jalen Hoffman</td><td>Michigan</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>35</td><td>Jamar Browder</td><td>Michigan</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>36</td><td>Jayden Petit</td><td>Oklahoma</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>37</td><td>Jaylen Pile</td><td>Michigan</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>38</td><td>Jett Niu</td><td>Oklahoma</td><td>QB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>39</td><td>Jimmy Pisani</td><td>Michigan</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>40</td><td>John Locke Jr.</td><td>Oklahoma</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>41</td><td>Jonathan Brown</td><td>Michigan</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>42</td><td>Jonathan Hatton Jr.</td><td>Oklahoma</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>43</td><td>Kade McIntyre</td><td>Oklahoma</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>44</td><td>Kaleb Schlecht</td><td>Michigan</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>45</td><td>Kendrick Bell</td><td>Michigan</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>46</td><td>Logan Forbes</td><td>Michigan</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>47</td><td>Mackenzie Alleyne</td><td>Oklahoma</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>48</td><td>Manny Choice</td><td>Oklahoma</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>49</td><td>Mason Bonner</td><td>Michigan</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>50</td><td>Micah Ka&#x27;apana</td><td>Michigan</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>51</td><td>Ryder Mix</td><td>Oklahoma</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>52</td><td>Tomas O&#x27;Meara</td><td>Michigan</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>53</td><td>Travis Johnson</td><td>Michigan</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>54</td><td>Trey Brown</td><td>Oklahoma</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>55</td><td>Trynae Washington</td><td>Oklahoma</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>56</td><td>Tyler Ruxer</td><td>Oklahoma</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>57</td><td>Xavier Okwufulueze</td><td>Oklahoma</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>58</td><td>Jaime Ffrench</td><td>Michigan</td><td>WR</td><td>$1,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>59</td><td>Jer&#x27;Michael Carter</td><td>Oklahoma</td><td>WR</td><td>$1,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>60</td><td>Zack Marshall</td><td>Michigan</td><td>WR</td><td>$2,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>61</td><td>Hogan Hansen</td><td>Michigan</td><td>WR</td><td>$3,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>62</td><td>Channing Goodwin</td><td>Michigan</td><td>WR</td><td>$3,800</td><td class="val">—</td><td>—</td></tr>
+<tr><td>63</td><td>Jacob Baggett</td><td>Michigan</td><td>K</td><td>$4,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>64</td><td>Stuart Blake</td><td>Michigan</td><td>K</td><td>$4,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>65</td><td>Trey Butkowski</td><td>Michigan</td><td>K</td><td>$4,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>66</td><td>Elijah Thomas</td><td>Oklahoma</td><td>WR</td><td>$4,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>67</td><td>Grayson Miller</td><td>Oklahoma</td><td>K</td><td>$4,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>68</td><td>Liam Evans</td><td>Oklahoma</td><td>K</td><td>$4,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>69</td><td>Preston Tarpley</td><td>Oklahoma</td><td>K</td><td>$4,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>70</td><td>Tate Sandell</td><td>Oklahoma</td><td>K</td><td>$4,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>71</td><td>Trace Rudd</td><td>Oklahoma</td><td>K</td><td>$4,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>72</td><td>Salesi Moa</td><td>Michigan</td><td>WR</td><td>$5,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>73</td><td>Tory Blaylock</td><td>Oklahoma</td><td>RB</td><td>$5,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>74</td><td>Bowe Bentley</td><td>Oklahoma</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>75</td><td>Brady Smigiel</td><td>Michigan</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>76</td><td>Brayden Fowler-Nicolosi</td><td>Michigan</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>77</td><td>Chase Herbstreit</td><td>Michigan</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>78</td><td>Tommy Carr</td><td>Michigan</td><td>QB</td><td>$7,800</td><td class="val">—</td><td>—</td></tr>
+<tr><td>79</td><td>Whitt Newbauer</td><td>Oklahoma</td><td>QB</td><td>$9,200</td><td class="val">—</td><td>—</td></tr>
 </tbody></table>
 <h3>ETR VALUE</h3>
-<p>Every name on ETR&#x27;s main-slate sheet for this game. Click a column to sort. A blank cell is —. <b>ETR salary</b> and <b>Owned</b> are their main-slate numbers. <b>Points per $1k</b> is their projected points versus our DraftKings salary for this game.</p>
+<p>Every name on ETR&#x27;s main-slate sheet for this game. Click a column to sort. A blank cell is —. <b>ETR salary</b> and <b>Owned</b> are their main-slate numbers. <b>Points per $1k</b> is their projected points versus our DraftKings salary for this game. Negative sheet values stay on the table. Not a Top 20.</p>
 <h4 class="team-break">Oklahoma</h4>
 <table class="sortable" data-default-sort="Points per $1k">
 <thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Pos</th><th scope="col" data-col="2">Opp</th><th scope="col" data-col="3">ETR salary</th><th scope="col" data-col="4">Projected points</th><th scope="col" data-col="5">Sheet value</th><th scope="col" data-col="6">Owned</th><th scope="col" data-col="7">Our salary</th><th scope="col" data-col="8">Points per $1k</th></tr></thead>
@@ -330,109 +485,24 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tr><td>Mason Bonner</td><td>WR</td><td>Oklahoma</td><td>$3,000</td><td>0.44</td><td>-6.1</td><td>0</td><td>$1,000</td><td class="val">0.44</td></tr>
 <tr><td>Salesi Moa</td><td>WR</td><td>Oklahoma</td><td>$3,500</td><td>1.88</td><td>-5.4</td><td>0</td><td>$5,000</td><td class="val">0.38</td></tr>
 <tr><td>Jaime Ffrench</td><td>WR</td><td>Oklahoma</td><td>$3,100</td><td>0.44</td><td>-6.2</td><td>0</td><td>$1,200</td><td class="val">0.37</td></tr>
-</tbody></table>
-<h3>SCRIPT SIX</h3>
-<table class="sortable">
-<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
-<tbody>
-<tr><td>Captain</td><td>John Mateer</td><td>Oklahoma</td><td>QB</td><td>$16,200</td><td class="val">0.85×</td><td>passing yards 229.5</td></tr>
-<tr><td>FLEX</td><td>Bryce Underwood</td><td>Michigan</td><td>QB</td><td>$9,800</td><td class="val">0.69×</td><td>passing yards 169.5</td></tr>
-<tr><td>FLEX</td><td>Isaiah Sategna III</td><td>Oklahoma</td><td>WR</td><td>$8,400</td><td class="val">0.71×</td><td>receiving yards 59.5</td></tr>
-<tr><td>FLEX</td><td>Trell Harris</td><td>Oklahoma</td><td>WR</td><td>$6,600</td><td class="val">0.73×</td><td>receiving yards 48.5</td></tr>
-<tr><td>FLEX</td><td>JJ Buchanan</td><td>Michigan</td><td>WR</td><td>$6,200</td><td class="val">0.77×</td><td>receiving yards 47.5</td></tr>
-<tr><td>FLEX</td><td>Parker Livingstone</td><td>Oklahoma</td><td>WR</td><td>$2,400</td><td class="val">1.10×</td><td>receiving yards 26.5</td></tr>
-</tbody></table>
-<p class="left">Leftover: $400  (spent $49,600 / $50,000)</p>
-<p><b>Why these six</b></p>
-<ul>
-<li>John Mateer is the captain. He runs and throws. Last week: 17 throws for 225, 3 carries for 7. That was a quiet rushing night, not who he is. If he is captain, his rushing yards count extra. Projected 20 points.</li>
-<li>Bryce Underwood is on the six. He runs and throws. Last week: 22 throws for 170, 9 carries for 47. Projected 16 points.</li>
-<li>Isaiah Sategna III is on the six. Last week 4-76-1. Put John Mateer on the same six. Projected 15 points.</li>
-<li>JJ Buchanan is on the six. Last week 6-126-1. Put Bryce Underwood on the same six. Projected 12 points.</li>
-<li>Trell Harris is on the six. Last week 2-61-1. Put John Mateer on the same six. Projected 11 points.</li>
-<li>Parker Livingstone is on the six. Last week 1-6. Cheap catcher at $2,400 so the expensive names still fit. Put John Mateer on the same six. Projected 6 points.</li>
-</ul>
-<p>Projected points on this six: 91.19. The captain&#x27;s stats count extra.</p>
-<h3>ETR BUILD 1</h3>
-<table class="sortable">
-<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
-<tbody>
-<tr><td>Captain</td><td>John Mateer</td><td>Oklahoma</td><td>QB</td><td>$16,200</td><td class="val">0.85×</td><td>passing yards 229.5</td></tr>
-<tr><td>FLEX</td><td>Bryce Underwood</td><td>Michigan</td><td>QB</td><td>$9,800</td><td class="val">0.69×</td><td>passing yards 169.5</td></tr>
-<tr><td>FLEX</td><td>Isaiah Sategna III</td><td>Oklahoma</td><td>WR</td><td>$8,400</td><td class="val">0.71×</td><td>receiving yards 59.5</td></tr>
-<tr><td>FLEX</td><td>Trell Harris</td><td>Oklahoma</td><td>WR</td><td>$6,600</td><td class="val">0.73×</td><td>receiving yards 48.5</td></tr>
-<tr><td>FLEX</td><td>JJ Buchanan</td><td>Michigan</td><td>WR</td><td>$6,200</td><td class="val">0.77×</td><td>receiving yards 47.5</td></tr>
-<tr><td>FLEX</td><td>Parker Livingstone</td><td>Oklahoma</td><td>WR</td><td>$2,400</td><td class="val">1.10×</td><td>receiving yards 26.5</td></tr>
-</tbody></table>
-<p class="left">Leftover: $400  (spent $49,600 / $50,000)</p>
-<p><b>Why these six</b></p>
-<ul>
-<li>John Mateer is the captain. He runs and throws. Last week: 17 throws for 225, 3 carries for 7. That was a quiet rushing night, not who he is. If he is captain, his rushing yards count extra. Projected 20 points.</li>
-<li>Bryce Underwood is on the six. He runs and throws. Last week: 22 throws for 170, 9 carries for 47. Projected 16 points.</li>
-<li>Isaiah Sategna III is on the six. Last week 4-76-1. Put John Mateer on the same six. Projected 15 points.</li>
-<li>JJ Buchanan is on the six. Last week 6-126-1. Put Bryce Underwood on the same six. Projected 12 points.</li>
-<li>Trell Harris is on the six. Last week 2-61-1. Put John Mateer on the same six. Projected 11 points.</li>
-<li>Parker Livingstone is on the six. Last week 1-6. Cheap catcher at $2,400 so the expensive names still fit. Put John Mateer on the same six. Projected 6 points.</li>
-<li>DK priced John Mateer + Bryce Underwood + Isaiah Sategna III + Xavier Robinson $400 short — you sit JJ Buchanan and keep the punt.</li>
-<li>DK priced John Mateer + Bryce Underwood + Isaiah Sategna III + Savion Hiter $800 short — you sit JJ Buchanan and keep the punt.</li>
-</ul>
-<p>Projected points on this six: 91.19. The captain&#x27;s stats count extra.</p>
-<h3>ETR BUILD 2</h3>
-<table class="sortable">
-<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
-<tbody>
-<tr><td>Captain</td><td>John Mateer</td><td>Oklahoma</td><td>QB</td><td>$16,200</td><td class="val">0.85×</td><td>passing yards 229.5</td></tr>
-<tr><td>FLEX</td><td>Bryce Underwood</td><td>Michigan</td><td>QB</td><td>$9,800</td><td class="val">0.69×</td><td>passing yards 169.5</td></tr>
-<tr><td>FLEX</td><td>Isaiah Sategna III</td><td>Oklahoma</td><td>WR</td><td>$8,400</td><td class="val">0.71×</td><td>receiving yards 59.5</td></tr>
-<tr><td>FLEX</td><td>Xavier Robinson</td><td>Oklahoma</td><td>RB</td><td>$7,000</td><td class="val">0.32×</td><td>rushing yards 22.5</td></tr>
-<tr><td>FLEX</td><td>JJ Buchanan</td><td>Michigan</td><td>WR</td><td>$6,200</td><td class="val">0.77×</td><td>receiving yards 47.5</td></tr>
-<tr><td>FLEX</td><td>Parker Livingstone</td><td>Oklahoma</td><td>WR</td><td>$2,400</td><td class="val">1.10×</td><td>receiving yards 26.5</td></tr>
-</tbody></table>
-<p class="left">Leftover: $0  (spent $50,000 / $50,000)</p>
-<p><b>Why these six</b></p>
-<ul>
-<li>John Mateer is the captain. He runs and throws. Last week: 17 throws for 225, 3 carries for 7. That was a quiet rushing night, not who he is. If he is captain, his rushing yards count extra. Projected 20 points.</li>
-<li>Bryce Underwood is on the six. He runs and throws. Last week: 22 throws for 170, 9 carries for 47. Projected 16 points.</li>
-<li>Isaiah Sategna III is on the six. Last week 4-76-1. Put John Mateer on the same six. Projected 15 points.</li>
-<li>JJ Buchanan is on the six. Last week 6-126-1. Put Bryce Underwood on the same six. Projected 12 points.</li>
-<li>Xavier Robinson is on the six. Listed back last week (7 carries). Projected 8 points.</li>
-<li>Parker Livingstone is on the six. Last week 1-6. Cheap catcher at $2,400 so the expensive names still fit. Put John Mateer on the same six. Projected 6 points.</li>
-<li>DK priced John Mateer + Bryce Underwood + Isaiah Sategna III + Xavier Robinson $400 short — you sit JJ Buchanan and keep the punt.</li>
-</ul>
-<p>Projected points on this six: 87.69. The captain&#x27;s stats count extra.</p>
-<h3>ETR BUILD 3</h3>
-<p>None this contest — no distinct legal six at this rank.</p>
-<h3>SITS</h3>
-<table class="sortable">
-<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Why</th></tr></thead>
-<tbody>
-<tr><td>Michael Fasusi</td><td>—</td><td>out. Shoulder</td></tr>
-<tr><td>Micah Ka&#x27;apana</td><td>Michigan</td><td>out</td></tr>
-<tr><td>Whitt Newbauer / Tommy Carr</td><td>—</td><td>backups priced like starters. Sit</td></tr>
-<tr><td>Tory Blaylock as a second Oklahoma back</td><td>—</td><td>expected to play, limited debut. Do not stack him next to Avant</td></tr>
-<tr><td>Kickers</td><td>—</td><td>sitting both sides on a 43.5 grind</td></tr>
-</tbody></table>
-</div>
-<div class="player-book"><h3>Player book</h3><p class="sub">Quarterbacks, running backs, and receivers are separate tables. One row per player. Week 1, Week 2, Week 3 sit side by side — teal is up from last week, red is down. Click a header to sort. A new week column appears after that box is in. A blank cell is —.</p><div class="team-pills noprint"><button type="button" class="team-pill on" data-team="ALL">All</button><button type="button" class="team-pill" data-team="OU">Oklahoma</button><button type="button" class="team-pill" data-team="MICH">Michigan</button></div><section class="pos-book" data-pos="QB"><h4>Quarterbacks</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Att</th><th scope="col" class="w0" data-col="5">Yds</th><th scope="col" class="w0" data-col="6">TD</th><th scope="col" class="w0" data-col="7">RAtt</th><th scope="col" class="w0" data-col="8">Rush</th><th scope="col" class="w0" data-col="9">rTD</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="OU"><td class="who">John Mateer</td><td class="who">Oklahoma</td><td class="who" data-n="10800">$10,800</td><td class="w0 opp">UTEP</td><td class="w0" data-n="17">17</td><td class="w0" data-n="225">225</td><td class="w0" data-n="3">3</td><td class="w0" data-n="3">3</td><td class="w0" data-n="7">7</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="21.7">21.7</td></tr><tr data-team="MICH"><td class="who">Bryce Underwood</td><td class="who">Michigan</td><td class="who" data-n="9800">$9,800</td><td class="w0 opp">Western Michigan</td><td class="w0" data-n="22">22</td><td class="w0" data-n="170">170</td><td class="w0" data-n="1">1</td><td class="w0" data-n="9">9</td><td class="w0" data-n="47">47</td><td class="w0" data-n="1">1</td><td class="w0 val" data-n="20.5">20.5</td></tr><tr data-team="OU"><td class="who">Whitt Newbauer</td><td class="who">Oklahoma</td><td class="who" data-n="9200">$9,200</td><td class="w0 opp">UTEP</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0" data-n="2">2</td><td class="w0" data-n="3">3</td><td class="w0" data-n="1">1</td><td class="w0 val" data-n="6.54">6.54</td></tr><tr data-team="OU"><td class="who">Bowe Bentley</td><td class="who">Oklahoma</td><td class="who" data-n="6000">$6,000</td><td class="w0 opp">UTEP</td><td class="w0" data-n="1">1</td><td class="w0" data-n="0">0</td><td class="w0" data-n="0">0</td><td class="w0" data-n="1">1</td><td class="w0" data-n="-2">-2</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="-0.2">-0.2</td></tr></tbody></table></div></section><section class="pos-book" data-pos="RB"><h4>Running backs</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">RAtt</th><th scope="col" class="w0" data-col="5">Rush</th><th scope="col" class="w0" data-col="6">rTD</th><th scope="col" class="w0" data-col="7">Rec</th><th scope="col" class="w0" data-col="8">Tgt</th><th scope="col" class="w0" data-col="9">Yds</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="MICH"><td class="who">Jordan Marshall</td><td class="who">Michigan</td><td class="who" data-n="10600">$10,600</td><td class="w0 opp">Western Michigan</td><td class="w0" data-n="11">11</td><td class="w0" data-n="44">44</td><td class="w0" data-n="0">0</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0" data-n="17">17</td><td class="w0 val" data-n="8.1">8.1</td></tr><tr data-team="OU"><td class="who">Lloyd Avant</td><td class="who">Oklahoma</td><td class="who" data-n="7600">$7,600</td><td class="w0 opp">UTEP</td><td class="w0" data-n="15">15</td><td class="w0" data-n="79">79</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0 val" data-n="15.5">15.5</td></tr><tr data-team="MICH"><td class="who">Savion Hiter</td><td class="who">Michigan</td><td class="who" data-n="7400">$7,400</td><td class="w0 opp">Western Michigan</td><td class="w0" data-n="5">5</td><td class="w0" data-n="15">15</td><td class="w0" data-n="0">0</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="-1">-1</td><td class="w0 val" data-n="2.4">2.4</td></tr><tr data-team="OU"><td class="who">Xavier Robinson</td><td class="who">Oklahoma</td><td class="who" data-n="7000">$7,000</td><td class="w0 opp">UTEP</td><td class="w0" data-n="7">7</td><td class="w0" data-n="30">30</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="3">3.0</td></tr><tr data-team="OU"><td class="who">Andy Bass</td><td class="who">Oklahoma</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">UTEP</td><td class="w0" data-n="2">2</td><td class="w0" data-n="-8">-8</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="-0.8">-0.8</td></tr><tr data-team="OU"><td class="who">Ben McCreary</td><td class="who">Oklahoma</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">UTEP</td><td class="w0" data-n="6">6</td><td class="w0" data-n="40">40</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4">4.0</td></tr><tr data-team="OU"><td class="who">Jonathan Hatton Jr.</td><td class="who">Oklahoma</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">UTEP</td><td class="w0" data-n="3">3</td><td class="w0" data-n="21">21</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="2.1">2.1</td></tr></tbody></table></div></section><section class="pos-book" data-pos="WR"><h4>Wide receivers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Rec</th><th scope="col" class="w0" data-col="5">Tgt</th><th scope="col" class="w0" data-col="6">Yds</th><th scope="col" class="w0" data-col="7">TD</th><th scope="col" class="w0" data-col="8">RAtt</th><th scope="col" class="w0" data-col="9">Rush</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="OU"><td class="who">Isaiah Sategna III</td><td class="who">Oklahoma</td><td class="who" data-n="8400">$8,400</td><td class="w0 opp">UTEP</td><td class="w0" data-n="4">4</td><td class="w0" data-n="5">5</td><td class="w0" data-n="76">76</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="17.6">17.6</td></tr><tr data-team="OU"><td class="who">Trell Harris</td><td class="who">Oklahoma</td><td class="who" data-n="6600">$6,600</td><td class="w0 opp">UTEP</td><td class="w0" data-n="2">2</td><td class="w0" data-n="5">5</td><td class="w0" data-n="61">61</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="14.1">14.1</td></tr><tr data-team="MICH"><td class="who">JJ Buchanan</td><td class="who">Michigan</td><td class="who" data-n="6200">$6,200</td><td class="w0 opp">Western Michigan</td><td class="w0" data-n="6">6</td><td class="w0" data-n="8">8</td><td class="w0" data-n="126">126</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="27.6">27.6</td></tr><tr data-team="MICH"><td class="who">Andrew Marsh</td><td class="who">Michigan</td><td class="who" data-n="5800">$5,800</td><td class="w0 opp">Western Michigan</td><td class="w0" data-n="2">2</td><td class="w0" data-n="5">5</td><td class="w0" data-n="15">15</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="3.5">3.5</td></tr><tr data-team="OU"><td class="who">Elijah Thomas</td><td class="who">Oklahoma</td><td class="who" data-n="4200">$4,200</td><td class="w0 opp">UTEP</td><td class="w0" data-n="1">1</td><td class="w0" data-n="3">3</td><td class="w0" data-n="24">24</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="3.4">3.4</td></tr><tr data-team="MICH"><td class="who">Channing Goodwin</td><td class="who">Michigan</td><td class="who" data-n="3800">$3,800</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td></tr><tr data-team="OU"><td class="who">Hayden Hansen</td><td class="who">Oklahoma</td><td class="who" data-n="2800">$2,800</td><td class="w0 opp">UTEP</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="15">15</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="2.5">2.5</td></tr><tr data-team="OU"><td class="who">Parker Livingstone</td><td class="who">Oklahoma</td><td class="who" data-n="2400">$2,400</td><td class="w0 opp">UTEP</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.6">1.6</td></tr><tr data-team="OU"><td class="who">Rocky Beers</td><td class="who">Oklahoma</td><td class="who" data-n="1800">$1,800</td><td class="w0 opp">UTEP</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0" data-n="43">43</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="12.3">12.3</td></tr><tr data-team="MICH"><td class="who">Jalen Hoffman</td><td class="who">Michigan</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Western Michigan</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="13">13</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="2.3">2.3</td></tr><tr data-team="MICH"><td class="who">Team</td><td class="who">Michigan</td><td class="who">—</td><td class="w0 opp">Western Michigan</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="0">0.0</td></tr></tbody></table></div></section><section class="pos-book" data-pos="K"><h4>Kickers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="4">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">FG</th><th scope="col" class="w0" data-col="5">XP</th><th scope="col" class="w0" data-col="6">DK</th></tr></thead><tbody><tr data-team="OU"><td class="who">Liam Evans</td><td class="who">Oklahoma</td><td class="who" data-n="4600">$4,600</td><td class="w0 opp">UTEP</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0 val" data-n="4">4.0</td></tr><tr data-team="OU"><td class="who">Tate Sandell</td><td class="who">Oklahoma</td><td class="who" data-n="4600">$4,600</td><td class="w0 opp">UTEP</td><td class="w0" data-n="2">2</td><td class="w0" data-n="5">5</td><td class="w0 val" data-n="11">11.0</td></tr><tr data-team="MICH"><td class="who">Trey Butkowski</td><td class="who">Michigan</td><td class="who" data-n="4000">$4,000</td><td class="w0 opp">Western Michigan</td><td class="w0" data-n="0">0</td><td class="w0" data-n="1">1</td><td class="w0 val" data-n="1">1.0</td></tr></tbody></table></div></section></div>
+</tbody></table></div>
+<div class="player-book"><h3>Player book</h3><p class="sub">Quarterbacks, running backs, and receivers are separate tables. One row per player. Week 1, Week 2, Week 3 sit side by side — teal is up from last week, red is down. Click a header to sort. A new week column appears after that box is in. A blank cell is —.</p><div class="team-pills noprint"><button type="button" class="team-pill on" data-team="OU">Oklahoma</button><button type="button" class="team-pill" data-team="MICH">Michigan</button></div><section class="pos-book" data-pos="QB"><h4>Quarterbacks</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Att</th><th scope="col" class="w0" data-col="5">Yds</th><th scope="col" class="w0" data-col="6">TD</th><th scope="col" class="w0" data-col="7">RAtt</th><th scope="col" class="w0" data-col="8">Rush</th><th scope="col" class="w0" data-col="9">rTD</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="OU"><td class="who">John Mateer</td><td class="who">Oklahoma</td><td class="who" data-n="10800">$10,800</td><td class="w0 opp">UTEP</td><td class="w0" data-n="17">17</td><td class="w0" data-n="225">225</td><td class="w0" data-n="3">3</td><td class="w0" data-n="3">3</td><td class="w0" data-n="7">7</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="21.7">21.7</td></tr><tr data-team="MICH" hidden><td class="who">Bryce Underwood</td><td class="who">Michigan</td><td class="who" data-n="9800">$9,800</td><td class="w0 opp">Western Michigan</td><td class="w0" data-n="22">22</td><td class="w0" data-n="170">170</td><td class="w0" data-n="1">1</td><td class="w0" data-n="9">9</td><td class="w0" data-n="47">47</td><td class="w0" data-n="1">1</td><td class="w0 val" data-n="20.5">20.5</td></tr><tr data-team="OU"><td class="who">Whitt Newbauer</td><td class="who">Oklahoma</td><td class="who" data-n="9200">$9,200</td><td class="w0 opp">UTEP</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0" data-n="2">2</td><td class="w0" data-n="3">3</td><td class="w0" data-n="1">1</td><td class="w0 val" data-n="6.54">6.54</td></tr><tr data-team="OU"><td class="who">Bowe Bentley</td><td class="who">Oklahoma</td><td class="who" data-n="6000">$6,000</td><td class="w0 opp">UTEP</td><td class="w0" data-n="1">1</td><td class="w0" data-n="0">0</td><td class="w0" data-n="0">0</td><td class="w0" data-n="1">1</td><td class="w0" data-n="-2">-2</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="-0.2">-0.2</td></tr></tbody></table></div></section><section class="pos-book" data-pos="RB"><h4>Running backs</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">RAtt</th><th scope="col" class="w0" data-col="5">Rush</th><th scope="col" class="w0" data-col="6">rTD</th><th scope="col" class="w0" data-col="7">Rec</th><th scope="col" class="w0" data-col="8">Tgt</th><th scope="col" class="w0" data-col="9">Yds</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="MICH" hidden><td class="who">Jordan Marshall</td><td class="who">Michigan</td><td class="who" data-n="10600">$10,600</td><td class="w0 opp">Western Michigan</td><td class="w0" data-n="11">11</td><td class="w0" data-n="44">44</td><td class="w0" data-n="0">0</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0" data-n="17">17</td><td class="w0 val" data-n="8.1">8.1</td></tr><tr data-team="OU"><td class="who">Lloyd Avant</td><td class="who">Oklahoma</td><td class="who" data-n="7600">$7,600</td><td class="w0 opp">UTEP</td><td class="w0" data-n="15">15</td><td class="w0" data-n="79">79</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0 val" data-n="15.5">15.5</td></tr><tr data-team="MICH" hidden><td class="who">Savion Hiter</td><td class="who">Michigan</td><td class="who" data-n="7400">$7,400</td><td class="w0 opp">Western Michigan</td><td class="w0" data-n="5">5</td><td class="w0" data-n="15">15</td><td class="w0" data-n="0">0</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="-1">-1</td><td class="w0 val" data-n="2.4">2.4</td></tr><tr data-team="OU"><td class="who">Xavier Robinson</td><td class="who">Oklahoma</td><td class="who" data-n="7000">$7,000</td><td class="w0 opp">UTEP</td><td class="w0" data-n="7">7</td><td class="w0" data-n="30">30</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="3">3.0</td></tr><tr data-team="OU"><td class="who">Andy Bass</td><td class="who">Oklahoma</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">UTEP</td><td class="w0" data-n="2">2</td><td class="w0" data-n="-8">-8</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="-0.8">-0.8</td></tr><tr data-team="OU"><td class="who">Ben McCreary</td><td class="who">Oklahoma</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">UTEP</td><td class="w0" data-n="6">6</td><td class="w0" data-n="40">40</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4">4.0</td></tr><tr data-team="OU"><td class="who">Jonathan Hatton Jr.</td><td class="who">Oklahoma</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">UTEP</td><td class="w0" data-n="3">3</td><td class="w0" data-n="21">21</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="2.1">2.1</td></tr></tbody></table></div></section><section class="pos-book" data-pos="WR"><h4>Wide receivers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Rec</th><th scope="col" class="w0" data-col="5">Tgt</th><th scope="col" class="w0" data-col="6">Yds</th><th scope="col" class="w0" data-col="7">TD</th><th scope="col" class="w0" data-col="8">RAtt</th><th scope="col" class="w0" data-col="9">Rush</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="OU"><td class="who">Isaiah Sategna III</td><td class="who">Oklahoma</td><td class="who" data-n="8400">$8,400</td><td class="w0 opp">UTEP</td><td class="w0" data-n="4">4</td><td class="w0" data-n="5">5</td><td class="w0" data-n="76">76</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="17.6">17.6</td></tr><tr data-team="OU"><td class="who">Trell Harris</td><td class="who">Oklahoma</td><td class="who" data-n="6600">$6,600</td><td class="w0 opp">UTEP</td><td class="w0" data-n="2">2</td><td class="w0" data-n="5">5</td><td class="w0" data-n="61">61</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="14.1">14.1</td></tr><tr data-team="MICH" hidden><td class="who">JJ Buchanan</td><td class="who">Michigan</td><td class="who" data-n="6200">$6,200</td><td class="w0 opp">Western Michigan</td><td class="w0" data-n="6">6</td><td class="w0" data-n="8">8</td><td class="w0" data-n="126">126</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="27.6">27.6</td></tr><tr data-team="MICH" hidden><td class="who">Andrew Marsh</td><td class="who">Michigan</td><td class="who" data-n="5800">$5,800</td><td class="w0 opp">Western Michigan</td><td class="w0" data-n="2">2</td><td class="w0" data-n="5">5</td><td class="w0" data-n="15">15</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="3.5">3.5</td></tr><tr data-team="OU"><td class="who">Elijah Thomas</td><td class="who">Oklahoma</td><td class="who" data-n="4200">$4,200</td><td class="w0 opp">UTEP</td><td class="w0" data-n="1">1</td><td class="w0" data-n="3">3</td><td class="w0" data-n="24">24</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="3.4">3.4</td></tr><tr data-team="MICH" hidden><td class="who">Channing Goodwin</td><td class="who">Michigan</td><td class="who" data-n="3800">$3,800</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td></tr><tr data-team="OU"><td class="who">Hayden Hansen</td><td class="who">Oklahoma</td><td class="who" data-n="2800">$2,800</td><td class="w0 opp">UTEP</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="15">15</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="2.5">2.5</td></tr><tr data-team="OU"><td class="who">Parker Livingstone</td><td class="who">Oklahoma</td><td class="who" data-n="2400">$2,400</td><td class="w0 opp">UTEP</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.6">1.6</td></tr><tr data-team="OU"><td class="who">Rocky Beers</td><td class="who">Oklahoma</td><td class="who" data-n="1800">$1,800</td><td class="w0 opp">UTEP</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0" data-n="43">43</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="12.3">12.3</td></tr><tr data-team="MICH" hidden><td class="who">Jalen Hoffman</td><td class="who">Michigan</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Western Michigan</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="13">13</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="2.3">2.3</td></tr><tr data-team="MICH" hidden><td class="who">Team</td><td class="who">Michigan</td><td class="who">—</td><td class="w0 opp">Western Michigan</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="0">0.0</td></tr></tbody></table></div></section><section class="pos-book" data-pos="K"><h4>Kickers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="4">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">FG</th><th scope="col" class="w0" data-col="5">XP</th><th scope="col" class="w0" data-col="6">DK</th></tr></thead><tbody><tr data-team="OU"><td class="who">Liam Evans</td><td class="who">Oklahoma</td><td class="who" data-n="4600">$4,600</td><td class="w0 opp">UTEP</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0 val" data-n="4">4.0</td></tr><tr data-team="OU"><td class="who">Tate Sandell</td><td class="who">Oklahoma</td><td class="who" data-n="4600">$4,600</td><td class="w0 opp">UTEP</td><td class="w0" data-n="2">2</td><td class="w0" data-n="5">5</td><td class="w0 val" data-n="11">11.0</td></tr><tr data-team="MICH" hidden><td class="who">Trey Butkowski</td><td class="who">Michigan</td><td class="who" data-n="4000">$4,000</td><td class="w0 opp">Western Michigan</td><td class="w0" data-n="0">0</td><td class="w0" data-n="1">1</td><td class="w0 val" data-n="1">1.0</td></tr></tbody></table></div></section></div>
 </article>
 </main></div>
 <script>
 (function(){
-  document.addEventListener('click', function(e){
-    var pill=e.target.closest('.team-pill');
-    if(!pill) return;
-    var book=pill.closest('.player-book');
-    if(!book) return;
-    var team=pill.getAttribute('data-team')||'ALL';
+  function applyTeam(book, pill){
+    if(!book || !pill) return;
     book.querySelectorAll('.team-pill').forEach(function(p){
       p.classList.toggle('on', p===pill);
     });
     var inp=document.getElementById('playerSearch');
     if(inp) inp.dispatchEvent(new Event('input'));
     else {
+      var team=pill.getAttribute('data-team')||'';
       book.querySelectorAll('table.season-log tbody tr').forEach(function(tr){
         var rowTeam=tr.getAttribute('data-team')||'';
-        tr.hidden = !!(team && team!=='ALL' && rowTeam!==team);
+        tr.hidden = !!(team && rowTeam!==team);
       });
       book.querySelectorAll('.pos-book').forEach(function(sec){
         var any=false;
@@ -440,6 +510,13 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
         sec.classList.toggle('search-empty', !any);
       });
     }
+  }
+  document.addEventListener('click', function(e){
+    var pill=e.target.closest('.team-pill');
+    if(!pill) return;
+    var book=pill.closest('.player-book');
+    if(!book) return;
+    applyTeam(book, pill);
   });
 })();
 </script>
@@ -551,15 +628,24 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
     function teamOk(tr){
       var book=tr.closest && tr.closest('.player-book');
       if(!book) return true;
-      var on=book.querySelector('.team-pill.on');
-      var team=on ? (on.getAttribute('data-team')||'ALL') : 'ALL';
-      if(!team || team==='ALL') return true;
+      var on=book.querySelector('.team-pill.on') || book.querySelector('.team-pill');
+      var team=on ? (on.getAttribute('data-team')||'') : '';
+      if(!team) return true;
       return (tr.getAttribute('data-team')||'')===team;
     }
     function mark(el, hit){
       el.hidden = !hit;
       el.classList.toggle('name-hit', !!(q && hit));
       if(q && hit) n++;
+    }
+    function panelHasHit(sel){
+      var panel=document.querySelector(sel);
+      if(!panel) return false;
+      var hit=false;
+      panel.querySelectorAll('tbody tr, li').forEach(function(el){
+        if(!el.hidden) hit=true;
+      });
+      return hit;
     }
     document.querySelectorAll('table tbody tr').forEach(function(tr){
       if(skip(tr)) return;
@@ -590,6 +676,14 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
     });
     var hint=document.getElementById('playerSearchHint');
     if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
+    document.querySelectorAll('label.pill[for]').forEach(function(lab){
+      var id=lab.getAttribute('for');
+      var sel = id==='v-report' ? '.game-report'
+              : id==='v-value' ? '.value-board'
+              : id==='v-book' ? '.player-book' : '';
+      if(!sel) return;
+      lab.classList.toggle('search-miss', !!(q && !panelHasHit(sel)));
+    });
     if(opts.jump){
       var shownArt=document.querySelector('article.panel');
       var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
@@ -619,6 +713,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
       }
     });
   }
+  apply({});
 })();
 </script>
 </body></html>

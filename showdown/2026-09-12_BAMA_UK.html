@@ -82,6 +82,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
   .rail,.noprint{display:none !important;}
   main{max-width:none;padding:0;}
   .panel,.appendix{display:block !important;page-break-after:always;}
+  .game-report,.value-board,.player-book{display:block !important;}
   .appendix{page-break-after:auto;}
   table{background:#fff;page-break-inside:avoid;}
   th{background:#eee;color:#333;}
@@ -95,20 +96,25 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 }
 @page{margin:.5in;}
 #v-report:checked ~ .shell .rail label[for=v-report]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-value:checked ~ .shell .rail label[for=v-value]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
-.player-book{display:none;}
-#v-book:checked ~ .shell main{max-width:none;}
-#v-book:checked ~ .shell main .game-report{display:none;}
+.player-book,.value-board{display:none;}
+#v-book:checked ~ .shell main,#v-value:checked ~ .shell main{max-width:none;}
+#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .value-board{display:none;}
 #v-book:checked ~ .shell main .player-book{display:block;}
+#v-value:checked ~ .shell main .game-report,#v-value:checked ~ .shell main .player-book{display:none;}
+#v-value:checked ~ .shell main .value-board{display:block;}
 </style>
 </head><body>
 <input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-value"/>
 <input class="tab" type="radio" name="v" id="v-book"/>
 <div class="shell">
 <aside class="rail noprint">
 <p class="brand">CFB SHOWDOWN<br/>2026-09-12<br/>Alabama @ Kentucky</p>
 <div class="view-row">
 <label class="pill" for="v-report">Report</label>
+<label class="pill" for="v-value">Value</label>
 <label class="pill" for="v-book">Player book</label>
 </div>
 <form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
@@ -276,8 +282,110 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tr><td>Keelon Russell</td><td>Alabama</td><td>Keelon Russell is making a first start.</td></tr>
 <tr><td>Noah Rogers</td><td>Alabama</td><td>Friday SEC report OUT vs Kentucky.</td></tr>
 </tbody></table>
-<h3>OUR VALUE — Alabama @ Kentucky</h3>
-<p>Every salary-board skill player with a <b>real</b> book number (yardage or receptions). Junk 0.5, scrape ceilings, and anytime-TD only are omitted. <b>1.00× is even.</b> Sorted highest value first.</p>
+<h3>SCRIPT SIX</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Keelon Russell</td><td>Alabama</td><td>QB</td><td>$18,000</td><td class="val">0.80×</td><td>passing yards 239.5</td></tr>
+<tr><td>FLEX</td><td>Ryan Coleman-Williams</td><td>Alabama</td><td>WR</td><td>$11,000</td><td class="val">0.63×</td><td>receiving yards 69.5</td></tr>
+<tr><td>FLEX</td><td>Kenny Minchey</td><td>Kentucky</td><td>QB</td><td>$9,200</td><td class="val">0.85×</td><td>passing yards 195.5</td></tr>
+<tr><td>FLEX</td><td>CJ Baxter</td><td>Kentucky</td><td>RB</td><td>$7,200</td><td class="val">0.80×</td><td>rushing plus receiving yards 57.5</td></tr>
+<tr><td>FLEX</td><td>Mikkel Skinner</td><td>Kentucky</td><td>WR</td><td>$2,600</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>DJ Miller</td><td>Kentucky</td><td>WR</td><td>$2,000</td><td class="val">1.33×</td><td>receiving yards 26.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $0  (spent $50,000 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Keelon Russell is captain. Named starter first career start vs ECU. Yea Alabama official depth. He runs and throws. If he is captain, his rushing yards count extra. First start — put him in a normal slot, not captain, so his receivers still count.</li>
+<li>Ryan Coleman-Williams. Last week 5-130. Stack with Keelon Russell.</li>
+<li>CJ Baxter. Listed back last week (9 carries). He scored.</li>
+<li>Kenny Minchey. Notre Dame transfer. First Power-4 start.</li>
+<li>DJ Miller. Cheap at $2,000 so the expensive names still fit. Stack with Kenny Minchey.</li>
+<li>Mikkel Skinner. Week 1 vs YSU: 4-61-1, 10-yd TD from Minchey. Official roster tight end. Cheap at $2,600 so the expensive names still fit. Stack with Kenny Minchey.</li>
+</ul>
+<p>Projected points on this six: 94.08. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 1</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Keelon Russell</td><td>Alabama</td><td>QB</td><td>$18,000</td><td class="val">0.80×</td><td>passing yards 239.5</td></tr>
+<tr><td>FLEX</td><td>Ryan Coleman-Williams</td><td>Alabama</td><td>WR</td><td>$11,000</td><td class="val">0.63×</td><td>receiving yards 69.5</td></tr>
+<tr><td>FLEX</td><td>Kenny Minchey</td><td>Kentucky</td><td>QB</td><td>$9,200</td><td class="val">0.85×</td><td>passing yards 195.5</td></tr>
+<tr><td>FLEX</td><td>CJ Baxter</td><td>Kentucky</td><td>RB</td><td>$7,200</td><td class="val">0.80×</td><td>rushing plus receiving yards 57.5</td></tr>
+<tr><td>FLEX</td><td>Mikkel Skinner</td><td>Kentucky</td><td>WR</td><td>$2,600</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>DJ Miller</td><td>Kentucky</td><td>WR</td><td>$2,000</td><td class="val">1.33×</td><td>receiving yards 26.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $0  (spent $50,000 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Keelon Russell is captain. Named starter first career start vs ECU. Yea Alabama official depth. He runs and throws. If he is captain, his rushing yards count extra. First start — put him in a normal slot, not captain, so his receivers still count.</li>
+<li>Ryan Coleman-Williams. Last week 5-130. Stack with Keelon Russell.</li>
+<li>CJ Baxter. Listed back last week (9 carries). He scored.</li>
+<li>Kenny Minchey. Notre Dame transfer. First Power-4 start.</li>
+<li>DJ Miller. Cheap at $2,000 so the expensive names still fit. Stack with Kenny Minchey.</li>
+<li>Mikkel Skinner. Week 1 vs YSU: 4-61-1, 10-yd TD from Minchey. Official roster tight end. Cheap at $2,600 so the expensive names still fit. Stack with Kenny Minchey.</li>
+</ul>
+<p>Projected points on this six: 94.08. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 2</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Ryan Coleman-Williams</td><td>Alabama</td><td>WR</td><td>$16,500</td><td class="val">0.63×</td><td>receiving yards 69.5</td></tr>
+<tr><td>FLEX</td><td>Keelon Russell</td><td>Alabama</td><td>QB</td><td>$12,000</td><td class="val">0.80×</td><td>passing yards 239.5</td></tr>
+<tr><td>FLEX</td><td>Kenny Minchey</td><td>Kentucky</td><td>QB</td><td>$9,200</td><td class="val">0.85×</td><td>passing yards 195.5</td></tr>
+<tr><td>FLEX</td><td>CJ Baxter</td><td>Kentucky</td><td>RB</td><td>$7,200</td><td class="val">0.80×</td><td>rushing plus receiving yards 57.5</td></tr>
+<tr><td>FLEX</td><td>Rico Scott</td><td>Alabama</td><td>WR</td><td>$3,000</td><td class="val">1.15×</td><td>receiving yards 34.5</td></tr>
+<tr><td>FLEX</td><td>DJ Miller</td><td>Kentucky</td><td>WR</td><td>$2,000</td><td class="val">1.33×</td><td>receiving yards 26.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Ryan Coleman-Williams is captain. Last week 5-130. Stack with Keelon Russell.</li>
+<li>Keelon Russell. Named starter first career start vs ECU. Yea Alabama official depth. He runs and throws. First start — put him in a normal slot, not captain, so his receivers still count.</li>
+<li>CJ Baxter. Listed back last week (9 carries). He scored.</li>
+<li>Kenny Minchey. Notre Dame transfer. First Power-4 start.</li>
+<li>DJ Miller. Cheap at $2,000 so the expensive names still fit. Stack with Kenny Minchey.</li>
+<li>Rico Scott. Last week 2-21. Cheap at $3,000 so the expensive names still fit. Stack with Keelon Russell.</li>
+<li>DK priced Ryan Coleman-Williams + Keelon Russell + CJ Baxter + Kenny Minchey $700 short — you sit Rico Scott and keep the punt.</li>
+</ul>
+<p>Projected points on this six: 89.22. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 3</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Kenny Minchey</td><td>Kentucky</td><td>QB</td><td>$13,800</td><td class="val">0.85×</td><td>passing yards 195.5</td></tr>
+<tr><td>FLEX</td><td>Keelon Russell</td><td>Alabama</td><td>QB</td><td>$12,000</td><td class="val">0.80×</td><td>passing yards 239.5</td></tr>
+<tr><td>FLEX</td><td>Ryan Coleman-Williams</td><td>Alabama</td><td>WR</td><td>$11,000</td><td class="val">0.63×</td><td>receiving yards 69.5</td></tr>
+<tr><td>FLEX</td><td>CJ Baxter</td><td>Kentucky</td><td>RB</td><td>$7,200</td><td class="val">0.80×</td><td>rushing plus receiving yards 57.5</td></tr>
+<tr><td>FLEX</td><td>Willie Rodriguez</td><td>Kentucky</td><td>WR</td><td>$4,400</td><td class="val">0.74×</td><td>receiving yards 32.5</td></tr>
+<tr><td>FLEX</td><td>Trae&#x27;shawn Brown</td><td>Alabama</td><td>RB</td><td>$1,000</td><td class="val">No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $600  (spent $49,400 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Kenny Minchey is captain. Notre Dame transfer. First Power-4 start.</li>
+<li>Keelon Russell. Named starter first career start vs ECU. Yea Alabama official depth. He runs and throws. First start — put him in a normal slot, not captain, so his receivers still count.</li>
+<li>Ryan Coleman-Williams. Last week 5-130. Stack with Keelon Russell.</li>
+<li>CJ Baxter. Listed back last week (9 carries). He scored.</li>
+<li>Willie Rodriguez. Last week 4-48-1. Stack with Kenny Minchey.</li>
+<li>Trae&#x27;shawn Brown. Listed back last week (7 carries). He scored.</li>
+<li>DK priced Kenny Minchey + Keelon Russell + Ryan Coleman-Williams + CJ Baxter $600 short — you sit Willie Rodriguez and keep the punt.</li>
+</ul>
+<p>Projected points on this six: 87.35. The captain&#x27;s stats count extra.</p>
+<h3>SITS</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Why</th></tr></thead>
+<tbody>
+<tr><td>AK Dear</td><td>Alabama</td><td>out. Camp ankle. Second straight miss</td></tr>
+<tr><td>Noah Rogers</td><td>Alabama</td><td>out</td></tr>
+<tr><td>Michael Carroll</td><td>—</td><td>out (line, not a Showdown skill)</td></tr>
+<tr><td>Tovani Mizell</td><td>Kentucky</td><td>out</td></tr>
+<tr><td>Austin Mack / Callum Wither</td><td>—</td><td>backups priced like starters. Sit</td></tr>
+<tr><td>Kickers</td><td>—</td><td>sitting both sides. Rain nearby</td></tr>
+</tbody></table>
+</div>
+<div class="value-board"><h3>OUR VALUE</h3>
+<p>Every salary-board skill player — not a Top 20. <b>Value</b> is our book number versus DraftKings salary (<b>1.00× is even</b>). Below even and no posted line stay on the table (—). This is not ETR. Sorted highest value first.</p>
 <table class="sortable" data-default-sort="Value">
 <thead><tr><th scope="col" data-col="0">#</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
@@ -295,9 +403,82 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tr><td>12</td><td>Nic Anderson</td><td>Kentucky</td><td>WR</td><td>$5,600</td><td class="val">0.47×</td><td>receiving yards 26.5</td></tr>
 <tr><td>13</td><td>Kaleb Edwards</td><td>Alabama</td><td>WR</td><td>$4,200</td><td class="val">0.46×</td><td>receiving yards 19.5</td></tr>
 <tr><td>14</td><td>Jason Patterson</td><td>Kentucky</td><td>RB</td><td>$6,200</td><td class="val">0.38×</td><td>rushing yards 23.5</td></tr>
+<tr><td>15</td><td>AK Dear</td><td>Alabama</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>16</td><td>Ahmir Smith</td><td>Kentucky</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>17</td><td>Amari Sabb</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>18</td><td>Ashton Cozart</td><td>Kentucky</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>19</td><td>Aubrey Walker</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>20</td><td>Ben Jackson</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>21</td><td>Brock Coffman</td><td>Kentucky</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>22</td><td>Cash Harney</td><td>Kentucky</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>23</td><td>Cooper Mollison</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>24</td><td>Danny Lewis Jr.</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>25</td><td>Davis McCray</td><td>Kentucky</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>26</td><td>Delvecchio Alston II</td><td>Kentucky</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>27</td><td>Denairius Gray</td><td>Kentucky</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>28</td><td>Elijah Brown</td><td>Kentucky</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>29</td><td>Elijah Murray</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>30</td><td>Isaiah Jackson</td><td>Kentucky</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>31</td><td>J&#x27;Alan Terry</td><td>Alabama</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>32</td><td>Ja&#x27;Kayden Ferguson</td><td>Kentucky</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>33</td><td>Jack Sammarco</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>34</td><td>Jaron Jackson</td><td>Alabama</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>35</td><td>Jaxon Shuttlesworth</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>36</td><td>Jay Lindsey</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>37</td><td>Jordan Colbert</td><td>Kentucky</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>38</td><td>Jude Cascone</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>39</td><td>Justin Kattus</td><td>Kentucky</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>40</td><td>Kendall Tambling</td><td>Kentucky</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>41</td><td>Khalifa Keith</td><td>Alabama</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>42</td><td>Lincoln Watkins</td><td>Kentucky</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>43</td><td>MJ Chirgwin</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>44</td><td>Mack Sutter</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>45</td><td>Marshall Pritchett</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>46</td><td>Martels Carter Jr.</td><td>Kentucky</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>47</td><td>Maurice Mathis Jr.</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>48</td><td>Peyton Fox</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>49</td><td>Preston Landry</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>50</td><td>Prince Jean</td><td>Kentucky</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>51</td><td>Rico Crowder</td><td>Kentucky</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>52</td><td>Saxton Howard</td><td>Kentucky</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>53</td><td>Spencer Leadbetter</td><td>Kentucky</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>54</td><td>TC Washington</td><td>Alabama</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>55</td><td>Tailan Hall</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>56</td><td>Tovani Mizell</td><td>Kentucky</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>57</td><td>Trae&#x27;shawn Brown</td><td>Alabama</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>58</td><td>Tyler Henderson</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>59</td><td>Warner Ross</td><td>Alabama</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>60</td><td>Xavier Daisy</td><td>Kentucky</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>61</td><td>Josh Ford</td><td>Alabama</td><td>WR</td><td>$1,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>62</td><td>Shane Carr</td><td>Kentucky</td><td>WR</td><td>$1,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>63</td><td>Henry Boyer</td><td>Kentucky</td><td>WR</td><td>$1,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>64</td><td>Cederian Morgan</td><td>Alabama</td><td>WR</td><td>$2,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>65</td><td>Mikkel Skinner</td><td>Kentucky</td><td>WR</td><td>$2,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>66</td><td>Derek Meadows</td><td>Alabama</td><td>WR</td><td>$3,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>67</td><td>Adam Zouagui</td><td>Kentucky</td><td>K</td><td>$4,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>68</td><td>Jacob Kauwe</td><td>Kentucky</td><td>K</td><td>$4,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>69</td><td>Matthew Obermeier</td><td>Kentucky</td><td>K</td><td>$4,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>70</td><td>Conor Talty</td><td>Alabama</td><td>K</td><td>$4,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>71</td><td>Lorcan Quinn</td><td>Alabama</td><td>K</td><td>$4,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>72</td><td>Tucker Cornelius</td><td>Alabama</td><td>K</td><td>$4,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>73</td><td>Jovantae Barnes</td><td>Kentucky</td><td>RB</td><td>$4,800</td><td class="val">—</td><td>—</td></tr>
+<tr><td>74</td><td>Noah Rogers</td><td>Alabama</td><td>WR</td><td>$5,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>75</td><td>Brennen Ward</td><td>Kentucky</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>76</td><td>Carson Cruver</td><td>Kentucky</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>77</td><td>JacQai Long</td><td>Kentucky</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>78</td><td>Jett Thomalla</td><td>Alabama</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>79</td><td>John Cooper</td><td>Alabama</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>80</td><td>John Gazzaniga</td><td>Alabama</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>81</td><td>Matt Ponatoski</td><td>Kentucky</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>82</td><td>Tayden-Evan Kaawa</td><td>Alabama</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>83</td><td>William Drakeford Jr.</td><td>Kentucky</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>84</td><td>EJ Crowell</td><td>Alabama</td><td>RB</td><td>$6,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>85</td><td>Kevin Riley</td><td>Alabama</td><td>RB</td><td>$6,800</td><td class="val">—</td><td>—</td></tr>
+<tr><td>86</td><td>Callum Wither</td><td>Kentucky</td><td>QB</td><td>$7,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>87</td><td>Austin Mack</td><td>Alabama</td><td>QB</td><td>$9,800</td><td class="val">—</td><td>—</td></tr>
 </tbody></table>
 <h3>ETR VALUE</h3>
-<p>Every name on ETR&#x27;s main-slate sheet for this game. Click a column to sort. A blank cell is —. <b>ETR salary</b> and <b>Owned</b> are their main-slate numbers. <b>Points per $1k</b> is their projected points versus our DraftKings salary for this game.</p>
+<p>Every name on ETR&#x27;s main-slate sheet for this game. Click a column to sort. A blank cell is —. <b>ETR salary</b> and <b>Owned</b> are their main-slate numbers. <b>Points per $1k</b> is their projected points versus our DraftKings salary for this game. Negative sheet values stay on the table. Not a Top 20.</p>
 <h4 class="team-break">Alabama</h4>
 <table class="sortable" data-default-sort="Points per $1k">
 <thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Pos</th><th scope="col" data-col="2">Opp</th><th scope="col" data-col="3">ETR salary</th><th scope="col" data-col="4">Projected points</th><th scope="col" data-col="5">Sheet value</th><th scope="col" data-col="6">Owned</th><th scope="col" data-col="7">Our salary</th><th scope="col" data-col="8">Points per $1k</th></tr></thead>
@@ -341,128 +522,24 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tr><td>Ahmir Smith</td><td>RB</td><td>Alabama</td><td>$4,000</td><td>0.65</td><td>-7.4</td><td>0</td><td>$1,000</td><td class="val">0.65</td></tr>
 <tr><td>Brock Coffman</td><td>WR</td><td>Alabama</td><td>$3,000</td><td>0.52</td><td>-6</td><td>0</td><td>$1,000</td><td class="val">0.52</td></tr>
 <tr><td>Xavier Daisy</td><td>WR</td><td>Alabama</td><td>$3,000</td><td>0.43</td><td>-6.1</td><td>0</td><td>$1,000</td><td class="val">0.43</td></tr>
-</tbody></table>
-<h3>SCRIPT SIX</h3>
-<table class="sortable">
-<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
-<tbody>
-<tr><td>Captain</td><td>Keelon Russell</td><td>Alabama</td><td>QB</td><td>$18,000</td><td class="val">0.80×</td><td>passing yards 239.5</td></tr>
-<tr><td>FLEX</td><td>Ryan Coleman-Williams</td><td>Alabama</td><td>WR</td><td>$11,000</td><td class="val">0.63×</td><td>receiving yards 69.5</td></tr>
-<tr><td>FLEX</td><td>Kenny Minchey</td><td>Kentucky</td><td>QB</td><td>$9,200</td><td class="val">0.85×</td><td>passing yards 195.5</td></tr>
-<tr><td>FLEX</td><td>CJ Baxter</td><td>Kentucky</td><td>RB</td><td>$7,200</td><td class="val">0.80×</td><td>rushing plus receiving yards 57.5</td></tr>
-<tr><td>FLEX</td><td>Mikkel Skinner</td><td>Kentucky</td><td>WR</td><td>$2,600</td><td class="val">No line</td><td>—</td></tr>
-<tr><td>FLEX</td><td>DJ Miller</td><td>Kentucky</td><td>WR</td><td>$2,000</td><td class="val">1.33×</td><td>receiving yards 26.5</td></tr>
-</tbody></table>
-<p class="left">Leftover: $0  (spent $50,000 / $50,000)</p>
-<p><b>Why these six</b></p>
-<ul>
-<li>Keelon Russell is the captain. He runs and throws. Last week: 30 throws for 256, 13 carries for 86. If he is captain, his rushing yards count extra. Projected 25 points.</li>
-<li>Ryan Coleman-Williams is on the six. Last week 5-130. Put Keelon Russell on the same six. Projected 17 points.</li>
-<li>CJ Baxter is on the six. Listed back last week (9 carries). He scored. Projected 13 points.</li>
-<li>Kenny Minchey is on the six. He throws from the pocket. Projected 13 points.</li>
-<li>DJ Miller is on the six. Cheap catcher at $2,000 so the expensive names still fit. Put Kenny Minchey on the same six. Projected 7 points.</li>
-<li>Mikkel Skinner is on the six. Last week 4-61-1. Cheap catcher at $2,600 so the expensive names still fit. Put Kenny Minchey on the same six. Projected 7 points.</li>
-</ul>
-<p>Projected points on this six: 94.08. The captain&#x27;s stats count extra.</p>
-<h3>ETR BUILD 1</h3>
-<table class="sortable">
-<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
-<tbody>
-<tr><td>Captain</td><td>Keelon Russell</td><td>Alabama</td><td>QB</td><td>$18,000</td><td class="val">0.80×</td><td>passing yards 239.5</td></tr>
-<tr><td>FLEX</td><td>Ryan Coleman-Williams</td><td>Alabama</td><td>WR</td><td>$11,000</td><td class="val">0.63×</td><td>receiving yards 69.5</td></tr>
-<tr><td>FLEX</td><td>Kenny Minchey</td><td>Kentucky</td><td>QB</td><td>$9,200</td><td class="val">0.85×</td><td>passing yards 195.5</td></tr>
-<tr><td>FLEX</td><td>CJ Baxter</td><td>Kentucky</td><td>RB</td><td>$7,200</td><td class="val">0.80×</td><td>rushing plus receiving yards 57.5</td></tr>
-<tr><td>FLEX</td><td>Mikkel Skinner</td><td>Kentucky</td><td>WR</td><td>$2,600</td><td class="val">No line</td><td>—</td></tr>
-<tr><td>FLEX</td><td>DJ Miller</td><td>Kentucky</td><td>WR</td><td>$2,000</td><td class="val">1.33×</td><td>receiving yards 26.5</td></tr>
-</tbody></table>
-<p class="left">Leftover: $0  (spent $50,000 / $50,000)</p>
-<p><b>Why these six</b></p>
-<ul>
-<li>Keelon Russell is the captain. He runs and throws. Last week: 30 throws for 256, 13 carries for 86. If he is captain, his rushing yards count extra. Projected 25 points.</li>
-<li>Ryan Coleman-Williams is on the six. Last week 5-130. Put Keelon Russell on the same six. Projected 17 points.</li>
-<li>CJ Baxter is on the six. Listed back last week (9 carries). He scored. Projected 13 points.</li>
-<li>Kenny Minchey is on the six. He throws from the pocket. Projected 13 points.</li>
-<li>DJ Miller is on the six. Cheap catcher at $2,000 so the expensive names still fit. Put Kenny Minchey on the same six. Projected 7 points.</li>
-<li>Mikkel Skinner is on the six. Last week 4-61-1. Cheap catcher at $2,600 so the expensive names still fit. Put Kenny Minchey on the same six. Projected 7 points.</li>
-</ul>
-<p>Projected points on this six: 94.08. The captain&#x27;s stats count extra.</p>
-<h3>ETR BUILD 2</h3>
-<table class="sortable">
-<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
-<tbody>
-<tr><td>Captain</td><td>Keelon Russell</td><td>Alabama</td><td>QB</td><td>$18,000</td><td class="val">0.80×</td><td>passing yards 239.5</td></tr>
-<tr><td>FLEX</td><td>Ryan Coleman-Williams</td><td>Alabama</td><td>WR</td><td>$11,000</td><td class="val">0.63×</td><td>receiving yards 69.5</td></tr>
-<tr><td>FLEX</td><td>Kenny Minchey</td><td>Kentucky</td><td>QB</td><td>$9,200</td><td class="val">0.85×</td><td>passing yards 195.5</td></tr>
-<tr><td>FLEX</td><td>CJ Baxter</td><td>Kentucky</td><td>RB</td><td>$7,200</td><td class="val">0.80×</td><td>rushing plus receiving yards 57.5</td></tr>
-<tr><td>FLEX</td><td>Mikkel Skinner</td><td>Kentucky</td><td>WR</td><td>$2,600</td><td class="val">No line</td><td>—</td></tr>
-<tr><td>FLEX</td><td>DJ Miller</td><td>Kentucky</td><td>WR</td><td>$2,000</td><td class="val">1.33×</td><td>receiving yards 26.5</td></tr>
-</tbody></table>
-<p class="left">Leftover: $0  (spent $50,000 / $50,000)</p>
-<p><b>Why these six</b></p>
-<ul>
-<li>Keelon Russell is the captain. He runs and throws. Last week: 30 throws for 256, 13 carries for 86. If he is captain, his rushing yards count extra. Projected 25 points.</li>
-<li>Ryan Coleman-Williams is on the six. Last week 5-130. Put Keelon Russell on the same six. Projected 17 points.</li>
-<li>CJ Baxter is on the six. Listed back last week (9 carries). He scored. Projected 13 points.</li>
-<li>Kenny Minchey is on the six. He throws from the pocket. Projected 13 points.</li>
-<li>DJ Miller is on the six. Cheap catcher at $2,000 so the expensive names still fit. Put Kenny Minchey on the same six. Projected 7 points.</li>
-<li>Mikkel Skinner is on the six. Last week 4-61-1. Cheap catcher at $2,600 so the expensive names still fit. Put Kenny Minchey on the same six. Projected 7 points.</li>
-</ul>
-<p>Projected points on this six: 94.08. The captain&#x27;s stats count extra.</p>
-<h3>ETR BUILD 3</h3>
-<table class="sortable">
-<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
-<tbody>
-<tr><td>Captain</td><td>Ryan Coleman-Williams</td><td>Alabama</td><td>WR</td><td>$16,500</td><td class="val">0.63×</td><td>receiving yards 69.5</td></tr>
-<tr><td>FLEX</td><td>Keelon Russell</td><td>Alabama</td><td>QB</td><td>$12,000</td><td class="val">0.80×</td><td>passing yards 239.5</td></tr>
-<tr><td>FLEX</td><td>Kenny Minchey</td><td>Kentucky</td><td>QB</td><td>$9,200</td><td class="val">0.85×</td><td>passing yards 195.5</td></tr>
-<tr><td>FLEX</td><td>CJ Baxter</td><td>Kentucky</td><td>RB</td><td>$7,200</td><td class="val">0.80×</td><td>rushing plus receiving yards 57.5</td></tr>
-<tr><td>FLEX</td><td>Rico Scott</td><td>Alabama</td><td>WR</td><td>$3,000</td><td class="val">1.15×</td><td>receiving yards 34.5</td></tr>
-<tr><td>FLEX</td><td>DJ Miller</td><td>Kentucky</td><td>WR</td><td>$2,000</td><td class="val">1.33×</td><td>receiving yards 26.5</td></tr>
-</tbody></table>
-<p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
-<p><b>Why these six</b></p>
-<ul>
-<li>Ryan Coleman-Williams is the captain. Last week 5-130. Put Keelon Russell on the same six. Projected 17 points.</li>
-<li>Keelon Russell is on the six. He runs and throws. Last week: 30 throws for 256, 13 carries for 86. Projected 25 points.</li>
-<li>CJ Baxter is on the six. Listed back last week (9 carries). He scored. Projected 13 points.</li>
-<li>Kenny Minchey is on the six. He throws from the pocket. Projected 13 points.</li>
-<li>DJ Miller is on the six. Cheap catcher at $2,000 so the expensive names still fit. Put Kenny Minchey on the same six. Projected 7 points.</li>
-<li>Rico Scott is on the six. Last week 2-21. Put Keelon Russell on the same six. Projected 6 points.</li>
-<li>DK priced Ryan Coleman-Williams + Keelon Russell + CJ Baxter + Kenny Minchey $700 short — you sit Rico Scott and keep the punt.</li>
-</ul>
-<p>Projected points on this six: 89.22. The captain&#x27;s stats count extra.</p>
-<h3>SITS</h3>
-<table class="sortable">
-<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Why</th></tr></thead>
-<tbody>
-<tr><td>AK Dear</td><td>Alabama</td><td>out. Camp ankle. Second straight miss</td></tr>
-<tr><td>Noah Rogers</td><td>Alabama</td><td>out</td></tr>
-<tr><td>Michael Carroll</td><td>—</td><td>out (line, not a Showdown skill)</td></tr>
-<tr><td>Tovani Mizell</td><td>Kentucky</td><td>out</td></tr>
-<tr><td>Austin Mack / Callum Wither</td><td>—</td><td>backups priced like starters. Sit</td></tr>
-<tr><td>Kickers</td><td>—</td><td>sitting both sides. Rain nearby</td></tr>
-</tbody></table>
-</div>
-<div class="player-book"><h3>Player book</h3><p class="sub">Quarterbacks, running backs, and receivers are separate tables. One row per player. Week 1, Week 2, Week 3 sit side by side — teal is up from last week, red is down. Click a header to sort. A new week column appears after that box is in. A blank cell is —.</p><div class="team-pills noprint"><button type="button" class="team-pill on" data-team="ALL">All</button><button type="button" class="team-pill" data-team="BAMA">Alabama</button><button type="button" class="team-pill" data-team="UK">Kentucky</button></div><section class="pos-book" data-pos="QB"><h4>Quarterbacks</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Att</th><th scope="col" class="w0" data-col="5">Yds</th><th scope="col" class="w0" data-col="6">TD</th><th scope="col" class="w0" data-col="7">RAtt</th><th scope="col" class="w0" data-col="8">Rush</th><th scope="col" class="w0" data-col="9">rTD</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="BAMA"><td class="who">Keelon Russell</td><td class="who">Alabama</td><td class="who" data-n="12000">$12,000</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="30">30</td><td class="w0" data-n="256">256</td><td class="w0" data-n="0">0</td><td class="w0" data-n="13">13</td><td class="w0" data-n="86">86</td><td class="w0" data-n="1">1</td><td class="w0 val" data-n="24.84">24.84</td></tr><tr data-team="BAMA"><td class="who">Austin Mack</td><td class="who">Alabama</td><td class="who" data-n="9800">$9,800</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="2">2</td><td class="w0" data-n="4">4</td><td class="w0" data-n="0">0</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="0.76">0.76</td></tr><tr data-team="UK"><td class="who">Kenny Minchey</td><td class="who">Kentucky</td><td class="who" data-n="9200">$9,200</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="27">27</td><td class="w0" data-n="301">301</td><td class="w0" data-n="4">4</td><td class="w0" data-n="1">1</td><td class="w0" data-n="17">17</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="32.74">32.74</td></tr><tr data-team="UK"><td class="who">Callum Wither</td><td class="who">Kentucky</td><td class="who" data-n="7600">$7,600</td><td class="w0 opp">Youngstown State</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0" data-n="1">1</td><td class="w0" data-n="3">3</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="0.3">0.3</td></tr></tbody></table></div></section><section class="pos-book" data-pos="RB"><h4>Running backs</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">RAtt</th><th scope="col" class="w0" data-col="5">Rush</th><th scope="col" class="w0" data-col="6">rTD</th><th scope="col" class="w0" data-col="7">Rec</th><th scope="col" class="w0" data-col="8">Tgt</th><th scope="col" class="w0" data-col="9">Yds</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="BAMA"><td class="who">Daniel Hill</td><td class="who">Alabama</td><td class="who" data-n="9400">$9,400</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="9">9</td><td class="w0" data-n="47">47</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0">—</td><td class="w0" data-n="10">10</td><td class="w0 val" data-n="19.7">19.7</td></tr><tr data-team="UK"><td class="who">CJ Baxter</td><td class="who">Kentucky</td><td class="who" data-n="7200">$7,200</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="9">9</td><td class="w0" data-n="48">48</td><td class="w0" data-n="2">2</td><td class="w0">—</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0 val" data-n="16.8">16.8</td></tr><tr data-team="BAMA"><td class="who">Kevin Riley</td><td class="who">Alabama</td><td class="who" data-n="6800">$6,800</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="6">6</td><td class="w0" data-n="17">17</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.7">1.7</td></tr><tr data-team="BAMA"><td class="who">EJ Crowell</td><td class="who">Alabama</td><td class="who" data-n="6400">$6,400</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="7">7</td><td class="w0" data-n="37">37</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0" data-n="13">13</td><td class="w0 val" data-n="12">12.0</td></tr><tr data-team="UK"><td class="who">Jason Patterson</td><td class="who">Kentucky</td><td class="who" data-n="6200">$6,200</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="11">11</td><td class="w0" data-n="78">78</td><td class="w0" data-n="0">0</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="16">16</td><td class="w0 val" data-n="10.4">10.4</td></tr><tr data-team="UK"><td class="who">Ahmir Smith</td><td class="who">Kentucky</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="2">2</td><td class="w0" data-n="13">13</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.3">1.3</td></tr><tr data-team="BAMA"><td class="who">Khalifa Keith</td><td class="who">Alabama</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="3">3</td><td class="w0" data-n="12">12</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.2">1.2</td></tr><tr data-team="UK"><td class="who">Martels Carter Jr.</td><td class="who">Kentucky</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="5">5</td><td class="w0" data-n="37">37</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="3.7">3.7</td></tr><tr data-team="BAMA"><td class="who">Trae&#x27;shawn Brown</td><td class="who">Alabama</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="7">7</td><td class="w0" data-n="15">15</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="7.5">7.5</td></tr></tbody></table></div></section><section class="pos-book" data-pos="WR"><h4>Wide receivers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Rec</th><th scope="col" class="w0" data-col="5">Tgt</th><th scope="col" class="w0" data-col="6">Yds</th><th scope="col" class="w0" data-col="7">TD</th><th scope="col" class="w0" data-col="8">RAtt</th><th scope="col" class="w0" data-col="9">Rush</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="BAMA"><td class="who">Ryan Coleman-Williams</td><td class="who">Alabama</td><td class="who" data-n="11000">$11,000</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="5">5</td><td class="w0">—</td><td class="w0" data-n="130">130</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="21">21.0</td></tr><tr data-team="BAMA"><td class="who">Lotzeir Brooks</td><td class="who">Alabama</td><td class="who" data-n="8200">$8,200</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="2">2</td><td class="w0">—</td><td class="w0" data-n="23">23</td><td class="w0" data-n="0">0</td><td class="w0" data-n="1">1</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="4.3">4.3</td></tr><tr data-team="UK"><td class="who">Nic Anderson</td><td class="who">Kentucky</td><td class="who" data-n="5600">$5,600</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="4">4</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.4">1.4</td></tr><tr data-team="UK"><td class="who">Willie Rodriguez</td><td class="who">Kentucky</td><td class="who" data-n="4400">$4,400</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="4">4</td><td class="w0" data-n="5">5</td><td class="w0" data-n="48">48</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="14.8">14.8</td></tr><tr data-team="BAMA"><td class="who">Kaleb Edwards</td><td class="who">Alabama</td><td class="who" data-n="4200">$4,200</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="2">2</td><td class="w0">—</td><td class="w0" data-n="21">21</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.1">4.1</td></tr><tr data-team="UK"><td class="who">Kenny Darby</td><td class="who">Kentucky</td><td class="who" data-n="3800">$3,800</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="3">3</td><td class="w0" data-n="3">3</td><td class="w0" data-n="74">74</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="9">9</td><td class="w0 val" data-n="17.3">17.3</td></tr><tr data-team="BAMA"><td class="who">Derek Meadows</td><td class="who">Alabama</td><td class="who" data-n="3600">$3,600</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="3">3</td><td class="w0">—</td><td class="w0" data-n="44">44</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="7.4">7.4</td></tr><tr data-team="BAMA"><td class="who">Rico Scott</td><td class="who">Alabama</td><td class="who" data-n="3000">$3,000</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="2">2</td><td class="w0">—</td><td class="w0" data-n="21">21</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.1">4.1</td></tr><tr data-team="UK"><td class="who">Mikkel Skinner</td><td class="who">Kentucky</td><td class="who" data-n="2600">$2,600</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="4">4</td><td class="w0" data-n="4">4</td><td class="w0" data-n="61">61</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="3">3</td><td class="w0 val" data-n="16.4">16.4</td></tr><tr data-team="UK"><td class="who">DJ Miller</td><td class="who">Kentucky</td><td class="who" data-n="2000">$2,000</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td></tr><tr data-team="UK"><td class="who">Henry Boyer</td><td class="who">Kentucky</td><td class="who" data-n="1600">$1,600</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="31">31</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.1">4.1</td></tr><tr data-team="UK"><td class="who">Brock Coffman</td><td class="who">Kentucky</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="38">38</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.8">4.8</td></tr><tr data-team="BAMA"><td class="who">Danny Lewis Jr.</td><td class="who">Alabama</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0" data-n="4">4</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.4">1.4</td></tr><tr data-team="UK"><td class="who">Ja&#x27;Kayden Ferguson</td><td class="who">Kentucky</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.2">1.2</td></tr><tr data-team="UK"><td class="who">Prince Jean</td><td class="who">Kentucky</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0" data-n="27">27</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="10.7">10.7</td></tr></tbody></table></div></section><section class="pos-book" data-pos="K"><h4>Kickers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="4">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">FG</th><th scope="col" class="w0" data-col="5">XP</th><th scope="col" class="w0" data-col="6">DK</th></tr></thead><tbody><tr data-team="BAMA"><td class="who">Conor Talty</td><td class="who">Alabama</td><td class="who" data-n="4600">$4,600</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="2">2</td><td class="w0" data-n="6">6</td><td class="w0 val" data-n="12">12.0</td></tr><tr data-team="BAMA"><td class="who">Lorcan Quinn</td><td class="who">Alabama</td><td class="who" data-n="4600">$4,600</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td></tr><tr data-team="UK"><td class="who">Adam Zouagui</td><td class="who">Kentucky</td><td class="who" data-n="4000">$4,000</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0 val" data-n="9">9.0</td></tr><tr data-team="UK"><td class="who">Jacob Kauwe</td><td class="who">Kentucky</td><td class="who" data-n="4000">$4,000</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td></tr></tbody></table></div></section></div>
+</tbody></table></div>
+<div class="player-book"><h3>Player book</h3><p class="sub">Quarterbacks, running backs, and receivers are separate tables. One row per player. Week 1, Week 2, Week 3 sit side by side — teal is up from last week, red is down. Click a header to sort. A new week column appears after that box is in. A blank cell is —.</p><div class="team-pills noprint"><button type="button" class="team-pill on" data-team="BAMA">Alabama</button><button type="button" class="team-pill" data-team="UK">Kentucky</button></div><section class="pos-book" data-pos="QB"><h4>Quarterbacks</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Att</th><th scope="col" class="w0" data-col="5">Yds</th><th scope="col" class="w0" data-col="6">TD</th><th scope="col" class="w0" data-col="7">RAtt</th><th scope="col" class="w0" data-col="8">Rush</th><th scope="col" class="w0" data-col="9">rTD</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="BAMA"><td class="who">Keelon Russell</td><td class="who">Alabama</td><td class="who" data-n="12000">$12,000</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="30">30</td><td class="w0" data-n="256">256</td><td class="w0" data-n="0">0</td><td class="w0" data-n="13">13</td><td class="w0" data-n="86">86</td><td class="w0" data-n="1">1</td><td class="w0 val" data-n="24.84">24.84</td></tr><tr data-team="BAMA"><td class="who">Austin Mack</td><td class="who">Alabama</td><td class="who" data-n="9800">$9,800</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="2">2</td><td class="w0" data-n="4">4</td><td class="w0" data-n="0">0</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="0.76">0.76</td></tr><tr data-team="UK" hidden><td class="who">Kenny Minchey</td><td class="who">Kentucky</td><td class="who" data-n="9200">$9,200</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="27">27</td><td class="w0" data-n="301">301</td><td class="w0" data-n="4">4</td><td class="w0" data-n="1">1</td><td class="w0" data-n="17">17</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="32.74">32.74</td></tr><tr data-team="UK" hidden><td class="who">Callum Wither</td><td class="who">Kentucky</td><td class="who" data-n="7600">$7,600</td><td class="w0 opp">Youngstown State</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0" data-n="1">1</td><td class="w0" data-n="3">3</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="0.3">0.3</td></tr></tbody></table></div></section><section class="pos-book" data-pos="RB"><h4>Running backs</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">RAtt</th><th scope="col" class="w0" data-col="5">Rush</th><th scope="col" class="w0" data-col="6">rTD</th><th scope="col" class="w0" data-col="7">Rec</th><th scope="col" class="w0" data-col="8">Tgt</th><th scope="col" class="w0" data-col="9">Yds</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="BAMA"><td class="who">Daniel Hill</td><td class="who">Alabama</td><td class="who" data-n="9400">$9,400</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="9">9</td><td class="w0" data-n="47">47</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0">—</td><td class="w0" data-n="10">10</td><td class="w0 val" data-n="19.7">19.7</td></tr><tr data-team="UK" hidden><td class="who">CJ Baxter</td><td class="who">Kentucky</td><td class="who" data-n="7200">$7,200</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="9">9</td><td class="w0" data-n="48">48</td><td class="w0" data-n="2">2</td><td class="w0">—</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0 val" data-n="16.8">16.8</td></tr><tr data-team="BAMA"><td class="who">Kevin Riley</td><td class="who">Alabama</td><td class="who" data-n="6800">$6,800</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="6">6</td><td class="w0" data-n="17">17</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.7">1.7</td></tr><tr data-team="BAMA"><td class="who">EJ Crowell</td><td class="who">Alabama</td><td class="who" data-n="6400">$6,400</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="7">7</td><td class="w0" data-n="37">37</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0" data-n="13">13</td><td class="w0 val" data-n="12">12.0</td></tr><tr data-team="UK" hidden><td class="who">Jason Patterson</td><td class="who">Kentucky</td><td class="who" data-n="6200">$6,200</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="11">11</td><td class="w0" data-n="78">78</td><td class="w0" data-n="0">0</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="16">16</td><td class="w0 val" data-n="10.4">10.4</td></tr><tr data-team="UK" hidden><td class="who">Ahmir Smith</td><td class="who">Kentucky</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="2">2</td><td class="w0" data-n="13">13</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.3">1.3</td></tr><tr data-team="BAMA"><td class="who">Khalifa Keith</td><td class="who">Alabama</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="3">3</td><td class="w0" data-n="12">12</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.2">1.2</td></tr><tr data-team="UK" hidden><td class="who">Martels Carter Jr.</td><td class="who">Kentucky</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="5">5</td><td class="w0" data-n="37">37</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="3.7">3.7</td></tr><tr data-team="BAMA"><td class="who">Trae&#x27;shawn Brown</td><td class="who">Alabama</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="7">7</td><td class="w0" data-n="15">15</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="7.5">7.5</td></tr></tbody></table></div></section><section class="pos-book" data-pos="WR"><h4>Wide receivers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Rec</th><th scope="col" class="w0" data-col="5">Tgt</th><th scope="col" class="w0" data-col="6">Yds</th><th scope="col" class="w0" data-col="7">TD</th><th scope="col" class="w0" data-col="8">RAtt</th><th scope="col" class="w0" data-col="9">Rush</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="BAMA"><td class="who">Ryan Coleman-Williams</td><td class="who">Alabama</td><td class="who" data-n="11000">$11,000</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="5">5</td><td class="w0">—</td><td class="w0" data-n="130">130</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="21">21.0</td></tr><tr data-team="BAMA"><td class="who">Lotzeir Brooks</td><td class="who">Alabama</td><td class="who" data-n="8200">$8,200</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="2">2</td><td class="w0">—</td><td class="w0" data-n="23">23</td><td class="w0" data-n="0">0</td><td class="w0" data-n="1">1</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="4.3">4.3</td></tr><tr data-team="UK" hidden><td class="who">Nic Anderson</td><td class="who">Kentucky</td><td class="who" data-n="5600">$5,600</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="4">4</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.4">1.4</td></tr><tr data-team="UK" hidden><td class="who">Willie Rodriguez</td><td class="who">Kentucky</td><td class="who" data-n="4400">$4,400</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="4">4</td><td class="w0" data-n="5">5</td><td class="w0" data-n="48">48</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="14.8">14.8</td></tr><tr data-team="BAMA"><td class="who">Kaleb Edwards</td><td class="who">Alabama</td><td class="who" data-n="4200">$4,200</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="2">2</td><td class="w0">—</td><td class="w0" data-n="21">21</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.1">4.1</td></tr><tr data-team="UK" hidden><td class="who">Kenny Darby</td><td class="who">Kentucky</td><td class="who" data-n="3800">$3,800</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="3">3</td><td class="w0" data-n="3">3</td><td class="w0" data-n="74">74</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="9">9</td><td class="w0 val" data-n="17.3">17.3</td></tr><tr data-team="BAMA"><td class="who">Derek Meadows</td><td class="who">Alabama</td><td class="who" data-n="3600">$3,600</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="3">3</td><td class="w0">—</td><td class="w0" data-n="44">44</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="7.4">7.4</td></tr><tr data-team="BAMA"><td class="who">Rico Scott</td><td class="who">Alabama</td><td class="who" data-n="3000">$3,000</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="2">2</td><td class="w0">—</td><td class="w0" data-n="21">21</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.1">4.1</td></tr><tr data-team="UK" hidden><td class="who">Mikkel Skinner</td><td class="who">Kentucky</td><td class="who" data-n="2600">$2,600</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="4">4</td><td class="w0" data-n="4">4</td><td class="w0" data-n="61">61</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="3">3</td><td class="w0 val" data-n="16.4">16.4</td></tr><tr data-team="UK" hidden><td class="who">DJ Miller</td><td class="who">Kentucky</td><td class="who" data-n="2000">$2,000</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td></tr><tr data-team="UK" hidden><td class="who">Henry Boyer</td><td class="who">Kentucky</td><td class="who" data-n="1600">$1,600</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="31">31</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.1">4.1</td></tr><tr data-team="UK" hidden><td class="who">Brock Coffman</td><td class="who">Kentucky</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="38">38</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.8">4.8</td></tr><tr data-team="BAMA"><td class="who">Danny Lewis Jr.</td><td class="who">Alabama</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0" data-n="4">4</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.4">1.4</td></tr><tr data-team="UK" hidden><td class="who">Ja&#x27;Kayden Ferguson</td><td class="who">Kentucky</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.2">1.2</td></tr><tr data-team="UK" hidden><td class="who">Prince Jean</td><td class="who">Kentucky</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0" data-n="27">27</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="10.7">10.7</td></tr></tbody></table></div></section><section class="pos-book" data-pos="K"><h4>Kickers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="4">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">FG</th><th scope="col" class="w0" data-col="5">XP</th><th scope="col" class="w0" data-col="6">DK</th></tr></thead><tbody><tr data-team="BAMA"><td class="who">Conor Talty</td><td class="who">Alabama</td><td class="who" data-n="4600">$4,600</td><td class="w0 opp">East Carolina</td><td class="w0" data-n="2">2</td><td class="w0" data-n="6">6</td><td class="w0 val" data-n="12">12.0</td></tr><tr data-team="BAMA"><td class="who">Lorcan Quinn</td><td class="who">Alabama</td><td class="who" data-n="4600">$4,600</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td></tr><tr data-team="UK" hidden><td class="who">Adam Zouagui</td><td class="who">Kentucky</td><td class="who" data-n="4000">$4,000</td><td class="w0 opp">Youngstown State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0 val" data-n="9">9.0</td></tr><tr data-team="UK" hidden><td class="who">Jacob Kauwe</td><td class="who">Kentucky</td><td class="who" data-n="4000">$4,000</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td></tr></tbody></table></div></section></div>
 </article>
 </main></div>
 <script>
 (function(){
-  document.addEventListener('click', function(e){
-    var pill=e.target.closest('.team-pill');
-    if(!pill) return;
-    var book=pill.closest('.player-book');
-    if(!book) return;
-    var team=pill.getAttribute('data-team')||'ALL';
+  function applyTeam(book, pill){
+    if(!book || !pill) return;
     book.querySelectorAll('.team-pill').forEach(function(p){
       p.classList.toggle('on', p===pill);
     });
     var inp=document.getElementById('playerSearch');
     if(inp) inp.dispatchEvent(new Event('input'));
     else {
+      var team=pill.getAttribute('data-team')||'';
       book.querySelectorAll('table.season-log tbody tr').forEach(function(tr){
         var rowTeam=tr.getAttribute('data-team')||'';
-        tr.hidden = !!(team && team!=='ALL' && rowTeam!==team);
+        tr.hidden = !!(team && rowTeam!==team);
       });
       book.querySelectorAll('.pos-book').forEach(function(sec){
         var any=false;
@@ -470,6 +547,13 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
         sec.classList.toggle('search-empty', !any);
       });
     }
+  }
+  document.addEventListener('click', function(e){
+    var pill=e.target.closest('.team-pill');
+    if(!pill) return;
+    var book=pill.closest('.player-book');
+    if(!book) return;
+    applyTeam(book, pill);
   });
 })();
 </script>
@@ -581,15 +665,24 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
     function teamOk(tr){
       var book=tr.closest && tr.closest('.player-book');
       if(!book) return true;
-      var on=book.querySelector('.team-pill.on');
-      var team=on ? (on.getAttribute('data-team')||'ALL') : 'ALL';
-      if(!team || team==='ALL') return true;
+      var on=book.querySelector('.team-pill.on') || book.querySelector('.team-pill');
+      var team=on ? (on.getAttribute('data-team')||'') : '';
+      if(!team) return true;
       return (tr.getAttribute('data-team')||'')===team;
     }
     function mark(el, hit){
       el.hidden = !hit;
       el.classList.toggle('name-hit', !!(q && hit));
       if(q && hit) n++;
+    }
+    function panelHasHit(sel){
+      var panel=document.querySelector(sel);
+      if(!panel) return false;
+      var hit=false;
+      panel.querySelectorAll('tbody tr, li').forEach(function(el){
+        if(!el.hidden) hit=true;
+      });
+      return hit;
     }
     document.querySelectorAll('table tbody tr').forEach(function(tr){
       if(skip(tr)) return;
@@ -620,6 +713,14 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
     });
     var hint=document.getElementById('playerSearchHint');
     if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
+    document.querySelectorAll('label.pill[for]').forEach(function(lab){
+      var id=lab.getAttribute('for');
+      var sel = id==='v-report' ? '.game-report'
+              : id==='v-value' ? '.value-board'
+              : id==='v-book' ? '.player-book' : '';
+      if(!sel) return;
+      lab.classList.toggle('search-miss', !!(q && !panelHasHit(sel)));
+    });
     if(opts.jump){
       var shownArt=document.querySelector('article.panel');
       var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
@@ -649,6 +750,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
       }
     });
   }
+  apply({});
 })();
 </script>
 </body></html>

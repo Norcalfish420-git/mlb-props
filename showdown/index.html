@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CFB Showdown 2026-09-12 · Ohio State @ Texas</title>
+<title>CFB Showdown 2026-09-12 · Arkansas @ Utah</title>
 <style>
 :root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#9ef0f0;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#007d79;--table:#262626;--cell:#525252;--th:#393939;--val:#3ddbd9;--h:#3ddbd9;--code:#9ef0f0;--up:#3ddbd9;--down:#ff8389;--up-bg:rgba(61,219,217,.16);--down-bg:rgba(255,131,137,.16);--wk-alt:rgba(0,125,121,.08);}
 html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#004144;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#007d79;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#005d5d;--h:#005d5d;--code:#005d5d;--up:#005d5d;--down:#a2191f;--up-bg:rgba(0,93,93,.1);--down-bg:rgba(162,25,31,.1);--wk-alt:rgba(0,125,121,.06);}
@@ -82,6 +82,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
   .rail,.noprint{display:none !important;}
   main{max-width:none;padding:0;}
   .panel,.appendix{display:block !important;page-break-after:always;}
+  .game-report,.value-board,.player-book{display:block !important;}
   .appendix{page-break-after:auto;}
   table{background:#fff;page-break-inside:avoid;}
   th{background:#eee;color:#333;}
@@ -95,20 +96,25 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 }
 @page{margin:.5in;}
 #v-report:checked ~ .shell .rail label[for=v-report]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-value:checked ~ .shell .rail label[for=v-value]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
-.player-book{display:none;}
-#v-book:checked ~ .shell main{max-width:none;}
-#v-book:checked ~ .shell main .game-report{display:none;}
+.player-book,.value-board{display:none;}
+#v-book:checked ~ .shell main,#v-value:checked ~ .shell main{max-width:none;}
+#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .value-board{display:none;}
 #v-book:checked ~ .shell main .player-book{display:block;}
+#v-value:checked ~ .shell main .game-report,#v-value:checked ~ .shell main .player-book{display:none;}
+#v-value:checked ~ .shell main .value-board{display:block;}
 </style>
 </head><body>
 <input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-value"/>
 <input class="tab" type="radio" name="v" id="v-book"/>
 <div class="shell">
 <aside class="rail noprint">
-<p class="brand">CFB SHOWDOWN<br/>2026-09-12<br/>Ohio State @ Texas</p>
+<p class="brand">CFB SHOWDOWN<br/>2026-09-12<br/>Arkansas @ Utah</p>
 <div class="view-row">
 <label class="pill" for="v-report">Report</label>
+<label class="pill" for="v-value">Value</label>
 <label class="pill" for="v-book">Player book</label>
 </div>
 <form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
@@ -116,368 +122,433 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <button class="pdf" type="button" onclick="window.print()">Save as PDF</button><p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
 </aside>
 <main>
-<h1>CFB Showdown — 2026-09-12 · Ohio State @ Texas</h1>
+<h1>CFB Showdown — 2026-09-12 · Arkansas @ Utah</h1>
 <article class="panel">
 <div class="game-report">
-<h2>3) Ohio State @ Texas · 7:30 p.m. ET · DKR</h2>
-<p class="line-blast">Texas is about <b>1.5</b> points better at home. The total sits at <b>47.5 to 50</b>. DKR, 7:30 p.m. ET on ABC. Outdoor, about 98°, heat index 99, wind 9 southeast / gust 10, rain 9%. Heat, not a pass kill.</p>
-<p><b>This slate is five out of five stars.</b> Toss-up. The live book is <b>Texas −1.5 / 50</b>. Heat is the story.</p>
+<h2>4) Arkansas @ Utah · 10:15 p.m. ET · Rice-Eccles</h2>
+<p class="line-blast">Utah is about <b>12.5</b> points better. The total sits at <b>55.5</b>. Rice-Eccles, 8:15 p.m. MT / 10:15 p.m. ET on ESPN. Outdoor, 4,656 feet. About 76°, wind 2 / gust 4, rain 3%. Not a pass kill.</p>
+<p><b>This slate is three out of five stars.</b> Two-score home favorite. The live book is <b>Utah −12.5 / 55.5</b>. Night, altitude.</p>
 <h3>WHO THEY ARE</h3>
 <ul>
-<li><b>Ohio State</b> is ranked No. 1 this year (1-0). They are one of the best teams in the country right now.</li>
-<li><b>Texas</b> is ranked No. 4 this year (1-0). They are one of the best teams in the country right now.</li>
+<li><b>Arkansas</b> is unranked this year, unbeaten (1-0).</li>
+<li><b>Utah</b> is ranked No. 20 this year (1-0).</li>
 </ul>
 <h3>WHO MATTERS</h3>
 <p>These are the names that decide a six tonight — who runs the ball, who catches it, and who to sit.</p>
-<h4>Texas</h4>
+<h4>Utah</h4>
 <ul>
-<li><b>Quarterback:</b> Arch Manning throws from the pocket. Last week vs Texas State he threw 27 times for 305, 4 passing scores and had 3 carries for 6.</li>
-<li><b>Running backs:</b> They split the carries. Raleek Brown (11 carries) and Ryan Niblett (2 carries). Use one of them, not both. The back who scored: Raleek Brown.</li>
-<li><b>Best other names:</b> Ryan Wingo — 7-121-1 last week; Cam Coleman — 3-70-2 last week.</li>
+<li><b>Quarterback:</b> Devon Dampier runs and throws. Last week vs Idaho he threw 18 times for 176, 3 passing scores and had 6 carries for 31. That was a quiet rushing night, not who he is. If you make him captain, his rushing yards count extra.</li>
+<li><b>Running backs:</b> They split the carries. Wayshawn Parker (12 carries) and LaMarcus Bell (7 carries). Use one of them, not both. The back who scored: Wayshawn Parker, LaMarcus Bell, Steve Chavez-Soto.</li>
+<li><b>Best other names:</b> Braden Pegan — 4-81-1 last week; Larry Simmons — 2-41 last week.</li>
 </ul>
-<h4>Ohio State</h4>
+<h4>Arkansas</h4>
 <ul>
-<li><b>Quarterback:</b> Julian Sayin throws from the pocket. Last week vs Ball State he threw 25 times for 320, 3 passing scores and had 3 carries for -9.</li>
-<li><b>Running backs:</b> They split the carries. Bo Jackson (9 carries) and Ja&#x27;Kobi Jackson (8 carries). Use one of them, not both. The back who scored: Bo Jackson, Ja&#x27;Kobi Jackson, Legend Bey.</li>
-<li><b>Best other names:</b> Jeremiah Smith — 8-151 last week; Devin McCuin — 6-97-1 last week.</li>
+<li><b>Quarterback:</b> KJ Jackson runs and throws. Last week vs North Alabama he threw 35 times for 267, 3 passing scores and had 10 carries for 27. If you make him captain, his rushing yards count extra.</li>
+<li><b>Running backs:</b> They split the carries. Braylen Russell (17 carries) and Sutton Smith (15 carries). Use one of them, not both. The back who scored: Braylen Russell.</li>
+<li><b>Best other names:</b> Chris Marshall — 7-79 last week; CJ Brown — 3-37 last week.</li>
 </ul>
 <h3>THE MOVIE</h3>
-<p>Third meeting in three seasons. Ohio State won the last two (28–14 Cotton Bowl, 14–7 last year). First Austin meeting since 2006. GameDay is in town. Both blew out Group of 5 openers. This is not last week’s 50-point half.</p>
-<p><b>What the writers are saying:</b> Split. The market is Texas −1.5. One preview has Ohio State by about a field goal. Scores they like sit around 31–24 / 27–24 / 27–25. Most Ohio State writers like the road underdog. Texas writers like home. Tight, possession-sensitive night.</p>
-<p><b>Ohio State</b></p>
+<p>First meeting. Morgan Scalley is the new Utah head coach (was the defensive coordinator). Ryan Silverfield is the new Arkansas head coach (from Memphis). Utah mashed Idaho 66–14. Arkansas beat North Alabama 31–14, and Silverfield called it one of the worst offensive nights he has been part of (3.0 yards per carry, 1-for-6 in the red zone, three turnovers).</p>
+<p><b>What the writers are saying:</b> Utah wins. Scores they like sit around 31–16 / 31–17 / 38–20 / 45–17. The market is Utah −12.5 / 55.5. One preview has Utah by about two scores. Arkansas has to run better than 3.0 or Jackson is one-dimensional on the road.</p>
+<p><b>Utah</b></p>
 <ul>
-<li>Julian Sayin
+<li>Devon Dampier
 <ul>
-<li>Last week vs Ball State: 21-of-25 for 320, 3 passing scores, plus a rushing score</li>
+<li>Last week vs Idaho: 13-of-18 for 176 and 3 scores. Sat after the first drive of the third quarter at 38–7</li>
 </ul>
 </li>
-<li>Jeremiah Smith
+<li>Byrd Ficklin
 <ul>
-<li>8-151 and 2 scores in the first half vs Ball State. Texas has held him to 7 catches and 46 yards over two prior games</li>
+<li>Change-of-pace package. 4-of-8 for 93 and 2 scores, plus 70 rush vs Idaho. Backup priced like a starter — sit him as a second quarterback</li>
 </ul>
 </li>
-<li>Brandon Inniss
+<li>Wayshawn Parker
 <ul>
-<li>Next Ohio State catcher</li>
+<li>Three scores vs Idaho (two receiving, one rushing). The Utah back</li>
 </ul>
 </li>
-<li>Bo Jackson
+<li>Daniel Bray
 <ul>
-<li>Listed Ohio State back</li>
+<li>Cleared Friday after a concussion (three snaps vs Idaho). Watch, not a sit. Do not stack him next to Parker</li>
 </ul>
 </li>
-<li>Kyle Parker
+<li>Braden Pegan
 <ul>
-<li>Out. Second straight miss. Sit</li>
+<li>Utah State transfer. 4-81 and a rushing score vs Idaho</li>
 </ul>
 </li>
-<li>Qua Russaw
+<li>Ricky Johnson
 <ul>
-<li>Cleared. Expected debut on the edge. Defense, not a Showdown skill</li>
+<li>Cheap Utah catcher. Named with Pegan</li>
 </ul>
 </li>
 </ul>
-<p><b>Texas</b></p>
+<p><b>Arkansas</b></p>
 <ul>
-<li>Arch Manning
+<li>KJ Jackson
 <ul>
-<li>Last week vs Texas State: 20-of-27 for 305 and 4 scores, one pick</li>
+<li>First road start. Last week vs North Alabama: 24-of-35 for 267 and 3 scores, one pick</li>
 </ul>
 </li>
-<li>Ryan Wingo
+<li>Sutton Smith
 <ul>
-<li>7-121-1. Volume receiver</li>
+<li>Memphis transfer. 15-36 plus 4-43 receiving. Committee</li>
 </ul>
 </li>
-<li>Cam Coleman
+<li>Braylen Russell
 <ul>
-<li>Auburn transfer. 3-70-2</li>
+<li>17-49 vs North Alabama. Committee. One Arkansas back on the card</li>
 </ul>
 </li>
-<li>Hollywood Smothers
+<li>Chris Marshall
 <ul>
-<li>10-70 plus a receiving score. Lead back. One Texas back on the card</li>
+<li>Arkansas catcher</li>
 </ul>
 </li>
-<li>Raleek Brown
+<li>CJ Brown
 <ul>
-<li>Next Texas back. Do not stack him next to Smothers</li>
+<li>Cheap Arkansas catcher</li>
 </ul>
 </li>
-<li>Derrek Cooper
+<li>Jaden Platt
 <ul>
-<li>Out. Foot / ankle. Sit</li>
+<li>Tight end with a named role. Cheap</li>
 </ul>
 </li>
-<li>Emmett Mosley V
+<li>Cam Settles
 <ul>
-<li>Cheap Texas catcher</li>
+<li>Did not dress vs North Alabama. Watch. Sit until we see him</li>
 </ul>
 </li>
 </ul>
 <h3>GAME FLOW</h3>
 <p><b>How this game plays</b></p>
 <ul>
-<li>One-score toss-up. Nobody sits on a huge lead. Both quarterbacks stay in it</li>
-<li>The books have both teams scoring about 50 together. That is a real night, not a cupcake half</li>
+<li>Two-score home favorite at night. Utah can sit on a lead</li>
+<li>The books have both teams scoring about 55.5 together</li>
+<li>Altitude is real. Silverfield said it will not have a major direct effect. We are not inventing a collapse</li>
 </ul>
 <p><b>How they want to play</b></p>
 <ul>
-<li><b>Ohio State offense:</b> Efficient passing last week (21-of-25). Power run behind Bo Jackson. Texas is a step up from Ball State</li>
-<li><b>Ohio State defense:</b> Only faced Ball State. Qua Russaw debuts on the edge</li>
-<li><b>Texas offense:</b> Manning threw four scores. The run was big-then-little after Smothers’ 45-yard opener (111 rush as a team)</li>
-<li><b>Texas defense:</b> Aggressive fronts. Texas has held Smith down twice</li>
+<li><b>Utah offense:</b> Run / option with Dampier. Parker scores. Ficklin in packages, not as the lock quarterback. Morgan Scalley wants to mash</li>
+<li><b>Utah defense:</b> Last week was Idaho. Nobody we read named a hole</li>
+<li><b>Arkansas offense:</b> Ugly vs North Alabama. Ryan Silverfield said so. Jackson has to throw if the run stays at 3.0</li>
+<li><b>Arkansas defense:</b> Held North Alabama in the first half, then gave up late scores. First real offense</li>
 </ul>
 <p><b>Where the defense is weaker</b></p>
 <ul>
-<li><b>Ohio State:</b> Unproven against a real offense. Nobody we read named a hole from the Ball State game</li>
-<li><b>Texas:</b> No named hole. Two prior games limited Smith</li>
-<li>Heat favors the home sideline. It does not sit a quarterback</li>
+<li><b>Utah:</b> Unproven against a Power-4 run game. No named hole from Idaho</li>
+<li><b>Arkansas:</b> Late-game fatigue vs North Alabama. No named hole we will invent</li>
+<li>Wind 2 is not a pass kill</li>
 </ul>
 <p><b>What the scoreboard forces</b></p>
 <ul>
-<li>A one-score game keeps both quarterbacks</li>
-<li>A two-score Texas lead asks Sayin to throw more</li>
-<li>A two-score Ohio State lead is the underdog script — Manning still throws</li>
+<li>A two-score Utah lead is the favorite closeout — Dampier can sit, Ficklin can package. That is why Ficklin is a sit as a second quarterback on the six</li>
+<li>A one-score game keeps Jackson throwing</li>
+<li>A two-score Arkansas lead asks Dampier to throw more than the Idaho script</li>
 </ul>
 <p><b>Who that points at</b></p>
 <ul>
-<li>Manning as the working captain on the home toss-up</li>
-<li>Sayin as Ohio State’s passer so Smith still counts</li>
-<li>Smith even with the Texas tape — he is still the Ohio State catcher</li>
-<li>Wingo or Mosley as the Texas catcher. Coleman is the smash if you have leftover</li>
-<li>One Texas back (Smothers or Brown), not both</li>
-<li>Parker and Cooper stay off</li>
+<li>Parker as the working captain — three-score tape plus the highest stamped running-back points</li>
+<li>Dampier as Utah’s passer so Pegan and Johnson still count</li>
+<li>Jackson as Arkansas’s passer so Brown still counts</li>
+<li>One Utah back. Bray is cleared, not a second back on the same six</li>
+<li>One Arkansas back. Not Settles</li>
 </ul>
 <h3>DEPTH CHART</h3>
 <p>Offense skill. A missing name is —.</p>
-<h4 class="team-break">Texas</h4>
-<table class="sortable">
-<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
-<tbody>
-<tr><td>QB</td><td>Arch Manning</td><td>Karle Lacey Jr.</td></tr>
-<tr><td>RB</td><td>Hollywood Smothers</td><td>Raleek Brown</td></tr>
-<tr><td>WR-X</td><td>Ryan Wingo</td><td>Kaliq Lockett</td></tr>
-<tr><td>WR-Z</td><td>Cam Coleman</td><td>Sterling Berkhalter</td></tr>
-<tr><td>WR-SL</td><td>Emmett Mosley V</td><td>Daylan McCutcheon</td></tr>
-<tr><td>TE-Y</td><td>Spencer Shannon</td><td>Michael Masunas</td></tr>
-<tr><td>PK</td><td>Gianni Spetic</td><td>Jake Collett</td></tr>
-<tr><td>TE-H</td><td>Nick Townsend</td><td>Emaree Winston</td></tr>
-</tbody></table>
-<h4 class="team-break">Ohio State</h4>
+<h4 class="team-break">Utah</h4>
 <table class="sortable">
 <thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th><th scope="col" data-col="3">3</th></tr></thead>
 <tbody>
-<tr><td>QB</td><td>Julian Sayin</td><td>Tavien St. Clair</td><td>—</td></tr>
-<tr><td>RB</td><td>Bo Jackson</td><td>Isaiah West</td><td>—</td></tr>
-<tr><td>WR-X</td><td>Jeremiah Smith</td><td>Brock Boyd</td><td>—</td></tr>
-<tr><td>WR-Z</td><td>Devin McCuin</td><td>Chris Henry Jr.</td><td>—</td></tr>
-<tr><td>WR-SL</td><td>Brandon Inniss</td><td>Kyle Parker</td><td>—</td></tr>
-<tr><td>TE</td><td>Nate Roberts</td><td>Mason Williams</td><td>Bennett Christian</td></tr>
-<tr><td>PK</td><td>Connor Hawkins</td><td>Cooper Peterson</td><td>—</td></tr>
+<tr><td>QB</td><td>Devon Dampier</td><td>Byrd Ficklin</td><td>—</td></tr>
+<tr><td>RB</td><td>Wayshawn Parker</td><td>Daniel Bray</td><td>—</td></tr>
+<tr><td>WR-X</td><td>Ricky Johnson</td><td>Kyri Shoels</td><td>—</td></tr>
+<tr><td>WR-Z</td><td>Braden Pegan</td><td>Larry Simmons</td><td>—</td></tr>
+<tr><td>WR-SL</td><td>Creed Whittemore</td><td>Mana Carvalho</td><td>—</td></tr>
+<tr><td>TE</td><td>Noah Bennee</td><td>Hunter Andrews</td><td>Will Monney</td></tr>
+<tr><td>PK</td><td>Dillon Curtis</td><td>Tanner Cragun</td><td>—</td></tr>
+</tbody></table>
+<h4 class="team-break">Arkansas</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th><th scope="col" data-col="3">3</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>KJ Jackson</td><td>AJ Hill</td><td>—</td></tr>
+<tr><td>RB</td><td>Sutton Smith</td><td>Braylen Russell</td><td>—</td></tr>
+<tr><td>WR-X</td><td>Chris Marshall</td><td>Antonio Jordan</td><td>—</td></tr>
+<tr><td>WR-Z</td><td>CJ Brown</td><td>Donovan Faupel</td><td>—</td></tr>
+<tr><td>WR-SL</td><td>Jamari Hawkins</td><td>Ismael Cisse</td><td>—</td></tr>
+<tr><td>TE</td><td>Jaden Platt</td><td>Ty Lockwood</td><td>Matt Adcock</td></tr>
+<tr><td>PK</td><td>Max Gilbert</td><td>Braeden McAlister</td><td>—</td></tr>
 </tbody></table>
 <h3>INJURIES</h3>
 <p>Who is out or in doubt for this game. A blank list means nobody on the board is tagged.</p>
 <table class="sortable">
 <thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Status</th><th scope="col" data-col="3">Tonight</th></tr></thead>
 <tbody>
-<tr><td>Derrek Cooper</td><td>Texas</td><td>Out</td><td>Not playing. Sit him.</td></tr>
-<tr><td>Kyle Parker</td><td>Ohio State</td><td>Doubtful</td><td>Unlikely. Sit unless he is cleared.</td></tr>
+<tr><td>Maddox Lassiter</td><td>Arkansas</td><td>Out</td><td>Not playing. Sit him.</td></tr>
+<tr><td>Cam Settles</td><td>Arkansas</td><td>Questionable</td><td>Not locked in. Check warmups.</td></tr>
 </tbody></table>
 <h3>CHART NOTES</h3>
 <p>When the listed chart does not match who is actually playing.</p>
 <table class="sortable">
 <thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Note</th></tr></thead>
 <tbody>
-<tr><td>Daylan McCutcheon</td><td>Texas</td><td>Do not sit on a stale Q.</td></tr>
-<tr><td>Derrek Cooper</td><td>Texas</td><td>OUT foot/ankle; left Week 1 in a boot. Sit.</td></tr>
-<tr><td>Kyle Parker</td><td>Ohio State</td><td>Expected miss vs Texas. Sit.</td></tr>
-</tbody></table>
-<h3>OUR VALUE — Ohio State @ Texas</h3>
-<p>Every salary-board skill player with a <b>real</b> book number (yardage or receptions). Junk 0.5, scrape ceilings, and anytime-TD only are omitted. <b>1.00× is even.</b> Sorted highest value first.</p>
-<table class="sortable" data-default-sort="Value">
-<thead><tr><th scope="col" data-col="0">#</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
-<tbody>
-<tr><td>1</td><td>Arch Manning</td><td>Texas</td><td>QB</td><td>$10,200</td><td class="val">1.02×</td><td>passing yards 259.5</td></tr>
-<tr><td>2</td><td>Julian Sayin</td><td>Ohio State</td><td>QB</td><td>$10,000</td><td class="val">1.00×</td><td>passing yards 249.5</td></tr>
-<tr><td>3</td><td>Jeremiah Smith</td><td>Ohio State</td><td>WR</td><td>$9,400</td><td class="val">0.95×</td><td>receiving yards 89.5</td></tr>
-<tr><td>4</td><td>Emmett Mosley V</td><td>Texas</td><td>WR</td><td>$4,400</td><td class="val">0.78×</td><td>receiving yards 34.5</td></tr>
-<tr><td>5</td><td>Cam Coleman</td><td>Texas</td><td>WR</td><td>$7,600</td><td class="val">0.76×</td><td>receiving yards 57.5</td></tr>
-<tr><td>6</td><td>Raleek Brown</td><td>Texas</td><td>RB</td><td>$6,800</td><td class="val">0.74×</td><td>rushing plus receiving yards 50.5</td></tr>
-<tr><td>7</td><td>Ryan Wingo</td><td>Texas</td><td>WR</td><td>$7,400</td><td class="val">0.70×</td><td>receiving yards 51.5</td></tr>
-<tr><td>8</td><td>Hollywood Smothers</td><td>Texas</td><td>RB</td><td>$8,200</td><td class="val">0.70×</td><td>rushing plus receiving yards 57.5</td></tr>
-<tr><td>9</td><td>Brandon Inniss</td><td>Ohio State</td><td>WR</td><td>$3,800</td><td class="val">0.66×</td><td>receptions 2.5</td></tr>
-<tr><td>10</td><td>Devin McCuin</td><td>Ohio State</td><td>WR</td><td>$6,400</td><td class="val">0.63×</td><td>receiving yards 40.5</td></tr>
-<tr><td>11</td><td>Bo Jackson</td><td>Ohio State</td><td>RB</td><td>$8,800</td><td class="val">0.62×</td><td>rushing yards 54.5</td></tr>
-<tr><td>12</td><td>Ja&#x27;Kobi Jackson</td><td>Ohio State</td><td>RB</td><td>$4,600</td><td class="val">0.51×</td><td>rushing yards 23.5</td></tr>
-</tbody></table>
-<h3>ETR VALUE</h3>
-<p>Every name on ETR&#x27;s main-slate sheet for this game. Click a column to sort. A blank cell is —. <b>ETR salary</b> and <b>Owned</b> are their main-slate numbers. <b>Points per $1k</b> is their projected points versus our DraftKings salary for this game.</p>
-<h4 class="team-break">Texas</h4>
-<table class="sortable" data-default-sort="Points per $1k">
-<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Pos</th><th scope="col" data-col="2">Opp</th><th scope="col" data-col="3">ETR salary</th><th scope="col" data-col="4">Projected points</th><th scope="col" data-col="5">Sheet value</th><th scope="col" data-col="6">Owned</th><th scope="col" data-col="7">Our salary</th><th scope="col" data-col="8">Points per $1k</th></tr></thead>
-<tbody>
-<tr><td>Emmett Mosley V</td><td>WR</td><td>Ohio State</td><td>$4,600</td><td>9.38</td><td>0.5</td><td>1.34</td><td>$4,400</td><td class="val">2.13</td></tr>
-<tr><td>Arch Manning</td><td>QB</td><td>Ohio State</td><td>$8,300</td><td>20.29</td><td>5.8</td><td>7.34</td><td>$10,200</td><td class="val">1.99</td></tr>
-<tr><td>Raleek Brown</td><td>RB</td><td>Ohio State</td><td>$6,100</td><td>12.05</td><td>0.9</td><td>2.09</td><td>$6,800</td><td class="val">1.77</td></tr>
-<tr><td>Ryan Wingo</td><td>WR</td><td>Ohio State</td><td>$6,600</td><td>12.95</td><td>1.1</td><td>2.95</td><td>$7,400</td><td class="val">1.75</td></tr>
-<tr><td>Nick Townsend</td><td>WR</td><td>Ohio State</td><td>$3,200</td><td>3.1</td><td>-3.7</td><td>0</td><td>$1,800</td><td class="val">1.72</td></tr>
-<tr><td>Cam Coleman</td><td>WR</td><td>Ohio State</td><td>$7,100</td><td>12.94</td><td>0.3</td><td>1.21</td><td>$7,600</td><td class="val">1.7</td></tr>
-<tr><td>Hollywood Smothers</td><td>RB</td><td>Ohio State</td><td>$7,200</td><td>13.77</td><td>1</td><td>3.35</td><td>$8,200</td><td class="val">1.68</td></tr>
-<tr><td>Spencer Shannon</td><td>WR</td><td>Ohio State</td><td>$3,000</td><td>1.63</td><td>-4.9</td><td>0</td><td>$1,000</td><td class="val">1.63</td></tr>
-<tr><td>Gianni Spetic</td><td>K</td><td>Ohio State</td><td>$5,000</td><td>6.12</td><td>-3.4</td><td>0</td><td>$5,000</td><td class="val">1.22</td></tr>
-<tr><td>Daylan McCutcheon</td><td>WR</td><td>Ohio State</td><td>$3,000</td><td>1.04</td><td>-5.5</td><td>0</td><td>$1,000</td><td class="val">1.04</td></tr>
-<tr><td>Kaliq Lockett</td><td>WR</td><td>Ohio State</td><td>$3,100</td><td>1.09</td><td>-5.6</td><td>0</td><td>$1,400</td><td class="val">0.78</td></tr>
-<tr><td>Emaree Winston</td><td>WR</td><td>Ohio State</td><td>$3,300</td><td>1.74</td><td>-5.2</td><td>0</td><td>$2,600</td><td class="val">0.67</td></tr>
-<tr><td>Michael Masunas</td><td>WR</td><td>Ohio State</td><td>$3,100</td><td>0.71</td><td>-5.9</td><td>0</td><td>$1,200</td><td class="val">0.59</td></tr>
-<tr><td>Jermaine Bishop Jr.</td><td>WR</td><td>Ohio State</td><td>$3,200</td><td>1.15</td><td>-5.7</td><td>0</td><td>$2,200</td><td class="val">0.52</td></tr>
-<tr><td>Sterling Berkhalter</td><td>WR</td><td>Ohio State</td><td>$3,400</td><td>0.65</td><td>-6.4</td><td>0</td><td>$2,800</td><td class="val">0.23</td></tr>
-<tr><td>James Simon</td><td>RB</td><td>Ohio State</td><td>$4,000</td><td>0.2</td><td>-7.8</td><td>0</td><td>$1,000</td><td class="val">0.2</td></tr>
-<tr><td>Michael Terry III</td><td>RB</td><td>Ohio State</td><td>$4,000</td><td>0.2</td><td>-7.8</td><td>0</td><td>$1,000</td><td class="val">0.2</td></tr>
-<tr><td>Ryan Niblett</td><td>RB</td><td>Ohio State</td><td>$4,000</td><td>0.2</td><td>-7.8</td><td>0</td><td>$6,000</td><td class="val">0.03</td></tr>
-</tbody></table>
-<h4 class="team-break">Ohio State</h4>
-<table class="sortable" data-default-sort="Points per $1k">
-<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Pos</th><th scope="col" data-col="2">Opp</th><th scope="col" data-col="3">ETR salary</th><th scope="col" data-col="4">Projected points</th><th scope="col" data-col="5">Sheet value</th><th scope="col" data-col="6">Owned</th><th scope="col" data-col="7">Our salary</th><th scope="col" data-col="8">Points per $1k</th></tr></thead>
-<tbody>
-<tr><td>Chris Henry Jr.</td><td>WR</td><td>Texas</td><td>$3,900</td><td>2.62</td><td>-5.2</td><td>0</td><td>$1,000</td><td class="val">2.62</td></tr>
-<tr><td>Jeremiah Smith</td><td>WR</td><td>Texas</td><td>$8,200</td><td>19.51</td><td>5.2</td><td>10.89</td><td>$9,400</td><td class="val">2.08</td></tr>
-<tr><td>Brandon Inniss</td><td>WR</td><td>Texas</td><td>$4,100</td><td>7.22</td><td>-0.9</td><td>0.23</td><td>$3,800</td><td class="val">1.9</td></tr>
-<tr><td>Nate Roberts</td><td>WR</td><td>Texas</td><td>$3,600</td><td>5.93</td><td>-1.5</td><td>0.06</td><td>$3,200</td><td class="val">1.85</td></tr>
-<tr><td>Devin McCuin</td><td>WR</td><td>Texas</td><td>$5,900</td><td>11.18</td><td>0.3</td><td>1.66</td><td>$6,400</td><td class="val">1.75</td></tr>
-<tr><td>Julian Sayin</td><td>QB</td><td>Texas</td><td>$8,100</td><td>17.1</td><td>3</td><td>2.65</td><td>$10,000</td><td class="val">1.71</td></tr>
-<tr><td>Bo Jackson</td><td>RB</td><td>Texas</td><td>$7,700</td><td>15.05</td><td>1.5</td><td>3.94</td><td>$8,800</td><td class="val">1.71</td></tr>
-<tr><td>Ja&#x27;Kobi Jackson</td><td>RB</td><td>Texas</td><td>$4,600</td><td>6.45</td><td>-2.5</td><td>0</td><td>$4,600</td><td class="val">1.4</td></tr>
-<tr><td>Connor Hawkins</td><td>K</td><td>Texas</td><td>$4,800</td><td>5.76</td><td>-3.4</td><td>0</td><td>$4,800</td><td class="val">1.2</td></tr>
-<tr><td>Mason Williams</td><td>WR</td><td>Texas</td><td>$3,200</td><td>1.79</td><td>-5</td><td>0</td><td>$1,600</td><td class="val">1.12</td></tr>
-<tr><td>Brock Boyd</td><td>WR</td><td>Texas</td><td>$3,200</td><td>1.59</td><td>-5.2</td><td>0</td><td>$2,000</td><td class="val">0.8</td></tr>
-<tr><td>Bennett Christian</td><td>WR</td><td>Texas</td><td>$3,000</td><td>0.56</td><td>-5.9</td><td>0</td><td>$1,000</td><td class="val">0.56</td></tr>
-<tr><td>Jerquaden Guilford</td><td>WR</td><td>Texas</td><td>$3,000</td><td>0.56</td><td>-5.9</td><td>0</td><td>$1,000</td><td class="val">0.56</td></tr>
-<tr><td>Phillip Bell</td><td>WR</td><td>Texas</td><td>$3,000</td><td>0.55</td><td>-6</td><td>0</td><td>$1,000</td><td class="val">0.55</td></tr>
-<tr><td>Legend Bey</td><td>RB</td><td>Texas</td><td>$4,300</td><td>2.15</td><td>-6.3</td><td>0</td><td>$4,200</td><td class="val">0.51</td></tr>
-<tr><td>Isaiah West</td><td>RB</td><td>Texas</td><td>$5,300</td><td>2.48</td><td>-7.5</td><td>0</td><td>$5,600</td><td class="val">0.44</td></tr>
+<tr><td>KJ Jackson</td><td>Arkansas</td><td>Starter.</td></tr>
+<tr><td>Cam Settles</td><td>Arkansas</td><td>Still listed RB3.</td></tr>
+<tr><td>Jaden Platt</td><td>Arkansas</td><td>TE1 after Lassiter season OUT.</td></tr>
 </tbody></table>
 <h3>SCRIPT SIX</h3>
 <table class="sortable">
 <thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
-<tr><td>Captain</td><td>Jeremiah Smith</td><td>Ohio State</td><td>WR</td><td>$14,100</td><td class="val">0.95×</td><td>receiving yards 89.5</td></tr>
-<tr><td>FLEX</td><td>Arch Manning</td><td>Texas</td><td>QB</td><td>$10,200</td><td class="val">1.02×</td><td>passing yards 259.5</td></tr>
-<tr><td>FLEX</td><td>Julian Sayin</td><td>Ohio State</td><td>QB</td><td>$10,000</td><td class="val">1.00×</td><td>passing yards 249.5</td></tr>
-<tr><td>FLEX</td><td>Ryan Wingo</td><td>Texas</td><td>WR</td><td>$7,400</td><td class="val">0.70×</td><td>receiving yards 51.5</td></tr>
-<tr><td>FLEX</td><td>Emmett Mosley V</td><td>Texas</td><td>WR</td><td>$4,400</td><td class="val">0.78×</td><td>receiving yards 34.5</td></tr>
-<tr><td>FLEX</td><td>Brandon Inniss</td><td>Ohio State</td><td>WR</td><td>$3,800</td><td class="val">0.66×</td><td>receptions 2.5</td></tr>
+<tr><td>Captain</td><td>Braden Pegan</td><td>Utah</td><td>WR</td><td>$11,100</td><td class="val">0.93×</td><td>receiving yards 68.5</td></tr>
+<tr><td>FLEX</td><td>Devon Dampier</td><td>Utah</td><td>QB</td><td>$11,800</td><td class="val">0.77×</td><td>passing yards 228.5</td></tr>
+<tr><td>FLEX</td><td>KJ Jackson</td><td>Arkansas</td><td>QB</td><td>$9,400</td><td class="val">0.91×</td><td>passing yards 213.5</td></tr>
+<tr><td>FLEX</td><td>Wayshawn Parker</td><td>Utah</td><td>RB</td><td>$8,800</td><td class="val">1.02×</td><td>rushing yards 89.5</td></tr>
+<tr><td>FLEX</td><td>Chris Marshall</td><td>Arkansas</td><td>WR</td><td>$5,800</td><td class="val">0.84×</td><td>receiving yards 48.5</td></tr>
+<tr><td>FLEX</td><td>CJ Brown</td><td>Arkansas</td><td>WR</td><td>$3,000</td><td class="val">0.95×</td><td>receiving yards 28.5</td></tr>
 </tbody></table>
 <p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
 <p><b>Why these six</b></p>
 <ul>
-<li>Jeremiah Smith is the captain. Last week 8-151. Cheap catcher at $9,400 so the expensive names still fit. Put Julian Sayin on the same six. Projected 20 points.</li>
-<li>Arch Manning is on the six. He throws from the pocket. Projected 20 points.</li>
-<li>Julian Sayin is on the six. He throws from the pocket. Projected 17 points.</li>
-<li>Ryan Wingo is on the six. Last week 7-121-1. Put Arch Manning on the same six. Projected 13 points.</li>
-<li>Emmett Mosley V is on the six. Last week 3-37. Cheap catcher at $4,400 so the expensive names still fit. Put Arch Manning on the same six. Projected 9 points.</li>
-<li>Brandon Inniss is on the six. Last week 3-36. Put Julian Sayin on the same six. Projected 7 points.</li>
+<li>Braden Pegan is captain. Utah State transfer. 4-81-1 plus 12-yd rush TD vs Idaho. Stack with Devon Dampier.</li>
+<li>Devon Dampier. 13/18 176 3 scores vs Idaho. Sat after first drive of 3Q. He runs and throws. That was a quiet rushing night, not who he is.</li>
+<li>Wayshawn Parker. Career-high 3 TDs vs Idaho (2 rec, 1 rush).</li>
+<li>KJ Jackson. 24/35 267 3 scores 1 INT vs North Alabama. Offense 3.0 YPC, 1-for-6 red-zone TDs. He runs and throws.</li>
+<li>Chris Marshall. Boise State transfer. 7-79 vs North Alabama. Stack with KJ Jackson.</li>
+<li>CJ Brown. Last week 3-37. Cheap at $3,000 so the expensive names still fit. Stack with KJ Jackson.</li>
 </ul>
-<p>Projected points on this six: 96.2. The captain&#x27;s stats count extra.</p>
+<p>Projected points on this six: 108.04. The captain&#x27;s stats count extra.</p>
 <h3>ETR BUILD 1</h3>
 <table class="sortable">
 <thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
-<tr><td>Captain</td><td>Arch Manning</td><td>Texas</td><td>QB</td><td>$15,300</td><td class="val">1.02×</td><td>passing yards 259.5</td></tr>
-<tr><td>FLEX</td><td>Julian Sayin</td><td>Ohio State</td><td>QB</td><td>$10,000</td><td class="val">1.00×</td><td>passing yards 249.5</td></tr>
-<tr><td>FLEX</td><td>Jeremiah Smith</td><td>Ohio State</td><td>WR</td><td>$9,400</td><td class="val">0.95×</td><td>receiving yards 89.5</td></tr>
-<tr><td>FLEX</td><td>Raleek Brown</td><td>Texas</td><td>RB</td><td>$6,800</td><td class="val">0.74×</td><td>rushing plus receiving yards 50.5</td></tr>
-<tr><td>FLEX</td><td>Emmett Mosley V</td><td>Texas</td><td>WR</td><td>$4,400</td><td class="val">0.78×</td><td>receiving yards 34.5</td></tr>
-<tr><td>FLEX</td><td>Brandon Inniss</td><td>Ohio State</td><td>WR</td><td>$3,800</td><td class="val">0.66×</td><td>receptions 2.5</td></tr>
+<tr><td>Captain</td><td>Devon Dampier</td><td>Utah</td><td>QB</td><td>$17,700</td><td class="val">0.77×</td><td>passing yards 228.5</td></tr>
+<tr><td>FLEX</td><td>KJ Jackson</td><td>Arkansas</td><td>QB</td><td>$9,400</td><td class="val">0.91×</td><td>passing yards 213.5</td></tr>
+<tr><td>FLEX</td><td>Wayshawn Parker</td><td>Utah</td><td>RB</td><td>$8,800</td><td class="val">1.02×</td><td>rushing yards 89.5</td></tr>
+<tr><td>FLEX</td><td>Braden Pegan</td><td>Utah</td><td>WR</td><td>$7,400</td><td class="val">0.93×</td><td>receiving yards 68.5</td></tr>
+<tr><td>FLEX</td><td>CJ Brown</td><td>Arkansas</td><td>WR</td><td>$3,000</td><td class="val">0.95×</td><td>receiving yards 28.5</td></tr>
+<tr><td>FLEX</td><td>Ricky Johnson</td><td>Utah</td><td>WR</td><td>$2,600</td><td class="val">No line</td><td>—</td></tr>
 </tbody></table>
-<p class="left">Leftover: $300  (spent $49,700 / $50,000)</p>
+<p class="left">Leftover: $1,100  (spent $48,900 / $50,000)</p>
+<p>Leftover over $1,000 is allowed only after we tried other captains to spend the leftover and kept the screaming value punts. Slack from a dest trap or cheap twin is still a miss.</p>
 <p><b>Why these six</b></p>
 <ul>
-<li>Arch Manning is the captain. He throws from the pocket. Projected 20 points.</li>
-<li>Jeremiah Smith is on the six. Last week 8-151. Cheap catcher at $9,400 so the expensive names still fit. Put Julian Sayin on the same six. Projected 20 points.</li>
-<li>Julian Sayin is on the six. He throws from the pocket. Projected 17 points.</li>
-<li>Raleek Brown is on the six. Listed back last week (11 carries). He scored. Also caught 1 for 11. Projected 12 points.</li>
-<li>Emmett Mosley V is on the six. Last week 3-37. Cheap catcher at $4,400 so the expensive names still fit. Put Arch Manning on the same six. Projected 9 points.</li>
-<li>Brandon Inniss is on the six. Last week 3-36. Put Julian Sayin on the same six. Projected 7 points.</li>
-<li>DK priced Arch Manning + Jeremiah Smith + Julian Sayin $500 short — you sit Brandon Inniss and keep the punt.</li>
+<li>Devon Dampier is captain. 13/18 176 3 scores vs Idaho. Sat after first drive of 3Q. He runs and throws. That was a quiet rushing night, not who he is. If he is captain, his rushing yards count extra.</li>
+<li>Wayshawn Parker. Career-high 3 TDs vs Idaho (2 rec, 1 rush).</li>
+<li>KJ Jackson. 24/35 267 3 scores 1 INT vs North Alabama. Offense 3.0 YPC, 1-for-6 red-zone TDs. He runs and throws.</li>
+<li>Braden Pegan. Utah State transfer. 4-81-1 plus 12-yd rush TD vs Idaho. Stack with Devon Dampier.</li>
+<li>Ricky Johnson. Week 1 vs Idaho: 2-25-0 on 5 targets (CBS). ETR 9.14 no book line. Cheap at $2,600 so the expensive names still fit. Stack with Devon Dampier.</li>
+<li>CJ Brown. Last week 3-37. Cheap at $3,000 so the expensive names still fit. Stack with KJ Jackson.</li>
+<li>Leftover over $1,000 is allowed only after we tried other captains to spend the leftover and kept the screaming value punts. Slack from a dest trap or cheap twin is still a miss.</li>
+<li>DK priced Devon Dampier + Wayshawn Parker + KJ Jackson + Braden Pegan $500 short — you sit Ricky Johnson and keep the punt.</li>
 </ul>
-<p>Projected points on this six: 95.7. The captain&#x27;s stats count extra.</p>
+<p>Projected points on this six: 109.94. The captain&#x27;s stats count extra.</p>
 <h3>ETR BUILD 2</h3>
 <table class="sortable">
 <thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
-<tr><td>Captain</td><td>Jeremiah Smith</td><td>Ohio State</td><td>WR</td><td>$14,100</td><td class="val">0.95×</td><td>receiving yards 89.5</td></tr>
-<tr><td>FLEX</td><td>Arch Manning</td><td>Texas</td><td>QB</td><td>$10,200</td><td class="val">1.02×</td><td>passing yards 259.5</td></tr>
-<tr><td>FLEX</td><td>Julian Sayin</td><td>Ohio State</td><td>QB</td><td>$10,000</td><td class="val">1.00×</td><td>passing yards 249.5</td></tr>
-<tr><td>FLEX</td><td>Ryan Wingo</td><td>Texas</td><td>WR</td><td>$7,400</td><td class="val">0.70×</td><td>receiving yards 51.5</td></tr>
-<tr><td>FLEX</td><td>Emmett Mosley V</td><td>Texas</td><td>WR</td><td>$4,400</td><td class="val">0.78×</td><td>receiving yards 34.5</td></tr>
-<tr><td>FLEX</td><td>Brandon Inniss</td><td>Ohio State</td><td>WR</td><td>$3,800</td><td class="val">0.66×</td><td>receptions 2.5</td></tr>
+<tr><td>Captain</td><td>KJ Jackson</td><td>Arkansas</td><td>QB</td><td>$14,100</td><td class="val">0.91×</td><td>passing yards 213.5</td></tr>
+<tr><td>FLEX</td><td>Devon Dampier</td><td>Utah</td><td>QB</td><td>$11,800</td><td class="val">0.77×</td><td>passing yards 228.5</td></tr>
+<tr><td>FLEX</td><td>Wayshawn Parker</td><td>Utah</td><td>RB</td><td>$8,800</td><td class="val">1.02×</td><td>rushing yards 89.5</td></tr>
+<tr><td>FLEX</td><td>Braylen Russell</td><td>Arkansas</td><td>RB</td><td>$6,600</td><td class="val">0.61×</td><td>rushing yards 40.5</td></tr>
+<tr><td>FLEX</td><td>Chris Marshall</td><td>Arkansas</td><td>WR</td><td>$5,800</td><td class="val">0.84×</td><td>receiving yards 48.5</td></tr>
+<tr><td>FLEX</td><td>Ricky Johnson</td><td>Utah</td><td>WR</td><td>$2,600</td><td class="val">No line</td><td>—</td></tr>
 </tbody></table>
-<p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
+<p class="left">Leftover: $300  (spent $49,700 / $50,000)</p>
 <p><b>Why these six</b></p>
 <ul>
-<li>Jeremiah Smith is the captain. Last week 8-151. Cheap catcher at $9,400 so the expensive names still fit. Put Julian Sayin on the same six. Projected 20 points.</li>
-<li>Arch Manning is on the six. He throws from the pocket. Projected 20 points.</li>
-<li>Julian Sayin is on the six. He throws from the pocket. Projected 17 points.</li>
-<li>Ryan Wingo is on the six. Last week 7-121-1. Put Arch Manning on the same six. Projected 13 points.</li>
-<li>Emmett Mosley V is on the six. Last week 3-37. Cheap catcher at $4,400 so the expensive names still fit. Put Arch Manning on the same six. Projected 9 points.</li>
-<li>Brandon Inniss is on the six. Last week 3-36. Put Julian Sayin on the same six. Projected 7 points.</li>
-<li>DK priced Jeremiah Smith + Arch Manning + Julian Sayin + Ryan Wingo $700 short — you sit Brandon Inniss and keep the punt.</li>
+<li>KJ Jackson is captain. 24/35 267 3 scores 1 INT vs North Alabama. Offense 3.0 YPC, 1-for-6 red-zone TDs. He runs and throws. If he is captain, his rushing yards count extra.</li>
+<li>Devon Dampier. 13/18 176 3 scores vs Idaho. Sat after first drive of 3Q. He runs and throws. That was a quiet rushing night, not who he is.</li>
+<li>Wayshawn Parker. Career-high 3 TDs vs Idaho (2 rec, 1 rush).</li>
+<li>Chris Marshall. Boise State transfer. 7-79 vs North Alabama. Stack with KJ Jackson.</li>
+<li>Braylen Russell. Got almost every carry last week (17 carries). He scored. Also caught 1 for 11.</li>
+<li>Ricky Johnson. Week 1 vs Idaho: 2-25-0 on 5 targets (CBS). ETR 9.14 no book line. Cheap at $2,600 so the expensive names still fit. Stack with Devon Dampier.</li>
+<li>DK priced KJ Jackson + Devon Dampier + Wayshawn Parker + Braden Pegan $500 short — you sit Braylen Russell and keep the punt.</li>
+<li>DK priced KJ Jackson + Devon Dampier + Wayshawn Parker + Sutton Smith $100 short — you sit Braylen Russell and keep the punt.</li>
 </ul>
-<p>Projected points on this six: 96.2. The captain&#x27;s stats count extra.</p>
+<p>Projected points on this six: 103.31. The captain&#x27;s stats count extra.</p>
 <h3>ETR BUILD 3</h3>
 <table class="sortable">
 <thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
-<tr><td>Captain</td><td>Julian Sayin</td><td>Ohio State</td><td>QB</td><td>$15,000</td><td class="val">1.00×</td><td>passing yards 249.5</td></tr>
-<tr><td>FLEX</td><td>Arch Manning</td><td>Texas</td><td>QB</td><td>$10,200</td><td class="val">1.02×</td><td>passing yards 259.5</td></tr>
-<tr><td>FLEX</td><td>Jeremiah Smith</td><td>Ohio State</td><td>WR</td><td>$9,400</td><td class="val">0.95×</td><td>receiving yards 89.5</td></tr>
-<tr><td>FLEX</td><td>Devin McCuin</td><td>Ohio State</td><td>WR</td><td>$6,400</td><td class="val">0.63×</td><td>receiving yards 40.5</td></tr>
-<tr><td>FLEX</td><td>Emmett Mosley V</td><td>Texas</td><td>WR</td><td>$4,400</td><td class="val">0.78×</td><td>receiving yards 34.5</td></tr>
-<tr><td>FLEX</td><td>Brandon Inniss</td><td>Ohio State</td><td>WR</td><td>$3,800</td><td class="val">0.66×</td><td>receptions 2.5</td></tr>
+<tr><td>Captain</td><td>Braden Pegan</td><td>Utah</td><td>WR</td><td>$11,100</td><td class="val">0.93×</td><td>receiving yards 68.5</td></tr>
+<tr><td>FLEX</td><td>Devon Dampier</td><td>Utah</td><td>QB</td><td>$11,800</td><td class="val">0.77×</td><td>passing yards 228.5</td></tr>
+<tr><td>FLEX</td><td>KJ Jackson</td><td>Arkansas</td><td>QB</td><td>$9,400</td><td class="val">0.91×</td><td>passing yards 213.5</td></tr>
+<tr><td>FLEX</td><td>Wayshawn Parker</td><td>Utah</td><td>RB</td><td>$8,800</td><td class="val">1.02×</td><td>rushing yards 89.5</td></tr>
+<tr><td>FLEX</td><td>Chris Marshall</td><td>Arkansas</td><td>WR</td><td>$5,800</td><td class="val">0.84×</td><td>receiving yards 48.5</td></tr>
+<tr><td>FLEX</td><td>Ricky Johnson</td><td>Utah</td><td>WR</td><td>$2,600</td><td class="val">No line</td><td>—</td></tr>
 </tbody></table>
-<p class="left">Leftover: $800  (spent $49,200 / $50,000)</p>
+<p class="left">Leftover: $500  (spent $49,500 / $50,000)</p>
 <p><b>Why these six</b></p>
 <ul>
-<li>Julian Sayin is the captain. He throws from the pocket. Projected 17 points.</li>
-<li>Arch Manning is on the six. He throws from the pocket. Projected 20 points.</li>
-<li>Jeremiah Smith is on the six. Last week 8-151. Cheap catcher at $9,400 so the expensive names still fit. Put Julian Sayin on the same six. Projected 20 points.</li>
-<li>Devin McCuin is on the six. Last week 6-97-1. Put Julian Sayin on the same six. Projected 11 points.</li>
-<li>Emmett Mosley V is on the six. Last week 3-37. Cheap catcher at $4,400 so the expensive names still fit. Put Arch Manning on the same six. Projected 9 points.</li>
-<li>Brandon Inniss is on the six. Last week 3-36. Put Julian Sayin on the same six. Projected 7 points.</li>
+<li>Braden Pegan is captain. Utah State transfer. 4-81-1 plus 12-yd rush TD vs Idaho. Stack with Devon Dampier.</li>
+<li>Devon Dampier. 13/18 176 3 scores vs Idaho. Sat after first drive of 3Q. He runs and throws. That was a quiet rushing night, not who he is.</li>
+<li>Wayshawn Parker. Career-high 3 TDs vs Idaho (2 rec, 1 rush).</li>
+<li>KJ Jackson. 24/35 267 3 scores 1 INT vs North Alabama. Offense 3.0 YPC, 1-for-6 red-zone TDs. He runs and throws.</li>
+<li>Chris Marshall. Boise State transfer. 7-79 vs North Alabama. Stack with KJ Jackson.</li>
+<li>Ricky Johnson. Week 1 vs Idaho: 2-25-0 on 5 targets (CBS). ETR 9.14 no book line. Cheap at $2,600 so the expensive names still fit. Stack with Devon Dampier.</li>
+<li>DK priced Braden Pegan + Devon Dampier + Wayshawn Parker + KJ Jackson $300 short — you sit Ricky Johnson and keep the punt.</li>
+<li>DK priced Braden Pegan + Devon Dampier + Wayshawn Parker + KJ Jackson $500 short — you sit Ricky Johnson and keep the punt.</li>
 </ul>
-<p>Projected points on this six: 93.23. The captain&#x27;s stats count extra.</p>
+<p>Projected points on this six: 108.72. The captain&#x27;s stats count extra.</p>
 <h3>SITS</h3>
 <table class="sortable">
 <thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Why</th></tr></thead>
 <tbody>
-<tr><td>Kyle Parker</td><td>Ohio State</td><td>out. Second straight miss</td></tr>
-<tr><td>Derrek Cooper</td><td>Texas</td><td>out. Foot / ankle</td></tr>
-<tr><td>Karle Lacey Jr. / Tavien St. Clair</td><td>—</td><td>backups priced like starters. Sit</td></tr>
+<tr><td>Maddox Lassiter</td><td>Arkansas</td><td>out</td></tr>
+<tr><td>Byrd Ficklin as a second quarterback</td><td>—</td><td>package player. DraftKings prices the backup high. Sit</td></tr>
+<tr><td>AJ Hill</td><td>Arkansas</td><td>backup. Sit</td></tr>
+<tr><td>Cam Settles</td><td>Arkansas</td><td>did not dress the opener. Sit until we see him</td></tr>
 <tr><td>Kickers</td><td>—</td><td>sitting both sides</td></tr>
-<tr><td>Daylan McCutcheon</td><td>Texas</td><td>old illness tag. He played the opener. Not a sit on a stale tag</td></tr>
 </tbody></table>
 </div>
-<div class="player-book"><h3>Player book</h3><p class="sub">Quarterbacks, running backs, and receivers are separate tables. One row per player. Week 1, Week 2, Week 3 sit side by side — teal is up from last week, red is down. Click a header to sort. A new week column appears after that box is in. A blank cell is —.</p><div class="team-pills noprint"><button type="button" class="team-pill on" data-team="ALL">All</button><button type="button" class="team-pill" data-team="TEX">Texas</button><button type="button" class="team-pill" data-team="OSU">Ohio State</button></div><section class="pos-book" data-pos="QB"><h4>Quarterbacks</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Att</th><th scope="col" class="w0" data-col="5">Yds</th><th scope="col" class="w0" data-col="6">TD</th><th scope="col" class="w0" data-col="7">RAtt</th><th scope="col" class="w0" data-col="8">Rush</th><th scope="col" class="w0" data-col="9">rTD</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="TEX"><td class="who">Arch Manning</td><td class="who">Texas</td><td class="who" data-n="10200">$10,200</td><td class="w0 opp">Texas</td><td class="w0" data-n="27">27</td><td class="w0" data-n="305">305</td><td class="w0" data-n="4">4</td><td class="w0" data-n="3">3</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="30.8">30.8</td></tr><tr data-team="OSU"><td class="who">Julian Sayin</td><td class="who">Ohio State</td><td class="who" data-n="10000">$10,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="25">25</td><td class="w0" data-n="320">320</td><td class="w0" data-n="3">3</td><td class="w0" data-n="3">3</td><td class="w0" data-n="-9">-9</td><td class="w0" data-n="1">1</td><td class="w0 val" data-n="32.9">32.9</td></tr><tr data-team="TEX"><td class="who">Karle Lacey Jr.</td><td class="who">Texas</td><td class="who" data-n="8400">$8,400</td><td class="w0 opp">Texas</td><td class="w0" data-n="7">7</td><td class="w0" data-n="55">55</td><td class="w0" data-n="0">0</td><td class="w0" data-n="2">2</td><td class="w0" data-n="3">3</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="2.5">2.5</td></tr><tr data-team="OSU"><td class="who">Tavien St. Clair</td><td class="who">Ohio State</td><td class="who" data-n="8000">$8,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="6">6</td><td class="w0" data-n="52">52</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="8">8</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="6.88">6.88</td></tr><tr data-team="OSU"><td class="who">Luke Fahey</td><td class="who">Ohio State</td><td class="who" data-n="6000">$6,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="6">6</td><td class="w0" data-n="62">62</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="3">3</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="5.78">5.78</td></tr></tbody></table></div></section><section class="pos-book" data-pos="RB"><h4>Running backs</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">RAtt</th><th scope="col" class="w0" data-col="5">Rush</th><th scope="col" class="w0" data-col="6">rTD</th><th scope="col" class="w0" data-col="7">Rec</th><th scope="col" class="w0" data-col="8">Tgt</th><th scope="col" class="w0" data-col="9">Yds</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="OSU"><td class="who">Bo Jackson</td><td class="who">Ohio State</td><td class="who" data-n="8800">$8,800</td><td class="w0 opp">Ball State</td><td class="w0" data-n="9">9</td><td class="w0" data-n="83">83</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="13">13</td><td class="w0 val" data-n="16.6">16.6</td></tr><tr data-team="TEX"><td class="who">Hollywood Smothers</td><td class="who">Texas</td><td class="who" data-n="8200">$8,200</td><td class="w0 opp">Texas</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0" data-n="3">3</td><td class="w0" data-n="3">3</td><td class="w0" data-n="28">28</td><td class="w0 val" data-n="5.8">5.8</td></tr><tr data-team="TEX"><td class="who">Raleek Brown</td><td class="who">Texas</td><td class="who" data-n="6800">$6,800</td><td class="w0 opp">Texas</td><td class="w0" data-n="11">11</td><td class="w0" data-n="34">34</td><td class="w0" data-n="2">2</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="11">11</td><td class="w0 val" data-n="17.5">17.5</td></tr><tr data-team="TEX"><td class="who">Ryan Niblett</td><td class="who">Texas</td><td class="who" data-n="6000">$6,000</td><td class="w0 opp">Texas</td><td class="w0" data-n="2">2</td><td class="w0" data-n="10">10</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1">1.0</td></tr><tr data-team="OSU"><td class="who">Isaiah West</td><td class="who">Ohio State</td><td class="who" data-n="5600">$5,600</td><td class="w0 opp">Ball State</td><td class="w0" data-n="5">5</td><td class="w0" data-n="27">27</td><td class="w0" data-n="0">0</td><td class="w0" data-n="3">3</td><td class="w0" data-n="3">3</td><td class="w0" data-n="18">18</td><td class="w0 val" data-n="7.5">7.5</td></tr><tr data-team="OSU"><td class="who">Ja&#x27;Kobi Jackson</td><td class="who">Ohio State</td><td class="who" data-n="4600">$4,600</td><td class="w0 opp">Ball State</td><td class="w0" data-n="8">8</td><td class="w0" data-n="83">83</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="14.3">14.3</td></tr><tr data-team="OSU"><td class="who">Legend Bey</td><td class="who">Ohio State</td><td class="who" data-n="4200">$4,200</td><td class="w0 opp">Ball State</td><td class="w0" data-n="6">6</td><td class="w0" data-n="37">37</td><td class="w0" data-n="0">0</td><td class="w0" data-n="2">2</td><td class="w0">—</td><td class="w0" data-n="37">37</td><td class="w0 val" data-n="15.4">15.4</td></tr><tr data-team="TEX"><td class="who">Derrek Cooper</td><td class="who">Texas</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Texas</td><td class="w0" data-n="2">2</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="0.6">0.6</td></tr><tr data-team="TEX"><td class="who">James Simon</td><td class="who">Texas</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Texas</td><td class="w0" data-n="3">3</td><td class="w0" data-n="19">19</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="7.9">7.9</td></tr><tr data-team="TEX"><td class="who">Michael Terry III</td><td class="who">Texas</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Texas</td><td class="w0" data-n="3">3</td><td class="w0" data-n="8">8</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="0.8">0.8</td></tr></tbody></table></div></section><section class="pos-book" data-pos="WR"><h4>Wide receivers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Rec</th><th scope="col" class="w0" data-col="5">Tgt</th><th scope="col" class="w0" data-col="6">Yds</th><th scope="col" class="w0" data-col="7">TD</th><th scope="col" class="w0" data-col="8">RAtt</th><th scope="col" class="w0" data-col="9">Rush</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="OSU"><td class="who">Jeremiah Smith</td><td class="who">Ohio State</td><td class="who" data-n="9400">$9,400</td><td class="w0 opp">Ball State</td><td class="w0" data-n="8">8</td><td class="w0" data-n="8">8</td><td class="w0" data-n="151">151</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="26.1">26.1</td></tr><tr data-team="TEX"><td class="who">Cam Coleman</td><td class="who">Texas</td><td class="who" data-n="7600">$7,600</td><td class="w0 opp">Texas</td><td class="w0" data-n="3">3</td><td class="w0" data-n="3">3</td><td class="w0" data-n="70">70</td><td class="w0" data-n="2">2</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="22">22.0</td></tr><tr data-team="TEX"><td class="who">Ryan Wingo</td><td class="who">Texas</td><td class="who" data-n="7400">$7,400</td><td class="w0 opp">Texas</td><td class="w0" data-n="7">7</td><td class="w0" data-n="7">7</td><td class="w0" data-n="121">121</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="28.1">28.1</td></tr><tr data-team="OSU"><td class="who">Devin McCuin</td><td class="who">Ohio State</td><td class="who" data-n="6400">$6,400</td><td class="w0 opp">Ball State</td><td class="w0" data-n="6">6</td><td class="w0" data-n="6">6</td><td class="w0" data-n="97">97</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="21.7">21.7</td></tr><tr data-team="TEX"><td class="who">Emmett Mosley V</td><td class="who">Texas</td><td class="who" data-n="4400">$4,400</td><td class="w0 opp">Texas</td><td class="w0" data-n="3">3</td><td class="w0" data-n="6">6</td><td class="w0" data-n="37">37</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="6.7">6.7</td></tr><tr data-team="OSU"><td class="who">Brandon Inniss</td><td class="who">Ohio State</td><td class="who" data-n="3800">$3,800</td><td class="w0 opp">Ball State</td><td class="w0" data-n="3">3</td><td class="w0" data-n="3">3</td><td class="w0" data-n="36">36</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="6.6">6.6</td></tr><tr data-team="OSU"><td class="who">Nate Roberts</td><td class="who">Ohio State</td><td class="who" data-n="3200">$3,200</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="11">11</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="2.1">2.1</td></tr><tr data-team="TEX"><td class="who">Sterling Berkhalter</td><td class="who">Texas</td><td class="who" data-n="2800">$2,800</td><td class="w0 opp">Texas</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0" data-n="26">26</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.6">4.6</td></tr><tr data-team="TEX"><td class="who">Emaree Winston</td><td class="who">Texas</td><td class="who" data-n="2600">$2,600</td><td class="w0 opp">Texas</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0" data-n="25">25</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.5">4.5</td></tr><tr data-team="TEX"><td class="who">Jermaine Bishop Jr.</td><td class="who">Texas</td><td class="who" data-n="2200">$2,200</td><td class="w0 opp">Texas</td><td class="w0" data-n="2">2</td><td class="w0" data-n="3">3</td><td class="w0" data-n="25">25</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.5">4.5</td></tr><tr data-team="OSU"><td class="who">Brock Boyd</td><td class="who">Ohio State</td><td class="who" data-n="2000">$2,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="22">22</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="3.2">3.2</td></tr><tr data-team="TEX"><td class="who">Nick Townsend</td><td class="who">Texas</td><td class="who" data-n="1800">$1,800</td><td class="w0 opp">Texas</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="9">9</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.9">1.9</td></tr><tr data-team="OSU"><td class="who">Mason Williams</td><td class="who">Ohio State</td><td class="who" data-n="1600">$1,600</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.6">1.6</td></tr><tr data-team="TEX"><td class="who">Kaliq Lockett</td><td class="who">Texas</td><td class="who" data-n="1400">$1,400</td><td class="w0 opp">Texas</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="-3">-3</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="0.7">0.7</td></tr><tr data-team="OSU"><td class="who">Brody Lennon</td><td class="who">Ohio State</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="4">4</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.4">1.4</td></tr><tr data-team="OSU"><td class="who">Chris Henry Jr.</td><td class="who">Ohio State</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="15">15</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="8.5">8.5</td></tr><tr data-team="OSU"><td class="who">Jerquaden Guilford</td><td class="who">Ohio State</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="12">12</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="2.2">2.2</td></tr><tr data-team="OSU"><td class="who">Maxence LeBlanc</td><td class="who">Ohio State</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0" data-n="6">6</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.6">1.6</td></tr><tr data-team="OSU"><td class="who">Phillip Bell</td><td class="who">Ohio State</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.6">1.6</td></tr><tr data-team="TEX"><td class="who">Spencer Shannon</td><td class="who">Texas</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Texas</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="11">11</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="2.1">2.1</td></tr><tr data-team="TEX"><td class="who">Daylan Smothers</td><td class="who">Texas</td><td class="who">—</td><td class="w0 opp">Texas</td><td class="w0" data-n="3">3</td><td class="w0">—</td><td class="w0" data-n="28">28</td><td class="w0" data-n="1">1</td><td class="w0" data-n="10">10</td><td class="w0" data-n="70">70</td><td class="w0 val" data-n="18.8">18.8</td></tr><tr data-team="OSU"><td class="who">Max LeBlanc</td><td class="who">Ohio State</td><td class="who">—</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.6">1.6</td></tr></tbody></table></div></section><section class="pos-book" data-pos="K"><h4>Kickers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="4">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">FG</th><th scope="col" class="w0" data-col="5">XP</th><th scope="col" class="w0" data-col="6">DK</th></tr></thead><tbody><tr data-team="TEX"><td class="who">Gianni Spetic</td><td class="who">Texas</td><td class="who" data-n="5000">$5,000</td><td class="w0 opp">Texas</td><td class="w0" data-n="1">1</td><td class="w0" data-n="8">8</td><td class="w0 val" data-n="11">11.0</td></tr><tr data-team="OSU"><td class="who">Connor Hawkins</td><td class="who">Ohio State</td><td class="who" data-n="4800">$4,800</td><td class="w0 opp">Ball State</td><td class="w0" data-n="0">0</td><td class="w0" data-n="7">7</td><td class="w0 val" data-n="7">7.0</td></tr><tr data-team="OSU"><td class="who">Cooper Peterson</td><td class="who">Ohio State</td><td class="who" data-n="4800">$4,800</td><td class="w0 opp">Ball State</td><td class="w0" data-n="0">0</td><td class="w0" data-n="1">1</td><td class="w0 val" data-n="1">1.0</td></tr></tbody></table></div></section></div>
+<div class="value-board"><h3>OUR VALUE</h3>
+<p>Every salary-board skill player — not a Top 20. <b>Value</b> is our book number versus DraftKings salary (<b>1.00× is even</b>). Below even and no posted line stay on the table (—). This is not ETR. Sorted highest value first.</p>
+<table class="sortable" data-default-sort="Value">
+<thead><tr><th scope="col" data-col="0">#</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Wayshawn Parker</td><td>Utah</td><td>RB</td><td>$8,800</td><td class="val">1.02×</td><td>rushing yards 89.5</td></tr>
+<tr><td>2</td><td>CJ Brown</td><td>Arkansas</td><td>WR</td><td>$3,000</td><td class="val">0.95×</td><td>receiving yards 28.5</td></tr>
+<tr><td>3</td><td>Braden Pegan</td><td>Utah</td><td>WR</td><td>$7,400</td><td class="val">0.93×</td><td>receiving yards 68.5</td></tr>
+<tr><td>4</td><td>KJ Jackson</td><td>Arkansas</td><td>QB</td><td>$9,400</td><td class="val">0.91×</td><td>passing yards 213.5</td></tr>
+<tr><td>5</td><td>Chris Marshall</td><td>Arkansas</td><td>WR</td><td>$5,800</td><td class="val">0.84×</td><td>receiving yards 48.5</td></tr>
+<tr><td>6</td><td>Devon Dampier</td><td>Utah</td><td>QB</td><td>$11,800</td><td class="val">0.77×</td><td>passing yards 228.5</td></tr>
+<tr><td>7</td><td>Sutton Smith</td><td>Arkansas</td><td>RB</td><td>$7,000</td><td class="val">0.71×</td><td>rushing yards 49.5</td></tr>
+<tr><td>8</td><td>Jaden Platt</td><td>Arkansas</td><td>WR</td><td>$2,000</td><td class="val">0.62×</td><td>receiving yards 12.5</td></tr>
+<tr><td>9</td><td>Braylen Russell</td><td>Arkansas</td><td>RB</td><td>$6,600</td><td class="val">0.61×</td><td>rushing yards 40.5</td></tr>
+<tr><td>10</td><td>Ismael Cisse</td><td>Arkansas</td><td>WR</td><td>$3,400</td><td class="val">0.54×</td><td>receiving yards 18.5</td></tr>
+<tr><td>11</td><td>Larry Simmons</td><td>Utah</td><td>WR</td><td>$5,000</td><td class="val">0.43×</td><td>receiving yards 21.5</td></tr>
+<tr><td>12</td><td>Anthony Hernandez</td><td>Utah</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>13</td><td>Antonio Jordan</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>14</td><td>Bear Fisher</td><td>Utah</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>15</td><td>Ben Pupplo</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>16</td><td>Blair Irvin III</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>17</td><td>Braxton Scriber</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>18</td><td>Breylen Gilbert</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>19</td><td>Broderick Redden</td><td>Utah</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>20</td><td>Bryson Baker</td><td>Utah</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>21</td><td>Cory Henderson Jr.</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>22</td><td>Courtney Crutchfield</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>23</td><td>Dai&#x27;Shaun Thomas</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>24</td><td>Dequane Prevo</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>25</td><td>Gavin Garretson</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>26</td><td>Hutson Hendrix</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>27</td><td>Jelani Watkins</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>28</td><td>Jojo Ward</td><td>Utah</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>29</td><td>Jude Hall</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>30</td><td>Junior Coughlin</td><td>Utah</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>31</td><td>Kana&#x27;i Lopes</td><td>Utah</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>32</td><td>Kevin Young</td><td>Arkansas</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>33</td><td>Maddox Lassiter</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>34</td><td>Mario Robinson</td><td>Arkansas</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>35</td><td>Markeylin Batton</td><td>Arkansas</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>36</td><td>Mateaki Helu</td><td>Utah</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>37</td><td>Matt Clark</td><td>Utah</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>38</td><td>Max Ausmus</td><td>Utah</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>39</td><td>Monte Harrison</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>40</td><td>Peyton Rice</td><td>Utah</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>41</td><td>Semi Taulanga</td><td>Utah</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>42</td><td>Sione Motuapuaka</td><td>Utah</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>43</td><td>TJ Hodges</td><td>Arkansas</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>44</td><td>Teague Matthews</td><td>Utah</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>45</td><td>Will Monney</td><td>Utah</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>46</td><td>Tobias Merriweather</td><td>Utah</td><td>WR</td><td>$1,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>47</td><td>Donovan Faupel</td><td>Arkansas</td><td>WR</td><td>$1,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>48</td><td>Mana Carvalho</td><td>Utah</td><td>WR</td><td>$1,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>49</td><td>Ty Lockwood</td><td>Arkansas</td><td>WR</td><td>$1,800</td><td class="val">—</td><td>—</td></tr>
+<tr><td>50</td><td>Jamari Hawkins</td><td>Arkansas</td><td>WR</td><td>$2,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>51</td><td>Matt Adcock</td><td>Arkansas</td><td>WR</td><td>$2,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>52</td><td>Ricky Johnson</td><td>Utah</td><td>WR</td><td>$2,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>53</td><td>Daidren Zipperer</td><td>Utah</td><td>WR</td><td>$2,800</td><td class="val">—</td><td>—</td></tr>
+<tr><td>54</td><td>Noah Bennee</td><td>Utah</td><td>WR</td><td>$3,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>55</td><td>Creed Whittemore</td><td>Utah</td><td>WR</td><td>$3,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>56</td><td>Cam Settles</td><td>Arkansas</td><td>RB</td><td>$4,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>57</td><td>Hunter Andrews</td><td>Utah</td><td>WR</td><td>$4,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>58</td><td>Braeden McAlister</td><td>Arkansas</td><td>K</td><td>$4,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>59</td><td>Charlie Von Der Meden</td><td>Arkansas</td><td>K</td><td>$4,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>60</td><td>Max Gilbert</td><td>Arkansas</td><td>K</td><td>$4,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>61</td><td>Jasper Parker</td><td>Arkansas</td><td>RB</td><td>$4,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>62</td><td>Dillon Curtis</td><td>Utah</td><td>K</td><td>$5,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>63</td><td>Tanner Cragun</td><td>Utah</td><td>K</td><td>$5,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>64</td><td>Daniel Bray</td><td>Utah</td><td>RB</td><td>$5,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>65</td><td>Braeden Fuller</td><td>Arkansas</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>66</td><td>Brandon Rose</td><td>Utah</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>67</td><td>Cade Trotter</td><td>Arkansas</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>68</td><td>Hank Hendrix</td><td>Arkansas</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>69</td><td>Kane Archer</td><td>Utah</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>70</td><td>Michael Johnson</td><td>Utah</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>71</td><td>Nate Johnson</td><td>Utah</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>72</td><td>Kyri Shoels</td><td>Utah</td><td>WR</td><td>$6,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>73</td><td>LaMarcus Bell</td><td>Utah</td><td>RB</td><td>$7,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>74</td><td>AJ Hill</td><td>Arkansas</td><td>QB</td><td>$7,800</td><td class="val">—</td><td>—</td></tr>
+<tr><td>75</td><td>Steve Chavez-Soto</td><td>Utah</td><td>RB</td><td>$8,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>76</td><td>Byrd Ficklin</td><td>Utah</td><td>QB</td><td>$9,800</td><td class="val">—</td><td>—</td></tr>
+</tbody></table>
+<h3>ETR VALUE</h3>
+<p>Every name on ETR&#x27;s main-slate sheet for this game. Click a column to sort. A blank cell is —. <b>ETR salary</b> and <b>Owned</b> are their main-slate numbers. <b>Points per $1k</b> is their projected points versus our DraftKings salary for this game. Negative sheet values stay on the table. Not a Top 20.</p>
+<h4 class="team-break">Utah</h4>
+<table class="sortable" data-default-sort="Points per $1k">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Pos</th><th scope="col" data-col="2">Opp</th><th scope="col" data-col="3">ETR salary</th><th scope="col" data-col="4">Projected points</th><th scope="col" data-col="5">Sheet value</th><th scope="col" data-col="6">Owned</th><th scope="col" data-col="7">Our salary</th><th scope="col" data-col="8">Points per $1k</th></tr></thead>
+<tbody>
+<tr><td>Ricky Johnson</td><td>WR</td><td>Arkansas</td><td>$3,400</td><td>9.14</td><td>2</td><td>0</td><td>$2,600</td><td class="val">3.52</td></tr>
+<tr><td>Mana Carvalho</td><td>WR</td><td>Arkansas</td><td>$3,100</td><td>3.66</td><td>-3</td><td>0</td><td>$1,600</td><td class="val">2.29</td></tr>
+<tr><td>Braden Pegan</td><td>WR</td><td>Arkansas</td><td>$5,600</td><td>16.74</td><td>6.3</td><td>0</td><td>$7,400</td><td class="val">2.26</td></tr>
+<tr><td>Devon Dampier</td><td>QB</td><td>Arkansas</td><td>$8,300</td><td>26.6</td><td>12.1</td><td>0</td><td>$11,800</td><td class="val">2.25</td></tr>
+<tr><td>Hunter Andrews</td><td>WR</td><td>Arkansas</td><td>$3,900</td><td>8.97</td><td>1.1</td><td>0</td><td>$4,200</td><td class="val">2.14</td></tr>
+<tr><td>Wayshawn Parker</td><td>RB</td><td>Arkansas</td><td>$6,700</td><td>18.74</td><td>6.7</td><td>0</td><td>$8,800</td><td class="val">2.13</td></tr>
+<tr><td>Creed Whittemore</td><td>WR</td><td>Arkansas</td><td>$3,800</td><td>4.85</td><td>-2.9</td><td>0</td><td>$3,600</td><td class="val">1.35</td></tr>
+<tr><td>Daniel Bray</td><td>RB</td><td>Arkansas</td><td>$4,500</td><td>7.25</td><td>-1.5</td><td>0</td><td>$5,400</td><td class="val">1.34</td></tr>
+<tr><td>Dillon Curtis</td><td>K</td><td>Arkansas</td><td>$5,200</td><td>6.61</td><td>-3.2</td><td>0</td><td>$5,200</td><td class="val">1.27</td></tr>
+<tr><td>Will Monney</td><td>WR</td><td>Arkansas</td><td>$3,000</td><td>1.11</td><td>-5.4</td><td>0</td><td>$1,000</td><td class="val">1.11</td></tr>
+<tr><td>Semi Taulanga</td><td>WR</td><td>Arkansas</td><td>$3,000</td><td>1.09</td><td>-5.4</td><td>0</td><td>$1,000</td><td class="val">1.09</td></tr>
+<tr><td>Larry Simmons</td><td>WR</td><td>Arkansas</td><td>$4,400</td><td>4.34</td><td>-4.3</td><td>0</td><td>$5,000</td><td class="val">0.87</td></tr>
+<tr><td>Byrd Ficklin</td><td>QB</td><td>Arkansas</td><td>$7,600</td><td>6.2</td><td>-7.2</td><td>0</td><td>$9,800</td><td class="val">0.63</td></tr>
+<tr><td>Mateaki Helu</td><td>RB</td><td>Arkansas</td><td>$4,000</td><td>0.43</td><td>-7.6</td><td>0</td><td>$1,000</td><td class="val">0.43</td></tr>
+<tr><td>Steve Chavez-Soto</td><td>RB</td><td>Arkansas</td><td>$6,200</td><td>3.23</td><td>-8.1</td><td>0</td><td>$8,000</td><td class="val">0.4</td></tr>
+<tr><td>Kyri Shoels</td><td>WR</td><td>Arkansas</td><td>$5,000</td><td>1.24</td><td>-8.3</td><td>0</td><td>$6,400</td><td class="val">0.19</td></tr>
+<tr><td>Nate Johnson</td><td>QB</td><td>Arkansas</td><td>$4,500</td><td>0.58</td><td>-8.2</td><td>0</td><td>$6,000</td><td class="val">0.1</td></tr>
+<tr><td>LaMarcus Bell</td><td>RB</td><td>Arkansas</td><td>$5,600</td><td>0.43</td><td>-10</td><td>0</td><td>$7,200</td><td class="val">0.06</td></tr>
+</tbody></table>
+<h4 class="team-break">Arkansas</h4>
+<table class="sortable" data-default-sort="Points per $1k">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Pos</th><th scope="col" data-col="2">Opp</th><th scope="col" data-col="3">ETR salary</th><th scope="col" data-col="4">Projected points</th><th scope="col" data-col="5">Sheet value</th><th scope="col" data-col="6">Owned</th><th scope="col" data-col="7">Our salary</th><th scope="col" data-col="8">Points per $1k</th></tr></thead>
+<tbody>
+<tr><td>CJ Brown</td><td>WR</td><td>Utah</td><td>$3,500</td><td>8.46</td><td>1.2</td><td>0</td><td>$3,000</td><td class="val">2.82</td></tr>
+<tr><td>Chris Marshall</td><td>WR</td><td>Utah</td><td>$4,900</td><td>12.17</td><td>2.8</td><td>0</td><td>$5,800</td><td class="val">2.1</td></tr>
+<tr><td>Sutton Smith</td><td>RB</td><td>Utah</td><td>$5,400</td><td>12.73</td><td>2.6</td><td>0</td><td>$7,000</td><td class="val">1.82</td></tr>
+<tr><td>KJ Jackson</td><td>QB</td><td>Utah</td><td>$6,500</td><td>16.96</td><td>5.2</td><td>0</td><td>$9,400</td><td class="val">1.8</td></tr>
+<tr><td>Braylen Russell</td><td>RB</td><td>Utah</td><td>$5,000</td><td>11.22</td><td>1.7</td><td>0</td><td>$6,600</td><td class="val">1.7</td></tr>
+<tr><td>Jamari Hawkins</td><td>WR</td><td>Utah</td><td>$3,400</td><td>3.62</td><td>-3.5</td><td>0</td><td>$2,200</td><td class="val">1.65</td></tr>
+<tr><td>Jaden Platt</td><td>WR</td><td>Utah</td><td>$3,300</td><td>3.3</td><td>-3.7</td><td>0</td><td>$2,000</td><td class="val">1.65</td></tr>
+<tr><td>Ty Lockwood</td><td>WR</td><td>Utah</td><td>$3,200</td><td>2.84</td><td>-4</td><td>0</td><td>$1,800</td><td class="val">1.58</td></tr>
+<tr><td>Ismael Cisse</td><td>WR</td><td>Utah</td><td>$3,700</td><td>5.04</td><td>-2.5</td><td>0</td><td>$3,400</td><td class="val">1.48</td></tr>
+<tr><td>Max Gilbert</td><td>K</td><td>Utah</td><td>$4,400</td><td>5.16</td><td>-3.4</td><td>0</td><td>$4,400</td><td class="val">1.17</td></tr>
+<tr><td>Jelani Watkins</td><td>WR</td><td>Utah</td><td>$3,000</td><td>1.02</td><td>-5.5</td><td>0</td><td>$1,000</td><td class="val">1.02</td></tr>
+<tr><td>Donovan Faupel</td><td>WR</td><td>Utah</td><td>$3,100</td><td>1.31</td><td>-5.3</td><td>0</td><td>$1,400</td><td class="val">0.94</td></tr>
+<tr><td>Antonio Jordan</td><td>WR</td><td>Utah</td><td>$3,000</td><td>0.94</td><td>-5.6</td><td>0</td><td>$1,000</td><td class="val">0.94</td></tr>
+<tr><td>Jasper Parker</td><td>RB</td><td>Utah</td><td>$4,300</td><td>3.46</td><td>-5</td><td>0</td><td>$4,600</td><td class="val">0.75</td></tr>
+<tr><td>Courtney Crutchfield</td><td>WR</td><td>Utah</td><td>$3,000</td><td>0.53</td><td>-6</td><td>0</td><td>$1,000</td><td class="val">0.53</td></tr>
+<tr><td>Matt Adcock</td><td>WR</td><td>Utah</td><td>$3,400</td><td>0.49</td><td>-6.6</td><td>0</td><td>$2,400</td><td class="val">0.2</td></tr>
+</tbody></table></div>
+<div class="player-book"><h3>Player book</h3><p class="sub">Quarterbacks, running backs, and receivers are separate tables. One row per player. Week 1, Week 2, Week 3 sit side by side — teal is up from last week, red is down. Click a header to sort. A new week column appears after that box is in. A blank cell is —.</p><div class="team-pills noprint"><button type="button" class="team-pill on" data-team="UTAH">Utah</button><button type="button" class="team-pill" data-team="ARK">Arkansas</button></div><section class="pos-book" data-pos="QB"><h4>Quarterbacks</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Att</th><th scope="col" class="w0" data-col="5">Yds</th><th scope="col" class="w0" data-col="6">TD</th><th scope="col" class="w0" data-col="7">RAtt</th><th scope="col" class="w0" data-col="8">Rush</th><th scope="col" class="w0" data-col="9">rTD</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="UTAH"><td class="who">Devon Dampier</td><td class="who">Utah</td><td class="who" data-n="11800">$11,800</td><td class="w0 opp">Idaho</td><td class="w0" data-n="18">18</td><td class="w0" data-n="176">176</td><td class="w0" data-n="3">3</td><td class="w0" data-n="6">6</td><td class="w0" data-n="31">31</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="22.14">22.14</td></tr><tr data-team="UTAH"><td class="who">Byrd Ficklin</td><td class="who">Utah</td><td class="who" data-n="9800">$9,800</td><td class="w0 opp">Idaho</td><td class="w0" data-n="8">8</td><td class="w0" data-n="93">93</td><td class="w0" data-n="2">2</td><td class="w0" data-n="8">8</td><td class="w0" data-n="70">70</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="18.72">18.72</td></tr><tr data-team="ARK" hidden><td class="who">KJ Jackson</td><td class="who">Arkansas</td><td class="who" data-n="9400">$9,400</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="35">35</td><td class="w0" data-n="267">267</td><td class="w0" data-n="3">3</td><td class="w0" data-n="10">10</td><td class="w0" data-n="27">27</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="24.38">24.38</td></tr><tr data-team="UTAH"><td class="who">Brandon Rose</td><td class="who">Utah</td><td class="who" data-n="6000">$6,000</td><td class="w0 opp">Idaho</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0" data-n="2">2</td><td class="w0" data-n="8">8</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="0.8">0.8</td></tr></tbody></table></div></section><section class="pos-book" data-pos="RB"><h4>Running backs</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">RAtt</th><th scope="col" class="w0" data-col="5">Rush</th><th scope="col" class="w0" data-col="6">rTD</th><th scope="col" class="w0" data-col="7">Rec</th><th scope="col" class="w0" data-col="8">Tgt</th><th scope="col" class="w0" data-col="9">Yds</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="UTAH"><td class="who">Wayshawn Parker</td><td class="who">Utah</td><td class="who" data-n="8800">$8,800</td><td class="w0 opp">Idaho</td><td class="w0" data-n="12">12</td><td class="w0" data-n="71">71</td><td class="w0" data-n="1">1</td><td class="w0" data-n="3">3</td><td class="w0" data-n="3">3</td><td class="w0" data-n="23">23</td><td class="w0 val" data-n="30.4">30.4</td></tr><tr data-team="UTAH"><td class="who">Steve Chavez-Soto</td><td class="who">Utah</td><td class="who" data-n="8000">$8,000</td><td class="w0 opp">Idaho</td><td class="w0" data-n="6">6</td><td class="w0" data-n="35">35</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="9.5">9.5</td></tr><tr data-team="UTAH"><td class="who">LaMarcus Bell</td><td class="who">Utah</td><td class="who" data-n="7200">$7,200</td><td class="w0 opp">Idaho</td><td class="w0" data-n="7">7</td><td class="w0" data-n="87">87</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="14.7">14.7</td></tr><tr data-team="ARK" hidden><td class="who">Sutton Smith</td><td class="who">Arkansas</td><td class="who" data-n="7000">$7,000</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="15">15</td><td class="w0" data-n="36">36</td><td class="w0" data-n="0">0</td><td class="w0" data-n="4">4</td><td class="w0" data-n="5">5</td><td class="w0" data-n="43">43</td><td class="w0 val" data-n="11.9">11.9</td></tr><tr data-team="ARK" hidden><td class="who">Braylen Russell</td><td class="who">Arkansas</td><td class="who" data-n="6600">$6,600</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="17">17</td><td class="w0" data-n="49">49</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="11">11</td><td class="w0 val" data-n="13">13.0</td></tr><tr data-team="UTAH"><td class="who">Daniel Bray</td><td class="who">Utah</td><td class="who" data-n="5400">$5,400</td><td class="w0 opp">Idaho</td><td class="w0" data-n="2">2</td><td class="w0" data-n="13">13</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.3">1.3</td></tr><tr data-team="ARK" hidden><td class="who">Jasper Parker</td><td class="who">Arkansas</td><td class="who" data-n="4600">$4,600</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="4">4</td><td class="w0" data-n="17">17</td><td class="w0" data-n="0">0</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="21">21</td><td class="w0 val" data-n="4.8">4.8</td></tr><tr data-team="UTAH"><td class="who">Mateaki Helu</td><td class="who">Utah</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Idaho</td><td class="w0" data-n="3">3</td><td class="w0" data-n="25">25</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="2.5">2.5</td></tr></tbody></table></div></section><section class="pos-book" data-pos="WR"><h4>Wide receivers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Rec</th><th scope="col" class="w0" data-col="5">Tgt</th><th scope="col" class="w0" data-col="6">Yds</th><th scope="col" class="w0" data-col="7">TD</th><th scope="col" class="w0" data-col="8">RAtt</th><th scope="col" class="w0" data-col="9">Rush</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="UTAH"><td class="who">Braden Pegan</td><td class="who">Utah</td><td class="who" data-n="7400">$7,400</td><td class="w0 opp">Idaho</td><td class="w0" data-n="4">4</td><td class="w0" data-n="5">5</td><td class="w0" data-n="81">81</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="12">12</td><td class="w0 val" data-n="25.3">25.3</td></tr><tr data-team="ARK" hidden><td class="who">Chris Marshall</td><td class="who">Arkansas</td><td class="who" data-n="5800">$5,800</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="7">7</td><td class="w0" data-n="10">10</td><td class="w0" data-n="79">79</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="14.9">14.9</td></tr><tr data-team="UTAH"><td class="who">Larry Simmons</td><td class="who">Utah</td><td class="who" data-n="5000">$5,000</td><td class="w0 opp">Idaho</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0" data-n="41">41</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="6.1">6.1</td></tr><tr data-team="UTAH"><td class="who">Hunter Andrews</td><td class="who">Utah</td><td class="who" data-n="4200">$4,200</td><td class="w0 opp">Idaho</td><td class="w0" data-n="2">2</td><td class="w0" data-n="3">3</td><td class="w0" data-n="14">14</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="13">13</td><td class="w0 val" data-n="10.7">10.7</td></tr><tr data-team="UTAH"><td class="who">Creed Whittemore</td><td class="who">Utah</td><td class="who" data-n="3600">$3,600</td><td class="w0 opp">Idaho</td><td class="w0" data-n="2">2</td><td class="w0" data-n="4">4</td><td class="w0" data-n="27">27</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.7">4.7</td></tr><tr data-team="ARK" hidden><td class="who">Ismael Cisse</td><td class="who">Arkansas</td><td class="who" data-n="3400">$3,400</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="20">20</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="9">9.0</td></tr><tr data-team="UTAH"><td class="who">Noah Bennee</td><td class="who">Utah</td><td class="who" data-n="3200">$3,200</td><td class="w0 opp">Idaho</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="35">35</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="10.5">10.5</td></tr><tr data-team="ARK" hidden><td class="who">CJ Brown</td><td class="who">Arkansas</td><td class="who" data-n="3000">$3,000</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="3">3</td><td class="w0" data-n="5">5</td><td class="w0" data-n="37">37</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="6.7">6.7</td></tr><tr data-team="UTAH"><td class="who">Ricky Johnson</td><td class="who">Utah</td><td class="who" data-n="2600">$2,600</td><td class="w0 opp">Idaho</td><td class="w0" data-n="2">2</td><td class="w0" data-n="5">5</td><td class="w0" data-n="25">25</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.5">4.5</td></tr><tr data-team="ARK" hidden><td class="who">Matt Adcock</td><td class="who">Arkansas</td><td class="who" data-n="2400">$2,400</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="7.2">7.2</td></tr><tr data-team="ARK" hidden><td class="who">Jaden Platt</td><td class="who">Arkansas</td><td class="who" data-n="2000">$2,000</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="10">10</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="8">8.0</td></tr><tr data-team="ARK" hidden><td class="who">Ty Lockwood</td><td class="who">Arkansas</td><td class="who" data-n="1800">$1,800</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0" data-n="22">22</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.2">4.2</td></tr><tr data-team="UTAH"><td class="who">Mana Carvalho</td><td class="who">Utah</td><td class="who" data-n="1600">$1,600</td><td class="w0 opp">Idaho</td><td class="w0" data-n="1">1</td><td class="w0" data-n="3">3</td><td class="w0" data-n="23">23</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="3.3">3.3</td></tr><tr data-team="ARK" hidden><td class="who">Donovan Faupel</td><td class="who">Arkansas</td><td class="who" data-n="1400">$1,400</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="9">9</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.9">1.9</td></tr><tr data-team="ARK" hidden><td class="who">Antonio Jordan</td><td class="who">Arkansas</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="7">7</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.7">1.7</td></tr><tr data-team="ARK" hidden><td class="who">Jelani Watkins</td><td class="who">Arkansas</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0" data-n="2">2</td><td class="w0" data-n="21">21</td><td class="w0 val" data-n="3.7">3.7</td></tr><tr data-team="UTAH"><td class="who">Team</td><td class="who">Utah</td><td class="who">—</td><td class="w0 opp">Idaho</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0" data-n="1">1</td><td class="w0" data-n="-1">-1</td><td class="w0 val" data-n="-0.1">-0.1</td></tr><tr data-team="ARK" hidden><td class="who">Team</td><td class="who">Arkansas</td><td class="who">—</td><td class="w0 opp">North Alabama</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0" data-n="1">1</td><td class="w0" data-n="-2">-2</td><td class="w0 val" data-n="-0.2">-0.2</td></tr></tbody></table></div></section><section class="pos-book" data-pos="K"><h4>Kickers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="4">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">FG</th><th scope="col" class="w0" data-col="5">XP</th><th scope="col" class="w0" data-col="6">DK</th></tr></thead><tbody><tr data-team="UTAH"><td class="who">Dillon Curtis</td><td class="who">Utah</td><td class="who" data-n="5200">$5,200</td><td class="w0 opp">Idaho</td><td class="w0" data-n="1">1</td><td class="w0" data-n="7">7</td><td class="w0 val" data-n="10">10.0</td></tr><tr data-team="UTAH"><td class="who">Tanner Cragun</td><td class="who">Utah</td><td class="who" data-n="5200">$5,200</td><td class="w0 opp">Idaho</td><td class="w0" data-n="0">0</td><td class="w0" data-n="2">2</td><td class="w0 val" data-n="2">2.0</td></tr><tr data-team="ARK" hidden><td class="who">Max Gilbert</td><td class="who">Arkansas</td><td class="who" data-n="4400">$4,400</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="1">1</td><td class="w0" data-n="4">4</td><td class="w0 val" data-n="7">7.0</td></tr></tbody></table></div></section></div>
 </article>
 </main></div>
 <script>
 (function(){
-  document.addEventListener('click', function(e){
-    var pill=e.target.closest('.team-pill');
-    if(!pill) return;
-    var book=pill.closest('.player-book');
-    if(!book) return;
-    var team=pill.getAttribute('data-team')||'ALL';
+  function applyTeam(book, pill){
+    if(!book || !pill) return;
     book.querySelectorAll('.team-pill').forEach(function(p){
       p.classList.toggle('on', p===pill);
     });
     var inp=document.getElementById('playerSearch');
     if(inp) inp.dispatchEvent(new Event('input'));
     else {
+      var team=pill.getAttribute('data-team')||'';
       book.querySelectorAll('table.season-log tbody tr').forEach(function(tr){
         var rowTeam=tr.getAttribute('data-team')||'';
-        tr.hidden = !!(team && team!=='ALL' && rowTeam!==team);
+        tr.hidden = !!(team && rowTeam!==team);
       });
       book.querySelectorAll('.pos-book').forEach(function(sec){
         var any=false;
@@ -485,6 +556,13 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
         sec.classList.toggle('search-empty', !any);
       });
     }
+  }
+  document.addEventListener('click', function(e){
+    var pill=e.target.closest('.team-pill');
+    if(!pill) return;
+    var book=pill.closest('.player-book');
+    if(!book) return;
+    applyTeam(book, pill);
   });
 })();
 </script>
@@ -596,15 +674,24 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
     function teamOk(tr){
       var book=tr.closest && tr.closest('.player-book');
       if(!book) return true;
-      var on=book.querySelector('.team-pill.on');
-      var team=on ? (on.getAttribute('data-team')||'ALL') : 'ALL';
-      if(!team || team==='ALL') return true;
+      var on=book.querySelector('.team-pill.on') || book.querySelector('.team-pill');
+      var team=on ? (on.getAttribute('data-team')||'') : '';
+      if(!team) return true;
       return (tr.getAttribute('data-team')||'')===team;
     }
     function mark(el, hit){
       el.hidden = !hit;
       el.classList.toggle('name-hit', !!(q && hit));
       if(q && hit) n++;
+    }
+    function panelHasHit(sel){
+      var panel=document.querySelector(sel);
+      if(!panel) return false;
+      var hit=false;
+      panel.querySelectorAll('tbody tr, li').forEach(function(el){
+        if(!el.hidden) hit=true;
+      });
+      return hit;
     }
     document.querySelectorAll('table tbody tr').forEach(function(tr){
       if(skip(tr)) return;
@@ -635,6 +722,14 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
     });
     var hint=document.getElementById('playerSearchHint');
     if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
+    document.querySelectorAll('label.pill[for]').forEach(function(lab){
+      var id=lab.getAttribute('for');
+      var sel = id==='v-report' ? '.game-report'
+              : id==='v-value' ? '.value-board'
+              : id==='v-book' ? '.player-book' : '';
+      if(!sel) return;
+      lab.classList.toggle('search-miss', !!(q && !panelHasHit(sel)));
+    });
     if(opts.jump){
       var shownArt=document.querySelector('article.panel');
       var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
@@ -664,6 +759,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
       }
     });
   }
+  apply({});
 })();
 </script>
 </body></html>
