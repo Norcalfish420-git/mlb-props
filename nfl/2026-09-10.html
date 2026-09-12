@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NFL Props 2026-09-10</title>
+<style>
+:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#9ef0f0;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#007d79;--table:#262626;--cell:#525252;--th:#393939;--val:#3ddbd9;--h:#3ddbd9;--code:#9ef0f0;}
+html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#004144;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#007d79;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#005d5d;--h:#005d5d;--code:#005d5d;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+.tab{position:absolute;left:-9999px;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);}
+.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
+.pill:hover{background:var(--pill-hover);}
+button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
+button.pdf:hover{filter:brightness(1.08);}
+button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.5rem .7rem;}
+button.theme:hover{background:var(--pill-hover);}
+.hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:58rem;}
+h1{font-size:1.6rem;margin:0 0 .3rem;}
+h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
+h4{margin:.8rem 0 .4rem;}
+.sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
+table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.88rem;background:var(--table);}
+th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
+th{background:var(--th);color:var(--pill-fg);}
+td.val{font-weight:700;color:var(--val);white-space:nowrap;}
+ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
+ul ul{margin:.15rem 0 .4rem;padding-left:1.15rem;}
+li{margin:.35rem 0;}
+code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
+.panel{display:none;}
+@media print{
+  html,body,html.light,html.light body{background:#fff;color:#111;}
+  .shell{display:block;}
+  .rail,.noprint{display:none !important;}
+  main{max-width:none;padding:0;}
+  .panel{display:block !important;page-break-after:always;}
+  .panel:last-child{page-break-after:auto;}
+  table{background:#fff;page-break-inside:avoid;}
+  th{background:#eee;color:#333;}
+  td.val{color:#000;}
+  h2,h3,h4{page-break-after:avoid;color:#111;}
+}
+@page{margin:.5in;}
+#g0:checked ~ .shell .rail label[for=g0]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g0:checked ~ .shell main .p0{display:block;}
+#g1:checked ~ .shell .rail label[for=g1]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g1:checked ~ .shell main .p1{display:block;}
+#g2:checked ~ .shell .rail label[for=g2]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g2:checked ~ .shell main .p2{display:block;}
+#g3:checked ~ .shell .rail label[for=g3]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g3:checked ~ .shell main .p3{display:block;}
+</style>
+</head><body>
+<input class="tab" type="radio" name="g" id="g0" checked/>
+<input class="tab" type="radio" name="g" id="g1"/>
+<input class="tab" type="radio" name="g" id="g2"/>
+<input class="tab" type="radio" name="g" id="g3"/>
+<div class="shell">
+<aside class="rail noprint">
+<p class="brand">NFL PROPS<br/>2026-09-10</p>
+<label class="pill" for="g0"><span class="when">the card</span>THE CARD</label>
+<label class="pill" for="g1"><span class="when">the desks</span>WRITERS</label>
+<label class="pill" for="g2"><span class="when">the board</span>VALUE LIST</label>
+<label class="pill" for="g3"><span class="when">8:35 p.m. ET</span>SF @ LAR</label>
+<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
+<button class="pdf" type="button" onclick="window.print()">Save as PDF</button>
+<p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
+</aside>
+<main>
+<h1>NFL player props — September 10, 2026</h1>
+<p class="sub">Short card, writer consensus, and a movie per game. Live book Overs and Unders. Never a made-up line.</p>
+<article class="panel p0">
+<h3>THE CARD</h3>
+<p>Short card. Empty sixth beats forced juice. Overs and Unders both ship when the live book number is real.</p>
+<table>
+<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Davante Adams</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>Over; Writer dart Adams ATD; need live chalk; 3 desks: OddsShopper,Covers,SI; vs soft defense; implied 26; L3 0.67; live book</td></tr>
+<tr><td>2</td><td>Christian McCaffrey</td><td>SF</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>Over; 2 desks: FanDuel Research,BettingPros; vs soft defense; implied 22.5; L3 1.00; live book</td></tr>
+<tr><td>3</td><td>Christian McCaffrey</td><td>SF</td><td>receptions</td><td class="val">Over</td><td class="val">4.5</td><td>Over; 2 desks: SI,VSiN; vs soft defense; implied 22.5; L3 5.33; live book</td></tr>
+<tr><td>4</td><td>Puka Nacua</td><td>LA</td><td>receiving yards</td><td class="val">Under</td><td class="val">91.5</td><td>Under; DK Pick6 rec is 91.5 (UD/PP 90.5). Fantasy Alarm faded 94.5 — that is not this number. Do not Under 91.5 off that fade; 1 desk: Fantasy Alarm; vs soft defense; implied 26; L3 116.00; live book</td></tr>
+</tbody></table>
+<p>One-game / thin slate — we did not force a full six plus three $20 slips. The table above is the ship.</p>
+</article>
+<article class="panel p1">
+<h3>WRITER CONSENSUS</h3>
+<p>Quoted desks only. <b>Our</b> live book number is the line — an article never sets it. Overs and Unders both count.</p>
+<table>
+<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Our line</th><th>n</th><th>Desks</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Davante Adams</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td>0.5</td><td class="val">3</td><td>OddsShopper,Covers,SI</td></tr>
+<tr><td>2</td><td>Christian McCaffrey</td><td>SF</td><td>anytime TD</td><td class="val">Over</td><td>0.5</td><td class="val">2</td><td>FanDuel Research,BettingPros</td></tr>
+<tr><td>3</td><td>Christian McCaffrey</td><td>SF</td><td>receiving yards</td><td class="val">Over</td><td>—</td><td class="val">2</td><td>OddsShopper,Covers</td></tr>
+<tr><td>4</td><td>Christian McCaffrey</td><td>SF</td><td>receptions</td><td class="val">Over</td><td>4.5</td><td class="val">2</td><td>SI,VSiN</td></tr>
+<tr><td>5</td><td>Mike Evans</td><td>SF</td><td>receptions</td><td class="val">Over</td><td>3.5</td><td class="val">2</td><td>SI,Fantasy Alarm</td></tr>
+<tr><td>6</td><td>Puka Nacua</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td>0.5</td><td class="val">2</td><td>Covers,BettingPros</td></tr>
+<tr><td>7</td><td>Puka Nacua</td><td>LA</td><td>receiving yards</td><td class="val">Over</td><td>91.5</td><td class="val">2</td><td>OddsShopper,FanDuel Research</td></tr>
+<tr><td>8</td><td>Brock Purdy</td><td>SF</td><td>rushing yards</td><td class="val">Over</td><td>18.5</td><td class="val">1</td><td>Covers</td></tr>
+<tr><td>9</td><td>Christian McCaffrey</td><td>SF</td><td>rushing yards</td><td class="val">Over</td><td>58.5</td><td class="val">1</td><td>BettingPros</td></tr>
+<tr><td>10</td><td>Kyren Williams</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td>0.5</td><td class="val">1</td><td>BettingPros</td></tr>
+<tr><td>11</td><td>Kyren Williams</td><td>LA</td><td>rushing yards</td><td class="val">Over</td><td>55.5</td><td class="val">1</td><td>FanDuel Research</td></tr>
+<tr><td>12</td><td>Matthew Stafford</td><td>LA</td><td>passing TDs</td><td class="val">Over</td><td>1.5</td><td class="val">1</td><td>OddsShopper</td></tr>
+<tr><td>13</td><td>Matthew Stafford</td><td>LA</td><td>passing yards</td><td class="val">Over</td><td>263.5</td><td class="val">1</td><td>FanDuel Research</td></tr>
+<tr><td>14</td><td>Mike Evans</td><td>SF</td><td>anytime TD</td><td class="val">Over</td><td>0.5</td><td class="val">1</td><td>BettingPros</td></tr>
+<tr><td>15</td><td>Puka Nacua</td><td>LA</td><td>receiving yards</td><td class="val">Under</td><td>91.5</td><td class="val">1</td><td>Fantasy Alarm</td></tr>
+</tbody></table>
+</article>
+<article class="panel p2">
+<h3>VALUE LIST</h3>
+<p>Every skill row with a <b>real</b> book number. Proxy / schedule lines are omitted. Overs and Unders both list when the book posted them.</p>
+<table>
+<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Blake Corum</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>2</td><td>Blake Corum</td><td>LA</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">52.5</td></tr>
+<tr><td>3</td><td>Blake Corum</td><td>LA</td><td>rushing yards</td><td class="val">Over</td><td class="val">44.5</td></tr>
+<tr><td>4</td><td>Colby Parkinson</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>5</td><td>Colby Parkinson</td><td>LA</td><td>receiving yards</td><td class="val">Over</td><td class="val">18.5</td></tr>
+<tr><td>6</td><td>Colby Parkinson</td><td>LA</td><td>receptions</td><td class="val">Over</td><td class="val">2.5</td></tr>
+<tr><td>7</td><td>Davante Adams</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>8</td><td>Davante Adams</td><td>LA</td><td>receiving yards</td><td class="val">Over</td><td class="val">51.5</td></tr>
+<tr><td>9</td><td>Davante Adams</td><td>LA</td><td>receptions</td><td class="val">Over</td><td class="val">4.5</td></tr>
+<tr><td>10</td><td>Davis Allen</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>11</td><td>Harrison Mevis</td><td>LA</td><td>field goals</td><td class="val">Over</td><td class="val">1.5</td></tr>
+<tr><td>12</td><td>Harrison Mevis</td><td>LA</td><td>kicking points</td><td class="val">Over</td><td class="val">7.5</td></tr>
+<tr><td>13</td><td>Jordan Whittington</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>14</td><td>Jordan Whittington</td><td>LA</td><td>receptions</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>15</td><td>Konata Mumpfield</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>16</td><td>Konata Mumpfield</td><td>LA</td><td>receptions</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>17</td><td>Kyren Williams</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>18</td><td>Kyren Williams</td><td>LA</td><td>receptions</td><td class="val">Over</td><td class="val">1.5</td></tr>
+<tr><td>19</td><td>Kyren Williams</td><td>LA</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">71.5</td></tr>
+<tr><td>20</td><td>Kyren Williams</td><td>LA</td><td>rushing yards</td><td class="val">Over</td><td class="val">55.5</td></tr>
+<tr><td>21</td><td>Matthew Stafford</td><td>LA</td><td>passing TDs</td><td class="val">Over</td><td class="val">1.5</td></tr>
+<tr><td>22</td><td>Matthew Stafford</td><td>LA</td><td>passing yards</td><td class="val">Over</td><td class="val">263.5</td></tr>
+<tr><td>23</td><td>Puka Nacua</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>24</td><td>Puka Nacua</td><td>LA</td><td>receiving yards</td><td class="val">Over</td><td class="val">91.5</td></tr>
+<tr><td>25</td><td>Puka Nacua</td><td>LA</td><td>receptions</td><td class="val">Over</td><td class="val">7.5</td></tr>
+<tr><td>26</td><td>Terrance Ferguson</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>27</td><td>Terrance Ferguson</td><td>LA</td><td>receiving yards</td><td class="val">Over</td><td class="val">24.5</td></tr>
+<tr><td>28</td><td>Terrance Ferguson</td><td>LA</td><td>receptions</td><td class="val">Over</td><td class="val">1.5</td></tr>
+<tr><td>29</td><td>Tyler Higbee</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>30</td><td>Tyler Higbee</td><td>LA</td><td>receiving yards</td><td class="val">Over</td><td class="val">13.5</td></tr>
+<tr><td>31</td><td>Tyler Higbee</td><td>LA</td><td>receptions</td><td class="val">Over</td><td class="val">1.5</td></tr>
+<tr><td>32</td><td>Xavier Smith</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>33</td><td>Brock Purdy</td><td>SF</td><td>passing TDs</td><td class="val">Over</td><td class="val">1.5</td></tr>
+<tr><td>34</td><td>Brock Purdy</td><td>SF</td><td>passing yards</td><td class="val">Over</td><td class="val">242.5</td></tr>
+<tr><td>35</td><td>Brock Purdy</td><td>SF</td><td>rushing yards</td><td class="val">Over</td><td class="val">18.5</td></tr>
+<tr><td>36</td><td>Christian McCaffrey</td><td>SF</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>37</td><td>Christian McCaffrey</td><td>SF</td><td>receptions</td><td class="val">Over</td><td class="val">4.5</td></tr>
+<tr><td>38</td><td>Christian McCaffrey</td><td>SF</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">103.5</td></tr>
+<tr><td>39</td><td>Christian McCaffrey</td><td>SF</td><td>rushing yards</td><td class="val">Over</td><td class="val">58.5</td></tr>
+<tr><td>40</td><td>Deebo Samuel Sr.</td><td>SF</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>41</td><td>Deebo Samuel Sr.</td><td>SF</td><td>receiving yards</td><td class="val">Over</td><td class="val">29.5</td></tr>
+<tr><td>42</td><td>Deebo Samuel Sr.</td><td>SF</td><td>receptions</td><td class="val">Over</td><td class="val">2.5</td></tr>
+<tr><td>43</td><td>Demarcus Robinson</td><td>SF</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>44</td><td>Demarcus Robinson</td><td>SF</td><td>receiving yards</td><td class="val">Over</td><td class="val">11.5</td></tr>
+<tr><td>45</td><td>Demarcus Robinson</td><td>SF</td><td>receptions</td><td class="val">Over</td><td class="val">1.5</td></tr>
+<tr><td>46</td><td>Eddy Pineiro</td><td>SF</td><td>field goals</td><td class="val">Over</td><td class="val">1.5</td></tr>
+<tr><td>47</td><td>Eddy Pineiro</td><td>SF</td><td>kicking points</td><td class="val">Over</td><td class="val">6.5</td></tr>
+<tr><td>48</td><td>George Kittle</td><td>SF</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>49</td><td>George Kittle</td><td>SF</td><td>receiving yards</td><td class="val">Over</td><td class="val">34.5</td></tr>
+<tr><td>50</td><td>George Kittle</td><td>SF</td><td>receptions</td><td class="val">Over</td><td class="val">3.5</td></tr>
+<tr><td>51</td><td>Jake Tonges</td><td>SF</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>52</td><td>Kyle Juszczyk</td><td>SF</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>53</td><td>Mike Evans</td><td>SF</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>54</td><td>Mike Evans</td><td>SF</td><td>receiving yards</td><td class="val">Over</td><td class="val">49.5</td></tr>
+<tr><td>55</td><td>Mike Evans</td><td>SF</td><td>receptions</td><td class="val">Over</td><td class="val">3.5</td></tr>
+</tbody></table>
+</article>
+<article class="panel p3">
+<h3>THE MOVIE</h3>
+<p>SF at LAR, kick 8:35 p.m. ET.</p>
+<p>Total 48.5. Implied points: SF 22.5, LAR 26.</p>
+<p>Weather: outdoor, about 55°F, wind 2 mph, precip none.</p>
+<p>MCG Melbourne open-air; cool clear near-windless Friday 10:35am local.</p>
+<p>News that changes the hole:</p>
+<ul>
+<li>George Kittle (SF): Cleared; Shanahan snap count after Achilles</li>
+<li>Blake Corum (LA): Committee RB2; skip volume Over</li>
+<li>Puka Nacua (LA): DK Pick6 rec is 91.5 (UD/PP 90.5). Fantasy Alarm faded 94.5 — that is not this number. Do not Under 91.5 off that fade.</li>
+</ul>
+<h3>WHY THESE PROPS</h3>
+<p>Each rec is Over or Under our live book number. News and desk notes below — never a made-up line.</p>
+<h4>Davante Adams (LA) — Over anytime TD 0.5</h4>
+<p>Over; Writer dart Adams ATD; need live chalk; 3 desks: OddsShopper,Covers,SI; vs soft defense; implied 26; L3 0.67; live book.</p>
+<ul>
+<li>OddsShopper: Adams ATD dart</li>
+<li>Covers: Adams ATD</li>
+<li>SI: Adams ATD Dewey</li>
+<li>Note (bump): Writer dart Adams ATD; need live chalk</li>
+</ul>
+<h4>Christian McCaffrey (SF) — Over anytime TD 0.5</h4>
+<p>Over; 2 desks: FanDuel Research,BettingPros; vs soft defense; implied 22.5; L3 1.00; live book.</p>
+<ul>
+<li>FanDuel Research: CMC ATD</li>
+<li>BettingPros: CMC first TD</li>
+</ul>
+<h4>Christian McCaffrey (SF) — Over receptions 4.5</h4>
+<p>Over; 2 desks: SI,VSiN; vs soft defense; implied 22.5; L3 5.33; live book.</p>
+<ul>
+<li>SI: CMC O 4.5 rec</li>
+<li>VSiN: CMC O 4.5 rec three hosts</li>
+</ul>
+<h4>Puka Nacua (LA) — Under receiving yards 91.5</h4>
+<p>Under; DK Pick6 rec is 91.5 (UD/PP 90.5). Fantasy Alarm faded 94.5 — that is not this number. Do not Under 91.5 off that fade; 1 desk: Fantasy Alarm; vs soft defense; implied 26; L3 116.00; live book.</p>
+<ul>
+<li>Fantasy Alarm: Nacua U 94.5 rec</li>
+<li>Note (keep): Writer consensus rec yards Over; Nacua off IR, not on final report</li>
+<li>Note (warn): DK Pick6 rec is 91.5 (UD/PP 90.5). Fantasy Alarm faded 94.5 — that is not this number. Do not Under 91.5 off that fade.</li>
+</ul>
+<h3>VALUE LIST</h3>
+<p>Every skill row with a <b>real</b> book number. Proxy / schedule lines are omitted. Overs and Unders both list when the book posted them.</p>
+<table>
+<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Blake Corum</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>2</td><td>Blake Corum</td><td>LA</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">52.5</td></tr>
+<tr><td>3</td><td>Blake Corum</td><td>LA</td><td>rushing yards</td><td class="val">Over</td><td class="val">44.5</td></tr>
+<tr><td>4</td><td>Colby Parkinson</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>5</td><td>Colby Parkinson</td><td>LA</td><td>receiving yards</td><td class="val">Over</td><td class="val">18.5</td></tr>
+<tr><td>6</td><td>Colby Parkinson</td><td>LA</td><td>receptions</td><td class="val">Over</td><td class="val">2.5</td></tr>
+<tr><td>7</td><td>Davante Adams</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>8</td><td>Davante Adams</td><td>LA</td><td>receiving yards</td><td class="val">Over</td><td class="val">51.5</td></tr>
+<tr><td>9</td><td>Davante Adams</td><td>LA</td><td>receptions</td><td class="val">Over</td><td class="val">4.5</td></tr>
+<tr><td>10</td><td>Davis Allen</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>11</td><td>Harrison Mevis</td><td>LA</td><td>field goals</td><td class="val">Over</td><td class="val">1.5</td></tr>
+<tr><td>12</td><td>Harrison Mevis</td><td>LA</td><td>kicking points</td><td class="val">Over</td><td class="val">7.5</td></tr>
+<tr><td>13</td><td>Jordan Whittington</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>14</td><td>Jordan Whittington</td><td>LA</td><td>receptions</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>15</td><td>Konata Mumpfield</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>16</td><td>Konata Mumpfield</td><td>LA</td><td>receptions</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>17</td><td>Kyren Williams</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>18</td><td>Kyren Williams</td><td>LA</td><td>receptions</td><td class="val">Over</td><td class="val">1.5</td></tr>
+<tr><td>19</td><td>Kyren Williams</td><td>LA</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">71.5</td></tr>
+<tr><td>20</td><td>Kyren Williams</td><td>LA</td><td>rushing yards</td><td class="val">Over</td><td class="val">55.5</td></tr>
+<tr><td>21</td><td>Matthew Stafford</td><td>LA</td><td>passing TDs</td><td class="val">Over</td><td class="val">1.5</td></tr>
+<tr><td>22</td><td>Matthew Stafford</td><td>LA</td><td>passing yards</td><td class="val">Over</td><td class="val">263.5</td></tr>
+<tr><td>23</td><td>Puka Nacua</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>24</td><td>Puka Nacua</td><td>LA</td><td>receiving yards</td><td class="val">Over</td><td class="val">91.5</td></tr>
+<tr><td>25</td><td>Puka Nacua</td><td>LA</td><td>receptions</td><td class="val">Over</td><td class="val">7.5</td></tr>
+<tr><td>26</td><td>Terrance Ferguson</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>27</td><td>Terrance Ferguson</td><td>LA</td><td>receiving yards</td><td class="val">Over</td><td class="val">24.5</td></tr>
+<tr><td>28</td><td>Terrance Ferguson</td><td>LA</td><td>receptions</td><td class="val">Over</td><td class="val">1.5</td></tr>
+<tr><td>29</td><td>Tyler Higbee</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>30</td><td>Tyler Higbee</td><td>LA</td><td>receiving yards</td><td class="val">Over</td><td class="val">13.5</td></tr>
+<tr><td>31</td><td>Tyler Higbee</td><td>LA</td><td>receptions</td><td class="val">Over</td><td class="val">1.5</td></tr>
+<tr><td>32</td><td>Xavier Smith</td><td>LA</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>33</td><td>Brock Purdy</td><td>SF</td><td>passing TDs</td><td class="val">Over</td><td class="val">1.5</td></tr>
+<tr><td>34</td><td>Brock Purdy</td><td>SF</td><td>passing yards</td><td class="val">Over</td><td class="val">242.5</td></tr>
+<tr><td>35</td><td>Brock Purdy</td><td>SF</td><td>rushing yards</td><td class="val">Over</td><td class="val">18.5</td></tr>
+<tr><td>36</td><td>Christian McCaffrey</td><td>SF</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>37</td><td>Christian McCaffrey</td><td>SF</td><td>receptions</td><td class="val">Over</td><td class="val">4.5</td></tr>
+<tr><td>38</td><td>Christian McCaffrey</td><td>SF</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">103.5</td></tr>
+<tr><td>39</td><td>Christian McCaffrey</td><td>SF</td><td>rushing yards</td><td class="val">Over</td><td class="val">58.5</td></tr>
+<tr><td>40</td><td>Deebo Samuel Sr.</td><td>SF</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>41</td><td>Deebo Samuel Sr.</td><td>SF</td><td>receiving yards</td><td class="val">Over</td><td class="val">29.5</td></tr>
+<tr><td>42</td><td>Deebo Samuel Sr.</td><td>SF</td><td>receptions</td><td class="val">Over</td><td class="val">2.5</td></tr>
+<tr><td>43</td><td>Demarcus Robinson</td><td>SF</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>44</td><td>Demarcus Robinson</td><td>SF</td><td>receiving yards</td><td class="val">Over</td><td class="val">11.5</td></tr>
+<tr><td>45</td><td>Demarcus Robinson</td><td>SF</td><td>receptions</td><td class="val">Over</td><td class="val">1.5</td></tr>
+<tr><td>46</td><td>Eddy Pineiro</td><td>SF</td><td>field goals</td><td class="val">Over</td><td class="val">1.5</td></tr>
+<tr><td>47</td><td>Eddy Pineiro</td><td>SF</td><td>kicking points</td><td class="val">Over</td><td class="val">6.5</td></tr>
+<tr><td>48</td><td>George Kittle</td><td>SF</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>49</td><td>George Kittle</td><td>SF</td><td>receiving yards</td><td class="val">Over</td><td class="val">34.5</td></tr>
+<tr><td>50</td><td>George Kittle</td><td>SF</td><td>receptions</td><td class="val">Over</td><td class="val">3.5</td></tr>
+<tr><td>51</td><td>Jake Tonges</td><td>SF</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>52</td><td>Kyle Juszczyk</td><td>SF</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>53</td><td>Mike Evans</td><td>SF</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td></tr>
+<tr><td>54</td><td>Mike Evans</td><td>SF</td><td>receiving yards</td><td class="val">Over</td><td class="val">49.5</td></tr>
+<tr><td>55</td><td>Mike Evans</td><td>SF</td><td>receptions</td><td class="val">Over</td><td class="val">3.5</td></tr>
+</tbody></table>
+</article>
+</main></div>
+<script>
+(function(){
+  var KEY='desk-report-theme';
+  function apply(mode){
+    document.documentElement.classList.toggle('light', mode==='light');
+    var b=document.getElementById('themeBtn');
+    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  var saved=null;
+  try { saved=localStorage.getItem(KEY); } catch (e) {}
+  apply(saved==='light'?'light':'dark');
+  window.toggleDeskTheme=function(){
+    apply(document.documentElement.classList.contains('light')?'dark':'light');
+  };
+})();
+</script>
+</body></html>

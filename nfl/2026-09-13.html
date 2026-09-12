@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NFL Props 2026-09-13</title>
+<style>
+:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#9ef0f0;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#007d79;--table:#262626;--cell:#525252;--th:#393939;--val:#3ddbd9;--h:#3ddbd9;--code:#9ef0f0;}
+html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#004144;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#007d79;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#005d5d;--h:#005d5d;--code:#005d5d;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+.tab{position:absolute;left:-9999px;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.35rem;overflow-x:hidden;overflow-y:auto;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);}
+.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
+.pill:hover{background:var(--pill-hover);}
+button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
+button.pdf:hover{filter:brightness(1.08);}
+button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.5rem .7rem;}
+button.theme:hover{background:var(--pill-hover);}
+form.search-form{margin:0;display:flex;flex-direction:column;gap:.15rem;}
+label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35rem 0 0;}
+input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
+input.search:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.pill.search-miss{opacity:.42;}
+table.search-empty{display:none;}
+li.name-hit,tr.name-hit{background:rgba(0,125,121,.28);outline:1px solid var(--accent);}
+.hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:68rem;}
+h1{font-size:1.6rem;margin:0 0 .3rem;}
+h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
+h4{margin:.8rem 0 .4rem;}
+.sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
+table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.88rem;background:var(--table);}
+th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
+th{background:var(--th);color:var(--pill-fg);}
+td.val{font-weight:700;color:var(--val);white-space:nowrap;}
+ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
+ul ul{margin:.15rem 0 .4rem;padding-left:1.15rem;}
+li{margin:.35rem 0;}
+code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
+.panel{display:none;}
+@media print{
+  html,body,html.light,html.light body{background:#fff;color:#111;}
+  .shell{display:block;}
+  .rail,.noprint{display:none !important;}
+  main{max-width:none;padding:0;}
+  .panel{display:block !important;page-break-after:always;}
+  .panel:last-child{page-break-after:auto;}
+  table{background:#fff;page-break-inside:avoid;}
+  th{background:#eee;color:#333;}
+  td.val{color:#000;}
+  h2,h3,h4{page-break-after:avoid;color:#111;}
+}
+@page{margin:.5in;}
+#g0:checked ~ .shell .rail label[for=g0]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g0:checked ~ .shell main .p0{display:block;}
+#g1:checked ~ .shell .rail label[for=g1]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g1:checked ~ .shell main .p1{display:block;}
+#g2:checked ~ .shell .rail label[for=g2]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g2:checked ~ .shell main .p2{display:block;}
+#g3:checked ~ .shell .rail label[for=g3]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g3:checked ~ .shell main .p3{display:block;}
+#g4:checked ~ .shell .rail label[for=g4]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g4:checked ~ .shell main .p4{display:block;}
+#g5:checked ~ .shell .rail label[for=g5]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g5:checked ~ .shell main .p5{display:block;}
+#g6:checked ~ .shell .rail label[for=g6]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g6:checked ~ .shell main .p6{display:block;}
+#g7:checked ~ .shell .rail label[for=g7]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g7:checked ~ .shell main .p7{display:block;}
+#g8:checked ~ .shell .rail label[for=g8]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g8:checked ~ .shell main .p8{display:block;}
+#g9:checked ~ .shell .rail label[for=g9]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g9:checked ~ .shell main .p9{display:block;}
+#g10:checked ~ .shell .rail label[for=g10]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g10:checked ~ .shell main .p10{display:block;}
+</style>
+</head><body>
+<input class="tab" type="radio" name="g" id="g0" checked/>
+<input class="tab" type="radio" name="g" id="g1"/>
+<input class="tab" type="radio" name="g" id="g2"/>
+<input class="tab" type="radio" name="g" id="g3"/>
+<input class="tab" type="radio" name="g" id="g4"/>
+<input class="tab" type="radio" name="g" id="g5"/>
+<input class="tab" type="radio" name="g" id="g6"/>
+<input class="tab" type="radio" name="g" id="g7"/>
+<input class="tab" type="radio" name="g" id="g8"/>
+<input class="tab" type="radio" name="g" id="g9"/>
+<input class="tab" type="radio" name="g" id="g10"/>
+<div class="shell">
+<aside class="rail noprint">
+<p class="brand">NFL PROPS<br/>2026-09-13</p>
+<label class="pill" for="g0"><span class="when">the week</span>TOP PROPS</label>
+<label class="pill" for="g1"><span class="when">1:00 p.m. ET · 3 recs</span>CHI @ CAR</label>
+<label class="pill" for="g2"><span class="when">1:00 p.m. ET · 3 recs</span>TB @ CIN</label>
+<label class="pill" for="g3"><span class="when">1:00 p.m. ET · 3 recs</span>NO @ DET</label>
+<label class="pill" for="g4"><span class="when">1:00 p.m. ET · 3 recs</span>BAL @ IND</label>
+<label class="pill" for="g5"><span class="when">4:25 p.m. ET · 3 recs</span>ARI @ LAC</label>
+<label class="pill" for="g6"><span class="when">4:25 p.m. ET · 2 recs</span>GB @ MIN</label>
+<label class="pill" for="g7"><span class="when">4:25 p.m. ET · 3 recs</span>WAS @ PHI</label>
+<label class="pill" for="g8"><span class="when">1:00 p.m. ET · 1 rec</span>ATL @ PIT</label>
+<label class="pill" for="g9"><span class="when">1:00 p.m. ET · 2 recs</span>NYJ @ TEN</label>
+<label class="pill" for="g10"><span class="when">8:20 p.m. ET · 2 recs</span>DAL @ NYG</label>
+<form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
+<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
+<button class="pdf" type="button" onclick="window.print()">Save as PDF</button>
+<p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
+</aside>
+<main>
+<h1>NFL player props — September 13, 2026</h1>
+<p class="sub">The props we like this week — posted Overs and Unders, with why. Game pills are recs only. The books already list every line.</p>
+<article class="panel p0">
+<h3>TOP PROPS — week board (25)</h3>
+<p>Posted numbers only. Overs and Unders. Why is the case in plain English — never a made-up fact.</p>
+<table>
+<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Omarion Hampton</td><td>LAC</td><td>rushing yards</td><td class="val">Over</td><td class="val">67.5</td><td>His coach said he has grown more than anyone this week; practice has looked really good. This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been coming in under this number (about 58 rushing yards).</td></tr>
+<tr><td>2</td><td>Joe Burrow</td><td>CIN</td><td>passing yards</td><td class="val">Over</td><td class="val">267.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 283 passing yards).</td></tr>
+<tr><td>3</td><td>Juwan Johnson</td><td>NO</td><td>receiving yards</td><td class="val">Over</td><td class="val">42.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 82 receiving yards).</td></tr>
+<tr><td>4</td><td>Cade Otton</td><td>TB</td><td>receiving yards</td><td class="val">Over</td><td class="val">29.5</td><td>The other receivers are out, so more targets should come his way; this defense has been giving up yards to tight ends. This defense has been easy to move the ball on. The last three games he has been beating this number (about 47 receiving yards).</td></tr>
+<tr><td>5</td><td>Chris Olave</td><td>NO</td><td>receiving yards</td><td class="val">Over</td><td class="val">77.5</td><td>Detroit has been playing man coverage down the field; New Orleans is the underdog, so they may have to throw to keep up. This defense has been easy to move the ball on. The last three games he has been beating this number (about 117 receiving yards).</td></tr>
+<tr><td>6</td><td>Dallas Goedert</td><td>PHI</td><td>receiving yards</td><td class="val">Over</td><td class="val">36.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 37 receiving yards).</td></tr>
+<tr><td>7</td><td>Jalen Coker</td><td>CAR</td><td>receiving yards</td><td class="val">Over</td><td class="val">39.5</td><td>He is the next receiver behind McMillan and Legette. This defense has been easy to move the ball on. The last three games he has been coming in under this number (about 37 receiving yards).</td></tr>
+<tr><td>8</td><td>Rashod Bateman</td><td>BAL</td><td>receiving yards</td><td class="val">Under</td><td class="val">26.5</td><td>He is fighting for snaps in a crowded receiver room. The last three games he has been coming in under this number (about 10 receiving yards).</td></tr>
+<tr><td>9</td><td>Isaiah Likely</td><td>NYG</td><td>receptions</td><td class="val">Under</td><td class="val">3.5</td><td>The last three games he has been coming in under this number (about 1.7 catches).</td></tr>
+<tr><td>10</td><td>Wan&#x27;Dale Robinson</td><td>TEN</td><td>receiving yards</td><td class="val">Over</td><td class="val">41.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 62 receiving yards).</td></tr>
+<tr><td>11</td><td>Quentin Johnston</td><td>LAC</td><td>receiving yards</td><td class="val">Over</td><td class="val">43.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 70 receiving yards).</td></tr>
+<tr><td>12</td><td>Andrei Iosivas</td><td>CIN</td><td>receiving yards</td><td class="val">Over</td><td class="val">15.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 24 receiving yards).</td></tr>
+<tr><td>13</td><td>Derrick Henry</td><td>BAL</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">88.0</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 157 rush plus receiving yards).</td></tr>
+<tr><td>14</td><td>Wan&#x27;Dale Robinson</td><td>TEN</td><td>receptions</td><td class="val">Over</td><td class="val">4.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 6.3 catches).</td></tr>
+<tr><td>15</td><td>Dallas Goedert</td><td>PHI</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 1.3 touchdowns).</td></tr>
+<tr><td>16</td><td>Jonathan Taylor</td><td>IND</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">93.0</td><td>This defense has been easy to move the ball on. The last three games he has been coming in under this number (about 67 rush plus receiving yards).</td></tr>
+<tr><td>17</td><td>Justin Herbert</td><td>LAC</td><td>passing yards</td><td class="val">Over</td><td class="val">233.5</td><td>He only comes in when they go three-and-out, and only if the passing line is 35 or more. This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 249 passing yards).</td></tr>
+<tr><td>18</td><td>Jalen Hurts</td><td>PHI</td><td>passing TDs</td><td class="val">Over</td><td class="val">1.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 2 passing touchdowns).</td></tr>
+<tr><td>19</td><td>Jauan Jennings</td><td>MIN</td><td>receiving yards</td><td class="val">Over</td><td class="val">22.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 49 receiving yards).</td></tr>
+<tr><td>20</td><td>Rome Odunze</td><td>CHI</td><td>receiving yards</td><td class="val">Over</td><td class="val">41.5</td><td>He is listed as questionable. Sit until he is cleared to play. This defense has been easy to move the ball on. The last three games he has been coming in under this number (about 34 receiving yards).</td></tr>
+<tr><td>21</td><td>Tyler Shough</td><td>NO</td><td>passing yards</td><td class="val">Over</td><td class="val">246.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 300 passing yards).</td></tr>
+<tr><td>22</td><td>Aaron Rodgers</td><td>PIT</td><td>passing yards</td><td class="val">Over</td><td class="val">212.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 243 passing yards).</td></tr>
+<tr><td>23</td><td>Colston Loveland</td><td>CHI</td><td>receptions</td><td class="val">Over</td><td class="val">4.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 6.3 catches).</td></tr>
+<tr><td>24</td><td>Darnell Mooney</td><td>NYG</td><td>receiving yards</td><td class="val">Over</td><td class="val">19.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 26 receiving yards).</td></tr>
+<tr><td>25</td><td>Kyler Murray</td><td>MIN</td><td>rushing yards</td><td class="val">Over</td><td class="val">23.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 34 rushing yards).</td></tr>
+</tbody></table>
+</article>
+<article class="panel p1">
+<h3>OUR RECS</h3>
+<table>
+<thead><tr><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Jalen Coker</td><td>CAR</td><td>receiving yards</td><td class="val">Over</td><td class="val">39.5</td><td>He is the next receiver behind McMillan and Legette. This defense has been easy to move the ball on. The last three games he has been coming in under this number (about 37 receiving yards).</td></tr>
+<tr><td>Rome Odunze</td><td>CHI</td><td>receiving yards</td><td class="val">Over</td><td class="val">41.5</td><td>He is listed as questionable. Sit until he is cleared to play. This defense has been easy to move the ball on. The last three games he has been coming in under this number (about 34 receiving yards).</td></tr>
+<tr><td>Colston Loveland</td><td>CHI</td><td>receptions</td><td class="val">Over</td><td class="val">4.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 6.3 catches).</td></tr>
+</tbody></table>
+<h3>THE MOVIE</h3>
+<p>CHI at CAR, kick 1:00 p.m. ET.</p>
+<p>Total 47. The books have CHI around 25 points and CAR around 22.</p>
+<p>Weather: outdoor, about 87°F, wind 4 mph, precip 10pct storm.</p>
+<p>News that changes the hole:</p>
+<ul>
+<li>Rome Odunze (CHI): He is listed as questionable. Sit until he is cleared to play</li>
+</ul>
+</article>
+<article class="panel p2">
+<h3>OUR RECS</h3>
+<table>
+<thead><tr><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Joe Burrow</td><td>CIN</td><td>passing yards</td><td class="val">Over</td><td class="val">267.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 283 passing yards).</td></tr>
+<tr><td>Cade Otton</td><td>TB</td><td>receiving yards</td><td class="val">Over</td><td class="val">29.5</td><td>The other receivers are out, so more targets should come his way; this defense has been giving up yards to tight ends. This defense has been easy to move the ball on. The last three games he has been beating this number (about 47 receiving yards).</td></tr>
+<tr><td>Andrei Iosivas</td><td>CIN</td><td>receiving yards</td><td class="val">Over</td><td class="val">15.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 24 receiving yards).</td></tr>
+</tbody></table>
+<h3>THE MOVIE</h3>
+<p>TB at CIN, kick 1:00 p.m. ET.</p>
+<p>Total 50.5. The books have TB around 23.5 points and CIN around 27.</p>
+<p>Weather: outdoor, about 84°F, wind 5 mph, precip 16pct rain.</p>
+<p>News that changes the hole:</p>
+<ul>
+<li>Ja&#x27;Marr Chase (CIN): Questionable — re-check practice + inactives before locking receptions MORE</li>
+<li>Ja&#x27;Marr Chase (CIN): Hyperextension scare; says he would play</li>
+<li>Ja&#x27;Marr Chase (CIN): Taylor + Bengals Wire — Chase/Higgins FP Wed; SI feeling good. Still Q on some cards until Active</li>
+</ul>
+</article>
+<article class="panel p3">
+<h3>OUR RECS</h3>
+<table>
+<thead><tr><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Juwan Johnson</td><td>NO</td><td>receiving yards</td><td class="val">Over</td><td class="val">42.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 82 receiving yards).</td></tr>
+<tr><td>Chris Olave</td><td>NO</td><td>receiving yards</td><td class="val">Over</td><td class="val">77.5</td><td>Detroit has been playing man coverage down the field; New Orleans is the underdog, so they may have to throw to keep up. This defense has been easy to move the ball on. The last three games he has been beating this number (about 117 receiving yards).</td></tr>
+<tr><td>Tyler Shough</td><td>NO</td><td>passing yards</td><td class="val">Over</td><td class="val">246.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 300 passing yards).</td></tr>
+</tbody></table>
+<h3>THE MOVIE</h3>
+<p>NO at DET, kick 1:00 p.m. ET.</p>
+<p>Total 50. The books have NO around 21.5 points and DET around 28.5.</p>
+<p>Weather: indoor, precip none.</p>
+</article>
+<article class="panel p4">
+<h3>OUR RECS</h3>
+<table>
+<thead><tr><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Rashod Bateman</td><td>BAL</td><td>receiving yards</td><td class="val">Under</td><td class="val">26.5</td><td>He is fighting for snaps in a crowded receiver room. The last three games he has been coming in under this number (about 10 receiving yards).</td></tr>
+<tr><td>Derrick Henry</td><td>BAL</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">88.0</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 157 rush plus receiving yards).</td></tr>
+<tr><td>Jonathan Taylor</td><td>IND</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">93.0</td><td>This defense has been easy to move the ball on. The last three games he has been coming in under this number (about 67 rush plus receiving yards).</td></tr>
+</tbody></table>
+<h3>THE MOVIE</h3>
+<p>BAL at IND, kick 1:00 p.m. ET.</p>
+<p>Total 48. The books have BAL around 26 points and IND around 22.</p>
+<p>Weather: retractable-closed, precip none.</p>
+<p>News that changes the hole:</p>
+<ul>
+<li>Derrick Henry (BAL): O5.5 rush_rec looks like chalk bug — re-verify board before lock</li>
+<li>Alec Pierce (IND): Questionable — off PUP camp note was W1; confirm active before P3</li>
+<li>Rashod Bateman (BAL): His coach has been hyping him all camp; he is fighting for snaps in a crowded receiver room</li>
+<li>Alec Pierce (IND): He is listed as questionable. Sit until he is cleared to play</li>
+</ul>
+</article>
+<article class="panel p5">
+<h3>OUR RECS</h3>
+<table>
+<thead><tr><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Omarion Hampton</td><td>LAC</td><td>rushing yards</td><td class="val">Over</td><td class="val">67.5</td><td>His coach said he has grown more than anyone this week; practice has looked really good. This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been coming in under this number (about 58 rushing yards).</td></tr>
+<tr><td>Quentin Johnston</td><td>LAC</td><td>receiving yards</td><td class="val">Over</td><td class="val">43.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 70 receiving yards).</td></tr>
+<tr><td>Justin Herbert</td><td>LAC</td><td>passing yards</td><td class="val">Over</td><td class="val">233.5</td><td>He only comes in when they go three-and-out, and only if the passing line is 35 or more. This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 249 passing yards).</td></tr>
+</tbody></table>
+<h3>THE MOVIE</h3>
+<p>ARI at LAC, kick 4:25 p.m. ET.</p>
+<p>Total 47.5. The books have ARI around 19 points and LAC around 28.5.</p>
+<p>Weather: outdoor, about 79°F, wind 0 mph, precip none.</p>
+</article>
+<article class="panel p6">
+<h3>OUR RECS</h3>
+<table>
+<thead><tr><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Jauan Jennings</td><td>MIN</td><td>receiving yards</td><td class="val">Over</td><td class="val">22.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 49 receiving yards).</td></tr>
+<tr><td>Kyler Murray</td><td>MIN</td><td>rushing yards</td><td class="val">Over</td><td class="val">23.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 34 rushing yards).</td></tr>
+</tbody></table>
+<h3>THE MOVIE</h3>
+<p>GB at MIN, kick 4:25 p.m. ET.</p>
+<p>Total 46.5. The books have GB around 22.5 points and MIN around 24.</p>
+<p>Weather: indoor, precip none.</p>
+<p>News that changes the hole:</p>
+<ul>
+<li>Jordan Love (GB): MIN pass D in a dome; Love Under is the fade</li>
+</ul>
+</article>
+<article class="panel p7">
+<h3>OUR RECS</h3>
+<table>
+<thead><tr><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Dallas Goedert</td><td>PHI</td><td>receiving yards</td><td class="val">Over</td><td class="val">36.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 37 receiving yards).</td></tr>
+<tr><td>Dallas Goedert</td><td>PHI</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 1.3 touchdowns).</td></tr>
+<tr><td>Jalen Hurts</td><td>PHI</td><td>passing TDs</td><td class="val">Over</td><td class="val">1.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 2 passing touchdowns).</td></tr>
+</tbody></table>
+<h3>THE MOVIE</h3>
+<p>WAS at PHI, kick 4:25 p.m. ET.</p>
+<p>Total 44.5. The books have WAS around 20 points and PHI around 25.</p>
+<p>Weather: outdoor, about 82°F, wind 5 mph, precip 21-30pct rain.</p>
+</article>
+<article class="panel p8">
+<h3>OUR RECS</h3>
+<table>
+<thead><tr><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Aaron Rodgers</td><td>PIT</td><td>passing yards</td><td class="val">Over</td><td class="val">212.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 243 passing yards).</td></tr>
+</tbody></table>
+<h3>THE MOVIE</h3>
+<p>ATL at PIT, kick 1:00 p.m. ET.</p>
+<p>Total 41.5. The books have ATL around 18 points and PIT around 23.</p>
+<p>Weather: outdoor, about 79°F, wind 7 mph, precip 31pct storm.</p>
+</article>
+<article class="panel p9">
+<h3>OUR RECS</h3>
+<table>
+<thead><tr><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Wan&#x27;Dale Robinson</td><td>TEN</td><td>receiving yards</td><td class="val">Over</td><td class="val">41.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 62 receiving yards).</td></tr>
+<tr><td>Wan&#x27;Dale Robinson</td><td>TEN</td><td>receptions</td><td class="val">Over</td><td class="val">4.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 6.3 catches).</td></tr>
+</tbody></table>
+<h3>THE MOVIE</h3>
+<p>NYJ at TEN, kick 1:00 p.m. ET.</p>
+<p>Total 38.5. The books have NYJ around 18.5 points and TEN around 20.</p>
+<p>Weather: outdoor, about 89°F, wind 5 mph, precip 20pct rain.</p>
+</article>
+<article class="panel p10">
+<h3>OUR RECS</h3>
+<table>
+<thead><tr><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Isaiah Likely</td><td>NYG</td><td>receptions</td><td class="val">Under</td><td class="val">3.5</td><td>The last three games he has been coming in under this number (about 1.7 catches).</td></tr>
+<tr><td>Darnell Mooney</td><td>NYG</td><td>receiving yards</td><td class="val">Over</td><td class="val">19.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 26 receiving yards).</td></tr>
+</tbody></table>
+<h3>THE MOVIE</h3>
+<p>DAL at NYG, kick 8:20 p.m. ET.</p>
+<p>Total 48. The books have DAL around 25.5 points and NYG around 22.5.</p>
+<p>Weather: outdoor, about 76°F, wind 6 mph, precip 8-18pct rain.</p>
+</article>
+</main></div>
+<script>
+(function(){
+  var KEY='desk-report-theme';
+  function apply(mode){
+    document.documentElement.classList.toggle('light', mode==='light');
+    var b=document.getElementById('themeBtn');
+    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  var saved=null;
+  try { saved=localStorage.getItem(KEY); } catch (e) {}
+  apply(saved==='light'?'light':'dark');
+  window.toggleDeskTheme=function(){
+    apply(document.documentElement.classList.contains('light')?'dark':'light');
+  };
+})();
+</script>
+<script>
+(function(){
+  function norm(s){
+    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+  }
+  function skip(el){
+    return !!(el.closest && el.closest('dialog, .pcard, .rail'));
+  }
+  function playerIdx(table){
+    var ths=table.querySelectorAll('thead th');
+    for(var i=0;i<ths.length;i++){
+      var t=norm(ths[i].textContent);
+      if(t==='player'||t==='name') return i;
+    }
+    return -1;
+  }
+  function rowHit(tr, q, pidx){
+    if(!q) return true;
+    if(pidx>=0 && tr.cells[pidx]) return norm(tr.cells[pidx].textContent).indexOf(q)>=0;
+    return norm(tr.textContent).indexOf(q)>=0;
+  }
+  function apply(opts){
+    opts = opts || {};
+    var inp=document.getElementById('playerSearch');
+    if(!inp) return;
+    var q=norm(inp.value);
+    var n=0;
+    var hitSel='tbody tr:not([hidden]), li:not([hidden])';
+    function mark(el, hit){
+      el.hidden = !!(q && !hit);
+      el.classList.toggle('name-hit', !!(q && hit));
+      if(q && hit) n++;
+    }
+    document.querySelectorAll('table tbody tr').forEach(function(tr){
+      if(skip(tr)) return;
+      mark(tr, rowHit(tr, q, playerIdx(tr.closest('table'))));
+    });
+    document.querySelectorAll('table').forEach(function(t){
+      if(skip(t)) return;
+      var any=false;
+      var tb=t.tBodies[0];
+      if(tb){
+        Array.prototype.forEach.call(tb.rows, function(r){ if(!r.hidden) any=true; });
+      }
+      t.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('li').forEach(function(li){
+      if(skip(li)) return;
+      mark(li, !q || norm(li.textContent).indexOf(q)>=0);
+    });
+    var hint=document.getElementById('playerSearchHint');
+    if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
+    var first=-1;
+    document.querySelectorAll('article.panel').forEach(function(art, i){
+      var hit=!!art.querySelector(hitSel);
+      var lab=document.querySelector('label[for="g'+i+'"]');
+      if(lab) lab.classList.toggle('search-miss', !!(q && !hit));
+      if(hit && first<0) first=i;
+    });
+    if(q && first>=0){
+      var cur=document.querySelector('input.tab[name="g"]:checked');
+      var curI=cur ? parseInt((cur.id||'').replace(/^g/,''),10) : -1;
+      var curArt=document.querySelector('article.p'+curI);
+      var curHit=curArt && curArt.querySelector(hitSel);
+      if(!curHit){
+        var radio=document.getElementById('g'+first);
+        if(radio) radio.checked=true;
+      }
+    }
+    if(opts.jump){
+      var shown=document.querySelector('input.tab[name="g"]:checked');
+      var shownI=shown ? parseInt((shown.id||'').replace(/^g/,''),10) : 0;
+      var shownArt=document.querySelector('article.p'+shownI);
+      var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
+      if(jumpEl){
+        setTimeout(function(){
+          try { jumpEl.scrollIntoView({block:'center', behavior:'smooth'}); }
+          catch (err) { jumpEl.scrollIntoView(true); }
+        }, 40);
+      }
+    }
+  }
+  var form=document.getElementById('playerSearchForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      apply({jump:true});
+    });
+  }
+  var inp=document.getElementById('playerSearch');
+  if(inp){
+    inp.addEventListener('input', function(){ apply({}); });
+    inp.addEventListener('search', function(){ apply({jump:true}); });
+    inp.addEventListener('keydown', function(e){
+      if(e.key==='Enter' || e.keyCode===13){
+        e.preventDefault();
+        apply({jump:true});
+      }
+    });
+  }
+})();
+</script>
+</body></html>

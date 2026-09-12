@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CFB Showdown 2026-09-12 · OSU @ TEX</title>
+<style>
+:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#9ef0f0;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#007d79;--table:#262626;--cell:#525252;--th:#393939;--val:#3ddbd9;--h:#3ddbd9;--code:#9ef0f0;--up:#3ddbd9;--down:#ff8389;--up-bg:rgba(61,219,217,.16);--down-bg:rgba(255,131,137,.16);--wk-alt:rgba(0,125,121,.08);}
+html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#004144;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#007d79;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#005d5d;--h:#005d5d;--code:#005d5d;--up:#005d5d;--down:#a2191f;--up-bg:rgba(0,93,93,.1);--down-bg:rgba(162,25,31,.1);--wk-alt:rgba(0,125,121,.06);}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+.tab{position:absolute;left:-9999px;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;overflow-y:auto;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);}
+.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
+.pill:hover{background:var(--pill-hover);}
+button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
+button.pdf:hover{filter:brightness(1.08);}
+button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.5rem .7rem;}
+button.theme:hover{background:var(--pill-hover);}
+form.search-form{margin:0;display:flex;flex-direction:column;gap:.15rem;}
+label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35rem 0 0;}
+input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
+input.search:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.pill.search-miss{opacity:.42;}
+table.search-empty{display:none;}
+li.name-hit,tr.name-hit{background:rgba(0,125,121,.28);outline:1px solid var(--accent);}
+.hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
+.view-row{display:flex;flex-direction:column;gap:.35rem;margin:.15rem 0 .35rem;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:54rem;min-width:0;}
+h1{font-size:1.6rem;margin:0 0 .3rem;}
+h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
+.line-blast{font-size:1.42rem;line-height:1.35;font-weight:700;margin:.35rem 0 1.2rem;padding:.95rem 1.05rem;background:var(--table);border:2px solid var(--accent);border-left-width:8px;}
+.line-blast b{color:var(--val);font-size:1.08em;}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
+h3.second-pass{border-top:2px solid var(--accent);padding-top:1.15rem;margin-top:2rem;}
+h4{margin:.8rem 0 .4rem;}
+h4.team-break{font-size:1.28rem;font-weight:800;letter-spacing:.01em;margin:2.35rem 0 .55rem;padding:1.05rem 0 .35rem;border-top:3px solid var(--accent);}
+h3 + p + h4.team-break,h3 + h4.team-break{margin-top:.75rem;padding-top:.1rem;border-top:none;}
+h5{font-size:.95rem;margin:1.05rem 0 .3rem;color:var(--muted);font-weight:700;}
+.sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
+table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.92rem;background:var(--table);}
+th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
+th{background:var(--th);color:var(--pill-fg);}
+table.sortable th{cursor:pointer;user-select:none;}
+table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}
+table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
+table.game-log{width:100%;table-layout:auto;}
+table.game-log th,table.game-log td{text-align:center;white-space:nowrap;}
+table.game-log th:nth-child(1),table.game-log td:nth-child(1),table.game-log th:nth-child(2),table.game-log td:nth-child(2){text-align:left;}
+.team-pills{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 .8rem;}
+.team-pill{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--pill);color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:999px;padding:.4rem .75rem;}
+.team-pill.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+.pos-book{margin:0 0 1.6rem;}
+.pos-book.search-empty{display:none;}
+.pos-book h4{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.4rem 0 .45rem;}
+.season-log-wrap{overflow-x:auto;margin:0 0 1.2rem;}
+table.season-log{font-size:.82rem;width:max-content;min-width:100%;}
+table.season-log th,table.season-log td{white-space:nowrap;text-align:center;}
+table.season-log th.who,table.season-log td.who,table.season-log td.opp{text-align:left;}
+table.season-log thead th{position:sticky;top:0;z-index:1;}
+table.season-log tr.wk-stats th{top:1.55rem;}
+table.season-log th.wk-g{text-align:center;border-left:2px solid var(--accent);}
+table.season-log td.w1,table.season-log th.w1,table.season-log td.w3,table.season-log th.w3{background:var(--wk-alt);}
+table.season-log th:first-child,table.season-log td:first-child{position:sticky;left:0;z-index:2;background:var(--th);}
+table.season-log td:first-child{background:var(--table);}
+td.trend-up{background:var(--up-bg) !important;color:var(--up);font-weight:700;}
+td.trend-down{background:var(--down-bg) !important;color:var(--down);font-weight:700;}
+span.delta{font-size:.68em;font-weight:700;margin-left:.28em;opacity:.92;}
+td.val{font-weight:700;color:var(--val);white-space:nowrap;}
+.left{font-weight:700;margin:.2rem 0 1rem;}
+ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
+ul ul{margin:.15rem 0 .4rem;padding-left:1.15rem;}
+li{margin:.35rem 0;}
+code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
+.panel{display:block;}
+.appendix{display:none;}
+@media print{
+  html,body,html.light,html.light body{background:#fff;color:#111;}
+  .shell{display:block;}
+  .rail,.noprint{display:none !important;}
+  main{max-width:none;padding:0;}
+  .panel,.appendix{display:block !important;page-break-after:always;}
+  .appendix{page-break-after:auto;}
+  table{background:#fff;page-break-inside:avoid;}
+  th{background:#eee;color:#333;}
+  td.val{color:#000;}
+  td.trend-up{color:#005d5d;background:#e6f6f6 !important;}
+  td.trend-down{color:#a2191f;background:#fce8e8 !important;}
+  h2,h3,h4,h5{page-break-after:avoid;color:#111;}
+  h4.team-break{border-top-color:#111;}
+  .line-blast{background:#fff;border-color:#111;color:#111;}
+  .line-blast b{color:#000;}
+}
+@page{margin:.5in;}
+#v-report:checked ~ .shell .rail label[for=v-report]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.player-book{display:none;}
+#v-book:checked ~ .shell main{max-width:none;}
+#v-book:checked ~ .shell main .game-report{display:none;}
+#v-book:checked ~ .shell main .player-book{display:block;}
+</style>
+</head><body>
+<input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-book"/>
+<div class="shell">
+<aside class="rail noprint">
+<p class="brand">CFB SHOWDOWN<br/>2026-09-12<br/>OSU @ TEX</p>
+<div class="view-row">
+<label class="pill" for="v-report">Report</label>
+<label class="pill" for="v-book">Player book</label>
+</div>
+<form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
+<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
+<button class="pdf" type="button" onclick="window.print()">Save as PDF</button><p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
+</aside>
+<main>
+<h1>CFB Showdown — 2026-09-12 · OSU @ TEX</h1>
+<article class="panel">
+<div class="game-report">
+<h2>3) OSU @ TEX · 7:30 p.m. ET · DKR</h2>
+<p class="line-blast">Texas is about <b>1.5</b> points better at home. The total sits at <b>47.5 to 50</b>. DKR, 7:30 p.m. ET on ABC. Outdoor, about 98°, heat index 99, wind 9 southeast / gust 10, rain 9%. Heat, not a pass kill.</p>
+<p><b>This slate is five out of five stars.</b> Toss-up. The live book is <b>Texas −1.5 / 50</b>. Heat is the story.</p>
+<h3>WHO THEY ARE</h3>
+<ul>
+<li><b>Ohio State</b> is ranked No. 1 this year (1-0). They are one of the best teams in the country right now.</li>
+<li><b>Texas</b> is ranked No. 4 this year (1-0). They are one of the best teams in the country right now.</li>
+</ul>
+<h3>WHO MATTERS</h3>
+<p>Who to build with. Quarterback: runs and throws, or just throws. Running back: workhorse or committee. Last-week tape only.</p>
+<h4>Texas</h4>
+<ul>
+<li><b>Quarterback:</b> Arch Manning throws from the pocket. Last week vs Texas State he threw 27 times for 305, 4 passing score and ran it 3 carries for 6. He is not a rushing quarterback.</li>
+<li><b>Running backs:</b> Committee. Raleek Brown (11 carries) and Ryan Niblett (2 carries). One back on the card, not both. The back who scored: Raleek Brown.</li>
+<li><b>Best other pieces:</b> Ryan Wingo — 7-121-1 last week; Cam Coleman — 3-70-2 last week.</li>
+</ul>
+<h4>Ohio State</h4>
+<ul>
+<li><b>Quarterback:</b> Julian Sayin throws from the pocket. Last week vs Ball State he threw 25 times for 320, 3 passing score and ran it 3 carries for -9. He is not a rushing quarterback.</li>
+<li><b>Running backs:</b> Committee. Bo Jackson (9 carries) and Ja&#x27;Kobi Jackson (8 carries). One back on the card, not both. The back who scored: Bo Jackson, Ja&#x27;Kobi Jackson, Legend Bey.</li>
+<li><b>Best other pieces:</b> Jeremiah Smith — 8-151 last week; Devin McCuin — 6-97-1 last week.</li>
+</ul>
+<h3>THE MOVIE</h3>
+<p>Third meeting in three seasons. Ohio State won the last two (28–14 Cotton Bowl, 14–7 last year). First Austin meeting since 2006. GameDay is in town. Both blew out Group of 5 openers. This is not last week’s 50-point half.</p>
+<p><b>What the writers are saying:</b> Split. Market Texas −1.5. One model has Ohio State −1.6. Score cluster 31–24 / 27–24 / 27–25. Most Ohio State desks take the road dog. Texas desks take home. Tight, possession-sensitive night.</p>
+<p><b>Ohio State</b></p>
+<ul>
+<li>Julian Sayin
+<ul>
+<li>Last week vs Ball State: 21-of-25 for 320, 3 passing scores, plus a rushing score</li>
+</ul>
+</li>
+<li>Jeremiah Smith
+<ul>
+<li>8-151 and 2 scores in the first half vs Ball State. Texas has held him to 7 catches and 46 yards over two prior games</li>
+</ul>
+</li>
+<li>Brandon Inniss
+<ul>
+<li>Next Ohio State catcher</li>
+</ul>
+</li>
+<li>Bo Jackson
+<ul>
+<li>Listed Ohio State back</li>
+</ul>
+</li>
+<li>Kyle Parker
+<ul>
+<li>Out. Second straight miss. Sit</li>
+</ul>
+</li>
+<li>Qua Russaw
+<ul>
+<li>Cleared. Expected debut on the edge. Defense, not a Showdown skill</li>
+</ul>
+</li>
+</ul>
+<p><b>Texas</b></p>
+<ul>
+<li>Arch Manning
+<ul>
+<li>Last week vs Texas State: 20-of-27 for 305 and 4 scores, one pick</li>
+</ul>
+</li>
+<li>Ryan Wingo
+<ul>
+<li>7-121-1. Volume receiver</li>
+</ul>
+</li>
+<li>Cam Coleman
+<ul>
+<li>Auburn transfer. 3-70-2</li>
+</ul>
+</li>
+<li>Hollywood Smothers
+<ul>
+<li>10-70 plus a receiving score. Lead back. One Texas back on the card</li>
+</ul>
+</li>
+<li>Raleek Brown
+<ul>
+<li>Next Texas back. Do not stack him next to Smothers</li>
+</ul>
+</li>
+<li>Derrek Cooper
+<ul>
+<li>Out. Foot / ankle. Sit</li>
+</ul>
+</li>
+<li>Emmett Mosley V
+<ul>
+<li>Cheap Texas catcher</li>
+</ul>
+</li>
+</ul>
+<h3>GAME FLOW</h3>
+<p><b>How this game plays</b></p>
+<ul>
+<li>One-score toss-up. Nobody sits on a huge lead. Both quarterbacks stay in it</li>
+<li>The books have both teams scoring about 50 together. That is a real night, not a cupcake half</li>
+</ul>
+<p><b>How they want to play</b></p>
+<ul>
+<li><b>Ohio State offense:</b> Efficient passing last week (21-of-25). Power run behind Bo Jackson. Texas is a step up from Ball State</li>
+<li><b>Ohio State defense:</b> Only faced Ball State. Qua Russaw debuts on the edge</li>
+<li><b>Texas offense:</b> Manning threw four scores. The run was big-then-little after Smothers’ 45-yard opener (111 rush as a team)</li>
+<li><b>Texas defense:</b> Aggressive fronts. Texas has held Smith down twice</li>
+</ul>
+<p><b>Where the defense is weaker</b></p>
+<ul>
+<li><b>Ohio State:</b> Unproven against a real offense. We are not inventing a hole from Ball State tape</li>
+<li><b>Texas:</b> No named hole. Two prior games limited Smith</li>
+<li>Heat favors the home sideline. It does not sit a quarterback</li>
+</ul>
+<p><b>What the scoreboard forces</b></p>
+<ul>
+<li>A one-score game keeps both quarterbacks</li>
+<li>A two-score Texas lead asks Sayin to throw more</li>
+<li>A two-score Ohio State lead is the underdog script — Manning still throws</li>
+</ul>
+<p><b>Who that points at</b></p>
+<ul>
+<li>Manning as the working captain on the home toss-up</li>
+<li>Sayin as Ohio State’s passer so Smith stays legal</li>
+<li>Smith even with the Texas tape — he is still the Ohio State catcher</li>
+<li>Wingo or Mosley as the Texas catcher. Coleman is the smash if you have leftover</li>
+<li>One Texas back (Smothers or Brown), not both</li>
+<li>Parker and Cooper stay off</li>
+</ul>
+<h3>DEPTH CHART</h3>
+<p>Offense skill. A missing name is —.</p>
+<h4 class="team-break">Texas</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Arch Manning</td><td>Karle Lacey Jr.</td></tr>
+<tr><td>RB</td><td>Hollywood Smothers</td><td>Raleek Brown</td></tr>
+<tr><td>WR-X</td><td>Ryan Wingo</td><td>Kaliq Lockett</td></tr>
+<tr><td>WR-Z</td><td>Cam Coleman</td><td>Sterling Berkhalter</td></tr>
+<tr><td>WR-SL</td><td>Emmett Mosley V</td><td>Daylan McCutcheon</td></tr>
+<tr><td>TE-Y</td><td>Spencer Shannon</td><td>Michael Masunas</td></tr>
+<tr><td>PK</td><td>Gianni Spetic</td><td>Jake Collett</td></tr>
+<tr><td>TE-H</td><td>Nick Townsend</td><td>Emaree Winston</td></tr>
+</tbody></table>
+<h4 class="team-break">Ohio State</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th><th scope="col" data-col="3">3</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Julian Sayin</td><td>Tavien St. Clair</td><td>—</td></tr>
+<tr><td>RB</td><td>Bo Jackson</td><td>Isaiah West</td><td>—</td></tr>
+<tr><td>WR-X</td><td>Jeremiah Smith</td><td>Brock Boyd</td><td>—</td></tr>
+<tr><td>WR-Z</td><td>Devin McCuin</td><td>Chris Henry Jr.</td><td>—</td></tr>
+<tr><td>WR-SL</td><td>Brandon Inniss</td><td>Kyle Parker</td><td>—</td></tr>
+<tr><td>TE</td><td>Nate Roberts</td><td>Mason Williams</td><td>Bennett Christian</td></tr>
+<tr><td>PK</td><td>Connor Hawkins</td><td>Cooper Peterson</td><td>—</td></tr>
+</tbody></table>
+<h3>INJURIES</h3>
+<p>Who is out or in doubt for this game. A blank list means nobody on the board is tagged.</p>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Status</th><th scope="col" data-col="3">Tonight</th></tr></thead>
+<tbody>
+<tr><td>Derrek Cooper</td><td>TEX</td><td>Out</td><td>Not playing. Sit him.</td></tr>
+<tr><td>Kyle Parker</td><td>OSU</td><td>Doubtful</td><td>Unlikely. Sit unless he is cleared.</td></tr>
+</tbody></table>
+<h3>CHART NOTES</h3>
+<p>When the listed chart does not match who is actually playing.</p>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Note</th></tr></thead>
+<tbody>
+<tr><td>Daylan McCutcheon</td><td>TEX</td><td>Do not sit on a stale Q.</td></tr>
+<tr><td>Derrek Cooper</td><td>TEX</td><td>OUT foot/ankle; left Week 1 in a boot. Sit.</td></tr>
+<tr><td>Kyle Parker</td><td>OSU</td><td>Expected miss vs Texas. Sit.</td></tr>
+</tbody></table>
+<h3>OUR VALUE — OSU @ TEX</h3>
+<p>Every salary-board skill player with a <b>real</b> book number (yardage or receptions). Junk 0.5, scrape ceilings, and anytime-TD only are omitted. <b>1.00× is even.</b> Sorted highest value first.</p>
+<table class="sortable" data-default-sort="Value">
+<thead><tr><th scope="col" data-col="0">#</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Arch Manning</td><td>TEX</td><td>QB</td><td>$10,200</td><td class="val">1.02×</td><td>passing yards 259.5</td></tr>
+<tr><td>2</td><td>Julian Sayin</td><td>OSU</td><td>QB</td><td>$10,000</td><td class="val">1.00×</td><td>passing yards 249.5</td></tr>
+<tr><td>3</td><td>Jeremiah Smith</td><td>OSU</td><td>WR</td><td>$9,400</td><td class="val">0.95×</td><td>receiving yards 89.5</td></tr>
+<tr><td>4</td><td>Emmett Mosley V</td><td>TEX</td><td>WR</td><td>$4,400</td><td class="val">0.78×</td><td>receiving yards 34.5</td></tr>
+<tr><td>5</td><td>Cam Coleman</td><td>TEX</td><td>WR</td><td>$7,600</td><td class="val">0.76×</td><td>receiving yards 57.5</td></tr>
+<tr><td>6</td><td>Raleek Brown</td><td>TEX</td><td>RB</td><td>$6,800</td><td class="val">0.74×</td><td>rushing plus receiving yards 50.5</td></tr>
+<tr><td>7</td><td>Ryan Wingo</td><td>TEX</td><td>WR</td><td>$7,400</td><td class="val">0.70×</td><td>receiving yards 51.5</td></tr>
+<tr><td>8</td><td>Hollywood Smothers</td><td>TEX</td><td>RB</td><td>$8,200</td><td class="val">0.70×</td><td>rushing plus receiving yards 57.5</td></tr>
+<tr><td>9</td><td>Brandon Inniss</td><td>OSU</td><td>WR</td><td>$3,800</td><td class="val">0.66×</td><td>receptions 2.5</td></tr>
+<tr><td>10</td><td>Devin McCuin</td><td>OSU</td><td>WR</td><td>$6,400</td><td class="val">0.63×</td><td>receiving yards 40.5</td></tr>
+<tr><td>11</td><td>Bo Jackson</td><td>OSU</td><td>RB</td><td>$8,800</td><td class="val">0.62×</td><td>rushing yards 54.5</td></tr>
+<tr><td>12</td><td>Ja&#x27;Kobi Jackson</td><td>OSU</td><td>RB</td><td>$4,600</td><td class="val">0.51×</td><td>rushing yards 23.5</td></tr>
+</tbody></table>
+<h3>ETR VALUE</h3>
+<p>Every name on ETR&#x27;s main-slate sheet for this game. Click a column to sort. A blank cell is —. <b>ETR sal</b> / <b>Sheet val</b> / <b>Own</b> are ETR&#x27;s main-slate numbers. <b>Our value</b> is their DK pts versus our Showdown salary — not the sheet&#x27;s main-slate value.</p>
+<h4 class="team-break">Texas</h4>
+<table class="sortable" data-default-sort="Our value">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Pos</th><th scope="col" data-col="2">Opp</th><th scope="col" data-col="3">ETR sal</th><th scope="col" data-col="4">DK pts</th><th scope="col" data-col="5">Sheet val</th><th scope="col" data-col="6">Own</th><th scope="col" data-col="7">Our FLEX</th><th scope="col" data-col="8">Our value</th></tr></thead>
+<tbody>
+<tr><td>Emmett Mosley V</td><td>WR</td><td>OSU</td><td>$4,600</td><td>9.38</td><td>0.5</td><td>1.34</td><td>$4,400</td><td class="val">2.13</td></tr>
+<tr><td>Arch Manning</td><td>QB</td><td>OSU</td><td>$8,300</td><td>20.29</td><td>5.8</td><td>7.34</td><td>$10,200</td><td class="val">1.99</td></tr>
+<tr><td>Raleek Brown</td><td>RB</td><td>OSU</td><td>$6,100</td><td>12.05</td><td>0.9</td><td>2.09</td><td>$6,800</td><td class="val">1.77</td></tr>
+<tr><td>Ryan Wingo</td><td>WR</td><td>OSU</td><td>$6,600</td><td>12.95</td><td>1.1</td><td>2.95</td><td>$7,400</td><td class="val">1.75</td></tr>
+<tr><td>Nick Townsend</td><td>WR</td><td>OSU</td><td>$3,200</td><td>3.1</td><td>-3.7</td><td>0</td><td>$1,800</td><td class="val">1.72</td></tr>
+<tr><td>Cam Coleman</td><td>WR</td><td>OSU</td><td>$7,100</td><td>12.94</td><td>0.3</td><td>1.21</td><td>$7,600</td><td class="val">1.7</td></tr>
+<tr><td>Hollywood Smothers</td><td>RB</td><td>OSU</td><td>$7,200</td><td>13.77</td><td>1</td><td>3.35</td><td>$8,200</td><td class="val">1.68</td></tr>
+<tr><td>Spencer Shannon</td><td>WR</td><td>OSU</td><td>$3,000</td><td>1.63</td><td>-4.9</td><td>0</td><td>$1,000</td><td class="val">1.63</td></tr>
+<tr><td>Gianni Spetic</td><td>K</td><td>OSU</td><td>$5,000</td><td>6.12</td><td>-3.4</td><td>0</td><td>$5,000</td><td class="val">1.22</td></tr>
+<tr><td>Daylan McCutcheon</td><td>WR</td><td>OSU</td><td>$3,000</td><td>1.04</td><td>-5.5</td><td>0</td><td>$1,000</td><td class="val">1.04</td></tr>
+<tr><td>Kaliq Lockett</td><td>WR</td><td>OSU</td><td>$3,100</td><td>1.09</td><td>-5.6</td><td>0</td><td>$1,400</td><td class="val">0.78</td></tr>
+<tr><td>Emaree Winston</td><td>WR</td><td>OSU</td><td>$3,300</td><td>1.74</td><td>-5.2</td><td>0</td><td>$2,600</td><td class="val">0.67</td></tr>
+<tr><td>Michael Masunas</td><td>WR</td><td>OSU</td><td>$3,100</td><td>0.71</td><td>-5.9</td><td>0</td><td>$1,200</td><td class="val">0.59</td></tr>
+<tr><td>Jermaine Bishop Jr.</td><td>WR</td><td>OSU</td><td>$3,200</td><td>1.15</td><td>-5.7</td><td>0</td><td>$2,200</td><td class="val">0.52</td></tr>
+<tr><td>Sterling Berkhalter</td><td>WR</td><td>OSU</td><td>$3,400</td><td>0.65</td><td>-6.4</td><td>0</td><td>$2,800</td><td class="val">0.23</td></tr>
+<tr><td>James Simon</td><td>RB</td><td>OSU</td><td>$4,000</td><td>0.2</td><td>-7.8</td><td>0</td><td>$1,000</td><td class="val">0.2</td></tr>
+<tr><td>Michael Terry III</td><td>RB</td><td>OSU</td><td>$4,000</td><td>0.2</td><td>-7.8</td><td>0</td><td>$1,000</td><td class="val">0.2</td></tr>
+<tr><td>Ryan Niblett</td><td>RB</td><td>OSU</td><td>$4,000</td><td>0.2</td><td>-7.8</td><td>0</td><td>$6,000</td><td class="val">0.03</td></tr>
+</tbody></table>
+<h4 class="team-break">Ohio State</h4>
+<table class="sortable" data-default-sort="Our value">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Pos</th><th scope="col" data-col="2">Opp</th><th scope="col" data-col="3">ETR sal</th><th scope="col" data-col="4">DK pts</th><th scope="col" data-col="5">Sheet val</th><th scope="col" data-col="6">Own</th><th scope="col" data-col="7">Our FLEX</th><th scope="col" data-col="8">Our value</th></tr></thead>
+<tbody>
+<tr><td>Chris Henry Jr.</td><td>WR</td><td>TEX</td><td>$3,900</td><td>2.62</td><td>-5.2</td><td>0</td><td>$1,000</td><td class="val">2.62</td></tr>
+<tr><td>Jeremiah Smith</td><td>WR</td><td>TEX</td><td>$8,200</td><td>19.51</td><td>5.2</td><td>10.89</td><td>$9,400</td><td class="val">2.08</td></tr>
+<tr><td>Brandon Inniss</td><td>WR</td><td>TEX</td><td>$4,100</td><td>7.22</td><td>-0.9</td><td>0.23</td><td>$3,800</td><td class="val">1.9</td></tr>
+<tr><td>Nate Roberts</td><td>WR</td><td>TEX</td><td>$3,600</td><td>5.93</td><td>-1.5</td><td>0.06</td><td>$3,200</td><td class="val">1.85</td></tr>
+<tr><td>Devin McCuin</td><td>WR</td><td>TEX</td><td>$5,900</td><td>11.18</td><td>0.3</td><td>1.66</td><td>$6,400</td><td class="val">1.75</td></tr>
+<tr><td>Julian Sayin</td><td>QB</td><td>TEX</td><td>$8,100</td><td>17.1</td><td>3</td><td>2.65</td><td>$10,000</td><td class="val">1.71</td></tr>
+<tr><td>Bo Jackson</td><td>RB</td><td>TEX</td><td>$7,700</td><td>15.05</td><td>1.5</td><td>3.94</td><td>$8,800</td><td class="val">1.71</td></tr>
+<tr><td>Ja&#x27;Kobi Jackson</td><td>RB</td><td>TEX</td><td>$4,600</td><td>6.45</td><td>-2.5</td><td>0</td><td>$4,600</td><td class="val">1.4</td></tr>
+<tr><td>Connor Hawkins</td><td>K</td><td>TEX</td><td>$4,800</td><td>5.76</td><td>-3.4</td><td>0</td><td>$4,800</td><td class="val">1.2</td></tr>
+<tr><td>Mason Williams</td><td>WR</td><td>TEX</td><td>$3,200</td><td>1.79</td><td>-5</td><td>0</td><td>$1,600</td><td class="val">1.12</td></tr>
+<tr><td>Brock Boyd</td><td>WR</td><td>TEX</td><td>$3,200</td><td>1.59</td><td>-5.2</td><td>0</td><td>$2,000</td><td class="val">0.8</td></tr>
+<tr><td>Bennett Christian</td><td>WR</td><td>TEX</td><td>$3,000</td><td>0.56</td><td>-5.9</td><td>0</td><td>$1,000</td><td class="val">0.56</td></tr>
+<tr><td>Jerquaden Guilford</td><td>WR</td><td>TEX</td><td>$3,000</td><td>0.56</td><td>-5.9</td><td>0</td><td>$1,000</td><td class="val">0.56</td></tr>
+<tr><td>Phillip Bell</td><td>WR</td><td>TEX</td><td>$3,000</td><td>0.55</td><td>-6</td><td>0</td><td>$1,000</td><td class="val">0.55</td></tr>
+<tr><td>Legend Bey</td><td>RB</td><td>TEX</td><td>$4,300</td><td>2.15</td><td>-6.3</td><td>0</td><td>$4,200</td><td class="val">0.51</td></tr>
+<tr><td>Isaiah West</td><td>RB</td><td>TEX</td><td>$5,300</td><td>2.48</td><td>-7.5</td><td>0</td><td>$5,600</td><td class="val">0.44</td></tr>
+</tbody></table>
+<h3>SCRIPT SIX</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Jeremiah Smith</td><td>OSU</td><td>WR</td><td>$14,100</td><td class="val">0.95×</td><td>receiving yards 89.5</td></tr>
+<tr><td>FLEX</td><td>Arch Manning</td><td>TEX</td><td>QB</td><td>$10,200</td><td class="val">1.02×</td><td>passing yards 259.5</td></tr>
+<tr><td>FLEX</td><td>Julian Sayin</td><td>OSU</td><td>QB</td><td>$10,000</td><td class="val">1.00×</td><td>passing yards 249.5</td></tr>
+<tr><td>FLEX</td><td>Ryan Wingo</td><td>TEX</td><td>WR</td><td>$7,400</td><td class="val">0.70×</td><td>receiving yards 51.5</td></tr>
+<tr><td>FLEX</td><td>Emmett Mosley V</td><td>TEX</td><td>WR</td><td>$4,400</td><td class="val">0.78×</td><td>receiving yards 34.5</td></tr>
+<tr><td>FLEX</td><td>Brandon Inniss</td><td>OSU</td><td>WR</td><td>$3,800</td><td class="val">0.66×</td><td>receptions 2.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Jeremiah Smith is the captain. Last week 8-151. Cheap posted catcher at $9,400 — we keep him so the studs fit. Needs Julian Sayin on the six. ETR 19.51.</li>
+<li>Arch Manning is on the six. He throws from the pocket. ETR 20.29.</li>
+<li>Julian Sayin is on the six. He throws from the pocket. ETR 17.10.</li>
+<li>Ryan Wingo is on the six. Last week 7-121-1. Needs Arch Manning on the six. ETR 12.95.</li>
+<li>Emmett Mosley V is on the six. Last week 3-37. Cheap posted catcher at $4,400 — we keep him so the studs fit. Needs Arch Manning on the six. ETR 9.38.</li>
+<li>Brandon Inniss is on the six. Last week 3-36. Needs Julian Sayin on the six. ETR 7.22.</li>
+</ul>
+<h3>ETR BUILD 1</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Arch Manning</td><td>TEX</td><td>QB</td><td>$15,300</td><td class="val">1.02×</td><td>passing yards 259.5</td></tr>
+<tr><td>FLEX</td><td>Julian Sayin</td><td>OSU</td><td>QB</td><td>$10,000</td><td class="val">1.00×</td><td>passing yards 249.5</td></tr>
+<tr><td>FLEX</td><td>Jeremiah Smith</td><td>OSU</td><td>WR</td><td>$9,400</td><td class="val">0.95×</td><td>receiving yards 89.5</td></tr>
+<tr><td>FLEX</td><td>Raleek Brown</td><td>TEX</td><td>RB</td><td>$6,800</td><td class="val">0.74×</td><td>rushing plus receiving yards 50.5</td></tr>
+<tr><td>FLEX</td><td>Emmett Mosley V</td><td>TEX</td><td>WR</td><td>$4,400</td><td class="val">0.78×</td><td>receiving yards 34.5</td></tr>
+<tr><td>FLEX</td><td>Brandon Inniss</td><td>OSU</td><td>WR</td><td>$3,800</td><td class="val">0.66×</td><td>receptions 2.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $300  (spent $49,700 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Arch Manning is the captain. He throws from the pocket. ETR 20.29.</li>
+<li>Jeremiah Smith is on the six. Last week 8-151. Cheap posted catcher at $9,400 — we keep him so the studs fit. Needs Julian Sayin on the six. ETR 19.51.</li>
+<li>Julian Sayin is on the six. He throws from the pocket. ETR 17.10.</li>
+<li>Raleek Brown is on the six. Listed back last week (11 carries). He scored. Also caught 1 for 11. ETR 12.05.</li>
+<li>Emmett Mosley V is on the six. Last week 3-37. Cheap posted catcher at $4,400 — we keep him so the studs fit. Needs Arch Manning on the six. ETR 9.38.</li>
+<li>Brandon Inniss is on the six. Last week 3-36. Needs Julian Sayin on the six. ETR 7.22.</li>
+<li>DK priced Arch Manning + Jeremiah Smith + Julian Sayin $500 short — you sit Brandon Inniss and keep the punt.</li>
+</ul>
+<h3>ETR BUILD 2</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Jeremiah Smith</td><td>OSU</td><td>WR</td><td>$14,100</td><td class="val">0.95×</td><td>receiving yards 89.5</td></tr>
+<tr><td>FLEX</td><td>Arch Manning</td><td>TEX</td><td>QB</td><td>$10,200</td><td class="val">1.02×</td><td>passing yards 259.5</td></tr>
+<tr><td>FLEX</td><td>Julian Sayin</td><td>OSU</td><td>QB</td><td>$10,000</td><td class="val">1.00×</td><td>passing yards 249.5</td></tr>
+<tr><td>FLEX</td><td>Ryan Wingo</td><td>TEX</td><td>WR</td><td>$7,400</td><td class="val">0.70×</td><td>receiving yards 51.5</td></tr>
+<tr><td>FLEX</td><td>Emmett Mosley V</td><td>TEX</td><td>WR</td><td>$4,400</td><td class="val">0.78×</td><td>receiving yards 34.5</td></tr>
+<tr><td>FLEX</td><td>Brandon Inniss</td><td>OSU</td><td>WR</td><td>$3,800</td><td class="val">0.66×</td><td>receptions 2.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Jeremiah Smith is the captain. Last week 8-151. Cheap posted catcher at $9,400 — we keep him so the studs fit. Needs Julian Sayin on the six. ETR 19.51.</li>
+<li>Arch Manning is on the six. He throws from the pocket. ETR 20.29.</li>
+<li>Julian Sayin is on the six. He throws from the pocket. ETR 17.10.</li>
+<li>Ryan Wingo is on the six. Last week 7-121-1. Needs Arch Manning on the six. ETR 12.95.</li>
+<li>Emmett Mosley V is on the six. Last week 3-37. Cheap posted catcher at $4,400 — we keep him so the studs fit. Needs Arch Manning on the six. ETR 9.38.</li>
+<li>Brandon Inniss is on the six. Last week 3-36. Needs Julian Sayin on the six. ETR 7.22.</li>
+<li>DK priced Jeremiah Smith + Arch Manning + Julian Sayin + Ryan Wingo $700 short — you sit Brandon Inniss and keep the punt.</li>
+</ul>
+<h3>ETR BUILD 3</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Arch Manning</td><td>TEX</td><td>QB</td><td>$15,300</td><td class="val">1.02×</td><td>passing yards 259.5</td></tr>
+<tr><td>FLEX</td><td>Julian Sayin</td><td>OSU</td><td>QB</td><td>$10,000</td><td class="val">1.00×</td><td>passing yards 249.5</td></tr>
+<tr><td>FLEX</td><td>Jeremiah Smith</td><td>OSU</td><td>WR</td><td>$9,400</td><td class="val">0.95×</td><td>receiving yards 89.5</td></tr>
+<tr><td>FLEX</td><td>Devin McCuin</td><td>OSU</td><td>WR</td><td>$6,400</td><td class="val">0.63×</td><td>receiving yards 40.5</td></tr>
+<tr><td>FLEX</td><td>Emmett Mosley V</td><td>TEX</td><td>WR</td><td>$4,400</td><td class="val">0.78×</td><td>receiving yards 34.5</td></tr>
+<tr><td>FLEX</td><td>Brandon Inniss</td><td>OSU</td><td>WR</td><td>$3,800</td><td class="val">0.66×</td><td>receptions 2.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $700  (spent $49,300 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Arch Manning is the captain. He throws from the pocket. ETR 20.29.</li>
+<li>Jeremiah Smith is on the six. Last week 8-151. Cheap posted catcher at $9,400 — we keep him so the studs fit. Needs Julian Sayin on the six. ETR 19.51.</li>
+<li>Julian Sayin is on the six. He throws from the pocket. ETR 17.10.</li>
+<li>Devin McCuin is on the six. Last week 6-97-1. Needs Julian Sayin on the six. ETR 11.18.</li>
+<li>Emmett Mosley V is on the six. Last week 3-37. Cheap posted catcher at $4,400 — we keep him so the studs fit. Needs Arch Manning on the six. ETR 9.38.</li>
+<li>Brandon Inniss is on the six. Last week 3-36. Needs Julian Sayin on the six. ETR 7.22.</li>
+<li>DK priced Arch Manning + Jeremiah Smith + Julian Sayin $100 short — you sit Brandon Inniss and keep the punt.</li>
+</ul>
+<h3>SITS</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Why</th></tr></thead>
+<tbody>
+<tr><td>Kyle Parker</td><td>OSU</td><td>out. Second straight miss</td></tr>
+<tr><td>Derrek Cooper</td><td>TEX</td><td>out. Foot / ankle</td></tr>
+<tr><td>Karle Lacey Jr. / Tavien St. Clair</td><td>—</td><td>backups priced like starters. Sit</td></tr>
+<tr><td>Kickers</td><td>—</td><td>sitting both sides</td></tr>
+<tr><td>Daylan McCutcheon</td><td>TEX</td><td>old illness tag. He played the opener. Not a sit on a stale tag</td></tr>
+</tbody></table>
+</div>
+<div class="player-book"><h3>Player book</h3><p class="sub">Quarterbacks, running backs, and receivers are separate tables. One row per player. Week 1, Week 2, Week 3 sit side by side — teal is up from last week, red is down. Click a header to sort. A new week column appears after that box is in. A blank cell is —.</p><div class="team-pills noprint"><button type="button" class="team-pill on" data-team="ALL">All</button><button type="button" class="team-pill" data-team="TEX">Texas</button><button type="button" class="team-pill" data-team="OSU">Ohio State</button></div><section class="pos-book" data-pos="QB"><h4>Quarterbacks</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Att</th><th scope="col" class="w0" data-col="5">Yds</th><th scope="col" class="w0" data-col="6">TD</th><th scope="col" class="w0" data-col="7">RAtt</th><th scope="col" class="w0" data-col="8">Rush</th><th scope="col" class="w0" data-col="9">rTD</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="TEX"><td class="who">Arch Manning</td><td class="who">Texas</td><td class="who" data-n="10200">$10,200</td><td class="w0 opp">Texas</td><td class="w0" data-n="27">27</td><td class="w0" data-n="305">305</td><td class="w0" data-n="4">4</td><td class="w0" data-n="3">3</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="30.8">30.8</td></tr><tr data-team="OSU"><td class="who">Julian Sayin</td><td class="who">Ohio State</td><td class="who" data-n="10000">$10,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="25">25</td><td class="w0" data-n="320">320</td><td class="w0" data-n="3">3</td><td class="w0" data-n="3">3</td><td class="w0" data-n="-9">-9</td><td class="w0" data-n="1">1</td><td class="w0 val" data-n="32.9">32.9</td></tr><tr data-team="TEX"><td class="who">Karle Lacey Jr.</td><td class="who">Texas</td><td class="who" data-n="8400">$8,400</td><td class="w0 opp">Texas</td><td class="w0" data-n="7">7</td><td class="w0" data-n="55">55</td><td class="w0" data-n="0">0</td><td class="w0" data-n="2">2</td><td class="w0" data-n="3">3</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="2.5">2.5</td></tr><tr data-team="OSU"><td class="who">Tavien St. Clair</td><td class="who">Ohio State</td><td class="who" data-n="8000">$8,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="6">6</td><td class="w0" data-n="52">52</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="8">8</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="6.88">6.88</td></tr><tr data-team="OSU"><td class="who">Luke Fahey</td><td class="who">Ohio State</td><td class="who" data-n="6000">$6,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="6">6</td><td class="w0" data-n="62">62</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="3">3</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="5.78">5.78</td></tr></tbody></table></div></section><section class="pos-book" data-pos="RB"><h4>Running backs</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">RAtt</th><th scope="col" class="w0" data-col="5">Rush</th><th scope="col" class="w0" data-col="6">rTD</th><th scope="col" class="w0" data-col="7">Rec</th><th scope="col" class="w0" data-col="8">Tgt</th><th scope="col" class="w0" data-col="9">Yds</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="OSU"><td class="who">Bo Jackson</td><td class="who">Ohio State</td><td class="who" data-n="8800">$8,800</td><td class="w0 opp">Ball State</td><td class="w0" data-n="9">9</td><td class="w0" data-n="83">83</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="13">13</td><td class="w0 val" data-n="16.6">16.6</td></tr><tr data-team="TEX"><td class="who">Hollywood Smothers</td><td class="who">Texas</td><td class="who" data-n="8200">$8,200</td><td class="w0 opp">Texas</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0" data-n="3">3</td><td class="w0" data-n="3">3</td><td class="w0" data-n="28">28</td><td class="w0 val" data-n="5.8">5.8</td></tr><tr data-team="TEX"><td class="who">Raleek Brown</td><td class="who">Texas</td><td class="who" data-n="6800">$6,800</td><td class="w0 opp">Texas</td><td class="w0" data-n="11">11</td><td class="w0" data-n="34">34</td><td class="w0" data-n="2">2</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="11">11</td><td class="w0 val" data-n="17.5">17.5</td></tr><tr data-team="TEX"><td class="who">Ryan Niblett</td><td class="who">Texas</td><td class="who" data-n="6000">$6,000</td><td class="w0 opp">Texas</td><td class="w0" data-n="2">2</td><td class="w0" data-n="10">10</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1">1.0</td></tr><tr data-team="OSU"><td class="who">Isaiah West</td><td class="who">Ohio State</td><td class="who" data-n="5600">$5,600</td><td class="w0 opp">Ball State</td><td class="w0" data-n="5">5</td><td class="w0" data-n="27">27</td><td class="w0" data-n="0">0</td><td class="w0" data-n="3">3</td><td class="w0" data-n="3">3</td><td class="w0" data-n="18">18</td><td class="w0 val" data-n="7.5">7.5</td></tr><tr data-team="OSU"><td class="who">Ja&#x27;Kobi Jackson</td><td class="who">Ohio State</td><td class="who" data-n="4600">$4,600</td><td class="w0 opp">Ball State</td><td class="w0" data-n="8">8</td><td class="w0" data-n="83">83</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="14.3">14.3</td></tr><tr data-team="OSU"><td class="who">Legend Bey</td><td class="who">Ohio State</td><td class="who" data-n="4200">$4,200</td><td class="w0 opp">Ball State</td><td class="w0" data-n="6">6</td><td class="w0" data-n="37">37</td><td class="w0" data-n="0">0</td><td class="w0" data-n="2">2</td><td class="w0">—</td><td class="w0" data-n="37">37</td><td class="w0 val" data-n="15.4">15.4</td></tr><tr data-team="TEX"><td class="who">Derrek Cooper</td><td class="who">Texas</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Texas</td><td class="w0" data-n="2">2</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="0.6">0.6</td></tr><tr data-team="TEX"><td class="who">James Simon</td><td class="who">Texas</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Texas</td><td class="w0" data-n="3">3</td><td class="w0" data-n="19">19</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="7.9">7.9</td></tr><tr data-team="TEX"><td class="who">Michael Terry III</td><td class="who">Texas</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Texas</td><td class="w0" data-n="3">3</td><td class="w0" data-n="8">8</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="0.8">0.8</td></tr></tbody></table></div></section><section class="pos-book" data-pos="WR"><h4>Wide receivers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Rec</th><th scope="col" class="w0" data-col="5">Tgt</th><th scope="col" class="w0" data-col="6">Yds</th><th scope="col" class="w0" data-col="7">TD</th><th scope="col" class="w0" data-col="8">RAtt</th><th scope="col" class="w0" data-col="9">Rush</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="OSU"><td class="who">Jeremiah Smith</td><td class="who">Ohio State</td><td class="who" data-n="9400">$9,400</td><td class="w0 opp">Ball State</td><td class="w0" data-n="8">8</td><td class="w0" data-n="8">8</td><td class="w0" data-n="151">151</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="26.1">26.1</td></tr><tr data-team="TEX"><td class="who">Cam Coleman</td><td class="who">Texas</td><td class="who" data-n="7600">$7,600</td><td class="w0 opp">Texas</td><td class="w0" data-n="3">3</td><td class="w0" data-n="3">3</td><td class="w0" data-n="70">70</td><td class="w0" data-n="2">2</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="22">22.0</td></tr><tr data-team="TEX"><td class="who">Ryan Wingo</td><td class="who">Texas</td><td class="who" data-n="7400">$7,400</td><td class="w0 opp">Texas</td><td class="w0" data-n="7">7</td><td class="w0" data-n="7">7</td><td class="w0" data-n="121">121</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="28.1">28.1</td></tr><tr data-team="OSU"><td class="who">Devin McCuin</td><td class="who">Ohio State</td><td class="who" data-n="6400">$6,400</td><td class="w0 opp">Ball State</td><td class="w0" data-n="6">6</td><td class="w0" data-n="6">6</td><td class="w0" data-n="97">97</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="21.7">21.7</td></tr><tr data-team="TEX"><td class="who">Emmett Mosley V</td><td class="who">Texas</td><td class="who" data-n="4400">$4,400</td><td class="w0 opp">Texas</td><td class="w0" data-n="3">3</td><td class="w0" data-n="6">6</td><td class="w0" data-n="37">37</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="6.7">6.7</td></tr><tr data-team="OSU"><td class="who">Brandon Inniss</td><td class="who">Ohio State</td><td class="who" data-n="3800">$3,800</td><td class="w0 opp">Ball State</td><td class="w0" data-n="3">3</td><td class="w0" data-n="3">3</td><td class="w0" data-n="36">36</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="6.6">6.6</td></tr><tr data-team="OSU"><td class="who">Nate Roberts</td><td class="who">Ohio State</td><td class="who" data-n="3200">$3,200</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="11">11</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="2.1">2.1</td></tr><tr data-team="TEX"><td class="who">Sterling Berkhalter</td><td class="who">Texas</td><td class="who" data-n="2800">$2,800</td><td class="w0 opp">Texas</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0" data-n="26">26</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.6">4.6</td></tr><tr data-team="TEX"><td class="who">Emaree Winston</td><td class="who">Texas</td><td class="who" data-n="2600">$2,600</td><td class="w0 opp">Texas</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0" data-n="25">25</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.5">4.5</td></tr><tr data-team="TEX"><td class="who">Jermaine Bishop Jr.</td><td class="who">Texas</td><td class="who" data-n="2200">$2,200</td><td class="w0 opp">Texas</td><td class="w0" data-n="2">2</td><td class="w0" data-n="3">3</td><td class="w0" data-n="25">25</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.5">4.5</td></tr><tr data-team="OSU"><td class="who">Brock Boyd</td><td class="who">Ohio State</td><td class="who" data-n="2000">$2,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="22">22</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="3.2">3.2</td></tr><tr data-team="TEX"><td class="who">Nick Townsend</td><td class="who">Texas</td><td class="who" data-n="1800">$1,800</td><td class="w0 opp">Texas</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="9">9</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.9">1.9</td></tr><tr data-team="OSU"><td class="who">Mason Williams</td><td class="who">Ohio State</td><td class="who" data-n="1600">$1,600</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.6">1.6</td></tr><tr data-team="TEX"><td class="who">Kaliq Lockett</td><td class="who">Texas</td><td class="who" data-n="1400">$1,400</td><td class="w0 opp">Texas</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="-3">-3</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="0.7">0.7</td></tr><tr data-team="OSU"><td class="who">Brody Lennon</td><td class="who">Ohio State</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="4">4</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.4">1.4</td></tr><tr data-team="OSU"><td class="who">Chris Henry Jr.</td><td class="who">Ohio State</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="15">15</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="8.5">8.5</td></tr><tr data-team="OSU"><td class="who">Jerquaden Guilford</td><td class="who">Ohio State</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="12">12</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="2.2">2.2</td></tr><tr data-team="OSU"><td class="who">Maxence LeBlanc</td><td class="who">Ohio State</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0" data-n="6">6</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.6">1.6</td></tr><tr data-team="OSU"><td class="who">Phillip Bell</td><td class="who">Ohio State</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.6">1.6</td></tr><tr data-team="TEX"><td class="who">Spencer Shannon</td><td class="who">Texas</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Texas</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="11">11</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="2.1">2.1</td></tr><tr data-team="TEX"><td class="who">Daylan Smothers</td><td class="who">Texas</td><td class="who">—</td><td class="w0 opp">Texas</td><td class="w0" data-n="3">3</td><td class="w0">—</td><td class="w0" data-n="28">28</td><td class="w0" data-n="1">1</td><td class="w0" data-n="10">10</td><td class="w0" data-n="70">70</td><td class="w0 val" data-n="18.8">18.8</td></tr><tr data-team="OSU"><td class="who">Max LeBlanc</td><td class="who">Ohio State</td><td class="who">—</td><td class="w0 opp">Ball State</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.6">1.6</td></tr></tbody></table></div></section><section class="pos-book" data-pos="K"><h4>Kickers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="4">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">FG</th><th scope="col" class="w0" data-col="5">XP</th><th scope="col" class="w0" data-col="6">DK</th></tr></thead><tbody><tr data-team="TEX"><td class="who">Gianni Spetic</td><td class="who">Texas</td><td class="who" data-n="5000">$5,000</td><td class="w0 opp">Texas</td><td class="w0" data-n="1">1</td><td class="w0" data-n="8">8</td><td class="w0 val" data-n="11">11.0</td></tr><tr data-team="OSU"><td class="who">Connor Hawkins</td><td class="who">Ohio State</td><td class="who" data-n="4800">$4,800</td><td class="w0 opp">Ball State</td><td class="w0" data-n="0">0</td><td class="w0" data-n="7">7</td><td class="w0 val" data-n="7">7.0</td></tr><tr data-team="OSU"><td class="who">Cooper Peterson</td><td class="who">Ohio State</td><td class="who" data-n="4800">$4,800</td><td class="w0 opp">Ball State</td><td class="w0" data-n="0">0</td><td class="w0" data-n="1">1</td><td class="w0 val" data-n="1">1.0</td></tr></tbody></table></div></section></div>
+</article>
+</main></div>
+<script>
+(function(){
+  document.addEventListener('click', function(e){
+    var pill=e.target.closest('.team-pill');
+    if(!pill) return;
+    var book=pill.closest('.player-book');
+    if(!book) return;
+    var team=pill.getAttribute('data-team')||'ALL';
+    book.querySelectorAll('.team-pill').forEach(function(p){
+      p.classList.toggle('on', p===pill);
+    });
+    var inp=document.getElementById('playerSearch');
+    if(inp) inp.dispatchEvent(new Event('input'));
+    else {
+      book.querySelectorAll('table.season-log tbody tr').forEach(function(tr){
+        var rowTeam=tr.getAttribute('data-team')||'';
+        tr.hidden = !!(team && team!=='ALL' && rowTeam!==team);
+      });
+      book.querySelectorAll('.pos-book').forEach(function(sec){
+        var any=false;
+        sec.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) any=true; });
+        sec.classList.toggle('search-empty', !any);
+      });
+    }
+  });
+})();
+</script>
+<script>
+(function(){
+  var KEY='desk-report-theme';
+  function apply(mode){
+    document.documentElement.classList.toggle('light', mode==='light');
+    var b=document.getElementById('themeBtn');
+    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  var saved=null;
+  try { saved=localStorage.getItem(KEY); } catch (e) {}
+  apply(saved==='light'?'light':'dark');
+  window.toggleDeskTheme=function(){
+    apply(document.documentElement.classList.contains('light')?'dark':'light');
+  };
+})();
+(function(){
+  function val(td){
+    if(!td) return {n:false, v:null, s:''};
+    var dn=td.getAttribute('data-n');
+    if(dn!==null && dn!==''){
+      var n=parseFloat(dn);
+      if(!isNaN(n)) return {n:true, v:n, s:dn};
+    }
+    var t=(td.textContent||'').trim();
+    if(!t || t==='—' || t==='-') return {n:false, v:null, s:''};
+    var raw=t.replace(/[$,×x]/g,'').replace(/,/g,'');
+    if(/^-?\d+(\.\d+)?$/.test(raw)) return {n:true, v:parseFloat(raw), s:t};
+    return {n:false, v:t.toLowerCase(), s:t};
+  }
+  function sortTable(table, col, dir){
+    var tb=table && table.tBodies[0];
+    if(!tb) return;
+    Array.prototype.forEach.call(table.querySelectorAll('th'), function(h){
+      h.removeAttribute('data-dir');
+    });
+    var mark=table.querySelector('th[data-col="'+col+'"]');
+    if(mark) mark.setAttribute('data-dir', dir);
+    var rows=Array.prototype.slice.call(tb.rows);
+    rows.sort(function(a,b){
+      var A=val(a.cells[col]||{});
+      var B=val(b.cells[col]||{});
+      if(A.v===null && B.v===null) return 0;
+      if(A.v===null) return 1;
+      if(B.v===null) return -1;
+      var cmp=0;
+      if(A.n && B.n) cmp=A.v-B.v;
+      else cmp=String(A.v).localeCompare(String(B.v));
+      return dir==='asc' ? cmp : -cmp;
+    });
+    rows.forEach(function(r){ tb.appendChild(r); });
+  }
+  document.addEventListener('click', function(e){
+    var th=e.target.closest('table.sortable th');
+    if(!th) return;
+    var table=th.closest('table');
+    if(!table) return;
+    var raw=th.getAttribute('data-col');
+    if(raw===null) return;
+    var dir=th.getAttribute('data-dir')==='asc' ? 'desc' : 'asc';
+    sortTable(table, parseInt(raw,10), dir);
+  });
+  document.querySelectorAll('table.sortable[data-default-sort]').forEach(function(table){
+    var want=(table.getAttribute('data-default-sort')||'').toLowerCase();
+    var ths=table.querySelectorAll('th[data-col]');
+    var idx=-1;
+    for(var i=0;i<ths.length;i++){
+      var t=(ths[i].textContent||'').trim().toLowerCase();
+      if(t===want || t.indexOf(want)>=0 || want.indexOf(t)>=0){
+        idx=parseInt(ths[i].getAttribute('data-col'),10);
+        break;
+      }
+    }
+    if(idx>=0) sortTable(table, idx, 'desc');
+  });
+})();
+</script>
+<script>
+(function(){
+  function norm(s){
+    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+  }
+  function skip(el){
+    return !!(el.closest && el.closest('dialog, .pcard, .rail'));
+  }
+  function playerIdx(table){
+    var ths=table.querySelectorAll('thead th');
+    for(var i=0;i<ths.length;i++){
+      var t=norm(ths[i].textContent);
+      if(t==='player'||t==='name') return i;
+    }
+    return -1;
+  }
+  function rowHit(tr, q, pidx){
+    if(!q) return true;
+    if(pidx>=0 && tr.cells[pidx]) return norm(tr.cells[pidx].textContent).indexOf(q)>=0;
+    return norm(tr.textContent).indexOf(q)>=0;
+  }
+  function apply(opts){
+    opts = opts || {};
+    var inp=document.getElementById('playerSearch');
+    if(!inp) return;
+    var q=norm(inp.value);
+    var n=0;
+    var hitSel='tbody tr:not([hidden]), li:not([hidden])';
+    function teamOk(tr){
+      var book=tr.closest && tr.closest('.player-book');
+      if(!book) return true;
+      var on=book.querySelector('.team-pill.on');
+      var team=on ? (on.getAttribute('data-team')||'ALL') : 'ALL';
+      if(!team || team==='ALL') return true;
+      return (tr.getAttribute('data-team')||'')===team;
+    }
+    function mark(el, hit){
+      el.hidden = !hit;
+      el.classList.toggle('name-hit', !!(q && hit));
+      if(q && hit) n++;
+    }
+    document.querySelectorAll('table tbody tr').forEach(function(tr){
+      if(skip(tr)) return;
+      var ok=teamOk(tr) && rowHit(tr, q, playerIdx(tr.closest('table')));
+      mark(tr, ok);
+    });
+    document.querySelectorAll('table').forEach(function(t){
+      if(skip(t)) return;
+      var any=false;
+      var tb=t.tBodies[0];
+      if(tb){
+        Array.prototype.forEach.call(tb.rows, function(r){ if(!r.hidden) any=true; });
+      }
+      t.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.pos-book').forEach(function(sec){
+      var any=false;
+      sec.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) any=true; });
+      sec.classList.toggle('search-empty', !any);
+    });
+    document.querySelectorAll('.week-book-wrap').forEach(function(w){
+      var t=w.querySelector('table');
+      w.classList.toggle('search-empty', !!(t && t.classList.contains('search-empty')));
+    });
+    document.querySelectorAll('li').forEach(function(li){
+      if(skip(li)) return;
+      mark(li, !q || norm(li.textContent).indexOf(q)>=0);
+    });
+    var hint=document.getElementById('playerSearchHint');
+    if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
+    if(opts.jump){
+      var shownArt=document.querySelector('article.panel');
+      var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
+      if(jumpEl){
+        setTimeout(function(){
+          try { jumpEl.scrollIntoView({block:'center', behavior:'smooth'}); }
+          catch (err) { jumpEl.scrollIntoView(true); }
+        }, 40);
+      }
+    }
+  }
+  var form=document.getElementById('playerSearchForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      apply({jump:true});
+    });
+  }
+  var inp=document.getElementById('playerSearch');
+  if(inp){
+    inp.addEventListener('input', function(){ apply({}); });
+    inp.addEventListener('search', function(){ apply({jump:true}); });
+    inp.addEventListener('keydown', function(e){
+      if(e.key==='Enter' || e.keyCode===13){
+        e.preventDefault();
+        apply({jump:true});
+      }
+    });
+  }
+})();
+</script>
+</body></html>

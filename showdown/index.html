@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CFB Showdown 2026-09-12 · ARK @ UTAH</title>
+<style>
+:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#9ef0f0;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#007d79;--table:#262626;--cell:#525252;--th:#393939;--val:#3ddbd9;--h:#3ddbd9;--code:#9ef0f0;--up:#3ddbd9;--down:#ff8389;--up-bg:rgba(61,219,217,.16);--down-bg:rgba(255,131,137,.16);--wk-alt:rgba(0,125,121,.08);}
+html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#004144;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#007d79;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#005d5d;--h:#005d5d;--code:#005d5d;--up:#005d5d;--down:#a2191f;--up-bg:rgba(0,93,93,.1);--down-bg:rgba(162,25,31,.1);--wk-alt:rgba(0,125,121,.06);}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+.tab{position:absolute;left:-9999px;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;overflow-y:auto;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);}
+.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
+.pill:hover{background:var(--pill-hover);}
+button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
+button.pdf:hover{filter:brightness(1.08);}
+button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.5rem .7rem;}
+button.theme:hover{background:var(--pill-hover);}
+form.search-form{margin:0;display:flex;flex-direction:column;gap:.15rem;}
+label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35rem 0 0;}
+input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
+input.search:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.pill.search-miss{opacity:.42;}
+table.search-empty{display:none;}
+li.name-hit,tr.name-hit{background:rgba(0,125,121,.28);outline:1px solid var(--accent);}
+.hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
+.view-row{display:flex;flex-direction:column;gap:.35rem;margin:.15rem 0 .35rem;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:54rem;min-width:0;}
+h1{font-size:1.6rem;margin:0 0 .3rem;}
+h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
+.line-blast{font-size:1.42rem;line-height:1.35;font-weight:700;margin:.35rem 0 1.2rem;padding:.95rem 1.05rem;background:var(--table);border:2px solid var(--accent);border-left-width:8px;}
+.line-blast b{color:var(--val);font-size:1.08em;}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
+h3.second-pass{border-top:2px solid var(--accent);padding-top:1.15rem;margin-top:2rem;}
+h4{margin:.8rem 0 .4rem;}
+h4.team-break{font-size:1.28rem;font-weight:800;letter-spacing:.01em;margin:2.35rem 0 .55rem;padding:1.05rem 0 .35rem;border-top:3px solid var(--accent);}
+h3 + p + h4.team-break,h3 + h4.team-break{margin-top:.75rem;padding-top:.1rem;border-top:none;}
+h5{font-size:.95rem;margin:1.05rem 0 .3rem;color:var(--muted);font-weight:700;}
+.sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
+table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.92rem;background:var(--table);}
+th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
+th{background:var(--th);color:var(--pill-fg);}
+table.sortable th{cursor:pointer;user-select:none;}
+table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}
+table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
+table.game-log{width:100%;table-layout:auto;}
+table.game-log th,table.game-log td{text-align:center;white-space:nowrap;}
+table.game-log th:nth-child(1),table.game-log td:nth-child(1),table.game-log th:nth-child(2),table.game-log td:nth-child(2){text-align:left;}
+.team-pills{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 .8rem;}
+.team-pill{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--pill);color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:999px;padding:.4rem .75rem;}
+.team-pill.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+.pos-book{margin:0 0 1.6rem;}
+.pos-book.search-empty{display:none;}
+.pos-book h4{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.4rem 0 .45rem;}
+.season-log-wrap{overflow-x:auto;margin:0 0 1.2rem;}
+table.season-log{font-size:.82rem;width:max-content;min-width:100%;}
+table.season-log th,table.season-log td{white-space:nowrap;text-align:center;}
+table.season-log th.who,table.season-log td.who,table.season-log td.opp{text-align:left;}
+table.season-log thead th{position:sticky;top:0;z-index:1;}
+table.season-log tr.wk-stats th{top:1.55rem;}
+table.season-log th.wk-g{text-align:center;border-left:2px solid var(--accent);}
+table.season-log td.w1,table.season-log th.w1,table.season-log td.w3,table.season-log th.w3{background:var(--wk-alt);}
+table.season-log th:first-child,table.season-log td:first-child{position:sticky;left:0;z-index:2;background:var(--th);}
+table.season-log td:first-child{background:var(--table);}
+td.trend-up{background:var(--up-bg) !important;color:var(--up);font-weight:700;}
+td.trend-down{background:var(--down-bg) !important;color:var(--down);font-weight:700;}
+span.delta{font-size:.68em;font-weight:700;margin-left:.28em;opacity:.92;}
+td.val{font-weight:700;color:var(--val);white-space:nowrap;}
+.left{font-weight:700;margin:.2rem 0 1rem;}
+ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
+ul ul{margin:.15rem 0 .4rem;padding-left:1.15rem;}
+li{margin:.35rem 0;}
+code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
+.panel{display:block;}
+.appendix{display:none;}
+@media print{
+  html,body,html.light,html.light body{background:#fff;color:#111;}
+  .shell{display:block;}
+  .rail,.noprint{display:none !important;}
+  main{max-width:none;padding:0;}
+  .panel,.appendix{display:block !important;page-break-after:always;}
+  .appendix{page-break-after:auto;}
+  table{background:#fff;page-break-inside:avoid;}
+  th{background:#eee;color:#333;}
+  td.val{color:#000;}
+  td.trend-up{color:#005d5d;background:#e6f6f6 !important;}
+  td.trend-down{color:#a2191f;background:#fce8e8 !important;}
+  h2,h3,h4,h5{page-break-after:avoid;color:#111;}
+  h4.team-break{border-top-color:#111;}
+  .line-blast{background:#fff;border-color:#111;color:#111;}
+  .line-blast b{color:#000;}
+}
+@page{margin:.5in;}
+#v-report:checked ~ .shell .rail label[for=v-report]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.player-book{display:none;}
+#v-book:checked ~ .shell main{max-width:none;}
+#v-book:checked ~ .shell main .game-report{display:none;}
+#v-book:checked ~ .shell main .player-book{display:block;}
+</style>
+</head><body>
+<input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-book"/>
+<div class="shell">
+<aside class="rail noprint">
+<p class="brand">CFB SHOWDOWN<br/>2026-09-12<br/>ARK @ UTAH</p>
+<div class="view-row">
+<label class="pill" for="v-report">Report</label>
+<label class="pill" for="v-book">Player book</label>
+</div>
+<form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
+<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
+<button class="pdf" type="button" onclick="window.print()">Save as PDF</button><p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
+</aside>
+<main>
+<h1>CFB Showdown — 2026-09-12 · ARK @ UTAH</h1>
+<article class="panel">
+<div class="game-report">
+<h2>4) ARK @ UTAH · 10:15 p.m. ET · Rice-Eccles</h2>
+<p class="line-blast">Utah is about <b>12.5</b> points better. The total sits at <b>55.5</b>. Rice-Eccles, 8:15 p.m. MT / 10:15 p.m. ET on ESPN. Outdoor, 4,656 feet. About 76°, wind 2 / gust 4, rain 3%. Not a pass kill.</p>
+<p><b>This slate is three out of five stars.</b> Two-score home favorite. The live book is <b>Utah −12.5 / 55.5</b>. Night, altitude.</p>
+<h3>WHO THEY ARE</h3>
+<ul>
+<li><b>Arkansas</b> is unranked this year, unbeaten (1-0).</li>
+<li><b>Utah</b> is ranked No. 20 this year (1-0).</li>
+</ul>
+<h3>WHO MATTERS</h3>
+<p>Who to build with. Quarterback: runs and throws, or just throws. Running back: workhorse or committee. Last-week tape only.</p>
+<h4>Utah</h4>
+<ul>
+<li><b>Quarterback:</b> Devon Dampier throws from the pocket. Last week vs Idaho he threw 18 times for 176, 3 passing score and ran it 6 carries for 31. He is not a rushing quarterback.</li>
+<li><b>Running backs:</b> Committee. Wayshawn Parker (12 carries) and LaMarcus Bell (7 carries). One back on the card, not both. The back who scored: Wayshawn Parker, LaMarcus Bell, Steve Chavez-Soto.</li>
+<li><b>Best other pieces:</b> Braden Pegan — 4-81-1 last week; Larry Simmons — 2-41 last week.</li>
+</ul>
+<h4>Arkansas</h4>
+<ul>
+<li><b>Quarterback:</b> KJ Jackson runs and throws. Last week vs North Alabama he threw 35 times for 267, 3 passing score and ran it 10 carries for 27. Captain him if you want those rushing yards at 1.5×.</li>
+<li><b>Running backs:</b> Committee. Braylen Russell (17 carries) and Sutton Smith (15 carries). One back on the card, not both. The back who scored: Braylen Russell.</li>
+<li><b>Best other pieces:</b> Chris Marshall — 7-79 last week; CJ Brown — 3-37 last week.</li>
+</ul>
+<h3>THE MOVIE</h3>
+<p>First meeting. Morgan Scalley is the new Utah head coach (was the defensive coordinator). Ryan Silverfield is the new Arkansas head coach (from Memphis). Utah mashed Idaho 66–14. Arkansas beat North Alabama 31–14, and Silverfield called it one of the worst offensive nights he has been part of (3.0 yards per carry, 1-for-6 in the red zone, three turnovers).</p>
+<p><b>What the writers are saying:</b> Utah wins. Score cluster 31–16 / 31–17 / 38–20 / 45–17. The market is Utah −12.5 / 55.5. One model has Utah −14.8. Arkansas has to run better than 3.0 or Jackson is one-dimensional on the road.</p>
+<p><b>Utah</b></p>
+<ul>
+<li>Devon Dampier
+<ul>
+<li>Last week vs Idaho: 13-of-18 for 176 and 3 scores. Sat after the first drive of the third quarter at 38–7</li>
+</ul>
+</li>
+<li>Byrd Ficklin
+<ul>
+<li>Change-of-pace package. 4-of-8 for 93 and 2 scores, plus 70 rush vs Idaho. Backup priced like a starter — sit him as a second quarterback</li>
+</ul>
+</li>
+<li>Wayshawn Parker
+<ul>
+<li>Three scores vs Idaho (two receiving, one rushing). The Utah back</li>
+</ul>
+</li>
+<li>Daniel Bray
+<ul>
+<li>Cleared Friday after a concussion (three snaps vs Idaho). Watch, not a sit. Do not stack him next to Parker</li>
+</ul>
+</li>
+<li>Braden Pegan
+<ul>
+<li>Utah State transfer. 4-81 and a rushing score vs Idaho</li>
+</ul>
+</li>
+<li>Ricky Johnson
+<ul>
+<li>Cheap Utah catcher. Named with Pegan</li>
+</ul>
+</li>
+</ul>
+<p><b>Arkansas</b></p>
+<ul>
+<li>KJ Jackson
+<ul>
+<li>First road start. Last week vs North Alabama: 24-of-35 for 267 and 3 scores, one pick</li>
+</ul>
+</li>
+<li>Sutton Smith
+<ul>
+<li>Memphis transfer. 15-36 plus 4-43 receiving. Committee</li>
+</ul>
+</li>
+<li>Braylen Russell
+<ul>
+<li>17-49 vs North Alabama. Committee. One Arkansas back on the card</li>
+</ul>
+</li>
+<li>Chris Marshall
+<ul>
+<li>Arkansas catcher</li>
+</ul>
+</li>
+<li>CJ Brown
+<ul>
+<li>Cheap Arkansas catcher</li>
+</ul>
+</li>
+<li>Jaden Platt
+<ul>
+<li>Tight end with a named role. Cheap</li>
+</ul>
+</li>
+<li>Cam Settles
+<ul>
+<li>Did not dress vs North Alabama. Watch. Sit until we see him</li>
+</ul>
+</li>
+</ul>
+<h3>GAME FLOW</h3>
+<p><b>How this game plays</b></p>
+<ul>
+<li>Two-score home favorite at night. Utah can sit on a lead</li>
+<li>The books have both teams scoring about 55.5 together</li>
+<li>Altitude is real. Silverfield said it will not have a major direct effect. We are not inventing a collapse</li>
+</ul>
+<p><b>How they want to play</b></p>
+<ul>
+<li><b>Utah offense:</b> Run / option with Dampier. Parker scores. Ficklin in packages, not as the lock quarterback. Morgan Scalley wants to mash</li>
+<li><b>Utah defense:</b> Idaho tape only. We are not inventing a hole</li>
+<li><b>Arkansas offense:</b> Ugly vs North Alabama. Ryan Silverfield said so. Jackson has to throw if the run stays at 3.0</li>
+<li><b>Arkansas defense:</b> Held North Alabama in the first half, then gave up late scores. First real offense</li>
+</ul>
+<p><b>Where the defense is weaker</b></p>
+<ul>
+<li><b>Utah:</b> Unproven against a Power-4 run game. No named hole from Idaho</li>
+<li><b>Arkansas:</b> Late-game fatigue vs North Alabama. No named hole we will invent</li>
+<li>Wind 2 is not a pass kill</li>
+</ul>
+<p><b>What the scoreboard forces</b></p>
+<ul>
+<li>A two-score Utah lead is the favorite closeout — Dampier can sit, Ficklin can package. That is why Ficklin is a sit as a second quarterback on the six</li>
+<li>A one-score game keeps Jackson throwing</li>
+<li>A two-score Arkansas lead asks Dampier to throw more than the Idaho script</li>
+</ul>
+<p><b>Who that points at</b></p>
+<ul>
+<li>Parker as the working captain — three-score tape plus the highest stamped running-back points</li>
+<li>Dampier as Utah’s passer so Pegan and Johnson stay legal</li>
+<li>Jackson as Arkansas’s passer so Brown stays legal</li>
+<li>One Utah back. Bray is cleared, not a second back on the same six</li>
+<li>One Arkansas back. Not Settles</li>
+</ul>
+<h3>DEPTH CHART</h3>
+<p>Offense skill. A missing name is —.</p>
+<h4 class="team-break">Utah</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th><th scope="col" data-col="3">3</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Devon Dampier</td><td>Byrd Ficklin</td><td>—</td></tr>
+<tr><td>RB</td><td>Wayshawn Parker</td><td>Daniel Bray</td><td>—</td></tr>
+<tr><td>WR-X</td><td>Ricky Johnson</td><td>Kyri Shoels</td><td>—</td></tr>
+<tr><td>WR-Z</td><td>Braden Pegan</td><td>Larry Simmons</td><td>—</td></tr>
+<tr><td>WR-SL</td><td>Creed Whittemore</td><td>Mana Carvalho</td><td>—</td></tr>
+<tr><td>TE</td><td>Noah Bennee</td><td>Hunter Andrews</td><td>Will Monney</td></tr>
+<tr><td>PK</td><td>Dillon Curtis</td><td>Tanner Cragun</td><td>—</td></tr>
+</tbody></table>
+<h4 class="team-break">Arkansas</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th><th scope="col" data-col="3">3</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>KJ Jackson</td><td>AJ Hill</td><td>—</td></tr>
+<tr><td>RB</td><td>Sutton Smith</td><td>Braylen Russell</td><td>—</td></tr>
+<tr><td>WR-X</td><td>Chris Marshall</td><td>Antonio Jordan</td><td>—</td></tr>
+<tr><td>WR-Z</td><td>CJ Brown</td><td>Donovan Faupel</td><td>—</td></tr>
+<tr><td>WR-SL</td><td>Jamari Hawkins</td><td>Ismael Cisse</td><td>—</td></tr>
+<tr><td>TE</td><td>Jaden Platt</td><td>Ty Lockwood</td><td>Matt Adcock</td></tr>
+<tr><td>PK</td><td>Max Gilbert</td><td>Braeden McAlister</td><td>—</td></tr>
+</tbody></table>
+<h3>INJURIES</h3>
+<p>Who is out or in doubt for this game. A blank list means nobody on the board is tagged.</p>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Status</th><th scope="col" data-col="3">Tonight</th></tr></thead>
+<tbody>
+<tr><td>Maddox Lassiter</td><td>ARK</td><td>Out</td><td>Not playing. Sit him.</td></tr>
+<tr><td>Cam Settles</td><td>ARK</td><td>Questionable</td><td>Not locked in. Check warmups.</td></tr>
+</tbody></table>
+<h3>CHART NOTES</h3>
+<p>When the listed chart does not match who is actually playing.</p>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Note</th></tr></thead>
+<tbody>
+<tr><td>KJ Jackson</td><td>ARK</td><td>Starter.</td></tr>
+<tr><td>Cam Settles</td><td>ARK</td><td>Still listed RB3.</td></tr>
+<tr><td>Jaden Platt</td><td>ARK</td><td>TE1 after Lassiter season OUT.</td></tr>
+</tbody></table>
+<h3>OUR VALUE — ARK @ UTAH</h3>
+<p>Every salary-board skill player with a <b>real</b> book number (yardage or receptions). Junk 0.5, scrape ceilings, and anytime-TD only are omitted. <b>1.00× is even.</b> Sorted highest value first.</p>
+<table class="sortable" data-default-sort="Value">
+<thead><tr><th scope="col" data-col="0">#</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Wayshawn Parker</td><td>UTAH</td><td>RB</td><td>$8,800</td><td class="val">1.02×</td><td>rushing yards 89.5</td></tr>
+<tr><td>2</td><td>CJ Brown</td><td>ARK</td><td>WR</td><td>$3,000</td><td class="val">0.95×</td><td>receiving yards 28.5</td></tr>
+<tr><td>3</td><td>Braden Pegan</td><td>UTAH</td><td>WR</td><td>$7,400</td><td class="val">0.93×</td><td>receiving yards 68.5</td></tr>
+<tr><td>4</td><td>KJ Jackson</td><td>ARK</td><td>QB</td><td>$9,400</td><td class="val">0.91×</td><td>passing yards 213.5</td></tr>
+<tr><td>5</td><td>Chris Marshall</td><td>ARK</td><td>WR</td><td>$5,800</td><td class="val">0.84×</td><td>receiving yards 48.5</td></tr>
+<tr><td>6</td><td>Devon Dampier</td><td>UTAH</td><td>QB</td><td>$11,800</td><td class="val">0.77×</td><td>passing yards 228.5</td></tr>
+<tr><td>7</td><td>Sutton Smith</td><td>ARK</td><td>RB</td><td>$7,000</td><td class="val">0.71×</td><td>rushing yards 49.5</td></tr>
+<tr><td>8</td><td>Jaden Platt</td><td>ARK</td><td>WR</td><td>$2,000</td><td class="val">0.62×</td><td>receiving yards 12.5</td></tr>
+<tr><td>9</td><td>Braylen Russell</td><td>ARK</td><td>RB</td><td>$6,600</td><td class="val">0.61×</td><td>rushing yards 40.5</td></tr>
+<tr><td>10</td><td>Ismael Cisse</td><td>ARK</td><td>WR</td><td>$3,400</td><td class="val">0.54×</td><td>receiving yards 18.5</td></tr>
+<tr><td>11</td><td>Larry Simmons</td><td>UTAH</td><td>WR</td><td>$5,000</td><td class="val">0.43×</td><td>receiving yards 21.5</td></tr>
+</tbody></table>
+<h3>ETR VALUE</h3>
+<p>Every name on ETR&#x27;s main-slate sheet for this game. Click a column to sort. A blank cell is —. <b>ETR sal</b> / <b>Sheet val</b> / <b>Own</b> are ETR&#x27;s main-slate numbers. <b>Our value</b> is their DK pts versus our Showdown salary — not the sheet&#x27;s main-slate value.</p>
+<h4 class="team-break">Utah</h4>
+<table class="sortable" data-default-sort="Our value">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Pos</th><th scope="col" data-col="2">Opp</th><th scope="col" data-col="3">ETR sal</th><th scope="col" data-col="4">DK pts</th><th scope="col" data-col="5">Sheet val</th><th scope="col" data-col="6">Own</th><th scope="col" data-col="7">Our FLEX</th><th scope="col" data-col="8">Our value</th></tr></thead>
+<tbody>
+<tr><td>Ricky Johnson</td><td>WR</td><td>ARK</td><td>$3,400</td><td>9.14</td><td>2</td><td>0</td><td>$2,600</td><td class="val">3.52</td></tr>
+<tr><td>Mana Carvalho</td><td>WR</td><td>ARK</td><td>$3,100</td><td>3.66</td><td>-3</td><td>0</td><td>$1,600</td><td class="val">2.29</td></tr>
+<tr><td>Braden Pegan</td><td>WR</td><td>ARK</td><td>$5,600</td><td>16.74</td><td>6.3</td><td>0</td><td>$7,400</td><td class="val">2.26</td></tr>
+<tr><td>Devon Dampier</td><td>QB</td><td>ARK</td><td>$8,300</td><td>26.6</td><td>12.1</td><td>0</td><td>$11,800</td><td class="val">2.25</td></tr>
+<tr><td>Hunter Andrews</td><td>WR</td><td>ARK</td><td>$3,900</td><td>8.97</td><td>1.1</td><td>0</td><td>$4,200</td><td class="val">2.14</td></tr>
+<tr><td>Wayshawn Parker</td><td>RB</td><td>ARK</td><td>$6,700</td><td>18.74</td><td>6.7</td><td>0</td><td>$8,800</td><td class="val">2.13</td></tr>
+<tr><td>Creed Whittemore</td><td>WR</td><td>ARK</td><td>$3,800</td><td>4.85</td><td>-2.9</td><td>0</td><td>$3,600</td><td class="val">1.35</td></tr>
+<tr><td>Daniel Bray</td><td>RB</td><td>ARK</td><td>$4,500</td><td>7.25</td><td>-1.5</td><td>0</td><td>$5,400</td><td class="val">1.34</td></tr>
+<tr><td>Dillon Curtis</td><td>K</td><td>ARK</td><td>$5,200</td><td>6.61</td><td>-3.2</td><td>0</td><td>$5,200</td><td class="val">1.27</td></tr>
+<tr><td>Will Monney</td><td>WR</td><td>ARK</td><td>$3,000</td><td>1.11</td><td>-5.4</td><td>0</td><td>$1,000</td><td class="val">1.11</td></tr>
+<tr><td>Semi Taulanga</td><td>WR</td><td>ARK</td><td>$3,000</td><td>1.09</td><td>-5.4</td><td>0</td><td>$1,000</td><td class="val">1.09</td></tr>
+<tr><td>Larry Simmons</td><td>WR</td><td>ARK</td><td>$4,400</td><td>4.34</td><td>-4.3</td><td>0</td><td>$5,000</td><td class="val">0.87</td></tr>
+<tr><td>Byrd Ficklin</td><td>QB</td><td>ARK</td><td>$7,600</td><td>6.2</td><td>-7.2</td><td>0</td><td>$9,800</td><td class="val">0.63</td></tr>
+<tr><td>Mateaki Helu</td><td>RB</td><td>ARK</td><td>$4,000</td><td>0.43</td><td>-7.6</td><td>0</td><td>$1,000</td><td class="val">0.43</td></tr>
+<tr><td>Steve Chavez-Soto</td><td>RB</td><td>ARK</td><td>$6,200</td><td>3.23</td><td>-8.1</td><td>0</td><td>$8,000</td><td class="val">0.4</td></tr>
+<tr><td>Kyri Shoels</td><td>WR</td><td>ARK</td><td>$5,000</td><td>1.24</td><td>-8.3</td><td>0</td><td>$6,400</td><td class="val">0.19</td></tr>
+<tr><td>Nate Johnson</td><td>QB</td><td>ARK</td><td>$4,500</td><td>0.58</td><td>-8.2</td><td>0</td><td>$6,000</td><td class="val">0.1</td></tr>
+<tr><td>LaMarcus Bell</td><td>RB</td><td>ARK</td><td>$5,600</td><td>0.43</td><td>-10</td><td>0</td><td>$7,200</td><td class="val">0.06</td></tr>
+</tbody></table>
+<h4 class="team-break">Arkansas</h4>
+<table class="sortable" data-default-sort="Our value">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Pos</th><th scope="col" data-col="2">Opp</th><th scope="col" data-col="3">ETR sal</th><th scope="col" data-col="4">DK pts</th><th scope="col" data-col="5">Sheet val</th><th scope="col" data-col="6">Own</th><th scope="col" data-col="7">Our FLEX</th><th scope="col" data-col="8">Our value</th></tr></thead>
+<tbody>
+<tr><td>CJ Brown</td><td>WR</td><td>UTAH</td><td>$3,500</td><td>8.46</td><td>1.2</td><td>0</td><td>$3,000</td><td class="val">2.82</td></tr>
+<tr><td>Chris Marshall</td><td>WR</td><td>UTAH</td><td>$4,900</td><td>12.17</td><td>2.8</td><td>0</td><td>$5,800</td><td class="val">2.1</td></tr>
+<tr><td>Sutton Smith</td><td>RB</td><td>UTAH</td><td>$5,400</td><td>12.73</td><td>2.6</td><td>0</td><td>$7,000</td><td class="val">1.82</td></tr>
+<tr><td>KJ Jackson</td><td>QB</td><td>UTAH</td><td>$6,500</td><td>16.96</td><td>5.2</td><td>0</td><td>$9,400</td><td class="val">1.8</td></tr>
+<tr><td>Braylen Russell</td><td>RB</td><td>UTAH</td><td>$5,000</td><td>11.22</td><td>1.7</td><td>0</td><td>$6,600</td><td class="val">1.7</td></tr>
+<tr><td>Jamari Hawkins</td><td>WR</td><td>UTAH</td><td>$3,400</td><td>3.62</td><td>-3.5</td><td>0</td><td>$2,200</td><td class="val">1.65</td></tr>
+<tr><td>Jaden Platt</td><td>WR</td><td>UTAH</td><td>$3,300</td><td>3.3</td><td>-3.7</td><td>0</td><td>$2,000</td><td class="val">1.65</td></tr>
+<tr><td>Ty Lockwood</td><td>WR</td><td>UTAH</td><td>$3,200</td><td>2.84</td><td>-4</td><td>0</td><td>$1,800</td><td class="val">1.58</td></tr>
+<tr><td>Ismael Cisse</td><td>WR</td><td>UTAH</td><td>$3,700</td><td>5.04</td><td>-2.5</td><td>0</td><td>$3,400</td><td class="val">1.48</td></tr>
+<tr><td>Max Gilbert</td><td>K</td><td>UTAH</td><td>$4,400</td><td>5.16</td><td>-3.4</td><td>0</td><td>$4,400</td><td class="val">1.17</td></tr>
+<tr><td>Jelani Watkins</td><td>WR</td><td>UTAH</td><td>$3,000</td><td>1.02</td><td>-5.5</td><td>0</td><td>$1,000</td><td class="val">1.02</td></tr>
+<tr><td>Donovan Faupel</td><td>WR</td><td>UTAH</td><td>$3,100</td><td>1.31</td><td>-5.3</td><td>0</td><td>$1,400</td><td class="val">0.94</td></tr>
+<tr><td>Antonio Jordan</td><td>WR</td><td>UTAH</td><td>$3,000</td><td>0.94</td><td>-5.6</td><td>0</td><td>$1,000</td><td class="val">0.94</td></tr>
+<tr><td>Jasper Parker</td><td>RB</td><td>UTAH</td><td>$4,300</td><td>3.46</td><td>-5</td><td>0</td><td>$4,600</td><td class="val">0.75</td></tr>
+<tr><td>Courtney Crutchfield</td><td>WR</td><td>UTAH</td><td>$3,000</td><td>0.53</td><td>-6</td><td>0</td><td>$1,000</td><td class="val">0.53</td></tr>
+<tr><td>Matt Adcock</td><td>WR</td><td>UTAH</td><td>$3,400</td><td>0.49</td><td>-6.6</td><td>0</td><td>$2,400</td><td class="val">0.2</td></tr>
+</tbody></table>
+<h3>SCRIPT SIX</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Braden Pegan</td><td>UTAH</td><td>WR</td><td>$11,100</td><td class="val">0.93×</td><td>receiving yards 68.5</td></tr>
+<tr><td>FLEX</td><td>Devon Dampier</td><td>UTAH</td><td>QB</td><td>$11,800</td><td class="val">0.77×</td><td>passing yards 228.5</td></tr>
+<tr><td>FLEX</td><td>KJ Jackson</td><td>ARK</td><td>QB</td><td>$9,400</td><td class="val">0.91×</td><td>passing yards 213.5</td></tr>
+<tr><td>FLEX</td><td>Wayshawn Parker</td><td>UTAH</td><td>RB</td><td>$8,800</td><td class="val">1.02×</td><td>rushing yards 89.5</td></tr>
+<tr><td>FLEX</td><td>Chris Marshall</td><td>ARK</td><td>WR</td><td>$5,800</td><td class="val">0.84×</td><td>receiving yards 48.5</td></tr>
+<tr><td>FLEX</td><td>CJ Brown</td><td>ARK</td><td>WR</td><td>$3,000</td><td class="val">0.95×</td><td>receiving yards 28.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Braden Pegan is the captain. Last week 4-81-1. Cheap posted catcher at $7,400 — we keep him so the studs fit. Needs Devon Dampier on the six. ETR 16.74.</li>
+<li>Devon Dampier is on the six. He throws from the pocket. ETR 26.60.</li>
+<li>Wayshawn Parker is on the six. Listed back last week (12 carries). He scored. Also caught 3 for 23. ETR 18.74.</li>
+<li>KJ Jackson is on the six. He runs and throws. Last week: 35 throws for 267, 10 carries for 27. ETR 16.96.</li>
+<li>Chris Marshall is on the six. Last week 7-79. Cheap posted catcher at $5,800 — we keep him so the studs fit. Needs KJ Jackson on the six. ETR 12.17.</li>
+<li>CJ Brown is on the six. Last week 3-37. Cheap posted catcher at $3,000 — we keep him so the studs fit. Needs KJ Jackson on the six. ETR 8.46.</li>
+</ul>
+<h3>ETR BUILD 1</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Braden Pegan</td><td>UTAH</td><td>WR</td><td>$11,100</td><td class="val">0.93×</td><td>receiving yards 68.5</td></tr>
+<tr><td>FLEX</td><td>Devon Dampier</td><td>UTAH</td><td>QB</td><td>$11,800</td><td class="val">0.77×</td><td>passing yards 228.5</td></tr>
+<tr><td>FLEX</td><td>KJ Jackson</td><td>ARK</td><td>QB</td><td>$9,400</td><td class="val">0.91×</td><td>passing yards 213.5</td></tr>
+<tr><td>FLEX</td><td>Wayshawn Parker</td><td>UTAH</td><td>RB</td><td>$8,800</td><td class="val">1.02×</td><td>rushing yards 89.5</td></tr>
+<tr><td>FLEX</td><td>Chris Marshall</td><td>ARK</td><td>WR</td><td>$5,800</td><td class="val">0.84×</td><td>receiving yards 48.5</td></tr>
+<tr><td>FLEX</td><td>CJ Brown</td><td>ARK</td><td>WR</td><td>$3,000</td><td class="val">0.95×</td><td>receiving yards 28.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Braden Pegan is the captain. Last week 4-81-1. Cheap posted catcher at $7,400 — we keep him so the studs fit. Needs Devon Dampier on the six. ETR 16.74.</li>
+<li>Devon Dampier is on the six. He throws from the pocket. ETR 26.60.</li>
+<li>Wayshawn Parker is on the six. Listed back last week (12 carries). He scored. Also caught 3 for 23. ETR 18.74.</li>
+<li>KJ Jackson is on the six. He runs and throws. Last week: 35 throws for 267, 10 carries for 27. ETR 16.96.</li>
+<li>Chris Marshall is on the six. Last week 7-79. Cheap posted catcher at $5,800 — we keep him so the studs fit. Needs KJ Jackson on the six. ETR 12.17.</li>
+<li>CJ Brown is on the six. Last week 3-37. Cheap posted catcher at $3,000 — we keep him so the studs fit. Needs KJ Jackson on the six. ETR 8.46.</li>
+<li>DK priced Braden Pegan + Devon Dampier + Wayshawn Parker + KJ Jackson $300 short — you sit CJ Brown and keep the punt.</li>
+<li>DK priced Braden Pegan + Devon Dampier + Wayshawn Parker + KJ Jackson $500 short — you sit CJ Brown and keep the punt.</li>
+</ul>
+<h3>ETR BUILD 2</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Devon Dampier</td><td>UTAH</td><td>QB</td><td>$17,700</td><td class="val">0.77×</td><td>passing yards 228.5</td></tr>
+<tr><td>FLEX</td><td>KJ Jackson</td><td>ARK</td><td>QB</td><td>$9,400</td><td class="val">0.91×</td><td>passing yards 213.5</td></tr>
+<tr><td>FLEX</td><td>Braden Pegan</td><td>UTAH</td><td>WR</td><td>$7,400</td><td class="val">0.93×</td><td>receiving yards 68.5</td></tr>
+<tr><td>FLEX</td><td>Sutton Smith</td><td>ARK</td><td>RB</td><td>$7,000</td><td class="val">0.71×</td><td>rushing yards 49.5</td></tr>
+<tr><td>FLEX</td><td>Chris Marshall</td><td>ARK</td><td>WR</td><td>$5,800</td><td class="val">0.84×</td><td>receiving yards 48.5</td></tr>
+<tr><td>FLEX</td><td>Ricky Johnson</td><td>UTAH</td><td>WR</td><td>$2,600</td><td class="val">No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Devon Dampier is the captain. He throws from the pocket. ETR 26.60.</li>
+<li>KJ Jackson is on the six. He runs and throws. Last week: 35 throws for 267, 10 carries for 27. ETR 16.96.</li>
+<li>Braden Pegan is on the six. Last week 4-81-1. Cheap posted catcher at $7,400 — we keep him so the studs fit. Needs Devon Dampier on the six. ETR 16.74.</li>
+<li>Sutton Smith is on the six. Workhorse last week (15 carries). Also caught 4 for 43. ETR 12.73.</li>
+<li>Chris Marshall is on the six. Last week 7-79. Cheap posted catcher at $5,800 — we keep him so the studs fit. Needs KJ Jackson on the six. ETR 12.17.</li>
+<li>Ricky Johnson is on the six. Last week 2-25. Cheap posted catcher at $2,600 — we keep him so the studs fit. Needs Devon Dampier on the six. ETR 9.14.</li>
+<li>DK priced Devon Dampier + KJ Jackson + Braden Pegan + Sutton Smith $300 short — you sit Ricky Johnson and keep the punt.</li>
+<li>DK priced Devon Dampier + KJ Jackson + Braden Pegan + Sutton Smith $700 short — you sit Ricky Johnson and keep the punt.</li>
+</ul>
+<h3>ETR BUILD 3</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>KJ Jackson</td><td>ARK</td><td>QB</td><td>$14,100</td><td class="val">0.91×</td><td>passing yards 213.5</td></tr>
+<tr><td>FLEX</td><td>Devon Dampier</td><td>UTAH</td><td>QB</td><td>$11,800</td><td class="val">0.77×</td><td>passing yards 228.5</td></tr>
+<tr><td>FLEX</td><td>Wayshawn Parker</td><td>UTAH</td><td>RB</td><td>$8,800</td><td class="val">1.02×</td><td>rushing yards 89.5</td></tr>
+<tr><td>FLEX</td><td>Braylen Russell</td><td>ARK</td><td>RB</td><td>$6,600</td><td class="val">0.61×</td><td>rushing yards 40.5</td></tr>
+<tr><td>FLEX</td><td>Chris Marshall</td><td>ARK</td><td>WR</td><td>$5,800</td><td class="val">0.84×</td><td>receiving yards 48.5</td></tr>
+<tr><td>FLEX</td><td>Ricky Johnson</td><td>UTAH</td><td>WR</td><td>$2,600</td><td class="val">No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $300  (spent $49,700 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>KJ Jackson is the captain. He runs and throws. Last week: 35 throws for 267, 10 carries for 27. Those rushing yards count at 1.5×. ETR 16.96.</li>
+<li>Devon Dampier is on the six. He throws from the pocket. ETR 26.60.</li>
+<li>Wayshawn Parker is on the six. Listed back last week (12 carries). He scored. Also caught 3 for 23. ETR 18.74.</li>
+<li>Chris Marshall is on the six. Last week 7-79. Cheap posted catcher at $5,800 — we keep him so the studs fit. Needs KJ Jackson on the six. ETR 12.17.</li>
+<li>Braylen Russell is on the six. Workhorse last week (17 carries). He scored. Also caught 1 for 11. ETR 11.22.</li>
+<li>Ricky Johnson is on the six. Last week 2-25. Cheap posted catcher at $2,600 — we keep him so the studs fit. Needs Devon Dampier on the six. ETR 9.14.</li>
+<li>DK priced KJ Jackson + Devon Dampier + Wayshawn Parker + Braden Pegan $500 short — you sit Braylen Russell and keep the punt.</li>
+<li>DK priced KJ Jackson + Devon Dampier + Wayshawn Parker + Sutton Smith $100 short — you sit Braylen Russell and keep the punt.</li>
+</ul>
+<h3>SITS</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Why</th></tr></thead>
+<tbody>
+<tr><td>Maddox Lassiter</td><td>ARK</td><td>out</td></tr>
+<tr><td>Byrd Ficklin as a second quarterback</td><td>—</td><td>package player. DraftKings prices the backup high. Sit</td></tr>
+<tr><td>AJ Hill</td><td>ARK</td><td>backup. Sit</td></tr>
+<tr><td>Cam Settles</td><td>ARK</td><td>did not dress the opener. Sit until we see him</td></tr>
+<tr><td>Kickers</td><td>—</td><td>sitting both sides</td></tr>
+</tbody></table>
+</div>
+<div class="player-book"><h3>Player book</h3><p class="sub">Quarterbacks, running backs, and receivers are separate tables. One row per player. Week 1, Week 2, Week 3 sit side by side — teal is up from last week, red is down. Click a header to sort. A new week column appears after that box is in. A blank cell is —.</p><div class="team-pills noprint"><button type="button" class="team-pill on" data-team="ALL">All</button><button type="button" class="team-pill" data-team="UTAH">Utah</button><button type="button" class="team-pill" data-team="ARK">Arkansas</button></div><section class="pos-book" data-pos="QB"><h4>Quarterbacks</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Att</th><th scope="col" class="w0" data-col="5">Yds</th><th scope="col" class="w0" data-col="6">TD</th><th scope="col" class="w0" data-col="7">RAtt</th><th scope="col" class="w0" data-col="8">Rush</th><th scope="col" class="w0" data-col="9">rTD</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="UTAH"><td class="who">Devon Dampier</td><td class="who">Utah</td><td class="who" data-n="11800">$11,800</td><td class="w0 opp">Idaho</td><td class="w0" data-n="18">18</td><td class="w0" data-n="176">176</td><td class="w0" data-n="3">3</td><td class="w0" data-n="6">6</td><td class="w0" data-n="31">31</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="22.14">22.14</td></tr><tr data-team="UTAH"><td class="who">Byrd Ficklin</td><td class="who">Utah</td><td class="who" data-n="9800">$9,800</td><td class="w0 opp">Idaho</td><td class="w0" data-n="8">8</td><td class="w0" data-n="93">93</td><td class="w0" data-n="2">2</td><td class="w0" data-n="8">8</td><td class="w0" data-n="70">70</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="18.72">18.72</td></tr><tr data-team="ARK"><td class="who">KJ Jackson</td><td class="who">Arkansas</td><td class="who" data-n="9400">$9,400</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="35">35</td><td class="w0" data-n="267">267</td><td class="w0" data-n="3">3</td><td class="w0" data-n="10">10</td><td class="w0" data-n="27">27</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="24.38">24.38</td></tr><tr data-team="UTAH"><td class="who">Brandon Rose</td><td class="who">Utah</td><td class="who" data-n="6000">$6,000</td><td class="w0 opp">Idaho</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0" data-n="2">2</td><td class="w0" data-n="8">8</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="0.8">0.8</td></tr></tbody></table></div></section><section class="pos-book" data-pos="RB"><h4>Running backs</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">RAtt</th><th scope="col" class="w0" data-col="5">Rush</th><th scope="col" class="w0" data-col="6">rTD</th><th scope="col" class="w0" data-col="7">Rec</th><th scope="col" class="w0" data-col="8">Tgt</th><th scope="col" class="w0" data-col="9">Yds</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="UTAH"><td class="who">Wayshawn Parker</td><td class="who">Utah</td><td class="who" data-n="8800">$8,800</td><td class="w0 opp">Idaho</td><td class="w0" data-n="12">12</td><td class="w0" data-n="71">71</td><td class="w0" data-n="1">1</td><td class="w0" data-n="3">3</td><td class="w0" data-n="3">3</td><td class="w0" data-n="23">23</td><td class="w0 val" data-n="30.4">30.4</td></tr><tr data-team="UTAH"><td class="who">Steve Chavez-Soto</td><td class="who">Utah</td><td class="who" data-n="8000">$8,000</td><td class="w0 opp">Idaho</td><td class="w0" data-n="6">6</td><td class="w0" data-n="35">35</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="9.5">9.5</td></tr><tr data-team="UTAH"><td class="who">LaMarcus Bell</td><td class="who">Utah</td><td class="who" data-n="7200">$7,200</td><td class="w0 opp">Idaho</td><td class="w0" data-n="7">7</td><td class="w0" data-n="87">87</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="14.7">14.7</td></tr><tr data-team="ARK"><td class="who">Sutton Smith</td><td class="who">Arkansas</td><td class="who" data-n="7000">$7,000</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="15">15</td><td class="w0" data-n="36">36</td><td class="w0" data-n="0">0</td><td class="w0" data-n="4">4</td><td class="w0" data-n="5">5</td><td class="w0" data-n="43">43</td><td class="w0 val" data-n="11.9">11.9</td></tr><tr data-team="ARK"><td class="who">Braylen Russell</td><td class="who">Arkansas</td><td class="who" data-n="6600">$6,600</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="17">17</td><td class="w0" data-n="49">49</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="11">11</td><td class="w0 val" data-n="13">13.0</td></tr><tr data-team="UTAH"><td class="who">Daniel Bray</td><td class="who">Utah</td><td class="who" data-n="5400">$5,400</td><td class="w0 opp">Idaho</td><td class="w0" data-n="2">2</td><td class="w0" data-n="13">13</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.3">1.3</td></tr><tr data-team="ARK"><td class="who">Jasper Parker</td><td class="who">Arkansas</td><td class="who" data-n="4600">$4,600</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="4">4</td><td class="w0" data-n="17">17</td><td class="w0" data-n="0">0</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="21">21</td><td class="w0 val" data-n="4.8">4.8</td></tr><tr data-team="UTAH"><td class="who">Mateaki Helu</td><td class="who">Utah</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Idaho</td><td class="w0" data-n="3">3</td><td class="w0" data-n="25">25</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="2.5">2.5</td></tr></tbody></table></div></section><section class="pos-book" data-pos="WR"><h4>Wide receivers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Rec</th><th scope="col" class="w0" data-col="5">Tgt</th><th scope="col" class="w0" data-col="6">Yds</th><th scope="col" class="w0" data-col="7">TD</th><th scope="col" class="w0" data-col="8">RAtt</th><th scope="col" class="w0" data-col="9">Rush</th><th scope="col" class="w0" data-col="10">DK</th></tr></thead><tbody><tr data-team="UTAH"><td class="who">Braden Pegan</td><td class="who">Utah</td><td class="who" data-n="7400">$7,400</td><td class="w0 opp">Idaho</td><td class="w0" data-n="4">4</td><td class="w0" data-n="5">5</td><td class="w0" data-n="81">81</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="12">12</td><td class="w0 val" data-n="25.3">25.3</td></tr><tr data-team="ARK"><td class="who">Chris Marshall</td><td class="who">Arkansas</td><td class="who" data-n="5800">$5,800</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="7">7</td><td class="w0" data-n="10">10</td><td class="w0" data-n="79">79</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="14.9">14.9</td></tr><tr data-team="UTAH"><td class="who">Larry Simmons</td><td class="who">Utah</td><td class="who" data-n="5000">$5,000</td><td class="w0 opp">Idaho</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0" data-n="41">41</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="6.1">6.1</td></tr><tr data-team="UTAH"><td class="who">Hunter Andrews</td><td class="who">Utah</td><td class="who" data-n="4200">$4,200</td><td class="w0 opp">Idaho</td><td class="w0" data-n="2">2</td><td class="w0" data-n="3">3</td><td class="w0" data-n="14">14</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="13">13</td><td class="w0 val" data-n="10.7">10.7</td></tr><tr data-team="UTAH"><td class="who">Creed Whittemore</td><td class="who">Utah</td><td class="who" data-n="3600">$3,600</td><td class="w0 opp">Idaho</td><td class="w0" data-n="2">2</td><td class="w0" data-n="4">4</td><td class="w0" data-n="27">27</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.7">4.7</td></tr><tr data-team="ARK"><td class="who">Ismael Cisse</td><td class="who">Arkansas</td><td class="who" data-n="3400">$3,400</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="20">20</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="9">9.0</td></tr><tr data-team="UTAH"><td class="who">Noah Bennee</td><td class="who">Utah</td><td class="who" data-n="3200">$3,200</td><td class="w0 opp">Idaho</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="35">35</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="10.5">10.5</td></tr><tr data-team="ARK"><td class="who">CJ Brown</td><td class="who">Arkansas</td><td class="who" data-n="3000">$3,000</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="3">3</td><td class="w0" data-n="5">5</td><td class="w0" data-n="37">37</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="6.7">6.7</td></tr><tr data-team="UTAH"><td class="who">Ricky Johnson</td><td class="who">Utah</td><td class="who" data-n="2600">$2,600</td><td class="w0 opp">Idaho</td><td class="w0" data-n="2">2</td><td class="w0" data-n="5">5</td><td class="w0" data-n="25">25</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.5">4.5</td></tr><tr data-team="ARK"><td class="who">Matt Adcock</td><td class="who">Arkansas</td><td class="who" data-n="2400">$2,400</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="7.2">7.2</td></tr><tr data-team="ARK"><td class="who">Jaden Platt</td><td class="who">Arkansas</td><td class="who" data-n="2000">$2,000</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="10">10</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="8">8.0</td></tr><tr data-team="ARK"><td class="who">Ty Lockwood</td><td class="who">Arkansas</td><td class="who" data-n="1800">$1,800</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0" data-n="22">22</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.2">4.2</td></tr><tr data-team="UTAH"><td class="who">Mana Carvalho</td><td class="who">Utah</td><td class="who" data-n="1600">$1,600</td><td class="w0 opp">Idaho</td><td class="w0" data-n="1">1</td><td class="w0" data-n="3">3</td><td class="w0" data-n="23">23</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="3.3">3.3</td></tr><tr data-team="ARK"><td class="who">Donovan Faupel</td><td class="who">Arkansas</td><td class="who" data-n="1400">$1,400</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="9">9</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.9">1.9</td></tr><tr data-team="ARK"><td class="who">Antonio Jordan</td><td class="who">Arkansas</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="1">1</td><td class="w0" data-n="2">2</td><td class="w0" data-n="7">7</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.7">1.7</td></tr><tr data-team="ARK"><td class="who">Jelani Watkins</td><td class="who">Arkansas</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0" data-n="0">0</td><td class="w0" data-n="2">2</td><td class="w0" data-n="21">21</td><td class="w0 val" data-n="3.7">3.7</td></tr><tr data-team="UTAH"><td class="who">Team</td><td class="who">Utah</td><td class="who">—</td><td class="w0 opp">Idaho</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0" data-n="1">1</td><td class="w0" data-n="-1">-1</td><td class="w0 val" data-n="-0.1">-0.1</td></tr><tr data-team="ARK"><td class="who">Team</td><td class="who">Arkansas</td><td class="who">—</td><td class="w0 opp">North Alabama</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0" data-n="1">1</td><td class="w0" data-n="-2">-2</td><td class="w0 val" data-n="-0.2">-0.2</td></tr></tbody></table></div></section><section class="pos-book" data-pos="K"><h4>Kickers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="4">Week 1</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">FG</th><th scope="col" class="w0" data-col="5">XP</th><th scope="col" class="w0" data-col="6">DK</th></tr></thead><tbody><tr data-team="UTAH"><td class="who">Dillon Curtis</td><td class="who">Utah</td><td class="who" data-n="5200">$5,200</td><td class="w0 opp">Idaho</td><td class="w0" data-n="1">1</td><td class="w0" data-n="7">7</td><td class="w0 val" data-n="10">10.0</td></tr><tr data-team="UTAH"><td class="who">Tanner Cragun</td><td class="who">Utah</td><td class="who" data-n="5200">$5,200</td><td class="w0 opp">Idaho</td><td class="w0" data-n="0">0</td><td class="w0" data-n="2">2</td><td class="w0 val" data-n="2">2.0</td></tr><tr data-team="ARK"><td class="who">Max Gilbert</td><td class="who">Arkansas</td><td class="who" data-n="4400">$4,400</td><td class="w0 opp">North Alabama</td><td class="w0" data-n="1">1</td><td class="w0" data-n="4">4</td><td class="w0 val" data-n="7">7.0</td></tr></tbody></table></div></section></div>
+</article>
+</main></div>
+<script>
+(function(){
+  document.addEventListener('click', function(e){
+    var pill=e.target.closest('.team-pill');
+    if(!pill) return;
+    var book=pill.closest('.player-book');
+    if(!book) return;
+    var team=pill.getAttribute('data-team')||'ALL';
+    book.querySelectorAll('.team-pill').forEach(function(p){
+      p.classList.toggle('on', p===pill);
+    });
+    var inp=document.getElementById('playerSearch');
+    if(inp) inp.dispatchEvent(new Event('input'));
+    else {
+      book.querySelectorAll('table.season-log tbody tr').forEach(function(tr){
+        var rowTeam=tr.getAttribute('data-team')||'';
+        tr.hidden = !!(team && team!=='ALL' && rowTeam!==team);
+      });
+      book.querySelectorAll('.pos-book').forEach(function(sec){
+        var any=false;
+        sec.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) any=true; });
+        sec.classList.toggle('search-empty', !any);
+      });
+    }
+  });
+})();
+</script>
+<script>
+(function(){
+  var KEY='desk-report-theme';
+  function apply(mode){
+    document.documentElement.classList.toggle('light', mode==='light');
+    var b=document.getElementById('themeBtn');
+    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  var saved=null;
+  try { saved=localStorage.getItem(KEY); } catch (e) {}
+  apply(saved==='light'?'light':'dark');
+  window.toggleDeskTheme=function(){
+    apply(document.documentElement.classList.contains('light')?'dark':'light');
+  };
+})();
+(function(){
+  function val(td){
+    if(!td) return {n:false, v:null, s:''};
+    var dn=td.getAttribute('data-n');
+    if(dn!==null && dn!==''){
+      var n=parseFloat(dn);
+      if(!isNaN(n)) return {n:true, v:n, s:dn};
+    }
+    var t=(td.textContent||'').trim();
+    if(!t || t==='—' || t==='-') return {n:false, v:null, s:''};
+    var raw=t.replace(/[$,×x]/g,'').replace(/,/g,'');
+    if(/^-?\d+(\.\d+)?$/.test(raw)) return {n:true, v:parseFloat(raw), s:t};
+    return {n:false, v:t.toLowerCase(), s:t};
+  }
+  function sortTable(table, col, dir){
+    var tb=table && table.tBodies[0];
+    if(!tb) return;
+    Array.prototype.forEach.call(table.querySelectorAll('th'), function(h){
+      h.removeAttribute('data-dir');
+    });
+    var mark=table.querySelector('th[data-col="'+col+'"]');
+    if(mark) mark.setAttribute('data-dir', dir);
+    var rows=Array.prototype.slice.call(tb.rows);
+    rows.sort(function(a,b){
+      var A=val(a.cells[col]||{});
+      var B=val(b.cells[col]||{});
+      if(A.v===null && B.v===null) return 0;
+      if(A.v===null) return 1;
+      if(B.v===null) return -1;
+      var cmp=0;
+      if(A.n && B.n) cmp=A.v-B.v;
+      else cmp=String(A.v).localeCompare(String(B.v));
+      return dir==='asc' ? cmp : -cmp;
+    });
+    rows.forEach(function(r){ tb.appendChild(r); });
+  }
+  document.addEventListener('click', function(e){
+    var th=e.target.closest('table.sortable th');
+    if(!th) return;
+    var table=th.closest('table');
+    if(!table) return;
+    var raw=th.getAttribute('data-col');
+    if(raw===null) return;
+    var dir=th.getAttribute('data-dir')==='asc' ? 'desc' : 'asc';
+    sortTable(table, parseInt(raw,10), dir);
+  });
+  document.querySelectorAll('table.sortable[data-default-sort]').forEach(function(table){
+    var want=(table.getAttribute('data-default-sort')||'').toLowerCase();
+    var ths=table.querySelectorAll('th[data-col]');
+    var idx=-1;
+    for(var i=0;i<ths.length;i++){
+      var t=(ths[i].textContent||'').trim().toLowerCase();
+      if(t===want || t.indexOf(want)>=0 || want.indexOf(t)>=0){
+        idx=parseInt(ths[i].getAttribute('data-col'),10);
+        break;
+      }
+    }
+    if(idx>=0) sortTable(table, idx, 'desc');
+  });
+})();
+</script>
+<script>
+(function(){
+  function norm(s){
+    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+  }
+  function skip(el){
+    return !!(el.closest && el.closest('dialog, .pcard, .rail'));
+  }
+  function playerIdx(table){
+    var ths=table.querySelectorAll('thead th');
+    for(var i=0;i<ths.length;i++){
+      var t=norm(ths[i].textContent);
+      if(t==='player'||t==='name') return i;
+    }
+    return -1;
+  }
+  function rowHit(tr, q, pidx){
+    if(!q) return true;
+    if(pidx>=0 && tr.cells[pidx]) return norm(tr.cells[pidx].textContent).indexOf(q)>=0;
+    return norm(tr.textContent).indexOf(q)>=0;
+  }
+  function apply(opts){
+    opts = opts || {};
+    var inp=document.getElementById('playerSearch');
+    if(!inp) return;
+    var q=norm(inp.value);
+    var n=0;
+    var hitSel='tbody tr:not([hidden]), li:not([hidden])';
+    function teamOk(tr){
+      var book=tr.closest && tr.closest('.player-book');
+      if(!book) return true;
+      var on=book.querySelector('.team-pill.on');
+      var team=on ? (on.getAttribute('data-team')||'ALL') : 'ALL';
+      if(!team || team==='ALL') return true;
+      return (tr.getAttribute('data-team')||'')===team;
+    }
+    function mark(el, hit){
+      el.hidden = !hit;
+      el.classList.toggle('name-hit', !!(q && hit));
+      if(q && hit) n++;
+    }
+    document.querySelectorAll('table tbody tr').forEach(function(tr){
+      if(skip(tr)) return;
+      var ok=teamOk(tr) && rowHit(tr, q, playerIdx(tr.closest('table')));
+      mark(tr, ok);
+    });
+    document.querySelectorAll('table').forEach(function(t){
+      if(skip(t)) return;
+      var any=false;
+      var tb=t.tBodies[0];
+      if(tb){
+        Array.prototype.forEach.call(tb.rows, function(r){ if(!r.hidden) any=true; });
+      }
+      t.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.pos-book').forEach(function(sec){
+      var any=false;
+      sec.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) any=true; });
+      sec.classList.toggle('search-empty', !any);
+    });
+    document.querySelectorAll('.week-book-wrap').forEach(function(w){
+      var t=w.querySelector('table');
+      w.classList.toggle('search-empty', !!(t && t.classList.contains('search-empty')));
+    });
+    document.querySelectorAll('li').forEach(function(li){
+      if(skip(li)) return;
+      mark(li, !q || norm(li.textContent).indexOf(q)>=0);
+    });
+    var hint=document.getElementById('playerSearchHint');
+    if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
+    if(opts.jump){
+      var shownArt=document.querySelector('article.panel');
+      var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
+      if(jumpEl){
+        setTimeout(function(){
+          try { jumpEl.scrollIntoView({block:'center', behavior:'smooth'}); }
+          catch (err) { jumpEl.scrollIntoView(true); }
+        }, 40);
+      }
+    }
+  }
+  var form=document.getElementById('playerSearchForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      apply({jump:true});
+    });
+  }
+  var inp=document.getElementById('playerSearch');
+  if(inp){
+    inp.addEventListener('input', function(){ apply({}); });
+    inp.addEventListener('search', function(){ apply({jump:true}); });
+    inp.addEventListener('keydown', function(e){
+      if(e.key==='Enter' || e.keyCode===13){
+        e.preventDefault();
+        apply({jump:true});
+      }
+    });
+  }
+})();
+</script>
+</body></html>
