@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MLB Props 2026-09-09</title>
+<style>
+:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#9ef0f0;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#007d79;--table:#262626;--cell:#525252;--th:#393939;--val:#3ddbd9;--h:#3ddbd9;}
+html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#004144;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#007d79;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#005d5d;--h:#005d5d;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+.tab{position:absolute;left:-9999px;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);}
+.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
+.pill:hover{background:var(--pill-hover);}
+button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
+button.pdf:hover{filter:brightness(1.08);}
+button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.5rem .7rem;}
+button.theme:hover{background:var(--pill-hover);}
+.hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:58rem;}
+h1{font-size:1.6rem;margin:0 0 .3rem;}
+h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
+h4{margin:.8rem 0 .4rem;}
+.sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
+table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.88rem;background:var(--table);}
+th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
+th{background:var(--th);color:var(--pill-fg);}
+td.val{font-weight:700;color:var(--val);white-space:nowrap;}
+ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
+li{margin:.35rem 0;}
+.panel{display:none;}
+@media print{
+  html,body,html.light,html.light body{background:#fff;color:#111;}
+  .shell{display:block;}
+  .rail,.noprint{display:none !important;}
+  main{max-width:none;padding:0;}
+  .panel{display:block !important;page-break-after:always;}
+  .panel:last-child{page-break-after:auto;}
+  table{background:#fff;page-break-inside:avoid;}
+  th{background:#eee;color:#333;}
+  td.val{color:#000;}
+  h2,h3,h4{page-break-after:avoid;color:#111;}
+}
+@page{margin:.5in;}
+#g0:checked ~ .shell .rail label[for=g0]{{background:var(--accent);color:#fff;border-color:var(--accent);}}
+#g0:checked ~ .shell main .p0{display:block;}
+#g1:checked ~ .shell .rail label[for=g1]{{background:var(--accent);color:#fff;border-color:var(--accent);}}
+#g1:checked ~ .shell main .p1{display:block;}
+#g2:checked ~ .shell .rail label[for=g2]{{background:var(--accent);color:#fff;border-color:var(--accent);}}
+#g2:checked ~ .shell main .p2{display:block;}
+</style>
+</head><body>
+<input class="tab" type="radio" name="g" id="g0" checked/>
+<input class="tab" type="radio" name="g" id="g1"/>
+<input class="tab" type="radio" name="g" id="g2"/>
+<div class="shell">
+<aside class="rail noprint">
+<p class="brand">MLB PROPS<br/>2026-09-09</p>
+<label class="pill" for="g0"><span class="when">results</span>Yesterday</label>
+<label class="pill" for="g1"><span class="when">the list</span>Top 20</label>
+<label class="pill" for="g2"><span class="when">the card</span>Pick 6</label>
+<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
+<button class="pdf" type="button" onclick="window.print()">Save as PDF</button>
+<p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
+</aside>
+<main>
+<h1>MLB Hits+Runs+RBIs — September 9, 2026</h1>
+<p class="sub">Advanced top 20 and one stacked Pick 6. Hits + runs + RBIs.</p>
+<article class="panel p0">
+<h3>YESTERDAY&#x27;S RESULTS (2026-09-08)</h3>
+<p><b>15 games</b> (all Final) | <b>56 legs graded</b> | HIT 21 / MISS 30 / VOID 5 | <b>Overall hit rate: 21/51 (41.2%)</b></p>
+<h4>Card results</h4>
+<table>
+<thead><tr><th>Card</th><th>Record</th><th>H/M/V</th></tr></thead>
+<tbody>
+<tr><td>Thomas Saggese, Joshua Báez, Leo Bernal, Elly De La Cruz, Héctor Rodríguez, Eugenio Suárez</td><td>1/6</td><td>1/5/0</td></tr>
+<tr><td>TJ Rumfield, Jake McCarthy, Adael Amador, Pete Crow-Armstrong, Carson Kelly, Alex Bregman</td><td>3/6</td><td>3/3/0</td></tr>
+<tr><td>Ryan Jeffers, Kaelen Culpepper, Luke Keaschall, Bo Bichette, A.J. Ewing, Francisco Lindor</td><td>3/6</td><td>3/3/0</td></tr>
+<tr><td>Ben Rice, Vladimir Guerrero Jr., José Caballero, Ben Malgeri</td><td>1/3</td><td>1/2/1</td></tr>
+<tr><td>Yandy Díaz, Bryce Eldridge, Javier Sanoja, Cody Bellinger</td><td>4/4</td><td>4/0/0</td></tr>
+<tr><td>Thomas Saggese, Elly De La Cruz, Pete Crow-Armstrong, Rafael Devers, Riley Greene, Tommy Edman</td><td>1/6</td><td>1/5/0</td></tr>
+<tr><td>Héctor Rodríguez, TJ Rumfield, Zack Gelof, Ronald Acuña Jr., Jackson Chourio, Carter Jensen</td><td>3/6</td><td>3/3/0</td></tr>
+<tr><td>Advanced · Pick 6 — Teoscar Hernández, Freddie Freeman, Yandy Díaz, Nathan Lukes, Brett Bateman, Junior Caminero</td><td>4/6</td><td>4/2/0</td></tr>
+<tr><td>Fernando Tatis Jr., Yordan Alvarez, Heriberto Hernández</td><td>0/3</td><td>0/3/0</td></tr>
+<tr><td>Made the Cut · Pick 6 — Jackson Chourio, Henry Bolte, Jeff McNeil, William Contreras, Teoscar Hernández, Freddie Freeman</td><td>3/6</td><td>3/3/0</td></tr>
+<tr><td>Brenton Doyle, Bryson Stott, Alec Bohm, Corbin Carroll, Matt Shaw, Nolan Gorman, Jose Siri, Trevor Story, Jake Meyers, Wilyer Abreu, Nico Hoerner, Lane Thomas</td><td>3/8</td><td>3/5/4</td></tr>
+</tbody></table>
+<h3>Made the Cut — grade board</h3>
+<p>Every recommended bat with pick-time overall, boxscore result, and ship flags.</p>
+<table>
+<thead><tr><th>Pick</th><th>Team</th><th>Overall</th><th>Line</th><th>HRR</th><th>Grade</th><th>On $20 slip</th><th>Lab P6</th></tr></thead>
+<tbody>
+<tr><td>Henry Bolte</td><td>ATH</td><td class="val">100</td><td class="val">O1.5</td><td class="val">2</td><td class="val"><b>HIT</b></td><td>rec only</td><td>—</td></tr>
+<tr><td>Jackson Chourio</td><td>MIL</td><td class="val">100</td><td class="val">O1.5</td><td class="val">8</td><td class="val"><b>HIT</b></td><td>rec only</td><td>—</td></tr>
+<tr><td>Jeff McNeil</td><td>ATH</td><td class="val">100</td><td class="val">O1.5</td><td class="val">1</td><td class="val"><b>MISS</b></td><td>rec only</td><td>—</td></tr>
+<tr><td>Teoscar Hernández</td><td>LAD</td><td class="val">100</td><td class="val">1.5*</td><td class="val">—</td><td class="val"><b>—</b></td><td>rec only</td><td>yes</td></tr>
+<tr><td>Yandy Díaz</td><td>TB</td><td class="val">100</td><td class="val">1.5*</td><td class="val">—</td><td class="val"><b>—</b></td><td>rec only</td><td>yes</td></tr>
+<tr><td>Freddie Freeman</td><td>LAD</td><td class="val">100</td><td class="val">O1.5</td><td class="val">0</td><td class="val"><b>MISS</b></td><td>rec only</td><td>yes</td></tr>
+<tr><td>William Contreras</td><td>MIL</td><td class="val">100</td><td class="val">O1.5</td><td class="val">1</td><td class="val"><b>MISS</b></td><td>rec only</td><td>—</td></tr>
+<tr><td>Riley Greene</td><td>DET</td><td class="val">100</td><td class="val">O1.5</td><td class="val">0</td><td class="val"><b>MISS</b></td><td>rec only</td><td>—</td></tr>
+<tr><td>Zack Gelof</td><td>ATH</td><td class="val">98</td><td class="val">O1.5</td><td class="val">0</td><td class="val"><b>MISS</b></td><td>rec only</td><td>—</td></tr>
+<tr><td>Bryce Eldridge</td><td>SF</td><td class="val">95</td><td class="val">O1.5</td><td class="val">3</td><td class="val"><b>HIT</b></td><td>rec only</td><td>—</td></tr>
+<tr><td>Javier Sanoja</td><td>MIA</td><td class="val">95</td><td class="val">O1.5</td><td class="val">2</td><td class="val"><b>HIT</b></td><td>rec only</td><td>—</td></tr>
+<tr><td>Cody Bellinger</td><td>NYY</td><td class="val">94</td><td class="val">O1.5</td><td class="val">3</td><td class="val"><b>HIT</b></td><td>rec only</td><td>—</td></tr>
+</tbody></table>
+<h4>Summary</h4>
+<table>
+<thead><tr><th>Bucket</th><th>HIT</th><th>MISS</th><th>VOID</th><th>Hit rate</th></tr></thead>
+<tbody>
+<tr><td><b>Made the Cut (12)</b></td><td>5</td><td>5</td><td>0</td><td><b>50.0% (5/10)</b></td></tr>
+<tr><td>On $20 slip</td><td>0</td><td>0</td><td>0</td><td>—</td></tr>
+<tr><td>Rec only (not on slip)</td><td>5</td><td>5</td><td>0</td><td>50.0% (5/10)</td></tr>
+<tr><td>Overall 90+</td><td>5</td><td>5</td><td>—</td><td>50.0% (5/10)</td></tr>
+<tr><td>Overall 80–89</td><td>0</td><td>0</td><td>—</td><td>—</td></tr>
+<tr><td>Line O1.5</td><td>5</td><td>5</td><td>—</td><td>50.0% (5/10)</td></tr>
+<tr><td>Line O2.5</td><td>0</td><td>0</td><td>—</td><td>—</td></tr>
+</tbody></table>
+<h3>Under the Cut — grade board</h3>
+<p>Less / Under recs. HIT when hits+runs+RBIs stayed under the line (U1.5 → ≤1, U2.5 → ≤2).</p>
+<table>
+<thead><tr><th>Pick</th><th>Team</th><th>Overall</th><th>Under line</th><th>Under score</th><th>HRR</th><th>Grade</th></tr></thead>
+<tbody>
+<tr><td>Brenton Doyle</td><td>CWS</td><td class="val">49</td><td>U1.5*</td><td>105</td><td class="val">0</td><td class="val"><b>VOID</b></td></tr>
+<tr><td>Bryson Stott</td><td>PHI</td><td class="val">44</td><td>U1.5</td><td>99</td><td class="val">2</td><td class="val"><b>MISS</b></td></tr>
+<tr><td>Alec Bohm</td><td>PHI</td><td class="val">48</td><td>U1.5</td><td>99</td><td class="val">2</td><td class="val"><b>MISS</b></td></tr>
+<tr><td>Corbin Carroll</td><td>AZ</td><td class="val">52</td><td>U1.5</td><td>97</td><td class="val">0</td><td class="val"><b>VOID</b></td></tr>
+<tr><td>Matt Shaw</td><td>CHC</td><td class="val">46</td><td>U1.5*</td><td>96</td><td class="val">0</td><td class="val"><b>HIT</b></td></tr>
+<tr><td>Nolan Gorman</td><td>STL</td><td class="val">50</td><td>U1.5*</td><td>96</td><td class="val">0</td><td class="val"><b>HIT</b></td></tr>
+<tr><td>Jose Siri</td><td>LAA</td><td class="val">47</td><td>U1.5*</td><td>94</td><td class="val">2</td><td class="val"><b>MISS</b></td></tr>
+<tr><td>Trevor Story</td><td>BOS</td><td class="val">51</td><td>U1.5</td><td>91</td><td class="val">2</td><td class="val"><b>MISS</b></td></tr>
+<tr><td>Jake Meyers</td><td>HOU</td><td class="val">54</td><td>U1.5*</td><td>91</td><td class="val">0</td><td class="val"><b>VOID</b></td></tr>
+<tr><td>Wilyer Abreu</td><td>BOS</td><td class="val">50</td><td>U1.5</td><td>90</td><td class="val">1</td><td class="val"><b>HIT</b></td></tr>
+<tr><td>Nico Hoerner</td><td>CHC</td><td class="val">49</td><td>U1.5</td><td>89</td><td class="val">3</td><td class="val"><b>MISS</b></td></tr>
+<tr><td>Lane Thomas</td><td>ATL</td><td class="val">54</td><td>U1.5*</td><td>88</td><td class="val">0</td><td class="val"><b>VOID</b></td></tr>
+</tbody></table>
+<p><b>Under the Cut (12):</b> HIT 3 / MISS 5 / VOID 4 · hit rate 37.5% (3/8)</p>
+<p><b>Calibrated:</b> yes</p>
+</article>
+<article class="panel p1">
+<h2>ADVANCED — TOP 20 · 2026-09-09</h2>
+<p>Grouped by team (A–Z). # is Advanced rank. Ticket = on the stacked Pick 6.</p>
+<table>
+<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Matchup</th><th>Why</th><th>Ticket</th></tr></thead><tbody>
+<tr><td class="val">13</td><td>TJ Rumfield</td><td>COL</td><td>3</td><td class="val">O1.5</td><td class="val">97</td><td>25/34/10</td><td>vs Warren (soft)</td><td>Hot week. Home ERA 4.02. Team L3 21.</td><td>rec only</td></tr>
+<tr><td class="val">11</td><td>Bobby Witt Jr.</td><td>KC</td><td>2</td><td class="val">O1.5</td><td class="val">100</td><td>12/26/5</td><td>vs Gallen (cold)</td><td>Warm week. Road ERA 6.84 (leaky). Lineup rolling (3 hot). Team L3 13.</td><td>rec only</td></tr>
+<tr><td class="val">20</td><td>Vinnie Pasquantino</td><td>KC</td><td>3</td><td class="val">O1.5</td><td class="val">91</td><td>15/27/10</td><td>vs Gallen (cold)</td><td>Warm week. Road ERA 6.84 (leaky). Lineup rolling (3 hot). Team L3 13.</td><td>rec only</td></tr>
+<tr><td class="val">12</td><td>Tommy Edman</td><td>LAD</td><td>1</td><td class="val">O1.5</td><td class="val">100</td><td>21/38/6</td><td>vs Lowder (cold)</td><td>Hot week. Road ERA 6.79 (leaky). Team L3 16. Cooked pen.</td><td>rec only</td></tr>
+<tr><td class="val">16</td><td>Mookie Betts</td><td>LAD</td><td>2</td><td class="val">O1.5</td><td class="val">96</td><td>27/37/10</td><td>vs Lowder (cold)</td><td>Hot week. Road ERA 6.79 (leaky). Team L3 16. Cooked pen.</td><td>rec only</td></tr>
+<tr><td class="val">6</td><td>Otto Lopez</td><td>MIA</td><td>2</td><td class="val">O1.5</td><td class="val">100</td><td>13/27/8</td><td>vs Stock (cold)</td><td>Warm week. Road ERA 8.64 (leaky). Lineup rolling (3 hot). Team L3 19.</td><td>rec only</td></tr>
+<tr><td class="val">10</td><td>Javier Sanoja</td><td>MIA</td><td>4</td><td class="val">O1.5</td><td class="val">98</td><td>22/36/12</td><td>vs Stock (cold)</td><td>Hot week. Road ERA 8.64 (leaky). Lineup rolling (3 hot). Team L3 19.</td><td>rec only</td></tr>
+<tr><td class="val">4</td><td>Ben Rice</td><td>NYY</td><td>1</td><td class="val">O2.5</td><td class="val">100</td><td>16/38/6</td><td>vs Sugano (cold)</td><td>Warm week. Pen ERA 5.5. Road ERA 5.46 (soft). Team L3 13.</td><td>rec only</td></tr>
+<tr><td class="val">14</td><td>Cody Bellinger</td><td>NYY</td><td>2</td><td class="val">1.5@0.8x</td><td class="val">94</td><td>21/37/8</td><td>vs Sugano (cold)</td><td>Hot week. Pen ERA 5.5. Road ERA 5.46 (soft). Team L3 13.</td><td>rec only</td></tr>
+<tr><td class="val">18</td><td>Heliot Ramos</td><td>NYY</td><td>3</td><td class="val">1.5*</td><td class="val">88</td><td>13/18/6</td><td>vs Sugano (cold)</td><td>Warm week. Pen ERA 5.5. Road ERA 5.46 (soft). Team L3 13.</td><td>rec only</td></tr>
+<tr><td class="val">17</td><td>Fernando Tatis Jr.</td><td>SD</td><td>1</td><td class="val">1.5@0.8x</td><td class="val">92</td><td>18/24/8</td><td>vs Kent (cold)</td><td>Warm week. Road ERA 7.43 (leaky). Team L3 12. Cooked pen.</td><td>rec only</td></tr>
+<tr><td class="val">8</td><td>Dominic Canzone</td><td>SEA</td><td>2</td><td class="val">O1.5</td><td class="val">97</td><td>15/29/7</td><td>vs Bradford (soft)</td><td>Warm week. Road ERA 4.32. Lineup rolling (3 hot). Team L3 9. Cooked pen.</td><td>on a ticket</td></tr>
+<tr><td class="val">9</td><td>Randy Arozarena</td><td>SEA</td><td>1</td><td class="val">O1.5</td><td class="val">96</td><td>17/31/6</td><td>vs Bradford (soft)</td><td>Warm week. Road ERA 4.32. Lineup rolling (3 hot). Team L3 9. Cooked pen.</td><td>on a ticket</td></tr>
+<tr><td class="val">19</td><td>Josh Naylor</td><td>SEA</td><td>6</td><td class="val">O1.5</td><td class="val">99</td><td>13/23/3</td><td>vs Bradford (soft)</td><td>Warm week. Road ERA 4.32. Lineup rolling (3 hot). Team L3 9. Cooked pen.</td><td>on a ticket</td></tr>
+<tr><td class="val">7</td><td>Alec Burleson</td><td>STL</td><td>3</td><td class="val">O1.5</td><td class="val">100</td><td>14/26/10</td><td>vs Tidwell (soft)</td><td>Warm week. Home ERA 5.32 (soft). Team L3 15. Cooked pen.</td><td>rec only</td></tr>
+<tr><td class="val">15</td><td>Ezequiel Duran</td><td>TEX</td><td>3</td><td class="val">O1.5</td><td class="val">93</td><td>18/39/6</td><td>vs Anderson (soft)</td><td>Warm week. Home ERA 5.91 (leaky). Team L3 21.</td><td>rec only</td></tr>
+<tr><td class="val">1</td><td>Brett Bateman</td><td>TOR</td><td>1</td><td class="val">1.5@0.8x</td><td class="val">100</td><td>16/32/4</td><td>vs Basso (cold)</td><td>Warm week. Pen ERA 5.4. Home ERA 5.60 (leaky). Team L3 10.</td><td>on a ticket</td></tr>
+<tr><td class="val">2</td><td>Alejandro Kirk</td><td>TOR</td><td>4</td><td class="val">O2.5</td><td class="val">100</td><td>19/29/8</td><td>vs Basso (cold)</td><td>Warm week. Pen ERA 5.4. Home ERA 5.60 (leaky). Team L3 10.</td><td>on a ticket</td></tr>
+<tr><td class="val">3</td><td>Vladimir Guerrero Jr.</td><td>TOR</td><td>3</td><td class="val">O2.5</td><td class="val">100</td><td>20/28/4</td><td>vs Basso (cold)</td><td>Hot week. Pen ERA 5.4. Home ERA 5.60 (leaky). Team L3 10.</td><td>on a ticket</td></tr>
+<tr><td class="val">5</td><td>Kazuma Okamoto</td><td>TOR</td><td>6</td><td class="val">O2.5</td><td class="val">100</td><td>17/29/7</td><td>vs Basso (cold)</td><td>Warm week. Pen ERA 5.4. Home ERA 5.60 (leaky). Team L3 10.</td><td>rec only</td></tr>
+</tbody></table>
+</article>
+<article class="panel p2">
+<h2>Advanced · Pick 6 (3+3)</h2>
+<h3>TOR</h3>
+<table>
+<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Why</th></tr></thead><tbody>
+<tr><td class="val">1</td><td>Brett Bateman</td><td>TOR</td><td>1</td><td class="val">1.5@0.8x</td><td class="val">100</td><td>16/32/4</td><td>Warm week vs Basso (cold). Pen ERA 5.4. Home ERA 5.60 (leaky).</td></tr>
+<tr><td class="val">2</td><td>Alejandro Kirk</td><td>TOR</td><td>4</td><td class="val">O2.5</td><td class="val">100</td><td>19/29/8</td><td>Warm week vs Basso (cold). Pen ERA 5.4. Home ERA 5.60 (leaky).</td></tr>
+<tr><td class="val">3</td><td>Vladimir Guerrero Jr.</td><td>TOR</td><td>3</td><td class="val">O2.5</td><td class="val">100</td><td>20/28/4</td><td>Hot week vs Basso (cold). Pen ERA 5.4. Home ERA 5.60 (leaky).</td></tr>
+</tbody></table>
+<h3>SEA</h3>
+<table>
+<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Why</th></tr></thead><tbody>
+<tr><td class="val">4</td><td>Josh Naylor</td><td>SEA</td><td>6</td><td class="val">O1.5</td><td class="val">99</td><td>13/23/3</td><td>Warm week vs Bradford (soft). Cooked pen. Road ERA 4.32. Lineup rolling (3 hot).</td></tr>
+<tr><td class="val">5</td><td>Dominic Canzone</td><td>SEA</td><td>2</td><td class="val">O1.5</td><td class="val">97</td><td>15/29/7</td><td>Warm week vs Bradford (soft). Cooked pen. Road ERA 4.32. Lineup rolling (3 hot).</td></tr>
+<tr><td class="val">6</td><td>Randy Arozarena</td><td>SEA</td><td>1</td><td class="val">O1.5</td><td class="val">96</td><td>17/31/6</td><td>Warm week vs Bradford (soft). Cooked pen. Road ERA 4.32. Lineup rolling (3 hot).</td></tr>
+</tbody></table>
+</article>
+</main></div>
+<script>
+(function(){
+  var KEY='desk-report-theme';
+  function apply(mode){
+    document.documentElement.classList.toggle('light', mode==='light');
+    var b=document.getElementById('themeBtn');
+    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  var saved=null;
+  try { saved=localStorage.getItem(KEY); } catch (e) {}
+  apply(saved==='light'?'light':'dark');
+  window.toggleDeskTheme=function(){
+    apply(document.documentElement.classList.contains('light')?'dark':'light');
+  };
+})();
+</script>
+</body></html>
