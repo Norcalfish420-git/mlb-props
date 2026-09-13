@@ -75,8 +75,6 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 #g8:checked ~ .shell main .p8{display:block;}
 #g9:checked ~ .shell .rail label[for=g9]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #g9:checked ~ .shell main .p9{display:block;}
-#g10:checked ~ .shell .rail label[for=g10]{background:var(--accent);color:#fff;border-color:var(--accent);}
-#g10:checked ~ .shell main .p10{display:block;}
 </style>
 </head><body>
 <input class="tab" type="radio" name="g" id="g0" checked/>
@@ -89,7 +87,6 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <input class="tab" type="radio" name="g" id="g7"/>
 <input class="tab" type="radio" name="g" id="g8"/>
 <input class="tab" type="radio" name="g" id="g9"/>
-<input class="tab" type="radio" name="g" id="g10"/>
 <div class="shell">
 <aside class="rail noprint">
 <p class="brand">NFL PROPS<br/>2026-09-13</p>
@@ -98,12 +95,11 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <label class="pill" for="g2"><span class="when">1:00 p.m. ET · 3 recs</span>TB @ CIN</label>
 <label class="pill" for="g3"><span class="when">1:00 p.m. ET · 3 recs</span>NO @ DET</label>
 <label class="pill" for="g4"><span class="when">1:00 p.m. ET · 3 recs</span>BAL @ IND</label>
-<label class="pill" for="g5"><span class="when">4:25 p.m. ET · 2 recs</span>ARI @ LAC</label>
-<label class="pill" for="g6"><span class="when">4:25 p.m. ET · 3 recs</span>GB @ MIN</label>
+<label class="pill" for="g5"><span class="when">4:25 p.m. ET · 3 recs</span>ARI @ LAC</label>
+<label class="pill" for="g6"><span class="when">4:25 p.m. ET · 2 recs</span>GB @ MIN</label>
 <label class="pill" for="g7"><span class="when">4:25 p.m. ET · 3 recs</span>WAS @ PHI</label>
 <label class="pill" for="g8"><span class="when">1:00 p.m. ET · 3 recs</span>ATL @ PIT</label>
-<label class="pill" for="g9"><span class="when">1:00 p.m. ET · 1 rec</span>NYJ @ TEN</label>
-<label class="pill" for="g10"><span class="when">8:20 p.m. ET · 1 rec</span>DAL @ NYG</label>
+<label class="pill" for="g9"><span class="when">1:00 p.m. ET · 2 recs</span>NYJ @ TEN</label>
 <form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
 <button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
 <button class="pdf" type="button" onclick="window.print()">Save as PDF</button>
@@ -121,28 +117,28 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tr><td>1</td><td>Saquon Barkley</td><td>PHI</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 0.7 touchdowns).</td></tr>
 <tr><td>2</td><td>Juwan Johnson</td><td>NO</td><td>receiving yards</td><td class="val">Over</td><td class="val">43.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 82 receiving yards).</td></tr>
 <tr><td>3</td><td>Tyler Shough</td><td>NO</td><td>passing yards</td><td class="val">Over</td><td class="val">244.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 300 passing yards).</td></tr>
-<tr><td>4</td><td>Aaron Rodgers</td><td>PIT</td><td>passing yards</td><td class="val">Over</td><td class="val">212.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 243 passing yards).</td></tr>
-<tr><td>5</td><td>Colston Loveland</td><td>CHI</td><td>receptions</td><td class="val">Over</td><td class="val">4.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 6.3 catches).</td></tr>
-<tr><td>6</td><td>Kyler Murray</td><td>MIN</td><td>rushing yards</td><td class="val">Over</td><td class="val">23.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 34 rushing yards).</td></tr>
-<tr><td>7</td><td>Joe Burrow</td><td>CIN</td><td>passing yards</td><td class="val">Over</td><td class="val">270.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 283 passing yards).</td></tr>
-<tr><td>8</td><td>Chase Brown</td><td>CIN</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">81.0</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 113 rush plus receiving yards).</td></tr>
-<tr><td>9</td><td>Chris Olave</td><td>NO</td><td>receiving yards</td><td class="val">Over</td><td class="val">76.5</td><td>Detroit has been playing man coverage down the field; New Orleans is the underdog, so they may have to throw to keep up. This defense has been easy to move the ball on. The last three games he has been beating this number (about 117 receiving yards).</td></tr>
-<tr><td>10</td><td>Dallas Goedert</td><td>PHI</td><td>receiving yards</td><td class="val">Over</td><td class="val">37.5</td><td>This defense has been easy to move the ball on. The last three games he has been coming in under this number (about 37 receiving yards).</td></tr>
-<tr><td>11</td><td>Jalen Hurts</td><td>PHI</td><td>passing yards</td><td class="val">Under</td><td class="val">214.5</td><td>The last three games he has been coming in under this number (about 157 passing yards).</td></tr>
-<tr><td>12</td><td>Rashod Bateman</td><td>BAL</td><td>receiving yards</td><td class="val">Under</td><td class="val">25.5</td><td>He is fighting for snaps in a crowded receiver room. The last three games he has been coming in under this number (about 10 receiving yards).</td></tr>
-<tr><td>13</td><td>Drake London</td><td>ATL</td><td>receptions</td><td class="val">Under</td><td class="val">4.5</td><td>Rush at QB; Stefanski may keep it vanilla. This looks like a low-scoring night for his team. The last three games he has been coming in under this number (about 2.7 catches).</td></tr>
-<tr><td>14</td><td>Isaiah Likely</td><td>NYG</td><td>receptions</td><td class="val">Under</td><td class="val">3.5</td><td>The last three games he has been coming in under this number (about 1.7 catches).</td></tr>
-<tr><td>15</td><td>Justin Jefferson</td><td>MIN</td><td>anytime TD</td><td class="val">Under</td><td class="val">0.5</td><td>The last three games he has been coming in under this number (about 0 touchdowns).</td></tr>
-<tr><td>16</td><td>Aaron Rodgers</td><td>PIT</td><td>passing yards</td><td class="val">Under</td><td class="val">212.5</td><td>The last three games he has been running over this number (about 243 passing yards).</td></tr>
-<tr><td>17</td><td>Andrei Iosivas</td><td>CIN</td><td>receiving yards</td><td class="val">Over</td><td class="val">13.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 24 receiving yards).</td></tr>
-<tr><td>18</td><td>Justin Herbert</td><td>LAC</td><td>rushing yards</td><td class="val">Over</td><td class="val">21.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 26 rushing yards).</td></tr>
-<tr><td>19</td><td>Quentin Johnston</td><td>LAC</td><td>receiving yards</td><td class="val">Over</td><td class="val">43.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 70 receiving yards).</td></tr>
-<tr><td>20</td><td>Rome Odunze</td><td>CHI</td><td>receiving yards</td><td class="val">Over</td><td class="val">39.5</td><td>Said Friday he will suit up. Snap watch, not a sit. This defense has been easy to move the ball on. The last three games he has been coming in under this number (about 34 receiving yards).</td></tr>
-<tr><td>21</td><td>Caleb Williams</td><td>CHI</td><td>passing yards</td><td class="val">Over</td><td class="val">229.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 264 passing yards).</td></tr>
-<tr><td>22</td><td>Alec Pierce</td><td>IND</td><td>receiving yards</td><td class="val">Over</td><td class="val">43.5</td><td>Expected to suit up; ankle/heel, still snap watch. This defense has been easy to move the ball on. The last three games he has been beating this number (about 73 receiving yards).</td></tr>
-<tr><td>23</td><td>Wan&#x27;Dale Robinson</td><td>TEN</td><td>receiving yards</td><td class="val">Over</td><td class="val">41.5</td><td>This defense has been easy to move the ball on. The game total is low. The last three games he has been beating this number (about 62 receiving yards).</td></tr>
-<tr><td>24</td><td>Jonathan Taylor</td><td>IND</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">94.0</td><td>This defense has been easy to move the ball on. The last three games he has been coming in under this number (about 67 rush plus receiving yards).</td></tr>
-<tr><td>25</td><td>Jauan Jennings</td><td>MIN</td><td>receiving yards</td><td class="val">Over</td><td class="val">22.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 49 receiving yards).</td></tr>
+<tr><td>4</td><td>Colston Loveland</td><td>CHI</td><td>receptions</td><td class="val">Over</td><td class="val">4.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 6.3 catches).</td></tr>
+<tr><td>5</td><td>Kyler Murray</td><td>MIN</td><td>rushing yards</td><td class="val">Over</td><td class="val">23.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 34 rushing yards).</td></tr>
+<tr><td>6</td><td>Joe Burrow</td><td>CIN</td><td>passing yards</td><td class="val">Over</td><td class="val">270.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 283 passing yards).</td></tr>
+<tr><td>7</td><td>Chase Brown</td><td>CIN</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">81.0</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 113 rush plus receiving yards).</td></tr>
+<tr><td>8</td><td>Chris Olave</td><td>NO</td><td>receiving yards</td><td class="val">Over</td><td class="val">76.5</td><td>Detroit has been playing man coverage down the field; New Orleans is the underdog, so they may have to throw to keep up. This defense has been easy to move the ball on. The last three games he has been beating this number (about 117 receiving yards).</td></tr>
+<tr><td>9</td><td>Dallas Goedert</td><td>PHI</td><td>receiving yards</td><td class="val">Over</td><td class="val">37.5</td><td>This defense has been easy to move the ball on. The last three games he has been coming in under this number (about 37 receiving yards).</td></tr>
+<tr><td>10</td><td>Rashod Bateman</td><td>BAL</td><td>receiving yards</td><td class="val">Under</td><td class="val">25.5</td><td>He is fighting for snaps in a crowded receiver room. The last three games he has been coming in under this number (about 10 receiving yards).</td></tr>
+<tr><td>11</td><td>Drake London</td><td>ATL</td><td>receptions</td><td class="val">Under</td><td class="val">4.5</td><td>Rush at QB; Stefanski may keep it vanilla. This looks like a low-scoring night for his team. The last three games he has been coming in under this number (about 2.7 catches).</td></tr>
+<tr><td>12</td><td>Aaron Rodgers</td><td>PIT</td><td>passing yards</td><td class="val">Under</td><td class="val">212.5</td><td>The last three games he has been running over this number (about 243 passing yards).</td></tr>
+<tr><td>13</td><td>Andrei Iosivas</td><td>CIN</td><td>receiving yards</td><td class="val">Over</td><td class="val">13.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 24 receiving yards).</td></tr>
+<tr><td>14</td><td>Justin Herbert</td><td>LAC</td><td>rushing yards</td><td class="val">Over</td><td class="val">21.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 26 rushing yards).</td></tr>
+<tr><td>15</td><td>Quentin Johnston</td><td>LAC</td><td>receiving yards</td><td class="val">Over</td><td class="val">43.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 70 receiving yards).</td></tr>
+<tr><td>16</td><td>Rome Odunze</td><td>CHI</td><td>receiving yards</td><td class="val">Over</td><td class="val">39.5</td><td>Rapoport — expected to play calf, still official Q until inactives. This defense has been easy to move the ball on. The last three games he has been coming in under this number (about 34 receiving yards).</td></tr>
+<tr><td>17</td><td>Caleb Williams</td><td>CHI</td><td>passing yards</td><td class="val">Over</td><td class="val">229.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 264 passing yards).</td></tr>
+<tr><td>18</td><td>Alec Pierce</td><td>IND</td><td>receiving yards</td><td class="val">Over</td><td class="val">43.5</td><td>Expected to suit up; ankle/heel, still snap watch. This defense has been easy to move the ball on. The last three games he has been beating this number (about 73 receiving yards).</td></tr>
+<tr><td>19</td><td>Wan&#x27;Dale Robinson</td><td>TEN</td><td>receiving yards</td><td class="val">Over</td><td class="val">41.5</td><td>This defense has been easy to move the ball on. The game total is low. The last three games he has been beating this number (about 62 receiving yards).</td></tr>
+<tr><td>20</td><td>Dallas Goedert</td><td>PHI</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 1.3 touchdowns).</td></tr>
+<tr><td>21</td><td>Jonathan Taylor</td><td>IND</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">94.0</td><td>This defense has been easy to move the ball on. The last three games he has been coming in under this number (about 67 rush plus receiving yards).</td></tr>
+<tr><td>22</td><td>Jauan Jennings</td><td>MIN</td><td>receiving yards</td><td class="val">Over</td><td class="val">22.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 49 receiving yards).</td></tr>
+<tr><td>23</td><td>DK Metcalf</td><td>PIT</td><td>receiving yards</td><td class="val">Over</td><td class="val">48.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 82 receiving yards).</td></tr>
+<tr><td>24</td><td>Wan&#x27;Dale Robinson</td><td>TEN</td><td>receptions</td><td class="val">Over</td><td class="val">4.5</td><td>This defense has been easy to move the ball on. The game total is low. The last three games he has been beating this number (about 6.3 catches).</td></tr>
+<tr><td>25</td><td>Justin Herbert</td><td>LAC</td><td>passing yards</td><td class="val">Over</td><td class="val">233.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 249 passing yards).</td></tr>
 </tbody></table>
 </article>
 <article class="panel p1">
@@ -151,7 +147,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <thead><tr><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
 <tbody>
 <tr><td>Colston Loveland</td><td>CHI</td><td>receptions</td><td class="val">Over</td><td class="val">4.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 6.3 catches).</td></tr>
-<tr><td>Rome Odunze</td><td>CHI</td><td>receiving yards</td><td class="val">Over</td><td class="val">39.5</td><td>Said Friday he will suit up. Snap watch, not a sit. This defense has been easy to move the ball on. The last three games he has been coming in under this number (about 34 receiving yards).</td></tr>
+<tr><td>Rome Odunze</td><td>CHI</td><td>receiving yards</td><td class="val">Over</td><td class="val">39.5</td><td>Rapoport — expected to play calf, still official Q until inactives. This defense has been easy to move the ball on. The last three games he has been coming in under this number (about 34 receiving yards).</td></tr>
 <tr><td>Caleb Williams</td><td>CHI</td><td>passing yards</td><td class="val">Over</td><td class="val">229.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 264 passing yards).</td></tr>
 </tbody></table>
 <h3>THE MOVIE</h3>
@@ -163,6 +159,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <ul>
 <li>Rome Odunze (CHI): He is listed as questionable. Sit until he is cleared to play</li>
 <li>Rome Odunze (CHI): said Friday he will suit up. Snap watch, not a sit</li>
+<li>Rome Odunze (CHI): Rapoport — expected to play calf, still official Q until inactives</li>
 </ul>
 </article>
 <article class="panel p2">
@@ -236,6 +233,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tbody>
 <tr><td>Justin Herbert</td><td>LAC</td><td>rushing yards</td><td class="val">Over</td><td class="val">21.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 26 rushing yards).</td></tr>
 <tr><td>Quentin Johnston</td><td>LAC</td><td>receiving yards</td><td class="val">Over</td><td class="val">43.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 70 receiving yards).</td></tr>
+<tr><td>Justin Herbert</td><td>LAC</td><td>passing yards</td><td class="val">Over</td><td class="val">233.5</td><td>This defense has been easy to move the ball on. His team is expected to score a lot tonight. The last three games he has been beating this number (about 249 passing yards).</td></tr>
 </tbody></table>
 <h3>THE MOVIE</h3>
 <p>ARI at LAC, kick 4:25 p.m. ET.</p>
@@ -253,7 +251,6 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <thead><tr><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
 <tbody>
 <tr><td>Kyler Murray</td><td>MIN</td><td>rushing yards</td><td class="val">Over</td><td class="val">23.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 34 rushing yards).</td></tr>
-<tr><td>Justin Jefferson</td><td>MIN</td><td>anytime TD</td><td class="val">Under</td><td class="val">0.5</td><td>The last three games he has been coming in under this number (about 0 touchdowns).</td></tr>
 <tr><td>Jauan Jennings</td><td>MIN</td><td>receiving yards</td><td class="val">Over</td><td class="val">22.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 49 receiving yards).</td></tr>
 </tbody></table>
 <h3>THE MOVIE</h3>
@@ -273,7 +270,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tbody>
 <tr><td>Saquon Barkley</td><td>PHI</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 0.7 touchdowns).</td></tr>
 <tr><td>Dallas Goedert</td><td>PHI</td><td>receiving yards</td><td class="val">Over</td><td class="val">37.5</td><td>This defense has been easy to move the ball on. The last three games he has been coming in under this number (about 37 receiving yards).</td></tr>
-<tr><td>Jalen Hurts</td><td>PHI</td><td>passing yards</td><td class="val">Under</td><td class="val">214.5</td><td>The last three games he has been coming in under this number (about 157 passing yards).</td></tr>
+<tr><td>Dallas Goedert</td><td>PHI</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 1.3 touchdowns).</td></tr>
 </tbody></table>
 <h3>THE MOVIE</h3>
 <p>WAS at PHI, kick 4:25 p.m. ET.</p>
@@ -286,9 +283,9 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <table>
 <thead><tr><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
 <tbody>
-<tr><td>Aaron Rodgers</td><td>PIT</td><td>passing yards</td><td class="val">Over</td><td class="val">212.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 243 passing yards).</td></tr>
 <tr><td>Drake London</td><td>ATL</td><td>receptions</td><td class="val">Under</td><td class="val">4.5</td><td>Rush at QB; Stefanski may keep it vanilla. This looks like a low-scoring night for his team. The last three games he has been coming in under this number (about 2.7 catches).</td></tr>
 <tr><td>Aaron Rodgers</td><td>PIT</td><td>passing yards</td><td class="val">Under</td><td class="val">212.5</td><td>The last three games he has been running over this number (about 243 passing yards).</td></tr>
+<tr><td>DK Metcalf</td><td>PIT</td><td>receiving yards</td><td class="val">Over</td><td class="val">48.5</td><td>This defense has been easy to move the ball on. The last three games he has been beating this number (about 82 receiving yards).</td></tr>
 </tbody></table>
 <h3>THE MOVIE</h3>
 <p>ATL at PIT, kick 1:00 p.m. ET.</p>
@@ -307,24 +304,12 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <thead><tr><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
 <tbody>
 <tr><td>Wan&#x27;Dale Robinson</td><td>TEN</td><td>receiving yards</td><td class="val">Over</td><td class="val">41.5</td><td>This defense has been easy to move the ball on. The game total is low. The last three games he has been beating this number (about 62 receiving yards).</td></tr>
+<tr><td>Wan&#x27;Dale Robinson</td><td>TEN</td><td>receptions</td><td class="val">Over</td><td class="val">4.5</td><td>This defense has been easy to move the ball on. The game total is low. The last three games he has been beating this number (about 6.3 catches).</td></tr>
 </tbody></table>
 <h3>THE MOVIE</h3>
 <p>NYJ at TEN, kick 1:00 p.m. ET.</p>
 <p>Total 38.5. The books have NYJ around 18.5 points and TEN around 20.</p>
 <p>Weather: outdoor, about 88°F, wind 2 mph, precip 20pct rain.</p>
-<p>Sunday AM QC vs Friday FantasyAlarm.</p>
-</article>
-<article class="panel p10">
-<h3>OUR RECS</h3>
-<table>
-<thead><tr><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
-<tbody>
-<tr><td>Isaiah Likely</td><td>NYG</td><td>receptions</td><td class="val">Under</td><td class="val">3.5</td><td>The last three games he has been coming in under this number (about 1.7 catches).</td></tr>
-</tbody></table>
-<h3>THE MOVIE</h3>
-<p>DAL at NYG, kick 8:20 p.m. ET.</p>
-<p>Total 48. The books have DAL around 25.5 points and NYG around 22.5.</p>
-<p>Weather: outdoor, about 76°F, wind 10 mph, precip 16pct rain.</p>
 <p>Sunday AM QC vs Friday FantasyAlarm.</p>
 </article>
 </main></div>
