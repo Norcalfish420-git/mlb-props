@@ -29,12 +29,14 @@ h1{font-size:2rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
 .games li{margin:0;border-bottom:1px solid var(--card-line);}
 .games a{display:block;color:var(--val);font-size:1.28rem;font-weight:700;text-decoration:underline;padding:.55rem 0;}
 .games a:hover,.games a:focus{color:#fff;}
+.tools-head{font-size:1.15rem;margin:1.5rem 0 .35rem;letter-spacing:-.01em;}
 .tools{display:grid;gap:.7rem;margin-top:.4rem;}
 .tool{display:grid;grid-template-columns:1fr auto;gap:.15rem .8rem;align-items:center;background:var(--card);border:1px solid var(--card-line);border-radius:.7rem;padding:.85rem 1rem;text-decoration:none;color:inherit;}
 .tool:hover,.tool:focus{border-color:var(--val);outline:none;}
 .tool .when{font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);}
 .tool .game{grid-column:1;font-size:1.35rem;font-weight:700;}
-.tool .go{grid-column:2;grid-row:1 / span 2;color:var(--val);font-weight:700;}
+.tool .rate{grid-column:1;font-size:.82rem;color:var(--val);}
+.tool .go{grid-column:2;grid-row:1 / span 3;color:var(--val);font-weight:700;}
 .hide{display:none !important;}
 @media (max-width:720px){
   .shell{display:block;}
@@ -53,6 +55,7 @@ h1{font-size:2rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
 <a class="pill on" href="./mlb.html"><span class="when">player props</span>MLB</a>
 <a class="pill" href="./nfl.html"><span class="when">player props</span>NFL</a>
 <a class="pill" href="./cfb.html"><span class="when">DK lineup</span>CFB</a>
+<a class="pill" href="./hub.html#results"><span class="when">win / loss</span>Results</a>
 <form class="search-form" id="playerSearchForm" action="#" role="search">
 <input id="hubSearch" type="search" placeholder="Search a game or date" autocomplete="off"/>
 </form>
@@ -65,6 +68,7 @@ h1{font-size:2rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
 <h2>MLB Player Props</h2>
 <p class="lede">Hits + runs + RBIs board. 7 reports.</p>
 <a class="mini" href="./2026-09-13.html">Latest report</a>
+<a class="mini" href="./trends.html">Season results</a>
 </div>
 <div class="day" data-date="2026-09-13">
 <h3>September 13, 2026</h3>
@@ -126,6 +130,10 @@ h1{font-size:2rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
     document.querySelectorAll('.desk').forEach(function(desk){
       var any=desk.querySelector('.games a:not(.hide)');
       desk.classList.toggle('hide', !any);
+    });
+    document.querySelectorAll('.tool').forEach(function(link){
+      var hay=(link.textContent||'').toLowerCase();
+      link.classList.toggle('hide', !!(q && hay.indexOf(q)<0));
     });
   }
   function jump(){
