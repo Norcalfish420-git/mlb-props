@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Desk reports</title>
+<title>CFB DK Lineup</title>
 <style>
 :root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#a8a8a8;--pill:#393939;--pill-fg:#9ef0f0;--pill-line:#525252;--accent:#007d79;--val:#3ddbd9;--card:#1d1d1d;--card-line:#393939;}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Georgia,"Iowan Old Style",serif;}
@@ -49,20 +49,37 @@ h1{font-size:2rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
 <div class="shell">
 <aside class="rail">
 <p class="brand">Desk reports<br/>All tools</p>
-<a class="pill on" href="./"><span class="when">all desks</span>Hub</a>
+<a class="pill" href="./"><span class="when">all desks</span>Hub</a>
 <a class="pill" href="./mlb.html"><span class="when">player props</span>MLB</a>
 <a class="pill" href="./nfl.html"><span class="when">player props</span>NFL</a>
-<a class="pill" href="./cfb.html"><span class="when">DK lineup</span>CFB</a>
+<a class="pill on" href="./cfb.html"><span class="when">DK lineup</span>CFB</a>
 <form class="search-form" id="playerSearchForm" action="#" role="search">
 <input id="hubSearch" type="search" placeholder="Search a game or date" autocomplete="off"/>
 </form>
 </aside>
 <main id="top">
-<h1>Desk reports</h1>
-<p class="sub">Pick a tool. Each pill opens only that board.</p>
-<div class="tools"><a class="tool" href="./mlb.html"><span class="when">player props</span><span class="game">MLB Player Props</span><span class="go">Open</span></a>
-<a class="tool" href="./nfl.html"><span class="when">player props</span><span class="game">NFL Player Props</span><span class="go">Open</span></a>
-<a class="tool" href="./cfb.html"><span class="when">DK lineup</span><span class="game">CFB DK Lineup</span><span class="go">Open</span></a></div>
+<h1>CFB DK Lineup</h1>
+<p class="sub">One DraftKings Showdown contest per link.</p>
+<section class="desk" id="cfb" data-desk="CFB DK Lineup">
+<div class="desk-head">
+<h2>CFB DK Lineup</h2>
+<p class="lede">One DraftKings Showdown contest per link. 5 reports.</p>
+<a class="mini" href="./showdown/2026-09-13_NMST_HAW.html">Latest report</a>
+</div>
+<div class="day" data-date="2026-09-13">
+<h3>September 13, 2026</h3>
+<ul class="games">
+<li><a href="./showdown/2026-09-13_NMST_HAW.html" data-search="CFB DK Lineup September 13, 2026 New Mexico State @ Hawai'i">New Mexico State @ Hawai'i</a></li>
+</ul></div>
+<div class="day" data-date="2026-09-12">
+<h3>September 12, 2026</h3>
+<ul class="games">
+<li><a href="./showdown/2026-09-12_BAMA_UK.html" data-search="CFB DK Lineup September 12, 2026 Alabama @ Kentucky">Alabama @ Kentucky</a></li>
+<li><a href="./showdown/2026-09-12_ARK_UTAH.html" data-search="CFB DK Lineup September 12, 2026 Arkansas @ Utah">Arkansas @ Utah</a></li>
+<li><a href="./showdown/2026-09-12_OSU_TEX.html" data-search="CFB DK Lineup September 12, 2026 Ohio State @ Texas">Ohio State @ Texas</a></li>
+<li><a href="./showdown/2026-09-12_OU_MICH.html" data-search="CFB DK Lineup September 12, 2026 Oklahoma @ Michigan">Oklahoma @ Michigan</a></li>
+</ul></div>
+</section>
 </main>
 </div>
 <script>
