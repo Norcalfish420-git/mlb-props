@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MLB Props 2026-09-14</title>
+<style>
+:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#9ef0f0;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#007d79;--table:#262626;--cell:#525252;--th:#393939;--val:#3ddbd9;--h:#3ddbd9;}
+html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#004144;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#007d79;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#005d5d;--h:#005d5d;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+.tab{position:absolute;left:-9999px;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);}
+.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
+.pill:hover{background:var(--pill-hover);}
+button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
+button.pdf:hover{filter:brightness(1.08);}
+button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.5rem .7rem;}
+button.theme:hover{background:var(--pill-hover);}
+form.search-form{margin:0;display:flex;flex-direction:column;gap:.15rem;}
+label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35rem 0 0;}
+input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
+input.search:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.pill.search-miss{opacity:.42;}
+table.search-empty{display:none;}
+li.name-hit,tr.name-hit{background:rgba(0,125,121,.28);outline:1px solid var(--accent);}
+.hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:58rem;}
+h1{font-size:1.6rem;margin:0 0 .3rem;}
+h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
+h4{margin:.8rem 0 .4rem;}
+.sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
+table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.88rem;background:var(--table);}
+th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
+th{background:var(--th);color:var(--pill-fg);}
+td.val{font-weight:700;color:var(--val);white-space:nowrap;}
+ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
+li{margin:.35rem 0;}
+.panel{display:none;}
+@media print{
+  html,body,html.light,html.light body{background:#fff;color:#111;}
+  .shell{display:block;}
+  .rail,.noprint{display:none !important;}
+  main{max-width:none;padding:0;}
+  .panel{display:block !important;page-break-after:always;}
+  .panel:last-child{page-break-after:auto;}
+  table{background:#fff;page-break-inside:avoid;}
+  th{background:#eee;color:#333;}
+  td.val{color:#000;}
+  h2,h3,h4{page-break-after:avoid;color:#111;}
+}
+@page{margin:.5in;}
+#g0:checked ~ .shell .rail label[for=g0]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g0:checked ~ .shell main .p0{display:block;}
+#g1:checked ~ .shell .rail label[for=g1]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g1:checked ~ .shell main .p1{display:block;}
+#g2:checked ~ .shell .rail label[for=g2]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g2:checked ~ .shell main .p2{display:block;}
+#g3:checked ~ .shell .rail label[for=g3]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g3:checked ~ .shell main .p3{display:block;}
+</style>
+</head><body>
+<input class="tab" type="radio" name="g" id="g0" checked/>
+<input class="tab" type="radio" name="g" id="g1"/>
+<input class="tab" type="radio" name="g" id="g2"/>
+<input class="tab" type="radio" name="g" id="g3"/>
+<div class="shell">
+<aside class="rail noprint">
+<p class="brand">MLB PROPS<br/>2026-09-14</p>
+<label class="pill" for="g0"><span class="when">results</span>Yesterday</label>
+<label class="pill" for="g1"><span class="when">top 20</span>Over</label>
+<label class="pill" for="g2"><span class="when">top 20</span>Under</label>
+<label class="pill" for="g3"><span class="when">the slips</span>Cards</label>
+<form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
+<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
+<button class="pdf" type="button" onclick="window.print()">Save as PDF</button>
+<p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
+</aside>
+<main>
+<h1>MLB Hits+Runs+RBIs — September 14, 2026</h1>
+<p class="sub">Over list and Under list plus Standard Pick 4, Advanced Pick 4, and Best Overall Pick 6. Hits + runs + RBIs.</p>
+<article class="panel p0">
+<h3>YESTERDAY&#x27;S RESULTS (2026-09-13)</h3>
+<p><b>15 games</b> (all Final) | <b>52 legs graded</b> | HIT 23 / MISS 21 / VOID 8 | <b>Overall hit rate: 23/44 (52.3%)</b></p>
+<h4>Card results</h4>
+<table>
+<thead><tr><th>Card</th><th>Record</th><th>H/M/V</th></tr></thead>
+<tbody>
+<tr><td>A.J. Ewing, Francisco Lindor, Jared Young, Rafael Devers, Bryce Eldridge, Christian Koss</td><td>2/5</td><td>2/3/1</td></tr>
+<tr><td>Jackson Merrill, Fernando Tatis Jr., Manny Machado, Cody Bellinger, Spencer Jones, Heliot Ramos</td><td>3/5</td><td>3/2/1</td></tr>
+<tr><td>Pete Crow-Armstrong, Alex Bregman, Nico Hoerner, Cole Young, Julio Rodríguez, Cal Raleigh</td><td>1/6</td><td>1/5/0</td></tr>
+<tr><td>Max Clark, Hunter Goodman, Brice Turang, Jakob Marsee, TJ Rumfield</td><td>3/4</td><td>3/1/1</td></tr>
+<tr><td>Advanced · Pick 4 — Elly De La Cruz, Otto Lopez, Hao-Yu Lee, Kevin McGonigle</td><td>3/4</td><td>3/1/0</td></tr>
+<tr><td>Best Overall · Pick 6 — Elly De La Cruz, Dane Myers, Griffin Conine, Otto Lopez, Javier Sanoja, Drake Baldwin</td><td>4/6</td><td>4/2/0</td></tr>
+<tr><td>Connor Norby, Hao-Yu Lee, Gleyber Torres, CJ Abrams, Mike Trout</td><td>1/4</td><td>1/3/1</td></tr>
+<tr><td>Rafael Devers, Cody Bellinger, Jackson Chourio, William Contreras, Elly De La Cruz, Mookie Betts</td><td>3/5</td><td>3/2/1</td></tr>
+<tr><td>A.J. Ewing, Francisco Lindor, Jackson Merrill, Pete Crow-Armstrong, Jake McCarthy, Teoscar Hernández</td><td>1/6</td><td>1/5/0</td></tr>
+<tr><td>Standard · Pick 4 — Elly De La Cruz, Dane Myers, Griffin Conine, Otto Lopez</td><td>2/4</td><td>2/2/0</td></tr>
+<tr><td>Jackson Holliday, Jordan Lawlar, Denzel Clarke, Turner Hill, Matt Shaw, Coby Mayo, TJ Friedl, Nick Loftin, Isaac Collins, Sung-Mun Song, Mickey Gasper, Trevor Story</td><td>6/8</td><td>6/2/4</td></tr>
+</tbody></table>
+<h3>Made the Cut — grade board</h3>
+<p>Every recommended bat with pick-time overall, boxscore result, and ship flags.</p>
+<table>
+<thead><tr><th>Pick</th><th>Team</th><th>Overall</th><th>Line</th><th>HRR</th><th>Grade</th><th>On $20 slip</th><th>Lab P6</th></tr></thead>
+<tbody>
+<tr><td>Elly De La Cruz</td><td>CIN</td><td class="val">100</td><td class="val">O1.5</td><td class="val">4</td><td class="val"><b>HIT</b></td><td>rec only</td><td>yes</td></tr>
+<tr><td>Griffin Conine</td><td>MIA</td><td class="val">100</td><td class="val">1.5*</td><td class="val">—</td><td class="val"><b>—</b></td><td>rec only</td><td>—</td></tr>
+<tr><td>Otto Lopez</td><td>MIA</td><td class="val">99</td><td class="val">O1.5</td><td class="val">3</td><td class="val"><b>HIT</b></td><td>rec only</td><td>yes</td></tr>
+<tr><td>Javier Sanoja</td><td>MIA</td><td class="val">97</td><td class="val">O1.5</td><td class="val">4</td><td class="val"><b>HIT</b></td><td>rec only</td><td>—</td></tr>
+<tr><td>Dane Myers</td><td>CIN</td><td class="val">100</td><td class="val">O1.5</td><td class="val">0</td><td class="val"><b>MISS</b></td><td>rec only</td><td>—</td></tr>
+<tr><td>Drake Baldwin</td><td>ATL</td><td class="val">100</td><td class="val">O1.5</td><td class="val">2</td><td class="val"><b>HIT</b></td><td>rec only</td><td>—</td></tr>
+<tr><td>Connor Norby</td><td>COL</td><td class="val">100</td><td class="val">1.5*</td><td class="val">—</td><td class="val"><b>—</b></td><td>rec only</td><td>—</td></tr>
+<tr><td>Hao-Yu Lee</td><td>DET</td><td class="val">100</td><td class="val">1.5*</td><td class="val">—</td><td class="val"><b>—</b></td><td>rec only</td><td>yes</td></tr>
+<tr><td>Gleyber Torres</td><td>DET</td><td class="val">100</td><td class="val">O1.5</td><td class="val">0</td><td class="val"><b>MISS</b></td><td>rec only</td><td>—</td></tr>
+<tr><td>CJ Abrams</td><td>WSH</td><td class="val">99</td><td class="val">O1.5</td><td class="val">3</td><td class="val"><b>HIT</b></td><td>rec only</td><td>—</td></tr>
+<tr><td>Jake McCarthy</td><td>COL</td><td class="val">96</td><td class="val">O1.5</td><td class="val">0</td><td class="val"><b>MISS</b></td><td>rec only</td><td>—</td></tr>
+<tr><td>Mike Trout</td><td>LAA</td><td class="val">96</td><td class="val">1.5*</td><td class="val">—</td><td class="val"><b>—</b></td><td>rec only</td><td>—</td></tr>
+</tbody></table>
+<h4>Summary</h4>
+<table>
+<thead><tr><th>Bucket</th><th>HIT</th><th>MISS</th><th>VOID</th><th>Hit rate</th></tr></thead>
+<tbody>
+<tr><td><b>Made the Cut (12)</b></td><td>5</td><td>3</td><td>0</td><td><b>62.5% (5/8)</b></td></tr>
+<tr><td>On $20 slip</td><td>0</td><td>0</td><td>0</td><td>—</td></tr>
+<tr><td>Rec only (not on slip)</td><td>5</td><td>3</td><td>0</td><td>62.5% (5/8)</td></tr>
+<tr><td>Overall 90+</td><td>5</td><td>3</td><td>—</td><td>62.5% (5/8)</td></tr>
+<tr><td>Overall 80–89</td><td>0</td><td>0</td><td>—</td><td>—</td></tr>
+<tr><td>Line O1.5</td><td>5</td><td>3</td><td>—</td><td>62.5% (5/8)</td></tr>
+<tr><td>Line O2.5</td><td>0</td><td>0</td><td>—</td><td>—</td></tr>
+</tbody></table>
+<h3>Under the Cut — grade board</h3>
+<p>Less / Under recs. HIT when hits+runs+RBIs stayed under the line (U1.5 → ≤1, U2.5 → ≤2).</p>
+<table>
+<thead><tr><th>Pick</th><th>Team</th><th>Overall</th><th>Under line</th><th>Under score</th><th>HRR</th><th>Grade</th></tr></thead>
+<tbody>
+<tr><td>Jackson Holliday</td><td>BAL</td><td class="val">46</td><td>U1.5*</td><td>106</td><td class="val">0</td><td class="val"><b>HIT</b></td></tr>
+<tr><td>Jordan Lawlar</td><td>AZ</td><td class="val">47</td><td>U1.5*</td><td>105</td><td class="val">2</td><td class="val"><b>MISS</b></td></tr>
+<tr><td>Denzel Clarke</td><td>ATH</td><td class="val">50</td><td>U1.5*</td><td>103</td><td class="val">0</td><td class="val"><b>VOID</b></td></tr>
+<tr><td>Turner Hill</td><td>SF</td><td class="val">44</td><td>U1.5*</td><td>102</td><td class="val">0</td><td class="val"><b>HIT</b></td></tr>
+<tr><td>Matt Shaw</td><td>CHC</td><td class="val">50</td><td>U1.5*</td><td>100</td><td class="val">0</td><td class="val"><b>HIT</b></td></tr>
+<tr><td>Coby Mayo</td><td>BAL</td><td class="val">43</td><td>U1.5*</td><td>99</td><td class="val">1</td><td class="val"><b>HIT</b></td></tr>
+<tr><td>TJ Friedl</td><td>CIN</td><td class="val">51</td><td>U1.5*</td><td>99</td><td class="val">0</td><td class="val"><b>VOID</b></td></tr>
+<tr><td>Nick Loftin</td><td>KC</td><td class="val">42</td><td>U1.5*</td><td>98</td><td class="val">0</td><td class="val"><b>HIT</b></td></tr>
+<tr><td>Isaac Collins</td><td>KC</td><td class="val">42</td><td>U1.5*</td><td>98</td><td class="val">0</td><td class="val"><b>HIT</b></td></tr>
+<tr><td>Sung-Mun Song</td><td>SD</td><td class="val">54</td><td>U1.5*</td><td>96</td><td class="val">0</td><td class="val"><b>VOID</b></td></tr>
+<tr><td>Mickey Gasper</td><td>BOS</td><td class="val">49</td><td>U1.5*</td><td>94</td><td class="val">0</td><td class="val"><b>VOID</b></td></tr>
+<tr><td>Trevor Story</td><td>BOS</td><td class="val">46</td><td>U1.5</td><td>91</td><td class="val">4</td><td class="val"><b>MISS</b></td></tr>
+</tbody></table>
+<p><b>Under the Cut (12):</b> HIT 6 / MISS 2 / VOID 4 · hit rate 75.0% (6/8)</p>
+<p><b>Calibrated:</b> yes</p>
+</article>
+<article class="panel p1">
+<h2>OVER — TOP 11 · 2026-09-14</h2>
+<p>Over names that made a cut. Grouped by team (A–Z). Fewer than 20 is fine.</p>
+<table>
+<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Matchup</th><th>Why</th><th>Ticket</th></tr></thead><tbody>
+<tr><td class="val">7</td><td>Michael Harris II</td><td>ATL</td><td>1</td><td class="val">O1.5</td><td class="val">99</td><td>15/26/14</td><td>vs Peterson (soft)</td><td>He has been in decent form this week. Peterson has been getting hit. This park has been giving up runs. The offense has been scoring a lot the last three games.</td><td>rec only</td></tr>
+<tr><td class="val">8</td><td>Ronald Acuña Jr.</td><td>ATL</td><td>2</td><td class="val">1.5*</td><td class="val">99</td><td>14/42/11</td><td>vs Peterson (soft)</td><td>He has been in decent form this week. Peterson has been getting hit. This park has been giving up runs. The offense has been scoring a lot the last three games.</td><td>rec only</td></tr>
+<tr><td class="val">11</td><td>Gabriel Moreno</td><td>AZ</td><td>3</td><td class="val">O1.5</td><td class="val">92</td><td>17/29/11</td><td>vs Alcantara (cold)</td><td>He has been in decent form this week. Alcantara has been getting knocked around.</td><td>rec only</td></tr>
+<tr><td class="val">3</td><td>Mookie Betts</td><td>LAD</td><td>1</td><td class="val">O1.5</td><td class="val">100</td><td>25/46/7</td><td>vs Lodolo (cold)</td><td>He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</td><td>on a ticket</td></tr>
+<tr><td class="val">4</td><td>Max Muncy</td><td>LAD</td><td>3</td><td class="val">1.5*</td><td class="val">100</td><td>21/23/7</td><td>vs Lodolo (cold)</td><td>He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</td><td>on a ticket</td></tr>
+<tr><td class="val">10</td><td>Kyle Tucker</td><td>LAD</td><td>5</td><td class="val">O1.5</td><td class="val">96</td><td>17/25/11</td><td>vs Lodolo (cold)</td><td>He has been in decent form this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</td><td>rec only</td></tr>
+<tr><td class="val">1</td><td>Francisco Lindor</td><td>NYM</td><td>1</td><td class="val">O1.5</td><td class="val">100</td><td>24/41/11</td><td>vs Young (soft)</td><td>He has been hitting well this week. Young has been getting hit.</td><td>on a ticket</td></tr>
+<tr><td class="val">2</td><td>Juan Soto</td><td>NYM</td><td>2</td><td class="val">O1.5</td><td class="val">100</td><td>19/31/6</td><td>vs Young (soft)</td><td>He has been in decent form this week. Young has been getting hit.</td><td>on a ticket</td></tr>
+<tr><td class="val">6</td><td>Jared Young</td><td>NYM</td><td>5</td><td class="val">O1.5</td><td class="val">100</td><td>18/32/6</td><td>vs Young (soft)</td><td>He has been in decent form this week. Young has been getting hit.</td><td>rec only</td></tr>
+<tr><td class="val">5</td><td>Luis García Jr.</td><td>NYY</td><td>4</td><td class="val">1.5*</td><td class="val">100</td><td>15/26/7</td><td>vs Kremer (cold)</td><td>He has been in decent form this week. Kremer has been getting knocked around. their bullpen has been tired. This park has been giving up runs.</td><td>on a ticket</td></tr>
+<tr><td class="val">9</td><td>Cody Bellinger</td><td>NYY</td><td>2</td><td class="val">O1.5</td><td class="val">96</td><td>23/43/11</td><td>vs Kremer (cold)</td><td>He has been hitting well this week. Kremer has been getting knocked around. their bullpen has been tired. This park has been giving up runs.</td><td>rec only</td></tr>
+</tbody></table>
+</article>
+<article class="panel p2">
+<h2>UNDER — TOP 12 · 2026-09-14</h2>
+<p>Under names that made a cut. Grouped by team (A–Z). Fewer than 20 is fine.</p>
+<table>
+<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Matchup</th><th>Why</th><th>Ticket</th></tr></thead><tbody>
+<tr><td class="val">8</td><td>Tommy Troy</td><td>AZ</td><td>1</td><td class="val">U1.5*</td><td class="val">57</td><td>1/1/1</td><td>vs Alcantara (cold)</td><td>He has been quiet at the plate this week. He has been quiet the last three games. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
+<tr><td class="val">1</td><td>Ke&#x27;Bryan Hayes</td><td>CIN</td><td>4</td><td class="val">U1.5*</td><td class="val">31</td><td>3/7/1</td><td>vs Skubal (hot)</td><td>He has been quiet at the plate this week. He has been quiet the last three games. The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
+<tr><td class="val">6</td><td>JJ Bleday</td><td>CIN</td><td>6</td><td class="val">U1.5*</td><td class="val">42</td><td>6/19/6</td><td>vs Skubal (hot)</td><td>He has been quiet at the plate this week. The starter has been dealing. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
+<tr><td class="val">7</td><td>Tyler Stephenson</td><td>CIN</td><td>5</td><td class="val">U1.5*</td><td class="val">45</td><td>9/28/3</td><td>vs Skubal (hot)</td><td>He has been quiet at the plate this week. The starter has been dealing. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
+<tr><td class="val">5</td><td>Petey Halpin</td><td>CLE</td><td>2</td><td class="val">U1.5*</td><td class="val">40</td><td>5/12/4</td><td>vs Newcomb (hot)</td><td>He has been quiet at the plate this week. The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
+<tr><td class="val">12</td><td>Steven Kwan</td><td>CLE</td><td>1</td><td class="val">U1.5</td><td class="val">49</td><td>21/31/10</td><td>vs Newcomb (hot)</td><td>The starter has been dealing. This is a tough lefty-righty matchup. The matchup looks weak.</td><td>rec only</td></tr>
+<tr><td class="val">9</td><td>Julio Rodríguez</td><td>SEA</td><td>5</td><td class="val">U1.5*</td><td class="val">51</td><td>16/29/8</td><td>vs Detmers (hot)</td><td>The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
+<tr><td class="val">11</td><td>J.P. Crawford</td><td>SEA</td><td>1</td><td class="val">U1.5*</td><td class="val">55</td><td>13/27/11</td><td>vs Detmers (hot)</td><td>The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
+<tr><td class="val">10</td><td>Jung Hoo Lee</td><td>SF</td><td>2</td><td class="val">U1.5</td><td class="val">52</td><td>10/19/1</td><td>vs Mathews (middling)</td><td>He has been quiet at the plate this week. He has been quiet the last three games. This is a tough lefty-righty matchup. The matchup looks weak.</td><td>rec only</td></tr>
+<tr><td class="val">2</td><td>Ramón Urías</td><td>STL</td><td>6</td><td class="val">U1.5*</td><td class="val">36</td><td>2/11/0</td><td>vs Roupp (hot)</td><td>He has been quiet at the plate this week. He has been quiet the last three games. The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
+<tr><td class="val">3</td><td>Victor Scott II</td><td>STL</td><td>1</td><td class="val">U1.5*</td><td class="val">38</td><td>0/1/1</td><td>vs Roupp (hot)</td><td>He has been quiet at the plate this week. He has been quiet the last three games. The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
+<tr><td class="val">4</td><td>Pedro Pagés</td><td>STL</td><td>2</td><td class="val">U1.5*</td><td class="val">42</td><td>3/7/1</td><td>vs Roupp (hot)</td><td>He has been quiet at the plate this week. He has been quiet the last three games. The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
+</tbody></table>
+</article>
+<article class="panel p3">
+<h2>Standard · Pick 4</h2>
+<table>
+<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Why</th></tr></thead><tbody>
+<tr><td class="val">1</td><td>Francisco Lindor</td><td>NYM</td><td>1</td><td class="val">O1.5</td><td class="val">100</td><td>24/41/11</td><td>He has been hitting well this week. Young has been getting hit.</td></tr>
+<tr><td class="val">2</td><td>Juan Soto</td><td>NYM</td><td>2</td><td class="val">O1.5</td><td class="val">100</td><td>19/31/6</td><td>He has been in decent form this week. Young has been getting hit.</td></tr>
+<tr><td class="val">3</td><td>Mookie Betts</td><td>LAD</td><td>1</td><td class="val">O1.5</td><td class="val">100</td><td>25/46/7</td><td>He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</td></tr>
+<tr><td class="val">4</td><td>Max Muncy</td><td>LAD</td><td>3</td><td class="val">1.5*</td><td class="val">100</td><td>21/23/7</td><td>He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</td></tr>
+</tbody></table>
+<h2>Best Overall · Pick 6</h2>
+<table>
+<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Why</th></tr></thead><tbody>
+<tr><td class="val">1</td><td>Francisco Lindor</td><td>NYM</td><td>1</td><td class="val">O1.5</td><td class="val">100</td><td>24/41/11</td><td>He has been hitting well this week. Young has been getting hit.</td></tr>
+<tr><td class="val">2</td><td>Juan Soto</td><td>NYM</td><td>2</td><td class="val">O1.5</td><td class="val">100</td><td>19/31/6</td><td>He has been in decent form this week. Young has been getting hit.</td></tr>
+<tr><td class="val">3</td><td>Fernando Tatis Jr.</td><td>SD</td><td>1</td><td class="val">O2.5</td><td class="val">100</td><td>25/39/12</td><td>He has been hitting well this week. Sugano has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 5.6 ERA). This park has been giving up runs. The lineup around him has been hot. The offense has been scoring a lot the last three games.</td></tr>
+<tr><td class="val">4</td><td>Mookie Betts</td><td>LAD</td><td>1</td><td class="val">O1.5</td><td class="val">100</td><td>25/46/7</td><td>He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</td></tr>
+<tr><td class="val">5</td><td>Max Muncy</td><td>LAD</td><td>3</td><td class="val">1.5*</td><td class="val">100</td><td>21/23/7</td><td>He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</td></tr>
+<tr><td class="val">6</td><td>Luis García Jr.</td><td>NYY</td><td>4</td><td class="val">1.5*</td><td class="val">100</td><td>15/26/7</td><td>He has been in decent form this week. Kremer has been getting knocked around. their bullpen has been tired. This park has been giving up runs.</td></tr>
+</tbody></table>
+<h2>Advanced · Pick 4</h2>
+<table>
+<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Why</th></tr></thead><tbody>
+<tr><td class="val">1</td><td>Fernando Tatis Jr.</td><td>SD</td><td>1</td><td class="val">O2.5</td><td class="val">100</td><td>25/39/12</td><td>He has been hitting well this week. Sugano has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 5.6 ERA). This park has been giving up runs. The lineup around him has been hot. The offense has been scoring a lot the last three games.</td></tr>
+<tr><td class="val">2</td><td>Ben Rice</td><td>NYY</td><td>1</td><td class="val">1.5@0.8x</td><td class="val">100</td><td>18/36/12</td><td>He has been in decent form this week. Kremer has been getting knocked around. their bullpen has been tired. This park has been giving up runs.</td></tr>
+<tr><td class="val">3</td><td>Juan Soto</td><td>NYM</td><td>2</td><td class="val">O1.5</td><td class="val">100</td><td>19/31/6</td><td>He has been in decent form this week. Young has been getting hit.</td></tr>
+<tr><td class="val">4</td><td>Francisco Lindor</td><td>NYM</td><td>1</td><td class="val">O1.5</td><td class="val">100</td><td>24/41/11</td><td>He has been hitting well this week. Young has been getting hit.</td></tr>
+</tbody></table>
+</article>
+</main></div>
+<script>
+(function(){
+  var KEY='desk-report-theme';
+  function apply(mode){
+    document.documentElement.classList.toggle('light', mode==='light');
+    var b=document.getElementById('themeBtn');
+    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  var saved=null;
+  try { saved=localStorage.getItem(KEY); } catch (e) {}
+  apply(saved==='light'?'light':'dark');
+  window.toggleDeskTheme=function(){
+    apply(document.documentElement.classList.contains('light')?'dark':'light');
+  };
+})();
+</script>
+<script>
+(function(){
+  function norm(s){
+    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+  }
+  function skip(el){
+    return !!(el.closest && el.closest('dialog, .pcard, .rail'));
+  }
+  function playerIdx(table){
+    var ths=table.querySelectorAll('thead th');
+    for(var i=0;i<ths.length;i++){
+      var t=norm(ths[i].textContent);
+      if(t==='player'||t==='name') return i;
+    }
+    return -1;
+  }
+  function rowHit(tr, q, pidx){
+    if(!q) return true;
+    if(pidx>=0 && tr.cells[pidx]) return norm(tr.cells[pidx].textContent).indexOf(q)>=0;
+    return norm(tr.textContent).indexOf(q)>=0;
+  }
+  function apply(opts){
+    opts = opts || {};
+    var inp=document.getElementById('playerSearch');
+    if(!inp) return;
+    var q=norm(inp.value);
+    var n=0;
+    var hitSel='tbody tr:not([hidden]), li:not([hidden])';
+    function mark(el, hit){
+      el.hidden = !!(q && !hit);
+      el.classList.toggle('name-hit', !!(q && hit));
+      if(q && hit) n++;
+    }
+    document.querySelectorAll('table tbody tr').forEach(function(tr){
+      if(skip(tr)) return;
+      mark(tr, rowHit(tr, q, playerIdx(tr.closest('table'))));
+    });
+    document.querySelectorAll('table').forEach(function(t){
+      if(skip(t)) return;
+      var any=false;
+      var tb=t.tBodies[0];
+      if(tb){
+        Array.prototype.forEach.call(tb.rows, function(r){ if(!r.hidden) any=true; });
+      }
+      t.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('li').forEach(function(li){
+      if(skip(li)) return;
+      mark(li, !q || norm(li.textContent).indexOf(q)>=0);
+    });
+    var hint=document.getElementById('playerSearchHint');
+    if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
+    var first=-1;
+    document.querySelectorAll('article.panel').forEach(function(art, i){
+      var hit=!!art.querySelector(hitSel);
+      var lab=document.querySelector('label[for="g'+i+'"]');
+      if(lab) lab.classList.toggle('search-miss', !!(q && !hit));
+      if(hit && first<0) first=i;
+    });
+    if(q && first>=0){
+      var cur=document.querySelector('input.tab[name="g"]:checked');
+      var curI=cur ? parseInt((cur.id||'').replace(/^g/,''),10) : -1;
+      var curArt=document.querySelector('article.p'+curI);
+      var curHit=curArt && curArt.querySelector(hitSel);
+      if(!curHit){
+        var radio=document.getElementById('g'+first);
+        if(radio) radio.checked=true;
+      }
+    }
+    if(opts.jump){
+      var shown=document.querySelector('input.tab[name="g"]:checked');
+      var shownI=shown ? parseInt((shown.id||'').replace(/^g/,''),10) : 0;
+      var shownArt=document.querySelector('article.p'+shownI);
+      var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
+      if(jumpEl){
+        setTimeout(function(){
+          try { jumpEl.scrollIntoView({block:'center', behavior:'smooth'}); }
+          catch (err) { jumpEl.scrollIntoView(true); }
+        }, 40);
+      }
+    }
+  }
+  var form=document.getElementById('playerSearchForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      apply({jump:true});
+    });
+  }
+  var inp=document.getElementById('playerSearch');
+  if(inp){
+    inp.addEventListener('input', function(){ apply({}); });
+    inp.addEventListener('search', function(){ apply({jump:true}); });
+    inp.addEventListener('keydown', function(e){
+      if(e.key==='Enter' || e.keyCode===13){
+        e.preventDefault();
+        apply({jump:true});
+      }
+    });
+  }
+})();
+</script>
+</body></html>
