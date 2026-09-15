@@ -24,10 +24,10 @@ label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35r
 input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
 input.search:focus{outline:2px solid var(--accent);outline-offset:1px;}
 .pill.search-miss{opacity:.42;}
-table.search-empty{display:none;}
-li.name-hit,tr.name-hit{background:rgba(0,125,121,.28);outline:1px solid var(--accent);}
+table.search-empty,.team-block.search-empty,.slip.search-empty{display:none;}
+li.name-hit,tr.name-hit,.bat-card.name-hit{background:rgba(0,125,121,.28);outline:1px solid var(--accent);}
 .hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
-main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:58rem;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:72rem;}
 h1{font-size:1.6rem;margin:0 0 .3rem;}
 h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
 h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
@@ -40,6 +40,25 @@ td.val{font-weight:700;color:var(--val);white-space:nowrap;}
 ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
 li{margin:.35rem 0;}
 .panel{display:none;}
+.team-block{margin:0 0 1.15rem;}
+.team-head{margin:.75rem 0 .45rem;font-size:1rem;letter-spacing:.05em;}
+.bat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(16.5rem,1fr));gap:.75rem;margin:0 0 1rem;}
+.bat-card{background:var(--table);border:1px solid var(--cell);border-left:5px solid var(--team,#007d79);border-radius:.45rem;padding:.7rem .8rem .8rem;display:flex;flex-direction:column;gap:.28rem;min-height:11rem;box-sizing:border-box;}
+.bat-head{display:flex;align-items:center;gap:.4rem;}
+.rank{font-weight:700;color:var(--val);font-size:.85rem;}
+.team-badge{font-size:.68rem;font-weight:700;letter-spacing:.04em;background:var(--team,#007d79);color:#fff;border-radius:.25rem;padding:.12rem .35rem;}
+.overall{--pct:0;margin-left:auto;width:2.55rem;height:2.55rem;border-radius:50%;background:conic-gradient(var(--val) calc(var(--pct)*1%),var(--pill-line) 0);display:grid;place-items:center;flex:0 0 2.55rem;}
+.overall span{width:2rem;height:2rem;border-radius:50%;background:var(--table);display:grid;place-items:center;font-weight:700;font-size:.72rem;color:var(--val);}
+.face{width:2.2rem;height:2.2rem;border-radius:50%;background:var(--pill);color:var(--fg);font-weight:700;font-size:.78rem;display:grid;place-items:center;letter-spacing:.03em;margin:.1rem 0 0;}
+.name{margin:0;font-size:1.05rem;line-height:1.2;}
+.meta{margin:0;display:flex;flex-wrap:wrap;gap:.28rem;}
+.chip{font-size:.72rem;font-weight:700;background:var(--pill);color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:999px;padding:.12rem .4rem;}
+.chip.line{background:var(--accent);color:#fff;border-color:var(--accent);}
+.chip.ticket{font-weight:400;}
+.matchup,.hrr{margin:0;font-size:.82rem;color:var(--muted);}
+.why{margin:0;font-size:.82rem;line-height:1.35;}
+.slip{background:var(--table);border:1px solid var(--cell);border-radius:.5rem;padding:.15rem .8rem .85rem;margin:0 0 1.35rem;}
+.slip h2{border-top:0;margin-top:.55rem;padding-top:.25rem;}
 @media print{
   html,body,html.light,html.light body{background:#fff;color:#111;}
   .shell{display:block;}
@@ -51,6 +70,11 @@ li{margin:.35rem 0;}
   th{background:#eee;color:#333;}
   td.val{color:#000;}
   h2,h3,h4{page-break-after:avoid;color:#111;}
+  .bat-card,.slip{background:#fff;page-break-inside:avoid;break-inside:avoid;}
+  .bat-grid{grid-template-columns:1fr 1fr;}
+  .team-badge{color:#111;border:1px solid #111;background:#fff;}
+  .chip.line{background:#eee;color:#111;border-color:#111;}
+  .overall span{background:#fff;color:#111;}
 }
 @page{margin:.5in;}
 #g0:checked ~ .shell .rail label[for=g0]{background:var(--accent);color:#fff;border-color:var(--accent);}
@@ -155,67 +179,119 @@ li{margin:.35rem 0;}
 <article class="panel p1">
 <h2>OVER — TOP 11 · 2026-09-14</h2>
 <p>Over names that made a cut. Grouped by team (A–Z). Fewer than 20 is fine.</p>
-<table>
-<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Matchup</th><th>Why</th><th>Ticket</th></tr></thead><tbody>
-<tr><td class="val">7</td><td>Michael Harris II</td><td>ATL</td><td>1</td><td class="val">O1.5</td><td class="val">99</td><td>15/26/14</td><td>vs Peterson (soft)</td><td>He has been in decent form this week. Peterson has been getting hit. This park has been giving up runs. The offense has been scoring a lot the last three games.</td><td>rec only</td></tr>
-<tr><td class="val">8</td><td>Ronald Acuña Jr.</td><td>ATL</td><td>2</td><td class="val">1.5*</td><td class="val">99</td><td>14/42/11</td><td>vs Peterson (soft)</td><td>He has been in decent form this week. Peterson has been getting hit. This park has been giving up runs. The offense has been scoring a lot the last three games.</td><td>rec only</td></tr>
-<tr><td class="val">11</td><td>Gabriel Moreno</td><td>AZ</td><td>3</td><td class="val">O1.5</td><td class="val">92</td><td>17/29/11</td><td>vs Alcantara (cold)</td><td>He has been in decent form this week. Alcantara has been getting knocked around.</td><td>rec only</td></tr>
-<tr><td class="val">3</td><td>Mookie Betts</td><td>LAD</td><td>1</td><td class="val">O1.5</td><td class="val">100</td><td>25/46/7</td><td>vs Lodolo (cold)</td><td>He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</td><td>on a ticket</td></tr>
-<tr><td class="val">4</td><td>Max Muncy</td><td>LAD</td><td>3</td><td class="val">1.5*</td><td class="val">100</td><td>21/23/7</td><td>vs Lodolo (cold)</td><td>He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</td><td>on a ticket</td></tr>
-<tr><td class="val">10</td><td>Kyle Tucker</td><td>LAD</td><td>5</td><td class="val">O1.5</td><td class="val">96</td><td>17/25/11</td><td>vs Lodolo (cold)</td><td>He has been in decent form this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</td><td>rec only</td></tr>
-<tr><td class="val">1</td><td>Francisco Lindor</td><td>NYM</td><td>1</td><td class="val">O1.5</td><td class="val">100</td><td>24/41/11</td><td>vs Young (soft)</td><td>He has been hitting well this week. Young has been getting hit.</td><td>on a ticket</td></tr>
-<tr><td class="val">2</td><td>Juan Soto</td><td>NYM</td><td>2</td><td class="val">O1.5</td><td class="val">100</td><td>19/31/6</td><td>vs Young (soft)</td><td>He has been in decent form this week. Young has been getting hit.</td><td>on a ticket</td></tr>
-<tr><td class="val">6</td><td>Jared Young</td><td>NYM</td><td>5</td><td class="val">O1.5</td><td class="val">100</td><td>18/32/6</td><td>vs Young (soft)</td><td>He has been in decent form this week. Young has been getting hit.</td><td>rec only</td></tr>
-<tr><td class="val">5</td><td>Luis García Jr.</td><td>NYY</td><td>4</td><td class="val">1.5*</td><td class="val">100</td><td>15/26/7</td><td>vs Kremer (cold)</td><td>He has been in decent form this week. Kremer has been getting knocked around. their bullpen has been tired. This park has been giving up runs.</td><td>on a ticket</td></tr>
-<tr><td class="val">9</td><td>Cody Bellinger</td><td>NYY</td><td>2</td><td class="val">O1.5</td><td class="val">96</td><td>23/43/11</td><td>vs Kremer (cold)</td><td>He has been hitting well this week. Kremer has been getting knocked around. their bullpen has been tired. This park has been giving up runs.</td><td>rec only</td></tr>
-</tbody></table>
+<section class="team-block" data-team="ATL">
+<h3 class="team-head">ATL</h3>
+<div class="bat-grid">
+<article class="bat-card" data-player="Michael Harris II" data-team="ATL" style="--team:#CE1141"><header class="bat-head"><span class="rank">#7</span><span class="team-badge">ATL</span><span class="overall" style="--pct:99"><span>99</span></span></header><p class="face" aria-hidden="true">MH</p><h4 class="name">Michael Harris II</h4><p class="meta"><span class="chip">Slot 1</span><span class="chip line">O1.5</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Peterson (soft)</p><p class="hrr">15/26/14<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been in decent form this week. Peterson has been getting hit. This park has been giving up runs. The offense has been scoring a lot the last three games.</p></article>
+<article class="bat-card" data-player="Ronald Acuña Jr." data-team="ATL" style="--team:#CE1141"><header class="bat-head"><span class="rank">#8</span><span class="team-badge">ATL</span><span class="overall" style="--pct:99"><span>99</span></span></header><p class="face" aria-hidden="true">RA</p><h4 class="name">Ronald Acuña Jr.</h4><p class="meta"><span class="chip">Slot 2</span><span class="chip line">1.5*</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Peterson (soft)</p><p class="hrr">14/42/11<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been in decent form this week. Peterson has been getting hit. This park has been giving up runs. The offense has been scoring a lot the last three games.</p></article>
+</div>
+</section>
+<section class="team-block" data-team="AZ">
+<h3 class="team-head">AZ</h3>
+<div class="bat-grid">
+<article class="bat-card" data-player="Gabriel Moreno" data-team="AZ" style="--team:#A71930"><header class="bat-head"><span class="rank">#11</span><span class="team-badge">AZ</span><span class="overall" style="--pct:92"><span>92</span></span></header><p class="face" aria-hidden="true">GM</p><h4 class="name">Gabriel Moreno</h4><p class="meta"><span class="chip">Slot 3</span><span class="chip line">O1.5</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Alcantara (cold)</p><p class="hrr">17/29/11<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been in decent form this week. Alcantara has been getting knocked around.</p></article>
+</div>
+</section>
+<section class="team-block" data-team="LAD">
+<h3 class="team-head">LAD</h3>
+<div class="bat-grid">
+<article class="bat-card" data-player="Mookie Betts" data-team="LAD" style="--team:#005A9C"><header class="bat-head"><span class="rank">#3</span><span class="team-badge">LAD</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">MB</p><h4 class="name">Mookie Betts</h4><p class="meta"><span class="chip">Slot 1</span><span class="chip line">O1.5</span><span class="chip ticket">on a ticket</span></p><p class="matchup">vs Lodolo (cold)</p><p class="hrr">25/46/7<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</p></article>
+<article class="bat-card" data-player="Max Muncy" data-team="LAD" style="--team:#005A9C"><header class="bat-head"><span class="rank">#4</span><span class="team-badge">LAD</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">MM</p><h4 class="name">Max Muncy</h4><p class="meta"><span class="chip">Slot 3</span><span class="chip line">1.5*</span><span class="chip ticket">on a ticket</span></p><p class="matchup">vs Lodolo (cold)</p><p class="hrr">21/23/7<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</p></article>
+<article class="bat-card" data-player="Kyle Tucker" data-team="LAD" style="--team:#005A9C"><header class="bat-head"><span class="rank">#10</span><span class="team-badge">LAD</span><span class="overall" style="--pct:96"><span>96</span></span></header><p class="face" aria-hidden="true">KT</p><h4 class="name">Kyle Tucker</h4><p class="meta"><span class="chip">Slot 5</span><span class="chip line">O1.5</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Lodolo (cold)</p><p class="hrr">17/25/11<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been in decent form this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</p></article>
+</div>
+</section>
+<section class="team-block" data-team="NYM">
+<h3 class="team-head">NYM</h3>
+<div class="bat-grid">
+<article class="bat-card" data-player="Francisco Lindor" data-team="NYM" style="--team:#002D72"><header class="bat-head"><span class="rank">#1</span><span class="team-badge">NYM</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">FL</p><h4 class="name">Francisco Lindor</h4><p class="meta"><span class="chip">Slot 1</span><span class="chip line">O1.5</span><span class="chip ticket">on a ticket</span></p><p class="matchup">vs Young (soft)</p><p class="hrr">24/41/11<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been hitting well this week. Young has been getting hit.</p></article>
+<article class="bat-card" data-player="Juan Soto" data-team="NYM" style="--team:#002D72"><header class="bat-head"><span class="rank">#2</span><span class="team-badge">NYM</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">JS</p><h4 class="name">Juan Soto</h4><p class="meta"><span class="chip">Slot 2</span><span class="chip line">O1.5</span><span class="chip ticket">on a ticket</span></p><p class="matchup">vs Young (soft)</p><p class="hrr">19/31/6<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been in decent form this week. Young has been getting hit.</p></article>
+<article class="bat-card" data-player="Jared Young" data-team="NYM" style="--team:#002D72"><header class="bat-head"><span class="rank">#6</span><span class="team-badge">NYM</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">JY</p><h4 class="name">Jared Young</h4><p class="meta"><span class="chip">Slot 5</span><span class="chip line">O1.5</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Young (soft)</p><p class="hrr">18/32/6<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been in decent form this week. Young has been getting hit.</p></article>
+</div>
+</section>
+<section class="team-block" data-team="NYY">
+<h3 class="team-head">NYY</h3>
+<div class="bat-grid">
+<article class="bat-card" data-player="Luis García Jr." data-team="NYY" style="--team:#0C2340"><header class="bat-head"><span class="rank">#5</span><span class="team-badge">NYY</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">LG</p><h4 class="name">Luis García Jr.</h4><p class="meta"><span class="chip">Slot 4</span><span class="chip line">1.5*</span><span class="chip ticket">on a ticket</span></p><p class="matchup">vs Kremer (cold)</p><p class="hrr">15/26/7<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been in decent form this week. Kremer has been getting knocked around. their bullpen has been tired. This park has been giving up runs.</p></article>
+<article class="bat-card" data-player="Cody Bellinger" data-team="NYY" style="--team:#0C2340"><header class="bat-head"><span class="rank">#9</span><span class="team-badge">NYY</span><span class="overall" style="--pct:96"><span>96</span></span></header><p class="face" aria-hidden="true">CB</p><h4 class="name">Cody Bellinger</h4><p class="meta"><span class="chip">Slot 2</span><span class="chip line">O1.5</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Kremer (cold)</p><p class="hrr">23/43/11<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been hitting well this week. Kremer has been getting knocked around. their bullpen has been tired. This park has been giving up runs.</p></article>
+</div>
+</section>
 </article>
 <article class="panel p2">
 <h2>UNDER — TOP 12 · 2026-09-14</h2>
 <p>Under names that made a cut. Grouped by team (A–Z). Fewer than 20 is fine.</p>
-<table>
-<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Matchup</th><th>Why</th><th>Ticket</th></tr></thead><tbody>
-<tr><td class="val">8</td><td>Tommy Troy</td><td>AZ</td><td>1</td><td class="val">U1.5*</td><td class="val">57</td><td>1/1/1</td><td>vs Alcantara (cold)</td><td>He has been quiet at the plate this week. He has been quiet the last three games. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
-<tr><td class="val">1</td><td>Ke&#x27;Bryan Hayes</td><td>CIN</td><td>4</td><td class="val">U1.5*</td><td class="val">31</td><td>3/7/1</td><td>vs Skubal (hot)</td><td>He has been quiet at the plate this week. He has been quiet the last three games. The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
-<tr><td class="val">6</td><td>JJ Bleday</td><td>CIN</td><td>6</td><td class="val">U1.5*</td><td class="val">42</td><td>6/19/6</td><td>vs Skubal (hot)</td><td>He has been quiet at the plate this week. The starter has been dealing. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
-<tr><td class="val">7</td><td>Tyler Stephenson</td><td>CIN</td><td>5</td><td class="val">U1.5*</td><td class="val">45</td><td>9/28/3</td><td>vs Skubal (hot)</td><td>He has been quiet at the plate this week. The starter has been dealing. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
-<tr><td class="val">5</td><td>Petey Halpin</td><td>CLE</td><td>2</td><td class="val">U1.5*</td><td class="val">40</td><td>5/12/4</td><td>vs Newcomb (hot)</td><td>He has been quiet at the plate this week. The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
-<tr><td class="val">12</td><td>Steven Kwan</td><td>CLE</td><td>1</td><td class="val">U1.5</td><td class="val">49</td><td>21/31/10</td><td>vs Newcomb (hot)</td><td>The starter has been dealing. This is a tough lefty-righty matchup. The matchup looks weak.</td><td>rec only</td></tr>
-<tr><td class="val">9</td><td>Julio Rodríguez</td><td>SEA</td><td>5</td><td class="val">U1.5*</td><td class="val">51</td><td>16/29/8</td><td>vs Detmers (hot)</td><td>The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
-<tr><td class="val">11</td><td>J.P. Crawford</td><td>SEA</td><td>1</td><td class="val">U1.5*</td><td class="val">55</td><td>13/27/11</td><td>vs Detmers (hot)</td><td>The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
-<tr><td class="val">10</td><td>Jung Hoo Lee</td><td>SF</td><td>2</td><td class="val">U1.5</td><td class="val">52</td><td>10/19/1</td><td>vs Mathews (middling)</td><td>He has been quiet at the plate this week. He has been quiet the last three games. This is a tough lefty-righty matchup. The matchup looks weak.</td><td>rec only</td></tr>
-<tr><td class="val">2</td><td>Ramón Urías</td><td>STL</td><td>6</td><td class="val">U1.5*</td><td class="val">36</td><td>2/11/0</td><td>vs Roupp (hot)</td><td>He has been quiet at the plate this week. He has been quiet the last three games. The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
-<tr><td class="val">3</td><td>Victor Scott II</td><td>STL</td><td>1</td><td class="val">U1.5*</td><td class="val">38</td><td>0/1/1</td><td>vs Roupp (hot)</td><td>He has been quiet at the plate this week. He has been quiet the last three games. The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
-<tr><td class="val">4</td><td>Pedro Pagés</td><td>STL</td><td>2</td><td class="val">U1.5*</td><td class="val">42</td><td>3/7/1</td><td>vs Roupp (hot)</td><td>He has been quiet at the plate this week. He has been quiet the last three games. The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</td><td>rec only</td></tr>
-</tbody></table>
+<section class="team-block" data-team="AZ">
+<h3 class="team-head">AZ</h3>
+<div class="bat-grid">
+<article class="bat-card" data-player="Tommy Troy" data-team="AZ" style="--team:#A71930"><header class="bat-head"><span class="rank">#8</span><span class="team-badge">AZ</span><span class="overall" style="--pct:57"><span>57</span></span></header><p class="face" aria-hidden="true">TT</p><h4 class="name">Tommy Troy</h4><p class="meta"><span class="chip">Slot 1</span><span class="chip line">U1.5*</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Alcantara (cold)</p><p class="hrr">1/1/1<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been quiet at the plate this week. He has been quiet the last three games. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</p></article>
+</div>
+</section>
+<section class="team-block" data-team="CIN">
+<h3 class="team-head">CIN</h3>
+<div class="bat-grid">
+<article class="bat-card" data-player="Ke&#x27;Bryan Hayes" data-team="CIN" style="--team:#C6011F"><header class="bat-head"><span class="rank">#1</span><span class="team-badge">CIN</span><span class="overall" style="--pct:31"><span>31</span></span></header><p class="face" aria-hidden="true">KH</p><h4 class="name">Ke&#x27;Bryan Hayes</h4><p class="meta"><span class="chip">Slot 4</span><span class="chip line">U1.5*</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Skubal (hot)</p><p class="hrr">3/7/1<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been quiet at the plate this week. He has been quiet the last three games. The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</p></article>
+<article class="bat-card" data-player="JJ Bleday" data-team="CIN" style="--team:#C6011F"><header class="bat-head"><span class="rank">#6</span><span class="team-badge">CIN</span><span class="overall" style="--pct:42"><span>42</span></span></header><p class="face" aria-hidden="true">JB</p><h4 class="name">JJ Bleday</h4><p class="meta"><span class="chip">Slot 6</span><span class="chip line">U1.5*</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Skubal (hot)</p><p class="hrr">6/19/6<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been quiet at the plate this week. The starter has been dealing. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</p></article>
+<article class="bat-card" data-player="Tyler Stephenson" data-team="CIN" style="--team:#C6011F"><header class="bat-head"><span class="rank">#7</span><span class="team-badge">CIN</span><span class="overall" style="--pct:45"><span>45</span></span></header><p class="face" aria-hidden="true">TS</p><h4 class="name">Tyler Stephenson</h4><p class="meta"><span class="chip">Slot 5</span><span class="chip line">U1.5*</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Skubal (hot)</p><p class="hrr">9/28/3<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been quiet at the plate this week. The starter has been dealing. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</p></article>
+</div>
+</section>
+<section class="team-block" data-team="CLE">
+<h3 class="team-head">CLE</h3>
+<div class="bat-grid">
+<article class="bat-card" data-player="Petey Halpin" data-team="CLE" style="--team:#00385D"><header class="bat-head"><span class="rank">#5</span><span class="team-badge">CLE</span><span class="overall" style="--pct:40"><span>40</span></span></header><p class="face" aria-hidden="true">PH</p><h4 class="name">Petey Halpin</h4><p class="meta"><span class="chip">Slot 2</span><span class="chip line">U1.5*</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Newcomb (hot)</p><p class="hrr">5/12/4<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been quiet at the plate this week. The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</p></article>
+<article class="bat-card" data-player="Steven Kwan" data-team="CLE" style="--team:#00385D"><header class="bat-head"><span class="rank">#12</span><span class="team-badge">CLE</span><span class="overall" style="--pct:49"><span>49</span></span></header><p class="face" aria-hidden="true">SK</p><h4 class="name">Steven Kwan</h4><p class="meta"><span class="chip">Slot 1</span><span class="chip line">U1.5</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Newcomb (hot)</p><p class="hrr">21/31/10<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">The starter has been dealing. This is a tough lefty-righty matchup. The matchup looks weak.</p></article>
+</div>
+</section>
+<section class="team-block" data-team="SEA">
+<h3 class="team-head">SEA</h3>
+<div class="bat-grid">
+<article class="bat-card" data-player="Julio Rodríguez" data-team="SEA" style="--team:#0C2C56"><header class="bat-head"><span class="rank">#9</span><span class="team-badge">SEA</span><span class="overall" style="--pct:51"><span>51</span></span></header><p class="face" aria-hidden="true">JR</p><h4 class="name">Julio Rodríguez</h4><p class="meta"><span class="chip">Slot 5</span><span class="chip line">U1.5*</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Detmers (hot)</p><p class="hrr">16/29/8<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</p></article>
+<article class="bat-card" data-player="J.P. Crawford" data-team="SEA" style="--team:#0C2C56"><header class="bat-head"><span class="rank">#11</span><span class="team-badge">SEA</span><span class="overall" style="--pct:55"><span>55</span></span></header><p class="face" aria-hidden="true">JC</p><h4 class="name">J.P. Crawford</h4><p class="meta"><span class="chip">Slot 1</span><span class="chip line">U1.5*</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Detmers (hot)</p><p class="hrr">13/27/11<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</p></article>
+</div>
+</section>
+<section class="team-block" data-team="SF">
+<h3 class="team-head">SF</h3>
+<div class="bat-grid">
+<article class="bat-card" data-player="Jung Hoo Lee" data-team="SF" style="--team:#FD5A1E"><header class="bat-head"><span class="rank">#10</span><span class="team-badge">SF</span><span class="overall" style="--pct:52"><span>52</span></span></header><p class="face" aria-hidden="true">JL</p><h4 class="name">Jung Hoo Lee</h4><p class="meta"><span class="chip">Slot 2</span><span class="chip line">U1.5</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Mathews (middling)</p><p class="hrr">10/19/1<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been quiet at the plate this week. He has been quiet the last three games. This is a tough lefty-righty matchup. The matchup looks weak.</p></article>
+</div>
+</section>
+<section class="team-block" data-team="STL">
+<h3 class="team-head">STL</h3>
+<div class="bat-grid">
+<article class="bat-card" data-player="Ramón Urías" data-team="STL" style="--team:#C41E3A"><header class="bat-head"><span class="rank">#2</span><span class="team-badge">STL</span><span class="overall" style="--pct:36"><span>36</span></span></header><p class="face" aria-hidden="true">RU</p><h4 class="name">Ramón Urías</h4><p class="meta"><span class="chip">Slot 6</span><span class="chip line">U1.5*</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Roupp (hot)</p><p class="hrr">2/11/0<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been quiet at the plate this week. He has been quiet the last three games. The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</p></article>
+<article class="bat-card" data-player="Victor Scott II" data-team="STL" style="--team:#C41E3A"><header class="bat-head"><span class="rank">#3</span><span class="team-badge">STL</span><span class="overall" style="--pct:38"><span>38</span></span></header><p class="face" aria-hidden="true">VS</p><h4 class="name">Victor Scott II</h4><p class="meta"><span class="chip">Slot 1</span><span class="chip line">U1.5*</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Roupp (hot)</p><p class="hrr">0/1/1<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been quiet at the plate this week. He has been quiet the last three games. The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</p></article>
+<article class="bat-card" data-player="Pedro Pagés" data-team="STL" style="--team:#C41E3A"><header class="bat-head"><span class="rank">#4</span><span class="team-badge">STL</span><span class="overall" style="--pct:42"><span>42</span></span></header><p class="face" aria-hidden="true">PP</p><h4 class="name">Pedro Pagés</h4><p class="meta"><span class="chip">Slot 2</span><span class="chip line">U1.5*</span><span class="chip ticket">rec only</span></p><p class="matchup">vs Roupp (hot)</p><p class="hrr">3/7/1<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been quiet at the plate this week. He has been quiet the last three games. The starter has been dealing. This is a tough lefty-righty matchup. He has struggled against this pitcher&#x27;s hand. The matchup looks weak.</p></article>
+</div>
+</section>
 </article>
 <article class="panel p3">
+<section class="slip">
 <h2>Standard · Pick 4</h2>
-<table>
-<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Why</th></tr></thead><tbody>
-<tr><td class="val">1</td><td>Francisco Lindor</td><td>NYM</td><td>1</td><td class="val">O1.5</td><td class="val">100</td><td>24/41/11</td><td>He has been hitting well this week. Young has been getting hit.</td></tr>
-<tr><td class="val">2</td><td>Juan Soto</td><td>NYM</td><td>2</td><td class="val">O1.5</td><td class="val">100</td><td>19/31/6</td><td>He has been in decent form this week. Young has been getting hit.</td></tr>
-<tr><td class="val">3</td><td>Mookie Betts</td><td>LAD</td><td>1</td><td class="val">O1.5</td><td class="val">100</td><td>25/46/7</td><td>He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</td></tr>
-<tr><td class="val">4</td><td>Max Muncy</td><td>LAD</td><td>3</td><td class="val">1.5*</td><td class="val">100</td><td>21/23/7</td><td>He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</td></tr>
-</tbody></table>
+<div class="bat-grid">
+<article class="bat-card" data-player="Francisco Lindor" data-team="NYM" style="--team:#002D72"><header class="bat-head"><span class="rank">#1</span><span class="team-badge">NYM</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">FL</p><h4 class="name">Francisco Lindor</h4><p class="meta"><span class="chip">Slot 1</span><span class="chip line">O1.5</span></p><p class="matchup">vs Young (soft)</p><p class="hrr">24/41/11<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been hitting well this week. Young has been getting hit.</p></article>
+<article class="bat-card" data-player="Juan Soto" data-team="NYM" style="--team:#002D72"><header class="bat-head"><span class="rank">#2</span><span class="team-badge">NYM</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">JS</p><h4 class="name">Juan Soto</h4><p class="meta"><span class="chip">Slot 2</span><span class="chip line">O1.5</span></p><p class="matchup">vs Young (soft)</p><p class="hrr">19/31/6<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been in decent form this week. Young has been getting hit.</p></article>
+<article class="bat-card" data-player="Mookie Betts" data-team="LAD" style="--team:#005A9C"><header class="bat-head"><span class="rank">#3</span><span class="team-badge">LAD</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">MB</p><h4 class="name">Mookie Betts</h4><p class="meta"><span class="chip">Slot 1</span><span class="chip line">O1.5</span></p><p class="matchup">vs Lodolo (cold)</p><p class="hrr">25/46/7<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</p></article>
+<article class="bat-card" data-player="Max Muncy" data-team="LAD" style="--team:#005A9C"><header class="bat-head"><span class="rank">#4</span><span class="team-badge">LAD</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">MM</p><h4 class="name">Max Muncy</h4><p class="meta"><span class="chip">Slot 3</span><span class="chip line">1.5*</span></p><p class="matchup">vs Lodolo (cold)</p><p class="hrr">21/23/7<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</p></article>
+</div>
+</section>
+<section class="slip">
 <h2>Best Overall · Pick 6</h2>
-<table>
-<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Why</th></tr></thead><tbody>
-<tr><td class="val">1</td><td>Francisco Lindor</td><td>NYM</td><td>1</td><td class="val">O1.5</td><td class="val">100</td><td>24/41/11</td><td>He has been hitting well this week. Young has been getting hit.</td></tr>
-<tr><td class="val">2</td><td>Juan Soto</td><td>NYM</td><td>2</td><td class="val">O1.5</td><td class="val">100</td><td>19/31/6</td><td>He has been in decent form this week. Young has been getting hit.</td></tr>
-<tr><td class="val">3</td><td>Fernando Tatis Jr.</td><td>SD</td><td>1</td><td class="val">O2.5</td><td class="val">100</td><td>25/39/12</td><td>He has been hitting well this week. Sugano has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 5.6 ERA). This park has been giving up runs. The lineup around him has been hot. The offense has been scoring a lot the last three games.</td></tr>
-<tr><td class="val">4</td><td>Mookie Betts</td><td>LAD</td><td>1</td><td class="val">O1.5</td><td class="val">100</td><td>25/46/7</td><td>He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</td></tr>
-<tr><td class="val">5</td><td>Max Muncy</td><td>LAD</td><td>3</td><td class="val">1.5*</td><td class="val">100</td><td>21/23/7</td><td>He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</td></tr>
-<tr><td class="val">6</td><td>Luis García Jr.</td><td>NYY</td><td>4</td><td class="val">1.5*</td><td class="val">100</td><td>15/26/7</td><td>He has been in decent form this week. Kremer has been getting knocked around. their bullpen has been tired. This park has been giving up runs.</td></tr>
-</tbody></table>
+<div class="bat-grid">
+<article class="bat-card" data-player="Francisco Lindor" data-team="NYM" style="--team:#002D72"><header class="bat-head"><span class="rank">#1</span><span class="team-badge">NYM</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">FL</p><h4 class="name">Francisco Lindor</h4><p class="meta"><span class="chip">Slot 1</span><span class="chip line">O1.5</span></p><p class="matchup">vs Young (soft)</p><p class="hrr">24/41/11<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been hitting well this week. Young has been getting hit.</p></article>
+<article class="bat-card" data-player="Juan Soto" data-team="NYM" style="--team:#002D72"><header class="bat-head"><span class="rank">#2</span><span class="team-badge">NYM</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">JS</p><h4 class="name">Juan Soto</h4><p class="meta"><span class="chip">Slot 2</span><span class="chip line">O1.5</span></p><p class="matchup">vs Young (soft)</p><p class="hrr">19/31/6<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been in decent form this week. Young has been getting hit.</p></article>
+<article class="bat-card" data-player="Fernando Tatis Jr." data-team="SD" style="--team:#2F241D"><header class="bat-head"><span class="rank">#3</span><span class="team-badge">SD</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">FT</p><h4 class="name">Fernando Tatis Jr.</h4><p class="meta"><span class="chip">Slot 1</span><span class="chip line">O2.5</span></p><p class="matchup">vs Sugano (cold)</p><p class="hrr">25/39/12<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been hitting well this week. Sugano has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 5.6 ERA). This park has been giving up runs. The lineup around him has been hot. The offense has been scoring a lot the last three games.</p></article>
+<article class="bat-card" data-player="Mookie Betts" data-team="LAD" style="--team:#005A9C"><header class="bat-head"><span class="rank">#4</span><span class="team-badge">LAD</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">MB</p><h4 class="name">Mookie Betts</h4><p class="meta"><span class="chip">Slot 1</span><span class="chip line">O1.5</span></p><p class="matchup">vs Lodolo (cold)</p><p class="hrr">25/46/7<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</p></article>
+<article class="bat-card" data-player="Max Muncy" data-team="LAD" style="--team:#005A9C"><header class="bat-head"><span class="rank">#5</span><span class="team-badge">LAD</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">MM</p><h4 class="name">Max Muncy</h4><p class="meta"><span class="chip">Slot 3</span><span class="chip line">1.5*</span></p><p class="matchup">vs Lodolo (cold)</p><p class="hrr">21/23/7<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been hitting well this week. Lodolo has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 4.9 ERA).</p></article>
+<article class="bat-card" data-player="Luis García Jr." data-team="NYY" style="--team:#0C2340"><header class="bat-head"><span class="rank">#6</span><span class="team-badge">NYY</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">LG</p><h4 class="name">Luis García Jr.</h4><p class="meta"><span class="chip">Slot 4</span><span class="chip line">1.5*</span></p><p class="matchup">vs Kremer (cold)</p><p class="hrr">15/26/7<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been in decent form this week. Kremer has been getting knocked around. their bullpen has been tired. This park has been giving up runs.</p></article>
+</div>
+</section>
+<section class="slip">
 <h2>Advanced · Pick 4</h2>
-<table>
-<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Why</th></tr></thead><tbody>
-<tr><td class="val">1</td><td>Fernando Tatis Jr.</td><td>SD</td><td>1</td><td class="val">O2.5</td><td class="val">100</td><td>25/39/12</td><td>He has been hitting well this week. Sugano has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 5.6 ERA). This park has been giving up runs. The lineup around him has been hot. The offense has been scoring a lot the last three games.</td></tr>
-<tr><td class="val">2</td><td>Ben Rice</td><td>NYY</td><td>1</td><td class="val">1.5@0.8x</td><td class="val">100</td><td>18/36/12</td><td>He has been in decent form this week. Kremer has been getting knocked around. their bullpen has been tired. This park has been giving up runs.</td></tr>
-<tr><td class="val">3</td><td>Juan Soto</td><td>NYM</td><td>2</td><td class="val">O1.5</td><td class="val">100</td><td>19/31/6</td><td>He has been in decent form this week. Young has been getting hit.</td></tr>
-<tr><td class="val">4</td><td>Francisco Lindor</td><td>NYM</td><td>1</td><td class="val">O1.5</td><td class="val">100</td><td>24/41/11</td><td>He has been hitting well this week. Young has been getting hit.</td></tr>
-</tbody></table>
+<div class="bat-grid">
+<article class="bat-card" data-player="Fernando Tatis Jr." data-team="SD" style="--team:#2F241D"><header class="bat-head"><span class="rank">#1</span><span class="team-badge">SD</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">FT</p><h4 class="name">Fernando Tatis Jr.</h4><p class="meta"><span class="chip">Slot 1</span><span class="chip line">O2.5</span></p><p class="matchup">vs Sugano (cold)</p><p class="hrr">25/39/12<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been hitting well this week. Sugano has been getting knocked around. their bullpen has been tired. Their bullpen has been getting hit (about a 5.6 ERA). This park has been giving up runs. The lineup around him has been hot. The offense has been scoring a lot the last three games.</p></article>
+<article class="bat-card" data-player="Ben Rice" data-team="NYY" style="--team:#0C2340"><header class="bat-head"><span class="rank">#2</span><span class="team-badge">NYY</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">BR</p><h4 class="name">Ben Rice</h4><p class="meta"><span class="chip">Slot 1</span><span class="chip line">1.5@0.8x</span></p><p class="matchup">vs Kremer (cold)</p><p class="hrr">18/36/12<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been in decent form this week. Kremer has been getting knocked around. their bullpen has been tired. This park has been giving up runs.</p></article>
+<article class="bat-card" data-player="Juan Soto" data-team="NYM" style="--team:#002D72"><header class="bat-head"><span class="rank">#3</span><span class="team-badge">NYM</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">JS</p><h4 class="name">Juan Soto</h4><p class="meta"><span class="chip">Slot 2</span><span class="chip line">O1.5</span></p><p class="matchup">vs Young (soft)</p><p class="hrr">19/31/6<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been in decent form this week. Young has been getting hit.</p></article>
+<article class="bat-card" data-player="Francisco Lindor" data-team="NYM" style="--team:#002D72"><header class="bat-head"><span class="rank">#4</span><span class="team-badge">NYM</span><span class="overall" style="--pct:100"><span>100</span></span></header><p class="face" aria-hidden="true">FL</p><h4 class="name">Francisco Lindor</h4><p class="meta"><span class="chip">Slot 1</span><span class="chip line">O1.5</span></p><p class="matchup">vs Young (soft)</p><p class="hrr">24/41/11<span class="hrr-lab"> L7 / L14 / L3</span></p><p class="why">He has been hitting well this week. Young has been getting hit.</p></article>
+</div>
+</section>
 </article>
 </main></div>
 <script>
@@ -262,7 +338,7 @@ li{margin:.35rem 0;}
     if(!inp) return;
     var q=norm(inp.value);
     var n=0;
-    var hitSel='tbody tr:not([hidden]), li:not([hidden])';
+    var hitSel='tbody tr:not([hidden]), li:not([hidden]), .bat-card:not([hidden])';
     function mark(el, hit){
       el.hidden = !!(q && !hit);
       el.classList.toggle('name-hit', !!(q && hit));
@@ -284,6 +360,16 @@ li{margin:.35rem 0;}
     document.querySelectorAll('li').forEach(function(li){
       if(skip(li)) return;
       mark(li, !q || norm(li.textContent).indexOf(q)>=0);
+    });
+    document.querySelectorAll('.bat-card').forEach(function(card){
+      var nameEl=card.querySelector('.name');
+      var name=nameEl ? nameEl.textContent : (card.getAttribute('data-player')||'');
+      mark(card, !q || norm(name).indexOf(q)>=0);
+    });
+    document.querySelectorAll('.team-block, .slip').forEach(function(block){
+      var any=!!block.querySelector('.bat-card:not([hidden])');
+      block.hidden = !!(q && !any);
+      block.classList.toggle('search-empty', !!(q && !any));
     });
     var hint=document.getElementById('playerSearchHint');
     if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
