@@ -24,10 +24,10 @@ label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35r
 input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
 input.search:focus{outline:2px solid var(--accent);outline-offset:1px;}
 .pill.search-miss{opacity:.42;}
-table.search-empty{display:none;}
-li.name-hit,tr.name-hit{background:rgba(0,125,121,.28);outline:1px solid var(--accent);}
+table.search-empty,.team-block.search-empty,.slip.search-empty{display:none;}
+li.name-hit,tr.name-hit,.bat-card.name-hit{background:rgba(0,125,121,.28);outline:1px solid var(--accent);}
 .hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
-main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:58rem;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:72rem;}
 h1{font-size:1.6rem;margin:0 0 .3rem;}
 h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
 h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
@@ -40,6 +40,25 @@ td.val{font-weight:700;color:var(--val);white-space:nowrap;}
 ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
 li{margin:.35rem 0;}
 .panel{display:none;}
+.team-block{margin:0 0 1.15rem;}
+.team-head{margin:.75rem 0 .45rem;font-size:1rem;letter-spacing:.05em;}
+.bat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(16.5rem,1fr));gap:.75rem;margin:0 0 1rem;}
+.bat-card{background:var(--table);border:1px solid var(--cell);border-left:5px solid var(--team,#007d79);border-radius:.45rem;padding:.7rem .8rem .8rem;display:flex;flex-direction:column;gap:.28rem;min-height:11rem;box-sizing:border-box;}
+.bat-head{display:flex;align-items:center;gap:.4rem;}
+.rank{font-weight:700;color:var(--val);font-size:.85rem;}
+.team-badge{font-size:.68rem;font-weight:700;letter-spacing:.04em;background:var(--team,#007d79);color:#fff;border-radius:.25rem;padding:.12rem .35rem;}
+.overall{--pct:0;margin-left:auto;width:2.55rem;height:2.55rem;border-radius:50%;background:conic-gradient(var(--val) calc(var(--pct)*1%),var(--pill-line) 0);display:grid;place-items:center;flex:0 0 2.55rem;}
+.overall span{width:2rem;height:2rem;border-radius:50%;background:var(--table);display:grid;place-items:center;font-weight:700;font-size:.72rem;color:var(--val);}
+.face{width:2.2rem;height:2.2rem;border-radius:50%;background:var(--pill);color:var(--fg);font-weight:700;font-size:.78rem;display:grid;place-items:center;letter-spacing:.03em;margin:.1rem 0 0;}
+.name{margin:0;font-size:1.05rem;line-height:1.2;}
+.meta{margin:0;display:flex;flex-wrap:wrap;gap:.28rem;}
+.chip{font-size:.72rem;font-weight:700;background:var(--pill);color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:999px;padding:.12rem .4rem;}
+.chip.line{background:var(--accent);color:#fff;border-color:var(--accent);}
+.chip.ticket{font-weight:400;}
+.matchup,.hrr{margin:0;font-size:.82rem;color:var(--muted);}
+.why{margin:0;font-size:.82rem;line-height:1.35;}
+.slip{background:var(--table);border:1px solid var(--cell);border-radius:.5rem;padding:.15rem .8rem .85rem;margin:0 0 1.35rem;}
+.slip h2{border-top:0;margin-top:.55rem;padding-top:.25rem;}
 @media print{
   html,body,html.light,html.light body{background:#fff;color:#111;}
   .shell{display:block;}
@@ -51,6 +70,11 @@ li{margin:.35rem 0;}
   th{background:#eee;color:#333;}
   td.val{color:#000;}
   h2,h3,h4{page-break-after:avoid;color:#111;}
+  .bat-card,.slip{background:#fff;page-break-inside:avoid;break-inside:avoid;}
+  .bat-grid{grid-template-columns:1fr 1fr;}
+  .team-badge{color:#111;border:1px solid #111;background:#fff;}
+  .chip.line{background:#eee;color:#111;border-color:#111;}
+  .overall span{background:#fff;color:#111;}
 }
 @page{margin:.5in;}
 #g0:checked ~ .shell .rail label[for=g0]{background:var(--accent);color:#fff;border-color:var(--accent);}
@@ -64,7 +88,7 @@ li{margin:.35rem 0;}
 a{color:var(--val);}
 </style>
 </head>
-<body data-hits="1150" data-misses="1284" data-nights="42" data-last="2026-09-13">
+<body data-hits="1177" data-misses="1306" data-nights="43" data-last="2026-09-14">
 <input class="tab" type="radio" name="g" id="g0" checked/><input class="tab" type="radio" name="g" id="g1"/><input class="tab" type="radio" name="g" id="g2"/><input class="tab" type="radio" name="g" id="g3"/>
 <div class="shell">
 <aside class="rail">
@@ -78,7 +102,7 @@ a{color:var(--val);}
 <main>
 <h1>MLB Results</h1>
 <p class="sub">Season win / loss for the builder tools. Same link after every postmortem.</p>
-<article class="panel p0"><h2>Season</h2><p class="sub">42 locked nights · last locked September 13, 2026 · updated 2026-09-14T12:33:20Z</p><table><thead><tr><th>Hit</th><th>Miss</th><th>Hit rate</th><th>Nights</th></tr></thead><tbody><tr><td class="val">1150</td><td class="val">1284</td><td class="val">47.2%</td><td>42</td></tr></tbody></table><h3>Winning</h3><ul><li>Best Overall · Pick 6 is winning (16/23, 70%).</li><li>Under the Cut is winning (115/205, 56%).</li><li>Top 20 Over is winning (22/34, 65%).</li><li>Top 20 Under is winning (104/179, 58%).</li></ul><h3>Fading</h3><ul><li>Nothing has cleared the sample floor yet.</li></ul></article><article class="panel p1"><h2>By tool</h2><p class="sub">Locked nights only. Void does not count.</p><table><thead><tr><th>Tool</th><th>Record</th><th>Hit</th><th>Miss</th><th>Nights</th><th>Note</th></tr></thead><tbody><tr><td>Standard · Pick 4</td><td class="val">9/14 (64%)</td><td>9</td><td>5</td><td>4</td><td>too small to call</td></tr><tr><td>Advanced · Pick 4</td><td class="val">12/16 (75%)</td><td>12</td><td>4</td><td>4</td><td>too small to call</td></tr><tr><td>Best Overall · Pick 6</td><td class="val">16/23 (70%)</td><td>16</td><td>7</td><td>4</td><td></td></tr><tr><td>Made the Cut</td><td class="val">164/307 (53%)</td><td>164</td><td>143</td><td>28</td><td></td></tr><tr><td>Under the Cut</td><td class="val">115/205 (56%)</td><td>115</td><td>90</td><td>19</td><td></td></tr><tr><td>Top 20 Over</td><td class="val">22/34 (65%)</td><td>22</td><td>12</td><td>4</td><td></td></tr><tr><td>Top 20 Under</td><td class="val">104/179 (58%)</td><td>104</td><td>75</td><td>19</td><td></td></tr></tbody></table></article><article class="panel p2"><h2>Last 14 nights</h2><p class="sub">Partial nights are graded while games were still live. They stay off the season totals.</p><table><thead><tr><th>Date</th><th>Standard · Pick 4</th><th>Advanced · Pick 4</th><th>Best Overall · Pick 6</th><th>Made the Cut</th><th>Under the Cut</th><th>Top 20 Over</th><th>Top 20 Under</th><th>Note</th></tr></thead><tbody><tr><td>September 13, 2026</td><td class="val">2/4</td><td class="val">3/4</td><td class="val">4/6</td><td class="val">5/11</td><td class="val">6/8</td><td class="val">5/10</td><td class="val">6/7</td><td></td></tr><tr><td>September 12, 2026</td><td class="val">2/2</td><td class="val">3/4</td><td class="val">4/5</td><td class="val">7/9</td><td class="val">5/7</td><td class="val">6/8</td><td class="val">5/6</td><td></td></tr><tr><td>September 11, 2026</td><td class="val">3/4</td><td class="val">4/4</td><td class="val">5/6</td><td class="val">10/12</td><td class="val">8/15</td><td class="val">8/10</td><td class="val">6/9</td><td></td></tr><tr><td>September 10, 2026</td><td class="val">2/4</td><td class="val">2/4</td><td class="val">3/6</td><td class="val">3/6</td><td class="val">6/12</td><td class="val">3/6</td><td class="val">6/9</td><td></td></tr><tr><td>September 9, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">4/12</td><td class="val">2/7</td><td class="val">—</td><td class="val">2/7</td><td></td></tr><tr><td>September 8, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">7/12</td><td class="val">3/8</td><td class="val">—</td><td class="val">3/8</td><td></td></tr><tr><td>September 7, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">4/10</td><td class="val">5/10</td><td class="val">—</td><td class="val">5/10</td><td></td></tr><tr><td>September 6, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">7/12</td><td class="val">7/12</td><td class="val">—</td><td class="val">7/12</td><td></td></tr><tr><td>September 5, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">6/11</td><td class="val">6/11</td><td class="val">—</td><td class="val">6/11</td><td></td></tr><tr><td>September 4, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">7/11</td><td class="val">6/11</td><td class="val">—</td><td class="val">6/10</td><td></td></tr><tr><td>September 3, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">8/23</td><td class="val">5/12</td><td class="val">—</td><td class="val">4/11</td><td></td></tr><tr><td>September 2, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">6/12</td><td class="val">3/9</td><td class="val">—</td><td class="val">3/9</td><td></td></tr><tr><td>September 1, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">6/11</td><td class="val">2/7</td><td class="val">—</td><td class="val">2/7</td><td></td></tr><tr><td>August 31, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">5/10</td><td class="val">7/9</td><td class="val">—</td><td class="val">7/9</td><td></td></tr></tbody></table></article><article class="panel p3"><h2>Last locked night</h2><p class="sub">September 13, 2026</p><p><b>Standard · Pick 4:</b> Elly De La Cruz, Dane Myers, Griffin Conine, Otto Lopez</p><p><b>Advanced · Pick 4:</b> Elly De La Cruz, Otto Lopez, Hao-Yu Lee, Kevin McGonigle</p><p><b>Best Overall · Pick 6:</b> Elly De La Cruz, Dane Myers, Griffin Conine, Otto Lopez, Javier Sanoja, Drake Baldwin</p><p><b>Made the Cut:</b> Elly De La Cruz, Jake McCarthy, Dane Myers, Griffin Conine, Otto Lopez, Javier Sanoja, Drake Baldwin, Hao-Yu Lee, Gleyber Torres, CJ Abrams, Mike Trout</p><p><b>Under the Cut:</b> Jackson Holliday, Jordan Lawlar, Turner Hill, Matt Shaw, Coby Mayo, Nick Loftin, Isaac Collins, Trevor Story</p></article>
+<article class="panel p0"><h2>Season</h2><p class="sub">43 locked nights · last locked September 14, 2026 · updated 2026-09-15T13:15:03Z</p><table><thead><tr><th>Hit</th><th>Miss</th><th>Hit rate</th><th>Nights</th></tr></thead><tbody><tr><td class="val">1177</td><td class="val">1306</td><td class="val">47.4%</td><td>43</td></tr></tbody></table><h3>Winning</h3><ul><li>Advanced · Pick 4 is winning (14/20, 70%).</li><li>Best Overall · Pick 6 is winning (17/29, 59%).</li><li>Under the Cut is winning (123/214, 57%).</li><li>Top 20 Over is winning (25/45, 56%).</li><li>Top 20 Under is winning (110/185, 59%).</li></ul><h3>Fading</h3><ul><li>Nothing has cleared the sample floor yet.</li></ul></article><article class="panel p1"><h2>By tool</h2><p class="sub">Locked nights only. Void does not count.</p><table><thead><tr><th>Tool</th><th>Record</th><th>Hit</th><th>Miss</th><th>Nights</th><th>Note</th></tr></thead><tbody><tr><td>Standard · Pick 4</td><td class="val">9/18 (50%)</td><td>9</td><td>9</td><td>5</td><td>too small to call</td></tr><tr><td>Advanced · Pick 4</td><td class="val">14/20 (70%)</td><td>14</td><td>6</td><td>5</td><td></td></tr><tr><td>Best Overall · Pick 6</td><td class="val">17/29 (59%)</td><td>17</td><td>12</td><td>5</td><td></td></tr><tr><td>Made the Cut</td><td class="val">168/319 (53%)</td><td>168</td><td>151</td><td>29</td><td></td></tr><tr><td>Under the Cut</td><td class="val">123/214 (57%)</td><td>123</td><td>91</td><td>20</td><td></td></tr><tr><td>Top 20 Over</td><td class="val">25/45 (56%)</td><td>25</td><td>20</td><td>5</td><td></td></tr><tr><td>Top 20 Under</td><td class="val">110/185 (59%)</td><td>110</td><td>75</td><td>20</td><td></td></tr></tbody></table></article><article class="panel p2"><h2>Last 14 nights</h2><p class="sub">Partial nights are graded while games were still live. They stay off the season totals.</p><table><thead><tr><th>Date</th><th>Standard · Pick 4</th><th>Advanced · Pick 4</th><th>Best Overall · Pick 6</th><th>Made the Cut</th><th>Under the Cut</th><th>Top 20 Over</th><th>Top 20 Under</th><th>Note</th></tr></thead><tbody><tr><td>September 14, 2026</td><td class="val">0/4</td><td class="val">2/4</td><td class="val">1/6</td><td class="val">4/12</td><td class="val">8/9</td><td class="val">3/11</td><td class="val">6/6</td><td></td></tr><tr><td>September 13, 2026</td><td class="val">2/4</td><td class="val">3/4</td><td class="val">4/6</td><td class="val">5/11</td><td class="val">6/8</td><td class="val">5/10</td><td class="val">6/7</td><td></td></tr><tr><td>September 12, 2026</td><td class="val">2/2</td><td class="val">3/4</td><td class="val">4/5</td><td class="val">7/9</td><td class="val">5/7</td><td class="val">6/8</td><td class="val">5/6</td><td></td></tr><tr><td>September 11, 2026</td><td class="val">3/4</td><td class="val">4/4</td><td class="val">5/6</td><td class="val">10/12</td><td class="val">8/15</td><td class="val">8/10</td><td class="val">6/9</td><td></td></tr><tr><td>September 10, 2026</td><td class="val">2/4</td><td class="val">2/4</td><td class="val">3/6</td><td class="val">3/6</td><td class="val">6/12</td><td class="val">3/6</td><td class="val">6/9</td><td></td></tr><tr><td>September 9, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">4/12</td><td class="val">2/7</td><td class="val">—</td><td class="val">2/7</td><td></td></tr><tr><td>September 8, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">7/12</td><td class="val">3/8</td><td class="val">—</td><td class="val">3/8</td><td></td></tr><tr><td>September 7, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">4/10</td><td class="val">5/10</td><td class="val">—</td><td class="val">5/10</td><td></td></tr><tr><td>September 6, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">7/12</td><td class="val">7/12</td><td class="val">—</td><td class="val">7/12</td><td></td></tr><tr><td>September 5, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">6/11</td><td class="val">6/11</td><td class="val">—</td><td class="val">6/11</td><td></td></tr><tr><td>September 4, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">7/11</td><td class="val">6/11</td><td class="val">—</td><td class="val">6/10</td><td></td></tr><tr><td>September 3, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">8/23</td><td class="val">5/12</td><td class="val">—</td><td class="val">4/11</td><td></td></tr><tr><td>September 2, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">6/12</td><td class="val">3/9</td><td class="val">—</td><td class="val">3/9</td><td></td></tr><tr><td>September 1, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">6/11</td><td class="val">2/7</td><td class="val">—</td><td class="val">2/7</td><td></td></tr></tbody></table></article><article class="panel p3"><h2>Last locked night</h2><p class="sub">September 14, 2026</p><p><b>Standard · Pick 4:</b> Mookie Betts, Francisco Lindor, Juan Soto, Max Muncy</p><p><b>Advanced · Pick 4:</b> Fernando Tatis Jr., Francisco Lindor, Juan Soto, Ben Rice</p><p><b>Best Overall · Pick 6:</b> Mookie Betts, Fernando Tatis Jr., Francisco Lindor, Juan Soto, Max Muncy, Luis García Jr.</p><p><b>Made the Cut:</b> Mookie Betts, Fernando Tatis Jr., Cody Bellinger, Francisco Lindor, Juan Soto, Max Muncy, Luis García Jr., Jared Young, Michael Harris II, Ronald Acuña Jr., Kyle Tucker, Gabriel Moreno</p><p><b>Under the Cut:</b> Steven Kwan, Ke&#x27;Bryan Hayes, Ramón Urías, JJ Bleday, Tyler Stephenson, Tommy Troy, Julio Rodríguez, Jung Hoo Lee, J.P. Crawford</p></article>
 </main>
 </div>
 <script>
@@ -125,7 +149,7 @@ a{color:var(--val);}
     if(!inp) return;
     var q=norm(inp.value);
     var n=0;
-    var hitSel='tbody tr:not([hidden]), li:not([hidden])';
+    var hitSel='tbody tr:not([hidden]), li:not([hidden]), .bat-card:not([hidden])';
     function mark(el, hit){
       el.hidden = !!(q && !hit);
       el.classList.toggle('name-hit', !!(q && hit));
@@ -147,6 +171,16 @@ a{color:var(--val);}
     document.querySelectorAll('li').forEach(function(li){
       if(skip(li)) return;
       mark(li, !q || norm(li.textContent).indexOf(q)>=0);
+    });
+    document.querySelectorAll('.bat-card').forEach(function(card){
+      var nameEl=card.querySelector('.name');
+      var name=nameEl ? nameEl.textContent : (card.getAttribute('data-player')||'');
+      mark(card, !q || norm(name).indexOf(q)>=0);
+    });
+    document.querySelectorAll('.team-block, .slip').forEach(function(block){
+      var any=!!block.querySelector('.bat-card:not([hidden])');
+      block.hidden = !!(q && !any);
+      block.classList.toggle('search-empty', !!(q && !any));
     });
     var hint=document.getElementById('playerSearchHint');
     if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
