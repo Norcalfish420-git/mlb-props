@@ -9,11 +9,12 @@
 .page-mlb{--desk:#1f6feb;}
 .page-nfl{--desk:#d97706;}
 .page-cfb{--desk:#e11d48;}
+.page-showdown{--desk:#be123c;}
 html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,"Iowan Old Style",serif;}
 body{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("./assets/desk-bg-hub.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
 body.page-mlb{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("./assets/desk-bg-mlb.jpg");}
 body.page-nfl{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("./assets/desk-bg-nfl.jpg");}
-body.page-cfb{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("./assets/desk-bg-cfb.jpg");}
+body.page-cfb,body.page-showdown{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("./assets/desk-bg-cfb.jpg");}
 .shell{display:flex;min-height:100vh;}
 .rail{width:12.5rem;flex:0 0 12.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1.1rem .8rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.4rem;backdrop-filter:blur(14px);}
 .rail .brand{order:0;}
@@ -46,6 +47,7 @@ h1{font-size:2.05rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
 .tool.lane-mlb{--desk:#1f6feb;}
 .tool.lane-nfl{--desk:#d97706;}
 .tool.lane-cfb{--desk:#e11d48;}
+.tool.lane-showdown{--desk:#be123c;}
 .tool:hover,.tool:focus{border-color:var(--desk);outline:none;transform:translateY(-1px);}
 .tool .when{font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);}
 .tool .game{grid-column:1;font-size:1.35rem;font-weight:700;}
@@ -69,7 +71,8 @@ h1{font-size:2.05rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
 <a class="pill home on" href="./hub.html"><span class="when">all desks</span>Main Prop Page</a>
 <a class="pill" href="./mlb.html"><span class="when">player props</span>MLB</a>
 <a class="pill" href="./nfl.html"><span class="when">player props</span>NFL</a>
-<a class="pill" href="./cfb.html"><span class="when">DK lineup</span>CFB</a>
+<a class="pill" href="./cfb.html"><span class="when">player props</span>CFB</a>
+<a class="pill" href="./showdown.html"><span class="when">DK lineup</span>Showdown</a>
 <a class="pill" href="./hub.html#results"><span class="when">win / loss</span>Results</a>
 <form class="search-form" id="playerSearchForm" action="#" role="search">
 <input id="hubSearch" type="search" placeholder="Search a game or date" autocomplete="off"/>
@@ -82,7 +85,8 @@ h1{font-size:2.05rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
 </div>
 <h2 class="tools-head" id="boards">Boards</h2><div class="tools"><a class="tool lane-mlb" href="./mlb.html"><span class="when">player props</span><span class="game">MLB Player Props</span><span class="go">Open</span></a>
 <a class="tool lane-nfl" href="./nfl.html"><span class="when">player props</span><span class="game">NFL Player Props</span><span class="go">Open</span></a>
-<a class="tool lane-cfb" href="./cfb.html"><span class="when">DK lineup</span><span class="game">CFB DK Lineup</span><span class="go">Open</span></a></div><h2 class="tools-head" id="results">Results</h2><p class="lede">Win / loss by builder tool. Same link, refreshed after every postmortem.</p><div class="tools"><a class="tool lane-mlb" href="./trends.html"><span class="when">September 15, 2026</span><span class="game">MLB Results</span><span class="rate">47.6% · 44 nights</span><span class="go">Open</span></a>
+<a class="tool lane-cfb" href="./cfb.html"><span class="when">player props</span><span class="game">CFB Player Props</span><span class="go">Open</span></a>
+<a class="tool lane-showdown" href="./showdown.html"><span class="when">DK lineup</span><span class="game">CFB DK Lineup</span><span class="go">Open</span></a></div><h2 class="tools-head" id="results">Results</h2><p class="lede">Win / loss by builder tool. Same link, refreshed after every postmortem.</p><div class="tools"><a class="tool lane-mlb" href="./trends.html"><span class="when">September 15, 2026</span><span class="game">MLB Results</span><span class="rate">47.6% · 44 nights</span><span class="go">Open</span></a>
 <a class="tool lane-nfl" href="./nfl/trends.html"><span class="when">September 14, 2026</span><span class="game">NFL Results</span><span class="rate">51.9% · 4 nights</span><span class="go">Open</span></a>
 <a class="tool lane-cfb" href="./cfb/trends.html"><span class="when">September 12, 2026</span><span class="game">CFB Props Results</span><span class="rate">26.7% · 1 night</span><span class="go">Open</span></a></div>
 </main>
