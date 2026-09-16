@@ -7,12 +7,18 @@
 <style>
 :root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#9ef0f0;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#007d79;--table:#262626;--cell:#525252;--th:#393939;--val:#3ddbd9;--h:#3ddbd9;--code:#9ef0f0;}
 html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#004144;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#007d79;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#005d5d;--h:#005d5d;--code:#005d5d;}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+body{background-image:linear-gradient(180deg,rgba(22,22,22,.82),rgba(10,14,18,.93)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
+html.light body{background-image:linear-gradient(180deg,rgba(242,244,248,.88),rgba(242,244,248,.94)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");}
 .tab{position:absolute;left:-9999px;}
 .shell{display:flex;min-height:100vh;}
 .rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;overflow-y:auto;}
+.rail .brand{order:0;}
+.rail a.pill.home{order:1;}
+.rail > *:not(.brand):not(a.pill.home){order:2;}
 .brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
-.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);text-decoration:none;}
+a.pill.home{border-color:var(--val);}
 .pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
 .pill:hover{background:var(--pill-hover);}
 button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
@@ -38,6 +44,7 @@ h4{margin:.8rem 0 .4rem;}
 table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.88rem;background:var(--table);}
 th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
 th{background:var(--th);color:var(--pill-fg);}
+table.sortable th{cursor:pointer;user-select:none;}table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
 td.val{font-weight:700;color:var(--val);white-space:nowrap;}
 ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
 ul ul{margin:.15rem 0 .4rem;padding-left:1.15rem;}
@@ -45,7 +52,7 @@ li{margin:.35rem 0;}
 code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 .panel{display:none;}
 @media print{
-  html,body,html.light,html.light body{background:#fff;color:#111;}
+  html,body,html.light,html.light body{background:#fff;color:#111;background-image:none !important;}
   .shell{display:block;}
   .rail,.noprint{display:none !important;}
   main{max-width:none;padding:0;}
@@ -75,16 +82,16 @@ a{color:var(--val);}
 <div class="shell">
 <aside class="rail">
 <p class="brand">CFB PROPS<br/>RESULTS</p>
+<a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html"><span class="when">all desks</span>Main Prop Page</a>
 <label class="pill" for="g0"><span class="when">Overview</span>Season</label><label class="pill" for="g1"><span class="when">By tool</span>Tools</label><label class="pill" for="g2"><span class="when">Last 14 nights</span>Nights</label><label class="pill" for="g3"><span class="when">Last locked night</span>Last night</label>
 <form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
 <button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
 <button class="pdf noprint" type="button" onclick="window.print()">Save as PDF</button>
-<a class="pill noprint" href="../hub.html"><span class="when">all desks</span>Hub</a>
 </aside>
 <main>
 <h1>CFB Props Results</h1>
 <p class="sub">Pick 6 and $20 Pick 3s only — not Showdown. Same link after every postmortem.</p>
-<article class="panel p0"><h2>Season</h2><p class="sub">1 locked night · last locked September 12, 2026 · updated 2026-09-14T13:54:55Z</p><table><thead><tr><th>Hit</th><th>Miss</th><th>Hit rate</th><th>Nights</th></tr></thead><tbody><tr><td class="val">4</td><td class="val">11</td><td class="val">26.7%</td><td>1</td></tr></tbody></table><h3>Winning</h3><ul><li>Nothing has cleared the sample floor yet.</li></ul><h3>Fading</h3><ul><li>Combined pack is fading (4/15, 27%).</li></ul></article><article class="panel p1"><h2>By tool</h2><p class="sub">Locked nights only. Void does not count.</p><table><thead><tr><th>Tool</th><th>Record</th><th>Hit</th><th>Miss</th><th>Nights</th><th>Note</th></tr></thead><tbody><tr><td>Pick 6</td><td class="val">2/6 (33%)</td><td>2</td><td>4</td><td>1</td><td>too small to call</td></tr><tr><td>Pick 3 A</td><td class="val">1/3 (33%)</td><td>1</td><td>2</td><td>1</td><td>too small to call</td></tr><tr><td>Pick 3 B</td><td class="val">0/3 (0%)</td><td>0</td><td>3</td><td>1</td><td>too small to call</td></tr><tr><td>Pick 3 C</td><td class="val">1/3 (33%)</td><td>1</td><td>2</td><td>1</td><td>too small to call</td></tr><tr><td>Combined pack</td><td class="val">4/15 (27%)</td><td>4</td><td>11</td><td>1</td><td></td></tr></tbody></table></article><article class="panel p2"><h2>Last 14 nights</h2><p class="sub">Partial nights are graded while games were still live. They stay off the season totals.</p><table><thead><tr><th>Date</th><th>Pick 6</th><th>Pick 3 A</th><th>Pick 3 B</th><th>Pick 3 C</th><th>Combined pack</th><th>Note</th></tr></thead><tbody><tr><td>September 12, 2026</td><td class="val">2/6</td><td class="val">1/3</td><td class="val">0/3</td><td class="val">1/3</td><td class="val">4/15</td><td></td></tr><tr><td>September 6, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td></td></tr><tr><td>September 5, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td></td></tr><tr><td>August 29, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td></td></tr></tbody></table></article><article class="panel p3"><h2>Last locked night</h2><p class="sub">September 12, 2026</p><p><b>Pick 6:</b> Avery Johnson, Jayden Maiava, Maddux Madsen, Mason Heintschel, Rocco Becht, Rasean Jones</p><p><b>Pick 3 A:</b> Dante Moore, Evan Stewart, Devon Dampier</p><p><b>Pick 3 B:</b> Wayshawn Parker, Faizon Brandon, Marcus Stokes</p><p><b>Pick 3 C:</b> Arch Manning, Rodney Fields Jr., John Mateer</p></article>
+<article class="panel p0"><h2>Season</h2><p class="sub">1 locked night · last locked September 12, 2026 · updated 2026-09-16T04:31:26Z</p><table class="sortable"><thead><tr><th data-col="0">Hit</th><th data-col="1">Miss</th><th data-col="2">Hit rate</th><th data-col="3">Nights</th></tr></thead><tbody><tr><td class="val">4</td><td class="val">11</td><td class="val">26.7%</td><td>1</td></tr></tbody></table><h3>Winning</h3><ul><li>Nothing has cleared the sample floor yet.</li></ul><h3>Fading</h3><ul><li>Combined pack is fading (4/15, 27%).</li></ul></article><article class="panel p1"><h2>By tool</h2><p class="sub">Locked nights only. Void does not count.</p><table class="sortable"><thead><tr><th data-col="0">Tool</th><th data-col="1">Record</th><th data-col="2">Hit</th><th data-col="3">Miss</th><th data-col="4">Nights</th><th data-col="5">Note</th></tr></thead><tbody><tr><td>Pick 6</td><td class="val">2/6 (33%)</td><td>2</td><td>4</td><td>1</td><td>too small to call</td></tr><tr><td>Pick 3 A</td><td class="val">1/3 (33%)</td><td>1</td><td>2</td><td>1</td><td>too small to call</td></tr><tr><td>Pick 3 B</td><td class="val">0/3 (0%)</td><td>0</td><td>3</td><td>1</td><td>too small to call</td></tr><tr><td>Pick 3 C</td><td class="val">1/3 (33%)</td><td>1</td><td>2</td><td>1</td><td>too small to call</td></tr><tr><td>Combined pack</td><td class="val">4/15 (27%)</td><td>4</td><td>11</td><td>1</td><td></td></tr></tbody></table></article><article class="panel p2"><h2>Last 14 nights</h2><p class="sub">Partial nights are graded while games were still live. They stay off the season totals.</p><table class="sortable"><thead><tr><th data-col="0">Date</th><th data-col="1">Pick 6</th><th data-col="2">Pick 3 A</th><th data-col="3">Pick 3 B</th><th data-col="4">Pick 3 C</th><th data-col="5">Combined pack</th><th data-col="6">Note</th></tr></thead><tbody><tr><td>September 12, 2026</td><td class="val">2/6</td><td class="val">1/3</td><td class="val">0/3</td><td class="val">1/3</td><td class="val">4/15</td><td></td></tr><tr><td>September 6, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td></td></tr><tr><td>September 5, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td></td></tr><tr><td>August 29, 2026</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td class="val">—</td><td></td></tr></tbody></table></article><article class="panel p3"><h2>Last locked night</h2><p class="sub">September 12, 2026</p><p><b>Pick 6:</b> Avery Johnson, Jayden Maiava, Maddux Madsen, Mason Heintschel, Rocco Becht, Rasean Jones</p><p><b>Pick 3 A:</b> Dante Moore, Evan Stewart, Devon Dampier</p><p><b>Pick 3 B:</b> Wayshawn Parker, Faizon Brandon, Marcus Stokes</p><p><b>Pick 3 C:</b> Arch Manning, Rodney Fields Jr., John Mateer</p></article>
 </main>
 </div>
 <script>
@@ -204,6 +211,87 @@ a{color:var(--val);}
       }
     });
   }
+})();
+</script>
+<script>
+(function(){
+  function val(td){
+    if(!td) return {n:false, v:null, s:''};
+    var dn=td.getAttribute('data-n');
+    if(dn!==null && dn!==''){
+      var n=parseFloat(dn);
+      if(!isNaN(n)) return {n:true, v:n, s:dn};
+    }
+    if(td.querySelector){
+      if(td.querySelector('.tick.on')) return {n:true, v:1, s:'1'};
+      if(td.querySelector('.tick')) return {n:true, v:0, s:'0'};
+    }
+    var t=(td.textContent||'').trim();
+    if(!t || t==='—' || t==='-') return {n:false, v:null, s:''};
+    var pct=t.match(/(-?\d+(?:\.\d+)?)%/);
+    if(pct) return {n:true, v:parseFloat(pct[1]), s:t};
+    var rec=t.match(/^(-?\d+(?:\.\d+)?)\s*\/\s*(-?\d+(?:\.\d+)?)/);
+    if(rec){
+      var den=parseFloat(rec[2]);
+      if(den) return {n:true, v:parseFloat(rec[1])/den, s:t};
+    }
+    var raw=t.replace(/[$,×x]/g,'').replace(/,/g,'');
+    if(/^-?\d+(\.\d+)?$/.test(raw)) return {n:true, v:parseFloat(raw), s:t};
+    var d=Date.parse(t);
+    if(!isNaN(d) && /[A-Za-z]{3,}/.test(t) && /\d{4}/.test(t)) return {n:true, v:d, s:t};
+    return {n:false, v:t.toLowerCase(), s:t};
+  }
+  function sortTable(table, col, dir){
+    var tb=table && table.tBodies[0];
+    if(!tb) return;
+    Array.prototype.forEach.call(table.querySelectorAll('th'), function(h){
+      h.removeAttribute('data-dir');
+    });
+    var mark=table.querySelector('th[data-col="'+col+'"]');
+    if(!mark){
+      var row=table.querySelector('thead tr');
+      if(row && row.children[col]) mark=row.children[col];
+    }
+    if(mark) mark.setAttribute('data-dir', dir);
+    var rows=Array.prototype.slice.call(tb.rows);
+    rows.sort(function(a,b){
+      var A=val(a.cells[col]);
+      var B=val(b.cells[col]);
+      if(A.v===null && B.v===null) return 0;
+      if(A.v===null) return 1;
+      if(B.v===null) return -1;
+      var cmp=0;
+      if(A.n && B.n) cmp=A.v-B.v;
+      else cmp=String(A.v).localeCompare(String(B.v));
+      return dir==='asc' ? cmp : -cmp;
+    });
+    rows.forEach(function(r){ tb.appendChild(r); });
+  }
+  document.addEventListener('click', function(e){
+    var th=e.target.closest('table.sortable th');
+    if(!th || th.closest('tfoot')) return;
+    var table=th.closest('table');
+    if(!table) return;
+    var raw=th.getAttribute('data-col');
+    var col=raw===null ? Array.prototype.indexOf.call(th.parentNode.children, th) : parseInt(raw,10);
+    if(isNaN(col) || col<0) return;
+    var dir=th.getAttribute('data-dir')==='asc' ? 'desc' : 'asc';
+    sortTable(table, col, dir);
+  });
+  document.querySelectorAll('table.sortable[data-default-sort]').forEach(function(table){
+    var want=(table.getAttribute('data-default-sort')||'').toLowerCase();
+    var ths=table.querySelectorAll('thead th');
+    var idx=-1;
+    for(var i=0;i<ths.length;i++){
+      var t=(ths[i].textContent||'').trim().toLowerCase();
+      if(t===want || t.indexOf(want)>=0 || want.indexOf(t)>=0){
+        var raw=ths[i].getAttribute('data-col');
+        idx=raw===null ? i : parseInt(raw,10);
+        break;
+      }
+    }
+    if(idx>=0) sortTable(table, idx, 'desc');
+  });
 })();
 </script>
 </body>
