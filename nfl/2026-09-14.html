@@ -7,12 +7,18 @@
 <style>
 :root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#9ef0f0;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#007d79;--table:#262626;--cell:#525252;--th:#393939;--val:#3ddbd9;--h:#3ddbd9;--code:#9ef0f0;}
 html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#004144;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#007d79;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#005d5d;--h:#005d5d;--code:#005d5d;}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+body{background-image:linear-gradient(180deg,rgba(22,22,22,.82),rgba(10,14,18,.93)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-nfl.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
+html.light body{background-image:linear-gradient(180deg,rgba(242,244,248,.88),rgba(242,244,248,.94)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-nfl.jpg");}
 .tab{position:absolute;left:-9999px;}
 .shell{display:flex;min-height:100vh;}
 .rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.35rem;overflow-x:hidden;overflow-y:auto;}
+.rail .brand{order:0;}
+.rail a.pill.home{order:1;}
+.rail > *:not(.brand):not(a.pill.home){order:2;}
 .brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
-.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);text-decoration:none;}
+a.pill.home{border-color:var(--val);}
 .pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
 .pill:hover{background:var(--pill-hover);}
 button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
@@ -36,6 +42,7 @@ h4{margin:.8rem 0 .4rem;}
 table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.88rem;background:var(--table);}
 th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
 th{background:var(--th);color:var(--pill-fg);}
+table.sortable th{cursor:pointer;user-select:none;}table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
 td.val{font-weight:700;color:var(--val);white-space:nowrap;}
 ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
 ul ul{margin:.15rem 0 .4rem;padding-left:1.15rem;}
@@ -43,7 +50,7 @@ li{margin:.35rem 0;}
 code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 .panel{display:none;}
 @media print{
-  html,body,html.light,html.light body{background:#fff;color:#111;}
+  html,body,html.light,html.light body{background:#fff;color:#111;background-image:none !important;}
   .shell{display:block;}
   .rail,.noprint{display:none !important;}
   main{max-width:none;padding:0;}
@@ -66,8 +73,9 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <div class="shell">
 <aside class="rail noprint">
 <p class="brand">NFL PROPS<br/>2026-09-14</p>
-<label class="pill" for="g0"><span class="when">the week</span>TOP PROPS</label>
-<label class="pill" for="g1"><span class="when">8:15 p.m. ET · 4 recs</span>DEN @ KC</label>
+<a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
+<label class="pill" for="g0">TOP PROPS</label>
+<label class="pill" for="g1">DEN @ KC</label>
 <form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
 <button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
 <button class="pdf" type="button" onclick="window.print()">Save as PDF</button>
@@ -79,8 +87,8 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <article class="panel p0">
 <h3>TOP PROPS — week board (4)</h3>
 <p>Posted numbers only. Overs and Unders. Why is the case in plain English — never a made-up fact.</p>
-<table>
-<thead><tr><th>#</th><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th><th data-col="6">Why</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>Patrick Mahomes</td><td>KC</td><td>rushing yards</td><td class="val">Over</td><td class="val">14.5</td><td>First ACL game; starter. 14.5 is floor. LT Simmons OUT. This defense has been easy to move the ball on. The last three games he has been beating this number (about 35 rushing yards).</td></tr>
 <tr><td>2</td><td>Courtland Sutton</td><td>DEN</td><td>receiving yards</td><td class="val">Over</td><td class="val">42.5</td><td>LWR starter. Conner OUT. 42.5 is playable vs KC. This defense has been shutting people down. The last three games he has been beating this number (about 44 receiving yards).</td></tr>
@@ -90,8 +98,8 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 </article>
 <article class="panel p1">
 <h3>OUR RECS</h3>
-<table>
-<thead><tr><th>Player</th><th>Team</th><th>Market</th><th>Side</th><th>Line</th><th>Why</th></tr></thead>
+<table class="sortable">
+<thead><tr><th data-col="0">Player</th><th data-col="1">Team</th><th data-col="2">Market</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">Why</th></tr></thead>
 <tbody>
 <tr><td>Patrick Mahomes</td><td>KC</td><td>rushing yards</td><td class="val">Over</td><td class="val">14.5</td><td>First ACL game; starter. 14.5 is floor. LT Simmons OUT. This defense has been easy to move the ball on. The last three games he has been beating this number (about 35 rushing yards).</td></tr>
 <tr><td>Courtland Sutton</td><td>DEN</td><td>receiving yards</td><td class="val">Over</td><td class="val">42.5</td><td>LWR starter. Conner OUT. 42.5 is playable vs KC. This defense has been shutting people down. The last three games he has been beating this number (about 44 receiving yards).</td></tr>
@@ -228,6 +236,87 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
       }
     });
   }
+})();
+</script>
+<script>
+(function(){
+  function val(td){
+    if(!td) return {n:false, v:null, s:''};
+    var dn=td.getAttribute('data-n');
+    if(dn!==null && dn!==''){
+      var n=parseFloat(dn);
+      if(!isNaN(n)) return {n:true, v:n, s:dn};
+    }
+    if(td.querySelector){
+      if(td.querySelector('.tick.on')) return {n:true, v:1, s:'1'};
+      if(td.querySelector('.tick')) return {n:true, v:0, s:'0'};
+    }
+    var t=(td.textContent||'').trim();
+    if(!t || t==='—' || t==='-') return {n:false, v:null, s:''};
+    var pct=t.match(/(-?\d+(?:\.\d+)?)%/);
+    if(pct) return {n:true, v:parseFloat(pct[1]), s:t};
+    var rec=t.match(/^(-?\d+(?:\.\d+)?)\s*\/\s*(-?\d+(?:\.\d+)?)/);
+    if(rec){
+      var den=parseFloat(rec[2]);
+      if(den) return {n:true, v:parseFloat(rec[1])/den, s:t};
+    }
+    var raw=t.replace(/[$,×x]/g,'').replace(/,/g,'');
+    if(/^-?\d+(\.\d+)?$/.test(raw)) return {n:true, v:parseFloat(raw), s:t};
+    var d=Date.parse(t);
+    if(!isNaN(d) && /[A-Za-z]{3,}/.test(t) && /\d{4}/.test(t)) return {n:true, v:d, s:t};
+    return {n:false, v:t.toLowerCase(), s:t};
+  }
+  function sortTable(table, col, dir){
+    var tb=table && table.tBodies[0];
+    if(!tb) return;
+    Array.prototype.forEach.call(table.querySelectorAll('th'), function(h){
+      h.removeAttribute('data-dir');
+    });
+    var mark=table.querySelector('th[data-col="'+col+'"]');
+    if(!mark){
+      var row=table.querySelector('thead tr');
+      if(row && row.children[col]) mark=row.children[col];
+    }
+    if(mark) mark.setAttribute('data-dir', dir);
+    var rows=Array.prototype.slice.call(tb.rows);
+    rows.sort(function(a,b){
+      var A=val(a.cells[col]);
+      var B=val(b.cells[col]);
+      if(A.v===null && B.v===null) return 0;
+      if(A.v===null) return 1;
+      if(B.v===null) return -1;
+      var cmp=0;
+      if(A.n && B.n) cmp=A.v-B.v;
+      else cmp=String(A.v).localeCompare(String(B.v));
+      return dir==='asc' ? cmp : -cmp;
+    });
+    rows.forEach(function(r){ tb.appendChild(r); });
+  }
+  document.addEventListener('click', function(e){
+    var th=e.target.closest('table.sortable th');
+    if(!th || th.closest('tfoot')) return;
+    var table=th.closest('table');
+    if(!table) return;
+    var raw=th.getAttribute('data-col');
+    var col=raw===null ? Array.prototype.indexOf.call(th.parentNode.children, th) : parseInt(raw,10);
+    if(isNaN(col) || col<0) return;
+    var dir=th.getAttribute('data-dir')==='asc' ? 'desc' : 'asc';
+    sortTable(table, col, dir);
+  });
+  document.querySelectorAll('table.sortable[data-default-sort]').forEach(function(table){
+    var want=(table.getAttribute('data-default-sort')||'').toLowerCase();
+    var ths=table.querySelectorAll('thead th');
+    var idx=-1;
+    for(var i=0;i<ths.length;i++){
+      var t=(ths[i].textContent||'').trim().toLowerCase();
+      if(t===want || t.indexOf(want)>=0 || want.indexOf(t)>=0){
+        var raw=ths[i].getAttribute('data-col');
+        idx=raw===null ? i : parseInt(raw,10);
+        break;
+      }
+    }
+    if(idx>=0) sortTable(table, idx, 'desc');
+  });
 })();
 </script>
 </body></html>
