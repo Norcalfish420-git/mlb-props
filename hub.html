@@ -5,40 +5,49 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Desk reports</title>
 <style>
-:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#a8a8a8;--pill:#393939;--pill-fg:#9ef0f0;--pill-line:#525252;--accent:#007d79;--val:#3ddbd9;--card:#1d1d1d;--card-line:#393939;}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Georgia,"Iowan Old Style",serif;}
+:root{--bg:#0c1014;--fg:#f4f4f4;--rail:#161b22cc;--rail-line:#393939;--muted:#c6c6c6;--pill:#262b33;--pill-fg:#9ef0f0;--pill-line:#525252;--accent:#007d79;--val:#3ddbd9;--card:#161b22e6;--card-line:#3d444d;--desk:#14b8a6;}
+.page-mlb{--desk:#1f6feb;}
+.page-nfl{--desk:#d97706;}
+.page-cfb{--desk:#e11d48;}
+html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,"Iowan Old Style",serif;}
+body{background-image:linear-gradient(180deg,rgba(12,16,20,.78),rgba(8,10,14,.92)),url("./assets/desk-bg.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
 .shell{display:flex;min-height:100vh;}
-.rail{width:12.5rem;flex:0 0 12.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1.1rem .8rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.4rem;}
+.rail{width:12.5rem;flex:0 0 12.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1.1rem .8rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.4rem;backdrop-filter:blur(14px);}
 .brand{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .55rem;line-height:1.35;}
 .pill{display:block;border-radius:999px;padding:.5rem .7rem;background:var(--pill);color:var(--pill-fg);text-decoration:none;font-size:.82rem;font-weight:700;border:1px solid var(--pill-line);}
 .pill .when{display:block;font-weight:400;color:var(--muted);font-size:.68rem;}
-.pill.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+.pill.on{background:var(--desk);color:#fff;border-color:var(--desk);}
+.pill.home{border-color:var(--val);}
 .search-form{margin:.35rem 0 .2rem;}
-.search-form input{width:100%;box-sizing:border-box;border-radius:999px;border:1px solid var(--pill-line);background:#0f0f0f;color:var(--fg);padding:.45rem .7rem;font:inherit;font-size:.8rem;}
-main{flex:1;padding:1.4rem 1.6rem 3rem;max-width:46rem;}
-h1{font-size:2rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
-.sub{color:var(--muted);margin:0 0 1.4rem;font-size:1.02rem;}
+.search-form input{width:100%;box-sizing:border-box;border-radius:999px;border:1px solid var(--pill-line);background:#0f0f0fcc;color:var(--fg);padding:.45rem .7rem;font:inherit;font-size:.8rem;}
+main{flex:1;padding:1.6rem 1.8rem 3rem;max-width:48rem;}
+.hero{margin:0 0 1.5rem;padding:1.15rem 1.2rem 1.05rem;border:1px solid rgba(61,219,217,.22);border-radius:.9rem;background:linear-gradient(135deg,rgba(22,27,34,.72),rgba(0,125,121,.18));box-shadow:0 12px 40px rgba(0,0,0,.28);}
+h1{font-size:2.05rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
+.sub{color:var(--muted);margin:0;font-size:1.02rem;}
 .desk{margin:0 0 2.1rem;padding-top:.2rem;}
-.desk-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.45rem .75rem;margin:0 0 .7rem;padding-bottom:.55rem;border-bottom:1px solid var(--rail-line);}
+.desk-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.45rem .75rem;margin:0 0 .7rem;padding-bottom:.55rem;border-bottom:2px solid var(--desk);}
 .desk-head h2{margin:0;font-size:1.45rem;flex:1 1 12rem;}
 .lede{margin:0;color:var(--muted);font-size:.92rem;flex:1 1 100%;}
-.mini{color:var(--val);font-size:.82rem;}
 .day{margin:0 0 1.15rem;}
-.day h3{margin:0 0 .35rem;font-size:1.05rem;color:var(--muted);font-weight:700;}
+.day h3{margin:0 0 .45rem;font-size:1.05rem;color:var(--muted);font-weight:700;}
 .games{list-style:none;margin:0;padding:0;}
-.games li{margin:0;border-bottom:1px solid var(--card-line);}
-.games a{display:block;color:var(--val);font-size:1.28rem;font-weight:700;text-decoration:underline;padding:.55rem 0;}
-.games a:hover,.games a:focus{color:#fff;}
+.games li{margin:0 0 .5rem;}
+.games a{display:block;color:var(--fg);font-size:1.18rem;font-weight:700;text-decoration:none;padding:.7rem .9rem;background:var(--card);border:1px solid var(--card-line);border-left:5px solid var(--desk);border-radius:.7rem;}
+.games a:hover,.games a:focus{border-color:var(--desk);color:#fff;outline:none;}
 .tools-head{font-size:1.15rem;margin:1.5rem 0 .35rem;letter-spacing:-.01em;}
-.tools{display:grid;gap:.7rem;margin-top:.4rem;}
-.tool{display:grid;grid-template-columns:1fr auto;gap:.15rem .8rem;align-items:center;background:var(--card);border:1px solid var(--card-line);border-radius:.7rem;padding:.85rem 1rem;text-decoration:none;color:inherit;}
-.tool:hover,.tool:focus{border-color:var(--val);outline:none;}
+.tools{display:grid;gap:.75rem;margin-top:.4rem;}
+.tool{display:grid;grid-template-columns:1fr auto;gap:.15rem .8rem;align-items:center;background:var(--card);border:1px solid var(--card-line);border-left:5px solid var(--desk);border-radius:.8rem;padding:.95rem 1.05rem;text-decoration:none;color:inherit;box-shadow:0 8px 24px rgba(0,0,0,.22);}
+.tool.lane-mlb{--desk:#1f6feb;}
+.tool.lane-nfl{--desk:#d97706;}
+.tool.lane-cfb{--desk:#e11d48;}
+.tool:hover,.tool:focus{border-color:var(--desk);outline:none;transform:translateY(-1px);}
 .tool .when{font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);}
 .tool .game{grid-column:1;font-size:1.35rem;font-weight:700;}
 .tool .rate{grid-column:1;font-size:.82rem;color:var(--val);}
-.tool .go{grid-column:2;grid-row:1 / span 3;color:var(--val);font-weight:700;}
+.tool .go{grid-column:2;grid-row:1 / span 3;color:var(--desk);font-weight:700;}
 .hide{display:none !important;}
 @media (max-width:720px){
+  body{background-attachment:scroll;}
   .shell{display:block;}
   .rail{width:auto;height:auto;position:relative;flex-direction:row;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--rail-line);}
   .brand{flex:1 1 100%;}
@@ -47,11 +56,11 @@ h1{font-size:2rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
 }
 </style>
 </head>
-<body>
+<body class="page-hub">
 <div class="shell">
 <aside class="rail">
 <p class="brand">Desk reports<br/>All tools</p>
-<a class="pill on" href="./"><span class="when">all desks</span>Hub</a>
+<a class="pill home on" href="./hub.html"><span class="when">all desks</span>Main Prop Page</a>
 <a class="pill" href="./mlb.html"><span class="when">player props</span>MLB</a>
 <a class="pill" href="./nfl.html"><span class="when">player props</span>NFL</a>
 <a class="pill" href="./cfb.html"><span class="when">DK lineup</span>CFB</a>
@@ -61,13 +70,15 @@ h1{font-size:2rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
 </form>
 </aside>
 <main id="top">
+<div class="hero">
 <h1>Desk reports</h1>
 <p class="sub">Pick a tool. Boards are tonight’s slips. Results stay on one link per sport.</p>
-<h2 class="tools-head" id="boards">Boards</h2><div class="tools"><a class="tool" href="./mlb.html"><span class="when">player props</span><span class="game">MLB Player Props</span><span class="go">Open</span></a>
-<a class="tool" href="./nfl.html"><span class="when">player props</span><span class="game">NFL Player Props</span><span class="go">Open</span></a>
-<a class="tool" href="./cfb.html"><span class="when">DK lineup</span><span class="game">CFB DK Lineup</span><span class="go">Open</span></a></div><h2 class="tools-head" id="results">Results</h2><p class="lede">Win / loss by builder tool. Same link, refreshed after every postmortem.</p><div class="tools"><a class="tool" href="./trends.html"><span class="when">September 14, 2026</span><span class="game">MLB Results</span><span class="rate">47.4% · 43 nights</span><span class="go">Open</span></a>
-<a class="tool" href="./nfl/trends.html"><span class="when">September 14, 2026</span><span class="game">NFL Results</span><span class="rate">51.9% · 4 nights</span><span class="go">Open</span></a>
-<a class="tool" href="./cfb/trends.html"><span class="when">September 12, 2026</span><span class="game">CFB Props Results</span><span class="rate">26.7% · 1 night</span><span class="go">Open</span></a></div>
+</div>
+<h2 class="tools-head" id="boards">Boards</h2><div class="tools"><a class="tool lane-mlb" href="./mlb.html"><span class="when">player props</span><span class="game">MLB Player Props</span><span class="go">Open</span></a>
+<a class="tool lane-nfl" href="./nfl.html"><span class="when">player props</span><span class="game">NFL Player Props</span><span class="go">Open</span></a>
+<a class="tool lane-cfb" href="./cfb.html"><span class="when">DK lineup</span><span class="game">CFB DK Lineup</span><span class="go">Open</span></a></div><h2 class="tools-head" id="results">Results</h2><p class="lede">Win / loss by builder tool. Same link, refreshed after every postmortem.</p><div class="tools"><a class="tool lane-mlb" href="./trends.html"><span class="when">September 14, 2026</span><span class="game">MLB Results</span><span class="rate">47.4% · 43 nights</span><span class="go">Open</span></a>
+<a class="tool lane-nfl" href="./nfl/trends.html"><span class="when">September 14, 2026</span><span class="game">NFL Results</span><span class="rate">51.9% · 4 nights</span><span class="go">Open</span></a>
+<a class="tool lane-cfb" href="./cfb/trends.html"><span class="when">September 12, 2026</span><span class="game">CFB Props Results</span><span class="rate">26.7% · 1 night</span><span class="go">Open</span></a></div>
 </main>
 </div>
 <script>

@@ -7,7 +7,8 @@
 <style>
 :root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--pill:#393939;--pill-fg:#9ef0f0;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#007d79;--val:#3ddbd9;}
 html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--pill:#dde1e6;--pill-fg:#004144;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#007d79;--val:#005d5d;}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+body{background-image:linear-gradient(180deg,rgba(22,22,22,.82),rgba(10,14,18,.93)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
 .shell{display:flex;min-height:100vh;}
 .rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;}
 .brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
@@ -29,7 +30,7 @@ a{color:var(--val);}
 <p class="brand">MLB PROPS<br/>ARCHIVE</p>
 <a class="pill" href="./"><span class="when">latest</span>Today</a>
 <a class="pill on" href="./archive.html"><span class="when">dates</span>Past slates</a>
-<a class="pill" href="/mlb-props/hub.html"><span class="when">all desks</span>Hub</a>
+<a class="pill home" href="/mlb-props/hub.html"><span class="when">all desks</span>Main Prop Page</a>
 </aside>
 <main>
 <h1>Past slates</h1>
