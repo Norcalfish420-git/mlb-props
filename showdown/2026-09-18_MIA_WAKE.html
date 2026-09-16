@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CFB Showdown 2026-09-18 · Miami @ Wake Forest</title>
+<style>
+:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#9ef0f0;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#007d79;--table:#262626;--cell:#525252;--th:#393939;--val:#3ddbd9;--h:#3ddbd9;--code:#9ef0f0;--up:#3ddbd9;--down:#ff8389;--up-bg:rgba(61,219,217,.16);--down-bg:rgba(255,131,137,.16);--wk-alt:rgba(0,125,121,.08);}
+html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#004144;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#007d79;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#005d5d;--h:#005d5d;--code:#005d5d;--up:#005d5d;--down:#a2191f;--up-bg:rgba(0,93,93,.1);--down-bg:rgba(162,25,31,.1);--wk-alt:rgba(0,125,121,.06);}
+html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+body{background-image:linear-gradient(180deg,rgba(22,22,22,.82),rgba(10,14,18,.93)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
+html.light body{background-image:linear-gradient(180deg,rgba(242,244,248,.88),rgba(242,244,248,.94)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");}
+.tab{position:absolute;left:-9999px;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;overflow-y:auto;}
+.rail .brand{order:0;}
+.rail a.pill.home{order:1;}
+.rail > *:not(.brand):not(a.pill.home){order:2;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);text-decoration:none;}
+a.pill.home{border-color:var(--val);}
+.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
+.pill:hover{background:var(--pill-hover);}
+button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
+button.pdf:hover{filter:brightness(1.08);}
+button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.5rem .7rem;}
+button.theme:hover{background:var(--pill-hover);}
+form.search-form{margin:0;display:flex;flex-direction:column;gap:.15rem;}
+label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35rem 0 0;}
+input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
+input.search:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.pill.search-miss{opacity:.42;}
+table.search-empty{display:none;}
+li.name-hit,tr.name-hit{background:rgba(0,125,121,.28);outline:1px solid var(--accent);}
+.hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
+.view-row{display:flex;flex-direction:column;gap:.35rem;margin:.15rem 0 .35rem;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:54rem;min-width:0;}
+h1{font-size:1.6rem;margin:0 0 .3rem;}
+h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
+.line-blast{font-size:1.42rem;line-height:1.35;font-weight:700;margin:.35rem 0 1.2rem;padding:.95rem 1.05rem;background:var(--table);border:2px solid var(--accent);border-left-width:8px;}
+.line-blast b{color:var(--val);font-size:1.08em;}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
+h3.second-pass{border-top:2px solid var(--accent);padding-top:1.15rem;margin-top:2rem;}
+h4{margin:.8rem 0 .4rem;}
+h4.team-break{font-size:1.28rem;font-weight:800;letter-spacing:.01em;margin:2.35rem 0 .55rem;padding:1.05rem 0 .35rem;border-top:3px solid var(--accent);}
+h3 + p + h4.team-break,h3 + h4.team-break{margin-top:.75rem;padding-top:.1rem;border-top:none;}
+h5{font-size:.95rem;margin:1.05rem 0 .3rem;color:var(--muted);font-weight:700;}
+.sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
+table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.92rem;background:var(--table);}
+th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
+th{background:var(--th);color:var(--pill-fg);}
+table.sortable th{cursor:pointer;user-select:none;}
+table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}
+table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
+table.game-log{width:100%;table-layout:auto;}
+table.game-log th,table.game-log td{text-align:center;white-space:nowrap;}
+table.game-log th:nth-child(1),table.game-log td:nth-child(1),table.game-log th:nth-child(2),table.game-log td:nth-child(2){text-align:left;}
+.team-pills{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 .8rem;}
+.team-pill{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--pill);color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:999px;padding:.4rem .75rem;}
+.team-pill.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+.pos-book{margin:0 0 1.6rem;}
+.pos-book.search-empty{display:none;}
+.pos-book h4{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.4rem 0 .45rem;}
+.season-log-wrap{overflow-x:auto;margin:0 0 1.2rem;}
+table.season-log{font-size:.82rem;width:max-content;min-width:100%;}
+table.season-log th,table.season-log td{white-space:nowrap;text-align:center;}
+table.season-log th.who,table.season-log td.who,table.season-log td.opp{text-align:left;}
+table.season-log thead th{position:sticky;top:0;z-index:1;}
+table.season-log tr.wk-stats th{top:1.55rem;}
+table.season-log th.wk-g{text-align:center;border-left:2px solid var(--accent);}
+table.season-log td.w1,table.season-log th.w1,table.season-log td.w3,table.season-log th.w3{background:var(--wk-alt);}
+table.season-log th:first-child,table.season-log td:first-child{position:sticky;left:0;z-index:2;background:var(--th);}
+table.season-log td:first-child{background:var(--table);}
+td.trend-up{background:var(--up-bg) !important;color:var(--up);font-weight:700;}
+td.trend-down{background:var(--down-bg) !important;color:var(--down);font-weight:700;}
+span.delta{font-size:.68em;font-weight:700;margin-left:.28em;opacity:.92;}
+td.val{font-weight:700;color:var(--val);white-space:nowrap;}
+.left{font-weight:700;margin:.2rem 0 1rem;}
+ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
+ul ul{margin:.15rem 0 .4rem;padding-left:1.15rem;}
+li{margin:.35rem 0;}
+code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
+.panel{display:block;}
+.appendix{display:none;}
+@media print{
+  html,body,html.light,html.light body{background:#fff;color:#111;background-image:none !important;}
+  .shell{display:block;}
+  .rail,.noprint{display:none !important;}
+  main{max-width:none;padding:0;}
+  .panel,.appendix{display:block !important;page-break-after:always;}
+  .game-report,.value-board,.player-book{display:block !important;}
+  .appendix{page-break-after:auto;}
+  table{background:#fff;page-break-inside:avoid;}
+  th{background:#eee;color:#333;}
+  td.val{color:#000;}
+  td.trend-up{color:#005d5d;background:#e6f6f6 !important;}
+  td.trend-down{color:#a2191f;background:#fce8e8 !important;}
+  h2,h3,h4,h5{page-break-after:avoid;color:#111;}
+  h4.team-break{border-top-color:#111;}
+  .line-blast{background:#fff;border-color:#111;color:#111;}
+  .line-blast b{color:#000;}
+}
+@page{margin:.5in;}
+#v-report:checked ~ .shell .rail label[for=v-report]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-value:checked ~ .shell .rail label[for=v-value]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.player-book,.value-board{display:none;}
+#v-book:checked ~ .shell main,#v-value:checked ~ .shell main{max-width:none;}
+#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .value-board{display:none;}
+#v-book:checked ~ .shell main .player-book{display:block;}
+#v-value:checked ~ .shell main .game-report,#v-value:checked ~ .shell main .player-book{display:none;}
+#v-value:checked ~ .shell main .value-board{display:block;}
+</style>
+</head><body>
+<input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-value"/>
+<input class="tab" type="radio" name="v" id="v-book"/>
+<div class="shell">
+<aside class="rail noprint">
+<p class="brand">CFB SHOWDOWN<br/>2026-09-18<br/>Miami @ Wake Forest</p>
+<a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html"><span class="when">all desks</span>Main Prop Page</a>
+<div class="view-row">
+<label class="pill" for="v-report">Report</label>
+<label class="pill" for="v-value">Value</label>
+<label class="pill" for="v-book">Player book</label>
+</div>
+<form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
+<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
+<button class="pdf" type="button" onclick="window.print()">Save as PDF</button><p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
+</aside>
+<main>
+<h1>CFB Showdown — 2026-09-18 · Miami @ Wake Forest</h1>
+<article class="panel">
+<div class="game-report">
+<h2>1) Miami @ Wake Forest · 7:30 p.m. ET · Allegacy Federal Credit Union Stadium · ESPN</h2>
+<p class="line-blast">Miami is about <b>20.5</b> points better. The total sits at <b>55.5</b>. Allegacy Stadium, 7:30 p.m. ET on ESPN. Outdoor.</p>
+<p><b>This slate is two out of five stars.</b> Miami is a three-score road favorite. The live book is <b>Miami −20.5 / 55.5</b>. Friday night, and Wake is the dog in a 38.5-to-17.5 team-total split. ETR is not out — cards are hunt plus the book. Attach the sheet tomorrow.</p>
+<p><b>WEATHER: MIA@WAKE — outdoor — 76°F at kick, wind 2 mph — NWS Winston-Salem showers likely after 2 p.m., hourly rain ~7–15%.</b> That is not a pass kill.</p>
+<h3>WHO THEY ARE</h3>
+<ul>
+<li><b>Miami</b> is ranked No. 5 this year (2-0). They are one of the best teams in the country right now.</li>
+<li><b>Wake Forest</b> is unranked this year, unbeaten (2-0).</li>
+</ul>
+<h3>WHO MATTERS</h3>
+<p>These are the names that decide a six tonight — who runs the ball, who catches it, and who to sit.</p>
+<h4>Miami</h4>
+<ul>
+<li><b>Quarterback:</b> Darian Mensah throws from the pocket. Last week vs Florida A&amp;M he threw 15 times for 252, 3 passing scores and had 2 carries for 21.</li>
+<li><b>Running backs:</b> They split the carries. Javian Mallory (10 carries) and Mark Fletcher Jr. (7 carries). Use one of them, not both. The back who scored: Javian Mallory, Mark Fletcher Jr..</li>
+<li><b>Best other names:</b> Malachi Toney — 4-96-1 last week; Somourian Wingo — 2-59-1 last week.</li>
+</ul>
+<h4>Wake Forest</h4>
+<ul>
+<li><b>Quarterback:</b> Gio Lopez runs and throws. Last week vs PUR he threw 27 times for 225, 1 passing score and had 13 carries for 59. If you make him captain, his rushing yards count extra.</li>
+<li><b>Running backs:</b> They split the carries. Deuce Lawrence (12 carries) and Ty Clark III (12 carries). Use one of them, not both. The back who scored: Ty Clark III.</li>
+<li><b>Best other names:</b> Carlos Hernandez — 6-88 last week; Kam Shanks — 3-39 last week.</li>
+</ul>
+<h3>THE MOVIE</h3>
+<p>Miami is the three-score favorite on the road. Wake Forest is home and still the dog. Gio Lopez is probable. Mario Cristobal said he is not banged up. Ny Carr is doubtful and has not played a 2026 snap. Luka Gilbert is out for the season.</p>
+<p><b>What the writers are saying:</b> This is a Miami cover and a Wake stall. The book already has Miami around 38.5 and Wake around 17.5. That is a 5–1 Miami script, not a 3–3. We did not hit the full this-game analysis floor — honest gap below.</p>
+<p><b>Miami</b></p>
+<ul>
+<li>Darian Mensah
+<ul>
+<li>Starter. Throws. Pocket. Miami SID: 91 percent through two games</li>
+</ul>
+</li>
+<li>Luke Nickel
+<ul>
+<li>Charted backup. DraftKings prices him like a starter at $9,800. Sit</li>
+</ul>
+</li>
+<li>Mark Fletcher Jr.
+<ul>
+<li>Charted first among the running backs. The book is rushing 75.5 at $7,800</li>
+</ul>
+</li>
+<li>CharMar Brown
+<ul>
+<li>Charted second. Committee. Not a captain</li>
+</ul>
+</li>
+<li>Chris Wheatley-Humphrey
+<ul>
+<li>$9,600 and no yardage line. Not on the OurLads two-deep. Trap</li>
+</ul>
+</li>
+<li>Javian Mallory
+<ul>
+<li>$6,800. Not on the two-deep. Sit</li>
+</ul>
+</li>
+<li>Malachi Toney
+<ul>
+<li>Charted in the slot. The book is receiving 98.5 at $9,200</li>
+</ul>
+</li>
+<li>Cooper Barkate
+<ul>
+<li>Charted as the Z receiver. Receiving 57.5 at $7,400</li>
+</ul>
+</li>
+<li>Vance Spafford
+<ul>
+<li>Charted slot two. $2,600. No posted yardage line. The cheap Miami tree</li>
+</ul>
+</li>
+<li>Luka Gilbert
+<ul>
+<li>Season out. Sit</li>
+</ul>
+</li>
+<li>Jordan Lyle
+<ul>
+<li>Questionable. Sit</li>
+</ul>
+</li>
+<li>Jake Weinberg
+<ul>
+<li>Charted first kicker. Sitting kickers in a three-score script</li>
+</ul>
+</li>
+</ul>
+<p><b>Wake Forest</b></p>
+<ul>
+<li>Gio Lopez
+<ul>
+<li>Charted starter. Throws and runs. Probable. Passing 219.5 at $8,600</li>
+</ul>
+</li>
+<li>Steele Pizzella / Billy Johnson
+<ul>
+<li>Backups priced like starters. Sit</li>
+</ul>
+</li>
+<li>Ty Clark III
+<ul>
+<li>Charted first among the running backs. Rushing 30.5 at $5,800. Dog back on a 5–1</li>
+</ul>
+</li>
+<li>Carlos Hernandez
+<ul>
+<li>Charted as the Z receiver. Receiving 63.5 at $6,400</li>
+</ul>
+</li>
+<li>Kam Shanks
+<ul>
+<li>Charted as the H receiver. Receiving 36.5 at $5,000</li>
+</ul>
+</li>
+<li>Drayden Dickmann
+<ul>
+<li>Charted Z two. $1,800. Cheap Wake tree with Lopez</li>
+</ul>
+</li>
+<li>Ny Carr
+<ul>
+<li>Doubtful. Zero 2026 games. $1,000 trap</li>
+</ul>
+</li>
+<li>Connor Calvert
+<ul>
+<li>Charted first kicker. Dual Wake kickers. Sitting both sides</li>
+</ul>
+</li>
+</ul>
+<h3>GAME FLOW</h3>
+<p><b>How this game plays</b></p>
+<ul>
+<li>Three-score road favorite. Miami can sit on a lead</li>
+<li>The books have Miami around 38.5 and Wake around 17.5</li>
+<li>Wake still has a passer with a real number (219.5)</li>
+</ul>
+<p><b>How they want to play</b></p>
+<ul>
+<li><b>Miami offense:</b> Mensah throws. Fletcher is the back. Toney is the slot</li>
+<li><b>Miami defense:</b> Nobody we read named a leaky front this turn</li>
+<li><b>Wake Forest offense:</b> Lopez throws and runs. Hernandez is the Z. Clark is the back</li>
+<li><b>Wake Forest defense:</b> Nobody we read named a leaky front this turn</li>
+</ul>
+<p><b>Where the defense is weaker</b></p>
+<ul>
+<li><b>Miami:</b> Not named from a full preview floor this turn</li>
+<li><b>Wake Forest:</b> Not named from a full preview floor this turn</li>
+</ul>
+<p><b>What the scoreboard forces</b></p>
+<ul>
+<li>A two-score Miami lead is the grind — Fletcher, not more Mensah deep shots</li>
+<li>A one-score game keeps Lopez throwing</li>
+<li>A Wake lead asks Mensah to throw more than a stall script</li>
+</ul>
+<p><b>Who that points at</b></p>
+<ul>
+<li>Mensah so Toney, Barkate, and Spafford still count</li>
+<li>One Miami back</li>
+<li>Lopez only when you want the Wake pass tree</li>
+<li>Not Nickel. Not Wheatley-Humphrey. Not Mallory. Not Carr</li>
+</ul>
+<h3>DEPTH CHART</h3>
+<p>Offense skill. A missing name is —.</p>
+<h4 class="team-break">Miami</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Darian Mensah</td><td>Luke Nickel</td></tr>
+<tr><td>RB</td><td>Mark Fletcher Jr.</td><td>CharMar Brown</td></tr>
+<tr><td>WR-X</td><td>Joshua Moore</td><td>Vandrevius Jacobs</td></tr>
+<tr><td>WR-Z</td><td>Cooper Barkate</td><td>Daylyn Upshaw</td></tr>
+<tr><td>WR-SL</td><td>Malachi Toney</td><td>Vance Spafford</td></tr>
+<tr><td>TE</td><td>Elija Lofton</td><td>Gavin Mueller</td></tr>
+<tr><td>K</td><td>Jake Weinberg</td><td>Jack Olsen</td></tr>
+<tr><td>PK</td><td>Jake Weinberg</td><td>Jack Olsen</td></tr>
+</tbody></table>
+<h4 class="team-break">Wake Forest</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Gio Lopez</td><td>Steele Pizzella</td></tr>
+<tr><td>RB</td><td>Ty Clark III</td><td>Deuce Lawrence</td></tr>
+<tr><td>WR-X</td><td>Antonio Meeks</td><td>Jack Foley</td></tr>
+<tr><td>WR-Z</td><td>Carlos Hernandez</td><td>Drayden Dickmann</td></tr>
+<tr><td>WR-H</td><td>Kam Shanks</td><td>Bryce Kania</td></tr>
+<tr><td>TE</td><td>Will Loerzel</td><td>Dominick Barry</td></tr>
+<tr><td>K</td><td>Connor Calvert</td><td>Caleb Carlson</td></tr>
+<tr><td>PK</td><td>Connor Calvert</td><td>Caleb Carlson</td></tr>
+</tbody></table>
+<h3>INJURIES</h3>
+<p>Who is out or in doubt for this game. A blank list means nobody on the board is tagged.</p>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Status</th><th scope="col" data-col="3">Tonight</th></tr></thead>
+<tbody>
+<tr><td>Jordan Lyle</td><td>Miami</td><td>Out</td><td>Not playing. Sit him.</td></tr>
+<tr><td>Luka Gilbert</td><td>Miami</td><td>Out</td><td>Not playing. Sit him.</td></tr>
+<tr><td>Ny Carr</td><td>Wake Forest</td><td>Out</td><td>Not playing. Sit him.</td></tr>
+<tr><td>Gio Lopez</td><td>Wake Forest</td><td>Expected</td><td>Expected to play.</td></tr>
+</tbody></table>
+<h3>CHART NOTES</h3>
+<p>When the listed chart does not match who is actually playing.</p>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Note</th></tr></thead>
+<tbody>
+<tr><td>Luke Nickel</td><td>Miami</td><td>backup priced like starter 9800.</td></tr>
+</tbody></table>
+<h3>SCRIPT SIX</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Gio Lopez</td><td>Wake Forest</td><td>QB</td><td>$12,900</td><td class="val">1.02×</td><td>passing yards 219.5</td></tr>
+<tr><td>FLEX</td><td>Darian Mensah</td><td>Miami</td><td>QB</td><td>$11,400</td><td class="val">1.02×</td><td>passing yards 289.5</td></tr>
+<tr><td>FLEX</td><td>Malachi Toney</td><td>Miami</td><td>WR</td><td>$9,200</td><td class="val">1.07×</td><td>receiving yards 98.5</td></tr>
+<tr><td>FLEX</td><td>Mark Fletcher Jr.</td><td>Miami</td><td>RB</td><td>$7,800</td><td class="val">0.97×</td><td>rushing yards 75.5</td></tr>
+<tr><td>FLEX</td><td>Sawyer Seidl</td><td>Wake Forest</td><td>RB</td><td>$4,800</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Antonio Meeks</td><td>Wake Forest</td><td>WR</td><td>$3,800</td><td class="val">0.70×</td><td>receiving yards 26.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Gio Lopez is captain. Probable starter; runs and throws; Cristobal said not banged up. If he is captain, his rushing yards count extra.</li>
+<li>Darian Mensah. Starter; pocket; 91pct through 2 games.</li>
+<li>Malachi Toney. Last week 4-96-1. Stack with Darian Mensah.</li>
+<li>Mark Fletcher Jr.. Listed back last week (7 carries). He scored.</li>
+<li>Sawyer Seidl. No last-week tape and no stamped note.</li>
+<li>Antonio Meeks. Last week 2-32. Stack with Gio Lopez.</li>
+</ul>
+<h3>ETR BUILD 1</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Darian Mensah</td><td>Miami</td><td>QB</td><td>$17,100</td><td class="val">1.02×</td><td>passing yards 289.5</td></tr>
+<tr><td>FLEX</td><td>Malachi Toney</td><td>Miami</td><td>WR</td><td>$9,200</td><td class="val">1.07×</td><td>receiving yards 98.5</td></tr>
+<tr><td>FLEX</td><td>Gio Lopez</td><td>Wake Forest</td><td>QB</td><td>$8,600</td><td class="val">1.02×</td><td>passing yards 219.5</td></tr>
+<tr><td>FLEX</td><td>Billy Johnson</td><td>Wake Forest</td><td>QB</td><td>$6,000</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Kam Shanks</td><td>Wake Forest</td><td>WR</td><td>$5,000</td><td class="val">0.73×</td><td>receiving yards 36.5</td></tr>
+<tr><td>FLEX</td><td>Daylyn Upshaw</td><td>Miami</td><td>WR</td><td>$4,000</td><td class="val">No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Darian Mensah is captain. Starter; pocket; 91pct through 2 games.</li>
+<li>Malachi Toney. Last week 4-96-1. Stack with Darian Mensah.</li>
+<li>Gio Lopez. Probable starter; runs and throws; Cristobal said not banged up.</li>
+<li>Billy Johnson. No last-week tape and no stamped note.</li>
+<li>Kam Shanks. Last week 3-39. Stack with Gio Lopez.</li>
+<li>Daylyn Upshaw. Last week 1-7. Stack with Darian Mensah.</li>
+</ul>
+<h3>ETR BUILD 2</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Malachi Toney</td><td>Miami</td><td>WR</td><td>$13,800</td><td class="val">1.07×</td><td>receiving yards 98.5</td></tr>
+<tr><td>FLEX</td><td>Darian Mensah</td><td>Miami</td><td>QB</td><td>$11,400</td><td class="val">1.02×</td><td>passing yards 289.5</td></tr>
+<tr><td>FLEX</td><td>Gio Lopez</td><td>Wake Forest</td><td>QB</td><td>$8,600</td><td class="val">1.02×</td><td>passing yards 219.5</td></tr>
+<tr><td>FLEX</td><td>Cooper Barkate</td><td>Miami</td><td>WR</td><td>$7,400</td><td class="val">0.78×</td><td>receiving yards 57.5</td></tr>
+<tr><td>FLEX</td><td>Kam Shanks</td><td>Wake Forest</td><td>WR</td><td>$5,000</td><td class="val">0.73×</td><td>receiving yards 36.5</td></tr>
+<tr><td>FLEX</td><td>Antonio Meeks</td><td>Wake Forest</td><td>WR</td><td>$3,800</td><td class="val">0.70×</td><td>receiving yards 26.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $0  (spent $50,000 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Malachi Toney is captain. Last week 4-96-1. Stack with Darian Mensah.</li>
+<li>Darian Mensah. Starter; pocket; 91pct through 2 games.</li>
+<li>Gio Lopez. Probable starter; runs and throws; Cristobal said not banged up.</li>
+<li>Cooper Barkate. Last week 2-16-1. Stack with Darian Mensah.</li>
+<li>Kam Shanks. Last week 3-39. Stack with Gio Lopez.</li>
+<li>Antonio Meeks. Last week 2-32. Stack with Gio Lopez.</li>
+</ul>
+<h3>ETR BUILD 3</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Gio Lopez</td><td>Wake Forest</td><td>QB</td><td>$12,900</td><td class="val">1.02×</td><td>passing yards 219.5</td></tr>
+<tr><td>FLEX</td><td>Darian Mensah</td><td>Miami</td><td>QB</td><td>$11,400</td><td class="val">1.02×</td><td>passing yards 289.5</td></tr>
+<tr><td>FLEX</td><td>Malachi Toney</td><td>Miami</td><td>WR</td><td>$9,200</td><td class="val">1.07×</td><td>receiving yards 98.5</td></tr>
+<tr><td>FLEX</td><td>Mark Fletcher Jr.</td><td>Miami</td><td>RB</td><td>$7,800</td><td class="val">0.97×</td><td>rushing yards 75.5</td></tr>
+<tr><td>FLEX</td><td>Sawyer Seidl</td><td>Wake Forest</td><td>RB</td><td>$4,800</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Antonio Meeks</td><td>Wake Forest</td><td>WR</td><td>$3,800</td><td class="val">0.70×</td><td>receiving yards 26.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Gio Lopez is captain. Probable starter; runs and throws; Cristobal said not banged up. If he is captain, his rushing yards count extra.</li>
+<li>Darian Mensah. Starter; pocket; 91pct through 2 games.</li>
+<li>Malachi Toney. Last week 4-96-1. Stack with Darian Mensah.</li>
+<li>Mark Fletcher Jr.. Listed back last week (7 carries). He scored.</li>
+<li>Sawyer Seidl. No last-week tape and no stamped note.</li>
+<li>Antonio Meeks. Last week 2-32. Stack with Gio Lopez.</li>
+</ul>
+<h3>SITS</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Why</th></tr></thead>
+<tbody>
+<tr><td>Luke Nickel</td><td>Miami</td><td>backup priced like a starter at $9,800</td></tr>
+<tr><td>Chris Wheatley-Humphrey</td><td>Miami</td><td>$9,600, no line, not on the two-deep</td></tr>
+<tr><td>Javian Mallory</td><td>Miami</td><td>not on the two-deep</td></tr>
+<tr><td>Ny Carr</td><td>Wake Forest</td><td>doubtful, zero 2026 games</td></tr>
+<tr><td>Luka Gilbert</td><td>Miami</td><td>season out</td></tr>
+<tr><td>Jordan Lyle</td><td>Miami</td><td>questionable</td></tr>
+<tr><td>Steele Pizzella / Billy Johnson</td><td>—</td><td>backups</td></tr>
+<tr><td>Kickers</td><td>—</td><td>sitting both sides</td></tr>
+</tbody></table>
+</div>
+<div class="value-board"><h3>OUR VALUE</h3>
+<p>Every salary-board skill player — not a Top 20. <b>Value</b> is our book number versus DraftKings salary (<b>1.00× is even</b>). Below even and no posted line stay on the table (—). This is not ETR. Sorted highest value first.</p>
+<table class="sortable" data-default-sort="Value">
+<thead><tr><th scope="col" data-col="0">#</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Malachi Toney</td><td>Miami</td><td>WR</td><td>$9,200</td><td class="val">1.07×</td><td>receiving yards 98.5</td></tr>
+<tr><td>2</td><td>Gio Lopez</td><td>Wake Forest</td><td>QB</td><td>$8,600</td><td class="val">1.02×</td><td>passing yards 219.5</td></tr>
+<tr><td>3</td><td>Darian Mensah</td><td>Miami</td><td>QB</td><td>$11,400</td><td class="val">1.02×</td><td>passing yards 289.5</td></tr>
+<tr><td>4</td><td>Carlos Hernandez</td><td>Wake Forest</td><td>WR</td><td>$6,400</td><td class="val">0.99×</td><td>receiving yards 63.5</td></tr>
+<tr><td>5</td><td>Mark Fletcher Jr.</td><td>Miami</td><td>RB</td><td>$7,800</td><td class="val">0.97×</td><td>rushing yards 75.5</td></tr>
+<tr><td>6</td><td>Cooper Barkate</td><td>Miami</td><td>WR</td><td>$7,400</td><td class="val">0.78×</td><td>receiving yards 57.5</td></tr>
+<tr><td>7</td><td>Kam Shanks</td><td>Wake Forest</td><td>WR</td><td>$5,000</td><td class="val">0.73×</td><td>receiving yards 36.5</td></tr>
+<tr><td>8</td><td>Antonio Meeks</td><td>Wake Forest</td><td>WR</td><td>$3,800</td><td class="val">0.70×</td><td>receiving yards 26.5</td></tr>
+<tr><td>9</td><td>Ty Clark III</td><td>Wake Forest</td><td>RB</td><td>$5,800</td><td class="val">0.53×</td><td>rushing yards 30.5</td></tr>
+<tr><td>10</td><td>Brady Shust</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>11</td><td>Braxton Winston III</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>12</td><td>Brendan Cook</td><td>Miami</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>13</td><td>Brennan Burton</td><td>Miami</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>14</td><td>Bryce Kania</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>15</td><td>Charlie Wingfield</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>16</td><td>Chase Tyler</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>17</td><td>Cole McConathy II</td><td>Miami</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>18</td><td>Devin Goldston</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>19</td><td>Dominick Barry</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>20</td><td>Dylan Reiman</td><td>Miami</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>21</td><td>Eli Potts</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>22</td><td>Elijah Otieno</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>23</td><td>Girard Pringle Jr.</td><td>Miami</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>24</td><td>Hugh O&#x27;Brien</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>25</td><td>Hunter Carver</td><td>Miami</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>26</td><td>Jack Foley</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>27</td><td>Jack Nickel</td><td>Miami</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>28</td><td>Jack Whitehouse</td><td>Miami</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>29</td><td>Jackson Carver</td><td>Miami</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>30</td><td>Jamar Searcy</td><td>Wake Forest</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>31</td><td>Jordan Lyle</td><td>Miami</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>32</td><td>KD Daniels</td><td>Wake Forest</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>33</td><td>Kobe Adeleke-Hokes</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>34</td><td>Kolby Luna</td><td>Miami</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>35</td><td>Kyndall McCaleb</td><td>Wake Forest</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>36</td><td>Landon Morris</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>37</td><td>Luka Gilbert</td><td>Miami</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>38</td><td>Matthew Lusardi</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>39</td><td>Max Tillfeldt Retsler</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>40</td><td>Ny Carr</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>41</td><td>Owen Ruskavich</td><td>Miami</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>42</td><td>Riply Luna</td><td>Miami</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>43</td><td>Ryan Henley</td><td>Wake Forest</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>44</td><td>Terrell Walden II</td><td>Miami</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>45</td><td>Tyran Evans</td><td>Miami</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>46</td><td>Walker Bryson</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>47</td><td>Wondame Davis Jr.</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>48</td><td>Zeek Jackson</td><td>Wake Forest</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>49</td><td>Israel Briggs</td><td>Miami</td><td>WR</td><td>$1,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>50</td><td>Kamrean Johnson</td><td>Wake Forest</td><td>WR</td><td>$1,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>51</td><td>Milan Parris</td><td>Miami</td><td>WR</td><td>$1,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>52</td><td>Drayden Dickmann</td><td>Wake Forest</td><td>WR</td><td>$1,800</td><td class="val">—</td><td>—</td></tr>
+<tr><td>53</td><td>Nick Thomas</td><td>Miami</td><td>WR</td><td>$2,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>54</td><td>Gavin Mueller</td><td>Miami</td><td>WR</td><td>$2,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>55</td><td>Will Loerzel</td><td>Wake Forest</td><td>WR</td><td>$2,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>56</td><td>Vance Spafford</td><td>Miami</td><td>WR</td><td>$2,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>57</td><td>Somourian Wingo</td><td>Miami</td><td>WR</td><td>$2,800</td><td class="val">—</td><td>—</td></tr>
+<tr><td>58</td><td>Vandrevius Jacobs</td><td>Miami</td><td>WR</td><td>$3,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>59</td><td>Elija Lofton</td><td>Miami</td><td>WR</td><td>$3,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>60</td><td>Daylyn Upshaw</td><td>Miami</td><td>WR</td><td>$4,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>61</td><td>Caleb Carlson</td><td>Wake Forest</td><td>K</td><td>$4,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>62</td><td>Connor Calvert</td><td>Wake Forest</td><td>K</td><td>$4,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>63</td><td>Joshua Moore</td><td>Miami</td><td>WR</td><td>$4,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>64</td><td>Sawyer Seidl</td><td>Wake Forest</td><td>RB</td><td>$4,800</td><td class="val">—</td><td>—</td></tr>
+<tr><td>65</td><td>Jack Olsen</td><td>Miami</td><td>K</td><td>$5,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>66</td><td>Jake Weinberg</td><td>Miami</td><td>K</td><td>$5,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>67</td><td>Will Rocha</td><td>Miami</td><td>K</td><td>$5,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>68</td><td>Deuce Lawrence</td><td>Wake Forest</td><td>RB</td><td>$5,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>69</td><td>Billy Johnson</td><td>Wake Forest</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>70</td><td>Dereon Coleman</td><td>Miami</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>71</td><td>Gannon Jones</td><td>Wake Forest</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>72</td><td>Grant Lawless</td><td>Wake Forest</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>73</td><td>Joe Borchers</td><td>Miami</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>74</td><td>Judd Anderson</td><td>Miami</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>75</td><td>Vinny Gonzalez</td><td>Miami</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>76</td><td>Javian Mallory</td><td>Miami</td><td>RB</td><td>$6,800</td><td class="val">—</td><td>—</td></tr>
+<tr><td>77</td><td>Steele Pizzella</td><td>Wake Forest</td><td>QB</td><td>$7,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>78</td><td>CharMar Brown</td><td>Miami</td><td>RB</td><td>$7,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>79</td><td>Chris Wheatley-Humphrey</td><td>Miami</td><td>RB</td><td>$9,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>80</td><td>Luke Nickel</td><td>Miami</td><td>QB</td><td>$9,800</td><td class="val">—</td><td>—</td></tr>
+</tbody></table>
+<h3>ETR VALUE</h3>
+<p>Every name on ETR&#x27;s main-slate sheet for this game. Click a column to sort. A blank cell is —. <b>ETR salary</b> and <b>Owned</b> are their main-slate numbers. <b>Points per $1k</b> is their projected points versus our DraftKings salary for this game. Negative sheet values stay on the table. Not a Top 20.</p>
+<p>No ETR sheet rows for these teams.</p></div>
+<div class="player-book"><h3>Player book</h3><p class="sub">Quarterbacks, running backs, and receivers are separate tables. One row per player. Week 1, Week 2, Week 3 sit side by side — teal is up from last week, red is down. Click a header to sort. A new week column appears after that box is in. A blank cell is —.</p><div class="team-pills noprint"><button type="button" class="team-pill on" data-team="MIA">Miami</button><button type="button" class="team-pill" data-team="WAKE">Wake Forest</button></div><section class="pos-book" data-pos="QB"><h4>Quarterbacks</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th><th class="wk-g w1" colspan="8">Week 2</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Att</th><th scope="col" class="w0" data-col="5">Yds</th><th scope="col" class="w0" data-col="6">TD</th><th scope="col" class="w0" data-col="7">RAtt</th><th scope="col" class="w0" data-col="8">Rush</th><th scope="col" class="w0" data-col="9">rTD</th><th scope="col" class="w0" data-col="10">DK</th><th scope="col" class="w1" data-col="11">Opp</th><th scope="col" class="w1" data-col="12">Att</th><th scope="col" class="w1" data-col="13">Yds</th><th scope="col" class="w1" data-col="14">TD</th><th scope="col" class="w1" data-col="15">RAtt</th><th scope="col" class="w1" data-col="16">Rush</th><th scope="col" class="w1" data-col="17">rTD</th><th scope="col" class="w1" data-col="18">DK</th></tr></thead><tbody><tr data-team="MIA"><td class="who">Darian Mensah</td><td class="who">Miami</td><td class="who" data-n="11400">$11,400</td><td class="w0 opp">Stanford</td><td class="w0" data-n="30">30</td><td class="w0" data-n="401">401</td><td class="w0" data-n="5">5</td><td class="w0" data-n="1">1</td><td class="w0" data-n="5">5</td><td class="w0" data-n="0">0</td><td class="w0 val" data-n="39.54">39.54</td><td class="w1 opp">Florida A&amp;M</td><td class="w1 trend-down" data-n="15">15<span class="delta">-15</span></td><td class="w1 trend-down" data-n="252">252<span class="delta">-149</span></td><td class="w1 trend-down" data-n="3">3<span class="delta">-2</span></td><td class="w1 trend-up" data-n="2">2<span class="delta">+1</span></td><td class="w1 trend-up" data-n="21">21<span class="delta">+16</span></td><td class="w1 trend-flat" data-n="0">0</td><td class="w1 val trend-down" data-n="24.18">24.18<span class="delta">-15.4</span></td></tr><tr data-team="MIA"><td class="who">Luke Nickel</td><td class="who">Miami</td><td class="who" data-n="9800">$9,800</td><td class="w0 opp">Stanford</td><td class="w0" data-n="5">5</td><td class="w0" data-n="27">27</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="0.08">0.08</td><td class="w1 opp">Florida A&amp;M</td><td class="w1 trend-up" data-n="8">8<span class="delta">+3</span></td><td class="w1 trend-up" data-n="144">144<span class="delta">+117</span></td><td class="w1 trend-up" data-n="3">3<span class="delta">+3</span></td><td class="w1" data-n="1">1</td><td class="w1" data-n="13">13</td><td class="w1" data-n="0">0</td><td class="w1 val trend-up" data-n="19.06">19.06<span class="delta">+19.0</span></td></tr><tr data-team="WAKE" hidden><td class="who">Gio Lopez</td><td class="who">Wake Forest</td><td class="who" data-n="8600">$8,600</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td></tr><tr data-team="MIA"><td class="who">Dereon Coleman</td><td class="who">Miami</td><td class="who" data-n="6000">$6,000</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">Florida A&amp;M</td><td class="w1" data-n="6">6</td><td class="w1" data-n="30">30</td><td class="w1" data-n="0">0</td><td class="w1" data-n="4">4</td><td class="w1" data-n="25">25</td><td class="w1" data-n="0">0</td><td class="w1 val" data-n="3.7">3.7</td></tr></tbody></table></div></section><section class="pos-book" data-pos="RB"><h4>Running backs</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th><th class="wk-g w1" colspan="8">Week 2</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">RAtt</th><th scope="col" class="w0" data-col="5">Rush</th><th scope="col" class="w0" data-col="6">rTD</th><th scope="col" class="w0" data-col="7">Rec</th><th scope="col" class="w0" data-col="8">Tgt</th><th scope="col" class="w0" data-col="9">Yds</th><th scope="col" class="w0" data-col="10">DK</th><th scope="col" class="w1" data-col="11">Opp</th><th scope="col" class="w1" data-col="12">RAtt</th><th scope="col" class="w1" data-col="13">Rush</th><th scope="col" class="w1" data-col="14">rTD</th><th scope="col" class="w1" data-col="15">Rec</th><th scope="col" class="w1" data-col="16">Tgt</th><th scope="col" class="w1" data-col="17">Yds</th><th scope="col" class="w1" data-col="18">DK</th></tr></thead><tbody><tr data-team="MIA"><td class="who">Mark Fletcher Jr.</td><td class="who">Miami</td><td class="who" data-n="7800">$7,800</td><td class="w0 opp">Stanford</td><td class="w0" data-n="13">13</td><td class="w0" data-n="40">40</td><td class="w0" data-n="0">0</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0" data-n="10">10</td><td class="w0 val" data-n="7">7.0</td><td class="w1 opp">Florida A&amp;M</td><td class="w1 trend-down" data-n="7">7<span class="delta">-6</span></td><td class="w1 trend-up" data-n="105">105<span class="delta">+65</span></td><td class="w1 trend-up" data-n="2">2<span class="delta">+2</span></td><td class="w1">—</td><td class="w1 trend-down" data-n="1">1<span class="delta">-1</span></td><td class="w1">—</td><td class="w1 val trend-up" data-n="25.5">25.5<span class="delta">+18.5</span></td></tr><tr data-team="MIA"><td class="who">CharMar Brown</td><td class="who">Miami</td><td class="who" data-n="7200">$7,200</td><td class="w0 opp">Stanford</td><td class="w0" data-n="8">8</td><td class="w0" data-n="37">37</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="9.7">9.7</td><td class="w1 opp">Florida A&amp;M</td><td class="w1 trend-down" data-n="3">3<span class="delta">-5</span></td><td class="w1 trend-down" data-n="25">25<span class="delta">-12</span></td><td class="w1 trend-down" data-n="0">0<span class="delta">-1</span></td><td class="w1" data-n="1">1</td><td class="w1" data-n="1">1</td><td class="w1" data-n="6">6</td><td class="w1 val trend-down" data-n="4.1">4.1<span class="delta">-5.6</span></td></tr><tr data-team="MIA"><td class="who">Javian Mallory</td><td class="who">Miami</td><td class="who" data-n="6800">$6,800</td><td class="w0 opp">Stanford</td><td class="w0" data-n="3">3</td><td class="w0" data-n="31">31</td><td class="w0" data-n="0">0</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0 val" data-n="4.7">4.7</td><td class="w1 opp">Florida A&amp;M</td><td class="w1 trend-up" data-n="10">10<span class="delta">+7</span></td><td class="w1 trend-up" data-n="142">142<span class="delta">+111</span></td><td class="w1 trend-up" data-n="2">2<span class="delta">+2</span></td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1 val trend-up" data-n="29.2">29.2<span class="delta">+24.5</span></td></tr><tr data-team="WAKE" hidden><td class="who">Ty Clark III</td><td class="who">Wake Forest</td><td class="who" data-n="5800">$5,800</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td></tr><tr data-team="WAKE" hidden><td class="who">Deuce Lawrence</td><td class="who">Wake Forest</td><td class="who" data-n="5400">$5,400</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td></tr><tr data-team="MIA"><td class="who">Girard Pringle Jr.</td><td class="who">Miami</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">Stanford</td><td class="w0" data-n="6">6</td><td class="w0" data-n="9">9</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="0.9">0.9</td><td class="w1 opp">Florida A&amp;M</td><td class="w1 trend-down" data-n="4">4<span class="delta">-2</span></td><td class="w1 trend-up" data-n="17">17<span class="delta">+8</span></td><td class="w1 trend-up" data-n="1">1<span class="delta">+1</span></td><td class="w1" data-n="2">2</td><td class="w1" data-n="2">2</td><td class="w1" data-n="35">35</td><td class="w1 val trend-up" data-n="13.2">13.2<span class="delta">+12.3</span></td></tr><tr data-team="MIA"><td class="who">Jack Whitehouse</td><td class="who">Miami</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">Florida A&amp;M</td><td class="w1" data-n="5">5</td><td class="w1" data-n="57">57</td><td class="w1" data-n="0">0</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1 val" data-n="5.7">5.7</td></tr><tr data-team="WAKE" hidden><td class="who">KD Daniels</td><td class="who">Wake Forest</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td></tr><tr data-team="MIA"><td class="who">Terrell Walden II</td><td class="who">Miami</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">Florida A&amp;M</td><td class="w1" data-n="7">7</td><td class="w1" data-n="25">25</td><td class="w1" data-n="0">0</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1 val" data-n="2.5">2.5</td></tr></tbody></table></div></section><section class="pos-book" data-pos="WR"><h4>Wide receivers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="8">Week 1</th><th class="wk-g w1" colspan="8">Week 2</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">Rec</th><th scope="col" class="w0" data-col="5">Tgt</th><th scope="col" class="w0" data-col="6">Yds</th><th scope="col" class="w0" data-col="7">TD</th><th scope="col" class="w0" data-col="8">RAtt</th><th scope="col" class="w0" data-col="9">Rush</th><th scope="col" class="w0" data-col="10">DK</th><th scope="col" class="w1" data-col="11">Opp</th><th scope="col" class="w1" data-col="12">Rec</th><th scope="col" class="w1" data-col="13">Tgt</th><th scope="col" class="w1" data-col="14">Yds</th><th scope="col" class="w1" data-col="15">TD</th><th scope="col" class="w1" data-col="16">RAtt</th><th scope="col" class="w1" data-col="17">Rush</th><th scope="col" class="w1" data-col="18">DK</th></tr></thead><tbody><tr data-team="MIA"><td class="who">Malachi Toney</td><td class="who">Miami</td><td class="who" data-n="9200">$9,200</td><td class="w0 opp">Stanford</td><td class="w0" data-n="12">12</td><td class="w0">—</td><td class="w0" data-n="234">234</td><td class="w0" data-n="3">3</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="56.4">56.4</td><td class="w1 opp">Florida A&amp;M</td><td class="w1 trend-down" data-n="4">4<span class="delta">-8</span></td><td class="w1" data-n="4">4</td><td class="w1 trend-down" data-n="96">96<span class="delta">-138</span></td><td class="w1 trend-down" data-n="1">1<span class="delta">-2</span></td><td class="w1">—</td><td class="w1">—</td><td class="w1 val trend-down" data-n="19.6">19.6<span class="delta">-36.8</span></td></tr><tr data-team="MIA"><td class="who">Cooper Barkate</td><td class="who">Miami</td><td class="who" data-n="7400">$7,400</td><td class="w0 opp">Stanford</td><td class="w0" data-n="4">4</td><td class="w0" data-n="4">4</td><td class="w0" data-n="67">67</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="16.7">16.7</td><td class="w1 opp">Florida A&amp;M</td><td class="w1 trend-down" data-n="2">2<span class="delta">-2</span></td><td class="w1">—</td><td class="w1 trend-down" data-n="16">16<span class="delta">-51</span></td><td class="w1 trend-flat" data-n="1">1</td><td class="w1">—</td><td class="w1">—</td><td class="w1 val trend-down" data-n="9.6">9.6<span class="delta">-7.1</span></td></tr><tr data-team="WAKE" hidden><td class="who">Carlos Hernandez</td><td class="who">Wake Forest</td><td class="who" data-n="6400">$6,400</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td></tr><tr data-team="WAKE" hidden><td class="who">Kam Shanks</td><td class="who">Wake Forest</td><td class="who" data-n="5000">$5,000</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td></tr><tr data-team="MIA"><td class="who">Joshua Moore</td><td class="who">Miami</td><td class="who" data-n="4600">$4,600</td><td class="w0 opp">Stanford</td><td class="w0" data-n="3">3</td><td class="w0" data-n="3">3</td><td class="w0" data-n="36">36</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="6.6">6.6</td><td class="w1 opp">Florida A&amp;M</td><td class="w1 trend-down" data-n="1">1<span class="delta">-2</span></td><td class="w1 trend-down" data-n="1">1<span class="delta">-2</span></td><td class="w1 trend-up" data-n="55">55<span class="delta">+19</span></td><td class="w1 trend-up" data-n="1">1<span class="delta">+1</span></td><td class="w1">—</td><td class="w1">—</td><td class="w1 val trend-up" data-n="12.5">12.5<span class="delta">+5.9</span></td></tr><tr data-team="MIA"><td class="who">Daylyn Upshaw</td><td class="who">Miami</td><td class="who" data-n="4000">$4,000</td><td class="w0 opp">Stanford</td><td class="w0" data-n="3">3</td><td class="w0">—</td><td class="w0" data-n="30">30</td><td class="w0" data-n="1">1</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="12">12.0</td><td class="w1 opp">Florida A&amp;M</td><td class="w1 trend-down" data-n="1">1<span class="delta">-2</span></td><td class="w1" data-n="1">1</td><td class="w1 trend-down" data-n="7">7<span class="delta">-23</span></td><td class="w1 trend-down" data-n="0">0<span class="delta">-1</span></td><td class="w1">—</td><td class="w1">—</td><td class="w1 val trend-down" data-n="1.7">1.7<span class="delta">-10.3</span></td></tr><tr data-team="WAKE" hidden><td class="who">Antonio Meeks</td><td class="who">Wake Forest</td><td class="who" data-n="3800">$3,800</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td></tr><tr data-team="MIA"><td class="who">Elija Lofton</td><td class="who">Miami</td><td class="who" data-n="3400">$3,400</td><td class="w0 opp">Stanford</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="14">14</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="2.4">2.4</td><td class="w1 opp">Florida A&amp;M</td><td class="w1 trend-flat" data-n="1">1</td><td class="w1 trend-flat" data-n="1">1</td><td class="w1 trend-down" data-n="9">9<span class="delta">-5</span></td><td class="w1 trend-flat" data-n="0">0</td><td class="w1">—</td><td class="w1">—</td><td class="w1 val trend-down" data-n="1.9">1.9<span class="delta">-0.5</span></td></tr><tr data-team="MIA"><td class="who">Vandrevius Jacobs</td><td class="who">Miami</td><td class="who" data-n="3000">$3,000</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">Florida A&amp;M</td><td class="w1" data-n="2">2</td><td class="w1">—</td><td class="w1" data-n="38">38</td><td class="w1" data-n="1">1</td><td class="w1">—</td><td class="w1">—</td><td class="w1 val" data-n="11.8">11.8</td></tr><tr data-team="MIA"><td class="who">Somourian Wingo</td><td class="who">Miami</td><td class="who" data-n="2800">$2,800</td><td class="w0 opp">Stanford</td><td class="w0" data-n="2">2</td><td class="w0" data-n="2">2</td><td class="w0" data-n="27">27</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="4.7">4.7</td><td class="w1 opp">Florida A&amp;M</td><td class="w1 trend-flat" data-n="2">2</td><td class="w1 trend-flat" data-n="2">2</td><td class="w1 trend-up" data-n="59">59<span class="delta">+32</span></td><td class="w1 trend-up" data-n="1">1<span class="delta">+1</span></td><td class="w1">—</td><td class="w1">—</td><td class="w1 val trend-up" data-n="13.9">13.9<span class="delta">+9.2</span></td></tr><tr data-team="MIA"><td class="who">Vance Spafford</td><td class="who">Miami</td><td class="who" data-n="2600">$2,600</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">Florida A&amp;M</td><td class="w1" data-n="3">3</td><td class="w1" data-n="3">3</td><td class="w1" data-n="53">53</td><td class="w1" data-n="1">1</td><td class="w1">—</td><td class="w1">—</td><td class="w1 val" data-n="14.3">14.3</td></tr><tr data-team="WAKE" hidden><td class="who">Will Loerzel</td><td class="who">Wake Forest</td><td class="who" data-n="2400">$2,400</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td></tr><tr data-team="MIA"><td class="who">Gavin Mueller</td><td class="who">Miami</td><td class="who" data-n="2200">$2,200</td><td class="w0 opp">Stanford</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="4">4</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1.4">1.4</td><td class="w1 opp">Florida A&amp;M</td><td class="w1 trend-flat" data-n="1">1</td><td class="w1 trend-flat" data-n="1">1</td><td class="w1 trend-up" data-n="6">6<span class="delta">+2</span></td><td class="w1 trend-flat" data-n="0">0</td><td class="w1">—</td><td class="w1">—</td><td class="w1 val trend-up" data-n="1.6">1.6<span class="delta">+0.2</span></td></tr><tr data-team="MIA"><td class="who">Nick Thomas</td><td class="who">Miami</td><td class="who" data-n="2000">$2,000</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">Florida A&amp;M</td><td class="w1" data-n="2">2</td><td class="w1">—</td><td class="w1" data-n="14">14</td><td class="w1" data-n="0">0</td><td class="w1">—</td><td class="w1">—</td><td class="w1 val" data-n="3.4">3.4</td></tr><tr data-team="WAKE" hidden><td class="who">Drayden Dickmann</td><td class="who">Wake Forest</td><td class="who" data-n="1800">$1,800</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td></tr><tr data-team="MIA"><td class="who">Milan Parris</td><td class="who">Miami</td><td class="who" data-n="1600">$1,600</td><td class="w0 opp">Stanford</td><td class="w0" data-n="1">1</td><td class="w0" data-n="1">1</td><td class="w0" data-n="0">0</td><td class="w0" data-n="0">0</td><td class="w0">—</td><td class="w0">—</td><td class="w0 val" data-n="1">1.0</td><td class="w1 opp">Florida A&amp;M</td><td class="w1 trend-up" data-n="2">2<span class="delta">+1</span></td><td class="w1 trend-up" data-n="3">3<span class="delta">+2</span></td><td class="w1 trend-up" data-n="19">19<span class="delta">+19</span></td><td class="w1 trend-flat" data-n="0">0</td><td class="w1">—</td><td class="w1">—</td><td class="w1 val trend-up" data-n="3.9">3.9<span class="delta">+2.9</span></td></tr><tr data-team="MIA"><td class="who">Israel Briggs</td><td class="who">Miami</td><td class="who" data-n="1200">$1,200</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">Florida A&amp;M</td><td class="w1" data-n="1">1</td><td class="w1" data-n="1">1</td><td class="w1" data-n="3">3</td><td class="w1" data-n="0">0</td><td class="w1">—</td><td class="w1">—</td><td class="w1 val" data-n="1.3">1.3</td></tr><tr data-team="MIA"><td class="who">Brennan Burton</td><td class="who">Miami</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">Florida A&amp;M</td><td class="w1" data-n="1">1</td><td class="w1">—</td><td class="w1" data-n="5">5</td><td class="w1" data-n="0">0</td><td class="w1">—</td><td class="w1">—</td><td class="w1 val" data-n="1.5">1.5</td></tr><tr data-team="WAKE" hidden><td class="who">Bryce Kania</td><td class="who">Wake Forest</td><td class="who" data-n="1000">$1,000</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td></tr><tr data-team="MIA"><td class="who">Jr.,Kellen Wiley</td><td class="who">Miami</td><td class="who">—</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td></tr><tr data-team="MIA"><td class="who">Kellen Wiley Jr.</td><td class="who">Miami</td><td class="who">—</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">Florida A&amp;M</td><td class="w1" data-n="1">1</td><td class="w1" data-n="1">1</td><td class="w1" data-n="5">5</td><td class="w1" data-n="0">0</td><td class="w1">—</td><td class="w1">—</td><td class="w1 val" data-n="1.5">1.5</td></tr><tr data-team="WAKE" hidden><td class="who">Team</td><td class="who">Wake Forest</td><td class="who">—</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td></tr><tr data-team="MIA"><td class="who">Team</td><td class="who">Miami</td><td class="who">—</td><td class="w0 opp">Stanford</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0" data-n="1">1</td><td class="w0" data-n="-1">-1</td><td class="w0 val" data-n="-0.1">-0.1</td><td class="w1 opp">Florida A&amp;M</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1 trend-flat" data-n="1">1</td><td class="w1 trend-up" data-n="0">0<span class="delta">+1</span></td><td class="w1 val trend-up" data-n="0">0.0<span class="delta">+0.1</span></td></tr><tr data-team="MIA"><td class="who">Vandrevious Jacobs</td><td class="who">Miami</td><td class="who">—</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">Florida A&amp;M</td><td class="w1" data-n="2">2</td><td class="w1">—</td><td class="w1" data-n="38">38</td><td class="w1" data-n="1">1</td><td class="w1">—</td><td class="w1">—</td><td class="w1 val" data-n="11.8">11.8</td></tr></tbody></table></div></section><section class="pos-book" data-pos="K"><h4>Kickers</h4><div class="season-log-wrap"><table class="sortable season-log" data-default-sort="Salary"><thead><tr class="wk-groups"><th scope="col" rowspan="2" class="who" data-col="0">Player</th><th scope="col" rowspan="2" class="who" data-col="1">Team</th><th scope="col" rowspan="2" class="who" data-col="2">Salary</th><th class="wk-g w0" colspan="4">Week 1</th><th class="wk-g w1" colspan="4">Week 2</th></tr><tr class="wk-stats"><th scope="col" class="w0" data-col="3">Opp</th><th scope="col" class="w0" data-col="4">FG</th><th scope="col" class="w0" data-col="5">XP</th><th scope="col" class="w0" data-col="6">DK</th><th scope="col" class="w1" data-col="7">Opp</th><th scope="col" class="w1" data-col="8">FG</th><th scope="col" class="w1" data-col="9">XP</th><th scope="col" class="w1" data-col="10">DK</th></tr></thead><tbody><tr data-team="MIA"><td class="who">Jack Olsen</td><td class="who">Miami</td><td class="who" data-n="5200">$5,200</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">Florida A&amp;M</td><td class="w1" data-n="0">0</td><td class="w1" data-n="1">1</td><td class="w1 val" data-n="1">1.0</td></tr><tr data-team="MIA"><td class="who">Jake Weinberg</td><td class="who">Miami</td><td class="who" data-n="5200">$5,200</td><td class="w0 opp">Stanford</td><td class="w0" data-n="1">1</td><td class="w0" data-n="6">6</td><td class="w0 val" data-n="9">9.0</td><td class="w1 opp">Florida A&amp;M</td><td class="w1 trend-down" data-n="0">0<span class="delta">-1</span></td><td class="w1 trend-down" data-n="5">5<span class="delta">-1</span></td><td class="w1 val trend-down" data-n="5">5.0<span class="delta">-4</span></td></tr><tr data-team="MIA"><td class="who">Will Rocha</td><td class="who">Miami</td><td class="who" data-n="5200">$5,200</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">Florida A&amp;M</td><td class="w1" data-n="0">0</td><td class="w1" data-n="5">5</td><td class="w1 val" data-n="5">5.0</td></tr><tr data-team="WAKE" hidden><td class="who">Connor Calvert</td><td class="who">Wake Forest</td><td class="who" data-n="4400">$4,400</td><td class="w0 opp">—</td><td class="w0">—</td><td class="w0">—</td><td class="w0">—</td><td class="w1 opp">—</td><td class="w1">—</td><td class="w1">—</td><td class="w1">—</td></tr></tbody></table></div></section></div>
+</article>
+</main></div>
+<script>
+(function(){
+  function applyTeam(book, pill){
+    if(!book || !pill) return;
+    book.querySelectorAll('.team-pill').forEach(function(p){
+      p.classList.toggle('on', p===pill);
+    });
+    var inp=document.getElementById('playerSearch');
+    if(inp) inp.dispatchEvent(new Event('input'));
+    else {
+      var team=pill.getAttribute('data-team')||'';
+      book.querySelectorAll('table.season-log tbody tr').forEach(function(tr){
+        var rowTeam=tr.getAttribute('data-team')||'';
+        tr.hidden = !!(team && rowTeam!==team);
+      });
+      book.querySelectorAll('.pos-book').forEach(function(sec){
+        var any=false;
+        sec.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) any=true; });
+        sec.classList.toggle('search-empty', !any);
+      });
+    }
+  }
+  document.addEventListener('click', function(e){
+    var pill=e.target.closest('.team-pill');
+    if(!pill) return;
+    var book=pill.closest('.player-book');
+    if(!book) return;
+    applyTeam(book, pill);
+  });
+})();
+</script>
+<script>
+(function(){
+  var KEY='desk-report-theme';
+  function apply(mode){
+    document.documentElement.classList.toggle('light', mode==='light');
+    var b=document.getElementById('themeBtn');
+    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  var saved=null;
+  try { saved=localStorage.getItem(KEY); } catch (e) {}
+  apply(saved==='light'?'light':'dark');
+  window.toggleDeskTheme=function(){
+    apply(document.documentElement.classList.contains('light')?'dark':'light');
+  };
+})();
+(function(){
+  function val(td){
+    if(!td) return {n:false, v:null, s:''};
+    var dn=td.getAttribute('data-n');
+    if(dn!==null && dn!==''){
+      var n=parseFloat(dn);
+      if(!isNaN(n)) return {n:true, v:n, s:dn};
+    }
+    var t=(td.textContent||'').trim();
+    if(!t || t==='—' || t==='-') return {n:false, v:null, s:''};
+    var raw=t.replace(/[$,×x]/g,'').replace(/,/g,'');
+    if(/^-?\d+(\.\d+)?$/.test(raw)) return {n:true, v:parseFloat(raw), s:t};
+    return {n:false, v:t.toLowerCase(), s:t};
+  }
+  function sortTable(table, col, dir){
+    var tb=table && table.tBodies[0];
+    if(!tb) return;
+    Array.prototype.forEach.call(table.querySelectorAll('th'), function(h){
+      h.removeAttribute('data-dir');
+    });
+    var mark=table.querySelector('th[data-col="'+col+'"]');
+    if(mark) mark.setAttribute('data-dir', dir);
+    var rows=Array.prototype.slice.call(tb.rows);
+    rows.sort(function(a,b){
+      var A=val(a.cells[col]||{});
+      var B=val(b.cells[col]||{});
+      if(A.v===null && B.v===null) return 0;
+      if(A.v===null) return 1;
+      if(B.v===null) return -1;
+      var cmp=0;
+      if(A.n && B.n) cmp=A.v-B.v;
+      else cmp=String(A.v).localeCompare(String(B.v));
+      return dir==='asc' ? cmp : -cmp;
+    });
+    rows.forEach(function(r){ tb.appendChild(r); });
+  }
+  document.addEventListener('click', function(e){
+    var th=e.target.closest('table.sortable th');
+    if(!th) return;
+    var table=th.closest('table');
+    if(!table) return;
+    var raw=th.getAttribute('data-col');
+    if(raw===null) return;
+    var dir=th.getAttribute('data-dir')==='asc' ? 'desc' : 'asc';
+    sortTable(table, parseInt(raw,10), dir);
+  });
+  document.querySelectorAll('table.sortable[data-default-sort]').forEach(function(table){
+    var want=(table.getAttribute('data-default-sort')||'').toLowerCase();
+    var ths=table.querySelectorAll('th[data-col]');
+    var idx=-1;
+    for(var i=0;i<ths.length;i++){
+      var t=(ths[i].textContent||'').trim().toLowerCase();
+      if(t===want || t.indexOf(want)>=0 || want.indexOf(t)>=0){
+        idx=parseInt(ths[i].getAttribute('data-col'),10);
+        break;
+      }
+    }
+    if(idx>=0) sortTable(table, idx, 'desc');
+  });
+})();
+</script>
+<script>
+(function(){
+  function norm(s){
+    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+  }
+  function skip(el){
+    return !!(el.closest && el.closest('dialog, .pcard, .rail'));
+  }
+  function playerIdx(table){
+    var ths=table.querySelectorAll('thead th');
+    for(var i=0;i<ths.length;i++){
+      var t=norm(ths[i].textContent);
+      if(t==='player'||t==='name') return i;
+    }
+    return -1;
+  }
+  function rowHit(tr, q, pidx){
+    if(!q) return true;
+    if(pidx>=0 && tr.cells[pidx]) return norm(tr.cells[pidx].textContent).indexOf(q)>=0;
+    return norm(tr.textContent).indexOf(q)>=0;
+  }
+  function apply(opts){
+    opts = opts || {};
+    var inp=document.getElementById('playerSearch');
+    if(!inp) return;
+    var q=norm(inp.value);
+    var n=0;
+    var hitSel='tbody tr:not([hidden]), li:not([hidden])';
+    function teamOk(tr){
+      var book=tr.closest && tr.closest('.player-book');
+      if(!book) return true;
+      var on=book.querySelector('.team-pill.on') || book.querySelector('.team-pill');
+      var team=on ? (on.getAttribute('data-team')||'') : '';
+      if(!team) return true;
+      return (tr.getAttribute('data-team')||'')===team;
+    }
+    function mark(el, hit){
+      el.hidden = !hit;
+      el.classList.toggle('name-hit', !!(q && hit));
+      if(q && hit) n++;
+    }
+    function panelHasHit(sel){
+      var panel=document.querySelector(sel);
+      if(!panel) return false;
+      var hit=false;
+      panel.querySelectorAll('tbody tr, li').forEach(function(el){
+        if(!el.hidden) hit=true;
+      });
+      return hit;
+    }
+    document.querySelectorAll('table tbody tr').forEach(function(tr){
+      if(skip(tr)) return;
+      var ok=teamOk(tr) && rowHit(tr, q, playerIdx(tr.closest('table')));
+      mark(tr, ok);
+    });
+    document.querySelectorAll('table').forEach(function(t){
+      if(skip(t)) return;
+      var any=false;
+      var tb=t.tBodies[0];
+      if(tb){
+        Array.prototype.forEach.call(tb.rows, function(r){ if(!r.hidden) any=true; });
+      }
+      t.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.pos-book').forEach(function(sec){
+      var any=false;
+      sec.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) any=true; });
+      sec.classList.toggle('search-empty', !any);
+    });
+    document.querySelectorAll('.week-book-wrap').forEach(function(w){
+      var t=w.querySelector('table');
+      w.classList.toggle('search-empty', !!(t && t.classList.contains('search-empty')));
+    });
+    document.querySelectorAll('li').forEach(function(li){
+      if(skip(li)) return;
+      mark(li, !q || norm(li.textContent).indexOf(q)>=0);
+    });
+    var hint=document.getElementById('playerSearchHint');
+    if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
+    document.querySelectorAll('label.pill[for]').forEach(function(lab){
+      var id=lab.getAttribute('for');
+      var sel = id==='v-report' ? '.game-report'
+              : id==='v-value' ? '.value-board'
+              : id==='v-book' ? '.player-book' : '';
+      if(!sel) return;
+      lab.classList.toggle('search-miss', !!(q && !panelHasHit(sel)));
+    });
+    if(opts.jump){
+      var shownArt=document.querySelector('article.panel');
+      var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
+      if(jumpEl){
+        setTimeout(function(){
+          try { jumpEl.scrollIntoView({block:'center', behavior:'smooth'}); }
+          catch (err) { jumpEl.scrollIntoView(true); }
+        }, 40);
+      }
+    }
+  }
+  var form=document.getElementById('playerSearchForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      apply({jump:true});
+    });
+  }
+  var inp=document.getElementById('playerSearch');
+  if(inp){
+    inp.addEventListener('input', function(){ apply({}); });
+    inp.addEventListener('search', function(){ apply({jump:true}); });
+    inp.addEventListener('keydown', function(e){
+      if(e.key==='Enter' || e.keyCode===13){
+        e.preventDefault();
+        apply({jump:true});
+      }
+    });
+  }
+  apply({});
+})();
+</script>
+</body></html>
