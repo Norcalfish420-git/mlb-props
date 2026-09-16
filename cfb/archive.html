@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CFB PROPS — Past slates</title>
+<style>
+:root{--bg:#121820;--fg:#f3efe6;--rail:#1a2430;--rail-line:#2e3c4a;--muted:#c4c0b6;--pill:#243140;--pill-fg:#f0c674;--pill-line:#3d4d5c;--accent:#a85d22;--val:#e8b86d;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);text-decoration:none;font-size:.82rem;font-weight:700;border:1px solid var(--pill-line);}
+.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;}
+.pill.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:40rem;}
+a{color:var(--val);}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="rail">
+<p class="brand">CFB PROPS<br/>ARCHIVE</p>
+<a class="pill home" href="/mlb-props/hub.html"><span class="when">all desks</span>Main Prop Page</a>
+<a class="pill" href="./"><span class="when">latest</span>Today</a>
+<a class="pill on" href="./archive.html"><span class="when">dates</span>Past slates</a>
+</aside>
+<main>
+<h1>Past slates</h1>
+<p class="sub">One link per contest. Home is the newest file (2026-09-12).</p>
+<ul>
+<li><a href="./">Latest (2026-09-12)</a></li>
+<li><a href="./2026-09-12.html">September 12, 2026</a></li>
+</ul>
+</main>
+</div>
+</body>
+</html>
