@@ -6,10 +6,10 @@
 <title>MLB Player Props</title>
 <style>
 :root{--bg:#121820;--fg:#f3efe6;--rail:#1a2430cc;--rail-line:#2e3c4a;--muted:#c4c0b6;--pill:#243140;--pill-fg:#f0c674;--pill-line:#3d4d5c;--accent:#a85d22;--val:#e8b86d;--card:#1a2430e6;--card-line:#3d4d5c;--desk:#a85d22;}
-.page-mlb{--desk:#1f6feb;}
-.page-nfl{--desk:#d97706;}
-.page-cfb{--desk:#e11d48;}
-.page-showdown{--desk:#be123c;}
+.page-mlb{--desk:#1f6feb;--accent:#1f6feb;}
+.page-nfl{--desk:#d97706;--accent:#d97706;}
+.page-cfb{--desk:#e11d48;--accent:#e11d48;}
+.page-showdown{--desk:#be123c;--accent:#be123c;}
 html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,"Iowan Old Style",serif;}
 body{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("./assets/desk-bg-hub.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
 body.page-mlb{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("./assets/desk-bg-mlb.jpg");}
@@ -24,10 +24,22 @@ body.page-cfb,body.page-showdown{background-image:linear-gradient(180deg,rgba(18
 .pill{display:block;border-radius:999px;padding:.55rem .75rem;background:var(--pill);color:var(--pill-fg);text-decoration:none;font-size:.82rem;font-weight:700;line-height:1.25;border:1px solid var(--pill-line);}
 .pill.on{background:var(--desk);color:#fff;border-color:var(--desk);}
 .pill.home{border-color:var(--val);}
+.pill.lane-mlb{border-color:#1f6feb;color:#8ab4ff;}
+.pill.lane-nfl{border-color:#d97706;color:#fbbf24;}
+.pill.lane-cfb{border-color:#e11d48;color:#fb7185;}
+.pill.lane-showdown{border-color:#be123c;color:#fb7185;}
+.pill.lane-mlb.on{background:#1f6feb;color:#fff;border-color:#1f6feb;}
+.pill.lane-nfl.on{background:#d97706;color:#fff;border-color:#d97706;}
+.pill.lane-cfb.on{background:#e11d48;color:#fff;border-color:#e11d48;}
+.pill.lane-showdown.on{background:#be123c;color:#fff;border-color:#be123c;}
 .search-form{margin:.35rem 0 .2rem;}
 .search-form input{width:100%;box-sizing:border-box;border-radius:999px;border:1px solid var(--pill-line);background:#121820cc;color:var(--fg);padding:.45rem .7rem;font:inherit;font-size:.8rem;}
 main{flex:1;padding:1.6rem 1.8rem 3rem;max-width:48rem;}
 .hero{margin:0 0 1.5rem;padding:1.15rem 1.2rem 1.05rem;border:1px solid rgba(232,184,109,.22);border-radius:.9rem;background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(168,93,34,.18));box-shadow:0 12px 40px rgba(0,0,0,.28);}
+.page-mlb .hero{border-color:rgba(31,111,235,.35);background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(31,111,235,.22));}
+.page-nfl .hero{border-color:rgba(217,119,6,.35);background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(217,119,6,.22));}
+.page-cfb .hero{border-color:rgba(225,29,72,.35);background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(225,29,72,.22));}
+.page-showdown .hero{border-color:rgba(190,18,60,.35);background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(190,18,60,.22));}
 h1{font-size:2.05rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
 .sub{color:var(--muted);margin:0;font-size:1.02rem;}
 .desk{margin:0 0 2.1rem;padding-top:.2rem;}
@@ -68,10 +80,10 @@ h1{font-size:2.05rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
 <aside class="rail">
 <p class="brand">Prop Boards<br/>Home</p>
 <a class="pill home" href="./hub.html">Home</a>
-<a class="pill on" href="./mlb.html">MLB Player Props</a>
-<a class="pill" href="./nfl.html">NFL Player Props</a>
-<a class="pill" href="./cfb.html">CFB Player Props</a>
-<a class="pill" href="./showdown.html">CFB DK Lineup</a>
+<a class="pill lane-mlb on" href="./mlb.html">MLB Player Props</a>
+<a class="pill lane-nfl" href="./nfl.html">NFL Player Props</a>
+<a class="pill lane-cfb" href="./cfb.html">CFB Player Props</a>
+<a class="pill lane-showdown" href="./showdown.html">CFB DK Lineup</a>
 <a class="pill" href="./results.html">Results</a>
 <form class="search-form" id="playerSearchForm" action="#" role="search">
 <input id="hubSearch" type="search" placeholder="Search a game or date" autocomplete="off"/>
