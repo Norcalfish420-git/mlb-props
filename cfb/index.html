@@ -78,8 +78,6 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 #g4:checked ~ .shell main .p4{display:block;}
 #g5:checked ~ .shell .rail label[for=g5]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #g5:checked ~ .shell main .p5{display:block;}
-#g6:checked ~ .shell .rail label[for=g6]{background:var(--accent);color:#fff;border-color:var(--accent);}
-#g6:checked ~ .shell main .p6{display:block;}
 </style>
 </head><body>
 <input class="tab" type="radio" name="g" id="g0" checked/>
@@ -88,7 +86,6 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <input class="tab" type="radio" name="g" id="g3"/>
 <input class="tab" type="radio" name="g" id="g4"/>
 <input class="tab" type="radio" name="g" id="g5"/>
-<input class="tab" type="radio" name="g" id="g6"/>
 <div class="shell">
 <aside class="rail noprint">
 <p class="brand">CFB PROPS<br/>2026-09-19</p>
@@ -96,10 +93,9 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <label class="pill" for="g0">THE PACK</label>
 <label class="pill" for="g1">Slate times</label>
 <label class="pill" for="g2">ETR VALUE</label>
-<label class="pill" for="g3">SMU Mustangs @ Louisville Cardinals</label>
-<label class="pill" for="g4">LSU Tigers @ Ole Miss Rebels</label>
-<label class="pill" for="g5">Purdue Boilermakers @ UCLA Bruins</label>
-<label class="pill" for="g6">SOURCES</label>
+<label class="pill" for="g3">LSU Tigers @ Ole Miss Rebels</label>
+<label class="pill" for="g4">Purdue Boilermakers @ UCLA Bruins</label>
+<label class="pill" for="g5">SOURCES</label>
 <form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
 <button class="pdf" type="button" onclick="window.print()">Save as PDF</button>
 <button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
@@ -157,31 +153,19 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <article class="panel p1">
 <h3>Slate times</h3>
 <p>Same recs as THE PACK, grouped by kick. Morning is before 1 p.m. ET. Afternoon is 1–4 p.m. ET. Late is 4 p.m. ET and after.</p>
-<h4>Afternoon</h4>
-<table class="sortable">
-<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th><th data-col="6">Kick</th></tr></thead>
-<tbody>
-<tr><td>1</td><td>Devon Dampier</td><td>UTAH</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">38.5</td><td>3:30 p.m. ET</td></tr>
-<tr><td>2</td><td>Rueben Owens II</td><td>TA&amp;M</td><td class="val">anytime TD</td><td class="val">O</td><td class="val">0.5</td><td>3:30 p.m. ET</td></tr>
-<tr><td>3</td><td>KJ Duff</td><td>RUTGERS</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">99.5</td><td>3:30 p.m. ET</td></tr>
-<tr><td>4</td><td>Keelon Russell</td><td>ALABAMA</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">30.5</td><td>3:30 p.m. ET</td></tr>
-<tr><td>5</td><td>Daniel Hill</td><td>ALA</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">77.5</td><td>3:30 p.m. ET</td></tr>
-<tr><td>6</td><td>Kevin Jennings</td><td>SMU</td><td class="val">passing yards</td><td class="val">O</td><td class="val">288.5</td><td>3:30 p.m. ET</td></tr>
-</tbody></table>
 <h4>Late</h4>
 <table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th><th data-col="6">Kick</th></tr></thead>
 <tbody>
-<tr><td>1</td><td>Nate Sheppard</td><td>DUKE</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">125.5</td><td>4:00 p.m. ET</td></tr>
-<tr><td>2</td><td>LaNorris Sellers</td><td>SC</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">37.5</td><td>4:15 p.m. ET</td></tr>
-<tr><td>3</td><td>Anthony Evans III</td><td>MISSISSIPPI STATE</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">82.5</td><td>4:15 p.m. ET</td></tr>
-<tr><td>4</td><td>Jadan Baugh</td><td>FLORIDA</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">105.5</td><td>6:00 p.m. ET</td></tr>
-<tr><td>5</td><td>Kewan Lacy</td><td>OLE MISS</td><td class="val">anytime TD</td><td class="val">O</td><td class="val">0.5</td><td>7:30 p.m. ET</td></tr>
-<tr><td>6</td><td>John Mateer</td><td>OU</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">28.5</td><td>7:30 p.m. ET</td></tr>
-<tr><td>7</td><td>Malik Washington</td><td>MD</td><td class="val">passing yards</td><td class="val">O</td><td class="val">265.5</td><td>7:30 p.m. ET</td></tr>
-<tr><td>8</td><td>Hauss Hejny</td><td>CSU</td><td class="val">passing yards</td><td class="val">O</td><td class="val">197.5</td><td>7:30 p.m. ET</td></tr>
-<tr><td>9</td><td>Luke Weaver</td><td>SJSU</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">17.5</td><td>11:00 p.m. ET</td></tr>
+<tr><td>1</td><td>Jadan Baugh</td><td>FLORIDA</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">105.5</td><td>6:00 p.m. ET</td></tr>
+<tr><td>2</td><td>Kewan Lacy</td><td>OLE MISS</td><td class="val">anytime TD</td><td class="val">O</td><td class="val">0.5</td><td>7:30 p.m. ET</td></tr>
+<tr><td>3</td><td>John Mateer</td><td>OU</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">28.5</td><td>7:30 p.m. ET</td></tr>
+<tr><td>4</td><td>Malik Washington</td><td>MD</td><td class="val">passing yards</td><td class="val">O</td><td class="val">265.5</td><td>7:30 p.m. ET</td></tr>
+<tr><td>5</td><td>Hauss Hejny</td><td>CSU</td><td class="val">passing yards</td><td class="val">O</td><td class="val">197.5</td><td>7:30 p.m. ET</td></tr>
+<tr><td>6</td><td>Kevin Jennings</td><td>SMU</td><td class="val">passing yards</td><td class="val">O</td><td class="val">288.5</td><td>8:00 p.m. ET</td></tr>
+<tr><td>7</td><td>Luke Weaver</td><td>SJSU</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">17.5</td><td>11:00 p.m. ET</td></tr>
 </tbody></table>
+<p>8 recs have no posted kick — they stay on THE PACK only.</p>
 </article>
 <article class="panel p2">
 <h3>ETR VALUE</h3>
@@ -190,108 +174,69 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
-<tr><td>8</td><td>Arch Manning</td><td>TEXAS</td><td class="val">O</td><td class="val">279.5</td><td>13.9</td><td>29.12</td><td class="val">-29.4</td></tr>
-<tr><td>29</td><td>Kevin Jennings</td><td>SMU</td><td class="val">O</td><td class="val">288.5</td><td>8.9</td><td>23.22</td><td class="val">+95.0</td></tr>
-<tr><td>30</td><td>C.J. Carr</td><td>NOTRE DAME</td><td class="val">O</td><td class="val">249.5</td><td>8.8</td><td>23.15</td><td class="val">-53.5</td></tr>
-<tr><td>31</td><td>Malik Washington</td><td>MARYLAND</td><td class="val">O</td><td class="val">265.5</td><td>8.6</td><td>20.23</td><td class="val">-79.5</td></tr>
-<tr><td>38</td><td>Jayden Maiava</td><td>USC</td><td class="val">O</td><td class="val">286.5</td><td>7.8</td><td>24.01</td><td class="val">-41.6</td></tr>
+<tr><td>5</td><td>Arch Manning</td><td>TEXAS</td><td class="val">O</td><td class="val">279.5</td><td>13.9</td><td>29.12</td><td class="val">-29.4</td></tr>
+<tr><td>17</td><td>C.J. Carr</td><td>NOTRE DAME</td><td class="val">O</td><td class="val">249.5</td><td>8.8</td><td>23.15</td><td class="val">-53.5</td></tr>
+<tr><td>18</td><td>Malik Washington</td><td>MARYLAND</td><td class="val">O</td><td class="val">265.5</td><td>8.6</td><td>20.23</td><td class="val">-79.5</td></tr>
+<tr><td>26</td><td>Hauss Hejny</td><td>CSU</td><td class="val">O</td><td class="val">197.5</td><td>6.7</td><td>18.78</td><td class="val">+95.0</td></tr>
+<tr><td>29</td><td>Nathan Hayes</td><td>NDSU</td><td class="val">O</td><td class="val">222.5</td><td>6.0</td><td>20.73</td><td class="val">-35.5</td></tr>
 </tbody></table>
 <h4>Rushing yards</h4>
 <table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>2</td><td>LJ Martin</td><td>BYU</td><td class="val">O</td><td class="val">108.5</td><td>19.7</td><td>31.47</td><td class="val">-0.5</td></tr>
-<tr><td>4</td><td>Nate Sheppard</td><td>DUKE</td><td class="val">O</td><td class="val">125.5</td><td>17.5</td><td>33.26</td><td class="val">+68.3</td></tr>
-<tr><td>5</td><td>Devon Dampier</td><td>UTAH</td><td class="val">O</td><td class="val">38.5</td><td>15.7</td><td>31.75</td><td class="val">+5.2</td></tr>
-<tr><td>7</td><td>Aneyas Williams</td><td>NOTRE DAME</td><td class="val">O</td><td class="val">87.5</td><td>14.1</td><td>25.4</td><td class="val">-3.5</td></tr>
-<tr><td>9</td><td>Bear Bachmeier</td><td>BYU</td><td class="val">O</td><td class="val">38.5</td><td>11.7</td><td>25.26</td><td class="val">-1.8</td></tr>
-<tr><td>10</td><td>LaNorris Sellers</td><td>SC</td><td class="val">O</td><td class="val">37.5</td><td>11.4</td><td>25.55</td><td class="val">+92.3</td></tr>
-<tr><td>12</td><td>Jadan Baugh</td><td>FLORIDA</td><td class="val">O</td><td class="val">105.5</td><td>10.5</td><td>26.11</td><td class="val">+56.0</td></tr>
-<tr><td>14</td><td>Rueben Owens</td><td>TEXAS A&amp;M</td><td class="val">O</td><td class="val">63.5</td><td>10.4</td><td>23.17</td><td class="val">+18.5</td></tr>
-<tr><td>15</td><td>Trinidad Chambliss</td><td>OLE MISS</td><td class="val">O</td><td class="val">37.5</td><td>10.4</td><td>22.73</td><td class="val">+7.8</td></tr>
-<tr><td>17</td><td>Kewan Lacy</td><td>OLE MISS</td><td class="val">O</td><td class="val">83.5</td><td>10.3</td><td>23.5</td><td class="val">-28.3</td></tr>
-<tr><td>18</td><td>Lincoln Kienholz</td><td>LOUISVILLE</td><td class="val">O</td><td class="val">36.5</td><td>10.3</td><td>23.45</td><td class="val">+3.4</td></tr>
-<tr><td>19</td><td>Nico Iamaleava</td><td>UCLA</td><td class="val">O</td><td class="val">46.5</td><td>10.0</td><td>23.68</td><td class="val">-8.4</td></tr>
-<tr><td>20</td><td>Keelon Russell</td><td>ALABAMA</td><td class="val">O</td><td class="val">30.5</td><td>9.8</td><td>24.72</td><td class="val">+62.1</td></tr>
-<tr><td>21</td><td>John Mateer</td><td>OU</td><td class="val">O</td><td class="val">28.5</td><td>9.6</td><td>23.61</td><td class="val">+14.1</td></tr>
-<tr><td>26</td><td>Wayshawn Parker</td><td>UTAH</td><td class="val">O</td><td class="val">76.5</td><td>9.4</td><td>21.92</td><td class="val">-17.4</td></tr>
+<tr><td>4</td><td>Aneyas Williams</td><td>NOTRE DAME</td><td class="val">O</td><td class="val">87.5</td><td>14.1</td><td>25.4</td><td class="val">-3.5</td></tr>
+<tr><td>6</td><td>Bear Bachmeier</td><td>BYU</td><td class="val">O</td><td class="val">38.5</td><td>11.7</td><td>25.26</td><td class="val">-1.8</td></tr>
+<tr><td>8</td><td>Jadan Baugh</td><td>FLORIDA</td><td class="val">O</td><td class="val">105.5</td><td>10.5</td><td>26.11</td><td class="val">+56.0</td></tr>
+<tr><td>9</td><td>Trinidad Chambliss</td><td>OLE MISS</td><td class="val">O</td><td class="val">37.5</td><td>10.4</td><td>22.73</td><td class="val">+7.8</td></tr>
+<tr><td>11</td><td>Kewan Lacy</td><td>OLE MISS</td><td class="val">O</td><td class="val">83.5</td><td>10.3</td><td>23.5</td><td class="val">-28.3</td></tr>
+<tr><td>12</td><td>Lincoln Kienholz</td><td>LOUISVILLE</td><td class="val">O</td><td class="val">36.5</td><td>10.3</td><td>23.45</td><td class="val">+3.4</td></tr>
+<tr><td>13</td><td>Nico Iamaleava</td><td>UCLA</td><td class="val">O</td><td class="val">46.5</td><td>10.0</td><td>23.68</td><td class="val">-8.4</td></tr>
+<tr><td>14</td><td>John Mateer</td><td>OU</td><td class="val">O</td><td class="val">28.5</td><td>9.6</td><td>23.61</td><td class="val">+14.1</td></tr>
+<tr><td>27</td><td>Hauss Hejny</td><td>COLORADO STATE</td><td class="val">O</td><td class="val">18.5</td><td>6.7</td><td>18.78</td><td class="val">+15.8</td></tr>
+<tr><td>30</td><td>Luke Weaver</td><td>SJSU</td><td class="val">O</td><td class="val">17.5</td><td>6.0</td><td>18.8</td><td class="val">+25.6</td></tr>
+<tr><td>31</td><td>Marcellous Hawkins</td><td>VIRGINIA TECH</td><td class="val">O</td><td class="val">64.5</td><td>5.7</td><td>15.05</td><td class="val">-2.1</td></tr>
+<tr><td>34</td><td>Fame Ijeboi</td><td>PURDUE</td><td class="val">O</td><td class="val">71.5</td><td>5.6</td><td>18.87</td><td class="val">+19.0</td></tr>
+<tr><td>35</td><td>Lucky Sutton</td><td>SDSU</td><td class="val">O</td><td class="val">89.5</td><td>5.6</td><td>18.39</td><td class="val">-12.6</td></tr>
+<tr><td>38</td><td>Lloyd Avant</td><td>OKLAHOMA</td><td class="val">O</td><td class="val">66.5</td><td>5.0</td><td>15.08</td><td class="val">+8.2</td></tr>
 </tbody></table>
 <h4>Receiving yards</h4>
 <table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
-<tr><td>23</td><td>KJ Duff</td><td>RUTGERS</td><td class="val">O</td><td class="val">99.5</td><td>9.4</td><td>23.57</td><td class="val">+96.5</td></tr>
-<tr><td>33</td><td>Anthony Evans III</td><td>MISSISSIPPI STATE</td><td class="val">O</td><td class="val">82.5</td><td>8.5</td><td>20.25</td><td class="val">+23.7</td></tr>
-<tr><td>36</td><td>Jordan Faison</td><td>NOTRE DAME</td><td class="val">O</td><td class="val">67.5</td><td>8.0</td><td>18.5</td><td class="val">+5.4</td></tr>
-<tr><td>39</td><td>Yamir Knight</td><td>SMU</td><td class="val">O</td><td class="val">61.5</td><td>7.7</td><td>15.88</td><td class="val">-13.5</td></tr>
-<tr><td>40</td><td>Chris Durr Jr.</td><td>MD</td><td class="val">O</td><td class="val">63.5</td><td>7.5</td><td>17.43</td><td class="val">+39.5</td></tr>
+<tr><td>20</td><td>Jordan Faison</td><td>NOTRE DAME</td><td class="val">O</td><td class="val">67.5</td><td>8.0</td><td>18.5</td><td class="val">+5.4</td></tr>
+<tr><td>22</td><td>Chris Durr Jr.</td><td>MD</td><td class="val">O</td><td class="val">63.5</td><td>7.5</td><td>17.43</td><td class="val">+39.5</td></tr>
+<tr><td>24</td><td>Hollywood Smothers</td><td>TEXAS</td><td class="val">O</td><td class="val">16.5</td><td>7.2</td><td>21.35</td><td class="val">+8.7</td></tr>
+<tr><td>28</td><td>Na&#x27;eem Abdul-Rahim Gladding</td><td>MARYLAND</td><td class="val">O</td><td class="val">73.5</td><td>6.3</td><td>15.75</td><td class="val">-16.5</td></tr>
+<tr><td>33</td><td>Fame Ijeboi</td><td>PUR</td><td class="val">O</td><td class="val">19.5</td><td>5.6</td><td>18.87</td><td class="val">+22.5</td></tr>
+<tr><td>36</td><td>Luke Reynolds</td><td>VT</td><td class="val">O</td><td class="val">55.5</td><td>5.1</td><td>13.99</td><td class="val">+52.5</td></tr>
+<tr><td>39</td><td>Carson Clark</td><td>SAN JOSÉ STATE</td><td class="val">O</td><td class="val">52.5</td><td>4.9</td><td>16.52</td><td class="val">+21.5</td></tr>
 </tbody></table>
 <h4>Receptions</h4>
 <table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
-<tr><td>24</td><td>KJ Duff</td><td>RUTGERS</td><td class="val">O</td><td class="val">6.5</td><td>9.4</td><td>23.57</td><td class="val">+1.2</td></tr>
-<tr><td>28</td><td>Isaiah Sategna</td><td>OKLAHOMA</td><td class="val">O</td><td class="val">4.5</td><td>9.0</td><td>20.72</td><td class="val">-0.9</td></tr>
-<tr><td>34</td><td>Anthony Evans III</td><td>MISSISSIPPI STATE</td><td class="val">O</td><td class="val">5.5</td><td>8.5</td><td>20.25</td><td class="val">-0.1</td></tr>
-<tr><td>37</td><td>Jordan Faison</td><td>NOTRE DAME</td><td class="val">O</td><td class="val">5.5</td><td>8.0</td><td>18.5</td><td class="val">-2.1</td></tr>
+<tr><td>16</td><td>Isaiah Sategna</td><td>OKLAHOMA</td><td class="val">O</td><td class="val">4.5</td><td>9.0</td><td>20.72</td><td class="val">-0.9</td></tr>
+<tr><td>21</td><td>Jordan Faison</td><td>NOTRE DAME</td><td class="val">O</td><td class="val">5.5</td><td>8.0</td><td>18.5</td><td class="val">-2.1</td></tr>
+<tr><td>25</td><td>Hollywood Smothers</td><td>TEXAS</td><td class="val">O</td><td class="val">2.5</td><td>7.2</td><td>21.35</td><td class="val">+0.5</td></tr>
+<tr><td>37</td><td>Luke Reynolds</td><td>VT</td><td class="val">O</td><td class="val">4.5</td><td>5.1</td><td>13.99</td><td class="val">+2.3</td></tr>
+<tr><td>40</td><td>Carson Clark</td><td>SAN JOSÉ STATE</td><td class="val">O</td><td class="val">4.5</td><td>4.9</td><td>16.52</td><td class="val">+1.5</td></tr>
 </tbody></table>
 <h4>Anytime TD</h4>
 <table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>LJ Martin</td><td>BYU</td><td class="val">O</td><td class="val">0.5</td><td>19.7</td><td>31.47</td><td class="val">-0.5</td></tr>
-<tr><td>3</td><td>Nate Sheppard</td><td>DUKE</td><td class="val">O</td><td class="val">1.5</td><td>17.5</td><td>33.26</td><td class="val">-1.0</td></tr>
-<tr><td>6</td><td>Aneyas Williams</td><td>NOTRE DAME</td><td class="val">O</td><td class="val">1.5</td><td>14.1</td><td>25.4</td><td class="val">-0.7</td></tr>
-<tr><td>11</td><td>Jadan Baugh</td><td>FLORIDA</td><td class="val">O</td><td class="val">1.5</td><td>10.5</td><td>26.11</td><td class="val">-1.0</td></tr>
-<tr><td>13</td><td>Rueben Owens</td><td>TEXAS A&amp;M</td><td class="val">O</td><td class="val">0.5</td><td>10.4</td><td>23.17</td><td class="val">-0.5</td></tr>
-<tr><td>16</td><td>Kewan Lacy</td><td>OLE MISS</td><td class="val">O</td><td class="val">0.5</td><td>10.3</td><td>23.5</td><td class="val">+0.3</td></tr>
-<tr><td>22</td><td>KJ Duff</td><td>RUTGERS</td><td class="val">O</td><td class="val">0.5</td><td>9.4</td><td>23.57</td><td class="val">+0.1</td></tr>
-<tr><td>25</td><td>Wayshawn Parker</td><td>UTAH</td><td class="val">O</td><td class="val">1.5</td><td>9.4</td><td>21.92</td><td class="val">-1.0</td></tr>
-<tr><td>27</td><td>Isaiah Sategna</td><td>OKLAHOMA</td><td class="val">O</td><td class="val">0.5</td><td>9.0</td><td>20.72</td><td class="val">+0.2</td></tr>
-<tr><td>32</td><td>Anthony Evans III</td><td>MISSISSIPPI STATE</td><td class="val">O</td><td class="val">0.5</td><td>8.5</td><td>20.25</td><td class="val">+0.3</td></tr>
-<tr><td>35</td><td>Jordan Faison</td><td>ND</td><td class="val">O</td><td class="val">0.5</td><td>8.0</td><td>18.5</td><td class="val">+0.3</td></tr>
+<tr><td>3</td><td>Aneyas Williams</td><td>NOTRE DAME</td><td class="val">O</td><td class="val">1.5</td><td>14.1</td><td>25.4</td><td class="val">-0.7</td></tr>
+<tr><td>7</td><td>Jadan Baugh</td><td>FLORIDA</td><td class="val">O</td><td class="val">1.5</td><td>10.5</td><td>26.11</td><td class="val">-1.0</td></tr>
+<tr><td>10</td><td>Kewan Lacy</td><td>OLE MISS</td><td class="val">O</td><td class="val">0.5</td><td>10.3</td><td>23.5</td><td class="val">+0.3</td></tr>
+<tr><td>15</td><td>Isaiah Sategna</td><td>OKLAHOMA</td><td class="val">O</td><td class="val">0.5</td><td>9.0</td><td>20.72</td><td class="val">+0.2</td></tr>
+<tr><td>19</td><td>Jordan Faison</td><td>ND</td><td class="val">O</td><td class="val">0.5</td><td>8.0</td><td>18.5</td><td class="val">+0.3</td></tr>
+<tr><td>23</td><td>Hollywood Smothers</td><td>TEX</td><td class="val">O</td><td class="val">1.5</td><td>7.2</td><td>21.35</td><td class="val">-1.0</td></tr>
+<tr><td>32</td><td>Fame Ijeboi</td><td>PUR</td><td class="val">O</td><td class="val">0.5</td><td>5.6</td><td>18.87</td><td class="val">-0.5</td></tr>
 </tbody></table>
 </article>
 <article class="panel p3">
-<p class="line-blast">Louisville is about <b>1.5</b> points better. The total sits at <b>59.5</b>. L&amp;N 3:30p ET: 92F, wind 7, rain chance peaks 24% Q3. No pass kill.</p>
-<h3>WHO THEY ARE</h3>
-<ul>
-<li><b>SMU</b> is ranked No. 16 this year (2-0).</li>
-<li><b>Louisville</b> is ranked No. 23 this year (1-1).</li>
-</ul>
-<h3>Game Script</h3>
-<p>GAME SCRIPT — SMU @ Louisville (analyst read):</p>
-<p>Line: Louisville +1.5 · total 59.5</p>
-<p>Script: close game, over friends</p>
-<p>Story: One-score ACC opener. Jennings vs Kienholz. Split desks. Not a 5-1.</p>
-<p>Score predictions: SMU 42, Louisville 38</p>
-<p>Weather: L&amp;N 3:30p ET 92F wind 7 rain chance 24% Q3</p>
-<p>Picks: Louisville -1.5 | Over 59.5</p>
-<p>Sources: courier-journal.com, nbcsports.com, fanduel.com, cbssports.com, covers.com</p>
-<p>Reads: 5/5</p>
-<h3>ETR VALUE</h3>
-<p>Top 4 by ETR thesis (main slate), grouped by type. Rank is 1–4 across types. Over on a starter-band role, Under when ETR is well below that band. Slightly negative Value can still be a starter. ETR fantasy points are not a book line.</p>
-<h4>Passing yards</h4>
-<table class="sortable">
-<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
-<tbody>
-<tr><td>1</td><td>Kevin Jennings</td><td>SMU</td><td class="val">O</td><td class="val">288.5</td><td>8.9</td><td>23.22</td><td class="val">+95.0</td></tr>
-</tbody></table>
-<h4>Receiving yards</h4>
-<table class="sortable">
-<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
-<tbody>
-<tr><td>2</td><td>Yamir Knight</td><td>SMU</td><td class="val">O</td><td class="val">61.5</td><td>7.7</td><td>15.88</td><td class="val">-13.5</td></tr>
-<tr><td>4</td><td>Randy Pittman</td><td>SMU</td><td class="val">O</td><td class="val">40.5</td><td>3.4</td><td>10.79</td><td class="val">+10.2</td></tr>
-</tbody></table>
-<h4>Receptions</h4>
-<table class="sortable">
-<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
-<tbody>
-<tr><td>3</td><td>Jalen Cooper</td><td>SMU</td><td class="val">O</td><td class="val">3.5</td><td>4.6</td><td>12.46</td><td class="val">-1.0</td></tr>
-</tbody></table>
-</article>
-<article class="panel p4">
 <p class="line-blast">LSU is about <b>3</b> points better. The total sits at <b>58.5</b>. Vaught-Hemingway 7:30p ET: mostly clear 94F, wind 4, cools to 84. No pass kill.</p>
 <h3>WHO THEY ARE</h3>
 <ul>
@@ -299,14 +244,77 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <li><b>Ole Miss</b> is ranked No. 8 this year (2-0). They are one of the best teams in the country right now.</li>
 </ul>
 <h3>Game Script</h3>
-<p>GAME SCRIPT — LSU @ Ole Miss (analyst read):</p>
-<p>Line: LSU +3 · total 58.5</p>
-<p>Script: close LSU win, Leavitt plays</p>
-<p>Story: Kiffin vs Golding. Leavitt plays. Chambliss and Lacy at home.</p>
-<p>Weather: Vaught-Hemingway 7:30p ET 94F wind 4</p>
-<p>Picks: LSU -3</p>
-<p>Sources: nola.com, bleacherreport.com, espn.com, tigerrag.com, cbssports.com</p>
-<p>Reads: 5/5</p>
+<p>Sam Leavitt plays. He came off the Friday report. Do not sit him as out. He threw three interceptions against Louisiana Tech. Dilin Jones disappeared in that first half. Trinidad Chambliss and Kewan Lacy are the Ole Miss backfield. Trey&#x27;Dez Green is the LSU tight end (DraftKings buckets him as a receiver). Eugene Wilson III is the LSU receiver. This is a one-score revenge game, not a 5–1.</p>
+<p><b>What the writers are saying:</b> Close LSU win. The line never really moved when Leavitt was listed doubtful. One national preview says the atmosphere can go either way. Ole Miss wants Lacy going. LSU wants the defense to take the crowd out. We are building 3–3 / 4–2, not a blowout.</p>
+<p><b>LSU</b></p>
+<ul>
+<li>Sam Leavitt
+<ul>
+<li>Starter. Throws and runs. He plays. Captain is legal</li>
+</ul>
+</li>
+<li>Landen Clark / Husan Longstreet
+<ul>
+<li>Backups. Sit unless Leavitt is scratched at warmups</li>
+</ul>
+</li>
+<li>Trey&#x27;Dez Green
+<ul>
+<li>Tight end. Official roster is tight end. Keep him with Leavitt</li>
+</ul>
+</li>
+<li>Eugene Wilson III
+<ul>
+<li>Charted receiver. Keep him with Leavitt</li>
+</ul>
+</li>
+<li>Dilin Jones
+<ul>
+<li>Charted back. Quiet last week. Not a captain until he shows</li>
+</ul>
+</li>
+</ul>
+<p><b>Ole Miss</b></p>
+<ul>
+<li>Trinidad Chambliss
+<ul>
+<li>Starter. Throws. Home captain is legal</li>
+</ul>
+</li>
+<li>Kewan Lacy
+<ul>
+<li>Charted first among the running backs</li>
+</ul>
+</li>
+<li>Horatio Fields / Deuce Alexander
+<ul>
+<li>Charted receivers. Keep them with Chambliss</li>
+</ul>
+</li>
+<li>Deuce Knight
+<ul>
+<li>Backup. Sit</li>
+</ul>
+</li>
+</ul>
+<p><b>Where the defense is weaker</b></p>
+<ul>
+<li><b>LSU:</b> Not named as a leaky front this turn.</li>
+<li><b>Ole Miss:</b> Big plays against Louisville in Week 1. Secondary is the worry</li>
+</ul>
+<p><b>What the scoreboard forces</b></p>
+<ul>
+<li>A two-score LSU lead is Jones and the defense, not more Leavitt deep shots</li>
+<li>A one-score game keeps Chambliss and Lacy in play</li>
+<li>An Ole Miss lead asks Leavitt to throw — and he already has four interceptions</li>
+</ul>
+<p><b>Who that points at</b></p>
+<ul>
+<li>Leavitt or Lacy as captain.</li>
+<li>Green and Wilson with Leavitt</li>
+<li>Fields or Alexander with Chambliss</li>
+<li>Not Clark. Not Longstreet. Not Deuce Knight</li>
+</ul>
 <h3>ETR VALUE</h3>
 <p>Top 8 by ETR thesis (main slate), grouped by type. Rank is 1–8 across types. Over on a starter-band role, Under when ETR is well below that band. Slightly negative Value can still be a starter. ETR fantasy points are not a book line.</p>
 <h4>Rushing yards</h4>
@@ -338,7 +346,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tr><td>2</td><td>Kewan Lacy</td><td>OLE MISS</td><td class="val">O</td><td class="val">0.5</td><td>10.3</td><td>23.5</td><td class="val">+0.3</td></tr>
 </tbody></table>
 </article>
-<article class="panel p5">
+<article class="panel p4">
 <p class="line-blast">UCLA is about <b>14</b> points better. The total sits at <b>52.5</b>. Rose Bowl: clear 71F, wind 5 gust 6, 4% rain. No pass kill.</p>
 <h3>WHO THEY ARE</h3>
 <ul>
@@ -346,14 +354,98 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <li><b>UCLA</b> is unranked this year, unbeaten (2-0).</li>
 </ul>
 <h3>Game Script</h3>
-<p>GAME SCRIPT — Purdue @ UCLA (analyst read):</p>
-<p>Line: UCLA +14 · total 52.5</p>
-<p>Script: UCLA win, number maybe fat</p>
-<p>Story: Chesney Big Ten opener. Knight runs. Iamaleava has no passing TDs. Browne and Ijeboi keep Purdue in range.</p>
-<p>Weather: Rose Bowl 71F wind 5 clear</p>
-<p>Picks: UCLA -14</p>
-<p>Sources: espn.com, latimes.com, covers.com, hammerandrails.com, bluechipanalytics.com</p>
-<p>Reads: 5/5</p>
+<p>Nico Iamaleava starts. He has not thrown a touchdown pass. Wayne Knight has six rushing touchdowns. Mikey Matthews is out. Semaj Morgan fills the slot. Landon Ellis is returning. Brian Rowe Jr. should be healthier. Brayden Loftin is the UCLA tight end (DraftKings buckets him as a receiver). Ar&#x27;Mari Towns is a sit. Purdue&#x27;s Ryan Browne has thrown for 646 yards with no interceptions. Fame Ijeboi is the Purdue back. Mister Clark is out for Purdue.</p>
+<p><b>What the writers are saying:</b> UCLA wins. The number may be fat. One desk takes Purdue +14.5 because all of UCLA&#x27;s touchdowns have been on the ground and the pass game has been empty. The local paper says Purdue cannot set the edge against Knight and Iamaleava. We are not captaining a backup quarterback. We are not playing Towns.</p>
+<p><b>UCLA</b></p>
+<ul>
+<li>Nico Iamaleava
+<ul>
+<li>Starter. Throws and runs. Home captain is the working lock</li>
+</ul>
+</li>
+<li>Ty Dieffenbach
+<ul>
+<li>Backup. DraftKings prices him like a starter. Sit</li>
+</ul>
+</li>
+<li>Wayne Knight
+<ul>
+<li>Charted first among the running backs. Six touchdowns. The UCLA back</li>
+</ul>
+</li>
+<li>Semaj Morgan
+<ul>
+<li>Fills the slot with Matthews out</li>
+</ul>
+</li>
+<li>Brian Rowe Jr. / Landon Ellis
+<ul>
+<li>Returning. Rowe is the healthier receiver</li>
+</ul>
+</li>
+<li>Brayden Loftin
+<ul>
+<li>Tight end. Official roster is tight end. Posted touchdown number. Keep over Towns</li>
+</ul>
+</li>
+<li>Mikey Matthews
+<ul>
+<li>Out. Sit</li>
+</ul>
+</li>
+<li>Ar&#x27;Mari Towns
+<ul>
+<li>Injury sit</li>
+</ul>
+</li>
+</ul>
+<p><b>Purdue</b></p>
+<ul>
+<li>Ryan Browne
+<ul>
+<li>Starter. Throws. Dog quarterback on a two-score number. Fine as a FLEX, not the working captain</li>
+</ul>
+</li>
+<li>Evans Chuba
+<ul>
+<li>Backup priced like a starter. Sit</li>
+</ul>
+</li>
+<li>Fame Ijeboi
+<ul>
+<li>Charted first among the running backs</li>
+</ul>
+</li>
+<li>Asaad Waseem
+<ul>
+<li>Charted as the lead receiver. Keep him with Browne</li>
+</ul>
+</li>
+<li>Jaylan Hornsby
+<ul>
+<li>$1,000 dest with no yardage line. Only on a mix card so Browne still has a Purdue catcher</li>
+</ul>
+</li>
+</ul>
+<p><b>Where the defense is weaker</b></p>
+<ul>
+<li><b>UCLA:</b> Red-zone defense has allowed scores</li>
+<li><b>Purdue:</b> Quarterbacks on the run. Indiana State and Wake Forest both ran</li>
+</ul>
+<p><b>What the scoreboard forces</b></p>
+<ul>
+<li>A two-score UCLA lead is Knight, not more Iamaleava downfield</li>
+<li>A one-score game keeps Browne throwing</li>
+<li>A Purdue lead asks Iamaleava to throw — he has not done that well</li>
+</ul>
+<p><b>Who that points at</b></p>
+<ul>
+<li>Iamaleava or Knight as captain.</li>
+<li>Morgan and Loftin with Iamaleava</li>
+<li>Ijeboi</li>
+<li>Browne with a Purdue catcher if he is on the six</li>
+<li>Not Towns. Not Matthews. Not Dieffenbach. Not Chuba</li>
+</ul>
 <h3>ETR VALUE</h3>
 <p>Top 10 by ETR thesis (main slate), grouped by type. Rank is 1–10 across types. Over on a starter-band role, Under when ETR is well below that band. Slightly negative Value can still be a starter. ETR fantasy points are not a book line.</p>
 <h4>Rushing yards</h4>
@@ -387,7 +479,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tr><td>2</td><td>Fame Ijeboi</td><td>PUR</td><td class="val">O</td><td class="val">0.5</td><td>5.6</td><td>18.87</td><td class="val">-0.5</td></tr>
 </tbody></table>
 </article>
-<article class="panel p6">
+<article class="panel p5">
 <h3>SOURCES</h3>
 <p>WRITER CONSENSUS</p>
 <p>quoted=0  desks=0  urls=0  articles=0  youtube=0</p>
@@ -396,7 +488,6 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <p>quoted=0  desks=0  urls=0  articles=0  youtube=0</p>
 <ul>
 <li>site:on3.com CFB 2026-09-19 player props player props</li>
-<ul>
 <li>site:247sports.com CFB 2026-09-19 player props player props</li>
 <li>site:actionnetwork.com CFB 2026-09-19 player props player props</li>
 <li>site:covers.com CFB 2026-09-19 player props player props</li>
@@ -423,7 +514,6 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <li>RotoBaller CFB 2026-09-19 player props player props</li>
 <li>site:youtube.com CFB 2026-09-19 player props player props</li>
 <li>site:youtube.com college football 2026 prop bets</li>
-</ul>
 </ul>
 <p>Quote the body (player + market + Over/Under + URL). Never invent a line.</p>
 <p>WARN: unique URLs under the 10-article floor.</p>
