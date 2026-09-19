@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CFB Showdown 2026-09-19 · Georgia @ Arkansas</title>
+<style>
+:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#fb7185;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#be123c;--table:#262626;--cell:#525252;--th:#393939;--val:#fb7185;--h:#fb7185;--code:#fb7185;--up:#3ddbd9;--down:#ff8389;--up-bg:rgba(61,219,217,.16);--down-bg:rgba(255,131,137,.16);--wk-alt:rgba(190,18,60,.08);}
+html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#9f1239;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#9f1239;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#9f1239;--h:#9f1239;--code:#9f1239;--up:#005d5d;--down:#a2191f;--up-bg:rgba(0,93,93,.1);--down-bg:rgba(162,25,31,.1);--wk-alt:rgba(190,18,60,.06);}
+html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+body{background-image:linear-gradient(180deg,rgba(22,22,22,.82),rgba(10,14,18,.93)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
+html.light body{background-image:linear-gradient(180deg,rgba(242,244,248,.88),rgba(242,244,248,.94)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");}
+.tab{position:absolute;left:-9999px;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;overflow-y:auto;}
+.rail .brand{order:0;}
+.rail a.pill.home{order:1;}
+.rail > *:not(.brand):not(a.pill.home){order:2;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);text-decoration:none;}
+a.pill.home{border-color:var(--val);}
+.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
+.pill:hover{background:var(--pill-hover);}
+button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
+button.pdf:hover{filter:brightness(1.08);}
+button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.5rem .7rem;}
+button.theme:hover{background:var(--pill-hover);}
+form.search-form{margin:0;display:flex;flex-direction:column;gap:.15rem;}
+label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35rem 0 0;}
+input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
+input.search:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.pill.search-miss{opacity:.42;}
+table.search-empty{display:none;}
+li.name-hit,tr.name-hit{background:rgba(190,18,60,.28);outline:1px solid var(--accent);}
+.hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
+.view-row{display:flex;flex-direction:column;gap:.35rem;margin:.15rem 0 .35rem;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:54rem;min-width:0;}
+h1{font-size:1.6rem;margin:0 0 .3rem;}
+h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
+.line-blast{font-size:1.42rem;line-height:1.35;font-weight:700;margin:.35rem 0 1.2rem;padding:.95rem 1.05rem;background:var(--table);border:2px solid var(--accent);border-left-width:8px;}
+.line-blast b{color:var(--val);font-size:1.08em;}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
+h3.second-pass{border-top:2px solid var(--accent);padding-top:1.15rem;margin-top:2rem;}
+h4{margin:.8rem 0 .4rem;}
+h4.team-break{font-size:1.28rem;font-weight:800;letter-spacing:.01em;margin:2.35rem 0 .55rem;padding:1.05rem 0 .35rem;border-top:3px solid var(--accent);}
+h3 + p + h4.team-break,h3 + h4.team-break{margin-top:.75rem;padding-top:.1rem;border-top:none;}
+h5{font-size:.95rem;margin:1.05rem 0 .3rem;color:var(--muted);font-weight:700;}
+.sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
+table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.92rem;background:var(--table);}
+th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
+th{background:var(--th);color:var(--pill-fg);}
+table.sortable th{cursor:pointer;user-select:none;}
+table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}
+table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
+table.game-log{width:100%;table-layout:auto;}
+table.game-log th,table.game-log td{text-align:center;white-space:nowrap;}
+table.game-log th:nth-child(1),table.game-log td:nth-child(1),table.game-log th:nth-child(2),table.game-log td:nth-child(2){text-align:left;}
+.week-pills,.team-pills{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 .8rem;}
+.week-pill,.team-pill{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--pill);color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:999px;padding:.4rem .75rem;}
+.week-pill.on,.team-pill.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+.week-panel{margin:0 0 1.6rem;}
+.week-panel.search-empty,.game-box.search-empty,.box-side.search-empty{display:none;}
+.week-lab{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.2rem 0 .6rem;}
+.trend-up-strip{margin:.4rem 0 1rem;padding:.7rem .85rem;background:var(--table);border-left:6px solid var(--accent);}
+.trend-up-strip h4{margin:0 0 .35rem;}
+.trend-up-strip ul{margin:.2rem 0 0;}
+.game-box{margin:0 0 1.8rem;padding:0 0 .4rem;border-bottom:1px solid var(--cell);}
+.box-score{font-size:1.2rem;margin:.4rem 0 .5rem;}
+.run-pass{color:var(--muted);margin:0 0 .55rem;}
+.box-side{margin:0 0 1.15rem;}
+table.espn-box{font-size:.9rem;width:100%;}
+table.espn-box th,table.espn-box td{text-align:right;}
+table.espn-box th:first-child,table.espn-box td:first-child{text-align:left;}
+.pos-book{margin:0 0 1.6rem;}
+.pos-book.search-empty{display:none;}
+.pos-book h4{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.4rem 0 .45rem;}
+td.trend-up{background:var(--up-bg) !important;color:var(--up);font-weight:700;}
+td.trend-down{background:var(--down-bg) !important;color:var(--down);font-weight:700;}
+span.delta{font-size:.68em;font-weight:700;margin-left:.28em;opacity:.92;}
+td.val{font-weight:700;color:var(--val);white-space:nowrap;}
+.left{font-weight:700;margin:.2rem 0 1rem;}
+ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
+ul ul{margin:.15rem 0 .4rem;padding-left:1.15rem;}
+li{margin:.35rem 0;}
+code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
+.panel{display:block;}
+.appendix{display:none;}
+@media print{
+  html,body,html.light,html.light body{background:#fff;color:#111;background-image:none !important;}
+  .shell{display:block;}
+  .rail,.noprint{display:none !important;}
+  main{max-width:none;padding:0;}
+  .panel,.appendix{display:block !important;page-break-after:always;}
+  .game-report,.value-board,.player-book{display:block !important;}
+  .week-panel,.week-panel[hidden]{display:block !important;}
+  .week-pills,.week-pill{display:none !important;}
+  .appendix{page-break-after:auto;}
+  table{background:#fff;page-break-inside:avoid;}
+  th{background:#eee;color:#333;}
+  td.val{color:#000;}
+  td.trend-up{color:#005d5d;background:#e6f6f6 !important;}
+  td.trend-down{color:#a2191f;background:#fce8e8 !important;}
+  h2,h3,h4,h5{page-break-after:avoid;color:#111;}
+  h4.team-break{border-top-color:#111;}
+  .line-blast{background:#fff;border-color:#111;color:#111;}
+  .line-blast b{color:#000;}
+}
+@page{margin:.5in;}
+#v-report:checked ~ .shell .rail label[for=v-report]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-value:checked ~ .shell .rail label[for=v-value]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.player-book,.value-board{display:none;}
+#v-book:checked ~ .shell main,#v-value:checked ~ .shell main{max-width:none;}
+#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .value-board{display:none;}
+#v-book:checked ~ .shell main .player-book{display:block;}
+#v-value:checked ~ .shell main .game-report,#v-value:checked ~ .shell main .player-book{display:none;}
+#v-value:checked ~ .shell main .value-board{display:block;}
+</style>
+</head><body>
+<input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-value"/>
+<input class="tab" type="radio" name="v" id="v-book"/>
+<div class="shell">
+<aside class="rail noprint">
+<p class="brand">CFB SHOWDOWN<br/>2026-09-19<br/>Georgia @ Arkansas</p>
+<a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
+<div class="view-row">
+<label class="pill" for="v-report">Report</label>
+<label class="pill" for="v-value">Value</label>
+<label class="pill" for="v-book">Player book</label>
+</div>
+<form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
+<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
+<button class="pdf" type="button" onclick="window.print()">Save as PDF</button><p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
+</aside>
+<main>
+<h1>CFB Showdown — 2026-09-19 · Georgia @ Arkansas</h1>
+<article class="panel">
+<div class="game-report">
+<h2>1) Georgia @ Arkansas · noon ET · Razorback Stadium · ABC</h2>
+<p class="line-blast">Georgia is about <b>24.5</b> points better. The total sits at <b>54.5</b>. Razorback Stadium, noon ET.</p>
+<p><b>This slate is four out of five stars.</b> Georgia is a three-score road favorite. The live book is <b>Georgia −24.5 / 54.5</b>. Noon on ABC. Outdoor.</p>
+<p><b>WEATHER: UGA@ARK — outdoor — 89°F at kick, wind 11 mph — sunny, warming toward 95. No rain.</b> That is not a pass kill. It is hot.</p>
+<h3>WHO THEY ARE</h3>
+<ul>
+<li><b>Georgia</b> is ranked No. 2 this year (2-0). They are one of the best teams in the country right now.</li>
+<li><b>Arkansas</b> is unranked this year (1-1).</li>
+</ul>
+<h3>WHO MATTERS</h3>
+<p>These are the names that decide a six tonight — who runs the ball, who catches it, and who to sit.</p>
+<h4>Georgia</h4>
+<ul>
+<li><b>Quarterback:</b> Gunner Stockton runs and throws. Last week vs Tennessee State he threw 16 times for 202, 3 passing scores. If you make him captain, his rushing yards count extra.</li>
+<li><b>Running backs:</b> Bo Walker is the listed back (5 carries last week). The back who scored: Chauncey Bowens.</li>
+<li><b>Best other names:</b> Sacovie White-Helton — 1-70-1 last week; Craig Dandridge — 2-56 last week.</li>
+</ul>
+<h4>Arkansas</h4>
+<ul>
+<li><b>Quarterback:</b> KJ Jackson runs and throws. Last week vs Utah he threw 34 times for 139 and had 7 carries for 34. That was a quiet rushing night, not who he is. If you make him captain, his rushing yards count extra.</li>
+<li><b>Running backs:</b> They split the carries. Sutton Smith (7 carries) and Cam Settles (6 carries). Use one of them, not both.</li>
+<li><b>Best other names:</b> Chris Marshall — 5-63 last week; Jamari Hawkins — 3-47 last week.</li>
+</ul>
+<h3>Game Script</h3>
+<p>Georgia is the three-score favorite on the road. Arkansas is home and still the dog. Ryan Silverfield has the Arkansas job after Memphis. Kirby Smart&#x27;s first-teamers have not been asked to play a full SEC road test yet. Gunner Stockton has been efficient. Nate Frazier is the Georgia back. Lawson Luckie is the Georgia tight end (DraftKings buckets him as a receiver). Dante Dowdell is out. Several Georgia defensive backs and a linebacker are out. Arkansas tight ends Lassiter and Hendrix are out.</p>
+<p><b>What the writers are saying:</b> Georgia covers and the total stays under. Arkansas just got run off the field at Utah. Georgia&#x27;s defense has given up almost nothing through two games. One desk has Georgia 49–7. Another has Georgia covering 24.5 because the starters sat a lot last week and should be fresher. This is a 5–1 Georgia script, not a 3–3.</p>
+<p><b>Georgia</b></p>
+<ul>
+<li>Gunner Stockton
+<ul>
+<li>Starter. Throws. Pocket. He is not the captain on a three-score number unless you want the pass tree</li>
+</ul>
+</li>
+<li>Ryan Puglisi
+<ul>
+<li>Backup. DraftKings prices him like a starter at $10,000. Sit</li>
+</ul>
+</li>
+<li>Nate Frazier
+<ul>
+<li>Charted first among the running backs. The favorite back on a 5–1</li>
+</ul>
+</li>
+<li>Chauncey Bowens
+<ul>
+<li>Charted second. Committee. Not a captain</li>
+</ul>
+</li>
+<li>Sacovie White-Helton / Isiah Canion
+<ul>
+<li>Charted receivers. Canion is the cheap Georgia tree with Stockton</li>
+</ul>
+</li>
+<li>Lawson Luckie
+<ul>
+<li>Tight end. Official roster is tight end. Keep him so Stockton&#x27;s throws still count</li>
+</ul>
+</li>
+<li>Elyiss Williams
+<ul>
+<li>Cheap Georgia dest. Fade. We do not need him once Luckie and Canion are on</li>
+</ul>
+</li>
+<li>Dante Dowdell
+<ul>
+<li>Out. Sit</li>
+</ul>
+</li>
+</ul>
+<p><b>Arkansas</b></p>
+<ul>
+<li>KJ Jackson
+<ul>
+<li>Charted starter. Dog quarterback on a three-score number. Sit as captain</li>
+</ul>
+</li>
+<li>AJ Hill
+<ul>
+<li>Backup priced like a starter. Sit</li>
+</ul>
+</li>
+<li>Chris Marshall
+<ul>
+<li>Charted as the lead Arkansas receiver. The one Razorback we will pay on a 5–1</li>
+</ul>
+</li>
+<li>Sutton Smith
+<ul>
+<li>Do not captain the Arkansas running back into Georgia</li>
+</ul>
+</li>
+<li>Cam Settles / Jamari Hawkins
+<ul>
+<li>No yardage line we trust. Sit as captains</li>
+</ul>
+</li>
+</ul>
+<h3>GAME FLOW</h3>
+<p><b>How this game plays</b></p>
+<ul>
+<li>Three-score road favorite. Georgia can sit on a lead</li>
+<li>The books have Georgia around 39.5 and Arkansas around 15</li>
+<li>Arkansas still has a passer. We do not captain him</li>
+</ul>
+<p><b>How they want to play</b></p>
+<ul>
+<li><b>Georgia offense:</b> Stockton throws. Frazier is the back. Luckie and Canion are the cheap tree</li>
+<li><b>Georgia defense:</b> Nobody we read named a leaky front this turn. They have been stingy</li>
+<li><b>Arkansas offense:</b> Jackson throws. Marshall is the receiver we will actually pay</li>
+<li><b>Arkansas defense:</b> Utah just posted 43. Silverfield is still installing</li>
+</ul>
+<p><b>Where the defense is weaker</b></p>
+<ul>
+<li><b>Georgia:</b> Several defensive backs are out. That is a note, not a reason to captain Jackson</li>
+<li><b>Arkansas:</b> The Utah tape was a problem up front and on the back end</li>
+</ul>
+<p><b>What the scoreboard forces</b></p>
+<ul>
+<li>A two-score Georgia lead is the grind — Frazier, not more Stockton deep shots</li>
+<li>A one-score game keeps Jackson throwing. We are not building for that</li>
+<li>An Arkansas lead asks Stockton to throw more than a stall script</li>
+</ul>
+<p><b>Who that points at</b></p>
+<ul>
+<li>Frazier captain</li>
+<li>Stockton so Luckie and Canion still count</li>
+<li>One Arkansas receiver</li>
+<li>Not Puglisi. Not Sutton Smith captain. Not KJ Jackson captain. Not Elyiss</li>
+</ul>
+<h3>DEPTH CHART</h3>
+<p>Offense skill. A missing name is —.</p>
+<h4 class="team-break">Georgia</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Gunner Stockton</td><td>—</td></tr>
+<tr><td>RB</td><td>Nate Frazier</td><td>—</td></tr>
+<tr><td>WR-X</td><td>Isiah Canion</td><td>CJ Wiley</td></tr>
+<tr><td>WR-Z</td><td>Talyn Taylor</td><td>—</td></tr>
+<tr><td>WR-SL</td><td>Sacovie White Helton</td><td>—</td></tr>
+<tr><td>TE</td><td>Lawson Luckie</td><td>Ethan Barbour</td></tr>
+</tbody></table>
+<h4 class="team-break">Arkansas</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>KJ Jackson</td><td>—</td></tr>
+<tr><td>RB</td><td>Sutton Smith</td><td>—</td></tr>
+<tr><td>WR-X</td><td>Chris Marshall</td><td>Antonio Jordan</td></tr>
+<tr><td>WR-Z</td><td>CJ Brown</td><td>—</td></tr>
+<tr><td>WR-SL</td><td>Jamari Hawkins</td><td>—</td></tr>
+<tr><td>TE</td><td>Jaden Platt</td><td>Ty Lockwood</td></tr>
+<tr><td>K</td><td>Max Gilbert</td><td>—</td></tr>
+<tr><td>PK</td><td>Max Gilbert</td><td>—</td></tr>
+</tbody></table>
+<h3>INJURIES</h3>
+<p>Who is out or in doubt for this game. A blank list means nobody on the board is tagged.</p>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Status</th><th scope="col" data-col="3">Tonight</th></tr></thead>
+<tbody>
+<tr><td>Hutson Hendrix</td><td>Arkansas</td><td>Out</td><td>Not playing. Sit him.</td></tr>
+<tr><td>Maddox Lassiter</td><td>Arkansas</td><td>Out</td><td>Not playing. Sit him.</td></tr>
+<tr><td>Dante Dowdell</td><td>Georgia</td><td>Out</td><td>Not playing. Sit him.</td></tr>
+</tbody></table>
+<h3>CHART NOTES</h3>
+<p>When the listed chart does not match who is actually playing.</p>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Note</th></tr></thead>
+<tbody>
+<tr><td>Elyiss Williams</td><td>Georgia</td><td>Not a chart starter.</td></tr>
+</tbody></table>
+<h3>SCRIPT SIX</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Nate Frazier</td><td>Georgia</td><td>RB</td><td>$14,700</td><td class="val">0.78×</td><td>rushing yards 76.5</td></tr>
+<tr><td>FLEX</td><td>Gunner Stockton</td><td>Georgia</td><td>QB</td><td>$12,800</td><td class="val">1.86×</td><td>rushing plus receiving yards 238.5</td></tr>
+<tr><td>FLEX</td><td>Chris Marshall</td><td>Arkansas</td><td>WR</td><td>$7,600</td><td class="val">0.64×</td><td>receiving yards 48.5</td></tr>
+<tr><td>FLEX</td><td>Chauncey Bowens</td><td>Georgia</td><td>RB</td><td>$7,200</td><td class="val">0.55×</td><td>rushing plus receiving yards 39.5</td></tr>
+<tr><td>FLEX</td><td>Isiah Canion</td><td>Georgia</td><td>WR</td><td>$6,200</td><td class="val">0.54×</td><td>receiving yards 33.5</td></tr>
+<tr><td>FLEX</td><td>Lawson Luckie</td><td>Georgia</td><td>WR</td><td>$1,200</td><td class="val">1.54×</td><td>receiving yards 18.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $300  (spent $49,700 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Nate Frazier is captain. Also caught 1 for 5.</li>
+<li>Gunner Stockton. Last week 16 throws for 202 and 3 passing scores. He runs and throws.</li>
+<li>Chris Marshall. Boise State transfer. 7-79 vs North Alabama.</li>
+<li>Isiah Canion. Last week 1-6. Stack with Gunner Stockton.</li>
+<li>Chauncey Bowens. Also caught 2 for 45.</li>
+<li>Lawson Luckie. Last week 1-4. Cheap at $1,200 so the expensive names still fit. Stack with Gunner Stockton.</li>
+</ul>
+<p>Projected points on this six: 95.27. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 1</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Gunner Stockton</td><td>Georgia</td><td>QB</td><td>$19,200</td><td class="val">1.86×</td><td>rushing plus receiving yards 238.5</td></tr>
+<tr><td>FLEX</td><td>Nate Frazier</td><td>Georgia</td><td>RB</td><td>$9,800</td><td class="val">0.78×</td><td>rushing yards 76.5</td></tr>
+<tr><td>FLEX</td><td>Chris Marshall</td><td>Arkansas</td><td>WR</td><td>$7,600</td><td class="val">0.64×</td><td>receiving yards 48.5</td></tr>
+<tr><td>FLEX</td><td>Isiah Canion</td><td>Georgia</td><td>WR</td><td>$6,200</td><td class="val">0.54×</td><td>receiving yards 33.5</td></tr>
+<tr><td>FLEX</td><td>London Humphreys</td><td>Georgia</td><td>WR</td><td>$4,200</td><td class="val">0.54×</td><td>receiving yards 22.5</td></tr>
+<tr><td>FLEX</td><td>Lawson Luckie</td><td>Georgia</td><td>WR</td><td>$1,200</td><td class="val">1.54×</td><td>receiving yards 18.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $1,800  (spent $48,200 / $50,000)</p>
+<p>Leftover over $1,000 is allowed only after we tried other captains to spend the leftover and kept the screaming value punts. Slack from a dest trap or cheap twin is still a miss.</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Gunner Stockton is captain. Last week 16 throws for 202 and 3 passing scores. He runs and throws. If he is captain, his rushing yards count extra.</li>
+<li>Nate Frazier. Also caught 1 for 5.</li>
+<li>Chris Marshall. Boise State transfer. 7-79 vs North Alabama.</li>
+<li>Isiah Canion. Last week 1-6. Stack with Gunner Stockton.</li>
+<li>London Humphreys. Last week 2-11-1. Stack with Gunner Stockton.</li>
+<li>Lawson Luckie. Last week 1-4. Cheap at $1,200 so the expensive names still fit. Stack with Gunner Stockton.</li>
+<li>Leftover over $1,000 is allowed only after we tried other captains to spend the leftover and kept the screaming value punts. Slack from a dest trap or cheap twin is still a miss.</li>
+<li>DK priced Gunner Stockton + Nate Frazier + Chris Marshall $600 short — you sit London Humphreys and keep the punt.</li>
+</ul>
+<p>Projected points on this six: 98.27. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 2</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Isiah Canion</td><td>Georgia</td><td>WR</td><td>$9,300</td><td class="val">0.54×</td><td>receiving yards 33.5</td></tr>
+<tr><td>FLEX</td><td>Gunner Stockton</td><td>Georgia</td><td>QB</td><td>$12,800</td><td class="val">1.86×</td><td>rushing plus receiving yards 238.5</td></tr>
+<tr><td>FLEX</td><td>Nate Frazier</td><td>Georgia</td><td>RB</td><td>$9,800</td><td class="val">0.78×</td><td>rushing yards 76.5</td></tr>
+<tr><td>FLEX</td><td>Chauncey Bowens</td><td>Georgia</td><td>RB</td><td>$7,200</td><td class="val">0.55×</td><td>rushing plus receiving yards 39.5</td></tr>
+<tr><td>FLEX</td><td>London Humphreys</td><td>Georgia</td><td>WR</td><td>$4,200</td><td class="val">0.54×</td><td>receiving yards 22.5</td></tr>
+<tr><td>FLEX</td><td>CJ Brown</td><td>Arkansas</td><td>WR</td><td>$3,400</td><td class="val">0.74×</td><td>receptions 2.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $3,300  (spent $46,700 / $50,000)</p>
+<p>Leftover over $1,000 is allowed only after we tried other captains to spend the leftover and kept the screaming value punts. Slack from a dest trap or cheap twin is still a miss.</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Isiah Canion is captain. Last week 1-6. Stack with Gunner Stockton.</li>
+<li>CJ Brown. Last week 3-37.</li>
+<li>London Humphreys. Last week 2-11-1. Stack with Gunner Stockton.</li>
+<li>Gunner Stockton. Last week 16 throws for 202 and 3 passing scores. He runs and throws.</li>
+<li>Nate Frazier. Also caught 1 for 5.</li>
+<li>Chauncey Bowens. Also caught 2 for 45.</li>
+<li>Leftover over $1,000 is allowed only after we tried other captains to spend the leftover and kept the screaming value punts. Slack from a dest trap or cheap twin is still a miss.</li>
+</ul>
+<p>Projected points on this six: 88.24. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 3</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Nate Frazier</td><td>Georgia</td><td>RB</td><td>$14,700</td><td class="val">0.78×</td><td>rushing yards 76.5</td></tr>
+<tr><td>FLEX</td><td>Gunner Stockton</td><td>Georgia</td><td>QB</td><td>$12,800</td><td class="val">1.86×</td><td>rushing plus receiving yards 238.5</td></tr>
+<tr><td>FLEX</td><td>Chris Marshall</td><td>Arkansas</td><td>WR</td><td>$7,600</td><td class="val">0.64×</td><td>receiving yards 48.5</td></tr>
+<tr><td>FLEX</td><td>Chauncey Bowens</td><td>Georgia</td><td>RB</td><td>$7,200</td><td class="val">0.55×</td><td>rushing plus receiving yards 39.5</td></tr>
+<tr><td>FLEX</td><td>Isiah Canion</td><td>Georgia</td><td>WR</td><td>$6,200</td><td class="val">0.54×</td><td>receiving yards 33.5</td></tr>
+<tr><td>FLEX</td><td>Lawson Luckie</td><td>Georgia</td><td>WR</td><td>$1,200</td><td class="val">1.54×</td><td>receiving yards 18.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $300  (spent $49,700 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Nate Frazier is captain. Also caught 1 for 5.</li>
+<li>Gunner Stockton. Last week 16 throws for 202 and 3 passing scores. He runs and throws.</li>
+<li>Chris Marshall. Boise State transfer. 7-79 vs North Alabama.</li>
+<li>Isiah Canion. Last week 1-6. Stack with Gunner Stockton.</li>
+<li>Chauncey Bowens. Also caught 2 for 45.</li>
+<li>Lawson Luckie. Last week 1-4. Cheap at $1,200 so the expensive names still fit. Stack with Gunner Stockton.</li>
+<li>DK priced Nate Frazier + Gunner Stockton + Chris Marshall + Chauncey Bowens $100 short — you sit Isiah Canion and keep the punt.</li>
+</ul>
+<p>Projected points on this six: 95.27. The captain&#x27;s stats count extra.</p>
+<h3>SITS / FADES</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Why</th></tr></thead>
+<tbody>
+<tr><td>Ryan Puglisi</td><td>Georgia</td><td>backup priced like a starter</td></tr>
+<tr><td>Dante Dowdell</td><td>Georgia</td><td>out</td></tr>
+<tr><td>Sutton Smith</td><td>Arkansas</td><td>do not captain the Arkansas back into Georgia</td></tr>
+<tr><td>KJ Jackson</td><td>Arkansas</td><td>dog quarterback as captain</td></tr>
+<tr><td>Elyiss Williams</td><td>Georgia</td><td>cheap fill we already faded</td></tr>
+<tr><td>Kickers</td><td>—</td><td>sitting both sides</td></tr>
+</tbody></table>
+</div>
+<div class="value-board"><h3>OUR VALUE</h3>
+<p>Every salary-board skill player on each team — not a Top 20. <b>Value</b> is our book number versus DraftKings salary (<b>1.00× is even</b>). Below even and no posted line stay on the table (—). This is not ETR. Sorted highest value first.</p>
+<h4 class="team-break">Arkansas</h4>
+<table class="sortable" data-default-sort="Value">
+<thead><tr><th scope="col" data-col="0">#</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>KJ Jackson</td><td>Arkansas</td><td>QB</td><td>$8,800</td><td class="val">1.98×</td><td>receiving yards 174.5</td></tr>
+<tr><td>2</td><td>CJ Brown</td><td>Arkansas</td><td>WR</td><td>$3,400</td><td class="val">0.74×</td><td>receptions 2.5</td></tr>
+<tr><td>3</td><td>Ty Lockwood</td><td>Arkansas</td><td>WR</td><td>$2,800</td><td class="val">0.66×</td><td>receiving yards 18.5</td></tr>
+<tr><td>4</td><td>Chris Marshall</td><td>Arkansas</td><td>WR</td><td>$7,600</td><td class="val">0.64×</td><td>receiving yards 48.5</td></tr>
+<tr><td>5</td><td>Ismael Cisse</td><td>Arkansas</td><td>WR</td><td>$4,600</td><td class="val">0.42×</td><td>receiving yards 19.5</td></tr>
+<tr><td>6</td><td>Braylen Russell</td><td>Arkansas</td><td>RB</td><td>$6,600</td><td class="val">0.40×</td><td>rushing yards 26.5</td></tr>
+<tr><td>7</td><td>Sutton Smith</td><td>Arkansas</td><td>RB</td><td>$8,000</td><td class="val">0.37×</td><td>rushing yards 29.5</td></tr>
+<tr><td>8</td><td>Antonio Jordan</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>9</td><td>Ben Pupplo</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>10</td><td>Blair Irvin III</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>11</td><td>Braxton Scriber</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>12</td><td>Breylen Gilbert</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>13</td><td>Cory Henderson Jr.</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>14</td><td>Courtney Crutchfield</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>15</td><td>Dai&#x27;Shaun Thomas</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>16</td><td>Dequane Prevo</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>17</td><td>Gavin Garretson</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>18</td><td>Hutson Hendrix</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>19</td><td>Jasper Parker</td><td>Arkansas</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>20</td><td>Jelani Watkins</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>21</td><td>Jude Hall</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>22</td><td>Kevin Young</td><td>Arkansas</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>23</td><td>Maddox Lassiter</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>24</td><td>Mario Robinson</td><td>Arkansas</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>25</td><td>Markeylin Batton</td><td>Arkansas</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>26</td><td>Matt Adcock</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>27</td><td>Monte Harrison</td><td>Arkansas</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>28</td><td>TJ Hodges</td><td>Arkansas</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>29</td><td>Jaden Platt</td><td>Arkansas</td><td>WR</td><td>$1,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>30</td><td>Donovan Faupel</td><td>Arkansas</td><td>WR</td><td>$2,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>31</td><td>Jamari Hawkins</td><td>Arkansas</td><td>WR</td><td>$3,800</td><td class="val">—</td><td>—</td></tr>
+<tr><td>32</td><td>Braeden McAlister</td><td>Arkansas</td><td>K</td><td>$4,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>33</td><td>Charlie Von Der Meden</td><td>Arkansas</td><td>K</td><td>$4,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>34</td><td>Max Gilbert</td><td>Arkansas</td><td>K</td><td>$4,400</td><td class="val">—</td><td>—</td></tr>
+<tr><td>35</td><td>Cam Settles</td><td>Arkansas</td><td>RB</td><td>$5,600</td><td class="val">—</td><td>—</td></tr>
+<tr><td>36</td><td>Braeden Fuller</td><td>Arkansas</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>37</td><td>Cade Trotter</td><td>Arkansas</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>38</td><td>Hank Hendrix</td><td>Arkansas</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>39</td><td>AJ Hill</td><td>Arkansas</td><td>QB</td><td>$7,400</td><td class="val">—</td><td>—</td></tr>
+</tbody></table>
+<h4 class="team-break">Georgia</h4>
+<table class="sortable" data-default-sort="Value">
+<thead><tr><th scope="col" data-col="0">#</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Gunner Stockton</td><td>Georgia</td><td>QB</td><td>$12,800</td><td class="val">1.86×</td><td>rushing plus receiving yards 238.5</td></tr>
+<tr><td>2</td><td>Lawson Luckie</td><td>Georgia</td><td>WR</td><td>$1,200</td><td class="val">1.54×</td><td>receiving yards 18.5</td></tr>
+<tr><td>3</td><td>Nate Frazier</td><td>Georgia</td><td>RB</td><td>$9,800</td><td class="val">0.78×</td><td>rushing yards 76.5</td></tr>
+<tr><td>4</td><td>Chauncey Bowens</td><td>Georgia</td><td>RB</td><td>$7,200</td><td class="val">0.55×</td><td>rushing plus receiving yards 39.5</td></tr>
+<tr><td>5</td><td>London Humphreys</td><td>Georgia</td><td>WR</td><td>$4,200</td><td class="val">0.54×</td><td>receiving yards 22.5</td></tr>
+<tr><td>6</td><td>Isiah Canion</td><td>Georgia</td><td>WR</td><td>$6,200</td><td class="val">0.54×</td><td>receiving yards 33.5</td></tr>
+<tr><td>7</td><td>Sacovie White-Helton</td><td>Georgia</td><td>WR</td><td>$6,800</td><td class="val">0.36×</td><td>receiving yards 24.5</td></tr>
+<tr><td>8</td><td>Benjamin McElreath</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>9</td><td>Bo Walker</td><td>Georgia</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>10</td><td>Brayden Fogle</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>11</td><td>Brody Tolbert</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>12</td><td>CJ Wiley</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>13</td><td>Colton Heinrich</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>14</td><td>Dallas Dickerson</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>15</td><td>Danny Curran</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>16</td><td>David Lalaian</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>17</td><td>Dwight Phillips Jr.</td><td>Georgia</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>18</td><td>Elyiss Williams</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>19</td><td>Jackson St. Clair</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>20</td><td>Jaden Reddell</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>21</td><td>Jae Lamar</td><td>Georgia</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>22</td><td>Jeremy Bell</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>23</td><td>Kaiden Prothro</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>24</td><td>Landon Roldan</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>25</td><td>Lincoln Keyes</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>26</td><td>Micah Bell</td><td>Georgia</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>27</td><td>Nick Peal</td><td>Georgia</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>28</td><td>Ryan Mosley</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>29</td><td>Tre Shields</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>30</td><td>Tyler J. Williams</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>31</td><td>Wade Penn</td><td>Georgia</td><td>RB</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>32</td><td>Walter Blanchard</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>33</td><td>Will Taylor</td><td>Georgia</td><td>WR</td><td>$1,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>34</td><td>Craig Dandridge</td><td>Georgia</td><td>WR</td><td>$1,800</td><td class="val">—</td><td>—</td></tr>
+<tr><td>35</td><td>Thomas Blackshear</td><td>Georgia</td><td>WR</td><td>$2,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>36</td><td>Ethan Barbour</td><td>Georgia</td><td>WR</td><td>$3,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>37</td><td>Connor Ferguson</td><td>Georgia</td><td>K</td><td>$5,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>38</td><td>Harran Zureikat</td><td>Georgia</td><td>K</td><td>$5,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>39</td><td>Henry Bates</td><td>Georgia</td><td>K</td><td>$5,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>40</td><td>Peyton Woodring</td><td>Georgia</td><td>K</td><td>$5,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>41</td><td>Dante Dowdell</td><td>Georgia</td><td>RB</td><td>$5,200</td><td class="val">—</td><td>—</td></tr>
+<tr><td>42</td><td>Talyn Taylor</td><td>Georgia</td><td>WR</td><td>$5,800</td><td class="val">—</td><td>—</td></tr>
+<tr><td>43</td><td>Bryson Beaver</td><td>Georgia</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>44</td><td>Colter Ginn</td><td>Georgia</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>45</td><td>Hezekiah Millender</td><td>Georgia</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>46</td><td>Jake Bobo</td><td>Georgia</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>47</td><td>Ryan Montgomery</td><td>Georgia</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
+<tr><td>48</td><td>Ryan Puglisi</td><td>Georgia</td><td>QB</td><td>$10,000</td><td class="val">—</td><td>—</td></tr>
+</tbody></table>
+<h3>ETR VALUE</h3>
+<p>Every name on ETR&#x27;s sheet for this game, both teams in one table. Click a column to sort. A blank cell is —. <b>ETR salary</b> and <b>Owned</b> are their main-slate numbers. <b>Slate</b> is their sheet label. <b>Points per $1k</b> is their projected points versus our DraftKings salary for this game. Negative sheet values stay on the table. Both teams sit in one list so you can sort them together. Every Showdown skill player stays on the table (— if ETR did not list them). Not a Top 20.</p>
+<table class="sortable" data-default-sort="Points per $1k">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Opp</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">ETR salary</th><th scope="col" data-col="5">Projected points</th><th scope="col" data-col="6">Sheet value</th><th scope="col" data-col="7">Owned</th><th scope="col" data-col="8">Slate</th><th scope="col" data-col="9">Our salary</th><th scope="col" data-col="10">Points per $1k</th></tr></thead>
+<tbody>
+<tr><td>Lawson Luckie</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$3,100</td><td>5.94</td><td>-0.7</td><td>0.13</td><td>Main</td><td>$1,200</td><td class="val">4.95</td></tr>
+<tr><td>Elyiss Williams</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$3,000</td><td>4.72</td><td>-1.8</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">4.72</td></tr>
+<tr><td>Dwight Phillips Jr.</td><td>Georgia</td><td>Arkansas</td><td>RB</td><td>$4,000</td><td>4.56</td><td>-3.4</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">4.56</td></tr>
+<tr><td>Tyler J. Williams</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$3,000</td><td>3.81</td><td>-2.7</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">3.81</td></tr>
+<tr><td>Bo Walker</td><td>Georgia</td><td>Arkansas</td><td>RB</td><td>$4,000</td><td>2.49</td><td>-5.5</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">2.49</td></tr>
+<tr><td>Peyton Woodring</td><td>Georgia</td><td>Arkansas</td><td>K</td><td>$5,000</td><td>11.95</td><td>2.5</td><td>0</td><td>Main</td><td>$5,000</td><td class="val">2.39</td></tr>
+<tr><td>Antonio Jordan</td><td>Arkansas</td><td>Georgia</td><td>WR</td><td>$3,000</td><td>2.38</td><td>-4.1</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">2.38</td></tr>
+<tr><td>Gunner Stockton</td><td>Georgia</td><td>Arkansas</td><td>QB</td><td>$9,200</td><td>28.54</td><td>12.7</td><td>12.16</td><td>Main</td><td>$12,800</td><td class="val">2.23</td></tr>
+<tr><td>Landon Roldan</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$3,000</td><td>2.14</td><td>-4.4</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">2.14</td></tr>
+<tr><td>Jeremy Bell</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$3,000</td><td>1.97</td><td>-4.5</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">1.97</td></tr>
+<tr><td>CJ Brown</td><td>Arkansas</td><td>Georgia</td><td>WR</td><td>$3,400</td><td>6.67</td><td>-0.4</td><td>0.16</td><td>Main</td><td>$3,400</td><td class="val">1.96</td></tr>
+<tr><td>London Humphreys</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$3,700</td><td>8.09</td><td>0.5</td><td>0.53</td><td>Main</td><td>$4,200</td><td class="val">1.93</td></tr>
+<tr><td>Ty Lockwood</td><td>Arkansas</td><td>Georgia</td><td>WR</td><td>$3,300</td><td>5.08</td><td>-1.9</td><td>0.09</td><td>Main</td><td>$2,800</td><td class="val">1.81</td></tr>
+<tr><td>Nate Frazier</td><td>Georgia</td><td>Arkansas</td><td>RB</td><td>$6,700</td><td>17.67</td><td>5.6</td><td>15.84</td><td>Main</td><td>$9,800</td><td class="val">1.8</td></tr>
+<tr><td>Isiah Canion</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$4,300</td><td>11.17</td><td>2.7</td><td>2.16</td><td>Main</td><td>$6,200</td><td class="val">1.8</td></tr>
+<tr><td>Kaiden Prothro</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$3,000</td><td>1.76</td><td>-4.7</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">1.76</td></tr>
+<tr><td>CJ Wiley</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$3,000</td><td>1.73</td><td>-4.8</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">1.73</td></tr>
+<tr><td>Chris Marshall</td><td>Arkansas</td><td>Georgia</td><td>WR</td><td>$5,300</td><td>12.59</td><td>2.6</td><td>2.69</td><td>Main</td><td>$7,600</td><td class="val">1.66</td></tr>
+<tr><td>Monte Harrison</td><td>Arkansas</td><td>Georgia</td><td>WR</td><td>$3,000</td><td>1.63</td><td>-4.9</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">1.63</td></tr>
+<tr><td>KJ Jackson</td><td>Arkansas</td><td>Georgia</td><td>QB</td><td>$5,400</td><td>13.53</td><td>3.4</td><td>1.96</td><td>Main</td><td>$8,800</td><td class="val">1.54</td></tr>
+<tr><td>Chauncey Bowens</td><td>Georgia</td><td>Arkansas</td><td>RB</td><td>$4,900</td><td>10.52</td><td>1.2</td><td>2.59</td><td>Main</td><td>$7,200</td><td class="val">1.46</td></tr>
+<tr><td>Matt Adcock</td><td>Arkansas</td><td>Georgia</td><td>WR</td><td>$3,000</td><td>1.41</td><td>-5.1</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">1.41</td></tr>
+<tr><td>Sutton Smith</td><td>Arkansas</td><td>Georgia</td><td>RB</td><td>$5,500</td><td>10.97</td><td>0.7</td><td>0.49</td><td>Main</td><td>$8,000</td><td class="val">1.37</td></tr>
+<tr><td>Ryan Mosley</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$3,000</td><td>1.32</td><td>-5.2</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">1.32</td></tr>
+<tr><td>Talyn Taylor</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$4,200</td><td>7.4</td><td>-0.9</td><td>0.1</td><td>Main</td><td>$5,800</td><td class="val">1.28</td></tr>
+<tr><td>Jelani Watkins</td><td>Arkansas</td><td>Georgia</td><td>WR</td><td>$3,000</td><td>1.04</td><td>-5.5</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">1.04</td></tr>
+<tr><td>Ismael Cisse</td><td>Arkansas</td><td>Georgia</td><td>WR</td><td>$4,000</td><td>4.5</td><td>-3.5</td><td>0</td><td>Main</td><td>$4,600</td><td class="val">0.98</td></tr>
+<tr><td>Braylen Russell</td><td>Arkansas</td><td>Georgia</td><td>RB</td><td>$4,700</td><td>5.96</td><td>-3.1</td><td>0</td><td>Main</td><td>$6,600</td><td class="val">0.9</td></tr>
+<tr><td>Jamari Hawkins</td><td>Arkansas</td><td>Georgia</td><td>WR</td><td>$3,700</td><td>3.27</td><td>-4.3</td><td>0</td><td>Main</td><td>$3,800</td><td class="val">0.86</td></tr>
+<tr><td>Max Gilbert</td><td>Arkansas</td><td>Georgia</td><td>K</td><td>$4,400</td><td>3.6</td><td>-5</td><td>0</td><td>Main</td><td>$4,400</td><td class="val">0.82</td></tr>
+<tr><td>Cam Settles</td><td>Arkansas</td><td>Georgia</td><td>RB</td><td>$4,100</td><td>4.44</td><td>-3.7</td><td>0</td><td>Main</td><td>$5,600</td><td class="val">0.79</td></tr>
+<tr><td>Craig Dandridge</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$3,100</td><td>1.34</td><td>-5.3</td><td>0</td><td>Main</td><td>$1,800</td><td class="val">0.74</td></tr>
+<tr><td>Will Taylor</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$3,000</td><td>0.69</td><td>-5.8</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">0.69</td></tr>
+<tr><td>Jaden Reddell</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$3,000</td><td>0.68</td><td>-5.8</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">0.68</td></tr>
+<tr><td>Dallas Dickerson</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$3,000</td><td>0.65</td><td>-5.8</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">0.65</td></tr>
+<tr><td>Colton Heinrich</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$3,000</td><td>0.62</td><td>-5.9</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">0.62</td></tr>
+<tr><td>Courtney Crutchfield</td><td>Arkansas</td><td>Georgia</td><td>WR</td><td>$3,000</td><td>0.57</td><td>-5.9</td><td>0</td><td>Main</td><td>$1,000</td><td class="val">0.57</td></tr>
+<tr><td>Donovan Faupel</td><td>Arkansas</td><td>Georgia</td><td>WR</td><td>$3,300</td><td>1.42</td><td>-5.5</td><td>0</td><td>Main</td><td>$2,600</td><td class="val">0.55</td></tr>
+<tr><td>Sacovie White-Helton</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$4,800</td><td>3.6</td><td>-5.6</td><td>0</td><td>Main</td><td>$6,800</td><td class="val">0.53</td></tr>
+<tr><td>Jaden Platt</td><td>Arkansas</td><td>Georgia</td><td>WR</td><td>$3,100</td><td>0.63</td><td>-6</td><td>0</td><td>Main</td><td>$1,400</td><td class="val">0.45</td></tr>
+<tr><td>Ethan Barbour</td><td>Georgia</td><td>Arkansas</td><td>WR</td><td>$3,400</td><td>0.61</td><td>-6.5</td><td>0</td><td>Main</td><td>$3,200</td><td class="val">0.19</td></tr>
+<tr><td>AJ Hill</td><td>Arkansas</td><td>Georgia</td><td>QB</td><td>$5,100</td><td>1.13</td><td>-8.5</td><td>0</td><td>Main</td><td>$7,400</td><td class="val">0.15</td></tr>
+<tr><td>Ben Pupplo</td><td>Arkansas</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Blair Irvin III</td><td>Arkansas</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Braeden Fuller</td><td>Arkansas</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Braeden McAlister</td><td>Arkansas</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,400</td><td class="val">—</td></tr>
+<tr><td>Braxton Scriber</td><td>Arkansas</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Breylen Gilbert</td><td>Arkansas</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Cade Trotter</td><td>Arkansas</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Charlie Von Der Meden</td><td>Arkansas</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,400</td><td class="val">—</td></tr>
+<tr><td>Cory Henderson Jr.</td><td>Arkansas</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Dai&#x27;Shaun Thomas</td><td>Arkansas</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Dequane Prevo</td><td>Arkansas</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Gavin Garretson</td><td>Arkansas</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Hank Hendrix</td><td>Arkansas</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Hutson Hendrix</td><td>Arkansas</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Jasper Parker</td><td>Arkansas</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Jude Hall</td><td>Arkansas</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Kevin Young</td><td>Arkansas</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Maddox Lassiter</td><td>Arkansas</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Mario Robinson</td><td>Arkansas</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Markeylin Batton</td><td>Arkansas</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>TJ Hodges</td><td>Arkansas</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Benjamin McElreath</td><td>Georgia</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Brayden Fogle</td><td>Georgia</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Brody Tolbert</td><td>Georgia</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Bryson Beaver</td><td>Georgia</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Colter Ginn</td><td>Georgia</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Connor Ferguson</td><td>Georgia</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$5,000</td><td class="val">—</td></tr>
+<tr><td>Danny Curran</td><td>Georgia</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Dante Dowdell</td><td>Georgia</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$5,200</td><td class="val">—</td></tr>
+<tr><td>David Lalaian</td><td>Georgia</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Harran Zureikat</td><td>Georgia</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$5,000</td><td class="val">—</td></tr>
+<tr><td>Henry Bates</td><td>Georgia</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$5,000</td><td class="val">—</td></tr>
+<tr><td>Hezekiah Millender</td><td>Georgia</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Jackson St. Clair</td><td>Georgia</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Jae Lamar</td><td>Georgia</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Jake Bobo</td><td>Georgia</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Lincoln Keyes</td><td>Georgia</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Micah Bell</td><td>Georgia</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Nick Peal</td><td>Georgia</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Ryan Montgomery</td><td>Georgia</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Ryan Puglisi</td><td>Georgia</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$10,000</td><td class="val">—</td></tr>
+<tr><td>Thomas Blackshear</td><td>Georgia</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$2,200</td><td class="val">—</td></tr>
+<tr><td>Tre Shields</td><td>Georgia</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Wade Penn</td><td>Georgia</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Walter Blanchard</td><td>Georgia</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+</tbody></table></div>
+<div class="player-book"><h3>Player book</h3><p class="sub">Click a week. Each school’s game that week is an ESPN-style box — both sides. Trending up uses last week versus the games before. A blank cell is —.</p><div class="week-pills noprint"><button type="button" class="week-pill" data-week="0">W0</button><button type="button" class="week-pill" data-week="1">W1</button><button type="button" class="week-pill on" data-week="2">W2</button></div><section class="week-panel" data-week="0" hidden><h4 class="week-lab">Week 0</h4><article class="game-box" data-team="UGA"><h3 class="box-score">Georgia —, — —</h3><p class="sub">No box for this week.</p></article><article class="game-box" data-team="ARK"><h3 class="box-score">Arkansas —, — —</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="1" hidden><h4 class="week-lab">Week 1</h4><article class="game-box" data-team="UGA"><h3 class="box-score">Georgia —, Tennessee State —</h3><div class="box-side"><h4>Georgia</h4><p class="run-pass">Georgia threw for 388, 5 passing scores and ran for 273, 4 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Gunner Stockton</td><td data-n="16.0">16</td><td data-n="202.0">202</td><td data-n="3.0">3</td></tr><tr><td>Ryan Puglisi</td><td data-n="13.0">13</td><td data-n="109.0">109</td><td data-n="1.0">1</td></tr><tr><td>Ryan Montgomery</td><td data-n="2.0">2</td><td data-n="60.0">60</td><td data-n="1.0">1</td></tr><tr><td>Hezekiah Millender</td><td data-n="1.0">1</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Drew Miller</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Nate Frazier</td><td data-n="4.0">4</td><td data-n="72.0">72</td><td data-n="3.0">3</td></tr><tr><td>Bo Walker</td><td data-n="5.0">5</td><td data-n="35.0">35</td><td data-n="0.0">0</td></tr><tr><td>Talyn Taylor</td><td data-n="1.0">1</td><td data-n="31.0">31</td><td data-n="0.0">0</td></tr><tr><td>Jaden Reddell</td><td data-n="1.0">1</td><td data-n="29.0">29</td><td data-n="0.0">0</td></tr><tr><td>Dwight Phillips Jr.</td><td data-n="3.0">3</td><td data-n="25.0">25</td><td data-n="0.0">0</td></tr><tr><td>Chauncey Bowens</td><td data-n="4.0">4</td><td data-n="24.0">24</td><td data-n="0.0">0</td></tr><tr><td>Hezekiah Millender</td><td data-n="2.0">2</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Jae Lamar</td><td data-n="3.0">3</td><td data-n="15.0">15</td><td data-n="1.0">1</td></tr><tr><td>Jeremy Bell</td><td data-n="1.0">1</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Nick Peal</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Landon Roldan</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Jeremy Bell</td><td data-n="1.0">1</td><td>—</td><td data-n="54.0">54</td><td data-n="1.0">1</td></tr><tr><td>Jaden Reddell</td><td data-n="2.0">2</td><td>—</td><td data-n="38.0">38</td><td data-n="1.0">1</td></tr><tr><td>Craig Dandridge</td><td data-n="2.0">2</td><td>—</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Elyiss Williams</td><td data-n="2.0">2</td><td>—</td><td data-n="36.0">36</td><td data-n="1.0">1</td></tr><tr><td>Sacovie White</td><td data-n="3.0">3</td><td>—</td><td data-n="34.0">34</td><td data-n="0.0">0</td></tr><tr><td>Chauncey Bowens</td><td data-n="2.0">2</td><td>—</td><td data-n="32.0">32</td><td data-n="0.0">0</td></tr><tr><td>Talyn Taylor</td><td data-n="3.0">3</td><td>—</td><td data-n="28.0">28</td><td data-n="1.0">1</td></tr><tr><td>Tyler Williams</td><td data-n="1.0">1</td><td>—</td><td data-n="27.0">27</td><td data-n="0.0">0</td></tr><tr><td>Isiah Canion</td><td data-n="2.0">2</td><td>—</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Dallas Dickerson</td><td data-n="1.0">1</td><td>—</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Landon Roldan</td><td data-n="1.0">1</td><td>—</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Kaiden Prothro</td><td data-n="1.0">1</td><td>—</td><td data-n="16.0">16</td><td data-n="1.0">1</td></tr><tr><td>Thomas Blackshear</td><td data-n="2.0">2</td><td>—</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Ethan Barbour</td><td data-n="1.0">1</td><td>—</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>CJ Wiley</td><td data-n="1.0">1</td><td>—</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Harran Zureikat</td><td data-n="0.0">0</td><td data-n="2.0">2</td></tr><tr><td>Peyton Woodring</td><td data-n="0.0">0</td><td data-n="7.0">7</td></tr></tbody></table></div><div class="box-side"><h4>Tennessee State</h4><p class="run-pass">Tennessee State threw for 99, 0 passing scores and ran for 10, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Daylin Lee</td><td data-n="19.0">19</td><td data-n="62.0">62</td><td data-n="0.0">0</td></tr><tr><td>Byron McNair</td><td data-n="5.0">5</td><td data-n="29.0">29</td><td data-n="0.0">0</td></tr><tr><td>Marcelis Tate</td><td data-n="2.0">2</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Byron McNair</td><td data-n="8.0">8</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Travis Pearson</td><td data-n="5.0">5</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Zack Simmons-Brown</td><td data-n="7.0">7</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Jerimiah Treadaway</td><td data-n="2.0">2</td><td data-n="-1.0">-1</td><td data-n="0.0">0</td></tr><tr><td>Brenton Paul</td><td data-n="6.0">6</td><td data-n="-5.0">-5</td><td data-n="0.0">0</td></tr><tr><td>Daylin Lee</td><td data-n="2.0">2</td><td data-n="-6.0">-6</td><td data-n="0.0">0</td></tr><tr><td>Marcelis Tate</td><td data-n="2.0">2</td><td data-n="-8.0">-8</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Cam Bulluck</td><td data-n="4.0">4</td><td>—</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Daion Gaston</td><td data-n="1.0">1</td><td>—</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Dylan Rodd</td><td data-n="3.0">3</td><td>—</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Jayden Guy</td><td data-n="2.0">2</td><td>—</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Jerimiah Treadaway</td><td data-n="1.0">1</td><td>—</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Aaron Duncan</td><td data-n="1.0">1</td><td>—</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Carlos Orr-Gillespie</td><td data-n="1.0">1</td><td>—</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Travis Pearson</td><td data-n="1.0">1</td><td>—</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Francisco Pratts III</td><td data-n="1.0">1</td><td>—</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Preston Hurless</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr></tbody></table></div></article><article class="game-box" data-team="ARK"><h3 class="box-score">Arkansas —, North Alabama —</h3><div class="box-side"><h4>Arkansas</h4><p class="run-pass">Arkansas threw for 267, 3 passing scores and ran for 150, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>KJ Jackson</td><td data-n="35.0">35</td><td data-n="267.0">267</td><td data-n="3.0">3</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Braylen Russell</td><td data-n="17.0">17</td><td data-n="49.0">49</td><td data-n="1.0">1</td></tr><tr><td>Sutton Smith</td><td data-n="15.0">15</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>KJ Jackson</td><td data-n="10.0">10</td><td data-n="27.0">27</td><td data-n="0.0">0</td></tr><tr><td>Jelani Watkins</td><td data-n="2.0">2</td><td data-n="21.0">21</td><td data-n="0.0">0</td></tr><tr><td>Jasper Parker</td><td data-n="4.0">4</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Chris Marshall</td><td data-n="7.0">7</td><td data-n="10.0">10</td><td data-n="79.0">79</td><td data-n="0.0">0</td></tr><tr><td>Sutton Smith</td><td data-n="4.0">4</td><td data-n="5.0">5</td><td data-n="43.0">43</td><td data-n="0.0">0</td></tr><tr><td>CJ Brown</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="37.0">37</td><td data-n="0.0">0</td></tr><tr><td>Ty Lockwood</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Jasper Parker</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="21.0">21</td><td data-n="0.0">0</td></tr><tr><td>Ismael Cisse</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="20.0">20</td><td data-n="1.0">1</td></tr><tr><td>Braylen Russell</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Jaden Platt</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="10.0">10</td><td data-n="1.0">1</td></tr><tr><td>Donovan Faupel</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Antonio Jordan</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Jelani Watkins</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Matt Adcock</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="1.0">1</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Max Gilbert</td><td data-n="1.0">1</td><td data-n="4.0">4</td></tr></tbody></table></div><div class="box-side"><h4>North Alabama</h4><p class="run-pass">North Alabama threw for 113, 0 passing scores and ran for 40, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Destin Wade</td><td data-n="23.0">23</td><td data-n="113.0">113</td><td data-n="0.0">0</td></tr><tr><td>Banks Bowen</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jalen Fletcher</td><td data-n="4.0">4</td><td data-n="24.0">24</td><td data-n="0.0">0</td></tr><tr><td>Chris McMillian</td><td data-n="3.0">3</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Jaylon Calhoun</td><td data-n="3.0">3</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Roderick Taylor Jr.</td><td data-n="4.0">4</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Destin Wade</td><td data-n="6.0">6</td><td data-n="-5.0">-5</td><td data-n="2.0">2</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Xavier Johnson</td><td data-n="6.0">6</td><td data-n="11.0">11</td><td data-n="82.0">82</td><td data-n="0.0">0</td></tr><tr><td>Xavier Johnson</td><td data-n="6.0">6</td><td>—</td><td data-n="82.0">82</td><td>—</td></tr><tr><td>Snap Reed</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="16.0">16</td><td data-n="0.0">0</td></tr><tr><td>Snap Reed</td><td data-n="3.0">3</td><td>—</td><td data-n="16.0">16</td><td>—</td></tr><tr><td>Connor Ruth</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Connor Ruth</td><td data-n="1.0">1</td><td>—</td><td data-n="12.0">12</td><td>—</td></tr><tr><td>Noah Gregg</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Noah Gregg</td><td data-n="1.0">1</td><td>—</td><td data-n="3.0">3</td><td>—</td></tr><tr><td>Chris McMillian</td><td data-n="1.0">1</td><td>—</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>Chris McMillian</td><td data-n="1.0">1</td><td>—</td><td data-n="0.0">0</td><td>—</td></tr><tr><td>Jalen Fletcher</td><td>—</td><td data-n="2.0">2</td><td>—</td><td>—</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Ian Vachon</td><td data-n="0.0">0</td><td data-n="2.0">2</td></tr></tbody></table></div></article></section><section class="week-panel" data-week="2"><h4 class="week-lab">Week 2</h4><article class="game-box" data-team="UGA"><h3 class="box-score">Georgia 70, Western Kentucky 20</h3><div class="box-side"><h4>Georgia</h4><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Sacovie White-Helton</td><td data-n="1.0">1</td><td>—</td><td data-n="70.0">70</td><td data-n="1.0">1</td></tr><tr><td>Craig Dandridge</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="56.0">56</td><td data-n="0.0">0</td></tr><tr><td>Chauncey Bowens</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="45.0">45</td><td data-n="1.0">1</td></tr><tr><td>Talyn Taylor</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="31.0">31</td><td data-n="1.0">1</td></tr><tr><td>Elyiss Williams</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>London Humphreys</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="11.0">11</td><td data-n="1.0">1</td></tr><tr><td>Ethan Barbour</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="7.0">7</td><td data-n="1.0">1</td></tr><tr><td>Isiah Canion</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Tyler J. Williams</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Nate Frazier</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Dwight Phillips Jr.</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Lawson Luckie</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr></tbody></table></div><div class="box-side"><h4>Western Kentucky</h4><p class="run-pass">Western Kentucky threw for 115, 1 passing scores and ran for 110, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Brock Glenn</td><td data-n="23.0">23</td><td data-n="84.0">84</td><td data-n="1.0">1</td></tr><tr><td>Rodney Tisdale Jr.</td><td data-n="14.0">14</td><td data-n="31.0">31</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Brock Glenn</td><td data-n="13.0">13</td><td data-n="70.0">70</td><td data-n="2.0">2</td></tr><tr><td>Le&#x27;Kamren Meadows</td><td data-n="5.0">5</td><td data-n="26.0">26</td><td data-n="0.0">0</td></tr><tr><td>Ajay Allen</td><td data-n="11.0">11</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Kalib Hicks</td><td data-n="2.0">2</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Jonathan Stafford Jr.</td><td data-n="2.0">2</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Rodney Tisdale Jr.</td><td data-n="4.0">4</td><td data-n="-11.0">-11</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Quincy Burroughs</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="29.0">29</td><td data-n="0.0">0</td></tr><tr><td>Zion Taylor</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Coleson Arends</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="18.0">18</td><td data-n="1.0">1</td></tr><tr><td>Jonathan Stafford Jr.</td><td data-n="3.0">3</td><td data-n="6.0">6</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Cameron Flowers</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Lofton Howard</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Devin Hamilton</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Qua&#x27;Vez Humphreys</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Le&#x27;Kamren Meadows</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>Nigel Johnson</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr><tr><td>Ajay Allen</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="-2.0">-2</td><td data-n="0.0">0</td></tr><tr><td>Kalib Hicks</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="-3.0">-3</td><td data-n="0.0">0</td></tr></tbody></table></div></article><article class="game-box" data-team="ARK"><h3 class="box-score">Arkansas —, Utah —</h3><div class="box-side"><h4>Arkansas</h4><p class="run-pass">Arkansas threw for 244, 1 passing scores and ran for 61, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>KJ Jackson</td><td data-n="34.0">34</td><td data-n="139.0">139</td><td data-n="0.0">0</td></tr><tr><td>AJ Hill</td><td data-n="14.0">14</td><td data-n="105.0">105</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>KJ Jackson</td><td data-n="7.0">7</td><td data-n="34.0">34</td><td data-n="0.0">0</td></tr><tr><td>Cam Settles</td><td data-n="6.0">6</td><td data-n="25.0">25</td><td data-n="0.0">0</td></tr><tr><td>Braylen Russell</td><td data-n="5.0">5</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Sutton Smith</td><td data-n="7.0">7</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>AJ Hill</td><td data-n="3.0">3</td><td data-n="-24.0">-24</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Chris Marshall</td><td data-n="5.0">5</td><td data-n="12.0">12</td><td data-n="63.0">63</td><td data-n="0.0">0</td></tr><tr><td>Jamari Hawkins</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="47.0">47</td><td data-n="0.0">0</td></tr><tr><td>Ty Lockwood</td><td data-n="4.0">4</td><td data-n="7.0">7</td><td data-n="41.0">41</td><td data-n="0.0">0</td></tr><tr><td>Ismael Cisse</td><td data-n="2.0">2</td><td data-n="5.0">5</td><td data-n="35.0">35</td><td data-n="1.0">1</td></tr><tr><td>Donovan Faupel</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Monte Harrison</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="18.0">18</td><td data-n="0.0">0</td></tr><tr><td>Antonio Jordan</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Jelani Watkins</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Cam Settles</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Sutton Smith</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="-2.0">-2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Max Gilbert</td><td data-n="1.0">1</td><td data-n="1.0">1</td></tr></tbody></table></div><div class="box-side"><h4>Utah</h4><p class="run-pass">Utah threw for 301, 2 passing scores and ran for 146, 4 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Devon Dampier</td><td data-n="24.0">24</td><td data-n="261.0">261</td><td data-n="2.0">2</td></tr><tr><td>Byrd Ficklin</td><td data-n="4.0">4</td><td data-n="40.0">40</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Wayshawn Parker</td><td data-n="10.0">10</td><td data-n="53.0">53</td><td data-n="2.0">2</td></tr><tr><td>Devon Dampier</td><td data-n="11.0">11</td><td data-n="50.0">50</td><td data-n="2.0">2</td></tr><tr><td>Byrd Ficklin</td><td data-n="2.0">2</td><td data-n="24.0">24</td><td data-n="0.0">0</td></tr><tr><td>Steve Chavez-Soto</td><td data-n="3.0">3</td><td data-n="18.0">18</td><td data-n="0.0">0</td></tr><tr><td>Mateaki Helu</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Daniel Bray</td><td data-n="4.0">4</td><td data-n="-1.0">-1</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Noah Bennee</td><td data-n="4.0">4</td><td data-n="5.0">5</td><td data-n="113.0">113</td><td data-n="1.0">1</td></tr><tr><td>Wayshawn Parker</td><td data-n="5.0">5</td><td data-n="5.0">5</td><td data-n="65.0">65</td><td data-n="1.0">1</td></tr><tr><td>Braden Pegan</td><td data-n="3.0">3</td><td data-n="6.0">6</td><td data-n="32.0">32</td><td data-n="0.0">0</td></tr><tr><td>Creed Whittemore</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Larry Simmons</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Ricky Johnson</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Daniel Bray</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Byrd Ficklin</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Kyri Shoels</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Hunter Andrews</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Dillon Curtis</td><td data-n="0.0">0</td><td data-n="5.0">5</td></tr></tbody></table></div></article></section></div>
+</article>
+</main></div>
+<script>
+(function(){
+  function applyWeek(book, pill){
+    if(!book || !pill) return;
+    book.querySelectorAll('.week-pill').forEach(function(p){
+      p.classList.toggle('on', p===pill);
+    });
+    var wk=pill.getAttribute('data-week')||'';
+    book.querySelectorAll('.week-panel').forEach(function(panel){
+      panel.hidden = (panel.getAttribute('data-week')||'')!==wk;
+    });
+    var inp=document.getElementById('playerSearch');
+    if(inp) inp.dispatchEvent(new Event('input'));
+  }
+  document.addEventListener('click', function(e){
+    var pill=e.target.closest('.week-pill');
+    if(!pill) return;
+    var book=pill.closest('.player-book');
+    if(!book) return;
+    applyWeek(book, pill);
+  });
+})();
+</script>
+<script>
+(function(){
+  var KEY='desk-report-theme';
+  function apply(mode){
+    document.documentElement.classList.toggle('light', mode==='light');
+    var b=document.getElementById('themeBtn');
+    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  var saved=null;
+  try { saved=localStorage.getItem(KEY); } catch (e) {}
+  apply(saved==='light'?'light':'dark');
+  window.toggleDeskTheme=function(){
+    apply(document.documentElement.classList.contains('light')?'dark':'light');
+  };
+})();
+(function(){
+  function val(td){
+    if(!td) return {n:false, v:null, s:''};
+    var dn=td.getAttribute('data-n');
+    if(dn!==null && dn!==''){
+      var n=parseFloat(dn);
+      if(!isNaN(n)) return {n:true, v:n, s:dn};
+    }
+    var t=(td.textContent||'').trim();
+    if(!t || t==='—' || t==='-') return {n:false, v:null, s:''};
+    var raw=t.replace(/[$,×x]/g,'').replace(/,/g,'');
+    if(/^-?\d+(\.\d+)?$/.test(raw)) return {n:true, v:parseFloat(raw), s:t};
+    return {n:false, v:t.toLowerCase(), s:t};
+  }
+  function sortTable(table, col, dir){
+    var tb=table && table.tBodies[0];
+    if(!tb) return;
+    Array.prototype.forEach.call(table.querySelectorAll('th'), function(h){
+      h.removeAttribute('data-dir');
+    });
+    var mark=table.querySelector('th[data-col="'+col+'"]');
+    if(mark) mark.setAttribute('data-dir', dir);
+    var rows=Array.prototype.slice.call(tb.rows);
+    rows.sort(function(a,b){
+      var A=val(a.cells[col]||{});
+      var B=val(b.cells[col]||{});
+      if(A.v===null && B.v===null) return 0;
+      if(A.v===null) return 1;
+      if(B.v===null) return -1;
+      var cmp=0;
+      if(A.n && B.n) cmp=A.v-B.v;
+      else cmp=String(A.v).localeCompare(String(B.v));
+      return dir==='asc' ? cmp : -cmp;
+    });
+    rows.forEach(function(r){ tb.appendChild(r); });
+  }
+  document.addEventListener('click', function(e){
+    var th=e.target.closest('table.sortable th');
+    if(!th) return;
+    var table=th.closest('table');
+    if(!table) return;
+    var raw=th.getAttribute('data-col');
+    if(raw===null) return;
+    var dir=th.getAttribute('data-dir')==='asc' ? 'desc' : 'asc';
+    sortTable(table, parseInt(raw,10), dir);
+  });
+  document.querySelectorAll('table.sortable[data-default-sort]').forEach(function(table){
+    var want=(table.getAttribute('data-default-sort')||'').toLowerCase();
+    var ths=table.querySelectorAll('th[data-col]');
+    var idx=-1;
+    for(var i=0;i<ths.length;i++){
+      var t=(ths[i].textContent||'').trim().toLowerCase();
+      if(t===want || t.indexOf(want)>=0 || want.indexOf(t)>=0){
+        idx=parseInt(ths[i].getAttribute('data-col'),10);
+        break;
+      }
+    }
+    if(idx>=0) sortTable(table, idx, 'desc');
+  });
+})();
+</script>
+<script>
+(function(){
+  function norm(s){
+    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+  }
+  function skip(el){
+    return !!(el.closest && el.closest('dialog, .pcard, .rail'));
+  }
+  function playerIdx(table){
+    var ths=table.querySelectorAll('thead th');
+    for(var i=0;i<ths.length;i++){
+      var t=norm(ths[i].textContent);
+      if(t==='player'||t==='name') return i;
+    }
+    return -1;
+  }
+  function rowHit(tr, q, pidx){
+    if(!q) return true;
+    if(pidx>=0 && tr.cells[pidx]) return norm(tr.cells[pidx].textContent).indexOf(q)>=0;
+    return norm(tr.textContent).indexOf(q)>=0;
+  }
+  function apply(opts){
+    opts = opts || {};
+    var inp=document.getElementById('playerSearch');
+    if(!inp) return;
+    var q=norm(inp.value);
+    var n=0;
+    var hitSel='tbody tr:not([hidden]), li:not([hidden])';
+    function teamOk(tr){
+      return true;
+    }
+    function mark(el, hit){
+      el.hidden = !hit;
+      el.classList.toggle('name-hit', !!(q && hit));
+      if(q && hit) n++;
+    }
+    function panelHasHit(sel){
+      var panel=document.querySelector(sel);
+      if(!panel) return false;
+      var hit=false;
+      panel.querySelectorAll('tbody tr, li').forEach(function(el){
+        if(!el.hidden) hit=true;
+      });
+      return hit;
+    }
+    document.querySelectorAll('table tbody tr').forEach(function(tr){
+      if(skip(tr)) return;
+      var ok=teamOk(tr) && rowHit(tr, q, playerIdx(tr.closest('table')));
+      mark(tr, ok);
+    });
+    document.querySelectorAll('table').forEach(function(t){
+      if(skip(t)) return;
+      var any=false;
+      var tb=t.tBodies[0];
+      if(tb){
+        Array.prototype.forEach.call(tb.rows, function(r){ if(!r.hidden) any=true; });
+      }
+      t.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.pos-book,.week-panel,.box-side,.game-box').forEach(function(sec){
+      var any=false;
+      sec.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) any=true; });
+      if(!sec.querySelector('tbody tr')) any=true;
+      sec.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.week-book-wrap').forEach(function(w){
+      var t=w.querySelector('table');
+      w.classList.toggle('search-empty', !!(t && t.classList.contains('search-empty')));
+    });
+    document.querySelectorAll('.week-pill').forEach(function(pill){
+      var book=pill.closest('.player-book');
+      if(!book) return;
+      var wk=pill.getAttribute('data-week')||'';
+      var panel=book.querySelector('.week-panel[data-week="'+wk+'"]');
+      var hit=false;
+      if(panel){
+        panel.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) hit=true; });
+        if(!panel.querySelector('tbody tr')) hit=true;
+      }
+      pill.classList.toggle('search-miss', !!(q && !hit));
+    });
+    document.querySelectorAll('li').forEach(function(li){
+      if(skip(li)) return;
+      mark(li, !q || norm(li.textContent).indexOf(q)>=0);
+    });
+    var hint=document.getElementById('playerSearchHint');
+    if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
+    document.querySelectorAll('label.pill[for]').forEach(function(lab){
+      var id=lab.getAttribute('for');
+      var sel = id==='v-report' ? '.game-report'
+              : id==='v-value' ? '.value-board'
+              : id==='v-book' ? '.player-book' : '';
+      if(!sel) return;
+      lab.classList.toggle('search-miss', !!(q && !panelHasHit(sel)));
+    });
+    if(opts.jump){
+      var book=document.querySelector('.player-book');
+      if(book && q){
+        var on=book.querySelector('.week-pill.on');
+        var cur=on ? (on.getAttribute('data-week')||'') : '';
+        var curPanel=cur ? book.querySelector('.week-panel[data-week="'+cur+'"]') : null;
+        var curHit=false;
+        if(curPanel){
+          curPanel.querySelectorAll('tbody tr.name-hit').forEach(function(){ curHit=true; });
+        }
+        if(!curHit){
+          var alt=book.querySelector('.week-pill:not(.search-miss)');
+          if(alt && alt!==on){
+            book.querySelectorAll('.week-pill').forEach(function(p){ p.classList.toggle('on', p===alt); });
+            var aw=alt.getAttribute('data-week')||'';
+            book.querySelectorAll('.week-panel').forEach(function(panel){
+              panel.hidden = (panel.getAttribute('data-week')||'')!==aw;
+            });
+          }
+        }
+      }
+      var shownArt=document.querySelector('article.panel');
+      var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
+      if(jumpEl){
+        setTimeout(function(){
+          try { jumpEl.scrollIntoView({block:'center', behavior:'smooth'}); }
+          catch (err) { jumpEl.scrollIntoView(true); }
+        }, 40);
+      }
+    }
+  }
+  var form=document.getElementById('playerSearchForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      apply({jump:true});
+    });
+  }
+  var inp=document.getElementById('playerSearch');
+  if(inp){
+    inp.addEventListener('input', function(){ apply({}); });
+    inp.addEventListener('search', function(){ apply({jump:true}); });
+    inp.addEventListener('keydown', function(e){
+      if(e.key==='Enter' || e.keyCode===13){
+        e.preventDefault();
+        apply({jump:true});
+      }
+    });
+  }
+  apply({});
+})();
+</script>
+</body></html>
