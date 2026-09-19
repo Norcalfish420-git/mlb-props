@@ -84,8 +84,6 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 #g9:checked ~ .shell main .p9{display:block;}
 #g10:checked ~ .shell .rail label[for=g10]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #g10:checked ~ .shell main .p10{display:block;}
-#g11:checked ~ .shell .rail label[for=g11]{background:var(--accent);color:#fff;border-color:var(--accent);}
-#g11:checked ~ .shell main .p11{display:block;}
 </style>
 </head><body>
 <input class="tab" type="radio" name="g" id="g0" checked/>
@@ -99,7 +97,6 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <input class="tab" type="radio" name="g" id="g8"/>
 <input class="tab" type="radio" name="g" id="g9"/>
 <input class="tab" type="radio" name="g" id="g10"/>
-<input class="tab" type="radio" name="g" id="g11"/>
 <div class="shell">
 <aside class="rail noprint">
 <p class="brand">NFL PROPS<br/>2026-09-20</p>
@@ -110,12 +107,11 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <label class="pill" for="g3">MIN @ CHI</label>
 <label class="pill" for="g4">WAS @ DAL</label>
 <label class="pill" for="g5">LV @ LAC</label>
-<label class="pill" for="g6">PIT @ NE</label>
-<label class="pill" for="g7">GB @ NYJ</label>
-<label class="pill" for="g8">MIA @ SF</label>
-<label class="pill" for="g9">CLE @ TB</label>
-<label class="pill" for="g10">PHI @ TEN</label>
-<label class="pill" for="g11">IND @ KC</label>
+<label class="pill" for="g6">GB @ NYJ</label>
+<label class="pill" for="g7">MIA @ SF</label>
+<label class="pill" for="g8">CLE @ TB</label>
+<label class="pill" for="g9">PHI @ TEN</label>
+<label class="pill" for="g10">IND @ KC</label>
 <form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
 <button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
 <button class="pdf" type="button" onclick="window.print()">Save as PDF</button>
@@ -130,31 +126,31 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th><th data-col="6">Why</th></tr></thead>
 <tbody>
-<tr><td>1</td><td>Brock Purdy</td><td>SF</td><td>passing TDs</td><td class="val">Over</td><td class="val">1.5</td><td>The Dolphins have been easier to throw on. The books have this game at 45. His recent average — last season plus Week 1 — is about 3 passing touchdowns, over this 1.5. He is the starting quarterback. He has been on the field for most snaps recently.</td></tr>
-<tr><td>2</td><td>Mike Evans</td><td>SF</td><td>receptions</td><td class="val">Over</td><td class="val">3.5</td><td>The Dolphins have been easier to throw on. The books have this game at 45. His recent average — last season plus Week 1 — is about 6 catches, over this 3.5. He is the top listed receiver. He has been on the field for most snaps recently; he has been a high-share target recently.</td></tr>
-<tr><td>3</td><td>Patrick Mahomes</td><td>KC</td><td>rushing yards</td><td class="val">Over</td><td class="val">17.5</td><td>The Colts have been easier to run on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 23 rushing yards, over this 17.5. Rain is in the forecast and gusts are around 21 mph. He is the starting quarterback.</td></tr>
-<tr><td>4</td><td>Bucky Irving</td><td>TB</td><td>receptions</td><td class="val">Over</td><td class="val">2.5</td><td>The Browns have been easier to throw on. The books have this game at 41.5. His recent average — last season plus Week 1 — is about 7 catches, over this 2.5. He is the lead back.</td></tr>
-<tr><td>5</td><td>Christian McCaffrey</td><td>SF</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">101.0</td><td>The Dolphins have been easy to move the ball on. The books have this game at 45. His recent average — last season plus Week 1 — is about 88 rush plus receiving yards, under this 101. He is the lead back. He has been a high-share target recently.</td></tr>
-<tr><td>6</td><td>Derrick Henry</td><td>BAL</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">97.0</td><td>The Saints have been easy to move the ball on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 163 rush plus receiving yards, over this 97. He is the lead back.</td></tr>
-<tr><td>7</td><td>Kenneth Walker III</td><td>KC</td><td>rushing yards</td><td class="val">Over</td><td class="val">79.5</td><td>Walker is KC RB1 after SEA trade; Emmett Johnson is RB2. The Colts have been easier to run on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 173 rushing yards, over this 79.5. Rain is in the forecast and gusts are around 21 mph.</td></tr>
-<tr><td>8</td><td>Kenneth Walker III</td><td>KC</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">104.5</td><td>Walker is KC RB1 after SEA trade; Emmett Johnson is RB2. The Colts have been easy to move the ball on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 191 rush plus receiving yards, over this 104.5. Rain is in the forecast and gusts are around 21 mph.</td></tr>
-<tr><td>9</td><td>Emeka Egbuka</td><td>TB</td><td>receptions</td><td class="val">Over</td><td class="val">3.5</td><td>The Browns have been easier to throw on. The books have this game at 41.5. His recent average — last season plus Week 1 — is about 5 catches, over this 3.5. He is the top listed receiver. He has been on the field for most snaps recently; he has been a high-share target recently.</td></tr>
-<tr><td>10</td><td>Bijan Robinson</td><td>ATL</td><td>receptions</td><td class="val">Over</td><td class="val">4.5</td><td>The Panthers have been easier to throw on. The books have this game at 43.5. His recent average — last season plus Week 1 — is about 8 catches, over this 4.5. He is the lead back. He has been on the field for most snaps recently; he has been a high-share target recently.</td></tr>
-<tr><td>11</td><td>Javonte Williams</td><td>DAL</td><td>receptions</td><td class="val">Over</td><td class="val">2.5</td><td>The Commanders have been easier to throw on. The books have this game at a high 50.5. His recent average — last season plus Week 1 — is about 5 catches, over this 2.5. He is the lead back.</td></tr>
-<tr><td>12</td><td>CeeDee Lamb</td><td>DAL</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>The Commanders have been easy to move the ball on. The books have this game at a high 50.5. His recent average — last season plus Week 1 — is about 1 touchdown, over this 0.5. He is the top listed receiver. He has been on the field for most snaps recently; he has been a high-share target recently.</td></tr>
-<tr><td>13</td><td>Dak Prescott</td><td>DAL</td><td>passing TDs</td><td class="val">Over</td><td class="val">1.5</td><td>The Commanders have been easier to throw on. The books have this game at a high 50.5. His recent average — last season plus Week 1 — is about 2 passing touchdowns, over this 1.5. He is the starting quarterback. He has been on the field for most snaps recently.</td></tr>
-<tr><td>14</td><td>Jalen McMillan</td><td>TB</td><td>receptions</td><td class="val">Over</td><td class="val">1.5</td><td>The Browns have been easier to throw on. The books have this game at 41.5. His recent average — last season plus Week 1 — is about 3.3 catches, over this 1.5. He is in the receiving rotation.</td></tr>
-<tr><td>15</td><td>Jalen Hurts</td><td>PHI</td><td>passing TDs</td><td class="val">Over</td><td class="val">1.5</td><td>The Titans have been easier to throw on. The books have this game at a low 39.5. His recent average — last season plus Week 1 — is about 3 passing touchdowns, over this 1.5. He is the starting quarterback. He has been on the field for most snaps recently.</td></tr>
-<tr><td>16</td><td>Bijan Robinson</td><td>ATL</td><td>rushing yards</td><td class="val">Over</td><td class="val">80.5</td><td>The Panthers have been easier to run on. The books have this game at 43.5. His recent average — last season plus Week 1 — is about 83 rushing yards, over this 80.5. He is the lead back. He has been on the field for most snaps recently; he has been a high-share target recently.</td></tr>
-<tr><td>17</td><td>Breece Hall</td><td>NYJ</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">86.0</td><td>The Packers have been easy to move the ball on. The books have this game at 44.5. His recent average — last season plus Week 1 — is about 118 rush plus receiving yards, over this 86. Rain is in the forecast and gusts are around 21 mph. He is the lead back.</td></tr>
-<tr><td>18</td><td>Justin Jefferson</td><td>MIN</td><td>receptions</td><td class="val">Over</td><td class="val">6.5</td><td>The Bears have been easier to throw on. The books have this game at 48. His recent average — last season plus Week 1 — is about 8 catches, over this 6.5. Rain is in the forecast and that can take the air out of the passing game. He is the top listed receiver.</td></tr>
-<tr><td>19</td><td>Kirk Cousins</td><td>LV</td><td>passing TDs</td><td class="val">Over</td><td class="val">1.5</td><td>The Chargers have been easier to throw on. The books have this game at 43.5. His recent average — last season plus Week 1 — is about 3 passing touchdowns, over this 1.5. He is the starting quarterback. He has been on the field for most snaps recently.</td></tr>
-<tr><td>20</td><td>Calvin Ridley</td><td>TEN</td><td>receiving yards</td><td class="val">Over</td><td class="val">16.5</td><td>The Eagles have been easier to throw on. The books have this game at a low 39.5. His recent average — last season plus Week 1 — is about 54 receiving yards, over this 16.5. He is in the receiving rotation.</td></tr>
-<tr><td>21</td><td>Dontayvion Wicks</td><td>PHI</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>The Titans have been easy to move the ball on. The books have this game at a low 39.5. His recent average — last season plus Week 1 — is about 1 touchdown, over this 0.5. He is in the receiving rotation. He has been on the field for most snaps recently.</td></tr>
-<tr><td>22</td><td>Ashton Jeanty</td><td>LV</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">91.0</td><td>The Chargers have been easy to move the ball on. The books have this game at 43.5. His recent average — last season plus Week 1 — is about 147 rush plus receiving yards, over this 91. He is the lead back.</td></tr>
-<tr><td>23</td><td>Breece Hall</td><td>NYJ</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>The Packers have been easy to move the ball on. The books have this game at 44.5. His recent average — last season plus Week 1 — is about 1 touchdown, over this 0.5. Rain is in the forecast and gusts are around 21 mph. He is the lead back.</td></tr>
-<tr><td>24</td><td>Alvin Kamara</td><td>NO</td><td>rushing yards</td><td class="val">Over</td><td class="val">18.5</td><td>The Ravens have been easier to run on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 36 rushing yards, over this 18.5. He is the change-of-pace back.</td></tr>
-<tr><td>25</td><td>Darnell Washington</td><td>PIT</td><td>receiving yards</td><td class="val">Over</td><td class="val">15.5</td><td>The Patriots have been easier to throw on. The books have this game at 41.5. His recent average — last season plus Week 1 — is about 18 receiving yards, over this 15.5. Rain is in the forecast and gusts are around 30 mph and that can take the air out of the passing game. He is the starting tight end.</td></tr>
+<tr><td>1</td><td>Dontayvion Wicks</td><td>PHI</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>The Titans have been easy to move the ball on. The books have this game at a low 39.5. His recent average — last season plus Week 1 — is about 1 touchdown, over this 0.5. He is in the receiving rotation. He has been on the field for most snaps recently.</td></tr>
+<tr><td>2</td><td>Dallas Goedert</td><td>PHI</td><td>receiving yards</td><td class="val">Over</td><td class="val">38.5</td><td>The Titans have been easier to throw on. The books have this game at a low 39.5. His recent average — last season plus Week 1 — is about 77 receiving yards, over this 38.5. He is the starting tight end. He has been on the field for most snaps recently.</td></tr>
+<tr><td>3</td><td>Bijan Robinson</td><td>ATL</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>The Panthers have been easy to move the ball on. The books have this game at 43.5. His recent average — last season plus Week 1 — is about 1 touchdown, over this 0.5. He is the lead back. He has been on the field for most snaps recently; he has been a high-share target recently.</td></tr>
+<tr><td>4</td><td>Cam Ward</td><td>TEN</td><td>passing TDs</td><td class="val">Over</td><td class="val">0.5</td><td>The Eagles have been easier to throw on. The books have this game at a low 39.5. His recent average — last season plus Week 1 — is about 1 passing touchdown, over this 0.5. He is the starting quarterback. He has been on the field for most snaps recently.</td></tr>
+<tr><td>5</td><td>Derrick Henry</td><td>BAL</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>The Saints have been easy to move the ball on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 3 touchdowns, over this 0.5. He is the lead back.</td></tr>
+<tr><td>6</td><td>Terry McLaurin</td><td>WAS</td><td>receiving yards</td><td class="val">Over</td><td class="val">53.5</td><td>The Cowboys have been easier to throw on. The books have this game at a high 50.5. His recent average — last season plus Week 1 — is about 14 receiving yards, under this 53.5. He is the top listed receiver. He has been on the field for most snaps recently.</td></tr>
+<tr><td>7</td><td>Baker Mayfield</td><td>TB</td><td>passing yards</td><td class="val">Over</td><td class="val">214.5</td><td>The Browns have been easier to throw on. The books have this game at 41.5. His recent average — last season plus Week 1 — is about 216 passing yards, over this 214.5. He is the starting quarterback. He has been on the field for most snaps recently.</td></tr>
+<tr><td>8</td><td>Brock Purdy</td><td>SF</td><td>passing TDs</td><td class="val">Over</td><td class="val">1.5</td><td>The Dolphins have been easier to throw on. The books have this game at 45. His recent average — last season plus Week 1 — is about 3 passing touchdowns, over this 1.5. He is the starting quarterback. He has been on the field for most snaps recently.</td></tr>
+<tr><td>9</td><td>Mike Evans</td><td>SF</td><td>receptions</td><td class="val">Over</td><td class="val">3.5</td><td>WR1 in San Francisco. Week 1 Australia: TD catch in 49ers debut. The Dolphins have been easier to throw on. The books have this game at 45. His recent average — last season plus Week 1 — is about 6 catches, over this 3.5. He is the top listed receiver.</td></tr>
+<tr><td>10</td><td>Patrick Mahomes</td><td>KC</td><td>rushing yards</td><td class="val">Over</td><td class="val">17.5</td><td>The Colts have been easier to run on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 23 rushing yards, over this 17.5. Gusts are around 21 mph. He is the starting quarterback.</td></tr>
+<tr><td>11</td><td>Bucky Irving</td><td>TB</td><td>receptions</td><td class="val">Over</td><td class="val">2.5</td><td>The Browns have been easier to throw on. The books have this game at 41.5. His recent average — last season plus Week 1 — is about 7 catches, over this 2.5. He is the lead back.</td></tr>
+<tr><td>12</td><td>Derrick Henry</td><td>BAL</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">103.5</td><td>The Saints have been easy to move the ball on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 163 rush plus receiving yards, over this 103.5. He is the lead back.</td></tr>
+<tr><td>13</td><td>Kenneth Walker III</td><td>KC</td><td>rushing yards</td><td class="val">Over</td><td class="val">79.5</td><td>Walker is KC RB1 after SEA trade; Emmett Johnson is RB2. The Colts have been easier to run on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 173 rushing yards, over this 79.5. Gusts are around 21 mph.</td></tr>
+<tr><td>14</td><td>Kenneth Walker III</td><td>KC</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">104.5</td><td>Walker is KC RB1 after SEA trade; Emmett Johnson is RB2. The Colts have been easy to move the ball on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 191 rush plus receiving yards, over this 104.5. Gusts are around 21 mph.</td></tr>
+<tr><td>15</td><td>Christian McCaffrey</td><td>SF</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">105.5</td><td>Full Friday. Week 1: 10 designed carries (Kaelon Black 14) after Australia. Black still in the mix vs Miami. The Dolphins have been easy to move the ball on. The books have this game at 45. His recent average — last season plus Week 1 — is about 88 rush plus receiving yards, under this 105.5. He is the lead back.</td></tr>
+<tr><td>16</td><td>Emeka Egbuka</td><td>TB</td><td>receptions</td><td class="val">Over</td><td class="val">3.5</td><td>The Browns have been easier to throw on. The books have this game at 41.5. His recent average — last season plus Week 1 — is about 5 catches, over this 3.5. He is the top listed receiver. He has been on the field for most snaps recently; he has been a high-share target recently.</td></tr>
+<tr><td>17</td><td>Bijan Robinson</td><td>ATL</td><td>receptions</td><td class="val">Over</td><td class="val">4.5</td><td>The Panthers have been easier to throw on. The books have this game at 43.5. His recent average — last season plus Week 1 — is about 8 catches, over this 4.5. He is the lead back. He has been on the field for most snaps recently; he has been a high-share target recently.</td></tr>
+<tr><td>18</td><td>Javonte Williams</td><td>DAL</td><td>receptions</td><td class="val">Over</td><td class="val">2.5</td><td>The Commanders have been easier to throw on. The books have this game at a high 50.5. His recent average — last season plus Week 1 — is about 5 catches, over this 2.5. He is the lead back.</td></tr>
+<tr><td>19</td><td>CeeDee Lamb</td><td>DAL</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>The Commanders have been easy to move the ball on. The books have this game at a high 50.5. His recent average — last season plus Week 1 — is about 1 touchdown, over this 0.5. He is the top listed receiver. He has been on the field for most snaps recently; he has been a high-share target recently.</td></tr>
+<tr><td>20</td><td>Breece Hall</td><td>NYJ</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">88.5</td><td>The Packers have been easy to move the ball on. The books have this game at 44.5. His recent average — last season plus Week 1 — is about 118 rush plus receiving yards, over this 88.5. Gusts are around 21 mph. He is the lead back.</td></tr>
+<tr><td>21</td><td>Justin Jefferson</td><td>MIN</td><td>receptions</td><td class="val">Over</td><td class="val">6.5</td><td>The Bears have been easier to throw on. The books have this game at 48. His recent average — last season plus Week 1 — is about 8 catches, over this 6.5. Wind is around 17 mph and that can take the air out of the passing game. He is the top listed receiver.</td></tr>
+<tr><td>22</td><td>Kirk Cousins</td><td>LV</td><td>passing TDs</td><td class="val">Over</td><td class="val">1.5</td><td>The Chargers have been easier to throw on. The books have this game at 43.5. His recent average — last season plus Week 1 — is about 3 passing touchdowns, over this 1.5. He is the starting quarterback. He has been on the field for most snaps recently.</td></tr>
+<tr><td>23</td><td>Breece Hall</td><td>NYJ</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>The Packers have been easy to move the ball on. The books have this game at 44.5. His recent average — last season plus Week 1 — is about 1 touchdown, over this 0.5. Gusts are around 21 mph. He is the lead back.</td></tr>
+<tr><td>24</td><td>Alvin Kamara</td><td>NO</td><td>rushing yards</td><td class="val">Over</td><td class="val">15.5</td><td>The Ravens have been easier to run on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 36 rushing yards, over this 15.5. He is the change-of-pace back.</td></tr>
+<tr><td>25</td><td>Ashton Jeanty</td><td>LV</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">94.5</td><td>Full Friday. Week 1: 23-102 vs Miami. Live Raiders lead back at SoFi. The Chargers have been easy to move the ball on. The books have this game at 43.5. His recent average — last season plus Week 1 — is about 147 rush plus receiving yards, over this 94.5. He is the lead back.</td></tr>
 </tbody></table>
 </article>
 <article class="panel p1">
@@ -162,17 +158,19 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <table class="sortable">
 <thead><tr><th data-col="0">Player</th><th data-col="1">Team</th><th data-col="2">Market</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">Why</th></tr></thead>
 <tbody>
+<tr><td>Bijan Robinson</td><td>ATL</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>The Panthers have been easy to move the ball on. The books have this game at 43.5. His recent average — last season plus Week 1 — is about 1 touchdown, over this 0.5. He is the lead back. He has been on the field for most snaps recently; he has been a high-share target recently.</td></tr>
 <tr><td>Bijan Robinson</td><td>ATL</td><td>receptions</td><td class="val">Over</td><td class="val">4.5</td><td>The Panthers have been easier to throw on. The books have this game at 43.5. His recent average — last season plus Week 1 — is about 8 catches, over this 4.5. He is the lead back. He has been on the field for most snaps recently; he has been a high-share target recently.</td></tr>
-<tr><td>Bijan Robinson</td><td>ATL</td><td>rushing yards</td><td class="val">Over</td><td class="val">80.5</td><td>The Panthers have been easier to run on. The books have this game at 43.5. His recent average — last season plus Week 1 — is about 83 rushing yards, over this 80.5. He is the lead back. He has been on the field for most snaps recently; he has been a high-share target recently.</td></tr>
 </tbody></table>
 <h3>THE MOVIE</h3>
 <p>CAR at ATL, kick 1:00 p.m. ET.</p>
 <p>Total 43.5. The books have CAR around 23 points and ATL around 20.5.</p>
-<p>Weather: retractable.</p>
+<p>Weather: retractable, about 87°F, precip 1%.</p>
 <p>Mercedes-Benz retractable; treat indoor if closed.</p>
 <p>News that changes the hole:</p>
 <ul>
 <li>Cooper Rush (ATL): ATL QB unnamed; Tua missed Wed; Penix ACL day-to-day</li>
+<li>Michael Penix Jr. (ATL): Official Week 2 report: Out (knee). Cooper Rush is the listed healthy QB</li>
+<li>Tua Tagovailoa (ATL): Official Week 2 report: Doubtful (oblique), DNP Friday. Do not rec until he clears</li>
 </ul>
 </article>
 <article class="panel p2">
@@ -180,16 +178,20 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <table class="sortable">
 <thead><tr><th data-col="0">Player</th><th data-col="1">Team</th><th data-col="2">Market</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">Why</th></tr></thead>
 <tbody>
-<tr><td>Derrick Henry</td><td>BAL</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">97.0</td><td>The Saints have been easy to move the ball on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 163 rush plus receiving yards, over this 97. He is the lead back.</td></tr>
-<tr><td>Alvin Kamara</td><td>NO</td><td>rushing yards</td><td class="val">Over</td><td class="val">18.5</td><td>The Ravens have been easier to run on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 36 rushing yards, over this 18.5. He is the change-of-pace back.</td></tr>
+<tr><td>Derrick Henry</td><td>BAL</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>The Saints have been easy to move the ball on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 3 touchdowns, over this 0.5. He is the lead back.</td></tr>
+<tr><td>Derrick Henry</td><td>BAL</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">103.5</td><td>The Saints have been easy to move the ball on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 163 rush plus receiving yards, over this 103.5. He is the lead back.</td></tr>
+<tr><td>Alvin Kamara</td><td>NO</td><td>rushing yards</td><td class="val">Over</td><td class="val">15.5</td><td>The Ravens have been easier to run on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 36 rushing yards, over this 15.5. He is the change-of-pace back.</td></tr>
 </tbody></table>
 <h3>THE MOVIE</h3>
 <p>NO at BAL, kick 1:00 p.m. ET.</p>
 <p>Total 46.5. The books have NO around 19 points and BAL around 27.5.</p>
-<p>Weather: outdoor, about 81°F, wind 11 mph, precip 15%.</p>
+<p>Weather: outdoor, about 81°F, wind 13 mph, precip 13%.</p>
+<p>M&amp;T open air.</p>
 <p>News that changes the hole:</p>
 <ul>
 <li>Zay Flowers (BAL): Q; Walker OUT; Bateman listed WR1</li>
+<li>Zay Flowers (BAL): He is listed as questionable. Sit until he is cleared to play</li>
+<li>Chris Olave (NO): Questionable (hamstring), limited. Devaughn Vele saw nine targets when Olave left Week 1</li>
 </ul>
 </article>
 <article class="panel p3">
@@ -197,27 +199,33 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <table class="sortable">
 <thead><tr><th data-col="0">Player</th><th data-col="1">Team</th><th data-col="2">Market</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">Why</th></tr></thead>
 <tbody>
-<tr><td>Justin Jefferson</td><td>MIN</td><td>receptions</td><td class="val">Over</td><td class="val">6.5</td><td>The Bears have been easier to throw on. The books have this game at 48. His recent average — last season plus Week 1 — is about 8 catches, over this 6.5. Rain is in the forecast and that can take the air out of the passing game. He is the top listed receiver.</td></tr>
+<tr><td>Justin Jefferson</td><td>MIN</td><td>receptions</td><td class="val">Over</td><td class="val">6.5</td><td>The Bears have been easier to throw on. The books have this game at 48. His recent average — last season plus Week 1 — is about 8 catches, over this 6.5. Wind is around 17 mph and that can take the air out of the passing game. He is the top listed receiver.</td></tr>
 </tbody></table>
 <h3>THE MOVIE</h3>
 <p>MIN at CHI, kick 1:00 p.m. ET.</p>
 <p>Total 48. The books have MIN around 22 points and CHI around 26.</p>
-<p>Weather: outdoor, about 66°F, wind 8 mph, precip showers ~39%.</p>
+<p>Weather: outdoor, about 63°F, wind 17 mph, precip 63%.</p>
+<p>Soldier Field windy pass/kick watch.</p>
+<p>News that changes the hole:</p>
+<ul>
+<li>Kyler Murray (MIN): Official Week 2 report: Out (concussion). Carson Wentz is the live QB vs Chicago</li>
+<li>Jordan Mason (MIN): Out (thumb). Vikings backfield is thinner behind Aaron Jones</li>
+</ul>
 </article>
 <article class="panel p4">
 <h3>OUR RECS</h3>
 <table class="sortable">
 <thead><tr><th data-col="0">Player</th><th data-col="1">Team</th><th data-col="2">Market</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">Why</th></tr></thead>
 <tbody>
+<tr><td>Terry McLaurin</td><td>WAS</td><td>receiving yards</td><td class="val">Over</td><td class="val">53.5</td><td>The Cowboys have been easier to throw on. The books have this game at a high 50.5. His recent average — last season plus Week 1 — is about 14 receiving yards, under this 53.5. He is the top listed receiver. He has been on the field for most snaps recently.</td></tr>
 <tr><td>Javonte Williams</td><td>DAL</td><td>receptions</td><td class="val">Over</td><td class="val">2.5</td><td>The Commanders have been easier to throw on. The books have this game at a high 50.5. His recent average — last season plus Week 1 — is about 5 catches, over this 2.5. He is the lead back.</td></tr>
 <tr><td>CeeDee Lamb</td><td>DAL</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>The Commanders have been easy to move the ball on. The books have this game at a high 50.5. His recent average — last season plus Week 1 — is about 1 touchdown, over this 0.5. He is the top listed receiver. He has been on the field for most snaps recently; he has been a high-share target recently.</td></tr>
-<tr><td>Dak Prescott</td><td>DAL</td><td>passing TDs</td><td class="val">Over</td><td class="val">1.5</td><td>The Commanders have been easier to throw on. The books have this game at a high 50.5. His recent average — last season plus Week 1 — is about 2 passing touchdowns, over this 1.5. He is the starting quarterback. He has been on the field for most snaps recently.</td></tr>
 </tbody></table>
 <h3>THE MOVIE</h3>
 <p>WAS at DAL, kick 4:25 p.m. ET.</p>
 <p>Total 50.5. The books have WAS around 23 points and DAL around 27.</p>
-<p>Weather: retractable, about 97°F.</p>
-<p>AT&amp;T retractable.</p>
+<p>Weather: retractable, about 97°F, precip 9%.</p>
+<p>AT&amp;T retractable; treat indoor if closed.</p>
 </article>
 <article class="panel p5">
 <h3>OUR RECS</h3>
@@ -225,101 +233,94 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <thead><tr><th data-col="0">Player</th><th data-col="1">Team</th><th data-col="2">Market</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">Why</th></tr></thead>
 <tbody>
 <tr><td>Kirk Cousins</td><td>LV</td><td>passing TDs</td><td class="val">Over</td><td class="val">1.5</td><td>The Chargers have been easier to throw on. The books have this game at 43.5. His recent average — last season plus Week 1 — is about 3 passing touchdowns, over this 1.5. He is the starting quarterback. He has been on the field for most snaps recently.</td></tr>
-<tr><td>Ashton Jeanty</td><td>LV</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">91.0</td><td>The Chargers have been easy to move the ball on. The books have this game at 43.5. His recent average — last season plus Week 1 — is about 147 rush plus receiving yards, over this 91. He is the lead back.</td></tr>
+<tr><td>Ashton Jeanty</td><td>LV</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">94.5</td><td>Full Friday. Week 1: 23-102 vs Miami. Live Raiders lead back at SoFi. The Chargers have been easy to move the ball on. The books have this game at 43.5. His recent average — last season plus Week 1 — is about 147 rush plus receiving yards, over this 94.5. He is the lead back.</td></tr>
 </tbody></table>
 <h3>THE MOVIE</h3>
 <p>LV at LAC, kick 4:05 p.m. ET.</p>
 <p>Total 43.5. The books have LV around 18.5 points and LAC around 25.</p>
 <p>Weather: indoor.</p>
 <p>SoFi enclosed.</p>
+<p>News that changes the hole:</p>
+<ul>
+<li>Brock Bowers (LV): Official Week 2 report: Doubtful (knee). Sit TE overs until he is active</li>
+<li>Aidan O&#x27;Connell (LV): Questionable (personal), DNP Friday. Kirk Cousins is the Raiders QB1 on</li>
+<li>Ladd McConkey (LAC): Questionable (rib), limited Friday. Confirm before Chargers WR recs</li>
+</ul>
 </article>
 <article class="panel p6">
 <h3>OUR RECS</h3>
 <table class="sortable">
 <thead><tr><th data-col="0">Player</th><th data-col="1">Team</th><th data-col="2">Market</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">Why</th></tr></thead>
 <tbody>
-<tr><td>Darnell Washington</td><td>PIT</td><td>receiving yards</td><td class="val">Over</td><td class="val">15.5</td><td>The Patriots have been easier to throw on. The books have this game at 41.5. His recent average — last season plus Week 1 — is about 18 receiving yards, over this 15.5. Rain is in the forecast and gusts are around 30 mph and that can take the air out of the passing game. He is the starting tight end.</td></tr>
+<tr><td>Breece Hall</td><td>NYJ</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">88.5</td><td>The Packers have been easy to move the ball on. The books have this game at 44.5. His recent average — last season plus Week 1 — is about 118 rush plus receiving yards, over this 88.5. Gusts are around 21 mph. He is the lead back.</td></tr>
+<tr><td>Breece Hall</td><td>NYJ</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>The Packers have been easy to move the ball on. The books have this game at 44.5. His recent average — last season plus Week 1 — is about 1 touchdown, over this 0.5. Gusts are around 21 mph. He is the lead back.</td></tr>
 </tbody></table>
 <h3>THE MOVIE</h3>
-<p>PIT at NE, kick 1:00 p.m. ET.</p>
-<p>Total 41.5. The books have PIT around 18 points and NE around 23.</p>
-<p>Weather: outdoor, about 60°F, wind 11 mph, precip rain 80%.</p>
-<p>Gillette pass-kill gusts.</p>
-<p>News that changes the hole:</p>
-<ul>
-<li>TreVeyon Henderson (NE): O; Stevenson is the lead back</li>
-</ul>
+<p>GB at NYJ, kick 1:00 p.m. ET.</p>
+<p>Total 44.5. The books have GB around 24 points and NYJ around 20.5.</p>
+<p>Weather: outdoor, about 66°F, wind 11 mph, precip 64%.</p>
+<p>MetLife rain/gust pass-kick watch.</p>
 </article>
 <article class="panel p7">
 <h3>OUR RECS</h3>
 <table class="sortable">
 <thead><tr><th data-col="0">Player</th><th data-col="1">Team</th><th data-col="2">Market</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">Why</th></tr></thead>
 <tbody>
-<tr><td>Breece Hall</td><td>NYJ</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">86.0</td><td>The Packers have been easy to move the ball on. The books have this game at 44.5. His recent average — last season plus Week 1 — is about 118 rush plus receiving yards, over this 86. Rain is in the forecast and gusts are around 21 mph. He is the lead back.</td></tr>
-<tr><td>Breece Hall</td><td>NYJ</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>The Packers have been easy to move the ball on. The books have this game at 44.5. His recent average — last season plus Week 1 — is about 1 touchdown, over this 0.5. Rain is in the forecast and gusts are around 21 mph. He is the lead back.</td></tr>
+<tr><td>Brock Purdy</td><td>SF</td><td>passing TDs</td><td class="val">Over</td><td class="val">1.5</td><td>The Dolphins have been easier to throw on. The books have this game at 45. His recent average — last season plus Week 1 — is about 3 passing touchdowns, over this 1.5. He is the starting quarterback. He has been on the field for most snaps recently.</td></tr>
+<tr><td>Mike Evans</td><td>SF</td><td>receptions</td><td class="val">Over</td><td class="val">3.5</td><td>WR1 in San Francisco. Week 1 Australia: TD catch in 49ers debut. The Dolphins have been easier to throw on. The books have this game at 45. His recent average — last season plus Week 1 — is about 6 catches, over this 3.5. He is the top listed receiver.</td></tr>
+<tr><td>Christian McCaffrey</td><td>SF</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">105.5</td><td>Full Friday. Week 1: 10 designed carries (Kaelon Black 14) after Australia. Black still in the mix vs Miami. The Dolphins have been easy to move the ball on. The books have this game at 45. His recent average — last season plus Week 1 — is about 88 rush plus receiving yards, under this 105.5. He is the lead back.</td></tr>
 </tbody></table>
 <h3>THE MOVIE</h3>
-<p>GB at NYJ, kick 1:00 p.m. ET.</p>
-<p>Total 44.5. The books have GB around 24 points and NYJ around 20.5.</p>
-<p>Weather: outdoor, about 78°F, wind 13 mph, precip rain.</p>
-<p>MetLife pass/kick watch.</p>
+<p>MIA at SF, kick 4:25 p.m. ET.</p>
+<p>Total 45. The books have MIA around 16 points and SF around 29.</p>
+<p>Weather: outdoor, about 78°F, wind 6 mph, precip 10%.</p>
+<p>News that changes the hole:</p>
+<ul>
+<li>Kaelon Black (SF): questionable (groin) for Sunday vs Miami. Sit the rush overs until he is active</li>
+</ul>
 </article>
 <article class="panel p8">
 <h3>OUR RECS</h3>
 <table class="sortable">
 <thead><tr><th data-col="0">Player</th><th data-col="1">Team</th><th data-col="2">Market</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">Why</th></tr></thead>
 <tbody>
-<tr><td>Brock Purdy</td><td>SF</td><td>passing TDs</td><td class="val">Over</td><td class="val">1.5</td><td>The Dolphins have been easier to throw on. The books have this game at 45. His recent average — last season plus Week 1 — is about 3 passing touchdowns, over this 1.5. He is the starting quarterback. He has been on the field for most snaps recently.</td></tr>
-<tr><td>Mike Evans</td><td>SF</td><td>receptions</td><td class="val">Over</td><td class="val">3.5</td><td>The Dolphins have been easier to throw on. The books have this game at 45. His recent average — last season plus Week 1 — is about 6 catches, over this 3.5. He is the top listed receiver. He has been on the field for most snaps recently; he has been a high-share target recently.</td></tr>
-<tr><td>Christian McCaffrey</td><td>SF</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">101.0</td><td>The Dolphins have been easy to move the ball on. The books have this game at 45. His recent average — last season plus Week 1 — is about 88 rush plus receiving yards, under this 101. He is the lead back. He has been a high-share target recently.</td></tr>
+<tr><td>Baker Mayfield</td><td>TB</td><td>passing yards</td><td class="val">Over</td><td class="val">214.5</td><td>The Browns have been easier to throw on. The books have this game at 41.5. His recent average — last season plus Week 1 — is about 216 passing yards, over this 214.5. He is the starting quarterback. He has been on the field for most snaps recently.</td></tr>
+<tr><td>Bucky Irving</td><td>TB</td><td>receptions</td><td class="val">Over</td><td class="val">2.5</td><td>The Browns have been easier to throw on. The books have this game at 41.5. His recent average — last season plus Week 1 — is about 7 catches, over this 2.5. He is the lead back.</td></tr>
+<tr><td>Emeka Egbuka</td><td>TB</td><td>receptions</td><td class="val">Over</td><td class="val">3.5</td><td>The Browns have been easier to throw on. The books have this game at 41.5. His recent average — last season plus Week 1 — is about 5 catches, over this 3.5. He is the top listed receiver. He has been on the field for most snaps recently; he has been a high-share target recently.</td></tr>
 </tbody></table>
 <h3>THE MOVIE</h3>
-<p>MIA at SF, kick 4:25 p.m. ET.</p>
-<p>Total 45. The books have MIA around 16 points and SF around 29.</p>
-<p>Weather: outdoor, about 72°F, wind 10 mph, precip 2%.</p>
+<p>CLE at TB, kick 1:00 p.m. ET.</p>
+<p>Total 41.5. The books have CLE around 16.5 points and TB around 25.</p>
+<p>Weather: outdoor, about 89°F, wind 3 mph, precip 6%.</p>
 </article>
 <article class="panel p9">
 <h3>OUR RECS</h3>
 <table class="sortable">
 <thead><tr><th data-col="0">Player</th><th data-col="1">Team</th><th data-col="2">Market</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">Why</th></tr></thead>
 <tbody>
-<tr><td>Bucky Irving</td><td>TB</td><td>receptions</td><td class="val">Over</td><td class="val">2.5</td><td>The Browns have been easier to throw on. The books have this game at 41.5. His recent average — last season plus Week 1 — is about 7 catches, over this 2.5. He is the lead back.</td></tr>
-<tr><td>Emeka Egbuka</td><td>TB</td><td>receptions</td><td class="val">Over</td><td class="val">3.5</td><td>The Browns have been easier to throw on. The books have this game at 41.5. His recent average — last season plus Week 1 — is about 5 catches, over this 3.5. He is the top listed receiver. He has been on the field for most snaps recently; he has been a high-share target recently.</td></tr>
-<tr><td>Jalen McMillan</td><td>TB</td><td>receptions</td><td class="val">Over</td><td class="val">1.5</td><td>The Browns have been easier to throw on. The books have this game at 41.5. His recent average — last season plus Week 1 — is about 3.3 catches, over this 1.5. He is in the receiving rotation.</td></tr>
+<tr><td>Dontayvion Wicks</td><td>PHI</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>The Titans have been easy to move the ball on. The books have this game at a low 39.5. His recent average — last season plus Week 1 — is about 1 touchdown, over this 0.5. He is in the receiving rotation. He has been on the field for most snaps recently.</td></tr>
+<tr><td>Dallas Goedert</td><td>PHI</td><td>receiving yards</td><td class="val">Over</td><td class="val">38.5</td><td>The Titans have been easier to throw on. The books have this game at a low 39.5. His recent average — last season plus Week 1 — is about 77 receiving yards, over this 38.5. He is the starting tight end. He has been on the field for most snaps recently.</td></tr>
+<tr><td>Cam Ward</td><td>TEN</td><td>passing TDs</td><td class="val">Over</td><td class="val">0.5</td><td>The Eagles have been easier to throw on. The books have this game at a low 39.5. His recent average — last season plus Week 1 — is about 1 passing touchdown, over this 0.5. He is the starting quarterback. He has been on the field for most snaps recently.</td></tr>
 </tbody></table>
 <h3>THE MOVIE</h3>
-<p>CLE at TB, kick 1:00 p.m. ET.</p>
-<p>Total 41.5. The books have CLE around 16.5 points and TB around 25.</p>
-<p>Weather: outdoor, about 90°F, wind 5 mph, precip 11%.</p>
+<p>PHI at TEN, kick 1:00 p.m. ET.</p>
+<p>Total 39.5. The books have PHI around 23 points and TEN around 16.</p>
+<p>Weather: outdoor, about 87°F, wind 5 mph, precip 4%.</p>
 </article>
 <article class="panel p10">
 <h3>OUR RECS</h3>
 <table class="sortable">
 <thead><tr><th data-col="0">Player</th><th data-col="1">Team</th><th data-col="2">Market</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">Why</th></tr></thead>
 <tbody>
-<tr><td>Jalen Hurts</td><td>PHI</td><td>passing TDs</td><td class="val">Over</td><td class="val">1.5</td><td>The Titans have been easier to throw on. The books have this game at a low 39.5. His recent average — last season plus Week 1 — is about 3 passing touchdowns, over this 1.5. He is the starting quarterback. He has been on the field for most snaps recently.</td></tr>
-<tr><td>Calvin Ridley</td><td>TEN</td><td>receiving yards</td><td class="val">Over</td><td class="val">16.5</td><td>The Eagles have been easier to throw on. The books have this game at a low 39.5. His recent average — last season plus Week 1 — is about 54 receiving yards, over this 16.5. He is in the receiving rotation.</td></tr>
-<tr><td>Dontayvion Wicks</td><td>PHI</td><td>anytime TD</td><td class="val">Over</td><td class="val">0.5</td><td>The Titans have been easy to move the ball on. The books have this game at a low 39.5. His recent average — last season plus Week 1 — is about 1 touchdown, over this 0.5. He is in the receiving rotation. He has been on the field for most snaps recently.</td></tr>
-</tbody></table>
-<h3>THE MOVIE</h3>
-<p>PHI at TEN, kick 1:00 p.m. ET.</p>
-<p>Total 39.5. The books have PHI around 23 points and TEN around 16.</p>
-<p>Weather: outdoor, about 93°F, wind 6 mph, precip 1%.</p>
-</article>
-<article class="panel p11">
-<h3>OUR RECS</h3>
-<table class="sortable">
-<thead><tr><th data-col="0">Player</th><th data-col="1">Team</th><th data-col="2">Market</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">Why</th></tr></thead>
-<tbody>
-<tr><td>Patrick Mahomes</td><td>KC</td><td>rushing yards</td><td class="val">Over</td><td class="val">17.5</td><td>The Colts have been easier to run on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 23 rushing yards, over this 17.5. Rain is in the forecast and gusts are around 21 mph. He is the starting quarterback.</td></tr>
-<tr><td>Kenneth Walker III</td><td>KC</td><td>rushing yards</td><td class="val">Over</td><td class="val">79.5</td><td>Walker is KC RB1 after SEA trade; Emmett Johnson is RB2. The Colts have been easier to run on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 173 rushing yards, over this 79.5. Rain is in the forecast and gusts are around 21 mph.</td></tr>
-<tr><td>Kenneth Walker III</td><td>KC</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">104.5</td><td>Walker is KC RB1 after SEA trade; Emmett Johnson is RB2. The Colts have been easy to move the ball on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 191 rush plus receiving yards, over this 104.5. Rain is in the forecast and gusts are around 21 mph.</td></tr>
+<tr><td>Patrick Mahomes</td><td>KC</td><td>rushing yards</td><td class="val">Over</td><td class="val">17.5</td><td>The Colts have been easier to run on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 23 rushing yards, over this 17.5. Gusts are around 21 mph. He is the starting quarterback.</td></tr>
+<tr><td>Kenneth Walker III</td><td>KC</td><td>rushing yards</td><td class="val">Over</td><td class="val">79.5</td><td>Walker is KC RB1 after SEA trade; Emmett Johnson is RB2. The Colts have been easier to run on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 173 rushing yards, over this 79.5. Gusts are around 21 mph.</td></tr>
+<tr><td>Kenneth Walker III</td><td>KC</td><td>rush + rec yards</td><td class="val">Over</td><td class="val">104.5</td><td>Walker is KC RB1 after SEA trade; Emmett Johnson is RB2. The Colts have been easy to move the ball on. The books have this game at 46.5. His recent average — last season plus Week 1 — is about 191 rush plus receiving yards, over this 104.5. Gusts are around 21 mph.</td></tr>
 </tbody></table>
 <h3>THE MOVIE</h3>
 <p>IND at KC, kick 8:20 p.m. ET.</p>
 <p>Total 46.5. The books have IND around 20 points and KC around 26.5.</p>
-<p>Weather: outdoor, about 70°F, wind 12 mph, precip rain 89%.</p>
-<p>Arrowhead pass/kick watch.</p>
+<p>Weather: outdoor, about 64°F, wind 7 mph, precip 39%.</p>
+<p>Arrowhead fog/humidity; wind below 18.</p>
 </article>
 </main></div>
 <script>
