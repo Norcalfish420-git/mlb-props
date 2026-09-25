@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CFB Showdown 2026-09-25 · Clemson @ California Golden</title>
+<style>
+:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#fb7185;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#be123c;--table:#262626;--cell:#525252;--th:#393939;--val:#fb7185;--h:#fb7185;--code:#fb7185;--up:#3ddbd9;--down:#ff8389;--up-bg:rgba(61,219,217,.16);--down-bg:rgba(255,131,137,.16);--wk-alt:rgba(190,18,60,.08);}
+html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#9f1239;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#9f1239;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#9f1239;--h:#9f1239;--code:#9f1239;--up:#005d5d;--down:#a2191f;--up-bg:rgba(0,93,93,.1);--down-bg:rgba(162,25,31,.1);--wk-alt:rgba(190,18,60,.06);}
+html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+body{background-image:linear-gradient(180deg,rgba(22,22,22,.82),rgba(10,14,18,.93)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
+html.light body{background-image:linear-gradient(180deg,rgba(242,244,248,.88),rgba(242,244,248,.94)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");}
+.tab{position:absolute;left:-9999px;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;overflow-y:auto;}
+.rail .brand{order:0;}
+.rail a.pill.home{order:1;}
+.rail > *:not(.brand):not(a.pill.home){order:2;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);text-decoration:none;}
+a.pill.home{border-color:var(--val);}
+.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
+.pill:hover{background:var(--pill-hover);}
+button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
+button.pdf:hover{filter:brightness(1.08);}
+button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.5rem .7rem;}
+button.theme:hover{background:var(--pill-hover);}
+form.search-form{margin:0;display:flex;flex-direction:column;gap:.15rem;}
+label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35rem 0 0;}
+input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
+input.search:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.pill.search-miss{opacity:.42;}
+table.search-empty{display:none;}
+li.name-hit,tr.name-hit{background:rgba(190,18,60,.28);outline:1px solid var(--accent);}
+.hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
+.view-row{display:flex;flex-direction:column;gap:.35rem;margin:.15rem 0 .35rem;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:54rem;min-width:0;}
+h1{font-size:1.6rem;margin:0 0 .3rem;}
+h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
+.line-blast{font-size:1.42rem;line-height:1.35;font-weight:700;margin:.35rem 0 1.2rem;padding:.95rem 1.05rem;background:var(--table);border:2px solid var(--accent);border-left-width:8px;}
+.line-blast b{color:var(--val);font-size:1.08em;}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
+h3.second-pass{border-top:2px solid var(--accent);padding-top:1.15rem;margin-top:2rem;}
+h4{margin:.8rem 0 .4rem;}
+h4.team-break{font-size:1.28rem;font-weight:800;letter-spacing:.01em;margin:2.35rem 0 .55rem;padding:1.05rem 0 .35rem;border-top:3px solid var(--accent);}
+h3 + p + h4.team-break,h3 + h4.team-break{margin-top:.75rem;padding-top:.1rem;border-top:none;}
+h5{font-size:.95rem;margin:1.05rem 0 .3rem;color:var(--muted);font-weight:700;}
+.sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
+table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.92rem;background:var(--table);}
+th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
+th{background:var(--th);color:var(--pill-fg);}
+table.sortable th{cursor:pointer;user-select:none;}
+table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}
+table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
+table.game-log{width:100%;table-layout:auto;}
+table.game-log th,table.game-log td{text-align:center;white-space:nowrap;}
+table.game-log th:nth-child(1),table.game-log td:nth-child(1),table.game-log th:nth-child(2),table.game-log td:nth-child(2){text-align:left;}
+.week-pills,.team-pills{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 .8rem;}
+.week-pill,.team-pill{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--pill);color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:999px;padding:.4rem .75rem;}
+.week-pill.on,.team-pill.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+.week-panel{margin:0 0 1.6rem;}
+.week-panel.search-empty,.game-box.search-empty,.box-side.search-empty{display:none;}
+.week-lab{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.2rem 0 .6rem;}
+.trend-up-strip{margin:.4rem 0 1rem;padding:.7rem .85rem;background:var(--table);border-left:6px solid var(--accent);}
+.trend-up-strip h4{margin:0 0 .35rem;}
+.trend-up-strip ul{margin:.2rem 0 0;}
+.game-box{margin:0 0 1.8rem;padding:0 0 .4rem;border-bottom:1px solid var(--cell);}
+.box-score{font-size:1.2rem;margin:.4rem 0 .15rem;}
+.box-line{font-size:1.02rem;font-weight:700;color:var(--muted);margin:0 0 .55rem;}
+.run-pass{color:var(--muted);margin:0 0 .55rem;}
+.box-side{margin:0 0 1.15rem;}
+table.espn-box{font-size:.9rem;width:100%;}
+table.espn-box th,table.espn-box td{text-align:right;}
+table.espn-box th:first-child,table.espn-box td:first-child{text-align:left;}
+.pos-book{margin:0 0 1.6rem;}
+.pos-book.search-empty{display:none;}
+.pos-book h4{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.4rem 0 .45rem;}
+td.trend-up{background:var(--up-bg) !important;color:var(--up);font-weight:700;}
+td.trend-down{background:var(--down-bg) !important;color:var(--down);font-weight:700;}
+span.delta{font-size:.68em;font-weight:700;margin-left:.28em;opacity:.92;}
+td.val{font-weight:700;color:var(--val);white-space:nowrap;}
+.left{font-weight:700;margin:.2rem 0 1rem;}
+ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
+ul ul{margin:.15rem 0 .4rem;padding-left:1.15rem;}
+li{margin:.35rem 0;}
+code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
+.panel{display:block;}
+.appendix{display:none;}
+@media print{
+  html,body,html.light,html.light body{background:#fff;color:#111;background-image:none !important;}
+  .shell{display:block;}
+  .rail,.noprint{display:none !important;}
+  main{max-width:none;padding:0;}
+  .panel,.appendix{display:block !important;page-break-after:always;}
+  .game-report,.prop-board,.etr-board,.player-book{display:block !important;}
+  .week-panel,.week-panel[hidden]{display:block !important;}
+  .week-pills,.week-pill{display:none !important;}
+  .appendix{page-break-after:auto;}
+  table{background:#fff;page-break-inside:avoid;}
+  th{background:#eee;color:#333;}
+  td.val{color:#000;}
+  td.trend-up{color:#005d5d;background:#e6f6f6 !important;}
+  td.trend-down{color:#a2191f;background:#fce8e8 !important;}
+  h2,h3,h4,h5{page-break-after:avoid;color:#111;}
+  h4.team-break{border-top-color:#111;}
+  .line-blast{background:#fff;border-color:#111;color:#111;}
+  .line-blast b{color:#000;}
+}
+@page{margin:.5in;}
+#v-report:checked ~ .shell .rail label[for=v-report]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-prop:checked ~ .shell .rail label[for=v-prop]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-etr:checked ~ .shell .rail label[for=v-etr]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.player-book,.prop-board,.etr-board{display:none;}
+#v-book:checked ~ .shell main,#v-prop:checked ~ .shell main,#v-etr:checked ~ .shell main{max-width:none;}
+#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .prop-board,#v-book:checked ~ .shell main .etr-board{display:none;}
+#v-book:checked ~ .shell main .player-book{display:block;}
+#v-prop:checked ~ .shell main .game-report,#v-prop:checked ~ .shell main .etr-board,#v-prop:checked ~ .shell main .player-book{display:none;}
+#v-prop:checked ~ .shell main .prop-board{display:block;}
+#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .prop-board,#v-etr:checked ~ .shell main .player-book{display:none;}
+#v-etr:checked ~ .shell main .etr-board{display:block;}
+</style>
+</head><body>
+<input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-prop"/>
+<input class="tab" type="radio" name="v" id="v-etr"/>
+<input class="tab" type="radio" name="v" id="v-book"/>
+<div class="shell">
+<aside class="rail noprint">
+<p class="brand">CFB SHOWDOWN<br/>2026-09-25<br/>Clemson @ California Golden</p>
+<a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
+<div class="view-row">
+<label class="pill" for="v-report">Report</label>
+<label class="pill" for="v-etr">ETR Value</label>
+<label class="pill" for="v-book">Player book</label>
+<label class="pill" for="v-prop">Prop Value</label>
+</div>
+<form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
+<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
+<button class="pdf" type="button" onclick="window.print()">Save as PDF</button><p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
+</aside>
+<main>
+<h1>CFB Showdown — 2026-09-25 · Clemson @ California Golden</h1>
+<article class="panel">
+<div class="game-report">
+<h2>2) Clemson @ California Golden</h2>
+<h3>Game Script</h3>
+<p>Salaries are posted. The sixes below are the DraftKings build for this game.</p>
+<h3>WHO THEY ARE</h3>
+<ul>
+<li><b>Clemson</b> is unranked this year (2-1).</li>
+<li><b>California</b> is unranked this year (2-1).</li>
+</ul>
+<h3>WHO MATTERS</h3>
+<p>These are the names that decide a six tonight — who throws, who runs the ball, who catches it, and who to sit. Role and camp first. Last week is the tape, not the whole bio.</p>
+<h4>California Golden</h4>
+<p><b>Quarterbacks</b></p>
+<ul>
+<li><b>Jaron-Keawe Sagapolutele</b> — Listed at quarterback. throws from the pocket. Last week vs WAG he threw 33 times for 413, 3 passing scores We do not have a camp or recruit note on him yet.</li>
+<li><b>Jackson Brousseau</b> — The second quarterback. Sit him — a backup priced like a starter is still the backup. Last week vs WAG he threw 10 times for 79 We do not have a camp or recruit note on him yet.</li>
+</ul>
+<p><b>Running backs</b></p>
+<p>They split the carries. Adam Mohammed (13 carries) and Ashten Emory (6 carries). Use one of them, not both. The back who scored: Adam Mohammed, Ashten Emory.</p>
+<ul>
+<li><b>Adam Mohammed</b> — Listed at running back. Week 1: printed workhorse stayed live; dest CPT beat the quarterback seat. Last week vs WAG he had 13 carries for 91 and 2 rushing scores and 2 catches for 78.</li>
+<li><b>Ashten Emory</b> — Rotational running back. We do not have a camp or recruit note on him yet. Last week vs WAG he had 6 carries for 17 and 1 rushing score and 1 catch for 15.</li>
+<li><b>Anthony League</b> — Rotational running back. We do not have a camp or recruit note on him yet. Last week vs WAG he had 5 carries for 14 and 2 catches for 11.</li>
+<li><b>Carter Vargas</b> — The second running back. We do not have a camp or recruit note on him yet. Last week vs UCLA he had 4 carries for 14 and 2 catches for 6.</li>
+</ul>
+<p><b>Receiving room</b></p>
+<ul>
+<li><b>Chase Hendricks</b> — Plays on the outside. We do not have a camp or recruit note on him yet. Last week vs WAG he had 9 catches for 98.</li>
+<li><b>Ian Strong</b> — Plays on the outside. We do not have a camp or recruit note on him yet. Last week vs WAG he had 6 catches for 48.</li>
+<li><b>Cooper Perry</b> — Plays inside. We do not have a camp or recruit note on him yet. Last week vs WAG he had 3 catches for 45, 1 score.</li>
+<li><b>Mason Mini</b> — Tight end. Cal tight end 35 catches for 387 and 4 scores in 2025; Sagapolutele chemistry. DK lists WR. Cal tight end 35 catches for 387 and 4 scores in 2025; Sagapolutele chemistry. DK lists WR. Last week vs SYR he had 2 catches for 38.</li>
+<li><b>Kyion Grayes</b> — The second outside receiver. We do not have a camp or recruit note on him yet. Last week vs WAG he had 3 catches for 98, 1 score.</li>
+<li><b>Jordan King</b> — The second slot receiver. We do not have a camp or recruit note on him yet. Last week vs WAG he had 3 catches for 44.</li>
+<li><b>Mark Hamper</b> — The second outside receiver. We do not have a camp or recruit note on him yet. Last week vs WAG he had 4 catches for 39.</li>
+<li><b>Taimane Purcell</b> — The second tight end. We do not have a camp or recruit note on him yet. Last week vs WAG he had 1 catch for 9.</li>
+</ul>
+<h4>Clemson</h4>
+<p><b>Quarterbacks</b></p>
+<ul>
+<li><b>Tait Reynolds</b> — The second quarterback. runs and throws. Last week vs UNC he threw 29 times for 215, 1 passing score and had 11 carries for 26. If you make him captain, his rushing yards count extra. We do not have a camp or recruit note on him yet.</li>
+<li><b>Christopher Vizzina</b> — Listed at quarterback. Sit him — a backup priced like a starter is still the backup. Last week vs GASO he threw 7 times for 19, 1 passing score Swinney named him starter vs LSU. Tait Reynolds likely sees time. First major start.</li>
+</ul>
+<p><b>Running backs</b></p>
+<p>Gideon Davidson got almost every carry (16 carries last week). The back who scored: Gideon Davidson, David Eziomume.</p>
+<ul>
+<li><b>Gideon Davidson</b> — Listed at running back. We do not have a camp or recruit note on him yet. Last week vs UNC he had 16 carries for 105 and 1 rushing score and 1 catch for 3.</li>
+<li><b>Jarvis Green</b> — Rotational running back. We do not have a camp or recruit note on him yet. Last week vs UNC he had 5 carries for 22.</li>
+<li><b>Chris Johnson Jr.</b> — The second running back. We do not have a camp or recruit note on him yet. Last week vs UNC he had 2 carries for 0.</li>
+<li><b>David Eziomume</b> — Rotational running back. We do not have a camp or recruit note on him yet. Last week vs LSU he had 1 carry for 11 and 1 rushing score.</li>
+</ul>
+<p><b>Receiving room</b></p>
+<ul>
+<li><b>Bryant Wesco Jr.</b> — Plays on the outside. We do not have a camp or recruit note on him yet. Last week vs UNC he had 5 catches for 77.</li>
+<li><b>T.J. Moore</b> — Plays on the outside. We do not have a camp or recruit note on him yet. Last week vs UNC he had 7 catches for 38.</li>
+<li><b>Christian Bentancur</b> — Tight end. We do not have a camp or recruit note on him yet. Last week vs UNC he had 2 catches for 35, 1 score.</li>
+<li><b>Tyler Brown</b> — Plays inside. We do not have a camp or recruit note on him yet. Last week vs UNC he had 2 catches for 28.</li>
+<li><b>Olsen Patt-Henry</b> — The second tight end. Returning from 2025 patellar tendon. Morris said ready for camp. DK lists WR. Last week vs UNC he had 2 catches for 28.</li>
+<li><b>Juju Preston</b> — The second slot receiver. We do not have a camp or recruit note on him yet. Last week vs UNC he had 1 catch for 6.</li>
+<li><b>Tristan Smith</b> — The second outside receiver. We do not have a camp or recruit note on him yet. Last week vs LSU he had 1 catch for 6.</li>
+<li><b>Gordon Sellars III</b> — The second outside receiver. We do not have a camp or recruit note on him yet. Last week vs LSU he had 1 catch for 4.</li>
+</ul>
+<h3>DEPTH CHART</h3>
+<p>Offense skill. A missing name is —.</p>
+<h4 class="team-break">California Golden</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th><th scope="col" data-col="3">3</th><th scope="col" data-col="4">4</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Jaron-Keawe Sagapolutele</td><td>Jackson Brousseau</td><td>EJ Caminong</td><td>—</td></tr>
+<tr><td>RB</td><td>Adam Mohammed</td><td>Carter Vargas</td><td>Ashten Emory</td><td>Anthony League</td></tr>
+<tr><td>WR-X</td><td>Ian Strong</td><td>Kyion Grayes</td><td>—</td><td>—</td></tr>
+<tr><td>WR-Z</td><td>Chase Hendricks</td><td>Mark Hamper</td><td>—</td><td>—</td></tr>
+<tr><td>WR-SL</td><td>Cooper Perry</td><td>Jordan King</td><td>—</td><td>—</td></tr>
+<tr><td>TE</td><td>Mason Mini</td><td>Taimane Purcell</td><td>Rico Walker</td><td>—</td></tr>
+<tr><td>K</td><td>Chase Meyer</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>PK</td><td>Chase Meyer</td><td>—</td><td>—</td><td>—</td></tr>
+</tbody></table>
+<h4 class="team-break">Clemson</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th><th scope="col" data-col="3">3</th><th scope="col" data-col="4">4</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Christopher Vizzina</td><td>Tait Reynolds</td><td>Trent Pearman</td><td>—</td></tr>
+<tr><td>RB</td><td>Gideon Davidson</td><td>Chris Johnson Jr.</td><td>Jarvis Green</td><td>David Eziomume</td></tr>
+<tr><td>WR-X</td><td>Bryant Wesco Jr.</td><td>Gordon Sellars III</td><td>Connor Salmin</td><td>—</td></tr>
+<tr><td>WR-Z</td><td>T.J. Moore</td><td>Tristan Smith</td><td>Naeem Burroughs</td><td>—</td></tr>
+<tr><td>WR-SL</td><td>Tyler Brown</td><td>Juju Preston</td><td>—</td><td>—</td></tr>
+<tr><td>TE</td><td>Christian Bentancur</td><td>Olsen Patt-Henry</td><td>Logan Brooking</td><td>—</td></tr>
+<tr><td>K</td><td>Nolan Hauser</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>PK</td><td>Nolan Hauser</td><td>—</td><td>—</td><td>—</td></tr>
+</tbody></table>
+<h3>INJURIES</h3>
+<p>Who is out or in doubt for this game. A blank list means nobody on the board is tagged.</p>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Status</th><th scope="col" data-col="3">Tonight</th></tr></thead>
+<tbody>
+<tr><td>Cole Turner</td><td>Clemson</td><td>Out</td><td>Not playing. Sit him.</td></tr>
+<tr><td>Keil McGriff</td><td>Clemson</td><td>Out</td><td>Not playing. Sit him.</td></tr>
+<tr><td>Peyton Streko</td><td>Clemson</td><td>Out</td><td>Not playing. Sit him.</td></tr>
+<tr><td>Carter Vargas</td><td>California Golden</td><td>Doubtful</td><td>Unlikely. Sit unless he is cleared.</td></tr>
+<tr><td>Jay Haynes</td><td>Clemson</td><td>Questionable</td><td>Not locked in. Check warmups.</td></tr>
+<tr><td>Christopher Vizzina</td><td>Clemson</td><td>Expected</td><td>Expected to play.</td></tr>
+</tbody></table>
+<h3>CHART NOTES</h3>
+<p>When the listed chart does not match who is actually playing.</p>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Note</th></tr></thead>
+<tbody>
+<tr><td>Christopher Vizzina</td><td>Clemson</td><td>Christopher Vizzina is making a first start.</td></tr>
+</tbody></table>
+<h3>SCRIPT SIX</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Tait Reynolds</td><td>Clemson</td><td>QB</td><td>$14,400</td><td class="val">0.89×</td><td>passing yards 213.5</td></tr>
+<tr><td>FLEX</td><td>Jaron-Keawe Sagapolutele</td><td>California Golden</td><td>QB</td><td>$10,600</td><td class="val">0.97×</td><td>passing yards 257.5</td></tr>
+<tr><td>FLEX</td><td>Gideon Davidson</td><td>Clemson</td><td>RB</td><td>$8,800</td><td class="val">0.90×</td><td>rushing yards 79.5</td></tr>
+<tr><td>FLEX</td><td>T.J. Moore</td><td>Clemson</td><td>WR</td><td>$7,200</td><td class="val">0.83×</td><td>receiving yards 59.5</td></tr>
+<tr><td>FLEX</td><td>Bryant Wesco Jr.</td><td>Clemson</td><td>WR</td><td>$6,800</td><td class="val">0.88×</td><td>receiving yards 59.5</td></tr>
+<tr><td>FLEX</td><td>Dorian Thomas</td><td>California Golden</td><td>WR</td><td>$1,400</td><td class="val">No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $800  (spent $49,200 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Tait Reynolds is captain. Last week 29 throws for 215 and 1 passing scores, 11 carries for 26. He runs and throws. If he is captain, his rushing yards count extra.</li>
+<li>Jaron-Keawe Sagapolutele. Last week 33 throws for 413 and 3 passing scores.</li>
+<li>Bryant Wesco Jr. Last week 5 catches for 77. He is on this card with Tait Reynolds, so Clemson&#x27;s passing shows up twice.</li>
+<li>Gideon Davidson. Got almost every carry last week (16 carries). He scored. Also caught 1 for 3.</li>
+<li>T.J. Moore. Last week 7 catches for 38. He is on this card with Tait Reynolds, so Clemson&#x27;s passing shows up twice.</li>
+<li>Dorian Thomas. Last week 1 catch for 7. He is cheap enough that the expensive names still fit. He is on this card with Jaron-Keawe Sagapolutele, so California Golden&#x27;s passing shows up twice.</li>
+</ul>
+<p>Projected points on this six: 104.49. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 1</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Tait Reynolds</td><td>Clemson</td><td>QB</td><td>$14,400</td><td class="val">0.89×</td><td>passing yards 213.5</td></tr>
+<tr><td>FLEX</td><td>Jaron-Keawe Sagapolutele</td><td>California Golden</td><td>QB</td><td>$10,600</td><td class="val">0.97×</td><td>passing yards 257.5</td></tr>
+<tr><td>FLEX</td><td>Gideon Davidson</td><td>Clemson</td><td>RB</td><td>$8,800</td><td class="val">0.90×</td><td>rushing yards 79.5</td></tr>
+<tr><td>FLEX</td><td>T.J. Moore</td><td>Clemson</td><td>WR</td><td>$7,200</td><td class="val">0.83×</td><td>receiving yards 59.5</td></tr>
+<tr><td>FLEX</td><td>Bryant Wesco Jr.</td><td>Clemson</td><td>WR</td><td>$6,800</td><td class="val">0.88×</td><td>receiving yards 59.5</td></tr>
+<tr><td>FLEX</td><td>Dorian Thomas</td><td>California Golden</td><td>WR</td><td>$1,400</td><td class="val">No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $800  (spent $49,200 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Tait Reynolds is captain. Last week 29 throws for 215 and 1 passing scores, 11 carries for 26. He runs and throws. If he is captain, his rushing yards count extra.</li>
+<li>Jaron-Keawe Sagapolutele. Last week 33 throws for 413 and 3 passing scores.</li>
+<li>Bryant Wesco Jr. Last week 5 catches for 77. He is on this card with Tait Reynolds, so Clemson&#x27;s passing shows up twice.</li>
+<li>Gideon Davidson. Got almost every carry last week (16 carries). He scored. Also caught 1 for 3.</li>
+<li>T.J. Moore. Last week 7 catches for 38. He is on this card with Tait Reynolds, so Clemson&#x27;s passing shows up twice.</li>
+<li>Dorian Thomas. Last week 1 catch for 7. He is cheap enough that the expensive names still fit. He is on this card with Jaron-Keawe Sagapolutele, so California Golden&#x27;s passing shows up twice.</li>
+</ul>
+<p>Projected points on this six: 104.49. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 2</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Jaron-Keawe Sagapolutele</td><td>California Golden</td><td>QB</td><td>$15,900</td><td class="val">0.97×</td><td>passing yards 257.5</td></tr>
+<tr><td>FLEX</td><td>Tait Reynolds</td><td>Clemson</td><td>QB</td><td>$9,600</td><td class="val">0.89×</td><td>passing yards 213.5</td></tr>
+<tr><td>FLEX</td><td>Ian Strong</td><td>California Golden</td><td>WR</td><td>$7,800</td><td class="val">0.89×</td><td>receiving yards 69.5</td></tr>
+<tr><td>FLEX</td><td>T.J. Moore</td><td>Clemson</td><td>WR</td><td>$7,200</td><td class="val">0.83×</td><td>receiving yards 59.5</td></tr>
+<tr><td>FLEX</td><td>Bryant Wesco Jr.</td><td>Clemson</td><td>WR</td><td>$6,800</td><td class="val">0.88×</td><td>receiving yards 59.5</td></tr>
+<tr><td>FLEX</td><td>Jordan King</td><td>California Golden</td><td>WR</td><td>$2,600</td><td class="val">No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Jaron-Keawe Sagapolutele is captain. Last week 33 throws for 413 and 3 passing scores.</li>
+<li>Tait Reynolds. Last week 29 throws for 215 and 1 passing scores, 11 carries for 26. He runs and throws.</li>
+<li>Bryant Wesco Jr. Last week 5 catches for 77. He is on this card with Tait Reynolds, so Clemson&#x27;s passing shows up twice.</li>
+<li>T.J. Moore. Last week 7 catches for 38. He is on this card with Tait Reynolds, so Clemson&#x27;s passing shows up twice.</li>
+<li>Ian Strong. Last week 6 catches for 48. He is on this card with Jaron-Keawe Sagapolutele, so California Golden&#x27;s passing shows up twice.</li>
+<li>Jordan King. Last week 3 catches for 44. He is cheap enough that the expensive names still fit. He is on this card with Jaron-Keawe Sagapolutele, so California Golden&#x27;s passing shows up twice.</li>
+</ul>
+<p>Projected points on this six: 102.37. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 3</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Bryant Wesco Jr.</td><td>Clemson</td><td>WR</td><td>$10,200</td><td class="val">0.88×</td><td>receiving yards 59.5</td></tr>
+<tr><td>FLEX</td><td>Adam Mohammed</td><td>California Golden</td><td>RB</td><td>$10,800</td><td class="val">0.82×</td><td>rushing yards 88.5</td></tr>
+<tr><td>FLEX</td><td>Jaron-Keawe Sagapolutele</td><td>California Golden</td><td>QB</td><td>$10,600</td><td class="val">0.97×</td><td>passing yards 257.5</td></tr>
+<tr><td>FLEX</td><td>Tait Reynolds</td><td>Clemson</td><td>QB</td><td>$9,600</td><td class="val">0.89×</td><td>passing yards 213.5</td></tr>
+<tr><td>FLEX</td><td>T.J. Moore</td><td>Clemson</td><td>WR</td><td>$7,200</td><td class="val">0.83×</td><td>receiving yards 59.5</td></tr>
+<tr><td>FLEX</td><td>Dorian Thomas</td><td>California Golden</td><td>WR</td><td>$1,400</td><td class="val">No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $200  (spent $49,800 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Bryant Wesco Jr. is captain. Last week 5 catches for 77. He is on this card with Tait Reynolds, so Clemson&#x27;s passing shows up twice.</li>
+<li>Adam Mohammed. Listed back last week (13 carries). He scored. Also caught 2 for 78.</li>
+<li>Tait Reynolds. Last week 29 throws for 215 and 1 passing scores, 11 carries for 26. He runs and throws.</li>
+<li>Jaron-Keawe Sagapolutele. Last week 33 throws for 413 and 3 passing scores.</li>
+<li>T.J. Moore. Last week 7 catches for 38. He is on this card with Tait Reynolds, so Clemson&#x27;s passing shows up twice.</li>
+<li>Dorian Thomas. Last week 1 catch for 7. He is cheap enough that the expensive names still fit. He is on this card with Jaron-Keawe Sagapolutele, so California Golden&#x27;s passing shows up twice.</li>
+</ul>
+<p>Projected points on this six: 109.85. The captain&#x27;s stats count extra.</p>
+</div>
+<div class="prop-board"><h3>OUR VALUE</h3>
+<p>Every posted yardage or receptions number we joined on this salary board — one row per market, not a Top 20. Dest names with no book line are omitted. <b>Value</b> is that number versus DraftKings salary (<b>1.00× is even</b>). Below even stays. This is not ETR. Sorted highest value first.</p>
+<h4 class="team-break">California Golden</h4>
+<table class="sortable" data-default-sort="Value">
+<thead><tr><th scope="col" data-col="0">#</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Jaron-Keawe Sagapolutele</td><td>California Golden</td><td>QB</td><td>$10,600</td><td class="val">0.97×</td><td>passing yards 257.5</td></tr>
+<tr><td>2</td><td>Ian Strong</td><td>California Golden</td><td>WR</td><td>$7,800</td><td class="val">0.89×</td><td>receiving yards 69.5</td></tr>
+<tr><td>3</td><td>Adam Mohammed</td><td>California Golden</td><td>RB</td><td>$10,800</td><td class="val">0.82×</td><td>rushing yards 88.5</td></tr>
+<tr><td>4</td><td>Chase Hendricks</td><td>California Golden</td><td>WR</td><td>$7,600</td><td class="val">0.65×</td><td>receiving yards 49.5</td></tr>
+<tr><td>5</td><td>Mason Mini</td><td>California Golden</td><td>WR</td><td>$5,000</td><td class="val">0.61×</td><td>receiving yards 30.5</td></tr>
+<tr><td>6</td><td>Chase Hendricks</td><td>California Golden</td><td>WR</td><td>$7,600</td><td class="val">0.59×</td><td>receptions 4.5</td></tr>
+<tr><td>7</td><td>Ian Strong</td><td>California Golden</td><td>WR</td><td>$7,800</td><td class="val">0.58×</td><td>receptions 4.5</td></tr>
+<tr><td>8</td><td>Adam Mohammed</td><td>California Golden</td><td>RB</td><td>$10,800</td><td class="val">0.55×</td><td>rushing plus receiving yards 59.5</td></tr>
+<tr><td>9</td><td>Mason Mini</td><td>California Golden</td><td>WR</td><td>$5,000</td><td class="val">0.50×</td><td>receptions 2.5</td></tr>
+<tr><td>10</td><td>Adam Mohammed</td><td>California Golden</td><td>RB</td><td>$10,800</td><td class="val">0.42×</td><td>receptions 4.5</td></tr>
+<tr><td>11</td><td>Adam Mohammed</td><td>California Golden</td><td>RB</td><td>$10,800</td><td class="val">0.24×</td><td>receiving yards 25.5</td></tr>
+</tbody></table>
+<h4 class="team-break">Clemson</h4>
+<table class="sortable" data-default-sort="Value">
+<thead><tr><th scope="col" data-col="0">#</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Gideon Davidson</td><td>Clemson</td><td>RB</td><td>$8,800</td><td class="val">0.90×</td><td>rushing yards 79.5</td></tr>
+<tr><td>2</td><td>Tait Reynolds</td><td>Clemson</td><td>QB</td><td>$9,600</td><td class="val">0.89×</td><td>passing yards 213.5</td></tr>
+<tr><td>3</td><td>Bryant Wesco Jr.</td><td>Clemson</td><td>WR</td><td>$6,800</td><td class="val">0.88×</td><td>receiving yards 59.5</td></tr>
+<tr><td>4</td><td>T.J. Moore</td><td>Clemson</td><td>WR</td><td>$7,200</td><td class="val">0.83×</td><td>receiving yards 59.5</td></tr>
+<tr><td>5</td><td>Bryant Wesco Jr.</td><td>Clemson</td><td>WR</td><td>$6,800</td><td class="val">0.81×</td><td>receptions 5.5</td></tr>
+<tr><td>6</td><td>T.J. Moore</td><td>Clemson</td><td>WR</td><td>$7,200</td><td class="val">0.76×</td><td>receptions 5.5</td></tr>
+<tr><td>7</td><td>Tait Reynolds</td><td>Clemson</td><td>QB</td><td>$9,600</td><td class="val">0.40×</td><td>rushing yards 38.5</td></tr>
+</tbody></table></div>
+<div class="etr-board"><h3>ETR VALUE</h3>
+<p>Every name on ETR&#x27;s sheet for this game, both teams in one table. Click a column to sort. A blank cell is —. <b>ETR salary</b> and <b>Owned</b> are their main-slate numbers. <b>Slate</b> is their sheet label. <b>Points per $1k</b> is their projected points versus our DraftKings salary for this game. Negative sheet values stay on the table. Both teams sit in one list so you can sort them together. Every Showdown skill player stays on the table (— if ETR did not list them). Not a Top 20.</p>
+<table class="sortable" data-default-sort="Points per $1k">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Opp</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">ETR salary</th><th scope="col" data-col="5">Projected points</th><th scope="col" data-col="6">Sheet value</th><th scope="col" data-col="7">Owned</th><th scope="col" data-col="8">Slate</th><th scope="col" data-col="9">Our salary</th><th scope="col" data-col="10">Points per $1k</th></tr></thead>
+<tbody>
+<tr><td>Dorian Thomas</td><td>California Golden</td><td>Clemson</td><td>WR</td><td>$3,300</td><td>5.84</td><td>-1.1</td><td>7.5</td><td>Friday</td><td>$1,400</td><td class="val">4.17</td></tr>
+<tr><td>Bryant Wesco Jr.</td><td>Clemson</td><td>California Golden</td><td>WR</td><td>$5,400</td><td>17.24</td><td>7.1</td><td>57.1</td><td>Friday</td><td>$6,800</td><td class="val">2.54</td></tr>
+<tr><td>T.J. Moore</td><td>Clemson</td><td>California Golden</td><td>WR</td><td>$5,700</td><td>16.26</td><td>5.7</td><td>45.9</td><td>Friday</td><td>$7,200</td><td class="val">2.26</td></tr>
+<tr><td>Adam Mohammed</td><td>California Golden</td><td>Clemson</td><td>RB</td><td>$8,400</td><td>23.53</td><td>8.9</td><td>43</td><td>Friday</td><td>$10,800</td><td class="val">2.18</td></tr>
+<tr><td>Tait Reynolds</td><td>Clemson</td><td>California Golden</td><td>QB</td><td>$6,900</td><td>20.2</td><td>7.8</td><td>36.8</td><td>Friday</td><td>$9,600</td><td class="val">2.1</td></tr>
+<tr><td>Ian Strong</td><td>California Golden</td><td>Clemson</td><td>WR</td><td>$6,200</td><td>16.13</td><td>4.8</td><td>32.8</td><td>Friday</td><td>$7,800</td><td class="val">2.07</td></tr>
+<tr><td>Chase Hendricks</td><td>California Golden</td><td>Clemson</td><td>WR</td><td>$6,000</td><td>15.53</td><td>4.5</td><td>36.3</td><td>Friday</td><td>$7,600</td><td class="val">2.04</td></tr>
+<tr><td>Jordan King</td><td>California Golden</td><td>Clemson</td><td>WR</td><td>$3,400</td><td>5.3</td><td>-1.8</td><td>2.9</td><td>Friday</td><td>$2,600</td><td class="val">2.04</td></tr>
+<tr><td>Gideon Davidson</td><td>Clemson</td><td>California Golden</td><td>RB</td><td>$6,900</td><td>16.69</td><td>4.3</td><td>29.5</td><td>Friday</td><td>$8,800</td><td class="val">1.9</td></tr>
+<tr><td>Jaron-Keawe Sagapolutele</td><td>California Golden</td><td>Clemson</td><td>QB</td><td>$7,700</td><td>18.16</td><td>4.6</td><td>16</td><td>Friday</td><td>$10,600</td><td class="val">1.71</td></tr>
+<tr><td>Olsen Patt-Henry</td><td>Clemson</td><td>California Golden</td><td>WR</td><td>$3,400</td><td>3.72</td><td>-3.4</td><td>0.1</td><td>Friday</td><td>$2,400</td><td class="val">1.55</td></tr>
+<tr><td>Nolan Hauser</td><td>Clemson</td><td>California Golden</td><td>K</td><td>$4,600</td><td>6.24</td><td>-2.7</td><td>0</td><td>Friday</td><td>$4,600</td><td class="val">1.36</td></tr>
+<tr><td>Chase Meyer</td><td>California Golden</td><td>Clemson</td><td>K</td><td>$4,800</td><td>6.47</td><td>-2.7</td><td>0</td><td>Friday</td><td>$4,800</td><td class="val">1.35</td></tr>
+<tr><td>Mason Mini</td><td>California Golden</td><td>Clemson</td><td>WR</td><td>$4,300</td><td>6.45</td><td>-2</td><td>1.4</td><td>Friday</td><td>$5,000</td><td class="val">1.29</td></tr>
+<tr><td>Juju Preston</td><td>Clemson</td><td>California Golden</td><td>WR</td><td>$3,200</td><td>2.2</td><td>-4.6</td><td>0</td><td>Friday</td><td>$1,800</td><td class="val">1.22</td></tr>
+<tr><td>Christian Bentancur</td><td>Clemson</td><td>California Golden</td><td>WR</td><td>$3,600</td><td>3.5</td><td>-3.9</td><td>0.1</td><td>Friday</td><td>$3,200</td><td class="val">1.09</td></tr>
+<tr><td>Jarvis Green</td><td>Clemson</td><td>California Golden</td><td>RB</td><td>$4,100</td><td>4.07</td><td>-4.1</td><td>0.2</td><td>Friday</td><td>$3,800</td><td class="val">1.07</td></tr>
+<tr><td>Cooper Perry</td><td>California Golden</td><td>Clemson</td><td>WR</td><td>$3,700</td><td>3.71</td><td>-3.8</td><td>0</td><td>Friday</td><td>$3,600</td><td class="val">1.03</td></tr>
+<tr><td>Tyler Brown</td><td>Clemson</td><td>California Golden</td><td>WR</td><td>$4,500</td><td>4.97</td><td>-3.8</td><td>0</td><td>Friday</td><td>$5,600</td><td class="val">0.89</td></tr>
+<tr><td>Chris Johnson Jr.</td><td>Clemson</td><td>California Golden</td><td>RB</td><td>$4,400</td><td>4.14</td><td>-4.5</td><td>0</td><td>Friday</td><td>$5,200</td><td class="val">0.8</td></tr>
+<tr><td>Kyion Grayes</td><td>California Golden</td><td>Clemson</td><td>WR</td><td>$3,500</td><td>1.94</td><td>-5.3</td><td>0</td><td>Friday</td><td>$2,800</td><td class="val">0.69</td></tr>
+<tr><td>Mark Hamper</td><td>California Golden</td><td>Clemson</td><td>WR</td><td>$3,200</td><td>1.47</td><td>-5.3</td><td>0</td><td>Friday</td><td>$2,200</td><td class="val">0.67</td></tr>
+<tr><td>Ashten Emory</td><td>California Golden</td><td>Clemson</td><td>RB</td><td>$4,500</td><td>4.07</td><td>-4.7</td><td>0</td><td>Friday</td><td>$6,200</td><td class="val">0.66</td></tr>
+<tr><td>Tristan Smith</td><td>Clemson</td><td>California Golden</td><td>WR</td><td>$3,100</td><td>0.5</td><td>-6.1</td><td>0</td><td>Friday</td><td>$1,200</td><td class="val">0.42</td></tr>
+<tr><td>Taimane Purcell</td><td>California Golden</td><td>Clemson</td><td>WR</td><td>$3,200</td><td>0.64</td><td>-6.2</td><td>0</td><td>Friday</td><td>$1,600</td><td class="val">0.4</td></tr>
+<tr><td>Anthony League</td><td>California Golden</td><td>Clemson</td><td>RB</td><td>$4,100</td><td>0.76</td><td>-7.4</td><td>0</td><td>Friday</td><td>$3,400</td><td class="val">0.22</td></tr>
+<tr><td>Carson Perry-Smith</td><td>California Golden</td><td>Clemson</td><td>RB</td><td>$4,000</td><td>0.2</td><td>-7.8</td><td>0</td><td>Friday</td><td>$1,000</td><td class="val">0.2</td></tr>
+<tr><td>Alonzo Esparza</td><td>California Golden</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Carter Vargas</td><td>California Golden</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,000</td><td class="val">—</td></tr>
+<tr><td>Cole Boscia</td><td>California Golden</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Dean-Taylor Chapman</td><td>California Golden</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Dominic Ingrassia</td><td>California Golden</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>EJ Caminong</td><td>California Golden</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>EJ Morgan</td><td>California Golden</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Erik Peters</td><td>California Golden</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,800</td><td class="val">—</td></tr>
+<tr><td>Jack Olyphant</td><td>California Golden</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Jackson Brousseau</td><td>California Golden</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$8,600</td><td class="val">—</td></tr>
+<tr><td>John Tofi Jr.</td><td>California Golden</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Kai Meza</td><td>California Golden</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Meyer Swinney</td><td>California Golden</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Michael Cooley</td><td>California Golden</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Nainoa Lopes</td><td>California Golden</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>QuaRon Adams</td><td>California Golden</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Rico Walker</td><td>California Golden</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Sosaia Noa</td><td>California Golden</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Towns McGough</td><td>California Golden</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,800</td><td class="val">—</td></tr>
+<tr><td>Trevor Rogers</td><td>California Golden</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Tyree Sams</td><td>California Golden</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Victor Santino</td><td>California Golden</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Avery Wieting</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Brock Bradley</td><td>Clemson</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Cam Blivens</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Charlie Johnson</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Charlie Reed</td><td>Clemson</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,600</td><td class="val">—</td></tr>
+<tr><td>Chase Byrd</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Chris Denson</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Christopher Vizzina</td><td>Clemson</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$8,200</td><td class="val">—</td></tr>
+<tr><td>Clark Sanderson</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Clay Swinney</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Cole Turner</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Colson Brown</td><td>Clemson</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Connor Salmin</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>David Eziomume</td><td>Clemson</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,200</td><td class="val">—</td></tr>
+<tr><td>Gordon Sellars III</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Grady Sherrill</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Jack Purkerson</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Jack Wolf</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Jay Haynes</td><td>Clemson</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Jaylen Brown-Wallace</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Keil McGriff</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Logan Brooking</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Luke Stubbs</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Max Wilson</td><td>Clemson</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Naeem Burroughs</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Peyton Streko</td><td>Clemson</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Robert Gunn III</td><td>Clemson</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,600</td><td class="val">—</td></tr>
+<tr><td>Sam Earle</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Tayveon Wilson</td><td>Clemson</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Trent Pearman</td><td>Clemson</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+</tbody></table></div>
+<div class="player-book"><h3>Player book</h3><p class="sub">Click a week. Each school’s game that week is an ESPN-style box — both sides. Under the score is that game’s posted spread and total. Season totals is the same tables added up. Trending up uses last week versus the games before. A blank cell is —.</p><div class="trend-up-strip"><h4>Trending up</h4><ul><li>Adam Mohammed · CAL · 36.9 last game (13.8 before)</li><li>Jaron-keawe Sagapolutele · CAL · 31.5 last game (14.8 before)</li><li>Gideon Davidson · CLEM · 20.8 last game (6.2 before)</li><li>Kyion Grayes · CAL · 18.8 last game (1.3 before)</li><li>Tait Reynolds · CLEM · 14.2 last game (10.9 before)</li><li>Tyler Brown · CLEM · 14.2 last game (8.4 before)</li><li>Cooper Perry · CAL · 13.5 last game (2.2 before)</li><li>Bryant Wesco Jr. · CLEM · 12.7 last game (9.5 before)</li></ul></div><div class="week-pills noprint"><button type="button" class="week-pill" data-week="0">W0</button><button type="button" class="week-pill" data-week="1">W1</button><button type="button" class="week-pill" data-week="2">W2</button><button type="button" class="week-pill on" data-week="3">W3</button><button type="button" class="week-pill" data-week="season">Season</button></div><section class="week-panel" data-week="0" hidden><h4 class="week-lab">Week 0</h4><article class="game-box" data-team="CAL"><h3 class="box-score">California Golden</h3><p class="sub">No box for this week.</p></article><article class="game-box" data-team="CLEM"><h3 class="box-score">Clemson</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="1" hidden><h4 class="week-lab">Week 1</h4><article class="game-box" data-team="CAL"><h3 class="box-score">California Golden 24, UCLA 45</h3><p class="box-line">UCLA −2.5 / 53.5</p><div class="box-side"><h4>California Golden</h4><p class="run-pass">California Golden threw for 582, 4 passing scores and ran for 250, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jaron-keawe Sagapolutele</td><td data-n="41.0">41</td><td data-n="271.0">271</td><td data-n="2.0">2</td></tr><tr><td>Jackson Brousseau</td><td data-n="6.0">6</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Adam Mohammed</td><td data-n="28.0">28</td><td data-n="120.0">120</td><td data-n="1.0">1</td></tr><tr><td>Carter Vargas</td><td data-n="4.0">4</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Ashten Emory</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Anthony League</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Jaron-keawe Sagapolutele</td><td data-n="4.0">4</td><td data-n="-16.0">-16</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Ian Strong</td><td data-n="5.0">5</td><td>—</td><td data-n="94.0">94</td><td data-n="0.0">0</td></tr><tr><td>Chase Hendricks</td><td data-n="6.0">6</td><td>—</td><td data-n="66.0">66</td><td data-n="1.0">1</td></tr><tr><td>Mason Mini</td><td data-n="4.0">4</td><td>—</td><td data-n="58.0">58</td><td data-n="1.0">1</td></tr><tr><td>Adam Mohammed</td><td data-n="7.0">7</td><td>—</td><td data-n="46.0">46</td><td data-n="0.0">0</td></tr><tr><td>Cooper Perry</td><td data-n="1.0">1</td><td>—</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Carter Vargas</td><td data-n="2.0">2</td><td>—</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Jordan King</td><td data-n="1.0">1</td><td>—</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Towns McGough</td><td data-n="1.0">1</td><td data-n="3.0">3</td></tr></tbody></table></div><div class="box-side"><h4>UCLA</h4><p class="run-pass">UCLA threw for 2031, 12 passing scores and ran for 1485, 21 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Trinidad Chambliss</td><td data-n="36.0">36</td><td data-n="336.0">336</td><td data-n="3.0">3</td></tr><tr><td>Anthony Grigsby Jr.</td><td data-n="35.0">35</td><td data-n="319.0">319</td><td data-n="4.0">4</td></tr><tr><td>Lincoln Kienholz</td><td data-n="29.0">29</td><td data-n="307.0">307</td><td data-n="2.0">2</td></tr><tr><td>Jaron-Keawe Sagapolutele</td><td data-n="41.0">41</td><td data-n="271.0">271</td><td data-n="2.0">2</td></tr><tr><td>Demond Williams Jr.</td><td data-n="35.0">35</td><td data-n="268.0">268</td><td data-n="1.0">1</td></tr><tr><td>Nico Iamaleava</td><td data-n="22.0">22</td><td data-n="184.0">184</td><td data-n="0.0">0</td></tr><tr><td>Caden Pinnick</td><td data-n="25.0">25</td><td data-n="142.0">142</td><td data-n="0.0">0</td></tr><tr><td>Jackson Brousseau</td><td data-n="6.0">6</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Adam Mohammed</td><td data-n="28.0">28</td><td data-n="120.0">120</td><td data-n="1.0">1</td></tr><tr><td>Anthony Woods</td><td data-n="8.0">8</td><td data-n="118.0">118</td><td data-n="2.0">2</td></tr><tr><td>Jaden Green</td><td data-n="15.0">15</td><td data-n="71.0">71</td><td data-n="0.0">0</td></tr><tr><td>Wayne Knight</td><td data-n="8.0">8</td><td data-n="71.0">71</td><td data-n="3.0">3</td></tr><tr><td>Lincoln Kienholz</td><td data-n="14.0">14</td><td data-n="69.0">69</td><td data-n="1.0">1</td></tr><tr><td>Anthony Grigsby Jr.</td><td data-n="14.0">14</td><td data-n="62.0">62</td><td data-n="1.0">1</td></tr><tr><td>Caden Pinnick</td><td data-n="14.0">14</td><td data-n="61.0">61</td><td data-n="1.0">1</td></tr><tr><td>Demond Williams Jr.</td><td data-n="7.0">7</td><td data-n="61.0">61</td><td data-n="1.0">1</td></tr><tr><td>Kewan Lacy</td><td data-n="17.0">17</td><td data-n="61.0">61</td><td data-n="1.0">1</td></tr><tr><td>Trinidad Chambliss</td><td data-n="10.0">10</td><td data-n="60.0">60</td><td data-n="1.0">1</td></tr><tr><td>Keyjuan Brown</td><td data-n="7.0">7</td><td data-n="56.0">56</td><td data-n="0.0">0</td></tr><tr><td>Misa Paiau</td><td data-n="11.0">11</td><td data-n="48.0">48</td><td data-n="0.0">0</td></tr><tr><td>Jayden Limar</td><td data-n="12.0">12</td><td data-n="47.0">47</td><td data-n="1.0">1</td></tr><tr><td>Jaivian Thomas</td><td data-n="5.0">5</td><td data-n="41.0">41</td><td data-n="0.0">0</td></tr><tr><td>Isaac Brown</td><td data-n="16.0">16</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Tre Richardson</td><td data-n="1.0">1</td><td data-n="30.0">30</td><td data-n="1.0">1</td></tr><tr><td>Nico Iamaleava</td><td data-n="9.0">9</td><td data-n="29.0">29</td><td data-n="1.0">1</td></tr><tr><td>Quaid Carr</td><td data-n="5.0">5</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Makhi Frazier</td><td data-n="7.0">7</td><td data-n="27.0">27</td><td data-n="0.0">0</td></tr><tr><td>Jt Lindsey</td><td data-n="7.0">7</td><td data-n="25.0">25</td><td data-n="0.0">0</td></tr><tr><td>Brian Rowe Jr.</td><td data-n="1.0">1</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>Tayvion McCoy</td><td data-n="1.0">1</td><td data-n="18.0">18</td><td data-n="0.0">0</td></tr><tr><td>Kirby Vorhees</td><td data-n="7.0">7</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Carter Vargas</td><td data-n="4.0">4</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Leo Pulalasi</td><td data-n="5.0">5</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Maxwell Woods</td><td data-n="4.0">4</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Ashten Emory</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Trey Wilson</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Anthony League</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Branden Ganashamoorthy</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Trey Cooley</td><td>—</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Niall Hayes</td><td>—</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>Brooks Wheatley</td><td data-n="1.0">1</td><td data-n="-2.0">-2</td><td data-n="0.0">0</td></tr><tr><td>Jaron-Keawe Sagapolutele</td><td data-n="4.0">4</td><td data-n="-16.0">-16</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Tayvion McCoy</td><td data-n="10.0">10</td><td>—</td><td data-n="170.0">170</td><td data-n="1.0">1</td></tr><tr><td>Deuce Alexander</td><td data-n="5.0">5</td><td>—</td><td data-n="159.0">159</td><td data-n="2.0">2</td></tr><tr><td>Ian Strong</td><td data-n="5.0">5</td><td data-n="10.0">10</td><td data-n="94.0">94</td><td data-n="0.0">0</td></tr><tr><td>Mikey Matthews</td><td data-n="4.0">4</td><td data-n="5.0">5</td><td data-n="88.0">88</td><td data-n="0.0">0</td></tr><tr><td>Tre Richardson</td><td data-n="4.0">4</td><td>—</td><td data-n="83.0">83</td><td data-n="1.0">1</td></tr><tr><td>Fidel Tau Pitts</td><td data-n="5.0">5</td><td>—</td><td data-n="70.0">70</td><td data-n="1.0">1</td></tr><tr><td>Treyshun Hurry</td><td data-n="4.0">4</td><td>—</td><td data-n="67.0">67</td><td data-n="0.0">0</td></tr><tr><td>Caleb Odom</td><td data-n="3.0">3</td><td>—</td><td data-n="66.0">66</td><td data-n="1.0">1</td></tr><tr><td>Chase Hendricks</td><td data-n="6.0">6</td><td data-n="9.0">9</td><td data-n="66.0">66</td><td data-n="1.0">1</td></tr><tr><td>Lawayne McCoy</td><td data-n="2.0">2</td><td>—</td><td data-n="62.0">62</td><td data-n="1.0">1</td></tr><tr><td>Mason Mini</td><td data-n="4.0">4</td><td data-n="5.0">5</td><td data-n="58.0">58</td><td data-n="1.0">1</td></tr><tr><td>Jaleel Skinner</td><td data-n="3.0">3</td><td>—</td><td data-n="55.0">55</td><td data-n="0.0">0</td></tr><tr><td>Horatio Fields</td><td data-n="5.0">5</td><td>—</td><td data-n="47.0">47</td><td data-n="0.0">0</td></tr><tr><td>Adam Mohammed</td><td data-n="7.0">7</td><td data-n="7.0">7</td><td data-n="46.0">46</td><td data-n="0.0">0</td></tr><tr><td>Isaac Brown</td><td data-n="3.0">3</td><td>—</td><td data-n="32.0">32</td><td data-n="0.0">0</td></tr><tr><td>Alek Marshall</td><td data-n="4.0">4</td><td>—</td><td data-n="31.0">31</td><td data-n="1.0">1</td></tr><tr><td>Traylon Ray</td><td data-n="2.0">2</td><td>—</td><td data-n="30.0">30</td><td data-n="0.0">0</td></tr><tr><td>Wayne Knight</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="30.0">30</td><td data-n="0.0">0</td></tr><tr><td>Jaden Green</td><td data-n="2.0">2</td><td>—</td><td data-n="29.0">29</td><td data-n="0.0">0</td></tr><tr><td>Brian Rowe Jr.</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Luke Leighton</td><td data-n="1.0">1</td><td>—</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Landon Ellis</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>Cooper Perry</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Kewan Lacy</td><td data-n="4.0">4</td><td>—</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Kirby Vorhees</td><td data-n="2.0">2</td><td>—</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Semaj Morgan</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Leo Pulalasi</td><td data-n="3.0">3</td><td>—</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Luke Hasz</td><td data-n="1.0">1</td><td>—</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Misa Paiau</td><td data-n="3.0">3</td><td>—</td><td data-n="9.0">9</td><td data-n="1.0">1</td></tr><tr><td>Don-Ray Hall Jr.</td><td data-n="1.0">1</td><td>—</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Carter Vargas</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Keyjuan Brown</td><td data-n="1.0">1</td><td>—</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Harry Lodge</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Jt Lindsey</td><td data-n="1.0">1</td><td>—</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Quaid Carr</td><td data-n="1.0">1</td><td>—</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Brody Foley</td><td data-n="1.0">1</td><td>—</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Jadon Anderson</td><td data-n="1.0">1</td><td>—</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Jordan King</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Anthony Woods</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Johntay Cook II</td><td data-n="0.0">0</td><td>—</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>Justyn Reid</td><td data-n="0.0">0</td><td>—</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>Michael Smith</td><td data-n="0.0">0</td><td>—</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Carson Hilbert</td><td data-n="3.0">3</td><td data-n="3.0">3</td></tr><tr><td>Jack Stevens</td><td data-n="1.0">1</td><td data-n="1.0">1</td></tr><tr><td>Lincoln Kienholz</td><td>—</td><td data-n="0.0">0</td></tr><tr><td>Lucas Carneiro</td><td data-n="2.0">2</td><td data-n="5.0">5</td></tr><tr><td>Mateen Bhaghani</td><td data-n="1.0">1</td><td data-n="6.0">6</td></tr><tr><td>Michael Smith</td><td data-n="0.0">0</td><td data-n="2.0">2</td></tr><tr><td>Noah Thayer</td><td data-n="1.0">1</td><td data-n="5.0">5</td></tr><tr><td>Towns McGough</td><td data-n="1.0">1</td><td data-n="3.0">3</td></tr><tr><td>Tyler Robles</td><td data-n="1.0">1</td><td data-n="3.0">3</td></tr></tbody></table></div></article><article class="game-box" data-team="CLEM"><h3 class="box-score">Clemson 10, LSU 51</h3><p class="box-line">LSU −10.5 / 50.5</p><div class="box-side"><h4>Clemson</h4><p class="run-pass">Clemson threw for 105, 0 passing scores and ran for 40, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Christopher Vizzina</td><td data-n="16.0">16</td><td data-n="83.0">83</td><td data-n="0.0">0</td></tr><tr><td>Tait Reynolds</td><td data-n="6.0">6</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jarvis Green</td><td data-n="4.0">4</td><td data-n="21.0">21</td><td data-n="0.0">0</td></tr><tr><td>Gideon Davidson</td><td data-n="7.0">7</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>David Eziomume</td><td data-n="1.0">1</td><td data-n="11.0">11</td><td data-n="1.0">1</td></tr><tr><td>Christopher Vizzina</td><td data-n="5.0">5</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Chris Johnson Jr.</td><td data-n="3.0">3</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>Bryant Wesco Jr.</td><td data-n="1.0">1</td><td data-n="-7.0">-7</td><td data-n="0.0">0</td></tr><tr><td>Tait Reynolds</td><td data-n="5.0">5</td><td data-n="-9.0">-9</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>T.J. Moore</td><td data-n="4.0">4</td><td data-n="7.0">7</td><td data-n="31.0">31</td><td data-n="0.0">0</td></tr><tr><td>Bryant Wesco Jr.</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="29.0">29</td><td data-n="0.0">0</td></tr><tr><td>Juju Preston</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="25.0">25</td><td data-n="0.0">0</td></tr><tr><td>Tyler Brown</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Tristan Smith</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Gordon Sellars III</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Naeem Burroughs</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Olsen Patt-Henry</td><td data-n="1.0">1</td><td>—</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Christian Bentancur</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="-3.0">-3</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Nolan Hauser</td><td data-n="1.0">1</td><td data-n="1.0">1</td></tr></tbody></table></div><div class="box-side"><h4>LSU</h4><p class="run-pass">LSU threw for 335, 2 passing scores and ran for 320, 4 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Sam Leavitt</td><td data-n="28.0">28</td><td data-n="230.0">230</td><td data-n="1.0">1</td></tr><tr><td>Landen Clark</td><td data-n="7.0">7</td><td data-n="72.0">72</td><td data-n="1.0">1</td></tr><tr><td>Husan Longstreet</td><td data-n="1.0">1</td><td data-n="33.0">33</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Dilin Jones</td><td data-n="23.0">23</td><td data-n="113.0">113</td><td data-n="2.0">2</td></tr><tr><td>Sam Leavitt</td><td data-n="12.0">12</td><td data-n="113.0">113</td><td data-n="2.0">2</td></tr><tr><td>Stacy Gage</td><td data-n="8.0">8</td><td data-n="33.0">33</td><td data-n="0.0">0</td></tr><tr><td>Landen Clark</td><td data-n="4.0">4</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Winston Watkins Jr.</td><td data-n="1.0">1</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Eugene Wilson III</td><td data-n="1.0">1</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Harlem Berry</td><td data-n="4.0">4</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Caden Durham</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Husan Longstreet</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Winston Watkins Jr.</td><td data-n="7.0">7</td><td data-n="10.0">10</td><td data-n="110.0">110</td><td data-n="1.0">1</td></tr><tr><td>Phillip Wright III</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="70.0">70</td><td data-n="1.0">1</td></tr><tr><td>Trey&#x27;Dez Green</td><td data-n="4.0">4</td><td data-n="6.0">6</td><td data-n="58.0">58</td><td data-n="0.0">0</td></tr><tr><td>Eugene Wilson III</td><td data-n="4.0">4</td><td data-n="5.0">5</td><td data-n="35.0">35</td><td data-n="0.0">0</td></tr><tr><td>Jackson Harris</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="32.0">32</td><td data-n="0.0">0</td></tr><tr><td>Corey Barber Jr.</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Jayce Brown</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Dilin Jones</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Scott Starzyk</td><td data-n="1.0">1</td><td data-n="6.0">6</td></tr></tbody></table></div></article></section><section class="week-panel" data-week="2" hidden><h4 class="week-lab">Week 2</h4><article class="game-box" data-team="CAL"><h3 class="box-score">California Golden 21, Syracuse 18</h3><p class="box-line">Syracuse −3.5 / 56.5</p><div class="box-side"><h4>California Golden</h4><p class="run-pass">California Golden threw for 182, 2 passing scores and ran for 69, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jaron-Keawe Sagapolutele</td><td data-n="34.0">34</td><td data-n="182.0">182</td><td data-n="2.0">2</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Adam Mohammed</td><td data-n="19.0">19</td><td data-n="74.0">74</td><td data-n="0.0">0</td></tr><tr><td>Ashten Emory</td><td data-n="2.0">2</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Chase Hendricks</td><td data-n="1.0">1</td><td data-n="-1.0">-1</td><td data-n="0.0">0</td></tr><tr><td>Jaron-Keawe Sagapolutele</td><td data-n="2.0">2</td><td data-n="-5.0">-5</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Ian Strong</td><td data-n="3.0">3</td><td data-n="7.0">7</td><td data-n="64.0">64</td><td data-n="0.0">0</td></tr><tr><td>Mason Mini</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="38.0">38</td><td data-n="0.0">0</td></tr><tr><td>Chase Hendricks</td><td data-n="5.0">5</td><td data-n="7.0">7</td><td data-n="31.0">31</td><td data-n="1.0">1</td></tr><tr><td>Adam Mohammed</td><td data-n="5.0">5</td><td data-n="6.0">6</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Taimane Purcell</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Cooper Perry</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Jordan King</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="6.0">6</td><td data-n="1.0">1</td></tr><tr><td>Kyion Grayes</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr></tbody></table></div><div class="box-side"><h4>Syracuse</h4><p class="run-pass">Syracuse threw for 567, 2 passing scores and ran for 212, 3 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Steve Angeli</td><td data-n="49.0">49</td><td data-n="306.0">306</td><td data-n="1.0">1</td></tr><tr><td>Anthony Grigsby Jr.</td><td data-n="40.0">40</td><td data-n="249.0">249</td><td data-n="1.0">1</td></tr><tr><td>Jimmy Gregg</td><td data-n="1.0">1</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Tylik Hill</td><td data-n="2.0">2</td><td data-n="56.0">56</td><td data-n="0.0">0</td></tr><tr><td>Jaden Green</td><td data-n="10.0">10</td><td data-n="52.0">52</td><td data-n="0.0">0</td></tr><tr><td>Ju&#x27;Juan Johnson</td><td data-n="15.0">15</td><td data-n="46.0">46</td><td data-n="1.0">1</td></tr><tr><td>Misa Paiau</td><td data-n="8.0">8</td><td data-n="37.0">37</td><td data-n="1.0">1</td></tr><tr><td>Shavane Anderson Jr.</td><td data-n="9.0">9</td><td data-n="18.0">18</td><td data-n="0.0">0</td></tr><tr><td>Ahmad Miller</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Demetres Samuel Jr.</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Fidel Pitts</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="1.0">1</td></tr><tr><td>Anthony Grigsby Jr.</td><td data-n="9.0">9</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Steve Angeli</td><td data-n="6.0">6</td><td data-n="-4.0">-4</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Justus Ross-Simmons</td><td data-n="6.0">6</td><td>—</td><td data-n="105.0">105</td><td data-n="0.0">0</td></tr><tr><td>Fidel Pitts</td><td data-n="5.0">5</td><td data-n="9.0">9</td><td data-n="103.0">103</td><td data-n="0.0">0</td></tr><tr><td>Umari Hatcher</td><td data-n="6.0">6</td><td data-n="12.0">12</td><td data-n="77.0">77</td><td data-n="0.0">0</td></tr><tr><td>Daunte Bacheyie</td><td data-n="4.0">4</td><td data-n="5.0">5</td><td data-n="73.0">73</td><td data-n="1.0">1</td></tr><tr><td>Tayvion McCoy</td><td data-n="7.0">7</td><td data-n="8.0">8</td><td data-n="65.0">65</td><td data-n="0.0">0</td></tr><tr><td>Ray Hall</td><td data-n="4.0">4</td><td data-n="9.0">9</td><td data-n="44.0">44</td><td data-n="0.0">0</td></tr><tr><td>Darien Williams</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Darius Johnson</td><td data-n="3.0">3</td><td data-n="6.0">6</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>Jaden Green</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="15.0">15</td><td data-n="1.0">1</td></tr><tr><td>Alek Marshall</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>David Omopariola</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Misa Paiau</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Gavin Nelson</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Zamondre Merriweather</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Ju&#x27;Juan Johnson</td><td data-n="1.0">1</td><td>—</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr></tbody></table></div></article><article class="game-box" data-team="CLEM"><h3 class="box-score">Clemson 22, Georgia Southern 7</h3><p class="box-line">Clemson −19.5 / 55.5</p><div class="box-side"><h4>Clemson</h4><p class="run-pass">Clemson threw for 197, 1 passing scores and ran for 153, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Tait Reynolds</td><td data-n="27.0">27</td><td data-n="178.0">178</td><td data-n="0.0">0</td></tr><tr><td>Christopher Vizzina</td><td data-n="7.0">7</td><td data-n="19.0">19</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Gideon Davidson</td><td data-n="14.0">14</td><td data-n="62.0">62</td><td data-n="0.0">0</td></tr><tr><td>Chris Johnson Jr.</td><td data-n="7.0">7</td><td data-n="53.0">53</td><td data-n="0.0">0</td></tr><tr><td>Tait Reynolds</td><td data-n="14.0">14</td><td data-n="38.0">38</td><td data-n="0.0">0</td></tr><tr><td>Jarvis Green</td><td data-n="2.0">2</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>T.J. Moore</td><td data-n="7.0">7</td><td data-n="10.0">10</td><td data-n="103.0">103</td><td data-n="1.0">1</td></tr><tr><td>Tyler Brown</td><td data-n="4.0">4</td><td data-n="5.0">5</td><td data-n="44.0">44</td><td data-n="0.0">0</td></tr><tr><td>Bryant Wesco Jr.</td><td data-n="6.0">6</td><td data-n="9.0">9</td><td data-n="35.0">35</td><td data-n="0.0">0</td></tr><tr><td>Christian Bentancur</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Olsen Patt-Henry</td><td data-n="2.0">2</td><td>—</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Chris Johnson Jr.</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr><tr><td>Gideon Davidson</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr><tr><td>Jarvis Green</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table></div><div class="box-side"><h4>Georgia Southern</h4><p class="run-pass">Georgia Southern threw for 244, 1 passing scores and ran for 22, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Max Johnson</td><td data-n="47.0">47</td><td data-n="244.0">244</td><td data-n="1.0">1</td></tr><tr><td>Weston Bryan</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>David Mbadinga</td><td data-n="3.0">3</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Taeo Todd</td><td data-n="4.0">4</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Josh Dallas</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Jamarian Samuel</td><td data-n="3.0">3</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Weston Bryan</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Max Johnson</td><td data-n="6.0">6</td><td data-n="-3.0">-3</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Ashton Hollins</td><td data-n="5.0">5</td><td data-n="9.0">9</td><td data-n="97.0">97</td><td data-n="1.0">1</td></tr><tr><td>Jeremiah Ware</td><td data-n="4.0">4</td><td data-n="5.0">5</td><td data-n="47.0">47</td><td data-n="0.0">0</td></tr><tr><td>Josh Dallas</td><td data-n="9.0">9</td><td data-n="11.0">11</td><td data-n="41.0">41</td><td data-n="0.0">0</td></tr><tr><td>David Mbadinga</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="30.0">30</td><td data-n="0.0">0</td></tr><tr><td>River Helms</td><td data-n="5.0">5</td><td data-n="6.0">6</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Jamarian Samuel</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Alex Taylor</td><td data-n="1.0">1</td><td data-n="7.0">7</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr></tbody></table></div></article></section><section class="week-panel" data-week="3"><h4 class="week-lab">Week 3</h4><article class="game-box" data-team="CAL"><h3 class="box-score">California Golden 49, Wagner 7</h3><p class="box-line">California Golden −58.5 / 65.5</p><div class="box-side"><h4>California Golden</h4><p class="run-pass">California Golden threw for 492, 3 passing scores and ran for 134, 3 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jaron-Keawe Sagapolutele</td><td data-n="33.0">33</td><td data-n="413.0">413</td><td data-n="3.0">3</td></tr><tr><td>Jackson Brousseau</td><td data-n="10.0">10</td><td data-n="79.0">79</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Adam Mohammed</td><td data-n="13.0">13</td><td data-n="91.0">91</td><td data-n="2.0">2</td></tr><tr><td>Ashten Emory</td><td data-n="6.0">6</td><td data-n="17.0">17</td><td data-n="1.0">1</td></tr><tr><td>Anthony League</td><td data-n="5.0">5</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Carson Perry-Smith</td><td data-n="4.0">4</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Chase Hendricks</td><td data-n="9.0">9</td><td data-n="11.0">11</td><td data-n="98.0">98</td><td data-n="0.0">0</td></tr><tr><td>Kyion Grayes</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="98.0">98</td><td data-n="1.0">1</td></tr><tr><td>Adam Mohammed</td><td data-n="2.0">2</td><td>—</td><td data-n="78.0">78</td><td data-n="1.0">1</td></tr><tr><td>Ian Strong</td><td data-n="6.0">6</td><td data-n="8.0">8</td><td data-n="48.0">48</td><td data-n="0.0">0</td></tr><tr><td>Cooper Perry</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="45.0">45</td><td data-n="1.0">1</td></tr><tr><td>Jordan King</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="44.0">44</td><td data-n="0.0">0</td></tr><tr><td>Mark Hamper</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="39.0">39</td><td data-n="0.0">0</td></tr><tr><td>Ashten Emory</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Anthony League</td><td data-n="2.0">2</td><td>—</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Taimane Purcell</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Dorian Thomas</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr></tbody></table></div><div class="box-side"><h4>Wagner</h4><p class="run-pass">Wagner threw for 86, 1 passing scores and ran for 112, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Benjamin Newman</td><td data-n="31.0">31</td><td data-n="86.0">86</td><td data-n="1.0">1</td></tr><tr><td>Jason Wiley</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Shawn James</td><td data-n="8.0">8</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Benjamin Newman</td><td data-n="1.0">1</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Matt Morad</td><td data-n="8.0">8</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Cristian Pinto</td><td data-n="2.0">2</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Andrew Ransome</td><td data-n="3.0">3</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Uriah Moats-Maynard</td><td data-n="5.0">5</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Derek Burrell</td><td data-n="3.0">3</td><td data-n="6.0">6</td><td data-n="24.0">24</td><td data-n="0.0">0</td></tr><tr><td>Jeremiah Colclough</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="24.0">24</td><td data-n="0.0">0</td></tr><tr><td>Malik Redd</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="20.0">20</td><td data-n="1.0">1</td></tr><tr><td>Zion Fowler-El</td><td data-n="2.0">2</td><td>—</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Uriah Moats-Maynard</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Matt Morad</td><td data-n="2.0">2</td><td data-n="5.0">5</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Teree McDonald</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Karlos Grier</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table></div></article><article class="game-box" data-team="CLEM"><h3 class="box-score">Clemson 28, North Carolina Tar 20</h3><p class="box-line">Clemson −3 / 44.5</p><div class="box-side"><h4>Clemson</h4><p class="run-pass">Clemson threw for 215, 1 passing scores and ran for 187, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Tait Reynolds</td><td data-n="29.0">29</td><td data-n="215.0">215</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Gideon Davidson</td><td data-n="16.0">16</td><td data-n="105.0">105</td><td data-n="1.0">1</td></tr><tr><td>Tyler Brown</td><td data-n="1.0">1</td><td data-n="34.0">34</td><td data-n="1.0">1</td></tr><tr><td>Tait Reynolds</td><td data-n="11.0">11</td><td data-n="26.0">26</td><td data-n="0.0">0</td></tr><tr><td>Jarvis Green</td><td data-n="5.0">5</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Chris Johnson Jr.</td><td data-n="2.0">2</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Bryant Wesco Jr.</td><td data-n="5.0">5</td><td data-n="8.0">8</td><td data-n="77.0">77</td><td data-n="0.0">0</td></tr><tr><td>T.J. Moore</td><td data-n="7.0">7</td><td data-n="7.0">7</td><td data-n="38.0">38</td><td data-n="0.0">0</td></tr><tr><td>Christian Bentancur</td><td data-n="2.0">2</td><td>—</td><td data-n="35.0">35</td><td data-n="1.0">1</td></tr><tr><td>Olsen Patt-Henry</td><td data-n="2.0">2</td><td>—</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Tyler Brown</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Juju Preston</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Gideon Davidson</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr></tbody></table></div><div class="box-side"><h4>North Carolina Tar</h4><p class="run-pass">North Carolina Tar threw for 135, 1 passing scores and ran for 214, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Billy Edwards Jr.</td><td data-n="30.0">30</td><td data-n="135.0">135</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Benjamin Hall</td><td data-n="18.0">18</td><td data-n="130.0">130</td><td data-n="0.0">0</td></tr><tr><td>Demon June</td><td data-n="12.0">12</td><td data-n="57.0">57</td><td data-n="1.0">1</td></tr><tr><td>Billy Edwards Jr.</td><td data-n="6.0">6</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Jaylen McGill</td><td data-n="3.0">3</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Jordan Shipp</td><td data-n="6.0">6</td><td data-n="7.0">7</td><td data-n="68.0">68</td><td data-n="0.0">0</td></tr><tr><td>Jelani Thurman</td><td data-n="3.0">3</td><td data-n="9.0">9</td><td data-n="18.0">18</td><td data-n="0.0">0</td></tr><tr><td>Mason Humphrey</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Trech Kekahuna</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Benjamin Hall</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="15.0">15</td><td data-n="1.0">1</td></tr><tr><td>Jaylen McGill</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table></div></article></section><section class="week-panel" data-week="season" hidden><h4 class="week-lab">Season totals</h4><article class="game-box" data-team="CAL"><h3 class="box-score">California Golden · 4 games</h3><div class="box-side"><h4>California Golden</h4><p class="run-pass">California Golden threw for 1256, 9 passing scores and ran for 453, 5 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jaron-keawe Sagapolutele</td><td data-n="149.0">149</td><td data-n="1137.0">1137</td><td data-n="9.0">9</td></tr><tr><td>Jackson Brousseau</td><td data-n="22.0">22</td><td data-n="119.0">119</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Adam Mohammed</td><td data-n="88.0">88</td><td data-n="405.0">405</td><td data-n="4.0">4</td></tr><tr><td>Ashten Emory</td><td data-n="10.0">10</td><td data-n="30.0">30</td><td data-n="1.0">1</td></tr><tr><td>Carter Vargas</td><td data-n="8.0">8</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Anthony League</td><td data-n="7.0">7</td><td data-n="16.0">16</td><td data-n="0.0">0</td></tr><tr><td>Carson Perry-Smith</td><td data-n="4.0">4</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Chase Hendricks</td><td data-n="1.0">1</td><td data-n="-1.0">-1</td><td data-n="0.0">0</td></tr><tr><td>Jaron-keawe Sagapolutele</td><td data-n="10.0">10</td><td data-n="-37.0">-37</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Ian Strong</td><td data-n="19.0">19</td><td data-n="15.0">15</td><td data-n="300.0">300</td><td data-n="0.0">0</td></tr><tr><td>Chase Hendricks</td><td data-n="26.0">26</td><td data-n="18.0">18</td><td data-n="261.0">261</td><td data-n="3.0">3</td></tr><tr><td>Adam Mohammed</td><td data-n="21.0">21</td><td data-n="6.0">6</td><td data-n="184.0">184</td><td data-n="1.0">1</td></tr><tr><td>Mason Mini</td><td data-n="10.0">10</td><td data-n="3.0">3</td><td data-n="154.0">154</td><td data-n="2.0">2</td></tr><tr><td>Kyion Grayes</td><td data-n="4.0">4</td><td data-n="5.0">5</td><td data-n="101.0">101</td><td data-n="1.0">1</td></tr><tr><td>Cooper Perry</td><td data-n="6.0">6</td><td data-n="4.0">4</td><td data-n="95.0">95</td><td data-n="1.0">1</td></tr><tr><td>Jordan King</td><td data-n="7.0">7</td><td data-n="7.0">7</td><td data-n="54.0">54</td><td data-n="1.0">1</td></tr><tr><td>Mark Hamper</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="39.0">39</td><td data-n="0.0">0</td></tr><tr><td>Taimane Purcell</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Ashten Emory</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Carter Vargas</td><td data-n="4.0">4</td><td>—</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Anthony League</td><td data-n="2.0">2</td><td>—</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Dorian Thomas</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Cole Boscia</td><td data-n="0.0">0</td><td>—</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Towns McGough</td><td data-n="2.0">2</td><td data-n="6.0">6</td></tr></tbody></table></div></article><article class="game-box" data-team="CLEM"><h3 class="box-score">Clemson · 3 games</h3><div class="box-side"><h4>Clemson</h4><p class="run-pass">Clemson threw for 517, 2 passing scores and ran for 380, 3 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Tait Reynolds</td><td data-n="62.0">62</td><td data-n="415.0">415</td><td data-n="1.0">1</td></tr><tr><td>Christopher Vizzina</td><td data-n="23.0">23</td><td data-n="102.0">102</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Gideon Davidson</td><td data-n="37.0">37</td><td data-n="187.0">187</td><td data-n="1.0">1</td></tr><tr><td>Tait Reynolds</td><td data-n="30.0">30</td><td data-n="55.0">55</td><td data-n="0.0">0</td></tr><tr><td>Chris Johnson Jr.</td><td data-n="12.0">12</td><td data-n="53.0">53</td><td data-n="0.0">0</td></tr><tr><td>Jarvis Green</td><td data-n="11.0">11</td><td data-n="43.0">43</td><td data-n="0.0">0</td></tr><tr><td>Tyler Brown</td><td data-n="1.0">1</td><td data-n="34.0">34</td><td data-n="1.0">1</td></tr><tr><td>David Eziomume</td><td data-n="1.0">1</td><td data-n="11.0">11</td><td data-n="1.0">1</td></tr><tr><td>Christopher Vizzina</td><td data-n="5.0">5</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Bryant Wesco Jr.</td><td data-n="1.0">1</td><td data-n="-7.0">-7</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>T.J. Moore</td><td data-n="18.0">18</td><td data-n="24.0">24</td><td data-n="172.0">172</td><td data-n="1.0">1</td></tr><tr><td>Bryant Wesco Jr.</td><td data-n="13.0">13</td><td data-n="21.0">21</td><td data-n="141.0">141</td><td data-n="0.0">0</td></tr><tr><td>Tyler Brown</td><td data-n="8.0">8</td><td data-n="9.0">9</td><td data-n="83.0">83</td><td data-n="0.0">0</td></tr><tr><td>Christian Bentancur</td><td data-n="4.0">4</td><td data-n="3.0">3</td><td data-n="41.0">41</td><td data-n="1.0">1</td></tr><tr><td>Olsen Patt-Henry</td><td data-n="5.0">5</td><td>—</td><td data-n="35.0">35</td><td data-n="0.0">0</td></tr><tr><td>Juju Preston</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="31.0">31</td><td data-n="0.0">0</td></tr><tr><td>Tristan Smith</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Gordon Sellars III</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Gideon Davidson</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Naeem Burroughs</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Chris Johnson Jr.</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr><tr><td>Jarvis Green</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Nolan Hauser</td><td data-n="1.0">1</td><td data-n="1.0">1</td></tr></tbody></table></div></article></section></div>
+</article>
+</main></div>
+<script>
+(function(){
+  function applyWeek(book, pill){
+    if(!book || !pill) return;
+    book.querySelectorAll('.week-pill').forEach(function(p){
+      p.classList.toggle('on', p===pill);
+    });
+    var wk=pill.getAttribute('data-week')||'';
+    book.querySelectorAll('.week-panel').forEach(function(panel){
+      panel.hidden = (panel.getAttribute('data-week')||'')!==wk;
+    });
+    var inp=document.getElementById('playerSearch');
+    if(inp) inp.dispatchEvent(new Event('input'));
+  }
+  document.addEventListener('click', function(e){
+    var pill=e.target.closest('.week-pill');
+    if(!pill) return;
+    var book=pill.closest('.player-book');
+    if(!book) return;
+    applyWeek(book, pill);
+  });
+})();
+</script>
+<script>
+(function(){
+  var KEY='desk-report-theme';
+  function apply(mode){
+    document.documentElement.classList.toggle('light', mode==='light');
+    var b=document.getElementById('themeBtn');
+    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  var saved=null;
+  try { saved=localStorage.getItem(KEY); } catch (e) {}
+  apply(saved==='light'?'light':'dark');
+  window.toggleDeskTheme=function(){
+    apply(document.documentElement.classList.contains('light')?'dark':'light');
+  };
+})();
+(function(){
+  function val(td){
+    if(!td) return {n:false, v:null, s:''};
+    var dn=td.getAttribute('data-n');
+    if(dn!==null && dn!==''){
+      var n=parseFloat(dn);
+      if(!isNaN(n)) return {n:true, v:n, s:dn};
+    }
+    var t=(td.textContent||'').trim();
+    if(!t || t==='—' || t==='-') return {n:false, v:null, s:''};
+    var raw=t.replace(/[$,×x]/g,'').replace(/,/g,'');
+    if(/^-?\d+(\.\d+)?$/.test(raw)) return {n:true, v:parseFloat(raw), s:t};
+    return {n:false, v:t.toLowerCase(), s:t};
+  }
+  function sortTable(table, col, dir){
+    var tb=table && table.tBodies[0];
+    if(!tb) return;
+    Array.prototype.forEach.call(table.querySelectorAll('th'), function(h){
+      h.removeAttribute('data-dir');
+    });
+    var mark=table.querySelector('th[data-col="'+col+'"]');
+    if(mark) mark.setAttribute('data-dir', dir);
+    var rows=Array.prototype.slice.call(tb.rows);
+    rows.sort(function(a,b){
+      var A=val(a.cells[col]||{});
+      var B=val(b.cells[col]||{});
+      if(A.v===null && B.v===null) return 0;
+      if(A.v===null) return 1;
+      if(B.v===null) return -1;
+      var cmp=0;
+      if(A.n && B.n) cmp=A.v-B.v;
+      else cmp=String(A.v).localeCompare(String(B.v));
+      return dir==='asc' ? cmp : -cmp;
+    });
+    rows.forEach(function(r){ tb.appendChild(r); });
+  }
+  document.addEventListener('click', function(e){
+    var th=e.target.closest('table.sortable th');
+    if(!th) return;
+    var table=th.closest('table');
+    if(!table) return;
+    var raw=th.getAttribute('data-col');
+    if(raw===null) return;
+    var dir=th.getAttribute('data-dir')==='asc' ? 'desc' : 'asc';
+    sortTable(table, parseInt(raw,10), dir);
+  });
+  document.querySelectorAll('table.sortable[data-default-sort]').forEach(function(table){
+    var want=(table.getAttribute('data-default-sort')||'').toLowerCase();
+    var ths=table.querySelectorAll('th[data-col]');
+    var idx=-1;
+    for(var i=0;i<ths.length;i++){
+      var t=(ths[i].textContent||'').trim().toLowerCase();
+      if(t===want || t.indexOf(want)>=0 || want.indexOf(t)>=0){
+        idx=parseInt(ths[i].getAttribute('data-col'),10);
+        break;
+      }
+    }
+    if(idx>=0) sortTable(table, idx, 'desc');
+  });
+})();
+</script>
+<script>
+(function(){
+  function norm(s){
+    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+  }
+  function skip(el){
+    return !!(el.closest && el.closest('dialog, .pcard, .rail'));
+  }
+  function playerIdx(table){
+    var ths=table.querySelectorAll('thead th');
+    for(var i=0;i<ths.length;i++){
+      var t=norm(ths[i].textContent);
+      if(t==='player'||t==='name') return i;
+    }
+    return -1;
+  }
+  function rowHit(tr, q, pidx){
+    if(!q) return true;
+    if(pidx>=0 && tr.cells[pidx]) return norm(tr.cells[pidx].textContent).indexOf(q)>=0;
+    return norm(tr.textContent).indexOf(q)>=0;
+  }
+  function apply(opts){
+    opts = opts || {};
+    var inp=document.getElementById('playerSearch');
+    if(!inp) return;
+    var q=norm(inp.value);
+    var n=0;
+    var hitSel='tbody tr:not([hidden]), li:not([hidden])';
+    function teamOk(tr){
+      return true;
+    }
+    function mark(el, hit){
+      el.hidden = !hit;
+      el.classList.toggle('name-hit', !!(q && hit));
+      if(q && hit) n++;
+    }
+    function panelHasHit(sel){
+      var panel=document.querySelector(sel);
+      if(!panel) return false;
+      var hit=false;
+      panel.querySelectorAll('tbody tr, li').forEach(function(el){
+        if(!el.hidden) hit=true;
+      });
+      return hit;
+    }
+    document.querySelectorAll('table tbody tr').forEach(function(tr){
+      if(skip(tr)) return;
+      var ok=teamOk(tr) && rowHit(tr, q, playerIdx(tr.closest('table')));
+      mark(tr, ok);
+    });
+    document.querySelectorAll('table').forEach(function(t){
+      if(skip(t)) return;
+      var any=false;
+      var tb=t.tBodies[0];
+      if(tb){
+        Array.prototype.forEach.call(tb.rows, function(r){ if(!r.hidden) any=true; });
+      }
+      t.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.pos-book,.week-panel,.box-side,.game-box').forEach(function(sec){
+      var any=false;
+      sec.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) any=true; });
+      if(!sec.querySelector('tbody tr')) any=true;
+      sec.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.week-book-wrap').forEach(function(w){
+      var t=w.querySelector('table');
+      w.classList.toggle('search-empty', !!(t && t.classList.contains('search-empty')));
+    });
+    document.querySelectorAll('.week-pill').forEach(function(pill){
+      var book=pill.closest('.player-book');
+      if(!book) return;
+      var wk=pill.getAttribute('data-week')||'';
+      var panel=book.querySelector('.week-panel[data-week="'+wk+'"]');
+      var hit=false;
+      if(panel){
+        panel.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) hit=true; });
+        if(!panel.querySelector('tbody tr')) hit=true;
+      }
+      pill.classList.toggle('search-miss', !!(q && !hit));
+    });
+    document.querySelectorAll('li').forEach(function(li){
+      if(skip(li)) return;
+      mark(li, !q || norm(li.textContent).indexOf(q)>=0);
+    });
+    var hint=document.getElementById('playerSearchHint');
+    if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
+    document.querySelectorAll('label.pill[for]').forEach(function(lab){
+      var id=lab.getAttribute('for');
+      var sel = id==='v-report' ? '.game-report'
+              : id==='v-prop' ? '.prop-board'
+              : id==='v-etr' ? '.etr-board'
+              : id==='v-book' ? '.player-book' : '';
+      if(!sel) return;
+      lab.classList.toggle('search-miss', !!(q && !panelHasHit(sel)));
+    });
+    if(opts.jump){
+      var book=document.querySelector('.player-book');
+      if(book && q){
+        var on=book.querySelector('.week-pill.on');
+        var cur=on ? (on.getAttribute('data-week')||'') : '';
+        var curPanel=cur ? book.querySelector('.week-panel[data-week="'+cur+'"]') : null;
+        var curHit=false;
+        if(curPanel){
+          curPanel.querySelectorAll('tbody tr.name-hit').forEach(function(){ curHit=true; });
+        }
+        if(!curHit){
+          var alt=book.querySelector('.week-pill:not(.search-miss)');
+          if(alt && alt!==on){
+            book.querySelectorAll('.week-pill').forEach(function(p){ p.classList.toggle('on', p===alt); });
+            var aw=alt.getAttribute('data-week')||'';
+            book.querySelectorAll('.week-panel').forEach(function(panel){
+              panel.hidden = (panel.getAttribute('data-week')||'')!==aw;
+            });
+          }
+        }
+      }
+      var shownArt=document.querySelector('article.panel');
+      var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
+      if(jumpEl){
+        setTimeout(function(){
+          try { jumpEl.scrollIntoView({block:'center', behavior:'smooth'}); }
+          catch (err) { jumpEl.scrollIntoView(true); }
+        }, 40);
+      }
+    }
+  }
+  var form=document.getElementById('playerSearchForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      apply({jump:true});
+    });
+  }
+  var inp=document.getElementById('playerSearch');
+  if(inp){
+    inp.addEventListener('input', function(){ apply({}); });
+    inp.addEventListener('search', function(){ apply({jump:true}); });
+    inp.addEventListener('keydown', function(e){
+      if(e.key==='Enter' || e.keyCode===13){
+        e.preventDefault();
+        apply({jump:true});
+      }
+    });
+  }
+  apply({});
+})();
+</script>
+</body></html>

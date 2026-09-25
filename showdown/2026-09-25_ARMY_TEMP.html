@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CFB Showdown 2026-09-25 · Army @ TEMP</title>
+<style>
+:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#fb7185;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#be123c;--table:#262626;--cell:#525252;--th:#393939;--val:#fb7185;--h:#fb7185;--code:#fb7185;--up:#3ddbd9;--down:#ff8389;--up-bg:rgba(61,219,217,.16);--down-bg:rgba(255,131,137,.16);--wk-alt:rgba(190,18,60,.08);}
+html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#9f1239;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#9f1239;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#9f1239;--h:#9f1239;--code:#9f1239;--up:#005d5d;--down:#a2191f;--up-bg:rgba(0,93,93,.1);--down-bg:rgba(162,25,31,.1);--wk-alt:rgba(190,18,60,.06);}
+html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+body{background-image:linear-gradient(180deg,rgba(22,22,22,.82),rgba(10,14,18,.93)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
+html.light body{background-image:linear-gradient(180deg,rgba(242,244,248,.88),rgba(242,244,248,.94)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");}
+.tab{position:absolute;left:-9999px;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;overflow-y:auto;}
+.rail .brand{order:0;}
+.rail a.pill.home{order:1;}
+.rail > *:not(.brand):not(a.pill.home){order:2;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);text-decoration:none;}
+a.pill.home{border-color:var(--val);}
+.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
+.pill:hover{background:var(--pill-hover);}
+button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
+button.pdf:hover{filter:brightness(1.08);}
+button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.5rem .7rem;}
+button.theme:hover{background:var(--pill-hover);}
+form.search-form{margin:0;display:flex;flex-direction:column;gap:.15rem;}
+label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35rem 0 0;}
+input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
+input.search:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.pill.search-miss{opacity:.42;}
+table.search-empty{display:none;}
+li.name-hit,tr.name-hit{background:rgba(190,18,60,.28);outline:1px solid var(--accent);}
+.hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
+.view-row{display:flex;flex-direction:column;gap:.35rem;margin:.15rem 0 .35rem;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:54rem;min-width:0;}
+h1{font-size:1.6rem;margin:0 0 .3rem;}
+h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
+.line-blast{font-size:1.42rem;line-height:1.35;font-weight:700;margin:.35rem 0 1.2rem;padding:.95rem 1.05rem;background:var(--table);border:2px solid var(--accent);border-left-width:8px;}
+.line-blast b{color:var(--val);font-size:1.08em;}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
+h3.second-pass{border-top:2px solid var(--accent);padding-top:1.15rem;margin-top:2rem;}
+h4{margin:.8rem 0 .4rem;}
+h4.team-break{font-size:1.28rem;font-weight:800;letter-spacing:.01em;margin:2.35rem 0 .55rem;padding:1.05rem 0 .35rem;border-top:3px solid var(--accent);}
+h3 + p + h4.team-break,h3 + h4.team-break{margin-top:.75rem;padding-top:.1rem;border-top:none;}
+h5{font-size:.95rem;margin:1.05rem 0 .3rem;color:var(--muted);font-weight:700;}
+.sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
+table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.92rem;background:var(--table);}
+th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
+th{background:var(--th);color:var(--pill-fg);}
+table.sortable th{cursor:pointer;user-select:none;}
+table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}
+table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
+table.game-log{width:100%;table-layout:auto;}
+table.game-log th,table.game-log td{text-align:center;white-space:nowrap;}
+table.game-log th:nth-child(1),table.game-log td:nth-child(1),table.game-log th:nth-child(2),table.game-log td:nth-child(2){text-align:left;}
+.week-pills,.team-pills{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 .8rem;}
+.week-pill,.team-pill{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--pill);color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:999px;padding:.4rem .75rem;}
+.week-pill.on,.team-pill.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+.week-panel{margin:0 0 1.6rem;}
+.week-panel.search-empty,.game-box.search-empty,.box-side.search-empty{display:none;}
+.week-lab{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.2rem 0 .6rem;}
+.trend-up-strip{margin:.4rem 0 1rem;padding:.7rem .85rem;background:var(--table);border-left:6px solid var(--accent);}
+.trend-up-strip h4{margin:0 0 .35rem;}
+.trend-up-strip ul{margin:.2rem 0 0;}
+.game-box{margin:0 0 1.8rem;padding:0 0 .4rem;border-bottom:1px solid var(--cell);}
+.box-score{font-size:1.2rem;margin:.4rem 0 .15rem;}
+.box-line{font-size:1.02rem;font-weight:700;color:var(--muted);margin:0 0 .55rem;}
+.run-pass{color:var(--muted);margin:0 0 .55rem;}
+.box-side{margin:0 0 1.15rem;}
+table.espn-box{font-size:.9rem;width:100%;}
+table.espn-box th,table.espn-box td{text-align:right;}
+table.espn-box th:first-child,table.espn-box td:first-child{text-align:left;}
+.pos-book{margin:0 0 1.6rem;}
+.pos-book.search-empty{display:none;}
+.pos-book h4{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.4rem 0 .45rem;}
+td.trend-up{background:var(--up-bg) !important;color:var(--up);font-weight:700;}
+td.trend-down{background:var(--down-bg) !important;color:var(--down);font-weight:700;}
+span.delta{font-size:.68em;font-weight:700;margin-left:.28em;opacity:.92;}
+td.val{font-weight:700;color:var(--val);white-space:nowrap;}
+.left{font-weight:700;margin:.2rem 0 1rem;}
+ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
+ul ul{margin:.15rem 0 .4rem;padding-left:1.15rem;}
+li{margin:.35rem 0;}
+code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
+.panel{display:block;}
+.appendix{display:none;}
+@media print{
+  html,body,html.light,html.light body{background:#fff;color:#111;background-image:none !important;}
+  .shell{display:block;}
+  .rail,.noprint{display:none !important;}
+  main{max-width:none;padding:0;}
+  .panel,.appendix{display:block !important;page-break-after:always;}
+  .game-report,.prop-board,.etr-board,.player-book{display:block !important;}
+  .week-panel,.week-panel[hidden]{display:block !important;}
+  .week-pills,.week-pill{display:none !important;}
+  .appendix{page-break-after:auto;}
+  table{background:#fff;page-break-inside:avoid;}
+  th{background:#eee;color:#333;}
+  td.val{color:#000;}
+  td.trend-up{color:#005d5d;background:#e6f6f6 !important;}
+  td.trend-down{color:#a2191f;background:#fce8e8 !important;}
+  h2,h3,h4,h5{page-break-after:avoid;color:#111;}
+  h4.team-break{border-top-color:#111;}
+  .line-blast{background:#fff;border-color:#111;color:#111;}
+  .line-blast b{color:#000;}
+}
+@page{margin:.5in;}
+#v-report:checked ~ .shell .rail label[for=v-report]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-prop:checked ~ .shell .rail label[for=v-prop]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-etr:checked ~ .shell .rail label[for=v-etr]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.player-book,.prop-board,.etr-board{display:none;}
+#v-book:checked ~ .shell main,#v-prop:checked ~ .shell main,#v-etr:checked ~ .shell main{max-width:none;}
+#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .prop-board,#v-book:checked ~ .shell main .etr-board{display:none;}
+#v-book:checked ~ .shell main .player-book{display:block;}
+#v-prop:checked ~ .shell main .game-report,#v-prop:checked ~ .shell main .etr-board,#v-prop:checked ~ .shell main .player-book{display:none;}
+#v-prop:checked ~ .shell main .prop-board{display:block;}
+#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .prop-board,#v-etr:checked ~ .shell main .player-book{display:none;}
+#v-etr:checked ~ .shell main .etr-board{display:block;}
+</style>
+</head><body>
+<input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-prop"/>
+<input class="tab" type="radio" name="v" id="v-etr"/>
+<input class="tab" type="radio" name="v" id="v-book"/>
+<div class="shell">
+<aside class="rail noprint">
+<p class="brand">CFB SHOWDOWN<br/>2026-09-25<br/>Army @ TEMP</p>
+<a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
+<div class="view-row">
+<label class="pill" for="v-report">Report</label>
+<label class="pill" for="v-etr">ETR Value</label>
+<label class="pill" for="v-book">Player book</label>
+<label class="pill" for="v-prop">Prop Value</label>
+</div>
+<form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
+<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
+<button class="pdf" type="button" onclick="window.print()">Save as PDF</button><p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
+</aside>
+<main>
+<h1>CFB Showdown — 2026-09-25 · Army @ TEMP</h1>
+<article class="panel">
+<div class="game-report">
+<h2>1) Army @ TEMP</h2>
+<h3>Game Script</h3>
+<p>Salaries are posted. The sixes below are the DraftKings build for this game.</p>
+<h3>WHO THEY ARE</h3>
+<ul>
+<li><b>Army</b> is unranked this year (1-1).</li>
+</ul>
+<h3>WHO MATTERS</h3>
+<p>These are the names that decide a six tonight — who throws, who runs the ball, who catches it, and who to sit. Role and camp first. Last week is the tape, not the whole bio.</p>
+<h4>Army</h4>
+<p><b>Quarterbacks</b></p>
+<ul>
+<li><b>Cale Hellums</b> — Listed at quarterback. mostly runs. Last week vs USF he threw 10 times for 91, 2 passing scores and had 18 carries for 55. He is a runner first. We do not have a camp or recruit note on him yet.</li>
+<li><b>Bryson Luter</b> — The second quarterback. Sit him — a backup priced like a starter is still the backup. Last week vs Bryant he threw 2 times for 7 and had 5 carries for 49. We do not have a camp or recruit note on him yet.</li>
+</ul>
+<p><b>Running backs</b></p>
+<p>Godspower Nwawuihe got almost every carry (20 carries last week). The back who scored: Godspower Nwawuihe, Carson Smith.</p>
+<ul>
+<li><b>Godspower Nwawuihe</b> — Listed at running back. We do not have a camp or recruit note on him yet. Last week vs USF he had 20 carries for 94 and 1 rushing score and 1 catch for 4.</li>
+<li><b>Jake Rendina</b> — The second running back. We do not have a camp or recruit note on him yet. Last week vs USF he had 6 carries for 26.</li>
+<li><b>Carson Smith</b> — Rotational running back. We do not have a camp or recruit note on him yet. Last week vs Bryant he had 4 carries for 17 and 1 rushing score.</li>
+<li><b>Stratton Fuller</b> — We do not have a camp or recruit note on him yet. Last week vs Bryant he had 4 carries for 67 and 2 catches for 13.</li>
+</ul>
+<p><b>Receiving room</b></p>
+<ul>
+<li><b>Parker Poloskey</b> — Tight end. We do not have a camp or recruit note on him yet. Last week vs USF he had 2 catches for 22.</li>
+<li><b>Brady Anderson</b> — Listed at receiver. We do not have a camp or recruit note on him yet. Last week vs South Florida he had 1 catch for 8.</li>
+<li><b>Tobi Olawole</b> — The second receiver. We do not have a camp or recruit note on him yet. Last week vs USF he had 1 catch for 37.</li>
+<li><b>Tex Brannan</b> — The second tight end. We do not have a camp or recruit note on him yet.</li>
+</ul>
+<h4>TEMP</h4>
+<p><b>Quarterbacks</b></p>
+<ul>
+<li><b>Jaxon Smolik</b> — Listed at quarterback. We do not have last-week tape. We do not have a camp or recruit note on him yet.</li>
+<li><b>Ajani Sheppard</b> — The second quarterback. Sit him — a backup priced like a starter is still the backup. We do not have last-week tape. We do not have a camp or recruit note on him yet.</li>
+</ul>
+<p><b>Running backs</b></p>
+<p>De&#x27;Carlos Young is the listed back. Last week was quiet.</p>
+<ul>
+<li><b>Keveun Mason</b> — Listed at running back. We do not have a camp or recruit note on him yet.</li>
+<li><b>Hunter Smith</b> — The second running back. We do not have a camp or recruit note on him yet.</li>
+<li><b>De&#x27;Carlos Young</b> — Rotational running back. We do not have a camp or recruit note on him yet.</li>
+<li><b>Sam Brown V</b> — We do not have a camp or recruit note on him yet.</li>
+</ul>
+<p><b>Receiving room</b></p>
+<ul>
+<li><b>Colin Chase</b> — Plays on the outside. We do not have a camp or recruit note on him yet.</li>
+<li><b>JoJo Bermudez</b> — Plays inside. We do not have a camp or recruit note on him yet.</li>
+<li><b>Jayce Freeman</b> — Plays on the outside. We do not have a camp or recruit note on him yet.</li>
+<li><b>Ryder Kusch</b> — Tight end. We do not have a camp or recruit note on him yet.</li>
+<li><b>Peter Clarke</b> — The second tight end. We do not have a camp or recruit note on him yet.</li>
+<li><b>Demonte Greene</b> — The second outside receiver. We do not have a camp or recruit note on him yet.</li>
+<li><b>Reis Stocksdale</b> — The second slot receiver. We do not have a camp or recruit note on him yet.</li>
+<li><b>Zander Baptiste</b> — The second outside receiver. We do not have a camp or recruit note on him yet.</li>
+</ul>
+<h3>DEPTH CHART</h3>
+<p>Offense skill. A missing name is —.</p>
+<h4 class="team-break">Army</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th><th scope="col" data-col="3">3</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Cale Hellums</td><td>Bryson Luter</td><td>Ethan Washington</td></tr>
+<tr><td>RB</td><td>Godspower Nwawuihe</td><td>Jake Rendina</td><td>Carson Smith</td></tr>
+<tr><td>TE</td><td>Parker Poloskey</td><td>Tex Brannan</td><td>Brian Dyer</td></tr>
+<tr><td>K</td><td>Dawson Jones</td><td>—</td><td>—</td></tr>
+<tr><td>PK</td><td>Dawson Jones</td><td>—</td><td>—</td></tr>
+<tr><td>SB</td><td>Samari Howard</td><td>Zach Mundell</td><td>David Clerk</td></tr>
+</tbody></table>
+<h4 class="team-break">TEMP</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th><th scope="col" data-col="3">3</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Jaxon Smolik</td><td>Ajani Sheppard</td><td>Camren Boykin</td></tr>
+<tr><td>RB</td><td>Keveun Mason</td><td>Hunter Smith</td><td>De&#x27;Carlos Young</td></tr>
+<tr><td>WR-X</td><td>Jayce Freeman</td><td>Zander Baptiste</td><td>—</td></tr>
+<tr><td>WR-Z</td><td>Colin Chase</td><td>Demonte Greene</td><td>—</td></tr>
+<tr><td>WR-SL</td><td>JoJo Bermudez</td><td>Reis Stocksdale</td><td>—</td></tr>
+<tr><td>TE</td><td>Ryder Kusch</td><td>Peter Clarke</td><td>Daniel Evert</td></tr>
+<tr><td>K</td><td>Carl Hardin</td><td>—</td><td>—</td></tr>
+<tr><td>PK</td><td>Carl Hardin</td><td>—</td><td>—</td></tr>
+</tbody></table>
+<h3>INJURIES</h3>
+<p>Who is out or in doubt for this game. A blank list means nobody on the board is tagged.</p>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Status</th><th scope="col" data-col="3">Tonight</th></tr></thead>
+<tbody>
+<tr><td>Bryson Luter</td><td>Army</td><td>Questionable</td><td>Not locked in. Check warmups.</td></tr>
+<tr><td>Noah Dolbin</td><td>Army</td><td>Questionable</td><td>Not locked in. Check warmups.</td></tr>
+<tr><td>Coen Logan</td><td>TEMP</td><td>Questionable</td><td>Not locked in. Check warmups.</td></tr>
+<tr><td>Reis Stocksdale</td><td>TEMP</td><td>Questionable</td><td>Not locked in. Check warmups.</td></tr>
+<tr><td>Jaxon Smolik</td><td>TEMP</td><td>Expected</td><td>Expected to play.</td></tr>
+</tbody></table>
+<h3>CHART NOTES</h3>
+<p>When the listed chart does not match who is actually playing.</p>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Note</th></tr></thead>
+<tbody>
+<tr><td>—</td><td>—</td><td>Chart and news agree.</td></tr>
+</tbody></table>
+<h3>SCRIPT SIX</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Jaxon Smolik</td><td>TEMP</td><td>QB</td><td>$16,200</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Cale Hellums</td><td>Army</td><td>QB</td><td>$11,600</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Godspower Nwawuihe</td><td>Army</td><td>RB</td><td>$8,200</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Andrew Heidel</td><td>Army</td><td>QB</td><td>$6,000</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Jayce Freeman</td><td>TEMP</td><td>WR</td><td>$4,200</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Joey Schlaffer</td><td>TEMP</td><td>WR</td><td>$3,800</td><td class="val">No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $0  (spent $50,000 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Jaxon Smolik is captain. No last-week tape and no stamped note.</li>
+<li>Cale Hellums. Last week 10 throws for 91 and 2 passing scores, 18 carries for 55. He runs and throws.</li>
+<li>Godspower Nwawuihe. Got almost every carry last week (20 carries). He scored. Also caught 1 for 4.</li>
+<li>Andrew Heidel. No last-week tape and no stamped note.</li>
+<li>Jayce Freeman. He is on this card with Jaxon Smolik, so TEMP&#x27;s passing shows up twice.</li>
+<li>Joey Schlaffer. He is on this card with Jaxon Smolik, so TEMP&#x27;s passing shows up twice.</li>
+</ul>
+<h3>ETR BUILD 1</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Cale Hellums</td><td>Army</td><td>QB</td><td>$17,400</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Jaxon Smolik</td><td>TEMP</td><td>QB</td><td>$10,800</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Jake Rendina</td><td>Army</td><td>RB</td><td>$5,800</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Hunter Smith</td><td>TEMP</td><td>RB</td><td>$5,600</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>JoJo Bermudez</td><td>TEMP</td><td>WR</td><td>$5,400</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Parker Poloskey</td><td>Army</td><td>WR</td><td>$5,000</td><td class="val">No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $0  (spent $50,000 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Cale Hellums is captain. Last week 10 throws for 91 and 2 passing scores, 18 carries for 55. He runs and throws. If he is captain, his rushing yards count extra.</li>
+<li>Jaxon Smolik. No last-week tape and no stamped note.</li>
+<li>Jake Rendina. Listed back last week (6 carries).</li>
+<li>Hunter Smith. No last-week tape and no stamped note.</li>
+<li>JoJo Bermudez. He is on this card with Jaxon Smolik, so TEMP&#x27;s passing shows up twice.</li>
+<li>Parker Poloskey. Last week 2 catches for 22. He is on this card with Cale Hellums, so Army&#x27;s passing shows up twice.</li>
+</ul>
+<h3>ETR BUILD 2</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Jaxon Smolik</td><td>TEMP</td><td>QB</td><td>$16,200</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Cale Hellums</td><td>Army</td><td>QB</td><td>$11,600</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Brady Palmer</td><td>TEMP</td><td>QB</td><td>$6,000</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Jake Rendina</td><td>Army</td><td>RB</td><td>$5,800</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>JoJo Bermudez</td><td>TEMP</td><td>WR</td><td>$5,400</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Parker Poloskey</td><td>Army</td><td>WR</td><td>$5,000</td><td class="val">No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $0  (spent $50,000 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Jaxon Smolik is captain. No last-week tape and no stamped note.</li>
+<li>Cale Hellums. Last week 10 throws for 91 and 2 passing scores, 18 carries for 55. He runs and throws.</li>
+<li>Brady Palmer. No last-week tape and no stamped note.</li>
+<li>Jake Rendina. Listed back last week (6 carries).</li>
+<li>JoJo Bermudez. He is on this card with Jaxon Smolik, so TEMP&#x27;s passing shows up twice.</li>
+<li>Parker Poloskey. Last week 2 catches for 22. He is on this card with Cale Hellums, so Army&#x27;s passing shows up twice.</li>
+</ul>
+<h3>ETR BUILD 3</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Colin Chase</td><td>TEMP</td><td>WR</td><td>$10,200</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Cale Hellums</td><td>Army</td><td>QB</td><td>$11,600</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Jaxon Smolik</td><td>TEMP</td><td>QB</td><td>$10,800</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Samari Howard</td><td>Army</td><td>RB</td><td>$6,400</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Brady Palmer</td><td>TEMP</td><td>QB</td><td>$6,000</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Parker Poloskey</td><td>Army</td><td>WR</td><td>$5,000</td><td class="val">No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $0  (spent $50,000 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Colin Chase is captain. He is on this card with Jaxon Smolik, so TEMP&#x27;s passing shows up twice.</li>
+<li>Cale Hellums. Last week 10 throws for 91 and 2 passing scores, 18 carries for 55. He runs and throws.</li>
+<li>Jaxon Smolik. No last-week tape and no stamped note.</li>
+<li>Samari Howard. Listed back last week (3 carries). Also caught 2 for 10.</li>
+<li>Brady Palmer. No last-week tape and no stamped note.</li>
+<li>Parker Poloskey. Last week 2 catches for 22. He is on this card with Cale Hellums, so Army&#x27;s passing shows up twice.</li>
+</ul>
+</div>
+<div class="prop-board"><h3>OUR VALUE</h3>
+<p>Every posted yardage or receptions number we joined on this salary board — one row per market, not a Top 20. Dest names with no book line are omitted. <b>Value</b> is that number versus DraftKings salary (<b>1.00× is even</b>). Below even stays. This is not ETR. Sorted highest value first.</p>
+<p>No posted yardage or receptions lines for this contest.</p></div>
+<div class="etr-board"><h3>ETR VALUE</h3>
+<p>Every name on ETR&#x27;s sheet for this game, both teams in one table. Click a column to sort. A blank cell is —. <b>ETR salary</b> and <b>Owned</b> are their main-slate numbers. <b>Slate</b> is their sheet label. <b>Points per $1k</b> is their projected points versus our DraftKings salary for this game. Negative sheet values stay on the table. Both teams sit in one list so you can sort them together. Every Showdown skill player stays on the table (— if ETR did not list them). Not a Top 20.</p>
+<table class="sortable" data-default-sort="Points per $1k">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Opp</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">ETR salary</th><th scope="col" data-col="5">Projected points</th><th scope="col" data-col="6">Sheet value</th><th scope="col" data-col="7">Owned</th><th scope="col" data-col="8">Slate</th><th scope="col" data-col="9">Our salary</th><th scope="col" data-col="10">Points per $1k</th></tr></thead>
+<tbody>
+<tr><td>Adam Buffington</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Aden Self</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Aiden Burgy</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Andrew Heidel</td><td>Army</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Brady Anderson</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,600</td><td class="val">—</td></tr>
+<tr><td>Brady Mott</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Brennan Fisher</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Brian Dyer</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Brian Ray III</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Bryson Hosea</td><td>Army</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,800</td><td class="val">—</td></tr>
+<tr><td>Bryson Luter</td><td>Army</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$9,800</td><td class="val">—</td></tr>
+<tr><td>Cale Hellums</td><td>Army</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$11,600</td><td class="val">—</td></tr>
+<tr><td>Carson Smith</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,600</td><td class="val">—</td></tr>
+<tr><td>Charlie Daly</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Chevas Gregory</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Christian Cherilus</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Cole Bowers</td><td>Army</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,800</td><td class="val">—</td></tr>
+<tr><td>David Clerk</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>David Green</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Dawson Jones</td><td>Army</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,800</td><td class="val">—</td></tr>
+<tr><td>Demani Stewart</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Elijah Bechtel</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Elzie Slaughter</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Ethan Washington</td><td>Army</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Finbar Malloy</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Gavin Madigan</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Godspower Nwawuihe</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$8,200</td><td class="val">—</td></tr>
+<tr><td>Harrison Orr</td><td>Army</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Isaiah Linyear</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Jackson Blanchard</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Jackson Kreutzer</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Jaden Pydyn</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Jake Hulstein</td><td>Army</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,800</td><td class="val">—</td></tr>
+<tr><td>Jake Rendina</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$5,800</td><td class="val">—</td></tr>
+<tr><td>Jakiel Kendricks</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>James Rothstein</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Joe Callerame</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Joey Scardina</td><td>Army</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,800</td><td class="val">—</td></tr>
+<tr><td>Josh Greer</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Josh Milhollin</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Kavon Pointer</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Kofi Eduful</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Kurt Thompson</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Lloyd Benson III</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,200</td><td class="val">—</td></tr>
+<tr><td>Luca Guerra</td><td>Army</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,800</td><td class="val">—</td></tr>
+<tr><td>Mark Andrzejewski</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Mason Mixon</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Matthew Perkins</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Noah Dolbin</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Noah Prior</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Parker Poloskey</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$5,000</td><td class="val">—</td></tr>
+<tr><td>Riley Reed</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Ronan Boyle</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Sam Sartin</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Samari Howard</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,400</td><td class="val">—</td></tr>
+<tr><td>Santiago Fernandez</td><td>Army</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Stratton Fuller</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,800</td><td class="val">—</td></tr>
+<tr><td>Stroman Bridges</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Tanner Wilson</td><td>Army</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Tex Brannan</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$2,200</td><td class="val">—</td></tr>
+<tr><td>Tim Kloska</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Tobi Olawole</td><td>Army</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$3,200</td><td class="val">—</td></tr>
+<tr><td>Zach Mundell</td><td>Army</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$7,400</td><td class="val">—</td></tr>
+<tr><td>Ajani Sheppard</td><td>TEMP</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$9,400</td><td class="val">—</td></tr>
+<tr><td>Ameir Morrow</td><td>TEMP</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Ash Roberts</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Brady Palmer</td><td>TEMP</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Brody Norman</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Camren Boykin</td><td>TEMP</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Carl Hardin</td><td>TEMP</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,400</td><td class="val">—</td></tr>
+<tr><td>Coen Logan</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Colin Chase</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,800</td><td class="val">—</td></tr>
+<tr><td>Daniel Evert</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Darren Wu</td><td>TEMP</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,400</td><td class="val">—</td></tr>
+<tr><td>David Wise</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>De&#x27;Carlos Young</td><td>TEMP</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,400</td><td class="val">—</td></tr>
+<tr><td>Demonte Greene</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Hunter Smith</td><td>TEMP</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$5,600</td><td class="val">—</td></tr>
+<tr><td>Hunter Watson</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Jaxon Smolik</td><td>TEMP</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$10,800</td><td class="val">—</td></tr>
+<tr><td>Jayce Freeman</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,200</td><td class="val">—</td></tr>
+<tr><td>JoJo Bermudez</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$5,400</td><td class="val">—</td></tr>
+<tr><td>Joey Schlaffer</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$3,800</td><td class="val">—</td></tr>
+<tr><td>Johnny Martin</td><td>TEMP</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Jordan Miller</td><td>TEMP</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Kaegan Chambers</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Kenedy Uzoma</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Keveun Mason</td><td>TEMP</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$7,800</td><td class="val">—</td></tr>
+<tr><td>Lamar Best</td><td>TEMP</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Liam Fuller</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Luke Cochrane</td><td>TEMP</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,400</td><td class="val">—</td></tr>
+<tr><td>Patrick Keller</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Peter Clarke</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$3,600</td><td class="val">—</td></tr>
+<tr><td>R.J. Blount</td><td>TEMP</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Rameir Hardy</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Reis Stocksdale</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Ryder Kusch</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$2,600</td><td class="val">—</td></tr>
+<tr><td>Sam Brown V</td><td>TEMP</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$9,000</td><td class="val">—</td></tr>
+<tr><td>Tylik Mitchell</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Zander Baptiste</td><td>TEMP</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+</tbody></table></div>
+<div class="player-book"><h3>Player book</h3><p class="sub">Click a week. Each school’s game that week is an ESPN-style box — both sides. Under the score is that game’s posted spread and total. Season totals is the same tables added up. Trending up uses last week versus the games before. A blank cell is —.</p><div class="trend-up-strip"><h4>Trending up</h4><ul><li>Godspower Nwawuihe · Army · 22.8 last game (11.3 before)</li><li>Jake Rendina · Army · 2.6 last game (1 before)</li></ul></div><div class="week-pills noprint"><button type="button" class="week-pill" data-week="0">W0</button><button type="button" class="week-pill" data-week="1">W1</button><button type="button" class="week-pill" data-week="2">W2</button><button type="button" class="week-pill on" data-week="3">W3</button><button type="button" class="week-pill" data-week="season">Season</button></div><section class="week-panel" data-week="0" hidden><h4 class="week-lab">Week 0</h4><article class="game-box" data-team="ARMY"><h3 class="box-score">Army</h3><p class="sub">No box for this week.</p></article><article class="game-box" data-team="TEMP"><h3 class="box-score">TEMP</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="1" hidden><h4 class="week-lab">Week 1</h4><article class="game-box" data-team="ARMY"><h3 class="box-score">Army 59, Bryant 3</h3><p class="box-line">Army −36.5 / 51.5</p><div class="box-side"><h4>Army</h4><p class="run-pass">Army threw for 79, 0 passing scores and ran for 636, 9 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Cale Hellums</td><td data-n="9.0">9</td><td data-n="59.0">59</td><td data-n="0.0">0</td></tr><tr><td>Ethan Washington</td><td data-n="2.0">2</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Bryson Luter</td><td data-n="2.0">2</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Zach Mundell</td><td data-n="4.0">4</td><td data-n="105.0">105</td><td data-n="2.0">2</td></tr><tr><td>Cale Hellums</td><td data-n="7.0">7</td><td data-n="87.0">87</td><td data-n="2.0">2</td></tr><tr><td>Stratton Fuller</td><td data-n="4.0">4</td><td data-n="67.0">67</td><td data-n="0.0">0</td></tr><tr><td>Samari Howard</td><td data-n="4.0">4</td><td data-n="63.0">63</td><td data-n="0.0">0</td></tr><tr><td>Godspower Nwawuihe</td><td data-n="11.0">11</td><td data-n="53.0">53</td><td data-n="1.0">1</td></tr><tr><td>Bryson Luter</td><td data-n="5.0">5</td><td data-n="49.0">49</td><td data-n="0.0">0</td></tr><tr><td>Lloyd Benson III</td><td data-n="4.0">4</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Tre Benson III</td><td data-n="4.0">4</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Brady Anderson</td><td data-n="1.0">1</td><td data-n="30.0">30</td><td data-n="1.0">1</td></tr><tr><td>Bradyn Anderson</td><td data-n="1.0">1</td><td data-n="30.0">30</td><td data-n="1.0">1</td></tr><tr><td>Carson Smith</td><td data-n="4.0">4</td><td data-n="17.0">17</td><td data-n="1.0">1</td></tr><tr><td>Ethan Washington</td><td data-n="3.0">3</td><td data-n="14.0">14</td><td data-n="1.0">1</td></tr><tr><td>David Clerk</td><td data-n="1.0">1</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Demani Stewart</td><td data-n="2.0">2</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Jake Rendina</td><td data-n="3.0">3</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Stroman Bridges</td><td data-n="1.0">1</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Aden Self</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Brady Mott</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Samari Howard</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="52.0">52</td><td data-n="0.0">0</td></tr><tr><td>Stratton Fuller</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Brady Anderson</td><td data-n="1.0">1</td><td>—</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Bradyn Anderson</td><td data-n="1.0">1</td><td>—</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Stroman Bridges</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>David Clerk</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr><tr><td>Zach Mundell</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Bryson Hosea</td><td data-n="0.0">0</td><td data-n="2.0">2</td></tr><tr><td>Dawson Jones</td><td data-n="1.0">1</td><td data-n="6.0">6</td></tr></tbody></table></div><div class="box-side"><h4>Bryant</h4><p class="run-pass">Bryant threw for 196, 0 passing scores and ran for 134, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Brennan Myer</td><td data-n="18.0">18</td><td data-n="88.0">88</td><td data-n="0.0">0</td></tr><tr><td>Jaden Keefner</td><td data-n="5.0">5</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jordan Bennett</td><td data-n="8.0">8</td><td data-n="29.0">29</td><td data-n="0.0">0</td></tr><tr><td>Kendrick Agenor</td><td data-n="5.0">5</td><td data-n="25.0">25</td><td data-n="0.0">0</td></tr><tr><td>O&#x27;Shawn Ross Jr.</td><td data-n="8.0">8</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>OJ Ross</td><td data-n="8.0">8</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Deshon Jenkins</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Khalid Campbell</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Brennan Myer</td><td data-n="5.0">5</td><td data-n="-2.0">-2</td><td data-n="0.0">0</td></tr><tr><td>Shamar Fowles</td><td data-n="1.0">1</td><td data-n="-4.0">-4</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Keylijah Williams</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="24.0">24</td><td data-n="0.0">0</td></tr><tr><td>Shamar Fowles</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>Sean Wilson</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Jose Leon</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Brian Williams</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Jordan Bennett</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Logan Rubel</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>O&#x27;Shawn Ross Jr.</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>OJ Ross</td><td data-n="1.0">1</td><td>—</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Nicholas Stoyanovich</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr></tbody></table></div></article><article class="game-box" data-team="TEMP"><h3 class="box-score">TEMP</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="2" hidden><h4 class="week-lab">Week 2</h4><article class="game-box" data-team="ARMY"><h3 class="box-score">Army 24, South Florida 28</h3><p class="box-line">Army −3.5 / 45.5</p><div class="box-side"><h4>Army</h4><p class="run-pass">Army threw for 128, 2 passing scores and ran for 219, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Cale Hellums</td><td data-n="10.0">10</td><td data-n="91.0">91</td><td data-n="2.0">2</td></tr><tr><td>Zach Mundell</td><td data-n="1.0">1</td><td data-n="37.0">37</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Godspower Nwawuihe</td><td data-n="20.0">20</td><td data-n="94.0">94</td><td data-n="1.0">1</td></tr><tr><td>Cale Hellums</td><td data-n="18.0">18</td><td data-n="55.0">55</td><td data-n="0.0">0</td></tr><tr><td>Zach Mundell</td><td data-n="3.0">3</td><td data-n="45.0">45</td><td data-n="0.0">0</td></tr><tr><td>Jake Rendina</td><td data-n="6.0">6</td><td data-n="26.0">26</td><td data-n="0.0">0</td></tr><tr><td>Samari Howard</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Brady Mott</td><td data-n="1.0">1</td><td data-n="-4.0">-4</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Zach Mundell</td><td data-n="3.0">3</td><td>—</td><td data-n="47.0">47</td><td data-n="1.0">1</td></tr><tr><td>Tobi Olawole</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="37.0">37</td><td data-n="0.0">0</td></tr><tr><td>Parker Poloskey</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Samari Howard</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Brady Anderson</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Bradyn Anderson</td><td data-n="1.0">1</td><td>—</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Godspower Nwawuihe</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="1.0">1</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Dawson Jones</td><td data-n="1.0">1</td><td data-n="3.0">3</td></tr></tbody></table></div><div class="box-side"><h4>South Florida</h4><p class="run-pass">South Florida threw for 478, 4 passing scores and ran for 268, 4 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Michael Van Buren Jr.</td><td data-n="30.0">30</td><td data-n="239.0">239</td><td data-n="2.0">2</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Michael Van Buren Jr.</td><td data-n="5.0">5</td><td data-n="45.0">45</td><td data-n="2.0">2</td></tr><tr><td>Jason Collins Jr.</td><td data-n="9.0">9</td><td data-n="40.0">40</td><td data-n="0.0">0</td></tr><tr><td>D.J. Crowther</td><td data-n="6.0">6</td><td data-n="39.0">39</td><td data-n="0.0">0</td></tr><tr><td>Cameron Seldon</td><td data-n="2.0">2</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Luke Kromenhoek</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Joshua Porter</td><td data-n="3.0">3</td><td data-n="6.0">6</td><td data-n="67.0">67</td><td data-n="1.0">1</td></tr><tr><td>Bryson Rodgers</td><td data-n="6.0">6</td><td data-n="8.0">8</td><td data-n="64.0">64</td><td data-n="1.0">1</td></tr><tr><td>Arhmad Branch</td><td data-n="5.0">5</td><td data-n="7.0">7</td><td data-n="53.0">53</td><td data-n="0.0">0</td></tr><tr><td>Cameron Seldon</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="30.0">30</td><td data-n="0.0">0</td></tr><tr><td>Wyatt Sullivan</td><td data-n="2.0">2</td><td data-n="5.0">5</td><td data-n="21.0">21</td><td data-n="0.0">0</td></tr><tr><td>D.J. Crowther</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Nico Gramatica</td><td data-n="0.0">0</td><td data-n="4.0">4</td></tr></tbody></table></div></article><article class="game-box" data-team="TEMP"><h3 class="box-score">TEMP</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="3"><h4 class="week-lab">Week 3</h4><article class="game-box" data-team="ARMY"><h3 class="box-score">Army</h3><p class="sub">No box for this week.</p></article><article class="game-box" data-team="TEMP"><h3 class="box-score">TEMP</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="season" hidden><h4 class="week-lab">Season totals</h4><article class="game-box" data-team="ARMY"><h3 class="box-score">Army · 3 games</h3><div class="box-side"><h4>Army</h4><p class="run-pass">Army threw for 207, 2 passing scores and ran for 855, 10 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Cale Hellums</td><td data-n="19.0">19</td><td data-n="150.0">150</td><td data-n="2.0">2</td></tr><tr><td>Zach Mundell</td><td data-n="1.0">1</td><td data-n="37.0">37</td><td data-n="0.0">0</td></tr><tr><td>Ethan Washington</td><td data-n="2.0">2</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Bryson Luter</td><td data-n="2.0">2</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Zach Mundell</td><td data-n="7.0">7</td><td data-n="150.0">150</td><td data-n="2.0">2</td></tr><tr><td>Godspower Nwawuihe</td><td data-n="31.0">31</td><td data-n="147.0">147</td><td data-n="2.0">2</td></tr><tr><td>Cale Hellums</td><td data-n="25.0">25</td><td data-n="142.0">142</td><td data-n="2.0">2</td></tr><tr><td>Stratton Fuller</td><td data-n="4.0">4</td><td data-n="67.0">67</td><td data-n="0.0">0</td></tr><tr><td>Samari Howard</td><td data-n="7.0">7</td><td data-n="66.0">66</td><td data-n="0.0">0</td></tr><tr><td>Bryson Luter</td><td data-n="5.0">5</td><td data-n="49.0">49</td><td data-n="0.0">0</td></tr><tr><td>Jake Rendina</td><td data-n="9.0">9</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Lloyd Benson III</td><td data-n="4.0">4</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Tre Benson III</td><td data-n="4.0">4</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Brady Anderson</td><td data-n="1.0">1</td><td data-n="30.0">30</td><td data-n="1.0">1</td></tr><tr><td>Bradyn Anderson</td><td data-n="1.0">1</td><td data-n="30.0">30</td><td data-n="1.0">1</td></tr><tr><td>Carson Smith</td><td data-n="4.0">4</td><td data-n="17.0">17</td><td data-n="1.0">1</td></tr><tr><td>Ethan Washington</td><td data-n="3.0">3</td><td data-n="14.0">14</td><td data-n="1.0">1</td></tr><tr><td>David Clerk</td><td data-n="1.0">1</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Demani Stewart</td><td data-n="2.0">2</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Stroman Bridges</td><td data-n="1.0">1</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Aden Self</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Brady Mott</td><td data-n="2.0">2</td><td data-n="-2.0">-2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Samari Howard</td><td data-n="5.0">5</td><td data-n="7.0">7</td><td data-n="62.0">62</td><td data-n="0.0">0</td></tr><tr><td>Zach Mundell</td><td data-n="3.0">3</td><td data-n="1.0">1</td><td data-n="47.0">47</td><td data-n="1.0">1</td></tr><tr><td>Tobi Olawole</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="37.0">37</td><td data-n="0.0">0</td></tr><tr><td>Parker Poloskey</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Brady Anderson</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Bradyn Anderson</td><td data-n="2.0">2</td><td>—</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Stratton Fuller</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Stroman Bridges</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Godspower Nwawuihe</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="1.0">1</td></tr><tr><td>David Clerk</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Bryson Hosea</td><td data-n="0.0">0</td><td data-n="2.0">2</td></tr><tr><td>Dawson Jones</td><td data-n="2.0">2</td><td data-n="9.0">9</td></tr></tbody></table></div></article><article class="game-box" data-team="TEMP"><h3 class="box-score">TEMP · season</h3><p class="sub">No season totals yet.</p></article></section></div>
+</article>
+</main></div>
+<script>
+(function(){
+  function applyWeek(book, pill){
+    if(!book || !pill) return;
+    book.querySelectorAll('.week-pill').forEach(function(p){
+      p.classList.toggle('on', p===pill);
+    });
+    var wk=pill.getAttribute('data-week')||'';
+    book.querySelectorAll('.week-panel').forEach(function(panel){
+      panel.hidden = (panel.getAttribute('data-week')||'')!==wk;
+    });
+    var inp=document.getElementById('playerSearch');
+    if(inp) inp.dispatchEvent(new Event('input'));
+  }
+  document.addEventListener('click', function(e){
+    var pill=e.target.closest('.week-pill');
+    if(!pill) return;
+    var book=pill.closest('.player-book');
+    if(!book) return;
+    applyWeek(book, pill);
+  });
+})();
+</script>
+<script>
+(function(){
+  var KEY='desk-report-theme';
+  function apply(mode){
+    document.documentElement.classList.toggle('light', mode==='light');
+    var b=document.getElementById('themeBtn');
+    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  var saved=null;
+  try { saved=localStorage.getItem(KEY); } catch (e) {}
+  apply(saved==='light'?'light':'dark');
+  window.toggleDeskTheme=function(){
+    apply(document.documentElement.classList.contains('light')?'dark':'light');
+  };
+})();
+(function(){
+  function val(td){
+    if(!td) return {n:false, v:null, s:''};
+    var dn=td.getAttribute('data-n');
+    if(dn!==null && dn!==''){
+      var n=parseFloat(dn);
+      if(!isNaN(n)) return {n:true, v:n, s:dn};
+    }
+    var t=(td.textContent||'').trim();
+    if(!t || t==='—' || t==='-') return {n:false, v:null, s:''};
+    var raw=t.replace(/[$,×x]/g,'').replace(/,/g,'');
+    if(/^-?\d+(\.\d+)?$/.test(raw)) return {n:true, v:parseFloat(raw), s:t};
+    return {n:false, v:t.toLowerCase(), s:t};
+  }
+  function sortTable(table, col, dir){
+    var tb=table && table.tBodies[0];
+    if(!tb) return;
+    Array.prototype.forEach.call(table.querySelectorAll('th'), function(h){
+      h.removeAttribute('data-dir');
+    });
+    var mark=table.querySelector('th[data-col="'+col+'"]');
+    if(mark) mark.setAttribute('data-dir', dir);
+    var rows=Array.prototype.slice.call(tb.rows);
+    rows.sort(function(a,b){
+      var A=val(a.cells[col]||{});
+      var B=val(b.cells[col]||{});
+      if(A.v===null && B.v===null) return 0;
+      if(A.v===null) return 1;
+      if(B.v===null) return -1;
+      var cmp=0;
+      if(A.n && B.n) cmp=A.v-B.v;
+      else cmp=String(A.v).localeCompare(String(B.v));
+      return dir==='asc' ? cmp : -cmp;
+    });
+    rows.forEach(function(r){ tb.appendChild(r); });
+  }
+  document.addEventListener('click', function(e){
+    var th=e.target.closest('table.sortable th');
+    if(!th) return;
+    var table=th.closest('table');
+    if(!table) return;
+    var raw=th.getAttribute('data-col');
+    if(raw===null) return;
+    var dir=th.getAttribute('data-dir')==='asc' ? 'desc' : 'asc';
+    sortTable(table, parseInt(raw,10), dir);
+  });
+  document.querySelectorAll('table.sortable[data-default-sort]').forEach(function(table){
+    var want=(table.getAttribute('data-default-sort')||'').toLowerCase();
+    var ths=table.querySelectorAll('th[data-col]');
+    var idx=-1;
+    for(var i=0;i<ths.length;i++){
+      var t=(ths[i].textContent||'').trim().toLowerCase();
+      if(t===want || t.indexOf(want)>=0 || want.indexOf(t)>=0){
+        idx=parseInt(ths[i].getAttribute('data-col'),10);
+        break;
+      }
+    }
+    if(idx>=0) sortTable(table, idx, 'desc');
+  });
+})();
+</script>
+<script>
+(function(){
+  function norm(s){
+    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+  }
+  function skip(el){
+    return !!(el.closest && el.closest('dialog, .pcard, .rail'));
+  }
+  function playerIdx(table){
+    var ths=table.querySelectorAll('thead th');
+    for(var i=0;i<ths.length;i++){
+      var t=norm(ths[i].textContent);
+      if(t==='player'||t==='name') return i;
+    }
+    return -1;
+  }
+  function rowHit(tr, q, pidx){
+    if(!q) return true;
+    if(pidx>=0 && tr.cells[pidx]) return norm(tr.cells[pidx].textContent).indexOf(q)>=0;
+    return norm(tr.textContent).indexOf(q)>=0;
+  }
+  function apply(opts){
+    opts = opts || {};
+    var inp=document.getElementById('playerSearch');
+    if(!inp) return;
+    var q=norm(inp.value);
+    var n=0;
+    var hitSel='tbody tr:not([hidden]), li:not([hidden])';
+    function teamOk(tr){
+      return true;
+    }
+    function mark(el, hit){
+      el.hidden = !hit;
+      el.classList.toggle('name-hit', !!(q && hit));
+      if(q && hit) n++;
+    }
+    function panelHasHit(sel){
+      var panel=document.querySelector(sel);
+      if(!panel) return false;
+      var hit=false;
+      panel.querySelectorAll('tbody tr, li').forEach(function(el){
+        if(!el.hidden) hit=true;
+      });
+      return hit;
+    }
+    document.querySelectorAll('table tbody tr').forEach(function(tr){
+      if(skip(tr)) return;
+      var ok=teamOk(tr) && rowHit(tr, q, playerIdx(tr.closest('table')));
+      mark(tr, ok);
+    });
+    document.querySelectorAll('table').forEach(function(t){
+      if(skip(t)) return;
+      var any=false;
+      var tb=t.tBodies[0];
+      if(tb){
+        Array.prototype.forEach.call(tb.rows, function(r){ if(!r.hidden) any=true; });
+      }
+      t.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.pos-book,.week-panel,.box-side,.game-box').forEach(function(sec){
+      var any=false;
+      sec.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) any=true; });
+      if(!sec.querySelector('tbody tr')) any=true;
+      sec.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.week-book-wrap').forEach(function(w){
+      var t=w.querySelector('table');
+      w.classList.toggle('search-empty', !!(t && t.classList.contains('search-empty')));
+    });
+    document.querySelectorAll('.week-pill').forEach(function(pill){
+      var book=pill.closest('.player-book');
+      if(!book) return;
+      var wk=pill.getAttribute('data-week')||'';
+      var panel=book.querySelector('.week-panel[data-week="'+wk+'"]');
+      var hit=false;
+      if(panel){
+        panel.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) hit=true; });
+        if(!panel.querySelector('tbody tr')) hit=true;
+      }
+      pill.classList.toggle('search-miss', !!(q && !hit));
+    });
+    document.querySelectorAll('li').forEach(function(li){
+      if(skip(li)) return;
+      mark(li, !q || norm(li.textContent).indexOf(q)>=0);
+    });
+    var hint=document.getElementById('playerSearchHint');
+    if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
+    document.querySelectorAll('label.pill[for]').forEach(function(lab){
+      var id=lab.getAttribute('for');
+      var sel = id==='v-report' ? '.game-report'
+              : id==='v-prop' ? '.prop-board'
+              : id==='v-etr' ? '.etr-board'
+              : id==='v-book' ? '.player-book' : '';
+      if(!sel) return;
+      lab.classList.toggle('search-miss', !!(q && !panelHasHit(sel)));
+    });
+    if(opts.jump){
+      var book=document.querySelector('.player-book');
+      if(book && q){
+        var on=book.querySelector('.week-pill.on');
+        var cur=on ? (on.getAttribute('data-week')||'') : '';
+        var curPanel=cur ? book.querySelector('.week-panel[data-week="'+cur+'"]') : null;
+        var curHit=false;
+        if(curPanel){
+          curPanel.querySelectorAll('tbody tr.name-hit').forEach(function(){ curHit=true; });
+        }
+        if(!curHit){
+          var alt=book.querySelector('.week-pill:not(.search-miss)');
+          if(alt && alt!==on){
+            book.querySelectorAll('.week-pill').forEach(function(p){ p.classList.toggle('on', p===alt); });
+            var aw=alt.getAttribute('data-week')||'';
+            book.querySelectorAll('.week-panel').forEach(function(panel){
+              panel.hidden = (panel.getAttribute('data-week')||'')!==aw;
+            });
+          }
+        }
+      }
+      var shownArt=document.querySelector('article.panel');
+      var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
+      if(jumpEl){
+        setTimeout(function(){
+          try { jumpEl.scrollIntoView({block:'center', behavior:'smooth'}); }
+          catch (err) { jumpEl.scrollIntoView(true); }
+        }, 40);
+      }
+    }
+  }
+  var form=document.getElementById('playerSearchForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      apply({jump:true});
+    });
+  }
+  var inp=document.getElementById('playerSearch');
+  if(inp){
+    inp.addEventListener('input', function(){ apply({}); });
+    inp.addEventListener('search', function(){ apply({jump:true}); });
+    inp.addEventListener('keydown', function(e){
+      if(e.key==='Enter' || e.keyCode===13){
+        e.preventDefault();
+        apply({jump:true});
+      }
+    });
+  }
+  apply({});
+})();
+</script>
+</body></html>
