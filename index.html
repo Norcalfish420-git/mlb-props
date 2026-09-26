@@ -3,538 +3,143 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MLB Props 2026-09-26</title>
+<title>Prop Boards</title>
 <style>
-:root{--bg:#121820;--fg:#f3efe6;--rail:#1a2430;--rail-line:#2e3c4a;--muted:#c4c0b6;--hint:#8b8578;--pill:#243140;--pill-fg:#f0c674;--pill-line:#3d4d5c;--pill-hover:#2e3d4d;--accent:#1f6feb;--table:#1a2430;--cell:#3d4d5c;--th:#243140;--val:#e8b86d;--h:#e8b86d;}
-html.light{--bg:#f6f1e8;--fg:#1a1c20;--rail:#ebe4d6;--rail-line:#d4cbb8;--muted:#5c564c;--hint:#7a7368;--pill:#e8dfd0;--pill-fg:#1558c0;--pill-line:#c9beaa;--pill-hover:#ddd2c0;--accent:#1558c0;--table:#fffdf8;--cell:#d4cbb8;--th:#ebe4d6;--val:#1558c0;--h:#1558c0;}
-html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,serif;}
-body{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-mlb.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
-html.light body{background-image:linear-gradient(180deg,rgba(246,241,232,.88),rgba(246,241,232,.94)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-mlb.jpg");}
-.tab{position:absolute;left:-9999px;}
+:root{--bg:#121820;--fg:#f3efe6;--rail:#1a2430cc;--rail-line:#2e3c4a;--muted:#c4c0b6;--pill:#243140;--pill-fg:#f0c674;--pill-line:#3d4d5c;--accent:#a85d22;--val:#e8b86d;--card:#1a2430e6;--card-line:#3d4d5c;--desk:#a85d22;}
+.page-mlb{--desk:#1f6feb;--accent:#1f6feb;}
+.page-nfl{--desk:#d97706;--accent:#d97706;}
+.page-cfb{--desk:#e11d48;--accent:#e11d48;}
+.page-showdown{--desk:#be123c;--accent:#be123c;}
+.page-classic{--desk:#e11d48;--accent:#e11d48;}
+html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,"Iowan Old Style",serif;}
+body{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("./assets/desk-bg-hub.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
+body.page-mlb{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("./assets/desk-bg-mlb.jpg");}
+body.page-nfl{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("./assets/desk-bg-nfl.jpg");}
+body.page-cfb,body.page-showdown,body.page-classic{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("./assets/desk-bg-cfb.jpg");}
 .shell{display:flex;min-height:100vh;}
-.rail{width:11.5rem;flex:0 0 11.5rem;background:color-mix(in srgb,var(--rail) 88%,transparent);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;backdrop-filter:blur(12px);}
+.rail{width:14rem;flex:0 0 14rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1.1rem .8rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.4rem;backdrop-filter:blur(14px);}
 .rail .brand{order:0;}
 .rail a.pill.home{order:1;}
 .rail > *:not(.brand):not(a.pill.home){order:2;}
-.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
-.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);text-decoration:none;}
-a.pill.home{border-color:var(--val);}
-.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
-.pill:hover{background:var(--pill-hover);}
-button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
-button.pdf:hover{filter:brightness(1.08);}
-button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.5rem .7rem;}
-button.theme:hover{background:var(--pill-hover);}
-form.search-form{margin:0;display:flex;flex-direction:column;gap:.15rem;}
-label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35rem 0 0;}
-input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
-input.search:focus{outline:2px solid var(--accent);outline-offset:1px;}
-.pill.search-miss{opacity:.42;}
-table.search-empty,.team-block.search-empty,.slip.search-empty{display:none;}
-li.name-hit,tr.name-hit,.bat-card.name-hit{background:rgba(31,111,235,.30);outline:1px solid var(--accent);}
-.hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
-main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:72rem;}
-h1{font-size:1.6rem;margin:0 0 .3rem;}
-h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
-h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
-h4{margin:.8rem 0 .4rem;}
-.sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
-table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.88rem;background:var(--table);}
-th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
-th{background:var(--th);color:var(--pill-fg);}
-table.sortable th{cursor:pointer;user-select:none;}table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
-tfoot th,tfoot td{font-weight:700;background:var(--th);color:var(--pill-fg);}
-td.val{font-weight:700;color:var(--val);white-space:nowrap;}
-ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
-li{margin:.35rem 0;}
-.panel{display:none;}
-.team-block{margin:0 0 1.15rem;}
-.team-head{margin:.75rem 0 .45rem;font-size:1rem;letter-spacing:.05em;}
-.bat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(18.5rem,1fr));gap:.75rem;margin:0 0 1rem;}
-.bat-card{background:color-mix(in srgb,var(--table) 92%,transparent);border:1px solid var(--cell);border-left:5px solid var(--team,#a85d22);border-radius:.55rem;padding:.7rem .8rem .8rem;display:flex;flex-direction:column;gap:.22rem;box-sizing:border-box;box-shadow:0 8px 22px rgba(0,0,0,.18);}
-.bat-head{display:flex;align-items:center;gap:.4rem;}
-.rank{font-weight:700;color:var(--val);font-size:.85rem;}
-.team-badge{min-width:2.05rem;height:2.05rem;padding:0 .28rem;font-size:.62rem;font-weight:700;letter-spacing:.03em;background:var(--team,#a85d22);color:var(--team-ink,#fff);border-radius:50%;display:inline-grid;place-items:center;box-shadow:inset 0 0 0 2px rgba(255,255,255,.18);}
-.overall{--pct:0;--ring:#8d8d8d;margin-left:auto;width:4.2rem;height:4.2rem;border-radius:50%;background:conic-gradient(var(--ring) calc(var(--pct)*1%),var(--pill-line) 0);display:grid;place-items:center;flex:0 0 4.2rem;}
-.overall span{width:3.2rem;height:3.2rem;border-radius:50%;background:var(--table);display:grid;place-items:center;font-weight:700;font-size:1.05rem;color:var(--ring);}
-.name{margin:0;font-size:1.12rem;line-height:1.2;}
-.name-row{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap;}
-.hand{font-size:.68rem;font-weight:700;letter-spacing:.04em;background:var(--pill);color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.25rem;padding:.1rem .35rem;}
-.meta-line{margin:0;font-size:.78rem;color:var(--muted);}
-.chip{font-size:.68rem;font-weight:700;background:var(--pill);color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:999px;padding:.1rem .38rem;}
-.sp-block{margin:.2rem 0 0;padding:0;background:transparent;}
-.sp-head{display:flex;align-items:center;gap:.35rem;flex-wrap:wrap;}
-.sp-name{margin:0;font-size:.92rem;font-weight:700;}
-.sp-note{margin:.1rem 0 .2rem;font-size:.72rem;color:var(--muted);}
-.stat-lab{margin:.4rem 0 .12rem;font-size:.62rem;letter-spacing:.05em;color:var(--muted);text-transform:uppercase;}
-.line-hero{margin:.15rem 0 .05rem;text-align:center;}
-.line-hero .num{display:block;font-size:1.85rem;font-weight:700;color:var(--val);line-height:1.05;}
-.line-hero .lab{display:block;font-size:.68rem;letter-spacing:.04em;color:var(--muted);margin-top:.12rem;}
-.bat-card table.mini{width:100%;table-layout:fixed;margin:.12rem 0 0;font-size:.78rem;background:transparent;border-collapse:collapse;}
-.bat-card table.mini + table.mini{margin-top:-1px;}
-.bat-card table.mini th,.bat-card table.mini td{border:1px solid var(--cell);padding:.28rem .12rem;text-align:center;width:25%;box-sizing:border-box;overflow:hidden;}
-.bat-card table.mini th{background:var(--th);color:var(--muted);font-size:.62rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;}
-.bat-card table.mini td.val{font-size:.92rem;}
-.bat-card table.mini td.tone{font-weight:700;}
-.bat-card table.mini th.pad,.bat-card table.mini td.pad{border-color:transparent;background:transparent;}
-.ticks{list-style:none;margin:.28rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.28rem;}
-.tick{font-size:.68rem;border-radius:.28rem;padding:.16rem .38rem .16rem .28rem;border:1px solid var(--pill-line);display:inline-flex;align-items:center;gap:.28rem;}
-.tick .box{width:.7rem;height:.7rem;border-radius:.12rem;flex:0 0 .7rem;border:1px solid var(--pill-line);box-sizing:border-box;}
-.tick.on{background:var(--accent);color:#fff;border-color:var(--accent);}
-.tick.on .box{background:#fff;border-color:#fff;box-shadow:inset 0 0 0 .14rem var(--accent);}
-.tick.off{background:transparent;color:var(--hint);}
-.slip{background:var(--table);border:1px solid var(--cell);border-radius:.5rem;padding:.15rem .8rem .85rem;margin:0 0 1.35rem;}
-.slip h2{border-top:0;margin-top:.55rem;padding-top:.25rem;}
-@media print{
-  html,body,html.light,html.light body{background:#fff;color:#111;background-image:none !important;}
+.brand{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .55rem;line-height:1.35;}
+.pill{display:block;border-radius:999px;padding:.55rem .75rem;background:var(--pill);color:var(--pill-fg);text-decoration:none;font-size:.82rem;font-weight:700;line-height:1.25;border:1px solid var(--pill-line);}
+.pill.on{background:var(--desk);color:#fff;border-color:var(--desk);}
+.pill.home{border-color:var(--val);}
+.pill.lane-mlb{border-color:#1f6feb;color:#8ab4ff;}
+.pill.lane-nfl{border-color:#d97706;color:#fbbf24;}
+.pill.lane-cfb{border-color:#e11d48;color:#fb7185;}
+.pill.lane-showdown{border-color:#be123c;color:#fb7185;}
+.pill.lane-classic{border-color:#e11d48;color:#fb7185;}
+.pill.lane-mlb.on{background:#1f6feb;color:#fff;border-color:#1f6feb;}
+.pill.lane-nfl.on{background:#d97706;color:#fff;border-color:#d97706;}
+.pill.lane-cfb.on{background:#e11d48;color:#fff;border-color:#e11d48;}
+.pill.lane-showdown.on{background:#be123c;color:#fff;border-color:#be123c;}
+.pill.lane-classic.on{background:#e11d48;color:#fff;border-color:#e11d48;}
+.search-form{margin:.35rem 0 .2rem;}
+.search-form input{width:100%;box-sizing:border-box;border-radius:999px;border:1px solid var(--pill-line);background:#121820cc;color:var(--fg);padding:.45rem .7rem;font:inherit;font-size:.8rem;}
+main{flex:1;padding:1.6rem 1.8rem 3rem;max-width:48rem;}
+.hero{margin:0 0 1.5rem;padding:1.15rem 1.2rem 1.05rem;border:1px solid rgba(232,184,109,.22);border-radius:.9rem;background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(168,93,34,.18));box-shadow:0 12px 40px rgba(0,0,0,.28);}
+.page-mlb .hero{border-color:rgba(31,111,235,.35);background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(31,111,235,.22));}
+.page-nfl .hero{border-color:rgba(217,119,6,.35);background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(217,119,6,.22));}
+.page-cfb .hero{border-color:rgba(225,29,72,.35);background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(225,29,72,.22));}
+.page-showdown .hero{border-color:rgba(190,18,60,.35);background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(190,18,60,.22));}
+.page-classic .hero{border-color:rgba(225,29,72,.35);background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(225,29,72,.22));}
+h1{font-size:2.05rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
+.sub{color:var(--muted);margin:0;font-size:1.02rem;}
+.desk{margin:0 0 2.1rem;padding-top:.2rem;}
+.desk-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:.45rem .75rem;margin:0 0 .7rem;padding-bottom:.55rem;border-bottom:2px solid var(--desk);}
+.desk-head h2{margin:0;font-size:1.45rem;flex:1 1 12rem;}
+.lede{margin:0;color:var(--muted);font-size:.92rem;flex:1 1 100%;}
+.day{margin:0 0 1.15rem;}
+.day h3{margin:0 0 .45rem;font-size:1.05rem;color:var(--muted);font-weight:700;}
+.games{list-style:none;margin:0;padding:0;}
+.games li{margin:0 0 .5rem;}
+.games a{display:block;color:var(--fg);font-size:1.18rem;font-weight:700;text-decoration:none;padding:.7rem .9rem;background:var(--card);border:1px solid var(--card-line);border-left:5px solid var(--desk);border-radius:.7rem;}
+.games a:hover,.games a:focus{border-color:var(--desk);color:#fff;outline:none;}
+.tools-head{font-size:1.15rem;margin:1.5rem 0 .35rem;letter-spacing:-.01em;}
+.tools{display:grid;gap:.75rem;margin-top:.4rem;}
+.tool{display:grid;grid-template-columns:1fr auto;gap:.15rem .8rem;align-items:center;background:var(--card);border:1px solid var(--card-line);border-left:5px solid var(--desk);border-radius:.8rem;padding:.95rem 1.05rem;text-decoration:none;color:inherit;box-shadow:0 8px 24px rgba(0,0,0,.22);}
+.tool.lane-mlb{--desk:#1f6feb;}
+.tool.lane-nfl{--desk:#d97706;}
+.tool.lane-cfb{--desk:#e11d48;}
+.tool.lane-showdown{--desk:#be123c;}
+.tool.lane-classic{--desk:#e11d48;}
+.tool:hover,.tool:focus{border-color:var(--desk);outline:none;transform:translateY(-1px);}
+.tool .when{font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);}
+.tool .game{grid-column:1;font-size:1.35rem;font-weight:700;}
+.tool .rate{grid-column:1;font-size:.82rem;color:var(--val);}
+.tool .go{grid-column:2;grid-row:1 / span 3;color:var(--desk);font-weight:700;}
+.hide{display:none !important;}
+@media (max-width:720px){
+  body{background-attachment:scroll;}
   .shell{display:block;}
-  .rail,.noprint{display:none !important;}
-  main{max-width:none;padding:0;}
-  .panel{display:block !important;page-break-after:always;}
-  .panel:last-child{page-break-after:auto;}
-  table{background:#fff;page-break-inside:avoid;}
-  th{background:#eee;color:#333;}
-  td.val{color:#000;}
-  h2,h3,h4{page-break-after:avoid;color:#111;}
-  .bat-card,.slip{background:#fff;page-break-inside:avoid;break-inside:avoid;}
-  .bat-grid{grid-template-columns:1fr 1fr;}
-  .team-badge{color:var(--team-ink,#111);background:var(--team,#fff);border:1px solid var(--team-ink,#111);}
-  .line-hero .num,.bat-card table.mini td.val{color:#111;}
-  .bat-card table.mini{background:#fff;}
-  .bat-card table.mini th{background:#fff;color:#333;}
-  .tick.on{background:#eee;color:#111;border-color:#111;}
-  .tick.on .box{background:#111;border-color:#111;box-shadow:none;}
-  .overall span{background:#fff;color:#111;}
-  .overall{background:conic-gradient(var(--ring) calc(var(--pct)*1%),#ddd 0);}
+  .rail{width:auto;height:auto;position:relative;flex-direction:row;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--rail-line);}
+  .brand{flex:1 1 100%;}
+  .pill{flex:1 1 auto;}
+  main{padding:1rem 1rem 2.5rem;}
 }
-@page{margin:.5in;}
-#g0:checked ~ .shell .rail label[for=g0]{background:var(--accent);color:#fff;border-color:var(--accent);}
-#g0:checked ~ .shell main .p0{display:block;}
-#g1:checked ~ .shell .rail label[for=g1]{background:var(--accent);color:#fff;border-color:var(--accent);}
-#g1:checked ~ .shell main .p1{display:block;}
-#g2:checked ~ .shell .rail label[for=g2]{background:var(--accent);color:#fff;border-color:var(--accent);}
-#g2:checked ~ .shell main .p2{display:block;}
-#g3:checked ~ .shell .rail label[for=g3]{background:var(--accent);color:#fff;border-color:var(--accent);}
-#g3:checked ~ .shell main .p3{display:block;}
 </style>
-</head><body>
-<input class="tab" type="radio" name="g" id="g0" checked/>
-<input class="tab" type="radio" name="g" id="g1"/>
-<input class="tab" type="radio" name="g" id="g2"/>
-<input class="tab" type="radio" name="g" id="g3"/>
+</head>
+<body class="page-hub">
 <div class="shell">
-<aside class="rail noprint">
-<p class="brand">MLB PROPS<br/>2026-09-26</p>
-<a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
-<label class="pill" for="g0">Yesterday</label>
-<label class="pill" for="g1">Over</label>
-<label class="pill" for="g2">Under</label>
-<label class="pill" for="g3">Cards</label>
-<form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
-<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
-<button class="pdf" type="button" onclick="window.print()">Save as PDF</button>
-<p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
+<aside class="rail">
+<p class="brand">Prop Boards<br/>Home</p>
+<a class="pill home on" href="./hub.html">Home</a>
+<a class="pill lane-mlb" href="./mlb.html">MLB Player Props</a>
+<a class="pill lane-nfl" href="./nfl.html">NFL Player Props</a>
+<a class="pill lane-cfb" href="./cfb.html">CFB Player Props</a>
+<a class="pill lane-showdown" href="./showdown.html">CFB DK Lineup</a>
+<a class="pill lane-classic" href="./classic.html">CFB Classic</a>
+<a class="pill" href="./results.html">Results</a>
+<form class="search-form" id="playerSearchForm" action="#" role="search">
+<input id="hubSearch" type="search" placeholder="Search a game or date" autocomplete="off"/>
+</form>
 </aside>
-<main>
-<h1>MLB Hits+Runs+RBIs — September 26, 2026</h1>
-<p class="sub">Over list and Under list plus tonight's Advanced Pick 4. Hits + runs + RBIs.</p>
-<article class="panel p0">
-<h3>YESTERDAY&#x27;S RESULTS (2026-09-25)</h3>
-<p><b>17 games</b> (all Final) · <b>51 legs graded</b></p>
-<h4>Summary</h4>
-<table class="sortable">
-<thead><tr><th data-col="0">Bucket</th><th data-col="1">HIT</th><th data-col="2">MISS</th><th data-col="3">VOID</th><th data-col="4">Hit rate</th></tr></thead>
-<tbody>
-<tr><td><b>Overall</b></td><td class="val">20</td><td class="val">28</td><td class="val">3</td><td class="val"><b>41.7% (20/48)</b></td></tr>
-<tr><td>Over</td><td class="val">5</td><td class="val">7</td><td class="val">0</td><td class="val">41.7% (5/12)</td></tr>
-<tr><td>Under</td><td class="val">5</td><td class="val">4</td><td class="val">3</td><td class="val">55.6% (5/9)</td></tr>
-</tbody></table>
-<h4>Card results</h4>
-<table class="sortable">
-<thead><tr><th data-col="0">Card</th><th data-col="1">Record</th><th data-col="2">H/M/V</th></tr></thead>
-<tbody>
-<tr><td>Mookie Betts, Kyle Tucker, Teoscar Hernández, George Lombard Jr., Ben Rice, Spencer Jones</td><td>2/6</td><td>2/4/0</td></tr>
-<tr><td>Pete Crow-Armstrong, Seiya Suzuki, Ian Happ, Zack Gelof, Lawrence Butler, Henry Bolte</td><td>1/6</td><td>1/5/0</td></tr>
-<tr><td>Carson Benge, Juan Soto, Brett Baty, Oneil Cruz, Brandon Lowe, Konnor Griffin</td><td>4/6</td><td>4/2/0</td></tr>
-<tr><td>Jeremy Peña, Cole Carrigg, Mauricio Dubón, Michael Harris II, Hunter Goodman, Jackson Chourio</td><td>1/6</td><td>1/5/0</td></tr>
-<tr><td>Advanced · Pick 4 — Miguel Vargas, Sam Antonacci, Jose Altuve, Yainer Diaz</td><td>2/4</td><td>2/2/0</td></tr>
-<tr><td>Advanced Under · Pick 4 — Cole Young, Denzel Clarke, Alec Burleson, Turner Hill</td><td>2/3</td><td>2/1/1</td></tr>
-<tr><td>Sam Antonacci, Alejandro Kirk, Munetaka Murakami, Kevin McGonigle, Riley Greene, Drake Baldwin, Ben Malgeri</td><td>4/7</td><td>4/3/0</td></tr>
-<tr><td>Mookie Betts, George Lombard Jr., Pete Crow-Armstrong, Oneil Cruz, Vinnie Pasquantino, Ronald Acuña Jr.</td><td>1/6</td><td>1/5/0</td></tr>
-<tr><td>Kyle Tucker, Zack Gelof, Miguel Vargas, Pete Alonso, Fernando Tatis Jr., Isaac Paredes</td><td>2/6</td><td>2/4/0</td></tr>
-<tr><td>Cole Young, Denzel Clarke, Emmanuel Rodriguez, Royce Lewis, Alec Burleson, Turner Hill, Matt Shaw, Ryan Kreidler, Braxton Fulford, Thomas Saggese, Jase Bowen, Angel Genao</td><td>5/9</td><td>5/4/3</td></tr>
-</tbody></table>
-<h3>Made the Cut — grade board</h3>
-<p>Every recommended Over with last night&#x27;s result.</p>
-<table class="sortable">
-<thead><tr><th data-col="0">Pick</th><th data-col="1">Team</th><th data-col="2">Overall</th><th data-col="3">Line</th><th data-col="4">HRR</th><th data-col="5">Grade</th></tr></thead>
-<tbody>
-<tr><td>Sam Antonacci</td><td>CWS</td><td class="val">100</td><td class="val">O1.5</td><td class="val">4</td><td class="val"><b>HIT</b></td></tr>
-<tr><td>Alejandro Kirk</td><td>TOR</td><td class="val">94</td><td class="val">O1.5</td><td class="val">4</td><td class="val"><b>HIT</b></td></tr>
-<tr><td>Munetaka Murakami</td><td>CWS</td><td class="val">94</td><td class="val">O1.5</td><td class="val">8</td><td class="val"><b>HIT</b></td></tr>
-<tr><td>Isaac Paredes</td><td>HOU</td><td class="val">93</td><td class="val">O1.5</td><td class="val">1</td><td class="val"><b>MISS</b></td></tr>
-<tr><td>Kevin McGonigle</td><td>DET</td><td class="val">91</td><td class="val">O1.5</td><td class="val">1</td><td class="val"><b>MISS</b></td></tr>
-<tr><td>Riley Greene</td><td>DET</td><td class="val">91</td><td class="val">O1.5</td><td class="val">2</td><td class="val"><b>HIT</b></td></tr>
-<tr><td>Pete Crow-Armstrong</td><td>CHC</td><td class="val">87</td><td class="val">O1.5</td><td class="val">1</td><td class="val"><b>MISS</b></td></tr>
-<tr><td>Drake Baldwin</td><td>ATL</td><td class="val">86</td><td class="val">O1.5</td><td class="val">0</td><td class="val"><b>MISS</b></td></tr>
-<tr><td>Fernando Tatis Jr.</td><td>SD</td><td class="val">86</td><td class="val">O1.5</td><td class="val">2</td><td class="val"><b>HIT</b></td></tr>
-<tr><td>Mookie Betts</td><td>LAD</td><td class="val">84</td><td class="val">1.5@0.8x</td><td class="val">0</td><td class="val"><b>MISS</b></td></tr>
-<tr><td>Ronald Acuña Jr.</td><td>ATL</td><td class="val">84</td><td class="val">O1.5</td><td class="val">0</td><td class="val"><b>MISS</b></td></tr>
-<tr><td>Ben Malgeri</td><td>DET</td><td class="val">83</td><td class="val">1.5*</td><td class="val">0</td><td class="val"><b>MISS</b></td></tr>
-</tbody></table>
-<h4>Summary</h4>
-<table class="sortable">
-<thead><tr><th data-col="0">Bucket</th><th data-col="1">HIT</th><th data-col="2">MISS</th><th data-col="3">VOID</th><th data-col="4">Hit rate</th></tr></thead>
-<tbody>
-<tr><td><b>Made the Cut (12)</b></td><td class="val">5</td><td class="val">7</td><td class="val">0</td><td class="val"><b>41.7% (5/12)</b></td></tr>
-</tbody></table>
-<h3>Under the Cut — grade board</h3>
-<p>Less / Under recs. HIT when hits+runs+RBIs stayed under the line (U1.5 → ≤1, U2.5 → ≤2).</p>
-<table class="sortable">
-<thead><tr><th data-col="0">Pick</th><th data-col="1">Team</th><th data-col="2">Overall</th><th data-col="3">Under line</th><th data-col="4">Under score</th><th data-col="5">HRR</th><th data-col="6">Grade</th></tr></thead>
-<tbody>
-<tr><td>Cole Young</td><td>SEA</td><td class="val">38</td><td>U1.5*</td><td>114</td><td class="val">0</td><td class="val"><b>HIT</b></td></tr>
-<tr><td>Denzel Clarke</td><td>ATH</td><td class="val">48</td><td>U1.5*</td><td>112</td><td class="val">1</td><td class="val"><b>HIT</b></td></tr>
-<tr><td>Emmanuel Rodriguez</td><td>MIN</td><td class="val">44</td><td>U1.5*</td><td>108</td><td class="val">0</td><td class="val"><b>HIT</b></td></tr>
-<tr><td>Royce Lewis</td><td>MIN</td><td class="val">45</td><td>U1.5*</td><td>107</td><td class="val">4</td><td class="val"><b>MISS</b></td></tr>
-<tr><td>Alec Burleson</td><td>STL</td><td class="val">48</td><td>U1.5</td><td>107</td><td class="val">4</td><td class="val"><b>MISS</b></td></tr>
-<tr><td>Turner Hill</td><td>SF</td><td class="val">40</td><td>U1.5*</td><td>103</td><td class="val">0</td><td class="val"><b>VOID</b></td></tr>
-<tr><td>Matt Shaw</td><td>CHC</td><td class="val">38</td><td>U1.5*</td><td>102</td><td class="val">2</td><td class="val"><b>MISS</b></td></tr>
-<tr><td>Ryan Kreidler</td><td>MIN</td><td class="val">51</td><td>U1.5*</td><td>101</td><td class="val">4</td><td class="val"><b>MISS</b></td></tr>
-<tr><td>Braxton Fulford</td><td>COL</td><td class="val">50</td><td>U1.5*</td><td>100</td><td class="val">0</td><td class="val"><b>VOID</b></td></tr>
-<tr><td>Thomas Saggese</td><td>STL</td><td class="val">44</td><td>U1.5*</td><td>99</td><td class="val">0</td><td class="val"><b>HIT</b></td></tr>
-<tr><td>Jase Bowen</td><td>SD</td><td class="val">52</td><td>U1.5*</td><td>98</td><td class="val">0</td><td class="val"><b>HIT</b></td></tr>
-<tr><td>Angel Genao</td><td>CLE</td><td class="val">45</td><td>U1.5*</td><td>97</td><td class="val">0</td><td class="val"><b>VOID</b></td></tr>
-</tbody></table>
-<h4>Summary</h4>
-<table class="sortable">
-<thead><tr><th data-col="0">Bucket</th><th data-col="1">HIT</th><th data-col="2">MISS</th><th data-col="3">VOID</th><th data-col="4">Hit rate</th></tr></thead>
-<tbody>
-<tr><td><b>Under the Cut (12)</b></td><td class="val">5</td><td class="val">4</td><td class="val">3</td><td class="val"><b>55.6% (5/9)</b></td></tr>
-</tbody></table>
-<p><b>Calibrated:</b> yes</p>
-</article>
-<article class="panel p1">
-<h2>OVER — TOP 12 · 2026-09-26</h2>
-<p>Over names that made a cut. Grouped by team (A–Z). Fewer than 20 is fine.</p>
-<section class="team-block" data-team="CWS">
-<h3 class="team-head">CWS</h3>
-<div class="bat-grid">
-<article class="bat-card" data-player="Brenton Doyle" data-team="CWS" style="--team:#27251F;--team-ink:#C4CED4"><div class="bat-who"><header class="bat-head"><span class="rank">#2</span><span class="team-badge">CWS</span><span class="overall" style="--pct:93;--ring:#4a8330"><span>93</span></span></header><div class="name-row"><h4 class="name">Brenton Doyle</h4><span class="hand">RHB</span><span class="hand">BO 7</span></div><p class="line-hero"><span class="num">O1.5</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#333366;--team-ink:#C4CED4"><div class="sp-head"><p class="sp-name">Jose Quintana</p><span class="team-badge">COL</span><span class="hand">LHP</span></div><p class="sp-note">Last 5 starts: getting hit</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#3e8031">5.4</td><td class="val tone" style="color:#2e7d32">1.5</td><td class="val tone" style="color:#2e7d32">7.0</td><td class="val tone" style="color:#2e7d32">10.0</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs R</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.840</td><td class="val tone" style="color:#2e7d32">6.8</td><td class="val tone" style="color:#e87329">.284</td><td class="val tone" style="color:#2e7d32">.864</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs L</th></tr></thead><tbody><tr><td class="val tone" style="color:#d83e2e">19</td><td class="val tone" style="color:#eda526">13</td><td class="val tone" style="color:#2e7d32">7</td><td class="val tone" style="color:#428131">.277</td></tr></tbody></table><ul class="ticks"><li class="tick on"><span class="box" aria-hidden="true"></span>High total</li><li class="tick on"><span class="box" aria-hidden="true"></span>Tired bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter getting hit</li><li class="tick off"><span class="box" aria-hidden="true"></span>Good lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Decent form</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot last two weeks</li><li class="tick on"><span class="box" aria-hidden="true"></span>Park giving up runs</li></ul></article>
+<main id="top">
+<div class="hero">
+<h1>Prop Boards</h1>
+<p class="sub">Tonight’s slips. One board per sport.</p>
 </div>
-</section>
-<section class="team-block" data-team="HOU">
-<h3 class="team-head">HOU</h3>
-<div class="bat-grid">
-<article class="bat-card" data-player="Yordan Alvarez" data-team="HOU" style="--team:#002D62;--team-ink:#EB6E1F"><div class="bat-who"><header class="bat-head"><span class="rank">#6</span><span class="team-badge">HOU</span><span class="overall" style="--pct:99;--ring:#327e32"><span>99</span></span></header><div class="name-row"><h4 class="name">Yordan Alvarez</h4><span class="hand">LHB</span><span class="hand">BO 2</span></div><p class="line-hero"><span class="num">O2.5</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#003831;--team-ink:#EFB21E"><div class="sp-head"><p class="sp-name">Jack Perkins</p><span class="team-badge">ATH</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: steady</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">5.9</td><td class="val tone" style="color:#2e7d32">1.4</td><td class="val tone" style="color:#d83e2e">3.2</td><td class="val tone" style="color:#538530">9.3</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.805</td><td class="val tone" style="color:#2e7d32">7.0</td><td class="val tone" style="color:#2e7d32">.324</td><td class="val tone" style="color:#3e8031">.795</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#8f922c">31</td><td class="val tone" style="color:#63882f">18</td><td class="val tone" style="color:#2e7d32">7</td><td class="val tone" style="color:#2e7d32">.335</td></tr></tbody></table><ul class="ticks"><li class="tick on"><span class="box" aria-hidden="true"></span>High total</li><li class="tick on"><span class="box" aria-hidden="true"></span>Tired bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot offense</li><li class="tick off"><span class="box" aria-hidden="true"></span>Starter getting hit</li><li class="tick on"><span class="box" aria-hidden="true"></span>Good lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Decent form</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot last two weeks</li><li class="tick on"><span class="box" aria-hidden="true"></span>Park giving up runs</li></ul></article>
-<article class="bat-card" data-player="Isaac Paredes" data-team="HOU" style="--team:#002D62;--team-ink:#EB6E1F"><div class="bat-who"><header class="bat-head"><span class="rank">#10</span><span class="team-badge">HOU</span><span class="overall" style="--pct:87;--ring:#63882f"><span>87</span></span></header><div class="name-row"><h4 class="name">Isaac Paredes</h4><span class="hand">RHB</span><span class="hand">BO 3</span></div><p class="line-hero"><span class="num">O1.5</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#003831;--team-ink:#EFB21E"><div class="sp-head"><p class="sp-name">Jack Perkins</p><span class="team-badge">ATH</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: steady</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">5.9</td><td class="val tone" style="color:#2e7d32">1.4</td><td class="val tone" style="color:#d83e2e">3.2</td><td class="val tone" style="color:#538530">9.3</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs R</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#6b8a2e">.782</td><td class="val tone" style="color:#2e7d32">7.0</td><td class="val tone" style="color:#2e7d32">.324</td><td class="val tone" style="color:#3e8031">.795</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#778c2d">32</td><td class="val tone" style="color:#2e7d32">20</td><td class="val tone" style="color:#2e7d32">6</td><td class="val tone" style="color:#c49d28">.258</td></tr></tbody></table><ul class="ticks"><li class="tick on"><span class="box" aria-hidden="true"></span>High total</li><li class="tick on"><span class="box" aria-hidden="true"></span>Tired bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot offense</li><li class="tick off"><span class="box" aria-hidden="true"></span>Starter getting hit</li><li class="tick off"><span class="box" aria-hidden="true"></span>Good lefty-righty</li><li class="tick off"><span class="box" aria-hidden="true"></span>Decent form</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot last two weeks</li><li class="tick on"><span class="box" aria-hidden="true"></span>Park giving up runs</li></ul></article>
+<h2 class="tools-head" id="boards">Boards</h2><div class="tools"><a class="tool lane-mlb" href="./mlb.html"><span class="game">MLB Player Props</span><span class="go">Open</span></a>
+<a class="tool lane-nfl" href="./nfl.html"><span class="game">NFL Player Props</span><span class="go">Open</span></a>
+<a class="tool lane-cfb" href="./cfb.html"><span class="game">CFB Player Props</span><span class="go">Open</span></a>
+<a class="tool lane-showdown" href="./showdown.html"><span class="game">CFB DK Lineup</span><span class="go">Open</span></a>
+<a class="tool lane-classic" href="./classic.html"><span class="game">CFB Classic</span><span class="go">Open</span></a></div>
+</main>
 </div>
-</section>
-<section class="team-block" data-team="KC">
-<h3 class="team-head">KC</h3>
-<div class="bat-grid">
-<article class="bat-card" data-player="Jac Caglianone" data-team="KC" style="--team:#004687;--team-ink:#BD9B60"><div class="bat-who"><header class="bat-head"><span class="rank">#1</span><span class="team-badge">KC</span><span class="overall" style="--pct:93;--ring:#4a8330"><span>93</span></span></header><div class="name-row"><h4 class="name">Jac Caglianone</h4><span class="hand">LHB</span><span class="hand">BO 3</span></div><p class="line-hero"><span class="num">O1.5</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#00385D;--team-ink:#E31937"><div class="sp-head"><p class="sp-name">Tanner Bibee</p><span class="team-badge">CLE</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: getting hit</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#e9a526">4.3</td><td class="val tone" style="color:#ed8128">1.2</td><td class="val tone" style="color:#2e7d32">6.7</td><td class="val tone" style="color:#f29227">8.3</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#d4a027">.751</td><td class="val tone" style="color:#f8a625">4.2</td><td class="val tone" style="color:#d32f2f">.266</td><td class="val tone" style="color:#eb7c29">.719</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#eda526">27</td><td class="val tone" style="color:#7f8e2d">17</td><td class="val tone" style="color:#2e7d32">10</td><td class="val tone" style="color:#2e7d32">.303</td></tr></tbody></table><ul class="ticks"><li class="tick off"><span class="box" aria-hidden="true"></span>High total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tired bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter getting hit</li><li class="tick off"><span class="box" aria-hidden="true"></span>Good lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Decent form</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot last two weeks</li><li class="tick off"><span class="box" aria-hidden="true"></span>Park giving up runs</li></ul></article>
-<article class="bat-card" data-player="Carter Jensen" data-team="KC" style="--team:#004687;--team-ink:#BD9B60"><div class="bat-who"><header class="bat-head"><span class="rank">#7</span><span class="team-badge">KC</span><span class="overall" style="--pct:90;--ring:#57862f"><span>90</span></span></header><div class="name-row"><h4 class="name">Carter Jensen</h4><span class="hand">LHB</span><span class="hand">BO 1</span></div><p class="line-hero"><span class="num">O1.5</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#00385D;--team-ink:#E31937"><div class="sp-head"><p class="sp-name">Tanner Bibee</p><span class="team-badge">CLE</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: getting hit</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#e9a526">4.3</td><td class="val tone" style="color:#ed8128">1.2</td><td class="val tone" style="color:#2e7d32">6.7</td><td class="val tone" style="color:#f29227">8.3</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#d4a027">.751</td><td class="val tone" style="color:#f8a625">4.2</td><td class="val tone" style="color:#d32f2f">.266</td><td class="val tone" style="color:#eb7c29">.719</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">40</td><td class="val tone" style="color:#2e7d32">22</td><td class="val tone" style="color:#2e7d32">13</td><td class="val tone" style="color:#e87329">.237</td></tr></tbody></table><ul class="ticks"><li class="tick off"><span class="box" aria-hidden="true"></span>High total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tired bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter getting hit</li><li class="tick off"><span class="box" aria-hidden="true"></span>Good lefty-righty</li><li class="tick off"><span class="box" aria-hidden="true"></span>Decent form</li><li class="tick on"><span class="box" aria-hidden="true"></span>Hot last two weeks</li><li class="tick off"><span class="box" aria-hidden="true"></span>Park giving up runs</li></ul></article>
-<article class="bat-card" data-player="Vinnie Pasquantino" data-team="KC" style="--team:#004687;--team-ink:#BD9B60"><div class="bat-who"><header class="bat-head"><span class="rank">#11</span><span class="team-badge">KC</span><span class="overall" style="--pct:85;--ring:#6b8a2e"><span>85</span></span></header><div class="name-row"><h4 class="name">Vinnie Pasquantino</h4><span class="hand">LHB</span><span class="hand">BO 5</span></div><p class="line-hero"><span class="num">O1.5</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#00385D;--team-ink:#E31937"><div class="sp-head"><p class="sp-name">Tanner Bibee</p><span class="team-badge">CLE</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: getting hit</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#e9a526">4.3</td><td class="val tone" style="color:#ed8128">1.2</td><td class="val tone" style="color:#2e7d32">6.7</td><td class="val tone" style="color:#f29227">8.3</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#d4a027">.751</td><td class="val tone" style="color:#f8a625">4.2</td><td class="val tone" style="color:#d32f2f">.266</td><td class="val tone" style="color:#eb7c29">.719</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">36</td><td class="val tone" style="color:#2e7d32">28</td><td class="val tone" style="color:#d09f28">4</td><td class="val tone" style="color:#b0992a">.261</td></tr></tbody></table><ul class="ticks"><li class="tick off"><span class="box" aria-hidden="true"></span>High total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tired bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter getting hit</li><li class="tick off"><span class="box" aria-hidden="true"></span>Good lefty-righty</li><li class="tick off"><span class="box" aria-hidden="true"></span>Decent form</li><li class="tick on"><span class="box" aria-hidden="true"></span>Hot last two weeks</li><li class="tick off"><span class="box" aria-hidden="true"></span>Park giving up runs</li></ul></article>
-</div>
-</section>
-<section class="team-block" data-team="MIN">
-<h3 class="team-head">MIN</h3>
-<div class="bat-grid">
-<article class="bat-card" data-player="Luke Keaschall" data-team="MIN" style="--team:#002B5C;--team-ink:#D31145"><div class="bat-who"><header class="bat-head"><span class="rank">#3</span><span class="team-badge">MIN</span><span class="overall" style="--pct:92;--ring:#4e8430"><span>92</span></span></header><div class="name-row"><h4 class="name">Luke Keaschall</h4><span class="hand">RHB</span><span class="hand">BO 1</span></div><p class="line-hero"><span class="num">O1.5</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#003278;--team-ink:#C0111F"><div class="sp-head"><p class="sp-name">Nathan Eovaldi</p><span class="team-badge">TEX</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: getting hit</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#f5a725">4.3</td><td class="val tone" style="color:#eb7a29">1.2</td><td class="val tone" style="color:#87902c">4.9</td><td class="val tone" style="color:#c09c29">8.8</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs R</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#e4672a">.708</td><td class="val tone" style="color:#e1a327">4.4</td><td class="val tone" style="color:#f1a626">.296</td><td class="val tone" style="color:#f8a625">.739</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">36</td><td class="val tone" style="color:#2e7d32">22</td><td class="val tone" style="color:#2e7d32">17</td><td class="val tone" style="color:#2e7d32">.280</td></tr></tbody></table><ul class="ticks"><li class="tick off"><span class="box" aria-hidden="true"></span>High total</li><li class="tick on"><span class="box" aria-hidden="true"></span>Tired bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter getting hit</li><li class="tick off"><span class="box" aria-hidden="true"></span>Good lefty-righty</li><li class="tick off"><span class="box" aria-hidden="true"></span>Decent form</li><li class="tick on"><span class="box" aria-hidden="true"></span>Hot last two weeks</li><li class="tick off"><span class="box" aria-hidden="true"></span>Park giving up runs</li></ul></article>
-<article class="bat-card" data-player="Walker Jenkins" data-team="MIN" style="--team:#002B5C;--team-ink:#D31145"><div class="bat-who"><header class="bat-head"><span class="rank">#12</span><span class="team-badge">MIN</span><span class="overall" style="--pct:81;--ring:#7b8d2d"><span>81</span></span></header><div class="name-row"><h4 class="name">Walker Jenkins</h4><span class="hand">LHB</span><span class="hand">BO 6</span></div><p class="line-hero"><span class="num">1.5*</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#003278;--team-ink:#C0111F"><div class="sp-head"><p class="sp-name">Nathan Eovaldi</p><span class="team-badge">TEX</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: getting hit</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#f5a725">4.3</td><td class="val tone" style="color:#eb7a29">1.2</td><td class="val tone" style="color:#87902c">4.9</td><td class="val tone" style="color:#c09c29">8.8</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#a8972a">.764</td><td class="val tone" style="color:#e1a327">4.4</td><td class="val tone" style="color:#f1a626">.296</td><td class="val tone" style="color:#f8a625">.739</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#eda526">27</td><td class="val tone" style="color:#4a8330">19</td><td class="val tone" style="color:#2e7d32">8</td><td class="val tone" style="color:#87902c">.267</td></tr></tbody></table><ul class="ticks"><li class="tick off"><span class="box" aria-hidden="true"></span>High total</li><li class="tick on"><span class="box" aria-hidden="true"></span>Tired bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter getting hit</li><li class="tick off"><span class="box" aria-hidden="true"></span>Good lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Decent form</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot last two weeks</li><li class="tick off"><span class="box" aria-hidden="true"></span>Park giving up runs</li></ul></article>
-</div>
-</section>
-<section class="team-block" data-team="PIT">
-<h3 class="team-head">PIT</h3>
-<div class="bat-grid">
-<article class="bat-card" data-player="Brandon Lowe" data-team="PIT" style="--team:#27251F;--team-ink:#FDB827"><div class="bat-who"><header class="bat-head"><span class="rank">#4</span><span class="team-badge">PIT</span><span class="overall" style="--pct:92;--ring:#4e8430"><span>92</span></span></header><div class="name-row"><h4 class="name">Brandon Lowe</h4><span class="hand">LHB</span><span class="hand">BO 2</span></div><p class="line-hero"><span class="num">O1.5</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#0C2340;--team-ink:#FA4616"><div class="sp-head"><p class="sp-name">Justin Verlander</p><span class="team-badge">DET</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: getting hit</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">12.3</td><td class="val tone" style="color:#2e7d32">2.2</td><td class="val tone" style="color:#2e7d32">12.3</td><td class="val tone" style="color:#2e7d32">14.7</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">1.280</td><td class="val tone" style="color:#2e7d32">12.3</td><td class="val tone" style="color:#2e7d32">.333</td><td class="val tone" style="color:#2e7d32">1.127</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#468230">34</td><td class="val tone" style="color:#7f8e2d">17</td><td class="val tone" style="color:#2e7d32">6</td><td class="val tone" style="color:#3a8031">.278</td></tr></tbody></table><ul class="ticks"><li class="tick on"><span class="box" aria-hidden="true"></span>High total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tired bullpen</li><li class="tick on"><span class="box" aria-hidden="true"></span>Hot offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter getting hit</li><li class="tick on"><span class="box" aria-hidden="true"></span>Good lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Decent form</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot last two weeks</li><li class="tick on"><span class="box" aria-hidden="true"></span>Park giving up runs</li></ul></article>
-<article class="bat-card" data-player="Ryan O&#x27;Hearn" data-team="PIT" style="--team:#27251F;--team-ink:#FDB827"><div class="bat-who"><header class="bat-head"><span class="rank">#8</span><span class="team-badge">PIT</span><span class="overall" style="--pct:90;--ring:#57862f"><span>90</span></span></header><div class="name-row"><h4 class="name">Ryan O&#x27;Hearn</h4><span class="hand">LHB</span><span class="hand">BO 6</span></div><p class="line-hero"><span class="num">1.5*</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#0C2340;--team-ink:#FA4616"><div class="sp-head"><p class="sp-name">Justin Verlander</p><span class="team-badge">DET</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: getting hit</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">12.3</td><td class="val tone" style="color:#2e7d32">2.2</td><td class="val tone" style="color:#2e7d32">12.3</td><td class="val tone" style="color:#2e7d32">14.7</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">1.280</td><td class="val tone" style="color:#2e7d32">12.3</td><td class="val tone" style="color:#2e7d32">.333</td><td class="val tone" style="color:#2e7d32">1.127</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#e15b2b">21</td><td class="val tone" style="color:#eda526">13</td><td class="val tone" style="color:#2e7d32">8</td><td class="val tone" style="color:#2e7d32">.290</td></tr></tbody></table><ul class="ticks"><li class="tick on"><span class="box" aria-hidden="true"></span>High total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tired bullpen</li><li class="tick on"><span class="box" aria-hidden="true"></span>Hot offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter getting hit</li><li class="tick on"><span class="box" aria-hidden="true"></span>Good lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Decent form</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot last two weeks</li><li class="tick on"><span class="box" aria-hidden="true"></span>Park giving up runs</li></ul></article>
-<article class="bat-card" data-player="Oneil Cruz" data-team="PIT" style="--team:#27251F;--team-ink:#FDB827"><div class="bat-who"><header class="bat-head"><span class="rank">#9</span><span class="team-badge">PIT</span><span class="overall" style="--pct:88;--ring:#5f872f"><span>88</span></span></header><div class="name-row"><h4 class="name">Oneil Cruz</h4><span class="hand">LHB</span><span class="hand">BO 4</span></div><p class="line-hero"><span class="num">1.5*</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#0C2340;--team-ink:#FA4616"><div class="sp-head"><p class="sp-name">Justin Verlander</p><span class="team-badge">DET</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: getting hit</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">12.3</td><td class="val tone" style="color:#2e7d32">2.2</td><td class="val tone" style="color:#2e7d32">12.3</td><td class="val tone" style="color:#2e7d32">14.7</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">1.280</td><td class="val tone" style="color:#2e7d32">12.3</td><td class="val tone" style="color:#2e7d32">.333</td><td class="val tone" style="color:#2e7d32">1.127</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">35</td><td class="val tone" style="color:#2e7d32">21</td><td class="val tone" style="color:#2e7d32">7</td><td class="val tone" style="color:#d09f28">.256</td></tr></tbody></table><ul class="ticks"><li class="tick on"><span class="box" aria-hidden="true"></span>High total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tired bullpen</li><li class="tick on"><span class="box" aria-hidden="true"></span>Hot offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter getting hit</li><li class="tick on"><span class="box" aria-hidden="true"></span>Good lefty-righty</li><li class="tick off"><span class="box" aria-hidden="true"></span>Decent form</li><li class="tick on"><span class="box" aria-hidden="true"></span>Hot last two weeks</li><li class="tick on"><span class="box" aria-hidden="true"></span>Park giving up runs</li></ul></article>
-</div>
-</section>
-<section class="team-block" data-team="TOR">
-<h3 class="team-head">TOR</h3>
-<div class="bat-grid">
-<article class="bat-card" data-player="Nathan Lukes" data-team="TOR" style="--team:#134A8E;--team-ink:#E31937"><div class="bat-who"><header class="bat-head"><span class="rank">#5</span><span class="team-badge">TOR</span><span class="overall" style="--pct:92;--ring:#4e8430"><span>92</span></span></header><div class="name-row"><h4 class="name">Nathan Lukes</h4><span class="hand">LHB</span><span class="hand">BO 6</span></div><p class="line-hero"><span class="num">O1.5</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#C6011F;--team-ink:#FFFFFF"><div class="sp-head"><p class="sp-name">Rhett Lowder</p><span class="team-badge">CIN</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: getting hit</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">6.0</td><td class="val tone" style="color:#2e7d32">1.6</td><td class="val tone" style="color:#2e7d32">10.6</td><td class="val tone" style="color:#2e7d32">10.2</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.843</td><td class="val tone" style="color:#2e7d32">7.4</td><td class="val tone" style="color:#4e8430">.316</td><td class="val tone" style="color:#2e7d32">.809</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#ee8428">24</td><td class="val tone" style="color:#b49929">15</td><td class="val tone" style="color:#2e7d32">6</td><td class="val tone" style="color:#2e7d32">.294</td></tr></tbody></table><ul class="ticks"><li class="tick on"><span class="box" aria-hidden="true"></span>High total</li><li class="tick on"><span class="box" aria-hidden="true"></span>Tired bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter getting hit</li><li class="tick on"><span class="box" aria-hidden="true"></span>Good lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Decent form</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot last two weeks</li><li class="tick on"><span class="box" aria-hidden="true"></span>Park giving up runs</li></ul></article>
-</div>
-</section>
-</article>
-<article class="panel p2">
-<h2>UNDER — TOP 12 · 2026-09-26</h2>
-<p>Under names that made a cut. Grouped by team (A–Z). Fewer than 20 is fine.</p>
-<section class="team-block" data-team="ATH">
-<h3 class="team-head">ATH</h3>
-<div class="bat-grid">
-<article class="bat-card" data-player="Denzel Clarke" data-team="ATH" style="--team:#003831;--team-ink:#EFB21E"><div class="bat-who"><header class="bat-head"><span class="rank">#5</span><span class="team-badge">ATH</span><span class="overall" style="--pct:49;--ring:#f8a625"><span>49</span></span></header><div class="name-row"><h4 class="name">Denzel Clarke</h4><span class="hand">RHB</span><span class="hand">BO 7</span></div><p class="line-hero"><span class="num">U1.5*</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#002D62;--team-ink:#EB6E1F"><div class="sp-head"><p class="sp-name">Hayden Wesneski</p><span class="team-badge">HOU</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: dealing</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#7f8e2d">3.5</td><td class="val tone" style="color:#67892e">1.1</td><td class="val tone" style="color:#2e7d32">2.7</td><td class="val tone" style="color:#2e7d32">7.2</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs R</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.658</td><td class="val tone" style="color:#f49926">4.4</td><td class="val tone" style="color:#2e7d32">.257</td><td class="val tone" style="color:#2e7d32">.646</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">2</td><td class="val tone" style="color:#2e7d32">2</td><td class="val tone" style="color:#2e7d32">1</td><td class="val tone" style="color:#2e7d32">.125</td></tr></tbody></table><ul class="ticks"><li class="tick off"><span class="box" aria-hidden="true"></span>Low total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Stingy bullpen</li><li class="tick on"><span class="box" aria-hidden="true"></span>Cold offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter dealing</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Quiet week</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough park</li></ul></article>
-</div>
-</section>
-<section class="team-block" data-team="CIN">
-<h3 class="team-head">CIN</h3>
-<div class="bat-grid">
-<article class="bat-card" data-player="Ke&#x27;Bryan Hayes" data-team="CIN" style="--team:#C6011F;--team-ink:#FFFFFF"><div class="bat-who"><header class="bat-head"><span class="rank">#3</span><span class="team-badge">CIN</span><span class="overall" style="--pct:38;--ring:#f08b27"><span>38</span></span></header><div class="name-row"><h4 class="name">Ke&#x27;Bryan Hayes</h4><span class="hand">RHB</span><span class="hand">BO 5</span></div><p class="line-hero"><span class="num">U1.5*</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#134A8E;--team-ink:#E31937"><div class="sp-head"><p class="sp-name">Trey Yesavage</p><span class="team-badge">TOR</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: steady</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#9c942b">3.7</td><td class="val tone" style="color:#538530">1.1</td><td class="val tone" style="color:#7b8d2d">3.5</td><td class="val tone" style="color:#2e7d32">5.8</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs R</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.631</td><td class="val tone" style="color:#f1a626">4.2</td><td class="val tone" style="color:#2e7d32">.215</td><td class="val tone" style="color:#2e7d32">.626</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">3</td><td class="val tone" style="color:#2e7d32">2</td><td class="val tone" style="color:#2e7d32">0</td><td class="val tone" style="color:#2e7d32">.130</td></tr></tbody></table><ul class="ticks"><li class="tick off"><span class="box" aria-hidden="true"></span>Low total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Stingy bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Cold offense</li><li class="tick off"><span class="box" aria-hidden="true"></span>Starter dealing</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Quiet week</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough park</li></ul></article>
-<article class="bat-card" data-player="JJ Bleday" data-team="CIN" style="--team:#C6011F;--team-ink:#FFFFFF"><div class="bat-who"><header class="bat-head"><span class="rank">#4</span><span class="team-badge">CIN</span><span class="overall" style="--pct:42;--ring:#f39527"><span>42</span></span></header><div class="name-row"><h4 class="name">JJ Bleday</h4><span class="hand">LHB</span><span class="hand">BO 4</span></div><p class="line-hero"><span class="num">U1.5*</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#134A8E;--team-ink:#E31937"><div class="sp-head"><p class="sp-name">Trey Yesavage</p><span class="team-badge">TOR</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: steady</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#9c942b">3.7</td><td class="val tone" style="color:#538530">1.1</td><td class="val tone" style="color:#7b8d2d">3.5</td><td class="val tone" style="color:#2e7d32">5.8</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.623</td><td class="val tone" style="color:#f1a626">4.2</td><td class="val tone" style="color:#2e7d32">.215</td><td class="val tone" style="color:#2e7d32">.626</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">16</td><td class="val tone" style="color:#9c942b">9</td><td class="val tone" style="color:#2e7d32">0</td><td class="val tone" style="color:#2e7d32">.219</td></tr></tbody></table><ul class="ticks"><li class="tick off"><span class="box" aria-hidden="true"></span>Low total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Stingy bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Cold offense</li><li class="tick off"><span class="box" aria-hidden="true"></span>Starter dealing</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Quiet week</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough park</li></ul></article>
-<article class="bat-card" data-player="Carlos Jorge" data-team="CIN" style="--team:#C6011F;--team-ink:#FFFFFF"><div class="bat-who"><header class="bat-head"><span class="rank">#9</span><span class="team-badge">CIN</span><span class="overall" style="--pct:49;--ring:#f8a625"><span>49</span></span></header><div class="name-row"><h4 class="name">Carlos Jorge</h4><span class="hand">LHB</span><span class="hand">BO 1</span></div><p class="line-hero"><span class="num">U1.5</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#134A8E;--team-ink:#E31937"><div class="sp-head"><p class="sp-name">Trey Yesavage</p><span class="team-badge">TOR</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: steady</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#9c942b">3.7</td><td class="val tone" style="color:#538530">1.1</td><td class="val tone" style="color:#7b8d2d">3.5</td><td class="val tone" style="color:#2e7d32">5.8</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.623</td><td class="val tone" style="color:#f1a626">4.2</td><td class="val tone" style="color:#2e7d32">.215</td><td class="val tone" style="color:#2e7d32">.626</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">12</td><td class="val tone" style="color:#b49929">10</td><td class="val tone" style="color:#d32f2f">7</td><td class="val tone" style="color:#2e7d32">.167</td></tr></tbody></table><ul class="ticks"><li class="tick off"><span class="box" aria-hidden="true"></span>Low total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Stingy bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Cold offense</li><li class="tick off"><span class="box" aria-hidden="true"></span>Starter dealing</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Quiet week</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough park</li></ul></article>
-</div>
-</section>
-<section class="team-block" data-team="CLE">
-<h3 class="team-head">CLE</h3>
-<div class="bat-grid">
-<article class="bat-card" data-player="Angel Genao" data-team="CLE" style="--team:#00385D;--team-ink:#E31937"><div class="bat-who"><header class="bat-head"><span class="rank">#8</span><span class="team-badge">CLE</span><span class="overall" style="--pct:47;--ring:#f7a126"><span>47</span></span></header><div class="name-row"><h4 class="name">Angel Genao</h4><span class="hand">SHB</span><span class="hand">BO 7</span></div><p class="line-hero"><span class="num">U1.5*</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#004687;--team-ink:#BD9B60"><div class="sp-head"><p class="sp-name">Michael Wacha</p><span class="team-badge">KC</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: dealing</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#63882f">3.3</td><td class="val tone" style="color:#3a8031">1.1</td><td class="val tone" style="color:#2e7d32">2.6</td><td class="val tone" style="color:#2e7d32">7.5</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs S</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val">—</td><td class="val tone" style="color:#2e7d32">2.9</td><td class="val tone" style="color:#2e7d32">.247</td><td class="val tone" style="color:#468230">.687</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">5</td><td class="val tone" style="color:#2e7d32">0</td><td class="val tone" style="color:#2e7d32">0</td><td class="val tone" style="color:#4a8330">.224</td></tr></tbody></table><ul class="ticks"><li class="tick off"><span class="box" aria-hidden="true"></span>Low total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Stingy bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Cold offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter dealing</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Quiet week</li><li class="tick on"><span class="box" aria-hidden="true"></span>Tough park</li></ul></article>
-<article class="bat-card" data-player="Petey Halpin" data-team="CLE" style="--team:#00385D;--team-ink:#E31937"><div class="bat-who"><header class="bat-head"><span class="rank">#10</span><span class="team-badge">CLE</span><span class="overall" style="--pct:46;--ring:#f69e26"><span>46</span></span></header><div class="name-row"><h4 class="name">Petey Halpin</h4><span class="hand">LHB</span><span class="hand">BO 4</span></div><p class="line-hero"><span class="num">U1.5*</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#004687;--team-ink:#BD9B60"><div class="sp-head"><p class="sp-name">Michael Wacha</p><span class="team-badge">KC</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: dealing</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#63882f">3.3</td><td class="val tone" style="color:#3a8031">1.1</td><td class="val tone" style="color:#2e7d32">2.6</td><td class="val tone" style="color:#2e7d32">7.5</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.615</td><td class="val tone" style="color:#2e7d32">2.9</td><td class="val tone" style="color:#2e7d32">.247</td><td class="val tone" style="color:#468230">.687</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">17</td><td class="val tone" style="color:#2e7d32">5</td><td class="val tone" style="color:#d09f28">3</td><td class="val tone" style="color:#eb7c29">.261</td></tr></tbody></table><ul class="ticks"><li class="tick off"><span class="box" aria-hidden="true"></span>Low total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Stingy bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Cold offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter dealing</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Quiet week</li><li class="tick on"><span class="box" aria-hidden="true"></span>Tough park</li></ul></article>
-<article class="bat-card" data-player="Nathaniel Lowe" data-team="CLE" style="--team:#00385D;--team-ink:#E31937"><div class="bat-who"><header class="bat-head"><span class="rank">#12</span><span class="team-badge">CLE</span><span class="overall" style="--pct:47;--ring:#f7a126"><span>47</span></span></header><div class="name-row"><h4 class="name">Nathaniel Lowe</h4><span class="hand">LHB</span><span class="hand">BO 6</span></div><p class="line-hero"><span class="num">U1.5</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#004687;--team-ink:#BD9B60"><div class="sp-head"><p class="sp-name">Michael Wacha</p><span class="team-badge">KC</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: dealing</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#63882f">3.3</td><td class="val tone" style="color:#3a8031">1.1</td><td class="val tone" style="color:#2e7d32">2.6</td><td class="val tone" style="color:#2e7d32">7.5</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.615</td><td class="val tone" style="color:#2e7d32">2.9</td><td class="val tone" style="color:#2e7d32">.247</td><td class="val tone" style="color:#468230">.687</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">17</td><td class="val tone" style="color:#2e7d32">4</td><td class="val tone" style="color:#2e7d32">1</td><td class="val tone" style="color:#d32f2f">.286</td></tr></tbody></table><ul class="ticks"><li class="tick off"><span class="box" aria-hidden="true"></span>Low total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Stingy bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Cold offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter dealing</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Quiet week</li><li class="tick on"><span class="box" aria-hidden="true"></span>Tough park</li></ul></article>
-</div>
-</section>
-<section class="team-block" data-team="SF">
-<h3 class="team-head">SF</h3>
-<div class="bat-grid">
-<article class="bat-card" data-player="Drew Gilbert" data-team="SF" style="--team:#FD5A1E;--team-ink:#27251F"><div class="bat-who"><header class="bat-head"><span class="rank">#1</span><span class="team-badge">SF</span><span class="overall" style="--pct:32;--ring:#eb7c29"><span>32</span></span></header><div class="name-row"><h4 class="name">Drew Gilbert</h4><span class="hand">LHB</span><span class="hand">BO 7</span></div><p class="line-hero"><span class="num">U1.5*</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#005A9C;--team-ink:#FFFFFF"><div class="sp-head"><p class="sp-name">Blake Snell</p><span class="team-badge">LAD</span><span class="hand">LHP</span></div><p class="sp-note">Last 5 starts: dealing</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">1.9</td><td class="val tone" style="color:#2e7d32">1.1</td><td class="val tone" style="color:#2e7d32">0.8</td><td class="val tone" style="color:#2e7d32">6.0</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.596</td><td class="val tone" style="color:#2e7d32">1.5</td><td class="val tone" style="color:#f39527">.299</td><td class="val tone" style="color:#2e7d32">.501</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs L</th></tr></thead><tbody><tr><td class="val tone" style="color:#a4962a">23</td><td class="val tone" style="color:#b49929">10</td><td class="val tone" style="color:#7f8e2d">2</td><td class="val tone" style="color:#2e7d32">.068</td></tr></tbody></table><ul class="ticks"><li class="tick on"><span class="box" aria-hidden="true"></span>Low total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Stingy bullpen</li><li class="tick on"><span class="box" aria-hidden="true"></span>Cold offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter dealing</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Quiet week</li><li class="tick on"><span class="box" aria-hidden="true"></span>Tough park</li></ul></article>
-<article class="bat-card" data-player="Andrew Knizner" data-team="SF" style="--team:#FD5A1E;--team-ink:#27251F"><div class="bat-who"><header class="bat-head"><span class="rank">#2</span><span class="team-badge">SF</span><span class="overall" style="--pct:33;--ring:#ec7f28"><span>33</span></span></header><div class="name-row"><h4 class="name">Andrew Knizner</h4><span class="hand">RHB</span><span class="hand">BO 5</span></div><p class="line-hero"><span class="num">U1.5*</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#005A9C;--team-ink:#FFFFFF"><div class="sp-head"><p class="sp-name">Blake Snell</p><span class="team-badge">LAD</span><span class="hand">LHP</span></div><p class="sp-note">Last 5 starts: dealing</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">1.9</td><td class="val tone" style="color:#2e7d32">1.1</td><td class="val tone" style="color:#2e7d32">0.8</td><td class="val tone" style="color:#2e7d32">6.0</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs R</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.460</td><td class="val tone" style="color:#2e7d32">1.5</td><td class="val tone" style="color:#f39527">.299</td><td class="val tone" style="color:#2e7d32">.501</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs L</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">18</td><td class="val tone" style="color:#63882f">7</td><td class="val tone" style="color:#d09f28">3</td><td class="val tone" style="color:#2e7d32">.178</td></tr></tbody></table><ul class="ticks"><li class="tick on"><span class="box" aria-hidden="true"></span>Low total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Stingy bullpen</li><li class="tick on"><span class="box" aria-hidden="true"></span>Cold offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter dealing</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Quiet week</li><li class="tick on"><span class="box" aria-hidden="true"></span>Tough park</li></ul></article>
-<article class="bat-card" data-player="Jonah Cox" data-team="SF" style="--team:#FD5A1E;--team-ink:#27251F"><div class="bat-who"><header class="bat-head"><span class="rank">#6</span><span class="team-badge">SF</span><span class="overall" style="--pct:36;--ring:#ee8628"><span>36</span></span></header><div class="name-row"><h4 class="name">Jonah Cox</h4><span class="hand">RHB</span><span class="hand">BO 1</span></div><p class="line-hero"><span class="num">U1.5*</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#005A9C;--team-ink:#FFFFFF"><div class="sp-head"><p class="sp-name">Blake Snell</p><span class="team-badge">LAD</span><span class="hand">LHP</span></div><p class="sp-note">Last 5 starts: dealing</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">1.9</td><td class="val tone" style="color:#2e7d32">1.1</td><td class="val tone" style="color:#2e7d32">0.8</td><td class="val tone" style="color:#2e7d32">6.0</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs R</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.460</td><td class="val tone" style="color:#2e7d32">1.5</td><td class="val tone" style="color:#f39527">.299</td><td class="val tone" style="color:#2e7d32">.501</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs L</th></tr></thead><tbody><tr><td class="val tone" style="color:#d4a027">25</td><td class="val tone" style="color:#4a8330">6</td><td class="val tone" style="color:#2e7d32">1</td><td class="val tone" style="color:#8b912c">.234</td></tr></tbody></table><ul class="ticks"><li class="tick on"><span class="box" aria-hidden="true"></span>Low total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Stingy bullpen</li><li class="tick on"><span class="box" aria-hidden="true"></span>Cold offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter dealing</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Quiet week</li><li class="tick on"><span class="box" aria-hidden="true"></span>Tough park</li></ul></article>
-</div>
-</section>
-<section class="team-block" data-team="STL">
-<h3 class="team-head">STL</h3>
-<div class="bat-grid">
-<article class="bat-card" data-player="Masyn Winn" data-team="STL" style="--team:#C41E3A;--team-ink:#0C2340"><div class="bat-who"><header class="bat-head"><span class="rank">#7</span><span class="team-badge">STL</span><span class="overall" style="--pct:44;--ring:#f49926"><span>44</span></span></header><div class="name-row"><h4 class="name">Masyn Winn</h4><span class="hand">RHB</span><span class="hand">BO 7</span></div><p class="line-hero"><span class="num">U1.5*</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#12284B;--team-ink:#FFC52F"><div class="sp-head"><p class="sp-name">Dustin May</p><span class="team-badge">MIL</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: getting hit</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#ec7f28">4.7</td><td class="val tone" style="color:#ef8928">1.3</td><td class="val tone" style="color:#d6392e">5.4</td><td class="val tone" style="color:#ef8928">8.8</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs R</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.649</td><td class="val tone" style="color:#bc9b29">3.9</td><td class="val tone" style="color:#d32f2f">.320</td><td class="val tone" style="color:#94922c">.710</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">16</td><td class="val tone" style="color:#4a8330">6</td><td class="val tone" style="color:#d09f28">3</td><td class="val tone" style="color:#2e7d32">.219</td></tr></tbody></table><ul class="ticks"><li class="tick on"><span class="box" aria-hidden="true"></span>Low total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Stingy bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Cold offense</li><li class="tick off"><span class="box" aria-hidden="true"></span>Starter dealing</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Quiet week</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough park</li></ul></article>
-</div>
-</section>
-<section class="team-block" data-team="TEX">
-<h3 class="team-head">TEX</h3>
-<div class="bat-grid">
-<article class="bat-card" data-player="Ezequiel Duran" data-team="TEX" style="--team:#003278;--team-ink:#C0111F"><div class="bat-who"><header class="bat-head"><span class="rank">#11</span><span class="team-badge">TEX</span><span class="overall" style="--pct:49;--ring:#f8a625"><span>49</span></span></header><div class="name-row"><h4 class="name">Ezequiel Duran</h4><span class="hand">RHB</span><span class="hand">BO 5</span></div><p class="line-hero"><span class="num">U1.5</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#002B5C;--team-ink:#D31145"><div class="sp-head"><p class="sp-name">Bailey Ober</p><span class="team-badge">MIN</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: dealing</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#f1a626">4.2</td><td class="val tone" style="color:#e9a526">1.3</td><td class="val tone" style="color:#2e7d32">3.0</td><td class="val tone" style="color:#ee8628">8.8</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs R</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#738c2e">.700</td><td class="val tone" style="color:#5f872f">3.3</td><td class="val tone" style="color:#2e7d32">.270</td><td class="val tone" style="color:#bc9b29">.722</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">17</td><td class="val tone" style="color:#4a8330">6</td><td class="val tone" style="color:#2e7d32">1</td><td class="val tone" style="color:#f1a626">.249</td></tr></tbody></table><ul class="ticks"><li class="tick off"><span class="box" aria-hidden="true"></span>Low total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Stingy bullpen</li><li class="tick on"><span class="box" aria-hidden="true"></span>Cold offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter dealing</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Quiet week</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough park</li></ul></article>
-</div>
-</section>
-</article>
-<article class="panel p3">
-<section class="slip">
-<h2>Advanced · Pick 4</h2>
-<div class="bat-grid">
-<article class="bat-card" data-player="Miguel Vargas" data-team="CWS" style="--team:#27251F;--team-ink:#C4CED4"><div class="bat-who"><header class="bat-head"><span class="rank">#1</span><span class="team-badge">CWS</span><span class="overall" style="--pct:100;--ring:#2e7d32"><span>100</span></span></header><div class="name-row"><h4 class="name">Miguel Vargas</h4><span class="hand">RHB</span><span class="hand">BO 3</span></div><p class="line-hero"><span class="num">1.5@0.8x</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#333366;--team-ink:#C4CED4"><div class="sp-head"><p class="sp-name">Jose Quintana</p><span class="team-badge">COL</span><span class="hand">LHP</span></div><p class="sp-note">Last 5 starts: getting hit</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#3e8031">5.4</td><td class="val tone" style="color:#2e7d32">1.5</td><td class="val tone" style="color:#2e7d32">7.0</td><td class="val tone" style="color:#2e7d32">10.0</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs R</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.840</td><td class="val tone" style="color:#2e7d32">6.8</td><td class="val tone" style="color:#e87329">.284</td><td class="val tone" style="color:#2e7d32">.864</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs L</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">38</td><td class="val tone" style="color:#2e7d32">23</td><td class="val tone" style="color:#2e7d32">9</td><td class="val tone" style="color:#63882f">.272</td></tr></tbody></table><ul class="ticks"><li class="tick on"><span class="box" aria-hidden="true"></span>High total</li><li class="tick on"><span class="box" aria-hidden="true"></span>Tired bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter getting hit</li><li class="tick on"><span class="box" aria-hidden="true"></span>Good lefty-righty</li><li class="tick off"><span class="box" aria-hidden="true"></span>Decent form</li><li class="tick on"><span class="box" aria-hidden="true"></span>Hot last two weeks</li><li class="tick on"><span class="box" aria-hidden="true"></span>Park giving up runs</li></ul></article>
-<article class="bat-card" data-player="Brandon Lowe" data-team="PIT" style="--team:#27251F;--team-ink:#FDB827"><div class="bat-who"><header class="bat-head"><span class="rank">#2</span><span class="team-badge">PIT</span><span class="overall" style="--pct:92;--ring:#4e8430"><span>92</span></span></header><div class="name-row"><h4 class="name">Brandon Lowe</h4><span class="hand">LHB</span><span class="hand">BO 2</span></div><p class="line-hero"><span class="num">O1.5</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#0C2340;--team-ink:#FA4616"><div class="sp-head"><p class="sp-name">Justin Verlander</p><span class="team-badge">DET</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: getting hit</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">12.3</td><td class="val tone" style="color:#2e7d32">2.2</td><td class="val tone" style="color:#2e7d32">12.3</td><td class="val tone" style="color:#2e7d32">14.7</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">1.280</td><td class="val tone" style="color:#2e7d32">12.3</td><td class="val tone" style="color:#2e7d32">.333</td><td class="val tone" style="color:#2e7d32">1.127</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#468230">34</td><td class="val tone" style="color:#7f8e2d">17</td><td class="val tone" style="color:#2e7d32">6</td><td class="val tone" style="color:#3a8031">.278</td></tr></tbody></table><ul class="ticks"><li class="tick on"><span class="box" aria-hidden="true"></span>High total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tired bullpen</li><li class="tick on"><span class="box" aria-hidden="true"></span>Hot offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter getting hit</li><li class="tick on"><span class="box" aria-hidden="true"></span>Good lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Decent form</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot last two weeks</li><li class="tick on"><span class="box" aria-hidden="true"></span>Park giving up runs</li></ul></article>
-<article class="bat-card" data-player="Yordan Alvarez" data-team="HOU" style="--team:#002D62;--team-ink:#EB6E1F"><div class="bat-who"><header class="bat-head"><span class="rank">#3</span><span class="team-badge">HOU</span><span class="overall" style="--pct:99;--ring:#327e32"><span>99</span></span></header><div class="name-row"><h4 class="name">Yordan Alvarez</h4><span class="hand">LHB</span><span class="hand">BO 2</span></div><p class="line-hero"><span class="num">O2.5</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#003831;--team-ink:#EFB21E"><div class="sp-head"><p class="sp-name">Jack Perkins</p><span class="team-badge">ATH</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: steady</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">5.9</td><td class="val tone" style="color:#2e7d32">1.4</td><td class="val tone" style="color:#d83e2e">3.2</td><td class="val tone" style="color:#538530">9.3</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.805</td><td class="val tone" style="color:#2e7d32">7.0</td><td class="val tone" style="color:#2e7d32">.324</td><td class="val tone" style="color:#3e8031">.795</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#8f922c">31</td><td class="val tone" style="color:#63882f">18</td><td class="val tone" style="color:#2e7d32">7</td><td class="val tone" style="color:#2e7d32">.335</td></tr></tbody></table><ul class="ticks"><li class="tick on"><span class="box" aria-hidden="true"></span>High total</li><li class="tick on"><span class="box" aria-hidden="true"></span>Tired bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot offense</li><li class="tick off"><span class="box" aria-hidden="true"></span>Starter getting hit</li><li class="tick on"><span class="box" aria-hidden="true"></span>Good lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Decent form</li><li class="tick off"><span class="box" aria-hidden="true"></span>Hot last two weeks</li><li class="tick on"><span class="box" aria-hidden="true"></span>Park giving up runs</li></ul></article>
-<article class="bat-card" data-player="Oneil Cruz" data-team="PIT" style="--team:#27251F;--team-ink:#FDB827"><div class="bat-who"><header class="bat-head"><span class="rank">#4</span><span class="team-badge">PIT</span><span class="overall" style="--pct:88;--ring:#5f872f"><span>88</span></span></header><div class="name-row"><h4 class="name">Oneil Cruz</h4><span class="hand">LHB</span><span class="hand">BO 4</span></div><p class="line-hero"><span class="num">O1.5</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#0C2340;--team-ink:#FA4616"><div class="sp-head"><p class="sp-name">Justin Verlander</p><span class="team-badge">DET</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: getting hit</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">12.3</td><td class="val tone" style="color:#2e7d32">2.2</td><td class="val tone" style="color:#2e7d32">12.3</td><td class="val tone" style="color:#2e7d32">14.7</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">1.280</td><td class="val tone" style="color:#2e7d32">12.3</td><td class="val tone" style="color:#2e7d32">.333</td><td class="val tone" style="color:#2e7d32">1.127</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">35</td><td class="val tone" style="color:#2e7d32">21</td><td class="val tone" style="color:#2e7d32">7</td><td class="val tone" style="color:#d09f28">.256</td></tr></tbody></table><ul class="ticks"><li class="tick on"><span class="box" aria-hidden="true"></span>High total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tired bullpen</li><li class="tick on"><span class="box" aria-hidden="true"></span>Hot offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter getting hit</li><li class="tick on"><span class="box" aria-hidden="true"></span>Good lefty-righty</li><li class="tick off"><span class="box" aria-hidden="true"></span>Decent form</li><li class="tick on"><span class="box" aria-hidden="true"></span>Hot last two weeks</li><li class="tick on"><span class="box" aria-hidden="true"></span>Park giving up runs</li></ul></article>
-</div>
-</section>
-<section class="slip">
-<h2>Advanced Under · Pick 4</h2>
-<div class="bat-grid">
-<article class="bat-card" data-player="Drew Gilbert" data-team="SF" style="--team:#FD5A1E;--team-ink:#27251F"><div class="bat-who"><header class="bat-head"><span class="rank">#1</span><span class="team-badge">SF</span><span class="overall" style="--pct:100;--ring:#2e7d32"><span>123</span></span></header><div class="name-row"><h4 class="name">Drew Gilbert</h4><span class="hand">LHB</span><span class="hand">BO 7</span></div><p class="line-hero"><span class="num">U1.5*</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#005A9C;--team-ink:#FFFFFF"><div class="sp-head"><p class="sp-name">Blake Snell</p><span class="team-badge">LAD</span><span class="hand">LHP</span></div><p class="sp-note">Last 5 starts: dealing</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">1.9</td><td class="val tone" style="color:#2e7d32">1.1</td><td class="val tone" style="color:#2e7d32">0.8</td><td class="val tone" style="color:#2e7d32">6.0</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.596</td><td class="val tone" style="color:#2e7d32">1.5</td><td class="val tone" style="color:#f39527">.299</td><td class="val tone" style="color:#2e7d32">.501</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs L</th></tr></thead><tbody><tr><td class="val tone" style="color:#a4962a">23</td><td class="val tone" style="color:#b49929">10</td><td class="val tone" style="color:#7f8e2d">2</td><td class="val tone" style="color:#2e7d32">.068</td></tr></tbody></table><ul class="ticks"><li class="tick on"><span class="box" aria-hidden="true"></span>Low total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Stingy bullpen</li><li class="tick on"><span class="box" aria-hidden="true"></span>Cold offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter dealing</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Quiet week</li><li class="tick on"><span class="box" aria-hidden="true"></span>Tough park</li></ul></article>
-<article class="bat-card" data-player="Andrew Knizner" data-team="SF" style="--team:#FD5A1E;--team-ink:#27251F"><div class="bat-who"><header class="bat-head"><span class="rank">#2</span><span class="team-badge">SF</span><span class="overall" style="--pct:100;--ring:#2e7d32"><span>122</span></span></header><div class="name-row"><h4 class="name">Andrew Knizner</h4><span class="hand">RHB</span><span class="hand">BO 5</span></div><p class="line-hero"><span class="num">U1.5*</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#005A9C;--team-ink:#FFFFFF"><div class="sp-head"><p class="sp-name">Blake Snell</p><span class="team-badge">LAD</span><span class="hand">LHP</span></div><p class="sp-note">Last 5 starts: dealing</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">1.9</td><td class="val tone" style="color:#2e7d32">1.1</td><td class="val tone" style="color:#2e7d32">0.8</td><td class="val tone" style="color:#2e7d32">6.0</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs R</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.460</td><td class="val tone" style="color:#2e7d32">1.5</td><td class="val tone" style="color:#f39527">.299</td><td class="val tone" style="color:#2e7d32">.501</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs L</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">18</td><td class="val tone" style="color:#63882f">7</td><td class="val tone" style="color:#d09f28">3</td><td class="val tone" style="color:#2e7d32">.178</td></tr></tbody></table><ul class="ticks"><li class="tick on"><span class="box" aria-hidden="true"></span>Low total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Stingy bullpen</li><li class="tick on"><span class="box" aria-hidden="true"></span>Cold offense</li><li class="tick on"><span class="box" aria-hidden="true"></span>Starter dealing</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Quiet week</li><li class="tick on"><span class="box" aria-hidden="true"></span>Tough park</li></ul></article>
-<article class="bat-card" data-player="Ke&#x27;Bryan Hayes" data-team="CIN" style="--team:#C6011F;--team-ink:#FFFFFF"><div class="bat-who"><header class="bat-head"><span class="rank">#3</span><span class="team-badge">CIN</span><span class="overall" style="--pct:100;--ring:#2e7d32"><span>119</span></span></header><div class="name-row"><h4 class="name">Ke&#x27;Bryan Hayes</h4><span class="hand">RHB</span><span class="hand">BO 5</span></div><p class="line-hero"><span class="num">U1.5*</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#134A8E;--team-ink:#E31937"><div class="sp-head"><p class="sp-name">Trey Yesavage</p><span class="team-badge">TOR</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: steady</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#9c942b">3.7</td><td class="val tone" style="color:#538530">1.1</td><td class="val tone" style="color:#7b8d2d">3.5</td><td class="val tone" style="color:#2e7d32">5.8</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs R</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.631</td><td class="val tone" style="color:#f1a626">4.2</td><td class="val tone" style="color:#2e7d32">.215</td><td class="val tone" style="color:#2e7d32">.626</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">3</td><td class="val tone" style="color:#2e7d32">2</td><td class="val tone" style="color:#2e7d32">0</td><td class="val tone" style="color:#2e7d32">.130</td></tr></tbody></table><ul class="ticks"><li class="tick off"><span class="box" aria-hidden="true"></span>Low total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Stingy bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Cold offense</li><li class="tick off"><span class="box" aria-hidden="true"></span>Starter dealing</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Quiet week</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough park</li></ul></article>
-<article class="bat-card" data-player="JJ Bleday" data-team="CIN" style="--team:#C6011F;--team-ink:#FFFFFF"><div class="bat-who"><header class="bat-head"><span class="rank">#4</span><span class="team-badge">CIN</span><span class="overall" style="--pct:100;--ring:#2e7d32"><span>115</span></span></header><div class="name-row"><h4 class="name">JJ Bleday</h4><span class="hand">LHB</span><span class="hand">BO 4</span></div><p class="line-hero"><span class="num">U1.5*</span><span class="lab">Hits + Runs + RBIs</span></p></div><p class="stat-lab pit-lab">Pitcher</p><section class="sp-block" style="--team:#134A8E;--team-ink:#E31937"><div class="sp-head"><p class="sp-name">Trey Yesavage</p><span class="team-badge">TOR</span><span class="hand">RHP</span></div><p class="sp-note">Last 5 starts: steady</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">ERA</th><th data-col="1">WHIP</th><th data-col="2">L5 ERA</th><th data-col="3">H/9</th></tr></thead><tbody><tr><td class="val tone" style="color:#9c942b">3.7</td><td class="val tone" style="color:#538530">1.1</td><td class="val tone" style="color:#7b8d2d">3.5</td><td class="val tone" style="color:#2e7d32">5.8</td></tr></tbody></table><table class="sortable mini stat-table"><thead><tr><th data-col="0">OPS vs L</th><th data-col="1">Park ERA</th><th data-col="2">BABIP</th><th data-col="3">OPS</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">.623</td><td class="val tone" style="color:#f1a626">4.2</td><td class="val tone" style="color:#2e7d32">.215</td><td class="val tone" style="color:#2e7d32">.626</td></tr></tbody></table></section><p class="stat-lab hit-lab">Hitter</p><table class="sortable mini stat-table"><thead><tr><th data-col="0">L14</th><th data-col="1">L7</th><th data-col="2">L3</th><th data-col="3">AVG vs R</th></tr></thead><tbody><tr><td class="val tone" style="color:#2e7d32">16</td><td class="val tone" style="color:#9c942b">9</td><td class="val tone" style="color:#2e7d32">0</td><td class="val tone" style="color:#2e7d32">.219</td></tr></tbody></table><ul class="ticks"><li class="tick off"><span class="box" aria-hidden="true"></span>Low total</li><li class="tick off"><span class="box" aria-hidden="true"></span>Stingy bullpen</li><li class="tick off"><span class="box" aria-hidden="true"></span>Cold offense</li><li class="tick off"><span class="box" aria-hidden="true"></span>Starter dealing</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough lefty-righty</li><li class="tick on"><span class="box" aria-hidden="true"></span>Quiet week</li><li class="tick off"><span class="box" aria-hidden="true"></span>Tough park</li></ul></article>
-</div>
-</section>
-</article>
-</main></div>
 <script>
 (function(){
-  var KEY='desk-report-theme';
-  function apply(mode){
-    document.documentElement.classList.toggle('light', mode==='light');
-    var b=document.getElementById('themeBtn');
-    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
-    try { localStorage.setItem(KEY, mode); } catch (e) {}
-  }
-  var saved=null;
-  try { saved=localStorage.getItem(KEY); } catch (e) {}
-  apply(saved==='light'?'light':'dark');
-  window.toggleDeskTheme=function(){
-    apply(document.documentElement.classList.contains('light')?'dark':'light');
-  };
-})();
-</script>
-<script>
-(function(){
-  function norm(s){
-    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
-  }
-  function skip(el){
-    return !!(el.closest && el.closest('dialog, .pcard, .rail'));
-  }
-  function playerIdx(table){
-    var ths=table.querySelectorAll('thead th');
-    for(var i=0;i<ths.length;i++){
-      var t=norm(ths[i].textContent);
-      if(t==='player'||t==='name') return i;
-    }
-    return -1;
-  }
-  function rowHit(tr, q, pidx){
-    if(!q) return true;
-    if(pidx>=0 && tr.cells[pidx]) return norm(tr.cells[pidx].textContent).indexOf(q)>=0;
-    return norm(tr.textContent).indexOf(q)>=0;
-  }
-  function apply(opts){
-    opts = opts || {};
-    var inp=document.getElementById('playerSearch');
-    if(!inp) return;
-    var q=norm(inp.value);
-    var n=0;
-    var hitSel='tbody tr:not([hidden]), li:not([hidden]), .bat-card:not([hidden])';
-    function mark(el, hit){
-      el.hidden = !!(q && !hit);
-      el.classList.toggle('name-hit', !!(q && hit));
-      if(q && hit) n++;
-    }
-    document.querySelectorAll('table tbody tr').forEach(function(tr){
-      if(skip(tr)) return;
-      mark(tr, rowHit(tr, q, playerIdx(tr.closest('table'))));
-    });
-    document.querySelectorAll('table').forEach(function(t){
-      if(skip(t)) return;
-      var any=false;
-      var tb=t.tBodies[0];
-      if(tb){
-        Array.prototype.forEach.call(tb.rows, function(r){ if(!r.hidden) any=true; });
-      }
-      t.classList.toggle('search-empty', !!(q && !any));
-    });
-    document.querySelectorAll('li').forEach(function(li){
-      if(skip(li)) return;
-      mark(li, !q || norm(li.textContent).indexOf(q)>=0);
-    });
-    document.querySelectorAll('.bat-card').forEach(function(card){
-      var nameEl=card.querySelector('.name');
-      var name=nameEl ? nameEl.textContent : (card.getAttribute('data-player')||'');
-      mark(card, !q || norm(name).indexOf(q)>=0);
-    });
-    document.querySelectorAll('.team-block, .slip').forEach(function(block){
-      var any=!!block.querySelector('.bat-card:not([hidden])');
-      block.hidden = !!(q && !any);
-      block.classList.toggle('search-empty', !!(q && !any));
-    });
-    var hint=document.getElementById('playerSearchHint');
-    if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
-    var first=-1;
-    document.querySelectorAll('article.panel').forEach(function(art, i){
-      var hit=!!art.querySelector(hitSel);
-      var lab=document.querySelector('label[for="g'+i+'"]');
-      if(lab) lab.classList.toggle('search-miss', !!(q && !hit));
-      if(hit && first<0) first=i;
-    });
-    if(q && first>=0){
-      var cur=document.querySelector('input.tab[name="g"]:checked');
-      var curI=cur ? parseInt((cur.id||'').replace(/^g/,''),10) : -1;
-      var curArt=document.querySelector('article.p'+curI);
-      var curHit=curArt && curArt.querySelector(hitSel);
-      if(!curHit){
-        var radio=document.getElementById('g'+first);
-        if(radio) radio.checked=true;
-      }
-    }
-    if(opts.jump){
-      var shown=document.querySelector('input.tab[name="g"]:checked');
-      var shownI=shown ? parseInt((shown.id||'').replace(/^g/,''),10) : 0;
-      var shownArt=document.querySelector('article.p'+shownI);
-      var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
-      if(jumpEl){
-        setTimeout(function(){
-          try { jumpEl.scrollIntoView({block:'center', behavior:'smooth'}); }
-          catch (err) { jumpEl.scrollIntoView(true); }
-        }, 40);
-      }
-    }
-  }
   var form=document.getElementById('playerSearchForm');
-  if(form){
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      apply({jump:true});
+  var box=document.getElementById('hubSearch');
+  if(!form||!box) return;
+  form.addEventListener('submit', function(e){ e.preventDefault(); filter(); jump(); });
+  box.addEventListener('input', filter);
+  function filter(){
+    var q=(box.value||'').trim().toLowerCase();
+    document.querySelectorAll('.games a').forEach(function(link){
+      var hay=(link.getAttribute('data-search')||link.textContent||'').toLowerCase();
+      var hide=q && hay.indexOf(q)<0;
+      link.classList.toggle('hide', hide);
+      if(link.parentElement) link.parentElement.classList.toggle('hide', hide);
+    });
+    document.querySelectorAll('.day').forEach(function(day){
+      var any=day.querySelector('.games a:not(.hide)');
+      day.classList.toggle('hide', !any);
+    });
+    document.querySelectorAll('.desk').forEach(function(desk){
+      var any=desk.querySelector('.games a:not(.hide)');
+      desk.classList.toggle('hide', !any);
+    });
+    document.querySelectorAll('.tool').forEach(function(link){
+      var hay=(link.textContent||'').toLowerCase();
+      link.classList.toggle('hide', !!(q && hay.indexOf(q)<0));
     });
   }
-  var inp=document.getElementById('playerSearch');
-  if(inp){
-    inp.addEventListener('input', function(){ apply({}); });
-    inp.addEventListener('search', function(){ apply({jump:true}); });
-    inp.addEventListener('keydown', function(e){
-      if(e.key==='Enter' || e.keyCode===13){
-        e.preventDefault();
-        apply({jump:true});
-      }
-    });
+  function jump(){
+    var first=document.querySelector('.games a:not(.hide)');
+    if(first) first.focus();
   }
 })();
 </script>
-<script>
-(function(){
-  function val(td){
-    if(!td) return {n:false, v:null, s:''};
-    var dn=td.getAttribute('data-n');
-    if(dn!==null && dn!==''){
-      var n=parseFloat(dn);
-      if(!isNaN(n)) return {n:true, v:n, s:dn};
-    }
-    if(td.querySelector){
-      if(td.querySelector('.tick.on')) return {n:true, v:1, s:'1'};
-      if(td.querySelector('.tick')) return {n:true, v:0, s:'0'};
-    }
-    var t=(td.textContent||'').trim();
-    if(!t || t==='—' || t==='-') return {n:false, v:null, s:''};
-    var pct=t.match(/(-?\d+(?:\.\d+)?)%/);
-    if(pct) return {n:true, v:parseFloat(pct[1]), s:t};
-    var rec=t.match(/^(-?\d+(?:\.\d+)?)\s*\/\s*(-?\d+(?:\.\d+)?)/);
-    if(rec){
-      var den=parseFloat(rec[2]);
-      if(den) return {n:true, v:parseFloat(rec[1])/den, s:t};
-    }
-    var raw=t.replace(/[$,×x]/g,'').replace(/,/g,'');
-    if(/^-?\d+(\.\d+)?$/.test(raw)) return {n:true, v:parseFloat(raw), s:t};
-    var d=Date.parse(t);
-    if(!isNaN(d) && /[A-Za-z]{3,}/.test(t) && /\d{4}/.test(t)) return {n:true, v:d, s:t};
-    return {n:false, v:t.toLowerCase(), s:t};
-  }
-  function sortTable(table, col, dir){
-    var tb=table && table.tBodies[0];
-    if(!tb) return;
-    Array.prototype.forEach.call(table.querySelectorAll('th'), function(h){
-      h.removeAttribute('data-dir');
-    });
-    var mark=table.querySelector('th[data-col="'+col+'"]');
-    if(!mark){
-      var row=table.querySelector('thead tr');
-      if(row && row.children[col]) mark=row.children[col];
-    }
-    if(mark) mark.setAttribute('data-dir', dir);
-    var rows=Array.prototype.slice.call(tb.rows);
-    rows.sort(function(a,b){
-      var A=val(a.cells[col]);
-      var B=val(b.cells[col]);
-      if(A.v===null && B.v===null) return 0;
-      if(A.v===null) return 1;
-      if(B.v===null) return -1;
-      var cmp=0;
-      if(A.n && B.n) cmp=A.v-B.v;
-      else cmp=String(A.v).localeCompare(String(B.v));
-      return dir==='asc' ? cmp : -cmp;
-    });
-    rows.forEach(function(r){ tb.appendChild(r); });
-  }
-  document.addEventListener('click', function(e){
-    var th=e.target.closest('table.sortable th');
-    if(!th || th.closest('tfoot')) return;
-    var table=th.closest('table');
-    if(!table) return;
-    var raw=th.getAttribute('data-col');
-    var col=raw===null ? Array.prototype.indexOf.call(th.parentNode.children, th) : parseInt(raw,10);
-    if(isNaN(col) || col<0) return;
-    var dir=th.getAttribute('data-dir')==='asc' ? 'desc' : 'asc';
-    sortTable(table, col, dir);
-  });
-  document.querySelectorAll('table.sortable[data-default-sort]').forEach(function(table){
-    var want=(table.getAttribute('data-default-sort')||'').toLowerCase();
-    var ths=table.querySelectorAll('thead th');
-    var idx=-1;
-    for(var i=0;i<ths.length;i++){
-      var t=(ths[i].textContent||'').trim().toLowerCase();
-      if(t===want || t.indexOf(want)>=0 || want.indexOf(t)>=0){
-        var raw=ths[i].getAttribute('data-col');
-        idx=raw===null ? i : parseInt(raw,10);
-        break;
-      }
-    }
-    if(idx>=0) sortTable(table, idx, 'desc');
-  });
-})();
-</script>
-</body></html>
+</body>
+</html>
