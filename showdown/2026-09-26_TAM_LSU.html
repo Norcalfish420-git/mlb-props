@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CFB Showdown 2026-09-26 · Texas A&amp;M @ LSU</title>
+<style>
+:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#fb7185;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#be123c;--table:#262626;--cell:#525252;--th:#393939;--val:#fb7185;--h:#fb7185;--code:#fb7185;--up:#3ddbd9;--down:#ff8389;--up-bg:rgba(61,219,217,.16);--down-bg:rgba(255,131,137,.16);--wk-alt:rgba(190,18,60,.08);}
+html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#9f1239;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#9f1239;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#9f1239;--h:#9f1239;--code:#9f1239;--up:#005d5d;--down:#a2191f;--up-bg:rgba(0,93,93,.1);--down-bg:rgba(162,25,31,.1);--wk-alt:rgba(190,18,60,.06);}
+html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+body{background-image:linear-gradient(180deg,rgba(22,22,22,.82),rgba(10,14,18,.93)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
+html.light body{background-image:linear-gradient(180deg,rgba(242,244,248,.88),rgba(242,244,248,.94)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");}
+.tab{position:absolute;left:-9999px;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;overflow-y:auto;}
+.rail .brand{order:0;}
+.rail a.pill.home{order:1;}
+.rail > *:not(.brand):not(a.pill.home){order:2;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);text-decoration:none;}
+a.pill.home{border-color:var(--val);}
+.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
+.pill:hover{background:var(--pill-hover);}
+button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
+button.pdf:hover{filter:brightness(1.08);}
+button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.5rem .7rem;}
+button.theme:hover{background:var(--pill-hover);}
+form.search-form{margin:0;display:flex;flex-direction:column;gap:.15rem;}
+label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35rem 0 0;}
+input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
+input.search:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.pill.search-miss{opacity:.42;}
+table.search-empty{display:none;}
+li.name-hit,tr.name-hit{background:rgba(190,18,60,.28);outline:1px solid var(--accent);}
+.hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
+.view-row{display:flex;flex-direction:column;gap:.35rem;margin:.15rem 0 .35rem;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:54rem;min-width:0;}
+h1{font-size:1.6rem;margin:0 0 .3rem;}
+h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
+.line-blast{font-size:1.42rem;line-height:1.35;font-weight:700;margin:.35rem 0 1.2rem;padding:.95rem 1.05rem;background:var(--table);border:2px solid var(--accent);border-left-width:8px;}
+.line-blast b{color:var(--val);font-size:1.08em;}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
+h3.second-pass{border-top:2px solid var(--accent);padding-top:1.15rem;margin-top:2rem;}
+h4{margin:.8rem 0 .4rem;}
+h4.team-break{font-size:1.28rem;font-weight:800;letter-spacing:.01em;margin:2.35rem 0 .55rem;padding:1.05rem 0 .35rem;border-top:3px solid var(--accent);}
+h3 + p + h4.team-break,h3 + h4.team-break{margin-top:.75rem;padding-top:.1rem;border-top:none;}
+h5{font-size:.95rem;margin:1.05rem 0 .3rem;color:var(--muted);font-weight:700;}
+.sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
+table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.92rem;background:var(--table);}
+th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
+th{background:var(--th);color:var(--pill-fg);}
+table.sortable th{cursor:pointer;user-select:none;}
+table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}
+table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
+table.game-log{width:100%;table-layout:auto;}
+table.game-log th,table.game-log td{text-align:center;white-space:nowrap;}
+table.game-log th:nth-child(1),table.game-log td:nth-child(1),table.game-log th:nth-child(2),table.game-log td:nth-child(2){text-align:left;}
+.week-pills,.team-pills{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 .8rem;}
+.week-pill,.team-pill{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--pill);color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:999px;padding:.4rem .75rem;}
+.week-pill.on,.team-pill.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+.week-panel{margin:0 0 1.6rem;}
+.week-panel.search-empty,.game-box.search-empty,.box-side.search-empty{display:none;}
+.week-lab{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.2rem 0 .6rem;}
+.trend-up-strip{margin:.4rem 0 1rem;padding:.7rem .85rem;background:var(--table);border-left:6px solid var(--accent);}
+.trend-up-strip h4{margin:0 0 .35rem;}
+.trend-up-strip ul{margin:.2rem 0 0;}
+.game-box{margin:0 0 1.8rem;padding:0 0 .4rem;border-bottom:1px solid var(--cell);}
+.box-score{font-size:1.2rem;margin:.4rem 0 .15rem;}
+.box-line{font-size:1.02rem;font-weight:700;color:var(--muted);margin:0 0 .55rem;}
+.run-pass{color:var(--muted);margin:0 0 .55rem;}
+.box-side{margin:0 0 1.15rem;}
+table.espn-box{font-size:.9rem;width:100%;}
+table.espn-box th,table.espn-box td{text-align:right;}
+table.espn-box th:first-child,table.espn-box td:first-child{text-align:left;}
+.pos-book{margin:0 0 1.6rem;}
+.pos-book.search-empty{display:none;}
+.pos-book h4{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.4rem 0 .45rem;}
+td.trend-up{background:var(--up-bg) !important;color:var(--up);font-weight:700;}
+td.trend-down{background:var(--down-bg) !important;color:var(--down);font-weight:700;}
+span.delta{font-size:.68em;font-weight:700;margin-left:.28em;opacity:.92;}
+td.val{font-weight:700;color:var(--val);white-space:nowrap;}
+.left{font-weight:700;margin:.2rem 0 1rem;}
+ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
+ul ul{margin:.15rem 0 .4rem;padding-left:1.15rem;}
+li{margin:.35rem 0;}
+code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
+.panel{display:block;}
+.appendix{display:none;}
+@media print{
+  html,body,html.light,html.light body{background:#fff;color:#111;background-image:none !important;}
+  .shell{display:block;}
+  .rail,.noprint{display:none !important;}
+  main{max-width:none;padding:0;}
+  .panel,.appendix{display:block !important;page-break-after:always;}
+  .game-report,.prop-board,.etr-board,.player-book{display:block !important;}
+  .week-panel,.week-panel[hidden]{display:block !important;}
+  .week-pills,.week-pill{display:none !important;}
+  .appendix{page-break-after:auto;}
+  table{background:#fff;page-break-inside:avoid;}
+  th{background:#eee;color:#333;}
+  td.val{color:#000;}
+  td.trend-up{color:#005d5d;background:#e6f6f6 !important;}
+  td.trend-down{color:#a2191f;background:#fce8e8 !important;}
+  h2,h3,h4,h5{page-break-after:avoid;color:#111;}
+  h4.team-break{border-top-color:#111;}
+  .line-blast{background:#fff;border-color:#111;color:#111;}
+  .line-blast b{color:#000;}
+}
+@page{margin:.5in;}
+#v-report:checked ~ .shell .rail label[for=v-report]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-prop:checked ~ .shell .rail label[for=v-prop]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-etr:checked ~ .shell .rail label[for=v-etr]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.player-book,.prop-board,.etr-board{display:none;}
+#v-book:checked ~ .shell main,#v-prop:checked ~ .shell main,#v-etr:checked ~ .shell main{max-width:none;}
+#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .prop-board,#v-book:checked ~ .shell main .etr-board{display:none;}
+#v-book:checked ~ .shell main .player-book{display:block;}
+#v-prop:checked ~ .shell main .game-report,#v-prop:checked ~ .shell main .etr-board,#v-prop:checked ~ .shell main .player-book{display:none;}
+#v-prop:checked ~ .shell main .prop-board{display:block;}
+#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .prop-board,#v-etr:checked ~ .shell main .player-book{display:none;}
+#v-etr:checked ~ .shell main .etr-board{display:block;}
+</style>
+</head><body>
+<input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-prop"/>
+<input class="tab" type="radio" name="v" id="v-etr"/>
+<input class="tab" type="radio" name="v" id="v-book"/>
+<div class="shell">
+<aside class="rail noprint">
+<p class="brand">CFB SHOWDOWN<br/>2026-09-26<br/>Texas A&amp;M @ LSU</p>
+<a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
+<div class="view-row">
+<label class="pill" for="v-report">Report</label>
+<label class="pill" for="v-etr">ETR Value</label>
+<label class="pill" for="v-book">Player book</label>
+<label class="pill" for="v-prop">Prop Value</label>
+</div>
+<form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
+<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
+<button class="pdf" type="button" onclick="window.print()">Save as PDF</button><p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
+</aside>
+<main>
+<h1>CFB Showdown — 2026-09-26 · Texas A&amp;M @ LSU</h1>
+<article class="panel">
+<div class="game-report">
+<h2>3) Texas A&amp;M @ LSU · 7:30 p.m. ET · Tiger Stadium · ABC</h2>
+<p><b>This slate is four out of five stars.</b> No. 23 Texas A&amp;M visits No. 10 LSU at night. The live book is <b>LSU −8.5 / 51.5</b>. 7:30 p.m. ET on ABC. Outdoor. Death Valley. Lane Kiffin is in his first year at LSU after leaving Ole Miss.</p>
+<ul>
+<li>LSU <b>-8.5</b>.</li>
+<li>Total <b>51.5</b>.</li>
+<li>Tiger Stadium, night.</li>
+</ul>
+<h3>Game Script</h3>
+<p>No. 23 Texas A&amp;M (2-1) at No. 10 LSU (2-1). Lane Kiffin brought the Ole Miss offense to Baton Rouge. The books have LSU around 30 and Texas A&amp;M around 22. That is more than a field goal and less than a laughable number. LSU lost at Ole Miss 32-24. Texas A&amp;M lost at home to Kentucky 31-21. Sam Leavitt&#x27;s year line is 732 yards, three touchdowns, five interceptions, 61.3 percent. Last week he was 16 of 27 for 158, one touchdown and one interception, and he ran 17 times for 63 and a score. Marcel Reed&#x27;s year line is 632 yards, six touchdowns, three interceptions, 59.6 percent. Last week he was 26 of 49 for 236, one touchdown and two interceptions, and he ran 10 times for 80 and a score. Dilin Jones ran 23 times for 106 and a score against Ole Miss. Rueben Owens ran 18 times for 74 against Kentucky. Mario Craver caught 11 passes for 119.</p>
+<p><b>What the writers are saying:</b> Split, and the split is the card. One desk takes Texas A&amp;M plus the points because the number moved a long way from an offseason look that had LSU favored by a field goal, and because both quarterbacks have been shaky. That desk also wants a slower game. The projection model wants the over at 51.5, around 53 points, because this series has been a track meet and LSU&#x27;s recent games have cleared it. The local LSU desk still picks LSU, something like 31-21, and says Reed has not been the same runner the last two weeks. We keep both quarterbacks. We do not pretend this is a 40-point LSU night.</p>
+<p>LSU wants to throw and run with Leavitt. Lane Kiffin&#x27;s offense still needs the quarterback to settle. Trey&#x27;Dez Green is the tight end who actually catches it. Last week he had four grabs for 60. Eugene Wilson III and Winston Watkins Jr. are the receivers with posted numbers. Dilin Jones is the back. He was quiet earlier, then he showed up against Ole Miss.</p>
+<p>Texas A&amp;M wants Reed to throw and run. He has dogged LSU with his legs before. The last two games have not looked like that. Mario Craver is the receiver. Isaiah Horton and Ashton Bethel-Roman are the other outside options. Rueben Owens is the back. Jamarion Morrow is charted second and he is doubtful.</p>
+<p><b>Where the defense is weaker</b></p>
+<ul>
+<li><b>Texas A&amp;M:</b> No team in this league has fewer sacks or tackles for loss through three games. Leavitt can settle in if that front does not get home. They also just lost at home to Kentucky.</li>
+<li><b>LSU:</b> Leavitt has five interceptions already. Ole Miss moved the ball on them last week. The front has been the better unit. The passing game is the leak if he is late with the ball.</li>
+</ul>
+<p><b>What the scoreboard forces</b></p>
+<ul>
+<li>LSU is favored by 8.5 at home. The books have LSU around 30 and Texas A&amp;M around 22. Someone can cover without a shootout.</li>
+<li>If LSU gets up by two scores, Jones and the defense get the work. Reed has to throw and run from behind.</li>
+<li>If Texas A&amp;M hangs within a score, both quarterbacks keep playing the whole night. That is the plus-the-points script.</li>
+<li>A slow start helps the under and helps the dog. A track meet helps the over and asks Leavitt to throw more.</li>
+</ul>
+<p><b>Who that points at</b></p>
+<ul>
+<li>Captain Jones or Leavitt if you want the home script. Reed is the other captain if you think the dog stays close, because he runs.</li>
+<li>If Leavitt is on the six, keep Wilson or Watkins with him. Green is the tight end when the salary fits.</li>
+<li>If Reed is on the six, keep Craver with him, and Owens on the ground.</li>
+<li>Sit Brady Hart, Husan Longstreet, and Landen Clark. They are backups. Sit Morrow while he is doubtful. Sit the kickers.</li>
+</ul>
+<h3>WHO THEY ARE</h3>
+<ul>
+<li><b>Texas A&amp;M</b> is ranked No. 23 this year (2-1).</li>
+<li><b>LSU</b> is ranked No. 10 this year (2-1). They are one of the best teams in the country right now.</li>
+</ul>
+<h3>WHO MATTERS</h3>
+<p>Role first. Last week is the tape.</p>
+<h4>Texas A&amp;M</h4>
+<p><b>Quarterbacks</b></p>
+<ul>
+<li><b>Marcel Reed</b> — Throws and runs. On the year: 632 yards, six touchdowns, three interceptions. Last week against Kentucky: 26 of 49 for 236, one touchdown, two interceptions, and 10 carries for 80 and a score. He has given LSU trouble with his legs in past years. The last two weeks have not looked like that. He is still the A&amp;M quarterback on a plus-the-points script.</li>
+<li><b>Brady Hart</b> — Backup quarterback. Sit him unless Reed is scratched.</li>
+</ul>
+<p><b>Running backs</b></p>
+<ul>
+<li><b>Rueben Owens II</b> — Charted first. Last week: 18 carries for 74 and two catches for 9. On the year: 186 yards on 45 carries and a score. The A&amp;M back.</li>
+<li><b>Jamarion Morrow</b> — Charted second and doubtful. Sit him unless the report clears. Owens is the back.</li>
+</ul>
+<p><b>Receiving room</b></p>
+<ul>
+<li><b>Mario Craver</b> — The receiver. Last week: 11 catches for 119. On the year: 194 yards on 19 catches and two scores. Keep him with Reed.</li>
+<li><b>Isaiah Horton</b> — Outside receiver with a posted yardage number. Craver is the volume.</li>
+<li><b>Ashton Bethel-Roman</b> — Charted as the other outside receiver. The books did not post a yardage line. He is a real job, not a reason to captain a min-salary name.</li>
+<li><b>Micah Riley</b> — Charted first at tight end. We do not have a posted yardage line. Craver is who Reed has been throwing to.</li>
+</ul>
+<h4>LSU</h4>
+<p><b>Quarterbacks</b></p>
+<ul>
+<li><b>Sam Leavitt</b> — Throws and runs in Lane Kiffin&#x27;s offense. On the year: 732 yards, three touchdowns, five interceptions, 61.3 percent. Last week at Ole Miss: 16 of 27 for 158, one touchdown, one interception, and 17 carries for 63 and a score. The arm is real. The decisions have not been. If you make him captain, the rushing and the passing both count extra.</li>
+<li><b>Husan Longstreet</b> — Backup quarterback. Sit him unless Leavitt is scratched.</li>
+<li><b>Landen Clark</b> — The other backup. Sit him.</li>
+</ul>
+<p><b>Running backs</b></p>
+<p>Jones got the carries last week. Use him.</p>
+<ul>
+<li><b>Dilin Jones</b> — Wisconsin transfer. Charted first. Last week against Ole Miss: 23 carries for 106 and a score, plus two catches for 6. On the year: 285 yards on 64 carries and three scores. He is the LSU captain if you want the home script on the ground.</li>
+<li><b>Stacy Gage</b> — Charted second. Not a second Jones.</li>
+<li><b>Harlem Berry</b> — Next in line. Not the numbered back.</li>
+</ul>
+<p><b>Receiving room</b></p>
+<ul>
+<li><b>Trey&#x27;Dez Green</b> — Big tight end who catches it in the middle of the field. On the year: 222 yards on 14 catches and a score. Last week: four for 60. Keep him with Leavitt when the salary fits. The books did not give us a clean yardage number to force him onto every six.</li>
+<li><b>Eugene Wilson III</b> — Outside receiver who takes the ball down the sideline. He has a posted receiving number. Last year&#x27;s volume guy in this offense.</li>
+<li><b>Winston Watkins Jr.</b> — Inside receiver. Underneath catches, and he has a posted number. Keep him with Leavitt if Green does not fit.</li>
+<li><b>Jackson Harris</b> — Another downfield catcher with a posted number. Not the every-down target. Wilson and Watkins are the pair.</li>
+<li><b>Malik Elzy</b> — Charted on the outside. Wilson is who we pay first.</li>
+<li><b>Zach Grace</b> — Second tight end. Green is the one who catches it. Grace is only a salary finish, not a captain.</li>
+</ul>
+<h3>DEPTH CHART</h3>
+<p>Offense skill. A missing name is —.</p>
+<h4 class="team-break">LSU</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Sam Leavitt</td><td>Husan Longstreet</td></tr>
+<tr><td>RB</td><td>Dilin Jones</td><td>Stacy Gage</td></tr>
+<tr><td>WR-X</td><td>Malik Elzy</td><td>Jayce Brown</td></tr>
+<tr><td>WR-Z</td><td>Eugene Wilson III</td><td>Jackson Harris</td></tr>
+<tr><td>WR-SL</td><td>Winston Watkins Jr.</td><td>Corey Barber Jr.</td></tr>
+<tr><td>TE</td><td>Trey&#x27;Dez Green</td><td>Zach Grace</td></tr>
+<tr><td>PK</td><td>Scott Starzyk</td><td>Gavin Higgins</td></tr>
+</tbody></table>
+<h4 class="team-break">Texas A&amp;M</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Marcel Reed</td><td>Brady Hart</td></tr>
+<tr><td>RB</td><td>Rueben Owens II</td><td>Jamarion Morrow</td></tr>
+<tr><td>WR-X</td><td>Isaiah Horton</td><td>Aaron Gregory</td></tr>
+<tr><td>WR-Z</td><td>Ashton Bethel-Roman</td><td>TK Norman</td></tr>
+<tr><td>WR-SL</td><td>Mario Craver</td><td>Kelshaun Johnson</td></tr>
+<tr><td>TE</td><td>Micah Riley</td><td>Houston Thomas</td></tr>
+<tr><td>PK</td><td>David Olano</td><td>Asher Murray</td></tr>
+</tbody></table>
+<h3>INJURIES</h3>
+<p>Who is out or in doubt for this game. A blank list means nobody on the board is tagged.</p>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Status</th><th scope="col" data-col="3">Tonight</th></tr></thead>
+<tbody>
+<tr><td>Phillip Wright III</td><td>LSU</td><td>Out</td><td>Not playing. Sit him.</td></tr>
+<tr><td>Trey&#x27;Dez Green</td><td>LSU</td><td>Out</td><td>Not playing. Sit him.</td></tr>
+<tr><td>Madden Williams</td><td>Texas A&amp;M</td><td>Out</td><td>Not playing. Sit him.</td></tr>
+<tr><td>Terry Bussey</td><td>Texas A&amp;M</td><td>Out</td><td>Not playing. Sit him.</td></tr>
+<tr><td>Tiger Riden Jr.</td><td>Texas A&amp;M</td><td>Out</td><td>Not playing. Sit him.</td></tr>
+<tr><td>Jamarion Morrow</td><td>Texas A&amp;M</td><td>Doubtful</td><td>Unlikely. Sit unless he is cleared.</td></tr>
+<tr><td>Ashton Bethel-Roman</td><td>Texas A&amp;M</td><td>Expected</td><td>Expected to play.</td></tr>
+</tbody></table>
+<h3>CHART NOTES</h3>
+<p>When the listed chart does not match who is actually playing.</p>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Note</th></tr></thead>
+<tbody>
+<tr><td>Trey&#x27;Dez Green</td><td>LSU</td><td>Listed first at tight end. Not playing. Sit him.</td></tr>
+<tr><td>Jayce Brown</td><td>LSU</td><td>Not a captain.</td></tr>
+</tbody></table>
+<h3>SCRIPT SIX</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Dilin Jones</td><td>LSU</td><td>RB</td><td>$15,000</td><td class="val">0.88×</td><td>rushing yards 87.5</td></tr>
+<tr><td>FLEX</td><td>Sam Leavitt</td><td>LSU</td><td>QB</td><td>$11,600</td><td class="val">0.83×</td><td>passing yards 240.5</td></tr>
+<tr><td>FLEX</td><td>Marcel Reed</td><td>Texas A&amp;M</td><td>QB</td><td>$9,000</td><td class="val">0.92×</td><td>passing yards 206.5</td></tr>
+<tr><td>FLEX</td><td>Rueben Owens II</td><td>Texas A&amp;M</td><td>RB</td><td>$7,800</td><td class="val">0.75×</td><td>rushing yards 58.5</td></tr>
+<tr><td>FLEX</td><td>Eugene Wilson III</td><td>LSU</td><td>WR</td><td>$5,600</td><td class="val">0.67×</td><td>receiving yards 37.5</td></tr>
+<tr><td>FLEX</td><td>Zach Grace</td><td>LSU</td><td>WR</td><td>$1,000</td><td class="val">No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $0  (spent $50,000 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Dilin Jones is captain. Wisconsin transfer; 1st-team camp.</li>
+<li>Sam Leavitt. SEC report: doubtful (upper body / throwing shoulder). Sat out a throw. Backup Landen Clark / freshman Husan Longstreet if he sits. He runs and throws.</li>
+<li>Marcel Reed. Last week 49 throws for 236 and 1 passing scores, 10 carries for 80. He runs and throws.</li>
+<li>Rueben Owens II. Got almost every carry last week (18 carries). Also caught 2 for 9.</li>
+<li>Eugene Wilson III. Last week 2 catches for 4. He is on this card with Sam Leavitt, so LSU&#x27;s passing shows up twice.</li>
+<li>Zach Grace. He is cheap enough that the expensive names still fit.</li>
+</ul>
+<p>Projected points on this six: 108.16. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 1</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Sam Leavitt</td><td>LSU</td><td>QB</td><td>$17,400</td><td class="val">0.83×</td><td>passing yards 240.5</td></tr>
+<tr><td>FLEX</td><td>Dilin Jones</td><td>LSU</td><td>RB</td><td>$10,000</td><td class="val">0.88×</td><td>rushing yards 87.5</td></tr>
+<tr><td>FLEX</td><td>Marcel Reed</td><td>Texas A&amp;M</td><td>QB</td><td>$9,000</td><td class="val">0.92×</td><td>passing yards 206.5</td></tr>
+<tr><td>FLEX</td><td>Rueben Owens II</td><td>Texas A&amp;M</td><td>RB</td><td>$7,800</td><td class="val">0.75×</td><td>rushing yards 58.5</td></tr>
+<tr><td>FLEX</td><td>Aaron Gregory</td><td>Texas A&amp;M</td><td>WR</td><td>$3,200</td><td class="val">No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Ashton Bethel-Roman</td><td>Texas A&amp;M</td><td>WR</td><td>$2,000</td><td class="val">No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $600  (spent $49,400 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Sam Leavitt is captain. SEC report: doubtful (upper body / throwing shoulder). Sat out a throw. Backup Landen Clark / freshman Husan Longstreet if he sits. He runs and throws. If he is captain, his rushing yards count extra.</li>
+<li>Dilin Jones. Wisconsin transfer; 1st-team camp.</li>
+<li>Marcel Reed. Last week 49 throws for 236 and 1 passing scores, 10 carries for 80. He runs and throws.</li>
+<li>Rueben Owens II. Got almost every carry last week (18 carries). Also caught 2 for 9.</li>
+<li>Ashton Bethel-Roman. Last week 1 catch for 0. He is cheap enough that the expensive names still fit.</li>
+<li>Aaron Gregory. Last week 1 catch for 6.</li>
+<li>The rest of the card is already near the salary cap. Aaron Gregory is cheap enough that this card still fits.</li>
+</ul>
+<p>Projected points on this six: 104.28. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 2</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Marcel Reed</td><td>Texas A&amp;M</td><td>QB</td><td>$13,500</td><td class="val">0.92×</td><td>passing yards 206.5</td></tr>
+<tr><td>FLEX</td><td>Sam Leavitt</td><td>LSU</td><td>QB</td><td>$11,600</td><td class="val">0.83×</td><td>passing yards 240.5</td></tr>
+<tr><td>FLEX</td><td>Dilin Jones</td><td>LSU</td><td>RB</td><td>$10,000</td><td class="val">0.88×</td><td>rushing yards 87.5</td></tr>
+<tr><td>FLEX</td><td>Rueben Owens II</td><td>Texas A&amp;M</td><td>RB</td><td>$7,800</td><td class="val">0.75×</td><td>rushing yards 58.5</td></tr>
+<tr><td>FLEX</td><td>Eugene Wilson III</td><td>LSU</td><td>WR</td><td>$5,600</td><td class="val">0.67×</td><td>receiving yards 37.5</td></tr>
+<tr><td>FLEX</td><td>Zach Grace</td><td>LSU</td><td>WR</td><td>$1,000</td><td class="val">No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $500  (spent $49,500 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Marcel Reed is captain. Last week 49 throws for 236 and 1 passing scores, 10 carries for 80. He runs and throws. If he is captain, his rushing yards count extra.</li>
+<li>Sam Leavitt. SEC report: doubtful (upper body / throwing shoulder). Sat out a throw. Backup Landen Clark / freshman Husan Longstreet if he sits. He runs and throws.</li>
+<li>Dilin Jones. Wisconsin transfer; 1st-team camp.</li>
+<li>Rueben Owens II. Got almost every carry last week (18 carries). Also caught 2 for 9.</li>
+<li>Eugene Wilson III. Last week 2 catches for 4. He is on this card with Sam Leavitt, so LSU&#x27;s passing shows up twice.</li>
+<li>Zach Grace. He is cheap enough that the expensive names still fit.</li>
+<li>The rest of the card is already near the salary cap. Eugene Wilson III is cheap enough that this card still fits.</li>
+</ul>
+<p>Projected points on this six: 106.73. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 3</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Mario Craver</td><td>Texas A&amp;M</td><td>WR</td><td>$12,900</td><td class="val">0.72×</td><td>receiving yards 61.5</td></tr>
+<tr><td>FLEX</td><td>Sam Leavitt</td><td>LSU</td><td>QB</td><td>$11,600</td><td class="val">0.83×</td><td>passing yards 240.5</td></tr>
+<tr><td>FLEX</td><td>Marcel Reed</td><td>Texas A&amp;M</td><td>QB</td><td>$9,000</td><td class="val">0.92×</td><td>passing yards 206.5</td></tr>
+<tr><td>FLEX</td><td>Rueben Owens II</td><td>Texas A&amp;M</td><td>RB</td><td>$7,800</td><td class="val">0.75×</td><td>rushing yards 58.5</td></tr>
+<tr><td>FLEX</td><td>Isaiah Horton</td><td>Texas A&amp;M</td><td>WR</td><td>$7,600</td><td class="val">0.64×</td><td>receiving yards 48.5</td></tr>
+<tr><td>FLEX</td><td>Zach Grace</td><td>LSU</td><td>WR</td><td>$1,000</td><td class="val">No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Mario Craver is captain. Last week 11 catches for 119. He is on this card with Marcel Reed, so Texas A&amp;M&#x27;s passing shows up twice.</li>
+<li>Sam Leavitt. SEC report: doubtful (upper body / throwing shoulder). Sat out a throw. Backup Landen Clark / freshman Husan Longstreet if he sits. He runs and throws.</li>
+<li>Marcel Reed. Last week 49 throws for 236 and 1 passing scores, 10 carries for 80. He runs and throws.</li>
+<li>Rueben Owens II. Got almost every carry last week (18 carries). Also caught 2 for 9.</li>
+<li>Isaiah Horton. Last week 5 catches for 61. He is on this card with Marcel Reed, so Texas A&amp;M&#x27;s passing shows up twice.</li>
+<li>Zach Grace. He is cheap enough that the expensive names still fit.</li>
+</ul>
+<p>Projected points on this six: 100.89. The captain&#x27;s stats count extra.</p>
+<h3>SITS / FADES</h3>
+</div>
+<div class="prop-board"><h3>OUR VALUE</h3>
+<p>Every posted yardage or receptions number we joined on this salary board — one row per market, not a Top 20. Dest names with no book line are omitted. <b>Value</b> is that number versus DraftKings salary (<b>1.00× is even</b>). Below even stays. This is not ETR. Sorted highest value first.</p>
+<h4 class="team-break">Texas A&amp;M</h4>
+<table class="sortable" data-default-sort="Value">
+<thead><tr><th scope="col" data-col="0">#</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Marcel Reed</td><td>Texas A&amp;M</td><td>QB</td><td>$9,000</td><td class="val">0.92×</td><td>passing yards 206.5</td></tr>
+<tr><td>2</td><td>Rueben Owens II</td><td>Texas A&amp;M</td><td>RB</td><td>$7,800</td><td class="val">0.75×</td><td>rushing yards 58.5</td></tr>
+<tr><td>3</td><td>Mario Craver</td><td>Texas A&amp;M</td><td>WR</td><td>$8,600</td><td class="val">0.72×</td><td>receiving yards 61.5</td></tr>
+<tr><td>4</td><td>Mario Craver</td><td>Texas A&amp;M</td><td>WR</td><td>$8,600</td><td class="val">0.72×</td><td>rushing plus receiving yards 61.5</td></tr>
+<tr><td>5</td><td>Mario Craver</td><td>Texas A&amp;M</td><td>WR</td><td>$8,600</td><td class="val">0.72×</td><td>rushing yards 61.5</td></tr>
+<tr><td>6</td><td>Isaiah Horton</td><td>Texas A&amp;M</td><td>WR</td><td>$7,600</td><td class="val">0.64×</td><td>receiving yards 48.5</td></tr>
+<tr><td>7</td><td>Rueben Owens II</td><td>Texas A&amp;M</td><td>RB</td><td>$7,800</td><td class="val">0.51×</td><td>rushing plus receiving yards 39.5</td></tr>
+<tr><td>8</td><td>Isaiah Horton</td><td>Texas A&amp;M</td><td>WR</td><td>$7,600</td><td class="val">0.46×</td><td>receptions 3.5</td></tr>
+<tr><td>9</td><td>Mario Craver</td><td>Texas A&amp;M</td><td>WR</td><td>$8,600</td><td class="val">0.29×</td><td>receptions 2.5</td></tr>
+<tr><td>10</td><td>Isaiah Horton</td><td>Texas A&amp;M</td><td>WR</td><td>$7,600</td><td class="val">0.27×</td><td>rushing plus receiving yards 20.5</td></tr>
+<tr><td>11</td><td>Isaiah Horton</td><td>Texas A&amp;M</td><td>WR</td><td>$7,600</td><td class="val">0.27×</td><td>rushing yards 20.5</td></tr>
+<tr><td>12</td><td>Marcel Reed</td><td>Texas A&amp;M</td><td>QB</td><td>$9,000</td><td class="val">0.27×</td><td>rushing yards 24.5</td></tr>
+<tr><td>13</td><td>Rueben Owens II</td><td>Texas A&amp;M</td><td>RB</td><td>$7,800</td><td class="val">0.16×</td><td>receiving yards 12.5</td></tr>
+</tbody></table>
+<h4 class="team-break">LSU</h4>
+<table class="sortable" data-default-sort="Value">
+<thead><tr><th scope="col" data-col="0">#</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Dilin Jones</td><td>LSU</td><td>RB</td><td>$10,000</td><td class="val">0.88×</td><td>rushing yards 87.5</td></tr>
+<tr><td>2</td><td>Sam Leavitt</td><td>LSU</td><td>QB</td><td>$11,600</td><td class="val">0.83×</td><td>passing yards 240.5</td></tr>
+<tr><td>3</td><td>Winston Watkins Jr.</td><td>LSU</td><td>WR</td><td>$7,200</td><td class="val">0.80×</td><td>receiving yards 57.5</td></tr>
+<tr><td>4</td><td>Winston Watkins Jr.</td><td>LSU</td><td>WR</td><td>$7,200</td><td class="val">0.80×</td><td>rushing plus receiving yards 57.5</td></tr>
+<tr><td>5</td><td>Winston Watkins Jr.</td><td>LSU</td><td>WR</td><td>$7,200</td><td class="val">0.80×</td><td>rushing yards 57.5</td></tr>
+<tr><td>6</td><td>Eugene Wilson III</td><td>LSU</td><td>WR</td><td>$5,600</td><td class="val">0.67×</td><td>receiving yards 37.5</td></tr>
+<tr><td>7</td><td>Eugene Wilson III</td><td>LSU</td><td>WR</td><td>$5,600</td><td class="val">0.63×</td><td>rushing plus receiving yards 35.5</td></tr>
+<tr><td>8</td><td>Eugene Wilson III</td><td>LSU</td><td>WR</td><td>$5,600</td><td class="val">0.63×</td><td>rushing yards 35.5</td></tr>
+<tr><td>9</td><td>Eugene Wilson III</td><td>LSU</td><td>WR</td><td>$5,600</td><td class="val">0.62×</td><td>receptions 3.5</td></tr>
+<tr><td>10</td><td>Jackson Harris</td><td>LSU</td><td>WR</td><td>$6,600</td><td class="val">0.55×</td><td>receiving yards 36.5</td></tr>
+<tr><td>11</td><td>Dilin Jones</td><td>LSU</td><td>RB</td><td>$10,000</td><td class="val">0.52×</td><td>rushing plus receiving yards 51.5</td></tr>
+<tr><td>12</td><td>Winston Watkins Jr.</td><td>LSU</td><td>WR</td><td>$7,200</td><td class="val">0.35×</td><td>receptions 2.5</td></tr>
+<tr><td>13</td><td>Sam Leavitt</td><td>LSU</td><td>QB</td><td>$11,600</td><td class="val">0.34×</td><td>rushing yards 39.5</td></tr>
+</tbody></table></div>
+<div class="etr-board"><h3>ETR VALUE</h3>
+<p>Every name on ETR&#x27;s sheet for this game, both teams in one table. Click a column to sort. A blank cell is —. <b>ETR salary</b> and <b>Owned</b> are their main-slate numbers. <b>Slate</b> is their sheet label. <b>Points per $1k</b> is their projected points versus our DraftKings salary for this game. Negative sheet values stay on the table. Both teams sit in one list so you can sort them together. Every Showdown skill player stays on the table (— if ETR did not list them). Not a Top 20.</p>
+<table class="sortable" data-default-sort="Points per $1k">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Opp</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">ETR salary</th><th scope="col" data-col="5">Projected points</th><th scope="col" data-col="6">Sheet value</th><th scope="col" data-col="7">Owned</th><th scope="col" data-col="8">Slate</th><th scope="col" data-col="9">Our salary</th><th scope="col" data-col="10">Points per $1k</th></tr></thead>
+<tbody>
+<tr><td>Zach Grace</td><td>LSU</td><td>Texas A&amp;M</td><td>WR</td><td>$3,000</td><td>4.23</td><td>-2.3</td><td>0.1</td><td>Night</td><td>$1,000</td><td class="val">4.23</td></tr>
+<tr><td>Ashton Bethel-Roman</td><td>Texas A&amp;M</td><td>LSU</td><td>WR</td><td>$3,200</td><td>5.06</td><td>-1.7</td><td>0</td><td>Night</td><td>$2,000</td><td class="val">2.53</td></tr>
+<tr><td>Sam Leavitt</td><td>LSU</td><td>Texas A&amp;M</td><td>QB</td><td>$8,400</td><td>26.22</td><td>11.6</td><td>19.75</td><td>Night</td><td>$11,600</td><td class="val">2.26</td></tr>
+<tr><td>Dilin Jones</td><td>LSU</td><td>Texas A&amp;M</td><td>RB</td><td>$7,600</td><td>21.87</td><td>8.5</td><td>21.23</td><td>Night</td><td>$10,000</td><td class="val">2.19</td></tr>
+<tr><td>Marcel Reed</td><td>Texas A&amp;M</td><td>LSU</td><td>QB</td><td>$6,500</td><td>19.01</td><td>7.3</td><td>10.78</td><td>Night</td><td>$9,000</td><td class="val">2.11</td></tr>
+<tr><td>Rueben Owens II</td><td>Texas A&amp;M</td><td>LSU</td><td>RB</td><td>$6,100</td><td>16.3</td><td>5.2</td><td>15.5</td><td>Night</td><td>$7,800</td><td class="val">2.09</td></tr>
+<tr><td>Winston Watkins Jr.</td><td>LSU</td><td>Texas A&amp;M</td><td>WR</td><td>$5,600</td><td>13</td><td>2.6</td><td>7.78</td><td>Night</td><td>$7,200</td><td class="val">1.81</td></tr>
+<tr><td>Mario Craver</td><td>Texas A&amp;M</td><td>LSU</td><td>WR</td><td>$6,500</td><td>15.47</td><td>3.7</td><td>8.45</td><td>Night</td><td>$8,600</td><td class="val">1.8</td></tr>
+<tr><td>Eugene Wilson III</td><td>LSU</td><td>Texas A&amp;M</td><td>WR</td><td>$4,400</td><td>9.59</td><td>1</td><td>4.83</td><td>Night</td><td>$5,600</td><td class="val">1.71</td></tr>
+<tr><td>Jackson Harris</td><td>LSU</td><td>Texas A&amp;M</td><td>WR</td><td>$5,200</td><td>10.5</td><td>0.7</td><td>2.19</td><td>Night</td><td>$6,600</td><td class="val">1.59</td></tr>
+<tr><td>Isaiah Horton</td><td>Texas A&amp;M</td><td>LSU</td><td>WR</td><td>$6,100</td><td>11.92</td><td>0.8</td><td>2.54</td><td>Night</td><td>$7,600</td><td class="val">1.57</td></tr>
+<tr><td>Scott Starzyk</td><td>LSU</td><td>Texas A&amp;M</td><td>K</td><td>$5,200</td><td>7.2</td><td>-2.6</td><td>0</td><td>Night</td><td>$5,200</td><td class="val">1.38</td></tr>
+<tr><td>TK Norman</td><td>Texas A&amp;M</td><td>LSU</td><td>WR</td><td>$3,000</td><td>1.34</td><td>-5.2</td><td>0</td><td>Night</td><td>$1,000</td><td class="val">1.34</td></tr>
+<tr><td>Richie Anderson III</td><td>Texas A&amp;M</td><td>LSU</td><td>WR</td><td>$3,100</td><td>1.56</td><td>-5.1</td><td>0</td><td>Night</td><td>$1,200</td><td class="val">1.3</td></tr>
+<tr><td>Malik Elzy</td><td>LSU</td><td>Texas A&amp;M</td><td>WR</td><td>$3,200</td><td>2.27</td><td>-4.5</td><td>0</td><td>Night</td><td>$1,800</td><td class="val">1.26</td></tr>
+<tr><td>Jayce Brown</td><td>LSU</td><td>Texas A&amp;M</td><td>WR</td><td>$4,600</td><td>6.81</td><td>-2.1</td><td>0.06</td><td>Night</td><td>$5,800</td><td class="val">1.17</td></tr>
+<tr><td>David Olano</td><td>Texas A&amp;M</td><td>LSU</td><td>K</td><td>$4,600</td><td>5.16</td><td>-3.7</td><td>0</td><td>Night</td><td>$4,600</td><td class="val">1.12</td></tr>
+<tr><td>KJ Edwards</td><td>Texas A&amp;M</td><td>LSU</td><td>RB</td><td>$4,200</td><td>4.11</td><td>-4.2</td><td>0</td><td>Night</td><td>$4,000</td><td class="val">1.03</td></tr>
+<tr><td>Houston Thomas</td><td>Texas A&amp;M</td><td>LSU</td><td>WR</td><td>$3,300</td><td>2.67</td><td>-4.3</td><td>0</td><td>Night</td><td>$2,600</td><td class="val">1.03</td></tr>
+<tr><td>Aaron Gregory</td><td>Texas A&amp;M</td><td>LSU</td><td>WR</td><td>$3,400</td><td>2.71</td><td>-4.4</td><td>0.13</td><td>Night</td><td>$3,200</td><td class="val">0.85</td></tr>
+<tr><td>Micah Riley</td><td>Texas A&amp;M</td><td>LSU</td><td>WR</td><td>$3,400</td><td>2.49</td><td>-4.6</td><td>0</td><td>Night</td><td>$3,000</td><td class="val">0.83</td></tr>
+<tr><td>Malachi Thomas</td><td>LSU</td><td>Texas A&amp;M</td><td>WR</td><td>$3,400</td><td>2.03</td><td>-5.1</td><td>0</td><td>Night</td><td>$2,800</td><td class="val">0.72</td></tr>
+<tr><td>Jayden Warren</td><td>Texas A&amp;M</td><td>LSU</td><td>WR</td><td>$3,100</td><td>0.98</td><td>-5.7</td><td>0</td><td>Night</td><td>$1,400</td><td class="val">0.7</td></tr>
+<tr><td>Stacy Gage</td><td>LSU</td><td>Texas A&amp;M</td><td>RB</td><td>$4,200</td><td>2.8</td><td>-5.5</td><td>0</td><td>Night</td><td>$4,200</td><td class="val">0.67</td></tr>
+<tr><td>Roman Mothershed</td><td>LSU</td><td>Texas A&amp;M</td><td>WR</td><td>$3,000</td><td>0.53</td><td>-6</td><td>0</td><td>Night</td><td>$1,000</td><td class="val">0.53</td></tr>
+<tr><td>Kiotti Armstrong</td><td>Texas A&amp;M</td><td>LSU</td><td>WR</td><td>$3,000</td><td>0.52</td><td>-6</td><td>0</td><td>Night</td><td>$1,000</td><td class="val">0.52</td></tr>
+<tr><td>Carsyn Baker</td><td>Texas A&amp;M</td><td>LSU</td><td>RB</td><td>$4,300</td><td>2.15</td><td>-6.3</td><td>0</td><td>Night</td><td>$4,400</td><td class="val">0.49</td></tr>
+<tr><td>Kelshaun Johnson</td><td>Texas A&amp;M</td><td>LSU</td><td>WR</td><td>$3,300</td><td>1</td><td>-5.9</td><td>0</td><td>Night</td><td>$2,400</td><td class="val">0.42</td></tr>
+<tr><td>Caden Durham</td><td>LSU</td><td>Texas A&amp;M</td><td>RB</td><td>$4,000</td><td>0.33</td><td>-7.7</td><td>0</td><td>Night</td><td>$1,000</td><td class="val">0.33</td></tr>
+<tr><td>Harlem Berry</td><td>LSU</td><td>Texas A&amp;M</td><td>RB</td><td>$4,000</td><td>0.32</td><td>-7.7</td><td>0</td><td>Night</td><td>$1,000</td><td class="val">0.32</td></tr>
+<tr><td>Aidan Corbello</td><td>LSU</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$5,200</td><td class="val">—</td></tr>
+<tr><td>Brayden Allen</td><td>LSU</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Cayden Jones</td><td>LSU</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Corey Barber Jr.</td><td>LSU</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Gavin Higgins</td><td>LSU</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$5,200</td><td class="val">—</td></tr>
+<tr><td>Husan Longstreet</td><td>LSU</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>JC Anderson</td><td>LSU</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>JD LaFleur</td><td>LSU</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Jabari Mack</td><td>LSU</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>James Larson</td><td>LSU</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Joseph Ebun</td><td>LSU</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Josh Jackson</td><td>LSU</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Kaden Martin</td><td>LSU</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Landen Clark</td><td>LSU</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$9,600</td><td class="val">—</td></tr>
+<tr><td>Landon Craig</td><td>LSU</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Nolon Buckels</td><td>LSU</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Phillip Wright III</td><td>LSU</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Raycine Guillory Jr.</td><td>LSU</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Rod Gainey Jr.</td><td>LSU</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$3,800</td><td class="val">—</td></tr>
+<tr><td>Sean Perret</td><td>LSU</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$5,200</td><td class="val">—</td></tr>
+<tr><td>Tre&#x27; Brown</td><td>LSU</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Trey&#x27;Dez Green</td><td>LSU</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,800</td><td class="val">—</td></tr>
+<tr><td>Tyree Holloway</td><td>LSU</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,600</td><td class="val">—</td></tr>
+<tr><td>Asher Murray</td><td>Texas A&amp;M</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,600</td><td class="val">—</td></tr>
+<tr><td>Brady Hart</td><td>Texas A&amp;M</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$8,200</td><td class="val">—</td></tr>
+<tr><td>Caleb Tafua</td><td>Texas A&amp;M</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Carter Braugh</td><td>Texas A&amp;M</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Chase Burton</td><td>Texas A&amp;M</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Colton Chmelar</td><td>Texas A&amp;M</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,600</td><td class="val">—</td></tr>
+<tr><td>DeDe Murray</td><td>Texas A&amp;M</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Eli Morcos</td><td>Texas A&amp;M</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Evan Jacobson</td><td>Texas A&amp;M</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Helaman Casuga</td><td>Texas A&amp;M</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Jackson Hebert</td><td>Texas A&amp;M</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Jamarion Morrow</td><td>Texas A&amp;M</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,200</td><td class="val">—</td></tr>
+<tr><td>KK Johnson</td><td>Texas A&amp;M</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Kade Stewart</td><td>Texas A&amp;M</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Luke Braden</td><td>Texas A&amp;M</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Madden Williams</td><td>Texas A&amp;M</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Mike Brown</td><td>Texas A&amp;M</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Paxton Land</td><td>Texas A&amp;M</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr><td>Ramarian Tillman</td><td>Texas A&amp;M</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Terry Bussey</td><td>Texas A&amp;M</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Tiger Riden Jr.</td><td>Texas A&amp;M</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Whitaker Williams</td><td>Texas A&amp;M</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr><td>Will Hargett</td><td>Texas A&amp;M</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+</tbody></table></div>
+<div class="player-book"><h3>Player book</h3><p class="sub">Click a week. Each school’s game that week is an ESPN-style box — both sides. Under the score is that game’s posted spread and total. Season totals is the same tables added up. Trending up uses last week versus the games before. A blank cell is —.</p><div class="trend-up-strip"><h4>Trending up</h4><ul><li>Mario Craver · TA&amp;M · 25.9 last game (12.4 before)</li><li>Marcel Reed · TA&amp;M · 25.4 last game (19.2 before)</li><li>Carsyn Baker · TA&amp;M · 6.2 last game (0.6 before)</li><li>KJ Edwards · TA&amp;M · 5.4 last game (2.2 before)</li><li>Jayce Brown · LSU · 5.3 last game (2.4 before)</li></ul></div><div class="week-pills noprint"><button type="button" class="week-pill" data-week="0">W0</button><button type="button" class="week-pill" data-week="1">W1</button><button type="button" class="week-pill" data-week="2">W2</button><button type="button" class="week-pill on" data-week="3">W3</button><button type="button" class="week-pill" data-week="season">Season</button></div><section class="week-panel" data-week="0" hidden><h4 class="week-lab">Week 0</h4><article class="game-box" data-team="LSU"><h3 class="box-score">LSU</h3><p class="sub">No box for this week.</p></article><article class="game-box" data-team="TA&amp;M"><h3 class="box-score">Texas A&amp;M</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="1" hidden><h4 class="week-lab">Week 1</h4><article class="game-box" data-team="LSU"><h3 class="box-score">LSU 51, Clemson 10</h3><p class="box-line">LSU −10.5 / 50.5</p><div class="box-side"><h4>LSU</h4><p class="run-pass">LSU threw for 335, 2 passing scores and ran for 320, 4 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Sam Leavitt</td><td data-n="28.0">28</td><td data-n="230.0">230</td><td data-n="1.0">1</td></tr><tr><td>Landen Clark</td><td data-n="7.0">7</td><td data-n="72.0">72</td><td data-n="1.0">1</td></tr><tr><td>Husan Longstreet</td><td data-n="1.0">1</td><td data-n="33.0">33</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Dilin Jones</td><td data-n="23.0">23</td><td data-n="113.0">113</td><td data-n="2.0">2</td></tr><tr><td>Sam Leavitt</td><td data-n="12.0">12</td><td data-n="113.0">113</td><td data-n="2.0">2</td></tr><tr><td>Stacy Gage</td><td data-n="8.0">8</td><td data-n="33.0">33</td><td data-n="0.0">0</td></tr><tr><td>Landen Clark</td><td data-n="4.0">4</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Winston Watkins Jr.</td><td data-n="1.0">1</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Eugene Wilson III</td><td data-n="1.0">1</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Harlem Berry</td><td data-n="4.0">4</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Caden Durham</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Husan Longstreet</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Winston Watkins Jr.</td><td data-n="7.0">7</td><td data-n="10.0">10</td><td data-n="110.0">110</td><td data-n="1.0">1</td></tr><tr><td>Phillip Wright III</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="70.0">70</td><td data-n="1.0">1</td></tr><tr><td>Trey&#x27;Dez Green</td><td data-n="4.0">4</td><td data-n="6.0">6</td><td data-n="58.0">58</td><td data-n="0.0">0</td></tr><tr><td>Eugene Wilson III</td><td data-n="4.0">4</td><td data-n="5.0">5</td><td data-n="35.0">35</td><td data-n="0.0">0</td></tr><tr><td>Jackson Harris</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="32.0">32</td><td data-n="0.0">0</td></tr><tr><td>Corey Barber Jr.</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Jayce Brown</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Dilin Jones</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Scott Starzyk</td><td data-n="1.0">1</td><td data-n="6.0">6</td></tr></tbody></table></div><div class="box-side"><h4>Clemson</h4><p class="run-pass">Clemson threw for 105, 0 passing scores and ran for 40, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Christopher Vizzina</td><td data-n="16.0">16</td><td data-n="83.0">83</td><td data-n="0.0">0</td></tr><tr><td>Tait Reynolds</td><td data-n="6.0">6</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jarvis Green</td><td data-n="4.0">4</td><td data-n="21.0">21</td><td data-n="0.0">0</td></tr><tr><td>Gideon Davidson</td><td data-n="7.0">7</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>David Eziomume</td><td data-n="1.0">1</td><td data-n="11.0">11</td><td data-n="1.0">1</td></tr><tr><td>Christopher Vizzina</td><td data-n="5.0">5</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Chris Johnson Jr.</td><td data-n="3.0">3</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>Bryant Wesco Jr.</td><td data-n="1.0">1</td><td data-n="-7.0">-7</td><td data-n="0.0">0</td></tr><tr><td>Tait Reynolds</td><td data-n="5.0">5</td><td data-n="-9.0">-9</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>T.J. Moore</td><td data-n="4.0">4</td><td data-n="7.0">7</td><td data-n="31.0">31</td><td data-n="0.0">0</td></tr><tr><td>Bryant Wesco Jr.</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="29.0">29</td><td data-n="0.0">0</td></tr><tr><td>Juju Preston</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="25.0">25</td><td data-n="0.0">0</td></tr><tr><td>Tyler Brown</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Tristan Smith</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Gordon Sellars III</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Gideon Davidson</td><td data-n="1.0">1</td><td>—</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Naeem Burroughs</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Olsen Patt-Henry</td><td data-n="1.0">1</td><td>—</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Christian Bentancur</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="-3.0">-3</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Nolan Hauser</td><td data-n="1.0">1</td><td data-n="1.0">1</td></tr></tbody></table></div></article><article class="game-box" data-team="TA&amp;M"><h3 class="box-score">Texas A&amp;M 50, Missouri State 0</h3><p class="box-line">Texas A&amp;M −40.5 / 53.5</p><div class="box-side"><h4>Texas A&amp;amp;M</h4><p class="run-pass">Texas A&amp;M threw for 269, 3 passing scores and ran for 236, 3 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Marcel Reed</td><td data-n="30.0">30</td><td data-n="233.0">233</td><td data-n="2.0">2</td></tr><tr><td>Brady Hart</td><td data-n="8.0">8</td><td data-n="36.0">36</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Rueben Owens</td><td data-n="17.0">17</td><td data-n="77.0">77</td><td data-n="0.0">0</td></tr><tr><td>Carsyn Baker</td><td data-n="7.0">7</td><td data-n="52.0">52</td><td data-n="1.0">1</td></tr><tr><td>KJ Edwards</td><td data-n="5.0">5</td><td data-n="44.0">44</td><td data-n="0.0">0</td></tr><tr><td>Jamarion Morrow</td><td data-n="8.0">8</td><td data-n="29.0">29</td><td data-n="1.0">1</td></tr><tr><td>Marcel Reed</td><td data-n="7.0">7</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>Terry Bussey</td><td data-n="2.0">2</td><td data-n="10.0">10</td><td data-n="1.0">1</td></tr><tr><td>Brady Hart</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Isaiah Horton</td><td data-n="4.0">4</td><td>—</td><td data-n="76.0">76</td><td data-n="1.0">1</td></tr><tr><td>Mario Craver</td><td data-n="5.0">5</td><td>—</td><td data-n="41.0">41</td><td data-n="1.0">1</td></tr><tr><td>Terry Bussey</td><td data-n="3.0">3</td><td>—</td><td data-n="34.0">34</td><td data-n="0.0">0</td></tr><tr><td>Kelshaun Johnson</td><td data-n="3.0">3</td><td>—</td><td data-n="25.0">25</td><td data-n="0.0">0</td></tr><tr><td>Rueben Owens</td><td data-n="2.0">2</td><td>—</td><td data-n="25.0">25</td><td data-n="0.0">0</td></tr><tr><td>Aaron Gregory</td><td data-n="2.0">2</td><td>—</td><td data-n="22.0">22</td><td data-n="1.0">1</td></tr><tr><td>Jamarion Morrow</td><td data-n="2.0">2</td><td>—</td><td data-n="18.0">18</td><td data-n="0.0">0</td></tr><tr><td>Ashton Bethel-Roman</td><td data-n="1.0">1</td><td>—</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Micah Riley-Ducker</td><td data-n="2.0">2</td><td>—</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>KJ Edwards</td><td data-n="1.0">1</td><td>—</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Asher Murray</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>David Olano</td><td data-n="1.0">1</td><td data-n="6.0">6</td></tr></tbody></table></div><div class="box-side"><h4>Missouri State</h4><p class="run-pass">Missouri State threw for 30, 0 passing scores and ran for 37, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Skyler Locklear</td><td data-n="17.0">17</td><td data-n="30.0">30</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jambres Dubar</td><td data-n="7.0">7</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>King Davis</td><td data-n="5.0">5</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Ramone Green Jr.</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Connor Lair</td><td data-n="5.0">5</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>Skyler Locklear</td><td data-n="4.0">4</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Dillon Hipp</td><td data-n="2.0">2</td><td>—</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Jmariyae Robinson</td><td data-n="4.0">4</td><td>—</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Ramone Green Jr.</td><td data-n="2.0">2</td><td>—</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr></tbody></table></div></article></section><section class="week-panel" data-week="2" hidden><h4 class="week-lab">Week 2</h4><article class="game-box" data-team="LSU"><h3 class="box-score">LSU 45, Louisiana Tech 14</h3><p class="box-line">LSU −35.5 / 55.5</p><div class="box-side"><h4>LSU</h4><p class="run-pass">LSU threw for 381, 1 passing scores and ran for 147, 4 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Sam Leavitt</td><td data-n="38.0">38</td><td data-n="344.0">344</td><td data-n="1.0">1</td></tr><tr><td>Landen Clark</td><td data-n="3.0">3</td><td data-n="37.0">37</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Dilin Jones</td><td data-n="18.0">18</td><td data-n="66.0">66</td><td data-n="0.0">0</td></tr><tr><td>Sam Leavitt</td><td data-n="11.0">11</td><td data-n="22.0">22</td><td data-n="3.0">3</td></tr><tr><td>Stacy Gage</td><td data-n="4.0">4</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>Landen Clark</td><td data-n="3.0">3</td><td data-n="19.0">19</td><td data-n="1.0">1</td></tr><tr><td>Trey&#x27;Dez Green</td><td data-n="2.0">2</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Winston Watkins Jr.</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Harlem Berry</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Phillip Wright III</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Eugene Wilson III</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Caden Durham</td><td data-n="1.0">1</td><td data-n="-2.0">-2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Trey&#x27;Dez Green</td><td data-n="6.0">6</td><td data-n="7.0">7</td><td data-n="104.0">104</td><td data-n="1.0">1</td></tr><tr><td>Eugene Wilson III</td><td data-n="6.0">6</td><td data-n="6.0">6</td><td data-n="93.0">93</td><td data-n="0.0">0</td></tr><tr><td>Jackson Harris</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="80.0">80</td><td data-n="0.0">0</td></tr><tr><td>Winston Watkins Jr.</td><td data-n="5.0">5</td><td data-n="9.0">9</td><td data-n="43.0">43</td><td data-n="0.0">0</td></tr><tr><td>Tyree Holloway</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="37.0">37</td><td data-n="0.0">0</td></tr><tr><td>Dilin Jones</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Stacy Gage</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Phillip Wright III</td><td>—</td><td data-n="3.0">3</td><td>—</td><td>—</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Scott Starzyk</td><td data-n="3.0">3</td><td data-n="4.0">4</td></tr></tbody></table></div><div class="box-side"><h4>Louisiana Tech</h4><p class="run-pass">Louisiana Tech threw for 286, 2 passing scores and ran for -6, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Blake Baker</td><td data-n="21.0">21</td><td data-n="128.0">128</td><td data-n="1.0">1</td></tr><tr><td>Trey Kukuk</td><td data-n="3.0">3</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Andrew Burnette</td><td data-n="6.0">6</td><td data-n="16.0">16</td><td data-n="0.0">0</td></tr><tr><td>Sergio Snider</td><td data-n="2.0">2</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Jaden Miller</td><td data-n="6.0">6</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Trey Kukuk</td><td data-n="4.0">4</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Luke Watkins</td><td data-n="1.0">1</td><td data-n="-6.0">-6</td><td data-n="0.0">0</td></tr><tr><td>Blake Baker</td><td data-n="12.0">12</td><td data-n="-26.0">-26</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Jalen Mickens</td><td data-n="6.0">6</td><td data-n="8.0">8</td><td data-n="101.0">101</td><td data-n="1.0">1</td></tr><tr><td>Eli Finley</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Johnnie Thiel IV</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Talyn Shettron</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Andrew Burnette</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Luke Watkins</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Marcus Calwise Jr.</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Blake Baker</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Kaegan Kent</td><td data-n="0.0">0</td><td data-n="2.0">2</td></tr></tbody></table></div></article><article class="game-box" data-team="TA&amp;M"><h3 class="box-score">Texas A&amp;M 48, Arizona State 20</h3><p class="box-line">Texas A&amp;M −14.5 / 51.5</p><div class="box-side"><h4>Texas A&amp;amp;M</h4><p class="run-pass">Texas A&amp;M threw for 163, 3 passing scores and ran for 97, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Marcel Reed</td><td data-n="25.0">25</td><td data-n="163.0">163</td><td data-n="3.0">3</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Rueben Owens II</td><td data-n="10.0">10</td><td data-n="35.0">35</td><td data-n="1.0">1</td></tr><tr><td>Jamarion Morrow</td><td data-n="8.0">8</td><td data-n="27.0">27</td><td data-n="0.0">0</td></tr><tr><td>KJ Edwards</td><td data-n="3.0">3</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Marcel Reed</td><td data-n="7.0">7</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Carsyn Baker</td><td data-n="2.0">2</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Terry Bussey</td><td data-n="2.0">2</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>Tyler White</td><td data-n="1.0">1</td><td data-n="-10.0">-10</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Terry Bussey</td><td data-n="4.0">4</td><td data-n="5.0">5</td><td data-n="58.0">58</td><td data-n="0.0">0</td></tr><tr><td>Mario Craver</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="34.0">34</td><td data-n="1.0">1</td></tr><tr><td>Isaiah Horton</td><td data-n="3.0">3</td><td data-n="7.0">7</td><td data-n="33.0">33</td><td data-n="2.0">2</td></tr><tr><td>Jamarion Morrow</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="18.0">18</td><td data-n="0.0">0</td></tr><tr><td>Richie Anderson III</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Rueben Owens II</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Ashton Bethel-Roman</td><td data-n="1.0">1</td><td>—</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table></div><div class="box-side"><h4>Arizona State</h4><p class="run-pass">Arizona State threw for 254, 2 passing scores and ran for 117, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Cutter Boley</td><td data-n="34.0">34</td><td data-n="254.0">254</td><td data-n="2.0">2</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Kyson Brown</td><td data-n="13.0">13</td><td data-n="66.0">66</td><td data-n="0.0">0</td></tr><tr><td>Cutter Boley</td><td data-n="6.0">6</td><td data-n="31.0">31</td><td data-n="0.0">0</td></tr><tr><td>Marquis Gillis</td><td data-n="4.0">4</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Grayson Rigdon</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Cardae Mack</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>James Giggey</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Reed Harris</td><td data-n="9.0">9</td><td data-n="12.0">12</td><td data-n="189.0">189</td><td data-n="2.0">2</td></tr><tr><td>Omarion Miller</td><td data-n="9.0">9</td><td data-n="14.0">14</td><td data-n="29.0">29</td><td data-n="0.0">0</td></tr><tr><td>Khamari Anderson</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="21.0">21</td><td data-n="0.0">0</td></tr><tr><td>Raiden Vines-Bright</td><td data-n="1.0">1</td><td>—</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Kyson Brown</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Marquis Gillis</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table></div></article></section><section class="week-panel" data-week="3"><h4 class="week-lab">Week 3</h4><article class="game-box" data-team="LSU"><h3 class="box-score">LSU 24, Ole Miss 32</h3><p class="box-line">LSU −3 / 58.5</p><div class="box-side"><h4>LSU</h4><p class="run-pass">LSU threw for 158, 1 passing scores and ran for 172, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Sam Leavitt</td><td data-n="27.0">27</td><td data-n="158.0">158</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Dilin Jones</td><td data-n="23.0">23</td><td data-n="106.0">106</td><td data-n="1.0">1</td></tr><tr><td>Sam Leavitt</td><td data-n="17.0">17</td><td data-n="63.0">63</td><td data-n="1.0">1</td></tr><tr><td>Stacy Gage</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Trey&#x27;Dez Green</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="60.0">60</td><td data-n="0.0">0</td></tr><tr><td>Winston Watkins Jr.</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="54.0">54</td><td data-n="1.0">1</td></tr><tr><td>Jayce Brown</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Dilin Jones</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Malik Elzy</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Jackson Harris</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Eugene Wilson III</td><td data-n="2.0">2</td><td data-n="5.0">5</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Scott Starzyk</td><td data-n="1.0">1</td><td data-n="3.0">3</td></tr></tbody></table></div><div class="box-side"><h4>Ole Miss</h4><p class="run-pass">Ole Miss threw for 726, 4 passing scores and ran for 138, 4 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Trinidad Chambliss</td><td data-n="48.0">48</td><td data-n="363.0">363</td><td data-n="2.0">2</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Kewan Lacy</td><td data-n="9.0">9</td><td data-n="43.0">43</td><td data-n="1.0">1</td></tr><tr><td>JT Lindsey</td><td data-n="4.0">4</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>Deuce Alexander</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Trinidad Chambliss</td><td data-n="9.0">9</td><td data-n="2.0">2</td><td data-n="1.0">1</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Traylon Ray</td><td data-n="7.0">7</td><td data-n="8.0">8</td><td data-n="115.0">115</td><td data-n="1.0">1</td></tr><tr><td>Caleb Odom</td><td data-n="5.0">5</td><td data-n="8.0">8</td><td data-n="88.0">88</td><td data-n="0.0">0</td></tr><tr><td>Deuce Alexander</td><td data-n="7.0">7</td><td data-n="10.0">10</td><td data-n="60.0">60</td><td data-n="1.0">1</td></tr><tr><td>Horatio Fields</td><td data-n="5.0">5</td><td data-n="8.0">8</td><td data-n="53.0">53</td><td data-n="0.0">0</td></tr><tr><td>Luke Hasz</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Johntay Cook II</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Michael Smith</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>JT Lindsey</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Kewan Lacy</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="-2.0">-2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Lucas Carneiro</td><td data-n="1.0">1</td><td data-n="3.0">3</td></tr></tbody></table></div></article><article class="game-box" data-team="TA&amp;M"><h3 class="box-score">Texas A&amp;M 21, Kentucky 31</h3><p class="box-line">Texas A&amp;M −17 / 48.5</p><div class="box-side"><h4>Texas A&amp;amp;M</h4><p class="run-pass">Texas A&amp;M threw for 236, 1 passing scores and ran for 187, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Marcel Reed</td><td data-n="49.0">49</td><td data-n="236.0">236</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Marcel Reed</td><td data-n="10.0">10</td><td data-n="80.0">80</td><td data-n="1.0">1</td></tr><tr><td>Rueben Owens II</td><td data-n="18.0">18</td><td data-n="74.0">74</td><td data-n="0.0">0</td></tr><tr><td>KJ Edwards</td><td data-n="5.0">5</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Micah Riley</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Carsyn Baker</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="1.0">1</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Mario Craver</td><td data-n="11.0">11</td><td data-n="19.0">19</td><td data-n="119.0">119</td><td data-n="0.0">0</td></tr><tr><td>Isaiah Horton</td><td data-n="5.0">5</td><td data-n="9.0">9</td><td data-n="61.0">61</td><td data-n="0.0">0</td></tr><tr><td>Jayden Warren</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Kelshaun Johnson</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Rueben Owens II</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Kiotti Armstrong</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Aaron Gregory</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>KJ Edwards</td><td data-n="2.0">2</td><td>—</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Micah Riley</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="1.0">1</td></tr><tr><td>Houston Thomas</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Carsyn Baker</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table></div><div class="box-side"><h4>Kentucky</h4><p class="run-pass">Kentucky threw for 252, 2 passing scores and ran for 157, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Kenny Minchey</td><td data-n="18.0">18</td><td data-n="252.0">252</td><td data-n="2.0">2</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>CJ Baxter</td><td data-n="19.0">19</td><td data-n="87.0">87</td><td data-n="2.0">2</td></tr><tr><td>Jason Patterson</td><td data-n="6.0">6</td><td data-n="58.0">58</td><td data-n="0.0">0</td></tr><tr><td>Mikkel Skinner</td><td data-n="2.0">2</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Kenny Minchey</td><td data-n="7.0">7</td><td data-n="-2.0">-2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>DJ Miller</td><td data-n="5.0">5</td><td data-n="6.0">6</td><td data-n="96.0">96</td><td data-n="0.0">0</td></tr><tr><td>Kenny Darby</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="64.0">64</td><td data-n="1.0">1</td></tr><tr><td>Henry Boyer</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="35.0">35</td><td data-n="1.0">1</td></tr><tr><td>CJ Baxter</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Willie Rodriguez</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Mikkel Skinner</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr></tbody></table></div></article></section><section class="week-panel" data-week="season" hidden><h4 class="week-lab">Season totals</h4><article class="game-box" data-team="LSU"><h3 class="box-score">LSU · 5 games</h3><div class="box-side"><h4>LSU</h4><p class="run-pass">LSU threw for 874, 4 passing scores and ran for 639, 10 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Sam Leavitt</td><td data-n="93.0">93</td><td data-n="732.0">732</td><td data-n="3.0">3</td></tr><tr><td>Landen Clark</td><td data-n="10.0">10</td><td data-n="109.0">109</td><td data-n="1.0">1</td></tr><tr><td>Husan Longstreet</td><td data-n="1.0">1</td><td data-n="33.0">33</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Dilin Jones</td><td data-n="64.0">64</td><td data-n="285.0">285</td><td data-n="3.0">3</td></tr><tr><td>Sam Leavitt</td><td data-n="40.0">40</td><td data-n="198.0">198</td><td data-n="6.0">6</td></tr><tr><td>Stacy Gage</td><td data-n="15.0">15</td><td data-n="56.0">56</td><td data-n="0.0">0</td></tr><tr><td>Landen Clark</td><td data-n="7.0">7</td><td data-n="42.0">42</td><td data-n="1.0">1</td></tr><tr><td>Winston Watkins Jr.</td><td data-n="2.0">2</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>Harlem Berry</td><td data-n="5.0">5</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Eugene Wilson III</td><td data-n="2.0">2</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Trey&#x27;Dez Green</td><td data-n="2.0">2</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Phillip Wright III</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Husan Longstreet</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Caden Durham</td><td data-n="4.0">4</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Trey&#x27;Dez Green</td><td data-n="14.0">14</td><td data-n="17.0">17</td><td data-n="222.0">222</td><td data-n="1.0">1</td></tr><tr><td>Winston Watkins Jr.</td><td data-n="15.0">15</td><td data-n="22.0">22</td><td data-n="207.0">207</td><td data-n="2.0">2</td></tr><tr><td>Eugene Wilson III</td><td data-n="12.0">12</td><td data-n="16.0">16</td><td data-n="132.0">132</td><td data-n="0.0">0</td></tr><tr><td>Jackson Harris</td><td data-n="5.0">5</td><td data-n="12.0">12</td><td data-n="117.0">117</td><td data-n="0.0">0</td></tr><tr><td>Phillip Wright III</td><td data-n="3.0">3</td><td data-n="6.0">6</td><td data-n="70.0">70</td><td data-n="1.0">1</td></tr><tr><td>Jayce Brown</td><td data-n="4.0">4</td><td data-n="7.0">7</td><td data-n="37.0">37</td><td data-n="0.0">0</td></tr><tr><td>Tyree Holloway</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="37.0">37</td><td data-n="0.0">0</td></tr><tr><td>Dilin Jones</td><td data-n="6.0">6</td><td data-n="7.0">7</td><td data-n="21.0">21</td><td data-n="0.0">0</td></tr><tr><td>Corey Barber Jr.</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Stacy Gage</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Malik Elzy</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Scott Starzyk</td><td data-n="5.0">5</td><td data-n="13.0">13</td></tr></tbody></table></div></article><article class="game-box" data-team="TA&amp;M"><h3 class="box-score">Texas A&amp;M · 3 games</h3><div class="box-side"><h4>Texas A&amp;amp;M</h4><p class="run-pass">Texas A&amp;M threw for 668, 7 passing scores and ran for 520, 6 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Marcel Reed</td><td data-n="104.0">104</td><td data-n="632.0">632</td><td data-n="6.0">6</td></tr><tr><td>Brady Hart</td><td data-n="8.0">8</td><td data-n="36.0">36</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Rueben Owens II</td><td data-n="45.0">45</td><td data-n="186.0">186</td><td data-n="1.0">1</td></tr><tr><td>Marcel Reed</td><td data-n="24.0">24</td><td data-n="117.0">117</td><td data-n="1.0">1</td></tr><tr><td>KJ Edwards</td><td data-n="13.0">13</td><td data-n="94.0">94</td><td data-n="0.0">0</td></tr><tr><td>Carsyn Baker</td><td data-n="10.0">10</td><td data-n="60.0">60</td><td data-n="2.0">2</td></tr><tr><td>Jamarion Morrow</td><td data-n="16.0">16</td><td data-n="56.0">56</td><td data-n="1.0">1</td></tr><tr><td>Terry Bussey</td><td data-n="4.0">4</td><td data-n="10.0">10</td><td data-n="1.0">1</td></tr><tr><td>Brady Hart</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Micah Riley</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Tyler White</td><td data-n="1.0">1</td><td data-n="-10.0">-10</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Mario Craver</td><td data-n="19.0">19</td><td data-n="23.0">23</td><td data-n="194.0">194</td><td data-n="2.0">2</td></tr><tr><td>Isaiah Horton</td><td data-n="12.0">12</td><td data-n="16.0">16</td><td data-n="170.0">170</td><td data-n="3.0">3</td></tr><tr><td>Terry Bussey</td><td data-n="7.0">7</td><td data-n="5.0">5</td><td data-n="92.0">92</td><td data-n="0.0">0</td></tr><tr><td>Rueben Owens II</td><td data-n="5.0">5</td><td data-n="4.0">4</td><td data-n="41.0">41</td><td data-n="0.0">0</td></tr><tr><td>Jamarion Morrow</td><td data-n="4.0">4</td><td data-n="2.0">2</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Kelshaun Johnson</td><td data-n="4.0">4</td><td data-n="2.0">2</td><td data-n="34.0">34</td><td data-n="0.0">0</td></tr><tr><td>Aaron Gregory</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="28.0">28</td><td data-n="1.0">1</td></tr><tr><td>Ashton Bethel-Roman</td><td data-n="2.0">2</td><td>—</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Micah Riley-Ducker</td><td data-n="2.0">2</td><td>—</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Richie Anderson III</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Jayden Warren</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>KJ Edwards</td><td data-n="3.0">3</td><td>—</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Kiotti Armstrong</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Micah Riley</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="1.0">1</td></tr><tr><td>Houston Thomas</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Carsyn Baker</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Asher Murray</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>David Olano</td><td data-n="1.0">1</td><td data-n="6.0">6</td></tr></tbody></table></div></article></section></div>
+</article>
+</main></div>
+<script>
+(function(){
+  function applyWeek(book, pill){
+    if(!book || !pill) return;
+    book.querySelectorAll('.week-pill').forEach(function(p){
+      p.classList.toggle('on', p===pill);
+    });
+    var wk=pill.getAttribute('data-week')||'';
+    book.querySelectorAll('.week-panel').forEach(function(panel){
+      panel.hidden = (panel.getAttribute('data-week')||'')!==wk;
+    });
+    var inp=document.getElementById('playerSearch');
+    if(inp) inp.dispatchEvent(new Event('input'));
+  }
+  document.addEventListener('click', function(e){
+    var pill=e.target.closest('.week-pill');
+    if(!pill) return;
+    var book=pill.closest('.player-book');
+    if(!book) return;
+    applyWeek(book, pill);
+  });
+})();
+</script>
+<script>
+(function(){
+  var KEY='desk-report-theme';
+  function apply(mode){
+    document.documentElement.classList.toggle('light', mode==='light');
+    var b=document.getElementById('themeBtn');
+    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  var saved=null;
+  try { saved=localStorage.getItem(KEY); } catch (e) {}
+  apply(saved==='light'?'light':'dark');
+  window.toggleDeskTheme=function(){
+    apply(document.documentElement.classList.contains('light')?'dark':'light');
+  };
+})();
+(function(){
+  function val(td){
+    if(!td) return {n:false, v:null, s:''};
+    var dn=td.getAttribute('data-n');
+    if(dn!==null && dn!==''){
+      var n=parseFloat(dn);
+      if(!isNaN(n)) return {n:true, v:n, s:dn};
+    }
+    var t=(td.textContent||'').trim();
+    if(!t || t==='—' || t==='-') return {n:false, v:null, s:''};
+    var raw=t.replace(/[$,×x]/g,'').replace(/,/g,'');
+    if(/^-?\d+(\.\d+)?$/.test(raw)) return {n:true, v:parseFloat(raw), s:t};
+    return {n:false, v:t.toLowerCase(), s:t};
+  }
+  function sortTable(table, col, dir){
+    var tb=table && table.tBodies[0];
+    if(!tb) return;
+    Array.prototype.forEach.call(table.querySelectorAll('th'), function(h){
+      h.removeAttribute('data-dir');
+    });
+    var mark=table.querySelector('th[data-col="'+col+'"]');
+    if(mark) mark.setAttribute('data-dir', dir);
+    var rows=Array.prototype.slice.call(tb.rows);
+    rows.sort(function(a,b){
+      var A=val(a.cells[col]||{});
+      var B=val(b.cells[col]||{});
+      if(A.v===null && B.v===null) return 0;
+      if(A.v===null) return 1;
+      if(B.v===null) return -1;
+      var cmp=0;
+      if(A.n && B.n) cmp=A.v-B.v;
+      else cmp=String(A.v).localeCompare(String(B.v));
+      return dir==='asc' ? cmp : -cmp;
+    });
+    rows.forEach(function(r){ tb.appendChild(r); });
+  }
+  document.addEventListener('click', function(e){
+    var th=e.target.closest('table.sortable th');
+    if(!th) return;
+    var table=th.closest('table');
+    if(!table) return;
+    var raw=th.getAttribute('data-col');
+    if(raw===null) return;
+    var dir=th.getAttribute('data-dir')==='asc' ? 'desc' : 'asc';
+    sortTable(table, parseInt(raw,10), dir);
+  });
+  document.querySelectorAll('table.sortable[data-default-sort]').forEach(function(table){
+    var want=(table.getAttribute('data-default-sort')||'').toLowerCase();
+    var ths=table.querySelectorAll('th[data-col]');
+    var idx=-1;
+    for(var i=0;i<ths.length;i++){
+      var t=(ths[i].textContent||'').trim().toLowerCase();
+      if(t===want || t.indexOf(want)>=0 || want.indexOf(t)>=0){
+        idx=parseInt(ths[i].getAttribute('data-col'),10);
+        break;
+      }
+    }
+    if(idx>=0) sortTable(table, idx, 'desc');
+  });
+})();
+</script>
+<script>
+(function(){
+  function norm(s){
+    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+  }
+  function skip(el){
+    return !!(el.closest && el.closest('dialog, .pcard, .rail'));
+  }
+  function playerIdx(table){
+    var ths=table.querySelectorAll('thead th');
+    for(var i=0;i<ths.length;i++){
+      var t=norm(ths[i].textContent);
+      if(t==='player'||t==='name') return i;
+    }
+    return -1;
+  }
+  function rowHit(tr, q, pidx){
+    if(!q) return true;
+    if(pidx>=0 && tr.cells[pidx]) return norm(tr.cells[pidx].textContent).indexOf(q)>=0;
+    return norm(tr.textContent).indexOf(q)>=0;
+  }
+  function apply(opts){
+    opts = opts || {};
+    var inp=document.getElementById('playerSearch');
+    if(!inp) return;
+    var q=norm(inp.value);
+    var n=0;
+    var hitSel='tbody tr:not([hidden]), li:not([hidden])';
+    function teamOk(tr){
+      return true;
+    }
+    function mark(el, hit){
+      el.hidden = !hit;
+      el.classList.toggle('name-hit', !!(q && hit));
+      if(q && hit) n++;
+    }
+    function panelHasHit(sel){
+      var panel=document.querySelector(sel);
+      if(!panel) return false;
+      var hit=false;
+      panel.querySelectorAll('tbody tr, li').forEach(function(el){
+        if(!el.hidden) hit=true;
+      });
+      return hit;
+    }
+    document.querySelectorAll('table tbody tr').forEach(function(tr){
+      if(skip(tr)) return;
+      var ok=teamOk(tr) && rowHit(tr, q, playerIdx(tr.closest('table')));
+      mark(tr, ok);
+    });
+    document.querySelectorAll('table').forEach(function(t){
+      if(skip(t)) return;
+      var any=false;
+      var tb=t.tBodies[0];
+      if(tb){
+        Array.prototype.forEach.call(tb.rows, function(r){ if(!r.hidden) any=true; });
+      }
+      t.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.pos-book,.week-panel,.box-side,.game-box').forEach(function(sec){
+      var any=false;
+      sec.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) any=true; });
+      if(!sec.querySelector('tbody tr')) any=true;
+      sec.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.week-book-wrap').forEach(function(w){
+      var t=w.querySelector('table');
+      w.classList.toggle('search-empty', !!(t && t.classList.contains('search-empty')));
+    });
+    document.querySelectorAll('.week-pill').forEach(function(pill){
+      var book=pill.closest('.player-book');
+      if(!book) return;
+      var wk=pill.getAttribute('data-week')||'';
+      var panel=book.querySelector('.week-panel[data-week="'+wk+'"]');
+      var hit=false;
+      if(panel){
+        panel.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) hit=true; });
+        if(!panel.querySelector('tbody tr')) hit=true;
+      }
+      pill.classList.toggle('search-miss', !!(q && !hit));
+    });
+    document.querySelectorAll('li').forEach(function(li){
+      if(skip(li)) return;
+      mark(li, !q || norm(li.textContent).indexOf(q)>=0);
+    });
+    var hint=document.getElementById('playerSearchHint');
+    if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
+    document.querySelectorAll('label.pill[for]').forEach(function(lab){
+      var id=lab.getAttribute('for');
+      var sel = id==='v-report' ? '.game-report'
+              : id==='v-prop' ? '.prop-board'
+              : id==='v-etr' ? '.etr-board'
+              : id==='v-book' ? '.player-book' : '';
+      if(!sel) return;
+      lab.classList.toggle('search-miss', !!(q && !panelHasHit(sel)));
+    });
+    if(opts.jump){
+      var book=document.querySelector('.player-book');
+      if(book && q){
+        var on=book.querySelector('.week-pill.on');
+        var cur=on ? (on.getAttribute('data-week')||'') : '';
+        var curPanel=cur ? book.querySelector('.week-panel[data-week="'+cur+'"]') : null;
+        var curHit=false;
+        if(curPanel){
+          curPanel.querySelectorAll('tbody tr.name-hit').forEach(function(){ curHit=true; });
+        }
+        if(!curHit){
+          var alt=book.querySelector('.week-pill:not(.search-miss)');
+          if(alt && alt!==on){
+            book.querySelectorAll('.week-pill').forEach(function(p){ p.classList.toggle('on', p===alt); });
+            var aw=alt.getAttribute('data-week')||'';
+            book.querySelectorAll('.week-panel').forEach(function(panel){
+              panel.hidden = (panel.getAttribute('data-week')||'')!==aw;
+            });
+          }
+        }
+      }
+      var shownArt=document.querySelector('article.panel');
+      var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
+      if(jumpEl){
+        setTimeout(function(){
+          try { jumpEl.scrollIntoView({block:'center', behavior:'smooth'}); }
+          catch (err) { jumpEl.scrollIntoView(true); }
+        }, 40);
+      }
+    }
+  }
+  var form=document.getElementById('playerSearchForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      apply({jump:true});
+    });
+  }
+  var inp=document.getElementById('playerSearch');
+  if(inp){
+    inp.addEventListener('input', function(){ apply({}); });
+    inp.addEventListener('search', function(){ apply({jump:true}); });
+    inp.addEventListener('keydown', function(e){
+      if(e.key==='Enter' || e.keyCode===13){
+        e.preventDefault();
+        apply({jump:true});
+      }
+    });
+  }
+  apply({});
+})();
+</script>
+</body></html>
