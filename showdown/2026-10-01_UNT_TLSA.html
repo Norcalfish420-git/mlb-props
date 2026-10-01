@@ -97,7 +97,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
   .rail,.noprint{display:none !important;}
   main{max-width:none;padding:0;}
   .panel,.appendix{display:block !important;page-break-after:always;}
-  .game-report,.prop-board,.etr-board,.player-book{display:block !important;}
+  .game-report,.prop-board,.etr-board,.player-book,.preview-board{display:block !important;}
   .week-panel,.week-panel[hidden]{display:block !important;}
   .week-pills,.week-pill{display:none !important;}
   .appendix{page-break-after:auto;}
@@ -116,17 +116,22 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 #v-prop:checked ~ .shell .rail label[for=v-prop]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-etr:checked ~ .shell .rail label[for=v-etr]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
-.player-book,.prop-board,.etr-board{display:none;}
+#v-preview:checked ~ .shell .rail label[for=v-preview]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.player-book,.prop-board,.etr-board,.preview-board{display:none;}
 #v-book:checked ~ .shell main,#v-prop:checked ~ .shell main,#v-etr:checked ~ .shell main{max-width:none;}
-#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .prop-board,#v-book:checked ~ .shell main .etr-board{display:none;}
+#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .prop-board,#v-book:checked ~ .shell main .etr-board,#v-book:checked ~ .shell main .preview-board{display:none;}
 #v-book:checked ~ .shell main .player-book{display:block;}
-#v-prop:checked ~ .shell main .game-report,#v-prop:checked ~ .shell main .etr-board,#v-prop:checked ~ .shell main .player-book{display:none;}
+#v-prop:checked ~ .shell main .game-report,#v-prop:checked ~ .shell main .etr-board,#v-prop:checked ~ .shell main .player-book,#v-prop:checked ~ .shell main .preview-board{display:none;}
 #v-prop:checked ~ .shell main .prop-board{display:block;}
-#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .prop-board,#v-etr:checked ~ .shell main .player-book{display:none;}
+#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .prop-board,#v-etr:checked ~ .shell main .player-book,#v-etr:checked ~ .shell main .preview-board{display:none;}
 #v-etr:checked ~ .shell main .etr-board{display:block;}
+#v-preview:checked ~ .shell main{max-width:none;}
+#v-preview:checked ~ .shell main .game-report,#v-preview:checked ~ .shell main .prop-board,#v-preview:checked ~ .shell main .etr-board,#v-preview:checked ~ .shell main .player-book{display:none;}
+#v-preview:checked ~ .shell main .preview-board{display:block;}
 </style>
 </head><body>
 <input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-preview"/>
 <input class="tab" type="radio" name="v" id="v-prop"/>
 <input class="tab" type="radio" name="v" id="v-etr"/>
 <input class="tab" type="radio" name="v" id="v-book"/>
@@ -136,6 +141,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
 <div class="view-row">
 <label class="pill" for="v-report">Report</label>
+<label class="pill" for="v-preview">Preview</label>
 <label class="pill" for="v-etr">ETR Value</label>
 <label class="pill" for="v-book">Player book</label>
 <label class="pill" for="v-prop">Prop Value</label>
@@ -152,6 +158,8 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <p class="line-blast">North Texas <b>-1</b>. Total <b>57.5</b>.</p>
 <h3>Game Script</h3>
 <p><b>This slate is three out of five stars.</b> Head coach Tre Lamb has called Hayes a game-time decision.</p>
+<p>North Texas has been better than the preseason look. The defense hung with Indiana for three quarters, and the offense took off behind Tayven Jackson. On the road the defense has given up 101 points and 8.3 yards a play in two games.</p>
+<p>Tulsa turned it around under Tre Lamb. They beat Oklahoma State, then lost at Arkansas without Baylor Hayes. Hayes is back. Damari Alston and Trequan Jones have combined for 409 rushing yards, and that ground game is how Tulsa keeps North Texas off the field.</p>
 <p><b>How they want to play</b></p>
 <ul>
 <li><b>North Texas:</b> North Texas plays a fast-paced, offense-first style of football. North Texas leans heavily on its passing game, with 52.49% of its plays being passes.</li>
@@ -168,36 +176,36 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <h4>North Texas</h4>
 <p><b>Quarterbacks</b></p>
 <ul>
-<li><b>Tayven Jackson</b> — First year at North Texas, and he won the job in camp. Last year at UCF he threw for 2,151 yards with 10 scores and 8 interceptions in 10 starts. Last week vs HCU he threw 18 times for 270, 1 passing score.</li>
+<li><b>Tayven Jackson</b> — He is completing 74 percent for 1,187 yards and six scores, and the line has kept him off the ground. First year at North Texas, and he won the job in camp. Last year at UCF he threw for 2,151 yards with 10 scores and 8 interceptions in 10 starts. Last week vs HCU he threw 18 times for 270, 1 passing score.</li>
 <li><b>Chaston Ditta</b> — Sit him — a backup priced like a starter is still the backup. Last week vs HCU he threw 8 times for 75, 1 passing score and had 3 carries for 5. He lost the camp battle to Tayven Jackson. At East Carolina he started the Military Bowl and threw for 177 yards and two scores.</li>
 </ul>
 <p><b>Running backs</b></p>
 <ul>
-<li><b>Jahiem White</b> — He is the lead back, and a knee injury ended his 2025 season in September. First year at North Texas, back with Neal Brown. He ran for 1,820 yards at West Virginia. Starter.</li>
+<li><b>Jahiem White</b> — He is the lead back, and a knee injury ended his 2025 season in September. He is at seven yards a carry with seven rushing scores, and he has at least 10 catches. First year at North Texas, back with Neal Brown. Starter.</li>
 <li><b>Brendon Haygood</b> — Behind Jahiem White. First year at North Texas after one game at Missouri, four carries for 12 yards. Backup.</li>
 </ul>
 <p><b>Receiving room</b></p>
 <ul>
-<li><b>Max Reese</b> — First year at North Texas. Neal Brown called him one of the most improved players and a focal point. He had 27 catches for 232 yards at Eastern Michigan in 2024, then two catches at Mississippi State. Starter.</li>
+<li><b>Max Reese</b> — He has had a bigger role the last two weeks. First year at North Texas. Neal Brown called him one of the most improved players and a focal point. Starter.</li>
 <li><b>Grayson O&#x27;Bara</b> — First year at North Texas after four years at Dartmouth. He caught 44 passes for 590 yards there in 2025. Starter.</li>
 <li><b>Kyle Koch</b> — Third year at North Texas, and he was a special-teams player in 2025 with two catches. The game notes list him or Corri Milliner. Starter.</li>
 <li><b>Baron Tipton</b> — Third year at North Texas. He was mostly special teams in 2025, with two catches. A spring write-up said the coaches kept naming the 6-5 receiver after the skill players left. Starter.</li>
-<li><b>Justin Stevenson</b> — Behind Baron Tipton. He caught 17 passes for 204 yards and 3 scores at Wyoming in 2024, then no catches in five games at Utah. Backup.</li>
-<li><b>Corri Milliner</b> — He was a volume receiver at UAB. The game notes list him with Kyle Koch. He caught 49 passes for 816 yards at UAB. Backup.</li>
-<li><b>Josiah Martin</b> — The game notes list him with Grayson O&#x27;Bara. He transferred from Oklahoma and Cal. Backup.</li>
+<li><b>Justin Stevenson</b> — He is one of the reliable receivers. Behind Baron Tipton. He caught 17 passes for 204 yards and 3 scores at Wyoming in 2024, then no catches in five games at Utah. Backup.</li>
+<li><b>Corri Milliner</b> — He was a volume receiver at UAB. He is one of the reliable receivers. The game notes list him with Kyle Koch. Backup.</li>
+<li><b>Josiah Martin</b> — He is dealing with an injury, and his status for this game is in question. The game notes list him with Grayson O&#x27;Bara. He transferred from Oklahoma and Cal. Backup.</li>
 <li><b>Brec Long</b> — Backup.</li>
 </ul>
 <h4>Tulsa</h4>
 <p><b>Quarterbacks</b></p>
 <ul>
-<li><b>Baylor Hayes</b> — He missed the last two games with a knee sprain. A Wednesday report said he will start. The coach had called it 50-50 on the short week. runs and throws. Last week vs SHSU he threw 29 times for 126 and had 9 carries for 14.</li>
+<li><b>Baylor Hayes</b> — He is back for this game. He missed the last two games with a knee sprain. A Wednesday report said he will start. runs and throws. Last week vs SHSU he threw 29 times for 126 and had 9 carries for 14.</li>
 <li><b>Dexter Williams II</b> — Sit him — a backup priced like a starter is still the backup. Last week vs ARK he threw 32 times for 176 and had 6 carries for 8. A report said he will not start Thursday, with Hayes back from the knee. He started at Arkansas. He has also played at Indiana, Georgia Southern, and Kennesaw State.</li>
 </ul>
 <p><b>Running backs</b></p>
 <ul>
-<li><b>Damari Alston</b> — First year at Tulsa after four years at Auburn, 162 carries for 809 yards. Auburn dismissed him last October. Against Sam Houston he had 13 carries for 45 while Trequan Jones had 125 yards and two scores. Starter.</li>
+<li><b>Damari Alston</b> — He and Trequan Jones have combined for 409 rushing yards. First year at Tulsa after four years at Auburn, 162 carries for 809 yards. Auburn dismissed him last October. Starter.</li>
 <li><b>Seth Davis</b> — He is not the starter. First year at Tulsa after Mississippi State. A knee injury in the 2023 Egg Bowl cost him the 2024 season.</li>
-<li><b>Trequan Jones</b> — Behind Damari Alston. He came from Old Dominion. Against Sam Houston he had 9 carries for 125 yards and two scores, and he returns kicks. Backup.</li>
+<li><b>Trequan Jones</b> — He and Damari Alston have combined for 409 rushing yards. Behind Damari Alston. He came from Old Dominion. Backup.</li>
 </ul>
 <p><b>Receiving room</b></p>
 <ul>
@@ -287,6 +295,11 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 </tbody></table>
 <p class="left">Leftover: $1,100  (spent $48,900 / $50,000)</p>
 </div>
+<div class="preview-board"><h2>Preview</h2><p>North Texas has been better than the preseason look. The defense hung with Indiana for three quarters, then the offense took off. Tayven Jackson is completing 74 percent for 1,187 yards and six scores, and the line has kept him off the ground. North Texas is averaging 39.5 points.</p>
+<p>Jahiem White is at seven yards a carry with seven rushing scores, and he is one of four offensive players with at least 10 catches. Justin Stevenson and Corri Milliner are the reliable receivers. Josiah Martin is dealing with an injury, and his status for this game is in question. Max Reese has had a bigger role the last two weeks.</p>
+<p>The defense was strong at home against UNLV and Houston Christian. On the road it has given up 101 points and 8.3 yards a play in two games. The front has struggled to stop the run away from home, and the pass rush has not traveled.</p>
+<p>Tulsa turned the program around under Tre Lamb. They upgraded the line and the defense, beat Oklahoma State, then beat Sam Houston and East Texas A&amp;M. The road loss at Arkansas came without Baylor Hayes. Hayes is back. Damari Alston and Trequan Jones have combined for 409 rushing yards.</p>
+<p>Thomas Davis, Kyran Duhon, and Dax Collins each have multiple sacks. Tulsa has allowed a touchdown on 29 percent of red-zone trips, with five empty trips.</p></div>
 <div class="prop-board"><h3>OUR VALUE</h3>
 <p>Every posted yardage or receptions number we joined on this salary board — one row per market, not a Top 20. Dest names with no book line are omitted. <b>Price</b> is 1 to 100. 50 is a fair price. 100 is a bargain. 1 is a bad price. This is not the chance he hits. Below 50 stays. This is not ETR. Sorted highest price first.</p>
 <h4 class="team-break">North Texas</h4>
@@ -593,6 +606,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
       var sel = id==='v-report' ? '.game-report'
               : id==='v-prop' ? '.prop-board'
               : id==='v-etr' ? '.etr-board'
+              : id==='v-preview' ? '.preview-board'
               : id==='v-book' ? '.player-book' : '';
       if(!sel) return;
       lab.classList.toggle('search-miss', !!(q && !panelHasHit(sel)));
