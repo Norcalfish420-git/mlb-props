@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Steelers at Browns · Thursday Night Football</title>
+<style>
+:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#fbbf24;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#d97706;--table:#262626;--cell:#525252;--th:#393939;--val:#fbbf24;}
+html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#9a3412;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#d97706;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#9a3412;}
+html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+body{background-image:linear-gradient(180deg,rgba(22,22,22,.84),rgba(10,14,18,.94)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-nfl.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
+html.light body{background-image:linear-gradient(180deg,rgba(242,244,248,.9),rgba(242,244,248,.95)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-nfl.jpg");}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;overflow-y:auto;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);text-decoration:none;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);}
+a.pill.home{border-color:var(--val);}
+.pill:hover{background:var(--pill-hover);}
+button.pdf,button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;border-radius:.4rem;padding:.5rem .7rem;}
+button.pdf{background:var(--accent);color:#fff;border:0;margin-top:.35rem;}
+button.theme{background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);}
+form.search-form{margin:0;display:flex;flex-direction:column;gap:.15rem;}
+label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35rem 0 0;}
+input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:52rem;min-width:0;}
+h1{font-size:1.7rem;margin:0 0 .35rem;}
+h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin:1.6rem 0 .6rem;}
+.line-blast{font-size:1.35rem;line-height:1.35;font-weight:700;margin:.35rem 0 1rem;padding:.9rem 1rem;background:var(--table);border:2px solid var(--accent);border-left-width:8px;}
+.line-blast b{color:var(--val);}
+.sub{color:var(--muted);margin:0 0 .8rem;}
+p{line-height:1.45;}
+table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.95rem;background:var(--table);}
+th,td{border:1px solid var(--cell);padding:.4rem .5rem;text-align:left;}
+th{background:var(--th);color:var(--pill-fg);}
+table.sortable th{cursor:pointer;user-select:none;}
+table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}
+table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
+tr.on-six td{box-shadow:inset 4px 0 0 var(--accent);}
+.left{font-weight:700;margin:.15rem 0 1rem;}
+.team-badge{display:inline-block;width:1.7rem;height:1.7rem;border-radius:50%;text-align:center;line-height:1.7rem;font-size:.62rem;font-weight:800;font-family:Arial,sans-serif;letter-spacing:-.02em;background:var(--team);color:var(--team-ink);}
+li.name-hit,tr.name-hit{outline:2px solid var(--accent);}
+@media (max-width:720px){
+  body{background-attachment:scroll;}
+  .shell{display:block;}
+  .rail{width:auto;height:auto;position:relative;flex-direction:row;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--rail-line);}
+  .brand{flex:1 1 100%;}
+  main{padding:1rem;}
+}
+@media print{
+  .rail{display:none !important;}
+  body,html{background:#fff;color:#111;background-image:none !important;}
+  .shell{display:block;}
+  main{max-width:none;padding:0;}
+  table{background:#fff;}
+  th{background:#eee;color:#111;}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="rail">
+<p class="brand">NFL SHOWDOWN<br/>Oct 1, 2026<br/>Steelers at Browns</p>
+<a class="pill home" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
+<a class="pill" href="https://norcalfish420-git.github.io/mlb-props/showdown.html">DK Showdown</a>
+<form class="search-form" id="playerSearchForm" action="#" role="search">
+<label class="search-lab" for="playerSearch">Search players</label>
+<input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/>
+</form>
+<button class="theme" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
+<button class="pdf" type="button" onclick="window.print()">Save as PDF</button>
+</aside>
+<main>
+<h1>Steelers at Browns</h1>
+<p class="sub">Thursday, Oct 1, 2026 · 8:15 p.m. ET · Huntington Bank Field</p>
+<p class="line-blast">Steelers <b>-2.5</b>. Total <b>38.5</b>.</p>
+<p><b>This slate is four out of five stars.</b></p>
+
+<h2>The game</h2>
+<p>Both teams are 2-1. Pittsburgh is a small road favorite in Cleveland. The total is the lowest on the Week 4 board, so this projects as a field-goal game, not a shootout.</p>
+<p>The Steelers beat the Bengals 30-27. Aaron Rodgers was 19 of 34 for 292 yards and three touchdowns. Jaylen Warren ran 17 times for 127 yards and caught three passes for 49. An 87-yard run was called back. Rico Dowdle is inactive again, so Warren is the back.</p>
+<p>The Browns beat the Panthers 21-18. Deshaun Watson was 16 of 30 for 144 yards and two touchdowns, and he ran 11 times for 45 yards. Both scores went to Harold Fannin Jr. Center Elgton Jenkins and guard Teven Jenkins are out, and so is receiver Tylan Wallace.</p>
+<p>Huntington Bank Field is outdoors. The forecast at kick is about 77 degrees with a south wind around 9 mph and almost no rain. A shower is more likely late than on the opening kick. A second read had the wind at 17 mph and the rain holding off until after the game. Neither reading is strong enough to take the pass game off the card.</p>
+
+<h2>Lineup</h2>
+<table class="sortable" id="lineup">
+<thead>
+<tr>
+<th data-col="0">Slot</th>
+<th data-col="1">Player</th>
+<th data-col="2">Team</th>
+<th data-col="3">Pos</th>
+<th data-col="4" data-type="num">Salary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="on-six">
+<td>Captain</td>
+<td>Jaylen Warren</td>
+<td><span class="team-badge" style="--team:#101820;--team-ink:#FFB612">PIT</span></td>
+<td>RB</td>
+<td data-sort="14400">$14,400</td>
+</tr>
+<tr class="on-six">
+<td>FLEX</td>
+<td>Aaron Rodgers</td>
+<td><span class="team-badge" style="--team:#101820;--team-ink:#FFB612">PIT</span></td>
+<td>QB</td>
+<td data-sort="9800">$9,800</td>
+</tr>
+<tr class="on-six">
+<td>FLEX</td>
+<td>Deshaun Watson</td>
+<td><span class="team-badge" style="--team:#311D00;--team-ink:#FF3C00">CLE</span></td>
+<td>QB</td>
+<td data-sort="9400">$9,400</td>
+</tr>
+<tr class="on-six">
+<td>FLEX</td>
+<td>Harold Fannin Jr.</td>
+<td><span class="team-badge" style="--team:#311D00;--team-ink:#FF3C00">CLE</span></td>
+<td>TE</td>
+<td data-sort="7400">$7,400</td>
+</tr>
+<tr class="on-six">
+<td>FLEX</td>
+<td>Roman Wilson</td>
+<td><span class="team-badge" style="--team:#101820;--team-ink:#FFB612">PIT</span></td>
+<td>WR</td>
+<td data-sort="4000">$4,000</td>
+</tr>
+<tr class="on-six">
+<td>FLEX</td>
+<td>Andre Szmyt</td>
+<td><span class="team-badge" style="--team:#311D00;--team-ink:#FF3C00">CLE</span></td>
+<td>K</td>
+<td data-sort="4600">$4,600</td>
+</tr>
+</tbody>
+</table>
+<p class="left">Leftover: $400 (spent $49,600 / $50,000)</p>
+<p>Three Steelers, three Browns. Warren is the captain because Dowdle is out and Warren just piled up 176 yards from scrimmage. Rodgers is here because Wilson is here. Watson is here because Fannin is here, and because Watson also runs. Szmyt made a 48-yard kick and a 45-yard kick in that 21-18 win. One kicker. Chris Boswell does not fit once Warren is the captain.</p>
+<p>If Jaylen Warren does not play, do not slide Travis Homer into the captain spot. Build a new six. Rodgers and Watson are both starting. Mason Rudolph and Shedeur Sanders are not the plan.</p>
+
+<h2>Why these six</h2>
+<p><b>Jaylen Warren.</b> The salary file has him as the top projection on the slate, 18.9 points, and the field is already on him. The football reason is simpler. He is the only healthy Steelers back who touches the ball, and he just did it 20 times.</p>
+<p><b>Aaron Rodgers.</b> Three touchdowns against Cincinnati, including the 38-yard score to Wilson on the opening drive. Pittsburgh’s new right tackle, Max Iheanachor, and right guard, Brock Hoffman, stayed in the lineup after that game.</p>
+<p><b>Deshaun Watson.</b> He threw the two scores and ran for 45 yards. Cleveland will snap the ball with Luke Wypler, not Elgton Jenkins. Watson’s legs are how this offense answers a pass rush.</p>
+<p><b>Harold Fannin Jr.</b> Seven catches, 51 yards, both touchdowns. The 14-yard score won the Carolina game. He is the Browns pass-catcher who has to be on the card with Watson.</p>
+<p><b>Roman Wilson.</b> Slot starter. He scored from 38 on the first drive against the Bengals. DK Metcalf is the bigger name and scored from 6 yards, but Metcalf costs $9,000. He does not fit with Warren as captain, both quarterbacks, and Fannin.</p>
+<p><b>Andre Szmyt.</b> Starter. He already kicked from 48 and 45 in a one-score game. A 38.5 total is a kicking game. Boswell’s kicks in the Bengals win were from 33 and 36, and his $5,200 salary does not fit this six.</p>
+
+<h2>Left off</h2>
+<p><b>Jerry Jeudy</b> is listed as a starting receiver and costs $3,000. Against Carolina he played 36 snaps and was not targeted. That price is not a bargain.</p>
+<p><b>Quinshon Judkins</b> ($8,800), <b>Denzel Boston</b> ($8,000), and <b>DK Metcalf</b> ($9,000) are real players. Judkins ran for 70 yards. Boston caught two passes for 41 and the two-point conversion. Metcalf scored. None of them fit under the cap with this captain and both quarterbacks.</p>
+<p><b>Michael Pittman Jr.</b> played 45 snaps against Cincinnati and caught two passes for 16 yards. <b>KC Concepcion</b> was targeted nine times and caught two for 9 yards. Volume without the catch is a shaky use of $6,400 here.</p>
+<p><b>Ben Skowronek</b> scored from 23 yards on a motion route, then recovered a muffed punt. He is the fourth receiver. One touchdown does not make him the play over Wilson.</p>
+
+<h2>Salary file</h2>
+<table class="sortable" id="board">
+<thead>
+<tr>
+<th data-col="0">Player</th>
+<th data-col="1">Team</th>
+<th data-col="2">Pos</th>
+<th data-col="3" data-type="num">Salary</th>
+<th data-col="4" data-type="num">Proj</th>
+<th data-col="5" data-type="num">Own</th>
+</tr>
+</thead>
+<tbody>
+<tr class="on-six"><td>Jaylen Warren</td><td>PIT</td><td>RB</td><td data-sort="9600">$9,600</td><td data-sort="18.9">18.9</td><td data-sort="77">77%</td></tr>
+<tr class="on-six"><td>Deshaun Watson</td><td>CLE</td><td>QB</td><td data-sort="9400">$9,400</td><td data-sort="15.1">15.1</td><td data-sort="64.1">64%</td></tr>
+<tr class="on-six"><td>Aaron Rodgers</td><td>PIT</td><td>QB</td><td data-sort="9800">$9,800</td><td data-sort="14.5">14.5</td><td data-sort="60.3">60%</td></tr>
+<tr><td>DK Metcalf</td><td>PIT</td><td>WR</td><td data-sort="9000">$9,000</td><td data-sort="12.4">12.4</td><td data-sort="43.1">43%</td></tr>
+<tr><td>Quinshon Judkins</td><td>CLE</td><td>RB</td><td data-sort="8800">$8,800</td><td data-sort="12.3">12.3</td><td data-sort="40.2">40%</td></tr>
+<tr class="on-six"><td>Harold Fannin Jr.</td><td>CLE</td><td>TE</td><td data-sort="7400">$7,400</td><td data-sort="11.1">11.1</td><td data-sort="38.1">38%</td></tr>
+<tr><td>KC Concepcion Jr.</td><td>CLE</td><td>WR</td><td data-sort="6400">$6,400</td><td data-sort="10.3">10.3</td><td data-sort="34.7">35%</td></tr>
+<tr><td>Michael Pittman Jr.</td><td>PIT</td><td>WR</td><td data-sort="7000">$7,000</td><td data-sort="8.8">8.8</td><td data-sort="25.1">25%</td></tr>
+<tr><td>Denzel Boston</td><td>CLE</td><td>WR</td><td data-sort="8000">$8,000</td><td data-sort="8.7">8.7</td><td data-sort="25.2">25%</td></tr>
+<tr><td>Steelers</td><td>PIT</td><td>DST</td><td data-sort="5000">$5,000</td><td data-sort="8.7">8.7</td><td data-sort="31.5">32%</td></tr>
+<tr><td>Chris Boswell</td><td>PIT</td><td>K</td><td data-sort="5200">$5,200</td><td data-sort="8.6">8.6</td><td data-sort="30.2">30%</td></tr>
+<tr class="on-six"><td>Andre Szmyt</td><td>CLE</td><td>K</td><td data-sort="4600">$4,600</td><td data-sort="8.1">8.1</td><td data-sort="26.5">27%</td></tr>
+<tr><td>Pat Freiermuth</td><td>PIT</td><td>TE</td><td data-sort="5600">$5,600</td><td data-sort="7.7">7.7</td><td data-sort="24.6">25%</td></tr>
+<tr><td>Browns</td><td>CLE</td><td>DST</td><td data-sort="4800">$4,800</td><td data-sort="6.7">6.7</td><td data-sort="21.9">22%</td></tr>
+<tr class="on-six"><td>Roman Wilson</td><td>PIT</td><td>WR</td><td data-sort="4000">$4,000</td><td data-sort="6.0">6.0</td><td data-sort="18.5">19%</td></tr>
+<tr><td>Jerry Jeudy</td><td>CLE</td><td>WR</td><td data-sort="3000">$3,000</td><td data-sort="4.0">4.0</td><td data-sort="8.0">8%</td></tr>
+</tbody>
+</table>
+</main>
+</div>
+<script>
+function toggleDeskTheme(){
+  var root=document.documentElement;
+  var next=root.classList.contains("light")?"":"light";
+  root.classList.toggle("light", next==="light");
+  try{localStorage.setItem("desk-report-theme", next||"dark");}catch(e){}
+  var b=document.getElementById("themeBtn");
+  if(b)b.textContent=next==="light"?"Dark mode":"Light mode";
+}
+(function(){
+  var saved="";
+  try{saved=localStorage.getItem("desk-report-theme")||"";}catch(e){}
+  if(saved==="light")toggleDeskTheme();
+})();
+function sortTable(table, col){
+  var ths=table.tHead.rows[0].cells;
+  var dir=ths[col].getAttribute("data-dir")==="asc"?"desc":"asc";
+  for(var i=0;i<ths.length;i++)ths[i].removeAttribute("data-dir");
+  ths[col].setAttribute("data-dir", dir);
+  var body=table.tBodies[0];
+  var rows=Array.prototype.slice.call(body.rows);
+  var num=ths[col].getAttribute("data-type")==="num";
+  rows.sort(function(a,b){
+    var at=a.cells[col], bt=b.cells[col];
+    var av=num?(parseFloat(at.getAttribute("data-sort")||at.textContent)||0):(at.textContent||"").trim().toLowerCase();
+    var bv=num?(parseFloat(bt.getAttribute("data-sort")||bt.textContent)||0):(bt.textContent||"").trim().toLowerCase();
+    if(av<bv)return dir==="asc"?-1:1;
+    if(av>bv)return dir==="asc"?1:-1;
+    return 0;
+  });
+  rows.forEach(function(r){body.appendChild(r);});
+}
+document.querySelectorAll("table.sortable").forEach(function(table){
+  Array.prototype.forEach.call(table.tHead.rows[0].cells, function(th, i){
+    th.addEventListener("click", function(){sortTable(table, i);});
+  });
+});
+document.getElementById("playerSearchForm").addEventListener("submit", function(e){e.preventDefault();});
+document.getElementById("playerSearch").addEventListener("input", function(){
+  var q=this.value.trim().toLowerCase();
+  var first=null;
+  document.querySelectorAll("tbody tr").forEach(function(tr){
+    var hit=!q || tr.textContent.toLowerCase().indexOf(q)>=0;
+    tr.style.display=hit?"":"none";
+    tr.classList.toggle("name-hit", !!q && hit);
+    if(hit && !first)first=tr;
+  });
+  if(first)first.scrollIntoView({block:"center", behavior:"smooth"});
+});
+</script>
+</body>
+</html>
