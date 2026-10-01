@@ -97,7 +97,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
   .rail,.noprint{display:none !important;}
   main{max-width:none;padding:0;}
   .panel,.appendix{display:block !important;page-break-after:always;}
-  .game-report,.prop-board,.etr-board,.player-book{display:block !important;}
+  .game-report,.prop-board,.etr-board,.player-book,.preview-board{display:block !important;}
   .week-panel,.week-panel[hidden]{display:block !important;}
   .week-pills,.week-pill{display:none !important;}
   .appendix{page-break-after:auto;}
@@ -116,17 +116,22 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 #v-prop:checked ~ .shell .rail label[for=v-prop]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-etr:checked ~ .shell .rail label[for=v-etr]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
-.player-book,.prop-board,.etr-board{display:none;}
+#v-preview:checked ~ .shell .rail label[for=v-preview]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.player-book,.prop-board,.etr-board,.preview-board{display:none;}
 #v-book:checked ~ .shell main,#v-prop:checked ~ .shell main,#v-etr:checked ~ .shell main{max-width:none;}
-#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .prop-board,#v-book:checked ~ .shell main .etr-board{display:none;}
+#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .prop-board,#v-book:checked ~ .shell main .etr-board,#v-book:checked ~ .shell main .preview-board{display:none;}
 #v-book:checked ~ .shell main .player-book{display:block;}
-#v-prop:checked ~ .shell main .game-report,#v-prop:checked ~ .shell main .etr-board,#v-prop:checked ~ .shell main .player-book{display:none;}
+#v-prop:checked ~ .shell main .game-report,#v-prop:checked ~ .shell main .etr-board,#v-prop:checked ~ .shell main .player-book,#v-prop:checked ~ .shell main .preview-board{display:none;}
 #v-prop:checked ~ .shell main .prop-board{display:block;}
-#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .prop-board,#v-etr:checked ~ .shell main .player-book{display:none;}
+#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .prop-board,#v-etr:checked ~ .shell main .player-book,#v-etr:checked ~ .shell main .preview-board{display:none;}
 #v-etr:checked ~ .shell main .etr-board{display:block;}
+#v-preview:checked ~ .shell main{max-width:none;}
+#v-preview:checked ~ .shell main .game-report,#v-preview:checked ~ .shell main .prop-board,#v-preview:checked ~ .shell main .etr-board,#v-preview:checked ~ .shell main .player-book{display:none;}
+#v-preview:checked ~ .shell main .preview-board{display:block;}
 </style>
 </head><body>
 <input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-preview"/>
 <input class="tab" type="radio" name="v" id="v-prop"/>
 <input class="tab" type="radio" name="v" id="v-etr"/>
 <input class="tab" type="radio" name="v" id="v-book"/>
@@ -136,6 +141,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
 <div class="view-row">
 <label class="pill" for="v-report">Report</label>
+<label class="pill" for="v-preview">Preview</label>
 <label class="pill" for="v-etr">ETR Value</label>
 <label class="pill" for="v-book">Player book</label>
 <label class="pill" for="v-prop">Prop Value</label>
@@ -152,6 +158,8 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <p class="line-blast">Penn State <b>-2.5</b>. Total <b>45.5</b>.</p>
 <h3>Game Script</h3>
 <p><b>This slate is four out of five stars.</b></p>
+<p>Penn State is 3-1 after a 24-20 loss to Wisconsin. The offense was sharp against Marshall, Temple, and Buffalo, and the run has not shown up outside Temple. Matt Campbell came from Iowa State.</p>
+<p>Northwestern is 2-1 after a 29-23 loss at Indiana. Friday is the first game in the new Ryan Field. Aidan Chiles is in his first year here.</p>
 <p><b>How they want to play</b></p>
 <ul>
 <li><b>Penn State:</b> Chip Kelly option and play-action make Penn State keep its eyes on Aidan Chiles. James Peoples should be the back. Matt Campbell came from Iowa State.</li>
@@ -186,7 +194,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 </ul>
 <p><b>Receiving room</b></p>
 <ul>
-<li><b>Griffin Wilde</b> — He leads the receiver room. A team captain. Last year he had 71 catches for 880 yards and 8 scores, third-team all-conference. Starter.</li>
+<li><b>Griffin Wilde</b> — He leads the receiver room. He has 14 catches for 245 yards, including six for 56 and two scores against Indiana. A team captain. Starter.</li>
 <li><b>Ricky Ahumaraeze</b> — Fourth year at Northwestern. Last year he had 10 catches for 200 yards, including catches of 38 and 39. Starter.</li>
 <li><b>Alex Honig</b> — First year at Northwestern from UConn. Last year he had 13 catches for 162 yards and 3 scores in seven starts. Starter.</li>
 <li><b>Drew Wagner</b> — Third year at Northwestern. Last year he had 22 catches for 172 yards and two scores, and he returns punts. Starter.</li>
@@ -198,7 +206,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <h4>Penn State</h4>
 <p><b>Quarterbacks</b></p>
 <ul>
-<li><b>Rocco Becht</b> — First year at Penn State. He followed his coach from Iowa State. runs and throws. Last week vs WIS he threw 29 times for 114 and had 10 carries for 23.</li>
+<li><b>Rocco Becht</b> — Without Koby Howard, he needs Brett Eskildsen or Chase Sowell in the passing game. First year at Penn State. He followed his coach from Iowa State. runs and throws. Last week vs WIS he threw 29 times for 114 and had 10 carries for 23.</li>
 <li><b>Alex Manske</b> — Sit him — a backup priced like a starter is still the backup. Last week vs BUFF he threw 6 times for 45 and had 1 carry for 3.</li>
 </ul>
 <p><b>Running backs</b></p>
@@ -208,9 +216,9 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 </ul>
 <p><b>Receiving room</b></p>
 <ul>
-<li><b>Chase Sowell</b> — First year. He followed the coach from Iowa State after Colorado and East Carolina. He has 115 career catches for 1,823 yards. Starter.</li>
+<li><b>Chase Sowell</b> — Without Koby Howard, the throws come to him or Brett Eskildsen. First year. He followed the coach from Iowa State after Colorado and East Carolina. Starter.</li>
 <li><b>Andrew Rappleyea</b> — He is the blocking tight end, and he left the Buffalo game as a game-time decision the next week. He stayed when the coach changed. He missed almost all of 2024 with an injury. Starter.</li>
-<li><b>Brett Eskildsen</b> — He is the downfield receiver, and the coach timed him over 23.5 miles an hour. First year from Iowa State. Last year he had 526 receiving yards, 17.5 a catch, and 5 scores. Starter.</li>
+<li><b>Brett Eskildsen</b> — He is the downfield receiver, and the coach timed him over 23.5 miles an hour. Without Koby Howard, the throws come to him or Chase Sowell. First year from Iowa State. Starter.</li>
 <li><b>Gabe Burkle</b> — First year at Penn State. He is an Iowa State transfer who came with the new staff. Starter.</li>
 <li><b>Zay Robinson</b> — He came from Iowa State with almost no college catches. The coordinator said he handled a hard spring. Starter.</li>
 <li><b>Benjamin Brahmer</b> — Backup.</li>
@@ -301,6 +309,9 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 </tbody></table>
 <p class="left">Leftover: $700  (spent $49,300 / $50,000)</p>
 </div>
+<div class="preview-board"><h2>Preview</h2><p>Penn State is 3-1 after a 24-20 loss to Wisconsin. The offense was sharp against Marshall, Temple, and Buffalo. The run has not been there outside Temple. The defense has allowed third-down conversions on 19.2 percent of chances. Matt Campbell came from Iowa State.</p>
+<p>Northwestern is 2-1 after a 29-23 loss at Indiana, and they stayed in that game. Friday is the first game in the new Ryan Field. Griffin Wilde has 14 catches for 245 yards, including six for 56 and two scores against Indiana. Aidan Chiles is in his first year from Michigan State.</p>
+<p>Koby Howard is out. Without him, the throws go to Brett Eskildsen or Chase Sowell. Northwestern 23, Penn State 20.</p></div>
 <div class="prop-board"><h3>OUR VALUE</h3>
 <p>Every posted yardage or receptions number we joined on this salary board — one row per market, not a Top 20. Dest names with no book line are omitted. <b>Price</b> is 1 to 100. 50 is a fair price. 100 is a bargain. 1 is a bad price. This is not the chance he hits. Below 50 stays. This is not ETR. Sorted highest price first.</p>
 <h4 class="team-break">Northwestern</h4>
@@ -603,6 +614,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
       var sel = id==='v-report' ? '.game-report'
               : id==='v-prop' ? '.prop-board'
               : id==='v-etr' ? '.etr-board'
+              : id==='v-preview' ? '.preview-board'
               : id==='v-book' ? '.player-book' : '';
       if(!sel) return;
       lab.classList.toggle('search-miss', !!(q && !panelHasHit(sel)));
