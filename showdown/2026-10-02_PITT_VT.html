@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CFB Showdown 2026-10-02 · Pittsburgh @ Virginia Tech</title>
+<style>
+:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#fb7185;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#be123c;--table:#262626;--cell:#525252;--th:#393939;--val:#fb7185;--h:#fb7185;--code:#fb7185;--up:#3ddbd9;--down:#ff8389;--up-bg:rgba(61,219,217,.16);--down-bg:rgba(255,131,137,.16);--wk-alt:rgba(190,18,60,.08);}
+html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#9f1239;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#9f1239;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#9f1239;--h:#9f1239;--code:#9f1239;--up:#005d5d;--down:#a2191f;--up-bg:rgba(0,93,93,.1);--down-bg:rgba(162,25,31,.1);--wk-alt:rgba(190,18,60,.06);}
+html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+body{background-image:linear-gradient(180deg,rgba(22,22,22,.82),rgba(10,14,18,.93)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
+html.light body{background-image:linear-gradient(180deg,rgba(242,244,248,.88),rgba(242,244,248,.94)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");}
+.tab{position:absolute;left:-9999px;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;overflow-y:auto;}
+.rail .brand{order:0;}
+.rail a.pill.home{order:1;}
+.rail > *:not(.brand):not(a.pill.home){order:2;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);text-decoration:none;}
+a.pill.home{border-color:var(--val);}
+.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
+.pill:hover{background:var(--pill-hover);}
+button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
+button.pdf:hover{filter:brightness(1.08);}
+button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.5rem .7rem;}
+button.theme:hover{background:var(--pill-hover);}
+form.search-form{margin:0;display:flex;flex-direction:column;gap:.15rem;}
+label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35rem 0 0;}
+input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
+input.search:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.pill.search-miss{opacity:.42;}
+table.search-empty{display:none;}
+li.name-hit,tr.name-hit{background:rgba(190,18,60,.28);outline:1px solid var(--accent);}
+.hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
+.view-row{display:flex;flex-direction:column;gap:.35rem;margin:.15rem 0 .35rem;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:54rem;min-width:0;}
+h1{font-size:1.6rem;margin:0 0 .3rem;}
+h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
+.line-blast{font-size:1.42rem;line-height:1.35;font-weight:700;margin:.35rem 0 1.2rem;padding:.95rem 1.05rem;background:var(--table);border:2px solid var(--accent);border-left-width:8px;}
+.line-blast b{color:var(--val);font-size:1.08em;}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
+h3.second-pass{border-top:2px solid var(--accent);padding-top:1.15rem;margin-top:2rem;}
+h4{margin:.8rem 0 .4rem;}
+h4.team-break{font-size:1.28rem;font-weight:800;letter-spacing:.01em;margin:2.35rem 0 .55rem;padding:1.05rem 0 .35rem;border-top:3px solid var(--accent);}
+h3 + p + h4.team-break,h3 + h4.team-break{margin-top:.75rem;padding-top:.1rem;border-top:none;}
+h5{font-size:.95rem;margin:1.05rem 0 .3rem;color:var(--muted);font-weight:700;}
+.sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
+table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.92rem;background:var(--table);}
+th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
+th{background:var(--th);color:var(--pill-fg);}
+table.sortable th{cursor:pointer;user-select:none;}
+table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}
+table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
+.etr-board tr.pos-qb td{background:rgba(59,130,246,.18);box-shadow:inset 4px 0 0 #3b82f6;}
+.etr-board tr.pos-rb td{background:rgba(34,197,94,.18);box-shadow:inset 4px 0 0 #22c55e;}
+.etr-board tr.pos-wr td{background:rgba(245,158,11,.20);box-shadow:inset 4px 0 0 #f59e0b;}
+.etr-board tr.pos-te td{background:rgba(168,85,247,.18);box-shadow:inset 4px 0 0 #a855f7;}
+.etr-board tr.pos-k td{background:rgba(148,163,184,.22);box-shadow:inset 4px 0 0 #94a3b8;}
+table.game-log{width:100%;table-layout:auto;}
+table.game-log th,table.game-log td{text-align:center;white-space:nowrap;}
+table.game-log th:nth-child(1),table.game-log td:nth-child(1),table.game-log th:nth-child(2),table.game-log td:nth-child(2){text-align:left;}
+.week-pills,.team-pills{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 .8rem;}
+.week-pill,.team-pill{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--pill);color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:999px;padding:.4rem .75rem;}
+.week-pill.on,.team-pill.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+.week-panel{margin:0 0 1.6rem;}
+.week-panel.search-empty,.game-box.search-empty,.box-side.search-empty{display:none;}
+.week-lab{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.2rem 0 .6rem;}
+.trend-up-strip{margin:.4rem 0 1rem;padding:.7rem .85rem;background:var(--table);border-left:6px solid var(--accent);}
+.trend-up-strip h4{margin:0 0 .35rem;}
+.trend-up-strip ul{margin:.2rem 0 0;}
+.game-box{margin:0 0 1.8rem;padding:0 0 .4rem;border-bottom:1px solid var(--cell);}
+.box-score{font-size:1.2rem;margin:.4rem 0 .15rem;}
+.box-line{font-size:1.02rem;font-weight:700;color:var(--muted);margin:0 0 .55rem;}
+.run-pass{color:var(--muted);margin:0 0 .55rem;}
+.box-side{margin:0 0 1.15rem;}
+table.espn-box{font-size:.9rem;width:100%;}
+table.espn-box th,table.espn-box td{text-align:right;}
+table.espn-box th:first-child,table.espn-box td:first-child{text-align:left;}
+.pos-book{margin:0 0 1.6rem;}
+.pos-book.search-empty{display:none;}
+.pos-book h4{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.4rem 0 .45rem;}
+td.trend-up{background:var(--up-bg) !important;color:var(--up);font-weight:700;}
+td.trend-down{background:var(--down-bg) !important;color:var(--down);font-weight:700;}
+span.delta{font-size:.68em;font-weight:700;margin-left:.28em;opacity:.92;}
+td.val{font-weight:700;color:var(--val);white-space:nowrap;}
+.left{font-weight:700;margin:.2rem 0 1rem;}
+ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
+ul ul{margin:.15rem 0 .4rem;padding-left:1.15rem;}
+li{margin:.35rem 0;}
+code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
+.panel{display:block;}
+.appendix{display:none;}
+@media print{
+  html,body,html.light,html.light body{background:#fff;color:#111;background-image:none !important;}
+  .shell{display:block;}
+  .rail,.noprint{display:none !important;}
+  main{max-width:none;padding:0;}
+  .panel,.appendix{display:block !important;page-break-after:always;}
+  .game-report,.prop-board,.etr-board,.player-book{display:block !important;}
+  .week-panel,.week-panel[hidden]{display:block !important;}
+  .week-pills,.week-pill{display:none !important;}
+  .appendix{page-break-after:auto;}
+  table{background:#fff;page-break-inside:avoid;}
+  th{background:#eee;color:#333;}
+  td.val{color:#000;}
+  td.trend-up{color:#005d5d;background:#e6f6f6 !important;}
+  td.trend-down{color:#a2191f;background:#fce8e8 !important;}
+  h2,h3,h4,h5{page-break-after:avoid;color:#111;}
+  h4.team-break{border-top-color:#111;}
+  .line-blast{background:#fff;border-color:#111;color:#111;}
+  .line-blast b{color:#000;}
+}
+@page{margin:.5in;}
+#v-report:checked ~ .shell .rail label[for=v-report]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-prop:checked ~ .shell .rail label[for=v-prop]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-etr:checked ~ .shell .rail label[for=v-etr]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.player-book,.prop-board,.etr-board{display:none;}
+#v-book:checked ~ .shell main,#v-prop:checked ~ .shell main,#v-etr:checked ~ .shell main{max-width:none;}
+#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .prop-board,#v-book:checked ~ .shell main .etr-board{display:none;}
+#v-book:checked ~ .shell main .player-book{display:block;}
+#v-prop:checked ~ .shell main .game-report,#v-prop:checked ~ .shell main .etr-board,#v-prop:checked ~ .shell main .player-book{display:none;}
+#v-prop:checked ~ .shell main .prop-board{display:block;}
+#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .prop-board,#v-etr:checked ~ .shell main .player-book{display:none;}
+#v-etr:checked ~ .shell main .etr-board{display:block;}
+</style>
+</head><body>
+<input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-prop"/>
+<input class="tab" type="radio" name="v" id="v-etr"/>
+<input class="tab" type="radio" name="v" id="v-book"/>
+<div class="shell">
+<aside class="rail noprint">
+<p class="brand">CFB SHOWDOWN<br/>2026-10-02<br/>Pittsburgh @ Virginia Tech</p>
+<a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
+<div class="view-row">
+<label class="pill" for="v-report">Report</label>
+<label class="pill" for="v-etr">ETR Value</label>
+<label class="pill" for="v-book">Player book</label>
+<label class="pill" for="v-prop">Prop Value</label>
+</div>
+<form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
+<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
+<button class="pdf" type="button" onclick="window.print()">Save as PDF</button><p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
+</aside>
+<main>
+<h1>CFB Showdown — 2026-10-02 · Pittsburgh @ Virginia Tech</h1>
+<article class="panel">
+<div class="game-report">
+<h2>1) Pittsburgh @ Virginia Tech</h2>
+<p class="line-blast">Virginia Tech <b>-3.5</b>. Total <b>54.5</b>.</p>
+<h3>Game Script</h3>
+<h3>WHO THEY ARE</h3>
+<ul>
+<li><b>Pittsburgh</b> is unranked this year, unbeaten (4-0).</li>
+<li><b>Virginia Tech</b> is unranked this year, unbeaten (4-0).</li>
+</ul>
+<h3>WHO MATTERS</h3>
+<p>These are the names that decide a six tonight — who throws, who runs the ball, who catches it, and who to sit. Role and camp first. Last week is the tape, not the whole bio.</p>
+<h4>Pittsburgh</h4>
+<p><b>Quarterbacks</b></p>
+<ul>
+<li><b>Mason Heintschel</b> — Listed at quarterback. runs and throws. Last week vs BUCK he threw 37 times for 403, 6 passing scores and had 3 carries for 33. That was a quiet rushing night. He usually runs more than that. If you make him captain, his rushing yards count extra. We do not have a camp or recruit note on him yet.</li>
+<li><b>Holden Geriner</b> — The second quarterback. Sit him — a backup priced like a starter is still the backup. Last week vs BUCK he threw 11 times for 114, 1 passing score and had 2 carries for 15. We do not have a camp or recruit note on him yet.</li>
+</ul>
+<p><b>Running backs</b></p>
+<p>They split the carries. La&#x27;Vell Wright (13 carries) and Ja&#x27;Kyrian Turner (11 carries). Use one of them, not both. The back who scored: Ja&#x27;Kyrian Turner.</p>
+<ul>
+<li><b>La&#x27;Vell Wright</b> — Rotational running back. We do not have a camp or recruit note on him yet. Last week vs UCF he had 13 carries for 35 and 2 catches for 28.</li>
+<li><b>Ja&#x27;Kyrian Turner</b> — Listed at running back. Sat UCF precaution; DK status P; questionable Thursday. Sat UCF precaution; DK status P; questionable Thursday. Last week vs Miami (OH) he had 11 carries for 39 and 4 catches for 69.</li>
+<li><b>Synkwan Smith</b> — We do not have a camp or recruit note on him yet. Last week vs BUCK he had 10 carries for 47 and 1 catch for 14.</li>
+<li><b>Damon Ferguson Jr.</b> — The second running back. We do not have a camp or recruit note on him yet. Last week vs BUCK he had 9 carries for 56 and 2 catches for 22.</li>
+</ul>
+<p><b>Receiving room</b></p>
+<ul>
+<li><b>Cataurus Hicks</b> — Plays on the outside. We do not have a camp or recruit note on him yet. Last week vs BUCK he had 3 catches for 66.</li>
+<li><b>Carson Kent</b> — Tight end. We do not have a camp or recruit note on him yet. Last week vs BUCK he had 6 catches for 57, 1 score.</li>
+<li><b>Censere Lee</b> — Plays inside. We do not have a camp or recruit note on him yet. Last week vs BUCK he had 5 catches for 47, 3 scores.</li>
+<li><b>Tony Kinsler</b> — Plays on the outside. We do not have a camp or recruit note on him yet. Last week vs BUCK he had 3 catches for 33.</li>
+<li><b>Bryce Yates</b> — The second slot receiver. We do not have a camp or recruit note on him yet. Last week vs BUCK he had 4 catches for 77.</li>
+<li><b>Demetrice McCray</b> — The second outside receiver. We do not have a camp or recruit note on him yet. Last week vs BUCK he had 3 catches for 73, 2 scores.</li>
+<li><b>Elijah Lagg</b> — The second tight end. We do not have a camp or recruit note on him yet. Last week vs BUCK he had 2 catches for 36.</li>
+<li><b>Cam Sapp</b> — The second outside receiver. We do not have a camp or recruit note on him yet.</li>
+</ul>
+<h4>Virginia Tech</h4>
+<p><b>Quarterbacks</b></p>
+<ul>
+<li><b>Ethan Grunkemeyer</b> — Listed at quarterback. throws from the pocket. Last week vs BC he threw 35 times for 147, 1 passing score and had 3 carries for -3. We do not have a camp or recruit note on him yet.</li>
+<li><b>Bryce Baker</b> — The second quarterback. Sit him — a backup priced like a starter is still the backup. Last week vs ODU he threw 2 times for 0 and had 4 carries for 21. We do not have a camp or recruit note on him yet.</li>
+</ul>
+<p><b>Running backs</b></p>
+<p>They split the carries. Jeffrey Overton Jr. (25 carries) and Marcellous Hawkins (10 carries). Use one of them, not both. The back who scored: Jeffrey Overton Jr..</p>
+<ul>
+<li><b>Jeffrey Overton Jr.</b> — The second running back. We do not have a camp or recruit note on him yet. Last week vs BC he had 25 carries for 209 and 1 rushing score and 3 catches for 19.</li>
+<li><b>Marcellous Hawkins</b> — Listed at running back. We do not have a camp or recruit note on him yet. Last week vs BC he had 10 carries for 19.</li>
+<li><b>Darius Taylor</b> — Rotational running back. Day-to-day lower body. Gophers huge fav vs Akron; may rest before conference. Last week vs VMI he had 5 carries for 22.</li>
+<li><b>Messiah Mickens</b> — Rotational running back. We do not have a camp or recruit note on him yet. Last week vs ODU he had 3 carries for 11.</li>
+</ul>
+<p><b>Receiving room</b></p>
+<ul>
+<li><b>Ayden Greene</b> — Plays on the outside. We do not have a camp or recruit note on him yet. Last week vs MD he had 4 catches for 58.</li>
+<li><b>Que&#x27;Sean Brown</b> — Plays inside. We do not have a camp or recruit note on him yet. Last week vs BC he had 8 catches for 51.</li>
+<li><b>Marlion Jackson</b> — Plays on the outside. We do not have a camp or recruit note on him yet. Last week vs BC he had 3 catches for 41, 1 score.</li>
+<li><b>Luke Reynolds</b> — Tight end. We do not have a camp or recruit note on him yet. Last week vs BC he had 5 catches for 15.</li>
+<li><b>Davion Brown</b> — The second outside receiver. We do not have a camp or recruit note on him yet. Last week vs BC he had 2 catches for 18.</li>
+<li><b>Tyseer Denmark</b> — The second slot receiver. We do not have a camp or recruit note on him yet. Last week vs MD he had 1 catch for 6.</li>
+<li><b>A.J. Brand</b> — The second outside receiver. We do not have a camp or recruit note on him yet. Last week vs VMI he had 1 catch for 5.</li>
+<li><b>Benji Gosnell</b> — The second tight end. We do not have a camp or recruit note on him yet. Last week vs BC he had 1 catch for 3.</li>
+</ul>
+<h3>DEPTH CHART</h3>
+<p>Offense skill. A missing name is —.</p>
+<h4 class="team-break">Pittsburgh</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Mason Heintschel</td><td>Holden Geriner</td></tr>
+<tr><td>RB</td><td>Ja&#x27;Kyrian Turner</td><td>Damon Ferguson Jr.</td></tr>
+<tr><td>WR-X</td><td>Tony Kinsler</td><td>Cam Sapp</td></tr>
+<tr><td>WR-Z</td><td>Cataurus Hicks</td><td>Demetrice McCray</td></tr>
+<tr><td>WR-SL</td><td>Censere Lee</td><td>Bryce Yates</td></tr>
+<tr><td>TE</td><td>Carson Kent</td><td>Elijah Lagg</td></tr>
+<tr><td>PK</td><td>Antonio Chadha</td><td>Sam Hunsaker</td></tr>
+</tbody></table>
+<h4 class="team-break">Virginia Tech</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Ethan Grunkemeyer</td><td>Bryce Baker</td></tr>
+<tr><td>RB</td><td>Marcellous Hawkins Jr.</td><td>Jeffrey Overton Jr.</td></tr>
+<tr><td>WR-X</td><td>Marlion Jackson</td><td>A.J. Brand</td></tr>
+<tr><td>WR-Z</td><td>Ayden Greene</td><td>Davion Brown</td></tr>
+<tr><td>WR-SL</td><td>Que&#x27;Sean Brown</td><td>Tyseer Denmark</td></tr>
+<tr><td>TE</td><td>Luke Reynolds</td><td>Benji Gosnell</td></tr>
+<tr><td>PK</td><td>John Love</td><td>Cole Byrd</td></tr>
+</tbody></table>
+<h3>INJURIES</h3>
+<p>Who is out or in doubt for this game. A blank list means nobody on the board is tagged.</p>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Status</th><th scope="col" data-col="3">Tonight</th></tr></thead>
+<tbody>
+<tr><td>JaKyrian Turner</td><td>Pittsburgh</td><td>Questionable</td><td>He is the running back. He is questionable.</td></tr>
+<tr><td>Bill Davis</td><td>Virginia Tech</td><td>Questionable</td><td>He is on the board. He is questionable.</td></tr>
+<tr><td>Malik Knight</td><td>Pittsburgh</td><td>Game-time</td><td>He is on the board. Decision at kickoff.</td></tr>
+<tr><td>Justin Cook</td><td>Pittsburgh</td><td>Expected</td><td>He is the running back. Expected to play.</td></tr>
+<tr><td>Ayden Greene</td><td>Virginia Tech</td><td>Expected</td><td>He is the receiver. Expected to play.</td></tr>
+</tbody></table>
+<h3>CHART NOTES</h3>
+<p>When the listed chart does not match who is actually playing.</p>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Note</th></tr></thead>
+<tbody>
+<tr><td>—</td><td>—</td><td>Chart and news agree.</td></tr>
+</tbody></table>
+<h3>SCRIPT SIX</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Price</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Jeffrey Overton Jr.</td><td>Virginia Tech</td><td>RB</td><td>$12,000</td><td>49</td><td>rushing yards 78.5</td></tr>
+<tr><td>FLEX</td><td>Mason Heintschel</td><td>Pittsburgh</td><td>QB</td><td>$11,000</td><td>46</td><td>passing yards 249.5</td></tr>
+<tr><td>FLEX</td><td>Ethan Grunkemeyer</td><td>Virginia Tech</td><td>QB</td><td>$10,400</td><td>50</td><td>passing yards 259.5</td></tr>
+<tr><td>FLEX</td><td>Tyreek Robinson</td><td>Pittsburgh</td><td>WR</td><td>$2,600</td><td>No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Tony Kinsler</td><td>Pittsburgh</td><td>WR</td><td>$1,400</td><td>No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Benji Gosnell</td><td>Virginia Tech</td><td>WR</td><td>$1,200</td><td>No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $11,400  (spent $38,600 / $50,000)</p>
+<p>Leftover over $1,000 is allowed only after we tried other captains to spend the leftover and kept the screaming value punts. Slack from a dest trap or cheap twin is still a miss.</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Jeffrey Overton Jr. is captain. Got almost every carry last week (25 carries). He scored. Also caught 3 for 19.</li>
+<li>Mason Heintschel. Last week 37 throws for 403 and 6 passing scores, 3 carries for 33. He runs and throws. That was a quiet rushing night. He usually runs more than that.</li>
+<li>Ethan Grunkemeyer. Last week 35 throws for 147 and 1 passing scores, 3 carries for -3.</li>
+<li>Tony Kinsler. Last week 3 catches for 33. He is cheap enough that the expensive names still fit.</li>
+<li>Tyreek Robinson. Last week 5 catches for 78 and a score. He is cheap enough that the expensive names still fit.</li>
+<li>Benji Gosnell. Last week 1 catch for 3. He is cheap enough that the expensive names still fit.</li>
+<li>Leftover over $1,000 is allowed only after we tried other captains to spend the leftover and kept the screaming value punts. Slack from a dest trap or cheap twin is still a miss.</li>
+</ul>
+<p>Projected points on this six: 102.41. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 1</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Price</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Mason Heintschel</td><td>Pittsburgh</td><td>QB</td><td>$16,500</td><td>46</td><td>passing yards 249.5</td></tr>
+<tr><td>FLEX</td><td>Ethan Grunkemeyer</td><td>Virginia Tech</td><td>QB</td><td>$10,400</td><td>50</td><td>passing yards 259.5</td></tr>
+<tr><td>FLEX</td><td>Jeffrey Overton Jr.</td><td>Virginia Tech</td><td>RB</td><td>$8,000</td><td>49</td><td>rushing yards 78.5</td></tr>
+<tr><td>FLEX</td><td>Cataurus Hicks</td><td>Pittsburgh</td><td>WR</td><td>$7,000</td><td>28</td><td>receiving yards 39.5</td></tr>
+<tr><td>FLEX</td><td>Que&#x27;Sean Brown</td><td>Virginia Tech</td><td>WR</td><td>$6,600</td><td>38</td><td>receiving yards 49.5</td></tr>
+<tr><td>FLEX</td><td>Tony Kinsler</td><td>Pittsburgh</td><td>WR</td><td>$1,400</td><td>No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Mason Heintschel is captain. Last week 37 throws for 403 and 6 passing scores, 3 carries for 33. He runs and throws. That was a quiet rushing night. He usually runs more than that. If he is captain, his rushing yards count extra.</li>
+<li>Jeffrey Overton Jr. Got almost every carry last week (25 carries). He scored. Also caught 3 for 19.</li>
+<li>Ethan Grunkemeyer. Last week 35 throws for 147 and 1 passing scores, 3 carries for -3.</li>
+<li>Que&#x27;Sean Brown. Last week 8 catches for 51. He is on this card with Ethan Grunkemeyer, so Virginia Tech&#x27;s passing shows up twice.</li>
+<li>Cataurus Hicks. Last week 3 catches for 66. He is on this card with Mason Heintschel, so Pittsburgh&#x27;s passing shows up twice.</li>
+<li>Tony Kinsler. Last week 3 catches for 33. He is cheap enough that the expensive names still fit.</li>
+</ul>
+<p>Projected points on this six: 101.45. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 2</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Price</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Ethan Grunkemeyer</td><td>Virginia Tech</td><td>QB</td><td>$15,600</td><td>50</td><td>passing yards 259.5</td></tr>
+<tr><td>FLEX</td><td>Mason Heintschel</td><td>Pittsburgh</td><td>QB</td><td>$11,000</td><td>46</td><td>passing yards 249.5</td></tr>
+<tr><td>FLEX</td><td>Jeffrey Overton Jr.</td><td>Virginia Tech</td><td>RB</td><td>$8,000</td><td>49</td><td>rushing yards 78.5</td></tr>
+<tr><td>FLEX</td><td>Damon Ferguson Jr.</td><td>Pittsburgh</td><td>RB</td><td>$7,400</td><td>No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Que&#x27;Sean Brown</td><td>Virginia Tech</td><td>WR</td><td>$6,600</td><td>38</td><td>receiving yards 49.5</td></tr>
+<tr><td>FLEX</td><td>Tony Kinsler</td><td>Pittsburgh</td><td>WR</td><td>$1,400</td><td>No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $0  (spent $50,000 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Ethan Grunkemeyer is captain. Last week 35 throws for 147 and 1 passing scores, 3 carries for -3.</li>
+<li>Mason Heintschel. Last week 37 throws for 403 and 6 passing scores, 3 carries for 33. He runs and throws. That was a quiet rushing night. He usually runs more than that.</li>
+<li>Jeffrey Overton Jr. Got almost every carry last week (25 carries). He scored. Also caught 3 for 19.</li>
+<li>Que&#x27;Sean Brown. Last week 8 catches for 51. He is on this card with Ethan Grunkemeyer, so Virginia Tech&#x27;s passing shows up twice.</li>
+<li>Damon Ferguson Jr. Listed back last week (9 carries). Also caught 2 for 22.</li>
+<li>Tony Kinsler. Last week 3 catches for 33. He is cheap enough that the expensive names still fit.</li>
+</ul>
+<p>Projected points on this six: 99.31. The captain&#x27;s stats count extra.</p>
+<h3>ETR BUILD 3</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Price</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Luke Reynolds</td><td>Virginia Tech</td><td>WR</td><td>$11,400</td><td>39</td><td>receiving yards 59.5</td></tr>
+<tr><td>FLEX</td><td>Mason Heintschel</td><td>Pittsburgh</td><td>QB</td><td>$11,000</td><td>46</td><td>passing yards 249.5</td></tr>
+<tr><td>FLEX</td><td>Ethan Grunkemeyer</td><td>Virginia Tech</td><td>QB</td><td>$10,400</td><td>50</td><td>passing yards 259.5</td></tr>
+<tr><td>FLEX</td><td>Jeffrey Overton Jr.</td><td>Virginia Tech</td><td>RB</td><td>$8,000</td><td>49</td><td>rushing yards 78.5</td></tr>
+<tr><td>FLEX</td><td>Damon Ferguson Jr.</td><td>Pittsburgh</td><td>RB</td><td>$7,400</td><td>No line</td><td>—</td></tr>
+<tr><td>FLEX</td><td>Tony Kinsler</td><td>Pittsburgh</td><td>WR</td><td>$1,400</td><td>No line</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $400  (spent $49,600 / $50,000)</p>
+<p><b>Why these six</b></p>
+<ul>
+<li>Luke Reynolds is captain. Last week 5 catches for 15. He is on this card with Ethan Grunkemeyer, so Virginia Tech&#x27;s passing shows up twice.</li>
+<li>Mason Heintschel. Last week 37 throws for 403 and 6 passing scores, 3 carries for 33. He runs and throws. That was a quiet rushing night. He usually runs more than that.</li>
+<li>Jeffrey Overton Jr. Got almost every carry last week (25 carries). He scored. Also caught 3 for 19.</li>
+<li>Ethan Grunkemeyer. Last week 35 throws for 147 and 1 passing scores, 3 carries for -3.</li>
+<li>Damon Ferguson Jr. Listed back last week (9 carries). Also caught 2 for 22.</li>
+<li>Tony Kinsler. Last week 3 catches for 33. He is cheap enough that the expensive names still fit.</li>
+</ul>
+<p>Projected points on this six: 100.39. The captain&#x27;s stats count extra.</p>
+</div>
+<div class="prop-board"><h3>OUR VALUE</h3>
+<p>Every posted yardage or receptions number we joined on this salary board — one row per market, not a Top 20. Dest names with no book line are omitted. <b>Price</b> is 1 to 100. 50 is a fair price. 100 is a bargain. 1 is a bad price. This is not the chance he hits. Below 50 stays. This is not ETR. Sorted highest price first.</p>
+<h4 class="team-break">Virginia Tech</h4>
+<table class="sortable" data-default-sort="Price">
+<thead><tr><th scope="col" data-col="0">#</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Price</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Darius Taylor</td><td>Virginia Tech</td><td>RB</td><td>$1,000</td><td>100</td><td>receptions 2.5</td></tr>
+<tr><td>2</td><td>Darius Taylor</td><td>Virginia Tech</td><td>RB</td><td>$1,000</td><td>100</td><td>rushing plus receiving yards 33.5</td></tr>
+<tr><td>3</td><td>Darius Taylor</td><td>Virginia Tech</td><td>RB</td><td>$1,000</td><td>100</td><td>rushing yards 41.5</td></tr>
+<tr><td>4</td><td>Ethan Grunkemeyer</td><td>Virginia Tech</td><td>QB</td><td>$10,400</td><td>50</td><td>passing yards 259.5</td></tr>
+<tr><td>5</td><td>Jeffrey Overton Jr.</td><td>Virginia Tech</td><td>RB</td><td>$8,000</td><td>49</td><td>rushing yards 78.5</td></tr>
+<tr><td>6</td><td>Marcellous Hawkins</td><td>Virginia Tech</td><td>RB</td><td>$6,400</td><td>39</td><td>rushing yards 49.5</td></tr>
+<tr><td>7</td><td>Luke Reynolds</td><td>Virginia Tech</td><td>WR</td><td>$7,600</td><td>39</td><td>receiving yards 59.5</td></tr>
+<tr><td>8</td><td>Que&#x27;Sean Brown</td><td>Virginia Tech</td><td>WR</td><td>$6,600</td><td>38</td><td>receiving yards 49.5</td></tr>
+<tr><td>9</td><td>Ayden Greene</td><td>Virginia Tech</td><td>WR</td><td>$3,200</td><td>28</td><td>receiving yards 17.5</td></tr>
+<tr><td>10</td><td>Luke Reynolds</td><td>Virginia Tech</td><td>WR</td><td>$7,600</td><td>23</td><td>receptions 3.5</td></tr>
+<tr><td>11</td><td>Que&#x27;Sean Brown</td><td>Virginia Tech</td><td>WR</td><td>$6,600</td><td>19</td><td>receptions 2.5</td></tr>
+<tr><td>12</td><td>Jeffrey Overton Jr.</td><td>Virginia Tech</td><td>RB</td><td>$8,000</td><td>11</td><td>receiving yards 16.5</td></tr>
+</tbody></table>
+<h4 class="team-break">Pittsburgh</h4>
+<table class="sortable" data-default-sort="Price">
+<thead><tr><th scope="col" data-col="0">#</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Price</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Mason Heintschel</td><td>Pittsburgh</td><td>QB</td><td>$11,000</td><td>46</td><td>passing yards 249.5</td></tr>
+<tr><td>2</td><td>Cataurus Hicks</td><td>Pittsburgh</td><td>WR</td><td>$7,000</td><td>28</td><td>receiving yards 39.5</td></tr>
+<tr><td>3</td><td>Censere Lee</td><td>Pittsburgh</td><td>WR</td><td>$7,200</td><td>25</td><td>receptions 3.5</td></tr>
+<tr><td>4</td><td>Carson Kent</td><td>Pittsburgh</td><td>WR</td><td>$3,800</td><td>19</td><td>receiving yards 14.5</td></tr>
+<tr><td>5</td><td>Censere Lee</td><td>Pittsburgh</td><td>WR</td><td>$7,200</td><td>12</td><td>receiving yards 17.5</td></tr>
+<tr><td>6</td><td>Bryce Yates</td><td>Pittsburgh</td><td>WR</td><td>$5,400</td><td>10</td><td>receiving yards 10.5</td></tr>
+<tr><td>7</td><td>Mason Heintschel</td><td>Pittsburgh</td><td>QB</td><td>$11,000</td><td>6</td><td>rushing yards 12.5</td></tr>
+</tbody></table></div>
+<div class="etr-board"><h3>ETR VALUE</h3>
+<p>Every name on ETR&#x27;s sheet for this game, both teams in one table. Click a column to sort. A blank cell is —. <b>ETR salary</b> and <b>Owned</b> are their main-slate numbers. <b>Slate</b> is their sheet label. <b>Points per $1k</b> is their projected points versus our DraftKings salary for this game. Negative sheet values stay on the table. Both teams sit in one list so you can sort them together. Every Showdown skill player stays on the table (— if ETR did not list them). Not a Top 20.</p>
+<table class="sortable" data-default-sort="Points per $1k">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Opp</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">ETR salary</th><th scope="col" data-col="5">Projected points</th><th scope="col" data-col="6">Sheet value</th><th scope="col" data-col="7">Owned</th><th scope="col" data-col="8">Slate</th><th scope="col" data-col="9">Our salary</th><th scope="col" data-col="10">Points per $1k</th></tr></thead>
+<tbody>
+<tr class="pos-wr"><td>Tony Kinsler</td><td>Pittsburgh</td><td>Virginia Tech</td><td>WR</td><td>$3,100</td><td>5.38</td><td>-1.3</td><td>0</td><td>Friday</td><td>$1,400</td><td class="val">3.84</td></tr>
+<tr class="pos-rb"><td>Jeffrey Overton Jr.</td><td>Virginia Tech</td><td>Pittsburgh</td><td>RB</td><td>$6,000</td><td>20.07</td><td>9.1</td><td>0</td><td>Friday</td><td>$8,000</td><td class="val">2.51</td></tr>
+<tr class="pos-wr"><td>Benji Gosnell</td><td>Virginia Tech</td><td>Pittsburgh</td><td>WR</td><td>$3,100</td><td>2.82</td><td>-3.8</td><td>0</td><td>Friday</td><td>$1,200</td><td class="val">2.35</td></tr>
+<tr class="pos-wr"><td>Ayden Greene</td><td>Virginia Tech</td><td>Pittsburgh</td><td>WR</td><td>$4,000</td><td>7.18</td><td>-0.8</td><td>0</td><td>Friday</td><td>$3,200</td><td class="val">2.24</td></tr>
+<tr class="pos-wr"><td>Que&#x27;Sean Brown</td><td>Virginia Tech</td><td>Pittsburgh</td><td>WR</td><td>$5,300</td><td>14.39</td><td>4.4</td><td>0</td><td>Friday</td><td>$6,600</td><td class="val">2.18</td></tr>
+<tr class="pos-wr"><td>Carson Kent</td><td>Pittsburgh</td><td>Virginia Tech</td><td>WR</td><td>$4,300</td><td>8.24</td><td>-0.2</td><td>0</td><td>Friday</td><td>$3,800</td><td class="val">2.17</td></tr>
+<tr class="pos-wr"><td>Luke Reynolds</td><td>Virginia Tech</td><td>Pittsburgh</td><td>WR</td><td>$5,800</td><td>16.04</td><td>5.3</td><td>0</td><td>Friday</td><td>$7,600</td><td class="val">2.11</td></tr>
+<tr class="pos-qb"><td>Mason Heintschel</td><td>Pittsburgh</td><td>Virginia Tech</td><td>QB</td><td>$8,000</td><td>21.49</td><td>7.5</td><td>0</td><td>Friday</td><td>$11,000</td><td class="val">1.95</td></tr>
+<tr class="pos-rb"><td>Marcellous Hawkins</td><td>Virginia Tech</td><td>Pittsburgh</td><td>RB</td><td>$5,100</td><td>11.53</td><td>1.9</td><td>0</td><td>Friday</td><td>$6,400</td><td class="val">1.8</td></tr>
+<tr class="pos-wr"><td>Elijah Lagg</td><td>Pittsburgh</td><td>Virginia Tech</td><td>WR</td><td>$3,500</td><td>4.23</td><td>-3</td><td>0</td><td>Friday</td><td>$2,400</td><td class="val">1.76</td></tr>
+<tr class="pos-wr"><td>Cataurus Hicks</td><td>Pittsburgh</td><td>Virginia Tech</td><td>WR</td><td>$5,600</td><td>12.2</td><td>1.8</td><td>0</td><td>Friday</td><td>$7,000</td><td class="val">1.74</td></tr>
+<tr class="pos-wr"><td>Bryce Yates</td><td>Pittsburgh</td><td>Virginia Tech</td><td>WR</td><td>$4,500</td><td>9.33</td><td>0.6</td><td>0</td><td>Friday</td><td>$5,400</td><td class="val">1.73</td></tr>
+<tr class="pos-qb"><td>Ethan Grunkemeyer</td><td>Virginia Tech</td><td>Pittsburgh</td><td>QB</td><td>$7,600</td><td>17.17</td><td>3.8</td><td>0</td><td>Friday</td><td>$10,400</td><td class="val">1.65</td></tr>
+<tr class="pos-rb"><td>Damon Ferguson Jr.</td><td>Pittsburgh</td><td>Virginia Tech</td><td>RB</td><td>$5,700</td><td>12.22</td><td>1.7</td><td>0</td><td>Friday</td><td>$7,400</td><td class="val">1.65</td></tr>
+<tr class="pos-wr"><td>Marlion Jackson</td><td>Virginia Tech</td><td>Pittsburgh</td><td>WR</td><td>$3,500</td><td>3.53</td><td>-3.7</td><td>0</td><td>Friday</td><td>$2,200</td><td class="val">1.6</td></tr>
+<tr class="pos-wr"><td>Davion Brown</td><td>Virginia Tech</td><td>Pittsburgh</td><td>WR</td><td>$3,700</td><td>4.28</td><td>-3.3</td><td>0</td><td>Friday</td><td>$2,800</td><td class="val">1.53</td></tr>
+<tr class="pos-wr"><td>Censere Lee</td><td>Pittsburgh</td><td>Virginia Tech</td><td>WR</td><td>$5,700</td><td>9.91</td><td>-0.6</td><td>0</td><td>Friday</td><td>$7,200</td><td class="val">1.38</td></tr>
+<tr class="pos-wr"><td>Cam Sapp</td><td>Pittsburgh</td><td>Virginia Tech</td><td>WR</td><td>$3,000</td><td>1.22</td><td>-5.3</td><td>0</td><td>Friday</td><td>$1,000</td><td class="val">1.22</td></tr>
+<tr class="pos-rb"><td>Ja&#x27;Kyrian Turner</td><td>Pittsburgh</td><td>Virginia Tech</td><td>RB</td><td>$6,100</td><td>6.83</td><td>-4.3</td><td>0</td><td>Friday</td><td>$8,400</td><td class="val">0.81</td></tr>
+<tr class="pos-rb"><td>La&#x27;Vell Wright</td><td>Pittsburgh</td><td>Virginia Tech</td><td>RB</td><td>$4,800</td><td>4.62</td><td>-4.6</td><td>0</td><td>Friday</td><td>$5,800</td><td class="val">0.8</td></tr>
+<tr class="pos-wr"><td>Tyseer Denmark</td><td>Virginia Tech</td><td>Pittsburgh</td><td>WR</td><td>$3,100</td><td>1.23</td><td>-5.4</td><td>0</td><td>Friday</td><td>$1,600</td><td class="val">0.77</td></tr>
+<tr class="pos-wr"><td>Demetrice McCray</td><td>Pittsburgh</td><td>Virginia Tech</td><td>WR</td><td>$4,400</td><td>3.29</td><td>-5.3</td><td>0</td><td>Friday</td><td>$4,400</td><td class="val">0.75</td></tr>
+<tr class="pos-wr"><td>Bryan Hamilton</td><td>Pittsburgh</td><td>Virginia Tech</td><td>WR</td><td>$3,000</td><td>0.67</td><td>-5.8</td><td>0</td><td>Friday</td><td>$1,000</td><td class="val">0.67</td></tr>
+<tr class="pos-wr"><td>Dylan Wester</td><td>Pittsburgh</td><td>Virginia Tech</td><td>WR</td><td>$3,000</td><td>0.67</td><td>-5.8</td><td>0</td><td>Friday</td><td>$1,000</td><td class="val">0.67</td></tr>
+<tr class="pos-wr"><td>Benny Haselrig</td><td>Pittsburgh</td><td>Virginia Tech</td><td>WR</td><td>$3,000</td><td>0.64</td><td>-5.9</td><td>0</td><td>Friday</td><td>$1,000</td><td class="val">0.64</td></tr>
+<tr class="pos-wr"><td>Ja&#x27;Ricous Hairston</td><td>Virginia Tech</td><td>Pittsburgh</td><td>WR</td><td>$3,300</td><td>1.26</td><td>-5.7</td><td>0</td><td>Friday</td><td>$2,000</td><td class="val">0.63</td></tr>
+<tr class="pos-wr"><td>Harrison Saint Germain</td><td>Virginia Tech</td><td>Pittsburgh</td><td>WR</td><td>$3,000</td><td>0.58</td><td>-5.9</td><td>0</td><td>Friday</td><td>$1,000</td><td class="val">0.58</td></tr>
+<tr class="pos-rb"><td>Messiah Mickens</td><td>Virginia Tech</td><td>Pittsburgh</td><td>RB</td><td>$4,000</td><td>0.52</td><td>-7.5</td><td>0</td><td>Friday</td><td>$1,000</td><td class="val">0.52</td></tr>
+<tr class="pos-wr"><td>Tyreek Robinson</td><td>Pittsburgh</td><td>Virginia Tech</td><td>WR</td><td>$3,600</td><td>0.74</td><td>-6.7</td><td>0</td><td>Friday</td><td>$2,600</td><td class="val">0.28</td></tr>
+<tr class="pos-rb"><td>Tyler Mason</td><td>Virginia Tech</td><td>Pittsburgh</td><td>RB</td><td>$4,000</td><td>0.27</td><td>-7.7</td><td>0</td><td>Friday</td><td>$1,000</td><td class="val">0.27</td></tr>
+<tr class="pos-rb"><td>Synkwan Smith</td><td>Pittsburgh</td><td>Virginia Tech</td><td>RB</td><td>$4,500</td><td>0.33</td><td>-8.4</td><td>0</td><td>Friday</td><td>$4,600</td><td class="val">0.07</td></tr>
+<tr class="pos-rb"><td>Jaylin Brown</td><td>Pittsburgh</td><td>Virginia Tech</td><td>RB</td><td>$4,300</td><td>0.17</td><td>-8.3</td><td>0</td><td>Friday</td><td>$3,600</td><td class="val">0.05</td></tr>
+<tr class="pos-rb"><td>Justin Cook</td><td>Pittsburgh</td><td>Virginia Tech</td><td>RB</td><td>$4,400</td><td>0.17</td><td>-8.4</td><td>0</td><td>Friday</td><td>$4,200</td><td class="val">0.04</td></tr>
+<tr class="pos-wr"><td>Adam Howanitz</td><td>Pittsburgh</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Amah Agwu</td><td>Pittsburgh</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Angelo Renda</td><td>Pittsburgh</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr class="pos-k"><td>Antonio Chadha</td><td>Pittsburgh</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,800</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Beau Jackson</td><td>Pittsburgh</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr class="pos-k"><td>Carter Genchi</td><td>Pittsburgh</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,800</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Corey Dailey</td><td>Pittsburgh</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Davin Friedman</td><td>Pittsburgh</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Ethan Shine</td><td>Pittsburgh</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$3,400</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Holden Geriner</td><td>Pittsburgh</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$9,800</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jack Lesniewicz</td><td>Pittsburgh</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jake Sassic</td><td>Pittsburgh</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jordan Fields</td><td>Pittsburgh</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Malik Knight</td><td>Pittsburgh</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$3,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Max Hunt</td><td>Pittsburgh</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Rodney Dunbar</td><td>Pittsburgh</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-k"><td>Sam Hunsaker</td><td>Pittsburgh</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,800</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Truitt Brown</td><td>Pittsburgh</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Wyatt Villarreal</td><td>Pittsburgh</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Zaky Roberts</td><td>Pittsburgh</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>A.J. Brand</td><td>Virginia Tech</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,800</td><td class="val">—</td></tr>
+<tr class="pos-k"><td>Aiden Daugherty</td><td>Virginia Tech</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$5,000</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Bill Davis</td><td>Virginia Tech</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Brody Jones</td><td>Virginia Tech</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Bryce Baker</td><td>Virginia Tech</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$9,200</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Chanz Wiggins</td><td>Virginia Tech</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-k"><td>Cole Byrd</td><td>Virginia Tech</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$5,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Cole Reemsnyder</td><td>Virginia Tech</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Darius Taylor</td><td>Virginia Tech</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Drew Hube</td><td>Virginia Tech</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Hudson Zell</td><td>Virginia Tech</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jeff Exinor Jr.</td><td>Virginia Tech</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>John Buetow</td><td>Virginia Tech</td><td>—</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-k"><td>John Love</td><td>Virginia Tech</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$5,000</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Kelden Ryan</td><td>Virginia Tech</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Keylen Adams</td><td>Virginia Tech</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>L.J. Booker</td><td>Virginia Tech</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Luke Stuewe</td><td>Virginia Tech</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Matt Henderson</td><td>Virginia Tech</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Pierce Petersohn</td><td>Virginia Tech</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Shamarius Peterkin</td><td>Virginia Tech</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Takye Heath</td><td>Virginia Tech</td><td>—</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Troy Huhn</td><td>Virginia Tech</td><td>—</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
+<tr class="pos-k"><td>Will Love</td><td>Virginia Tech</td><td>—</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$5,000</td><td class="val">—</td></tr>
+</tbody></table></div>
+<div class="player-book"><h3>Player book</h3><p class="sub">Click a week. Each school’s game that week is an ESPN-style box — both sides. Under the score is that game’s posted spread and total. Season totals is the same tables added up. Trending up uses last week versus the games before. A blank cell is —.</p><div class="trend-up-strip"><h4>Trending up</h4><ul><li>Mason Heintschel · PITT · 46.4 last game (9.8 before)</li><li>Jeffrey Overton Jr. · VT · 34.8 last game (26.2 before)</li><li>Censere Lee · PITT · 27.7 last game (3.8 before)</li><li>Carson Kent · PITT · 17.7 last game (1.5 before)</li><li>Que&#x27;Sean Brown · VT · 13.1 last game (7.3 before)</li><li>Marlion Jackson · VT · 13.1 last game (1.6 before)</li><li>Bryce Yates · PITT · 11.7 last game (4.7 before)</li><li>Ayden Greene · VT · 9.8 last game (5.4 before)</li></ul></div><div class="week-pills noprint"><button type="button" class="week-pill" data-week="0">W0</button><button type="button" class="week-pill" data-week="1">W1</button><button type="button" class="week-pill" data-week="2">W2</button><button type="button" class="week-pill" data-week="3">W3</button><button type="button" class="week-pill on" data-week="4">W4</button><button type="button" class="week-pill" data-week="season">Season</button></div><section class="week-panel" data-week="0" hidden><h4 class="week-lab">Week 0</h4><article class="game-box" data-team="PITT"><h3 class="box-score">Pittsburgh</h3><p class="sub">No box for this week.</p></article><article class="game-box" data-team="VT"><h3 class="box-score">Virginia Tech</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="1" hidden><h4 class="week-lab">Week 1</h4><article class="game-box" data-team="PITT"><h3 class="box-score">Pittsburgh 59, Miami (OH) 14</h3><p class="box-line">Pittsburgh −16.5 / 47.5</p><div class="box-side"><h4>Pittsburgh</h4><p class="run-pass">Pittsburgh threw for 480, 7 passing scores and ran for 166, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Mason Heintschel</td><td data-n="41.0">41</td><td data-n="453.0">453</td><td data-n="7.0">7</td></tr><tr><td>Holden Geriner</td><td data-n="3.0">3</td><td data-n="27.0">27</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Justin Cook</td><td data-n="1.0">1</td><td data-n="50.0">50</td><td data-n="1.0">1</td></tr><tr><td>Ja&#x27;Kyrian Turner</td><td data-n="11.0">11</td><td data-n="39.0">39</td><td data-n="0.0">0</td></tr><tr><td>La&#x27;Vell Wright</td><td data-n="4.0">4</td><td data-n="25.0">25</td><td data-n="0.0">0</td></tr><tr><td>Mason Heintschel</td><td data-n="5.0">5</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Damon Ferguson Jr.</td><td data-n="6.0">6</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Holden Geriner</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Tyreek Robinson</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Jaylin Brown</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Cataurus Hicks</td><td data-n="5.0">5</td><td>—</td><td data-n="114.0">114</td><td data-n="1.0">1</td></tr><tr><td>Censere Lee</td><td data-n="5.0">5</td><td>—</td><td data-n="86.0">86</td><td data-n="1.0">1</td></tr><tr><td>Ja&#x27;Kyrian Turner</td><td data-n="4.0">4</td><td>—</td><td data-n="69.0">69</td><td data-n="1.0">1</td></tr><tr><td>Bryce Yates</td><td data-n="4.0">4</td><td>—</td><td data-n="53.0">53</td><td data-n="1.0">1</td></tr><tr><td>Malik Knight</td><td data-n="5.0">5</td><td>—</td><td data-n="53.0">53</td><td data-n="1.0">1</td></tr><tr><td>Carson Kent</td><td data-n="2.0">2</td><td>—</td><td data-n="29.0">29</td><td data-n="0.0">0</td></tr><tr><td>Demetrice McCray</td><td data-n="2.0">2</td><td>—</td><td data-n="24.0">24</td><td data-n="0.0">0</td></tr><tr><td>Elijah Lagg</td><td data-n="3.0">3</td><td>—</td><td data-n="23.0">23</td><td data-n="1.0">1</td></tr><tr><td>Damon Ferguson Jr.</td><td data-n="3.0">3</td><td>—</td><td data-n="22.0">22</td><td data-n="1.0">1</td></tr><tr><td>Justin Cook</td><td data-n="1.0">1</td><td>—</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Antonio Chadha</td><td data-n="1.0">1</td><td data-n="7.0">7</td></tr><tr><td>Samuel Hunsaker</td><td data-n="0.0">0</td><td data-n="1.0">1</td></tr></tbody></table></div><div class="box-side"><h4>Miami (OH)</h4><p class="run-pass">Miami (OH) threw for 689, 6 passing scores and ran for 150, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Darian Mensah</td><td data-n="30.0">30</td><td data-n="401.0">401</td><td data-n="5.0">5</td></tr><tr><td>David McComb</td><td data-n="33.0">33</td><td data-n="240.0">240</td><td data-n="1.0">1</td></tr><tr><td>Luke Nickel</td><td data-n="5.0">5</td><td data-n="27.0">27</td><td data-n="0.0">0</td></tr><tr><td>Caleb Heavner</td><td data-n="4.0">4</td><td data-n="21.0">21</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Mark Fletcher Jr.</td><td data-n="13.0">13</td><td data-n="40.0">40</td><td data-n="0.0">0</td></tr><tr><td>CharMar Brown</td><td data-n="8.0">8</td><td data-n="37.0">37</td><td data-n="1.0">1</td></tr><tr><td>Javian Mallory</td><td data-n="3.0">3</td><td data-n="31.0">31</td><td data-n="0.0">0</td></tr><tr><td>Lazaro Rogers</td><td data-n="6.0">6</td><td data-n="21.0">21</td><td data-n="0.0">0</td></tr><tr><td>Caleb Heavner</td><td data-n="1.0">1</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>D&#x27;Shawntae Jones</td><td data-n="5.0">5</td><td data-n="10.0">10</td><td data-n="1.0">1</td></tr><tr><td>Girard Pringle Jr.</td><td data-n="6.0">6</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Darian Mensah</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Rodney Nelson</td><td data-n="5.0">5</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Cade Yacamelli</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>David McComb</td><td data-n="3.0">3</td><td data-n="-19.0">-19</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Malachi Toney</td><td data-n="12.0">12</td><td>—</td><td data-n="234.0">234</td><td data-n="3.0">3</td></tr><tr><td>Damarion Witten</td><td data-n="2.0">2</td><td>—</td><td data-n="90.0">90</td><td data-n="1.0">1</td></tr><tr><td>Cooper Barkate</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="67.0">67</td><td data-n="1.0">1</td></tr><tr><td>Scoop Smith</td><td data-n="3.0">3</td><td>—</td><td data-n="50.0">50</td><td data-n="0.0">0</td></tr><tr><td>Braylon Isom</td><td data-n="2.0">2</td><td>—</td><td data-n="40.0">40</td><td data-n="0.0">0</td></tr><tr><td>Joshua Moore</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Lynel Billups-Williams</td><td data-n="4.0">4</td><td>—</td><td data-n="31.0">31</td><td data-n="0.0">0</td></tr><tr><td>Daylyn Upshaw</td><td data-n="3.0">3</td><td>—</td><td data-n="30.0">30</td><td data-n="1.0">1</td></tr><tr><td>Somourian Wingo</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="27.0">27</td><td data-n="0.0">0</td></tr><tr><td>Maleek Huggins</td><td data-n="3.0">3</td><td>—</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Brendan Loftus</td><td data-n="2.0">2</td><td>—</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Elija Lofton</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Mark Fletcher Jr.</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Javian Mallory</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Quintin Simmons Jr.</td><td data-n="1.0">1</td><td>—</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Brady Simmons</td><td data-n="1.0">1</td><td>—</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Gavin Mueller</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Christian Ross</td><td data-n="1.0">1</td><td>—</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Milan Parris</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Jake Weinberg</td><td data-n="1.0">1</td><td data-n="6.0">6</td></tr><tr><td>Kellan McLaughlin</td><td data-n="0.0">0</td><td data-n="2.0">2</td></tr></tbody></table></div></article><article class="game-box" data-team="VT"><h3 class="box-score">Virginia Tech 73, VMI 3</h3><p class="box-line">Virginia Tech −54.5 / 61.5</p><div class="box-side"><h4>Virginia Tech</h4><p class="run-pass">Virginia Tech threw for 351, 3 passing scores and ran for 268, 6 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Ethan Grunkemeyer</td><td data-n="20.0">20</td><td data-n="224.0">224</td><td data-n="2.0">2</td></tr><tr><td>Bryce Baker</td><td data-n="12.0">12</td><td data-n="127.0">127</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jeffrey Overton Jr.</td><td data-n="9.0">9</td><td data-n="104.0">104</td><td data-n="2.0">2</td></tr><tr><td>Marcellous Hawkins</td><td data-n="12.0">12</td><td data-n="69.0">69</td><td data-n="3.0">3</td></tr><tr><td>Messiah Mickens</td><td data-n="5.0">5</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Darius Taylor</td><td data-n="5.0">5</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>John Buetow</td><td data-n="2.0">2</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Tyler Mason</td><td data-n="3.0">3</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>A.J. Brand</td><td data-n="2.0">2</td><td data-n="10.0">10</td><td data-n="1.0">1</td></tr><tr><td>Ethan Grunkemeyer</td><td data-n="2.0">2</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Que&#x27;Sean Brown</td><td data-n="6.0">6</td><td>—</td><td data-n="109.0">109</td><td data-n="1.0">1</td></tr><tr><td>Luke Reynolds</td><td data-n="5.0">5</td><td>—</td><td data-n="50.0">50</td><td data-n="1.0">1</td></tr><tr><td>Chanz Wiggins</td><td data-n="1.0">1</td><td>—</td><td data-n="40.0">40</td><td data-n="1.0">1</td></tr><tr><td>Tyseer Denmark</td><td data-n="2.0">2</td><td>—</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Ja&#x27;Ricous Hairston</td><td data-n="1.0">1</td><td>—</td><td data-n="33.0">33</td><td data-n="0.0">0</td></tr><tr><td>Davion Brown</td><td data-n="3.0">3</td><td>—</td><td data-n="31.0">31</td><td data-n="0.0">0</td></tr><tr><td>Ayden Greene</td><td data-n="3.0">3</td><td>—</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Harrison Saint Germain</td><td data-n="1.0">1</td><td>—</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Keylen Adams</td><td data-n="2.0">2</td><td>—</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Pierce Petersohn</td><td data-n="2.0">2</td><td>—</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>A.J. Brand</td><td data-n="1.0">1</td><td>—</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>John Love</td><td data-n="1.0">1</td><td data-n="10.0">10</td></tr></tbody></table></div><div class="box-side"><h4>VMI</h4><p class="run-pass">VMI threw for 87, 0 passing scores and ran for -4, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>JoJo Crump</td><td data-n="8.0">8</td><td data-n="54.0">54</td><td data-n="0.0">0</td></tr><tr><td>Ian Reynolds</td><td data-n="5.0">5</td><td data-n="33.0">33</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Traveion Slaughter</td><td data-n="3.0">3</td><td data-n="21.0">21</td><td data-n="0.0">0</td></tr><tr><td>Leo Boehling</td><td data-n="10.0">10</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Kam Johnson</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Aslin Shipe</td><td data-n="3.0">3</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Ian Reynolds</td><td data-n="2.0">2</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Dylan Poley</td><td data-n="2.0">2</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>Trevin Simon</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>Cole Varner</td><td data-n="3.0">3</td><td data-n="-1.0">-1</td><td data-n="0.0">0</td></tr><tr><td>Halim Hardnett</td><td data-n="1.0">1</td><td data-n="-2.0">-2</td><td data-n="0.0">0</td></tr><tr><td>Chandler Wilson</td><td data-n="8.0">8</td><td data-n="-16.0">-16</td><td data-n="0.0">0</td></tr><tr><td>JoJo Crump</td><td data-n="8.0">8</td><td data-n="-19.0">-19</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Halim Hardnett</td><td data-n="1.0">1</td><td>—</td><td data-n="33.0">33</td><td data-n="0.0">0</td></tr><tr><td>Cole Varner</td><td data-n="2.0">2</td><td>—</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Traveion Slaughter</td><td data-n="1.0">1</td><td>—</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Zach Pirtle</td><td data-n="1.0">1</td><td>—</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Jack Joyce</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr></tbody></table></div></article></section><section class="week-panel" data-week="2" hidden><h4 class="week-lab">Week 2</h4><article class="game-box" data-team="PITT"><h3 class="box-score">Pittsburgh 12, UCF 7</h3><p class="box-line">Pittsburgh −7 / 55.5</p><div class="box-side"><h4>Pittsburgh</h4><p class="run-pass">Pittsburgh threw for 212, 0 passing scores and ran for 107, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Mason Heintschel</td><td data-n="29.0">29</td><td data-n="212.0">212</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Damon Ferguson Jr.</td><td data-n="20.0">20</td><td data-n="59.0">59</td><td data-n="1.0">1</td></tr><tr><td>La&#x27;Vell Wright</td><td data-n="13.0">13</td><td data-n="35.0">35</td><td data-n="0.0">0</td></tr><tr><td>Mason Heintschel</td><td data-n="7.0">7</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Cataurus Hicks</td><td data-n="3.0">3</td><td data-n="6.0">6</td><td data-n="64.0">64</td><td data-n="0.0">0</td></tr><tr><td>La&#x27;Vell Wright</td><td data-n="2.0">2</td><td data-n="5.0">5</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Bryce Yates</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="27.0">27</td><td data-n="0.0">0</td></tr><tr><td>Damon Ferguson Jr.</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="27.0">27</td><td data-n="0.0">0</td></tr><tr><td>Malik Knight</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>Censere Lee</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="18.0">18</td><td data-n="0.0">0</td></tr><tr><td>Elijah Lagg</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Tony Kinsler</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Carson Kent</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr></tbody></table></div><div class="box-side"><h4>UCF</h4><p class="run-pass">UCF threw for 186, 1 passing scores and ran for 20, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Alonza Barnett III</td><td data-n="31.0">31</td><td data-n="186.0">186</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Alonza Barnett III</td><td data-n="13.0">13</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Duke Watson</td><td data-n="6.0">6</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Taevion Swint</td><td data-n="2.0">2</td><td data-n="-1.0">-1</td><td data-n="0.0">0</td></tr><tr><td>Keyone Jenkins</td><td data-n="1.0">1</td><td data-n="-2.0">-2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Ric&#x27;Darious Farmer</td><td data-n="4.0">4</td><td data-n="7.0">7</td><td data-n="52.0">52</td><td data-n="0.0">0</td></tr><tr><td>Waden Charles</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="41.0">41</td><td data-n="1.0">1</td></tr><tr><td>Caleb Rollerson</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Tyren Hornes</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="21.0">21</td><td data-n="0.0">0</td></tr><tr><td>Dylan Wade</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>Josh Derry</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Jonathan Bibbs</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Duke Watson</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Landen Chambers</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr></tbody></table></div></article><article class="game-box" data-team="VT"><h3 class="box-score">Virginia Tech 44, Old Dominion 21</h3><p class="box-line">Virginia Tech −18.5 / 47.5</p><div class="box-side"><h4>Virginia Tech</h4><p class="run-pass">Virginia Tech threw for 327, 2 passing scores and ran for 89, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Ethan Grunkemeyer</td><td data-n="42.0">42</td><td data-n="327.0">327</td><td data-n="2.0">2</td></tr><tr><td>Bryce Baker</td><td data-n="2.0">2</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jeffrey Overton Jr.</td><td data-n="14.0">14</td><td data-n="47.0">47</td><td data-n="0.0">0</td></tr><tr><td>Marcellous Hawkins Jr.</td><td data-n="11.0">11</td><td data-n="43.0">43</td><td data-n="1.0">1</td></tr><tr><td>Bryce Baker</td><td data-n="4.0">4</td><td data-n="21.0">21</td><td data-n="0.0">0</td></tr><tr><td>Messiah Mickens</td><td data-n="3.0">3</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Tyler Mason</td><td data-n="2.0">2</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Luke Reynolds</td><td data-n="1.0">1</td><td data-n="-2.0">-2</td><td data-n="0.0">0</td></tr><tr><td>Tyseer Denmark</td><td data-n="1.0">1</td><td data-n="-7.0">-7</td><td data-n="0.0">0</td></tr><tr><td>Ethan Grunkemeyer</td><td data-n="6.0">6</td><td data-n="-25.0">-25</td><td data-n="1.0">1</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Luke Reynolds</td><td data-n="8.0">8</td><td data-n="10.0">10</td><td data-n="108.0">108</td><td data-n="2.0">2</td></tr><tr><td>Ayden Greene</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="44.0">44</td><td data-n="0.0">0</td></tr><tr><td>Que&#x27;Sean Brown</td><td data-n="7.0">7</td><td data-n="7.0">7</td><td data-n="41.0">41</td><td data-n="0.0">0</td></tr><tr><td>Ja&#x27;Ricous Hairston</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="35.0">35</td><td data-n="0.0">0</td></tr><tr><td>Jeffrey Overton Jr.</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="32.0">32</td><td data-n="0.0">0</td></tr><tr><td>Davion Brown</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Marcellous Hawkins Jr.</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="18.0">18</td><td data-n="0.0">0</td></tr><tr><td>Tyseer Denmark</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Marlion Jackson</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Harrison Saint Germain</td><td data-n="2.0">2</td><td>—</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Benji Gosnell</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr></tbody></table></div><div class="box-side"><h4>Old Dominion</h4><p class="run-pass">Old Dominion threw for 187, 1 passing scores and ran for 128, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Quinn Henicle</td><td data-n="21.0">21</td><td data-n="187.0">187</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Quinn Henicle</td><td data-n="16.0">16</td><td data-n="83.0">83</td><td data-n="1.0">1</td></tr><tr><td>Devin Roche</td><td data-n="9.0">9</td><td data-n="45.0">45</td><td data-n="0.0">0</td></tr><tr><td>Trey Hall</td><td data-n="3.0">3</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Ja&#x27;Varien Salter</td><td data-n="2.0">2</td><td data-n="-2.0">-2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Josh Rodriguez</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="89.0">89</td><td data-n="0.0">0</td></tr><tr><td>JJ Harrell</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Kendall Harris</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="24.0">24</td><td data-n="0.0">0</td></tr><tr><td>TJ Johnson</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Lonnie Johnson</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Leon Haughton Jr.</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="7.0">7</td><td data-n="1.0">1</td></tr></tbody></table></div></article></section><section class="week-panel" data-week="3" hidden><h4 class="week-lab">Week 3</h4><article class="game-box" data-team="PITT"><h3 class="box-score">Pittsburgh</h3><p class="sub">No box for this week.</p></article><article class="game-box" data-team="VT"><h3 class="box-score">Virginia Tech 35, Maryland 26</h3><div class="box-side"><h4>Virginia Tech</h4><p class="run-pass">Virginia Tech threw for 314, 3 passing scores and ran for 137, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Ethan Grunkemeyer</td><td data-n="39.0">39</td><td data-n="314.0">314</td><td data-n="3.0">3</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Marcellous Hawkins Jr.</td><td data-n="16.0">16</td><td data-n="75.0">75</td><td data-n="0.0">0</td></tr><tr><td>Jeffrey Overton Jr.</td><td data-n="12.0">12</td><td data-n="49.0">49</td><td data-n="1.0">1</td></tr><tr><td>Ethan Grunkemeyer</td><td data-n="4.0">4</td><td data-n="13.0">13</td><td data-n="1.0">1</td></tr><tr><td>Tyson Harley</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Luke Reynolds</td><td data-n="12.0">12</td><td data-n="12.0">12</td><td data-n="107.0">107</td><td data-n="1.0">1</td></tr><tr><td>Jeffrey Overton Jr.</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="63.0">63</td><td data-n="1.0">1</td></tr><tr><td>Ayden Greene</td><td data-n="4.0">4</td><td data-n="5.0">5</td><td data-n="58.0">58</td><td data-n="0.0">0</td></tr><tr><td>Davion Brown</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="27.0">27</td><td data-n="0.0">0</td></tr><tr><td>Que&#x27;Sean Brown</td><td data-n="5.0">5</td><td data-n="7.0">7</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Marcellous Hawkins Jr.</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Benji Gosnell</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Tyseer Denmark</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Ja&#x27;Ricous Hairston</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="1.0">1</td></tr></tbody></table></div><div class="box-side"><h4>Maryland</h4><p class="run-pass">Maryland threw for 359, 3 passing scores and ran for 64, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Malik Washington</td><td data-n="43.0">43</td><td data-n="359.0">359</td><td data-n="3.0">3</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Harry Dalton III</td><td data-n="6.0">6</td><td data-n="26.0">26</td><td data-n="0.0">0</td></tr><tr><td>Iverson Howard</td><td data-n="11.0">11</td><td data-n="22.0">22</td><td data-n="1.0">1</td></tr><tr><td>Malik Washington</td><td data-n="4.0">4</td><td data-n="16.0">16</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Chris Durr Jr.</td><td data-n="12.0">12</td><td data-n="14.0">14</td><td data-n="109.0">109</td><td data-n="2.0">2</td></tr><tr><td>Kaleb Webb</td><td data-n="5.0">5</td><td data-n="8.0">8</td><td data-n="98.0">98</td><td data-n="0.0">0</td></tr><tr><td>Dorian Fleming</td><td data-n="6.0">6</td><td data-n="9.0">9</td><td data-n="72.0">72</td><td data-n="1.0">1</td></tr><tr><td>Na&#x27;eem Abdul-Rahim Gladding</td><td data-n="3.0">3</td><td>—</td><td data-n="52.0">52</td><td data-n="0.0">0</td></tr><tr><td>Iverson Howard</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Jordan Scott</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Jayden Kitchens</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Ryan Manning</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr></tbody></table></div></article></section><section class="week-panel" data-week="4"><h4 class="week-lab">Week 4</h4><article class="game-box" data-team="PITT"><h3 class="box-score">Pittsburgh 59, Bucknell 0</h3><p class="box-line">Pittsburgh −54.5 / 63.5</p><div class="box-side"><h4>Pittsburgh</h4><p class="run-pass">Pittsburgh threw for 574, 8 passing scores and ran for 192, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Mason Heintschel</td><td data-n="37.0">37</td><td data-n="403.0">403</td><td data-n="6.0">6</td></tr><tr><td>Holden Geriner</td><td data-n="11.0">11</td><td data-n="114.0">114</td><td data-n="1.0">1</td></tr><tr><td>Corey Dailey</td><td data-n="5.0">5</td><td data-n="57.0">57</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Damon Ferguson Jr.</td><td data-n="9.0">9</td><td data-n="56.0">56</td><td data-n="0.0">0</td></tr><tr><td>Synkwan Smith</td><td data-n="10.0">10</td><td data-n="47.0">47</td><td data-n="0.0">0</td></tr><tr><td>Jaylin Brown</td><td data-n="6.0">6</td><td data-n="41.0">41</td><td data-n="0.0">0</td></tr><tr><td>Mason Heintschel</td><td data-n="3.0">3</td><td data-n="33.0">33</td><td data-n="0.0">0</td></tr><tr><td>Holden Geriner</td><td data-n="2.0">2</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Tyreek Robinson</td><td data-n="5.0">5</td><td data-n="5.0">5</td><td data-n="78.0">78</td><td data-n="1.0">1</td></tr><tr><td>Bryce Yates</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="77.0">77</td><td data-n="0.0">0</td></tr><tr><td>Demetrice McCray</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="73.0">73</td><td data-n="2.0">2</td></tr><tr><td>Cataurus Hicks</td><td data-n="3.0">3</td><td data-n="7.0">7</td><td data-n="66.0">66</td><td data-n="0.0">0</td></tr><tr><td>Carson Kent</td><td data-n="6.0">6</td><td data-n="6.0">6</td><td data-n="57.0">57</td><td data-n="1.0">1</td></tr><tr><td>Censere Lee</td><td data-n="5.0">5</td><td data-n="5.0">5</td><td data-n="47.0">47</td><td data-n="3.0">3</td></tr><tr><td>Bryan Hamilton</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="36.0">36</td><td data-n="1.0">1</td></tr><tr><td>Elijah Lagg</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Tony Kinsler</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="33.0">33</td><td data-n="0.0">0</td></tr><tr><td>Damon Ferguson Jr.</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Dylan Wester</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Jaylin Brown</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="16.0">16</td><td data-n="0.0">0</td></tr><tr><td>Synkwan Smith</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr></tbody></table></div><div class="box-side"><h4>Bucknell</h4><p class="run-pass">Bucknell threw for 105, 0 passing scores and ran for 33, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Christopher Dietrich</td><td data-n="7.0">7</td><td data-n="56.0">56</td><td data-n="0.0">0</td></tr><tr><td>Emmett Dowling</td><td data-n="21.0">21</td><td data-n="49.0">49</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jack Sullivan</td><td data-n="10.0">10</td><td data-n="31.0">31</td><td data-n="0.0">0</td></tr><tr><td>Michael Cadden</td><td data-n="4.0">4</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Emmett Dowling</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>Ty Stauffer</td><td data-n="6.0">6</td><td data-n="-4.0">-4</td><td data-n="0.0">0</td></tr><tr><td>Christopher Dietrich</td><td data-n="2.0">2</td><td data-n="-6.0">-6</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>TJ Cadden</td><td data-n="4.0">4</td><td data-n="7.0">7</td><td data-n="33.0">33</td><td data-n="0.0">0</td></tr><tr><td>Matthew Giannantonio</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="31.0">31</td><td data-n="0.0">0</td></tr><tr><td>Michael Cadden</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="16.0">16</td><td data-n="0.0">0</td></tr><tr><td>Jack Bohm-Squicciarini</td><td data-n="2.0">2</td><td>—</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Jack Sullivan</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Nick Wonsala</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Tom Arth</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr></tbody></table></div></article><article class="game-box" data-team="VT"><h3 class="box-score">Virginia Tech 21, Boston College 14</h3><p class="box-line">Virginia Tech −14 / 46.5</p><div class="box-side"><h4>Virginia Tech</h4><p class="run-pass">Virginia Tech threw for 147, 1 passing scores and ran for 228, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Ethan Grunkemeyer</td><td data-n="35.0">35</td><td data-n="147.0">147</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jeffrey Overton Jr.</td><td data-n="25.0">25</td><td data-n="209.0">209</td><td data-n="1.0">1</td></tr><tr><td>Marcellous Hawkins Jr.</td><td data-n="10.0">10</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Luke Reynolds</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Ethan Grunkemeyer</td><td data-n="3.0">3</td><td data-n="-3.0">-3</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Que&#x27;Sean Brown</td><td data-n="8.0">8</td><td data-n="12.0">12</td><td data-n="51.0">51</td><td data-n="0.0">0</td></tr><tr><td>Marlion Jackson</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="41.0">41</td><td data-n="1.0">1</td></tr><tr><td>Jeffrey Overton Jr.</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Davion Brown</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="18.0">18</td><td data-n="0.0">0</td></tr><tr><td>Luke Reynolds</td><td data-n="5.0">5</td><td data-n="9.0">9</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Benji Gosnell</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr></tbody></table></div><div class="box-side"><h4>Boston College</h4><p class="run-pass">Boston College threw for 111, 0 passing scores and ran for 151, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Mason McKenzie</td><td data-n="23.0">23</td><td data-n="111.0">111</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Mason McKenzie</td><td data-n="26.0">26</td><td data-n="138.0">138</td><td data-n="2.0">2</td></tr><tr><td>Evan Dickens</td><td data-n="6.0">6</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Bo MacCormack III</td><td data-n="5.0">5</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Jaedn Skeete</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="37.0">37</td><td data-n="0.0">0</td></tr><tr><td>Dawson Pough</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="29.0">29</td><td data-n="0.0">0</td></tr><tr><td>Javarius Green</td><td data-n="2.0">2</td><td data-n="6.0">6</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Bo MacCormack III</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Zeke Moore</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Landon Wright</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Evan Dickens</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr></tbody></table></div></article></section><section class="week-panel" data-week="season" hidden><h4 class="week-lab">Season totals</h4><article class="game-box" data-team="PITT"><h3 class="box-score">Pittsburgh · 3 games</h3><div class="box-side"><h4>Pittsburgh</h4><p class="run-pass">Pittsburgh threw for 1266, 15 passing scores and ran for 465, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Mason Heintschel</td><td data-n="107.0">107</td><td data-n="1068.0">1068</td><td data-n="13.0">13</td></tr><tr><td>Holden Geriner</td><td data-n="14.0">14</td><td data-n="141.0">141</td><td data-n="1.0">1</td></tr><tr><td>Corey Dailey</td><td data-n="5.0">5</td><td data-n="57.0">57</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Damon Ferguson Jr.</td><td data-n="35.0">35</td><td data-n="137.0">137</td><td data-n="1.0">1</td></tr><tr><td>Mason Heintschel</td><td data-n="15.0">15</td><td data-n="69.0">69</td><td data-n="0.0">0</td></tr><tr><td>La&#x27;Vell Wright</td><td data-n="17.0">17</td><td data-n="60.0">60</td><td data-n="0.0">0</td></tr><tr><td>Justin Cook</td><td data-n="1.0">1</td><td data-n="50.0">50</td><td data-n="1.0">1</td></tr><tr><td>Synkwan Smith</td><td data-n="10.0">10</td><td data-n="47.0">47</td><td data-n="0.0">0</td></tr><tr><td>Jaylin Brown</td><td data-n="7.0">7</td><td data-n="41.0">41</td><td data-n="0.0">0</td></tr><tr><td>Ja&#x27;Kyrian Turner</td><td data-n="11.0">11</td><td data-n="39.0">39</td><td data-n="0.0">0</td></tr><tr><td>Holden Geriner</td><td data-n="3.0">3</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>Tyreek Robinson</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Cataurus Hicks</td><td data-n="11.0">11</td><td data-n="13.0">13</td><td data-n="244.0">244</td><td data-n="1.0">1</td></tr><tr><td>Bryce Yates</td><td data-n="10.0">10</td><td data-n="6.0">6</td><td data-n="157.0">157</td><td data-n="1.0">1</td></tr><tr><td>Censere Lee</td><td data-n="12.0">12</td><td data-n="8.0">8</td><td data-n="151.0">151</td><td data-n="4.0">4</td></tr><tr><td>Demetrice McCray</td><td data-n="5.0">5</td><td data-n="5.0">5</td><td data-n="97.0">97</td><td data-n="2.0">2</td></tr><tr><td>Carson Kent</td><td data-n="9.0">9</td><td data-n="8.0">8</td><td data-n="91.0">91</td><td data-n="1.0">1</td></tr><tr><td>Tyreek Robinson</td><td data-n="5.0">5</td><td data-n="5.0">5</td><td data-n="78.0">78</td><td data-n="1.0">1</td></tr><tr><td>Elijah Lagg</td><td data-n="7.0">7</td><td data-n="5.0">5</td><td data-n="76.0">76</td><td data-n="1.0">1</td></tr><tr><td>Malik Knight</td><td data-n="7.0">7</td><td data-n="3.0">3</td><td data-n="73.0">73</td><td data-n="1.0">1</td></tr><tr><td>Damon Ferguson Jr.</td><td data-n="8.0">8</td><td data-n="7.0">7</td><td data-n="71.0">71</td><td data-n="1.0">1</td></tr><tr><td>Ja&#x27;Kyrian Turner</td><td data-n="4.0">4</td><td>—</td><td data-n="69.0">69</td><td data-n="1.0">1</td></tr><tr><td>Tony Kinsler</td><td data-n="4.0">4</td><td data-n="6.0">6</td><td data-n="39.0">39</td><td data-n="0.0">0</td></tr><tr><td>Bryan Hamilton</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="36.0">36</td><td data-n="1.0">1</td></tr><tr><td>La&#x27;Vell Wright</td><td data-n="2.0">2</td><td data-n="5.0">5</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Dylan Wester</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Jaylin Brown</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="16.0">16</td><td data-n="0.0">0</td></tr><tr><td>Synkwan Smith</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Justin Cook</td><td data-n="1.0">1</td><td>—</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Antonio Chadha</td><td data-n="1.0">1</td><td data-n="7.0">7</td></tr><tr><td>Samuel Hunsaker</td><td data-n="0.0">0</td><td data-n="1.0">1</td></tr></tbody></table></div></article><article class="game-box" data-team="VT"><h3 class="box-score">Virginia Tech · 4 games</h3><div class="box-side"><h4>Virginia Tech</h4><p class="run-pass">Virginia Tech threw for 1139, 9 passing scores and ran for 722, 11 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Ethan Grunkemeyer</td><td data-n="136.0">136</td><td data-n="1012.0">1012</td><td data-n="8.0">8</td></tr><tr><td>Bryce Baker</td><td data-n="14.0">14</td><td data-n="127.0">127</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jeffrey Overton Jr.</td><td data-n="60.0">60</td><td data-n="409.0">409</td><td data-n="4.0">4</td></tr><tr><td>Marcellous Hawkins</td><td data-n="49.0">49</td><td data-n="206.0">206</td><td data-n="4.0">4</td></tr><tr><td>Messiah Mickens</td><td data-n="8.0">8</td><td data-n="34.0">34</td><td data-n="0.0">0</td></tr><tr><td>Darius Taylor</td><td data-n="5.0">5</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Bryce Baker</td><td data-n="4.0">4</td><td data-n="21.0">21</td><td data-n="0.0">0</td></tr><tr><td>John Buetow</td><td data-n="2.0">2</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Tyler Mason</td><td data-n="5.0">5</td><td data-n="16.0">16</td><td data-n="0.0">0</td></tr><tr><td>A.J. Brand</td><td data-n="2.0">2</td><td data-n="10.0">10</td><td data-n="1.0">1</td></tr><tr><td>Luke Reynolds</td><td data-n="2.0">2</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Tyson Harley</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>Tyseer Denmark</td><td data-n="1.0">1</td><td data-n="-7.0">-7</td><td data-n="0.0">0</td></tr><tr><td>Ethan Grunkemeyer</td><td data-n="15.0">15</td><td data-n="-9.0">-9</td><td data-n="2.0">2</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Luke Reynolds</td><td data-n="30.0">30</td><td data-n="31.0">31</td><td data-n="280.0">280</td><td data-n="4.0">4</td></tr><tr><td>Que&#x27;Sean Brown</td><td data-n="26.0">26</td><td data-n="26.0">26</td><td data-n="224.0">224</td><td data-n="1.0">1</td></tr><tr><td>Ayden Greene</td><td data-n="8.0">8</td><td data-n="8.0">8</td><td data-n="125.0">125</td><td data-n="0.0">0</td></tr><tr><td>Jeffrey Overton Jr.</td><td data-n="10.0">10</td><td data-n="13.0">13</td><td data-n="114.0">114</td><td data-n="1.0">1</td></tr><tr><td>Davion Brown</td><td data-n="8.0">8</td><td data-n="10.0">10</td><td data-n="95.0">95</td><td data-n="0.0">0</td></tr><tr><td>Ja&#x27;Ricous Hairston</td><td data-n="4.0">4</td><td data-n="3.0">3</td><td data-n="70.0">70</td><td data-n="1.0">1</td></tr><tr><td>Tyseer Denmark</td><td data-n="5.0">5</td><td data-n="3.0">3</td><td data-n="59.0">59</td><td data-n="0.0">0</td></tr><tr><td>Marlion Jackson</td><td data-n="4.0">4</td><td data-n="7.0">7</td><td data-n="47.0">47</td><td data-n="1.0">1</td></tr><tr><td>Chanz Wiggins</td><td data-n="1.0">1</td><td>—</td><td data-n="40.0">40</td><td data-n="1.0">1</td></tr><tr><td>Marcellous Hawkins Jr.</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="33.0">33</td><td data-n="0.0">0</td></tr><tr><td>Benji Gosnell</td><td data-n="4.0">4</td><td data-n="8.0">8</td><td data-n="18.0">18</td><td data-n="0.0">0</td></tr><tr><td>Harrison Saint Germain</td><td data-n="3.0">3</td><td>—</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Keylen Adams</td><td data-n="2.0">2</td><td>—</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Pierce Petersohn</td><td data-n="2.0">2</td><td>—</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>A.J. Brand</td><td data-n="1.0">1</td><td>—</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>John Love</td><td data-n="1.0">1</td><td data-n="10.0">10</td></tr></tbody></table></div></article></section></div>
+</article>
+</main></div>
+<script>
+(function(){
+  function applyWeek(book, pill){
+    if(!book || !pill) return;
+    book.querySelectorAll('.week-pill').forEach(function(p){
+      p.classList.toggle('on', p===pill);
+    });
+    var wk=pill.getAttribute('data-week')||'';
+    book.querySelectorAll('.week-panel').forEach(function(panel){
+      panel.hidden = (panel.getAttribute('data-week')||'')!==wk;
+    });
+    var inp=document.getElementById('playerSearch');
+    if(inp) inp.dispatchEvent(new Event('input'));
+  }
+  document.addEventListener('click', function(e){
+    var pill=e.target.closest('.week-pill');
+    if(!pill) return;
+    var book=pill.closest('.player-book');
+    if(!book) return;
+    applyWeek(book, pill);
+  });
+})();
+</script>
+<script>
+(function(){
+  var KEY='desk-report-theme';
+  function apply(mode){
+    document.documentElement.classList.toggle('light', mode==='light');
+    var b=document.getElementById('themeBtn');
+    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  var saved=null;
+  try { saved=localStorage.getItem(KEY); } catch (e) {}
+  apply(saved==='light'?'light':'dark');
+  window.toggleDeskTheme=function(){
+    apply(document.documentElement.classList.contains('light')?'dark':'light');
+  };
+})();
+(function(){
+  function val(td){
+    if(!td) return {n:false, v:null, s:''};
+    var dn=td.getAttribute('data-n');
+    if(dn!==null && dn!==''){
+      var n=parseFloat(dn);
+      if(!isNaN(n)) return {n:true, v:n, s:dn};
+    }
+    var t=(td.textContent||'').trim();
+    if(!t || t==='—' || t==='-') return {n:false, v:null, s:''};
+    var raw=t.replace(/[$,×x]/g,'').replace(/,/g,'');
+    if(/^-?\d+(\.\d+)?$/.test(raw)) return {n:true, v:parseFloat(raw), s:t};
+    return {n:false, v:t.toLowerCase(), s:t};
+  }
+  function sortTable(table, col, dir){
+    var tb=table && table.tBodies[0];
+    if(!tb) return;
+    Array.prototype.forEach.call(table.querySelectorAll('th'), function(h){
+      h.removeAttribute('data-dir');
+    });
+    var mark=table.querySelector('th[data-col="'+col+'"]');
+    if(mark) mark.setAttribute('data-dir', dir);
+    var rows=Array.prototype.slice.call(tb.rows);
+    rows.sort(function(a,b){
+      var A=val(a.cells[col]||{});
+      var B=val(b.cells[col]||{});
+      if(A.v===null && B.v===null) return 0;
+      if(A.v===null) return 1;
+      if(B.v===null) return -1;
+      var cmp=0;
+      if(A.n && B.n) cmp=A.v-B.v;
+      else cmp=String(A.v).localeCompare(String(B.v));
+      return dir==='asc' ? cmp : -cmp;
+    });
+    rows.forEach(function(r){ tb.appendChild(r); });
+  }
+  document.addEventListener('click', function(e){
+    var th=e.target.closest('table.sortable th');
+    if(!th) return;
+    var table=th.closest('table');
+    if(!table) return;
+    var raw=th.getAttribute('data-col');
+    if(raw===null) return;
+    var dir=th.getAttribute('data-dir')==='asc' ? 'desc' : 'asc';
+    sortTable(table, parseInt(raw,10), dir);
+  });
+  document.querySelectorAll('table.sortable[data-default-sort]').forEach(function(table){
+    var want=(table.getAttribute('data-default-sort')||'').toLowerCase();
+    var ths=table.querySelectorAll('th[data-col]');
+    var idx=-1;
+    for(var i=0;i<ths.length;i++){
+      var t=(ths[i].textContent||'').trim().toLowerCase();
+      if(t===want || t.indexOf(want)>=0 || want.indexOf(t)>=0){
+        idx=parseInt(ths[i].getAttribute('data-col'),10);
+        break;
+      }
+    }
+    if(idx>=0) sortTable(table, idx, 'desc');
+  });
+})();
+</script>
+<script>
+(function(){
+  function norm(s){
+    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+  }
+  function skip(el){
+    return !!(el.closest && el.closest('dialog, .pcard, .rail'));
+  }
+  function playerIdx(table){
+    var ths=table.querySelectorAll('thead th');
+    for(var i=0;i<ths.length;i++){
+      var t=norm(ths[i].textContent);
+      if(t==='player'||t==='name') return i;
+    }
+    return -1;
+  }
+  function rowHit(tr, q, pidx){
+    if(!q) return true;
+    if(pidx>=0 && tr.cells[pidx]) return norm(tr.cells[pidx].textContent).indexOf(q)>=0;
+    return norm(tr.textContent).indexOf(q)>=0;
+  }
+  function apply(opts){
+    opts = opts || {};
+    var inp=document.getElementById('playerSearch');
+    if(!inp) return;
+    var q=norm(inp.value);
+    var n=0;
+    var hitSel='tbody tr:not([hidden]), li:not([hidden])';
+    function teamOk(tr){
+      return true;
+    }
+    function mark(el, hit){
+      el.hidden = !hit;
+      el.classList.toggle('name-hit', !!(q && hit));
+      if(q && hit) n++;
+    }
+    function panelHasHit(sel){
+      var panel=document.querySelector(sel);
+      if(!panel) return false;
+      var hit=false;
+      panel.querySelectorAll('tbody tr, li').forEach(function(el){
+        if(!el.hidden) hit=true;
+      });
+      return hit;
+    }
+    document.querySelectorAll('table tbody tr').forEach(function(tr){
+      if(skip(tr)) return;
+      var ok=teamOk(tr) && rowHit(tr, q, playerIdx(tr.closest('table')));
+      mark(tr, ok);
+    });
+    document.querySelectorAll('table').forEach(function(t){
+      if(skip(t)) return;
+      var any=false;
+      var tb=t.tBodies[0];
+      if(tb){
+        Array.prototype.forEach.call(tb.rows, function(r){ if(!r.hidden) any=true; });
+      }
+      t.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.pos-book,.week-panel,.box-side,.game-box').forEach(function(sec){
+      var any=false;
+      sec.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) any=true; });
+      if(!sec.querySelector('tbody tr')) any=true;
+      sec.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.week-book-wrap').forEach(function(w){
+      var t=w.querySelector('table');
+      w.classList.toggle('search-empty', !!(t && t.classList.contains('search-empty')));
+    });
+    document.querySelectorAll('.week-pill').forEach(function(pill){
+      var book=pill.closest('.player-book');
+      if(!book) return;
+      var wk=pill.getAttribute('data-week')||'';
+      var panel=book.querySelector('.week-panel[data-week="'+wk+'"]');
+      var hit=false;
+      if(panel){
+        panel.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) hit=true; });
+        if(!panel.querySelector('tbody tr')) hit=true;
+      }
+      pill.classList.toggle('search-miss', !!(q && !hit));
+    });
+    document.querySelectorAll('li').forEach(function(li){
+      if(skip(li)) return;
+      mark(li, !q || norm(li.textContent).indexOf(q)>=0);
+    });
+    var hint=document.getElementById('playerSearchHint');
+    if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
+    document.querySelectorAll('label.pill[for]').forEach(function(lab){
+      var id=lab.getAttribute('for');
+      var sel = id==='v-report' ? '.game-report'
+              : id==='v-prop' ? '.prop-board'
+              : id==='v-etr' ? '.etr-board'
+              : id==='v-book' ? '.player-book' : '';
+      if(!sel) return;
+      lab.classList.toggle('search-miss', !!(q && !panelHasHit(sel)));
+    });
+    if(opts.jump){
+      var book=document.querySelector('.player-book');
+      if(book && q){
+        var on=book.querySelector('.week-pill.on');
+        var cur=on ? (on.getAttribute('data-week')||'') : '';
+        var curPanel=cur ? book.querySelector('.week-panel[data-week="'+cur+'"]') : null;
+        var curHit=false;
+        if(curPanel){
+          curPanel.querySelectorAll('tbody tr.name-hit').forEach(function(){ curHit=true; });
+        }
+        if(!curHit){
+          var alt=book.querySelector('.week-pill:not(.search-miss)');
+          if(alt && alt!==on){
+            book.querySelectorAll('.week-pill').forEach(function(p){ p.classList.toggle('on', p===alt); });
+            var aw=alt.getAttribute('data-week')||'';
+            book.querySelectorAll('.week-panel').forEach(function(panel){
+              panel.hidden = (panel.getAttribute('data-week')||'')!==aw;
+            });
+          }
+        }
+      }
+      var shownArt=document.querySelector('article.panel');
+      var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
+      if(jumpEl){
+        setTimeout(function(){
+          try { jumpEl.scrollIntoView({block:'center', behavior:'smooth'}); }
+          catch (err) { jumpEl.scrollIntoView(true); }
+        }, 40);
+      }
+    }
+  }
+  var form=document.getElementById('playerSearchForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      apply({jump:true});
+    });
+  }
+  var inp=document.getElementById('playerSearch');
+  if(inp){
+    inp.addEventListener('input', function(){ apply({}); });
+    inp.addEventListener('search', function(){ apply({jump:true}); });
+    inp.addEventListener('keydown', function(e){
+      if(e.key==='Enter' || e.keyCode===13){
+        e.preventDefault();
+        apply({jump:true});
+      }
+    });
+  }
+  apply({});
+})();
+</script>
+</body></html>
