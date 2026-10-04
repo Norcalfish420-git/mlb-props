@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NYJ @ CHI</title>
+<style>
+:root{--bg:#121820;--fg:#f3efe6;--muted:#c4c0b6;--line:#3d4d5c;--accent:#d97706;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Georgia,"Iowan Old Style",serif;}
+main{max-width:76rem;margin:0 auto;padding:1.4rem 1.2rem 2.5rem;}
+h1{font-size:2rem;margin:0 0 .2rem;letter-spacing:-.02em;}
+.when{color:var(--muted);margin:0 0 .9rem;}
+form{margin:0 0 .8rem;}
+input[type=search]{width:min(22rem,100%);box-sizing:border-box;border-radius:999px;border:1px solid var(--line);background:#1a2430;color:var(--fg);padding:.45rem .75rem;font:inherit;}
+table{width:100%;border-collapse:collapse;font-size:.92rem;}
+th,td{text-align:left;padding:.4rem .45rem;border-bottom:1px solid var(--line);white-space:nowrap;}
+th{color:var(--accent);font-size:.78rem;letter-spacing:.03em;}
+.team-badge{display:inline-flex;align-items:center;justify-content:center;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--team);color:var(--team-ink);font:700 .58rem/1 system-ui,sans-serif;vertical-align:middle;margin-right:.3rem;}
+table.sortable th{cursor:pointer;user-select:none;}table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
+</style>
+</head>
+<body>
+<main>
+<h1>NYJ @ CHI</h1>
+<p class="when">October 1, 2026</p>
+<form id="playerSearchForm" action="#" role="search">
+<input id="playerSearch" type="search" placeholder="Search players" autocomplete="off"/>
+</form>
+<table class="sortable">
+<thead><tr><th data-col="0">Player</th><th data-col="1">Team</th><th data-col="2">Pos</th><th data-col="3">Status</th><th data-col="4">FLEX</th><th data-col="5">CPT</th><th data-col="6">ETR Proj</th><th data-col="7">ETR Value</th><th data-col="8">ETR Floor</th><th data-col="9">ETR Ceiling</th><th data-col="10">Small</th><th data-col="11">Large</th><th data-col="12">ETR Salary</th></tr></thead>
+<tbody>
+<tr><td>Garrett Wilson</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>WR</td><td>—</td><td data-n="10800">$10,800</td><td data-n="16200">$16,200</td><td data-n="18.0">18.0</td><td data-n="1.5">1.5</td><td data-n="7.5">7.5</td><td data-n="31.7">31.7</td><td data-n="21.2">21.2%</td><td data-n="20.0">20.0%</td><td data-n="6800">$6,800</td></tr><tr><td>Caleb Williams</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>QB</td><td>OUT</td><td data-n="10600">$10,600</td><td data-n="15900">$15,900</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>D&#x27;Andre Swift</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>RB</td><td>—</td><td data-n="10400">$10,400</td><td data-n="15600">$15,600</td><td data-n="15.1">15.1</td><td data-n="-0.6">-0.6</td><td data-n="5.6">5.6</td><td data-n="27.3">27.3</td><td data-n="6.5">6.5%</td><td data-n="8.4">8.4%</td><td data-n="6400">$6,400</td></tr><tr><td>Breece Hall</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>RB</td><td>OUT</td><td data-n="10200">$10,200</td><td data-n="15300">$15,300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Geno Smith</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>QB</td><td>—</td><td data-n="9600">$9,600</td><td data-n="14400">$14,400</td><td data-n="15.1">15.1</td><td data-n="-1.0">-1.0</td><td data-n="7.1">7.1</td><td data-n="24.3">24.3</td><td data-n="4.4">4.4%</td><td data-n="3.4">3.4%</td><td data-n="5200">$5,200</td></tr><tr><td>Case Keenum</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>QB</td><td>—</td><td data-n="9200">$9,200</td><td data-n="13800">$13,800</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Tyson Bagent</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>QB</td><td>—</td><td data-n="9000">$9,000</td><td data-n="13500">$13,500</td><td data-n="17.1">17.1</td><td data-n="2.1">2.1</td><td data-n="7.1">7.1</td><td data-n="26.2">26.2</td><td data-n="6.4">6.4%</td><td data-n="5.3">5.3%</td><td data-n="4800">$4,800</td></tr><tr><td>Braelon Allen</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>RB</td><td>—</td><td data-n="8200">$8,200</td><td data-n="12300">$12,300</td><td data-n="13.1">13.1</td><td data-n="-0.2">-0.2</td><td data-n="5.0">5.0</td><td data-n="24.0">24.0</td><td data-n="11.1">11.1%</td><td data-n="9.0">9.0%</td><td data-n="5200">$5,200</td></tr><tr><td>Luther Burden III</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>WR</td><td>—</td><td data-n="7600">$7,600</td><td data-n="11400">$11,400</td><td data-n="12.2">12.2</td><td data-n="-1.1">-1.1</td><td data-n="4.0">4.0</td><td data-n="22.9">22.9</td><td data-n="7.0">7.0%</td><td data-n="7.6">7.6%</td><td data-n="5200">$5,200</td></tr><tr><td>Rome Odunze</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>WR</td><td>—</td><td data-n="7000">$7,000</td><td data-n="10500">$10,500</td><td data-n="8.8">8.8</td><td data-n="-4.2">-4.2</td><td data-n="1.4">1.4</td><td data-n="19.0">19.0</td><td data-n="0.5">0.5%</td><td data-n="0.5">0.5%</td><td data-n="5000">$5,000</td></tr><tr><td>Colston Loveland</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>TE</td><td>—</td><td data-n="6800">$6,800</td><td data-n="10200">$10,200</td><td data-n="8.8">8.8</td><td data-n="-3.5">-3.5</td><td data-n="2.0">2.0</td><td data-n="17.7">17.7</td><td data-n="0.4">0.4%</td><td data-n="0.5">0.5%</td><td data-n="4700">$4,700</td></tr><tr><td>Kenyon Sadiq</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>TE</td><td>Q</td><td data-n="6400">$6,400</td><td data-n="9600">$9,600</td><td data-n="10.4">10.4</td><td data-n="-0.6">-0.6</td><td data-n="3.1">3.1</td><td data-n="19.8">19.8</td><td data-n="8.2">8.2%</td><td data-n="6.2">6.2%</td><td data-n="4000">$4,000</td></tr><tr><td>Cade Klubnik</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>QB</td><td>—</td><td data-n="6000">$6,000</td><td data-n="9000">$9,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Miller Moss</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>QB</td><td>—</td><td data-n="6000">$6,000</td><td data-n="9000">$9,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Will Levis</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>QB</td><td>—</td><td data-n="6000">$6,000</td><td data-n="9000">$9,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Kyle Monangai</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>RB</td><td>—</td><td data-n="5800">$5,800</td><td data-n="8700">$8,700</td><td data-n="8.2">8.2</td><td data-n="-4.5">-4.5</td><td data-n="2.3">2.3</td><td data-n="16.4">16.4</td><td data-n="0.2">0.2%</td><td data-n="0.3">0.3%</td><td data-n="4900">$4,900</td></tr><tr><td>Adonai Mitchell</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>WR</td><td>OUT</td><td data-n="5400">$5,400</td><td data-n="8100">$8,100</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Cairo Santos</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>K</td><td>—</td><td data-n="5000">$5,000</td><td data-n="7500">$7,500</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Blake Grupe</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>K</td><td>—</td><td data-n="4800">$4,800</td><td data-n="7200">$7,200</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Jason Sanders</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>K</td><td>—</td><td data-n="4800">$4,800</td><td data-n="7200">$7,200</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Kalif Raymond</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>WR</td><td>—</td><td data-n="4600">$4,600</td><td data-n="6900">$6,900</td><td data-n="8.0">8.0</td><td data-n="-2.1">-2.1</td><td data-n="1.8">1.8</td><td data-n="16.5">16.5</td><td data-n="11.3">11.3%</td><td data-n="6.3">6.3%</td><td data-n="3600">$3,600</td></tr><tr><td>Bears</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>DST</td><td>—</td><td data-n="4000">$4,000</td><td data-n="6000">$6,000</td><td data-n="7.9">7.9</td><td data-n="0.9">0.9</td><td data-n="1.8">1.8</td><td data-n="15.5">15.5</td><td data-n="10.7">10.7%</td><td data-n="7.6">7.6%</td><td data-n="3000">$3,000</td></tr><tr><td>Isaiah Davis</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>RB</td><td>—</td><td data-n="3600">$3,600</td><td data-n="5400">$5,400</td><td data-n="6.5">6.5</td><td data-n="-4.8">-4.8</td><td data-n="1.6">1.6</td><td data-n="13.4">13.4</td><td data-n="0.1">0.1%</td><td data-n="0.1">0.1%</td><td data-n="4200">$4,200</td></tr><tr><td>Jets</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>DST</td><td>—</td><td data-n="3400">$3,400</td><td data-n="5100">$5,100</td><td data-n="5.5">5.5</td><td data-n="-0.3">-0.3</td><td data-n="-0.1">-0.1</td><td data-n="12.5">12.5</td><td data-n="3.0">3.0%</td><td data-n="4.1">4.1%</td><td data-n="2400">$2,400</td></tr><tr><td>Isaiah Williams</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>WR</td><td>—</td><td data-n="3000">$3,000</td><td data-n="4500">$4,500</td><td data-n="6.5">6.5</td><td data-n="-3.4">-3.4</td><td data-n="1.3">1.3</td><td data-n="13.8">13.8</td><td data-n="0.1">0.1%</td><td data-n="0.5">0.5%</td><td data-n="3500">$3,500</td></tr><tr><td>Cole Kmet</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>TE</td><td>—</td><td data-n="2800">$2,800</td><td data-n="4200">$4,200</td><td data-n="3.7">3.7</td><td data-n="-4.8">-4.8</td><td data-n="0.0">0.0</td><td data-n="9.6">9.6</td><td data-n="0.0">0.0%</td><td data-n="0.0">0.0%</td><td data-n="2800">$2,800</td></tr><tr><td>Jeremy Ruckert</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>TE</td><td>—</td><td data-n="2400">$2,400</td><td data-n="3600">$3,600</td><td data-n="4.3">4.3</td><td data-n="-3.7">-3.7</td><td data-n="0.4">0.4</td><td data-n="9.9">9.9</td><td data-n="0.1">0.1%</td><td data-n="0.2">0.2%</td><td data-n="2500">$2,500</td></tr><tr><td>Sterling Shepard</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>WR</td><td>—</td><td data-n="2000">$2,000</td><td data-n="3000">$3,000</td><td data-n="3.7">3.7</td><td data-n="-5.3">-5.3</td><td data-n="0.0">0.0</td><td data-n="9.4">9.4</td><td data-n="0.0">0.0%</td><td data-n="0.0">0.0%</td><td data-n="3000">$3,000</td></tr><tr><td>Mason Taylor</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>TE</td><td>OUT</td><td data-n="1600">$1,600</td><td data-n="2400">$2,400</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Jahdae Walker</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>WR</td><td>—</td><td data-n="1200">$1,200</td><td data-n="1800">$1,800</td><td data-n="0.6">0.6</td><td data-n="-8.9">-8.9</td><td data-n="0.0">0.0</td><td data-n="2.5">2.5</td><td data-n="0.0">0.0%</td><td data-n="0.0">0.0%</td><td data-n="3300">$3,300</td></tr><tr><td>Zavion Thomas</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>WR</td><td>—</td><td data-n="1000">$1,000</td><td data-n="1500">$1,500</td><td data-n="1.3">1.3</td><td data-n="-7.7">-7.7</td><td data-n="0.0">0.0</td><td data-n="4.6">4.6</td><td data-n="0.0">0.0%</td><td data-n="0.0">0.0%</td><td data-n="3000">$3,000</td></tr><tr><td>Malik McClain</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>WR</td><td>—</td><td data-n="800">$800</td><td data-n="1200">$1,200</td><td data-n="1.2">1.2</td><td data-n="-7.8">-7.8</td><td data-n="0.0">0.0</td><td data-n="4.3">4.3</td><td data-n="0.0">0.0%</td><td data-n="0.0">0.0%</td><td data-n="3000">$3,000</td></tr><tr><td>Sam Roush</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>TE</td><td>—</td><td data-n="600">$600</td><td data-n="900">$900</td><td data-n="1.3">1.3</td><td data-n="-6.7">-6.7</td><td data-n="0.0">0.0</td><td data-n="4.5">4.5</td><td data-n="0.0">0.0%</td><td data-n="0.0">0.0%</td><td data-n="2500">$2,500</td></tr><tr><td>Roschon Johnson</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>RB</td><td>—</td><td data-n="400">$400</td><td data-n="600">$600</td><td data-n="0.3">0.3</td><td data-n="-10.7">-10.7</td><td data-n="0.0">0.0</td><td data-n="1.1">1.1</td><td data-n="0.0">0.0%</td><td data-n="0.0">0.0%</td><td data-n="4000">$4,000</td></tr><tr><td>Jelani Woods</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>TE</td><td>—</td><td data-n="200">$200</td><td data-n="300">$300</td><td data-n="1.3">1.3</td><td data-n="-6.7">-6.7</td><td data-n="0.0">0.0</td><td data-n="4.4">4.4</td><td data-n="0.0">0.0%</td><td data-n="0.0">0.0%</td><td data-n="2500">$2,500</td></tr><tr><td>Andrew Beck</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>RB</td><td>—</td><td data-n="200">$200</td><td data-n="300">$300</td><td data-n="0.3">0.3</td><td data-n="-10.7">-10.7</td><td data-n="0.0">0.0</td><td data-n="1.0">1.0</td><td data-n="0.0">0.0%</td><td data-n="0.0">0.0%</td><td data-n="4000">$4,000</td></tr><tr><td>Jamaal Pritchett</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>WR</td><td>—</td><td data-n="200">$200</td><td data-n="300">$300</td><td data-n="0.3">0.3</td><td data-n="-8.7">-8.7</td><td data-n="0.0">0.0</td><td data-n="1.2">1.2</td><td data-n="0.0">0.0%</td><td data-n="0.0">0.0%</td><td data-n="3000">$3,000</td></tr><tr><td>Al-Jay Henderson</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>RB</td><td>—</td><td data-n="200">$200</td><td data-n="300">$300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Arian Smith</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>WR</td><td>IR</td><td data-n="200">$200</td><td data-n="300">$300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Brittain Brown</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>RB</td><td>IR</td><td data-n="200">$200</td><td data-n="300">$300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Chip Trayanum</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>RB</td><td>IR</td><td data-n="200">$200</td><td data-n="300">$300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Cody Hardy</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>TE</td><td>—</td><td data-n="200">$200</td><td data-n="300">$300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Hayden Large</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>TE</td><td>IR</td><td data-n="200">$200</td><td data-n="300">$300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>JP Richardson</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>WR</td><td>—</td><td data-n="200">$200</td><td data-n="300">$300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Kaden Davis</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>WR</td><td>—</td><td data-n="200">$200</td><td data-n="300">$300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Kene Nwangwu</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>RB</td><td>—</td><td data-n="200">$200</td><td data-n="300">$300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Nikola Kalinic</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>TE</td><td>IR</td><td data-n="200">$200</td><td data-n="300">$300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Omar Cooper Jr.</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>WR</td><td>IR</td><td data-n="200">$200</td><td data-n="300">$300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Qadir Ismail</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>TE</td><td>—</td><td data-n="200">$200</td><td data-n="300">$300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Salvon Ahmed</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>RB</td><td>—</td><td data-n="200">$200</td><td data-n="300">$300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Stephen Carlson</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>TE</td><td>—</td><td data-n="200">$200</td><td data-n="300">$300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Tim Patrick</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>WR</td><td>IR</td><td data-n="200">$200</td><td data-n="300">$300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Tyler Johnson</td><td><span class="team-badge" style="--team:#125740;--team-ink:#FFFFFF">NYJ</span> NYJ</td><td>WR</td><td>—</td><td data-n="200">$200</td><td data-n="300">$300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Zavier Scott</td><td><span class="team-badge" style="--team:#0B162A;--team-ink:#C83803">CHI</span> CHI</td><td>RB</td><td>—</td><td data-n="200">$200</td><td data-n="300">$300</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+</tbody>
+</table>
+</main>
+<script>
+document.getElementById('playerSearchForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var q=(document.getElementById('playerSearch').value||'').toLowerCase();
+  var first=null;
+  document.querySelectorAll('tbody tr').forEach(function(tr){
+    var hit=!q || tr.textContent.toLowerCase().indexOf(q)>=0;
+    tr.style.display=hit?'':'none';
+    if(hit && !first) first=tr;
+  });
+  if(q && first) first.scrollIntoView({block:'center'});
+});
+document.getElementById('playerSearch').addEventListener('input', function(){
+  document.getElementById('playerSearchForm').dispatchEvent(new Event('submit'));
+});
+</script>
+<script>
+(function(){
+  function val(td){
+    if(!td) return {n:false, v:null, s:''};
+    var dn=td.getAttribute('data-n');
+    if(dn!==null && dn!==''){
+      var n=parseFloat(dn);
+      if(!isNaN(n)) return {n:true, v:n, s:dn};
+    }
+    if(td.querySelector){
+      if(td.querySelector('.tick.on')) return {n:true, v:1, s:'1'};
+      if(td.querySelector('.tick')) return {n:true, v:0, s:'0'};
+    }
+    var t=(td.textContent||'').trim();
+    if(!t || t==='—' || t==='-') return {n:false, v:null, s:''};
+    var pct=t.match(/(-?\d+(?:\.\d+)?)%/);
+    if(pct) return {n:true, v:parseFloat(pct[1]), s:t};
+    var rec=t.match(/^(-?\d+(?:\.\d+)?)\s*\/\s*(-?\d+(?:\.\d+)?)/);
+    if(rec){
+      var den=parseFloat(rec[2]);
+      if(den) return {n:true, v:parseFloat(rec[1])/den, s:t};
+    }
+    var raw=t.replace(/[$,×x]/g,'').replace(/,/g,'');
+    if(/^-?\d+(\.\d+)?$/.test(raw)) return {n:true, v:parseFloat(raw), s:t};
+    var d=Date.parse(t);
+    if(!isNaN(d) && /[A-Za-z]{3,}/.test(t) && /\d{4}/.test(t)) return {n:true, v:d, s:t};
+    return {n:false, v:t.toLowerCase(), s:t};
+  }
+  function sortTable(table, col, dir){
+    var tb=table && table.tBodies[0];
+    if(!tb) return;
+    Array.prototype.forEach.call(table.querySelectorAll('th'), function(h){
+      h.removeAttribute('data-dir');
+    });
+    var mark=table.querySelector('th[data-col="'+col+'"]');
+    if(!mark){
+      var row=table.querySelector('thead tr');
+      if(row && row.children[col]) mark=row.children[col];
+    }
+    if(mark) mark.setAttribute('data-dir', dir);
+    var rows=Array.prototype.slice.call(tb.rows);
+    rows.sort(function(a,b){
+      var A=val(a.cells[col]);
+      var B=val(b.cells[col]);
+      if(A.v===null && B.v===null) return 0;
+      if(A.v===null) return 1;
+      if(B.v===null) return -1;
+      var cmp=0;
+      if(A.n && B.n) cmp=A.v-B.v;
+      else cmp=String(A.v).localeCompare(String(B.v));
+      return dir==='asc' ? cmp : -cmp;
+    });
+    rows.forEach(function(r){ tb.appendChild(r); });
+  }
+  document.addEventListener('click', function(e){
+    var th=e.target.closest('table.sortable th');
+    if(!th || th.closest('tfoot')) return;
+    var table=th.closest('table');
+    if(!table) return;
+    var raw=th.getAttribute('data-col');
+    var col=raw===null ? Array.prototype.indexOf.call(th.parentNode.children, th) : parseInt(raw,10);
+    if(isNaN(col) || col<0) return;
+    var dir=th.getAttribute('data-dir')==='asc' ? 'desc' : 'asc';
+    sortTable(table, col, dir);
+  });
+  document.querySelectorAll('table.sortable[data-default-sort]').forEach(function(table){
+    var want=(table.getAttribute('data-default-sort')||'').toLowerCase();
+    var ths=table.querySelectorAll('thead th');
+    var idx=-1;
+    for(var i=0;i<ths.length;i++){
+      var t=(ths[i].textContent||'').trim().toLowerCase();
+      if(t===want || t.indexOf(want)>=0 || want.indexOf(t)>=0){
+        var raw=ths[i].getAttribute('data-col');
+        idx=raw===null ? i : parseInt(raw,10);
+        break;
+      }
+    }
+    if(idx>=0) sortTable(table, idx, 'desc');
+  });
+})();
+</script>
+</body>
+</html>

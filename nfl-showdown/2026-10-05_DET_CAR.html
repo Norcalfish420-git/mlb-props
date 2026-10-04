@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DET @ CAR</title>
+<style>
+:root{--bg:#121820;--fg:#f3efe6;--muted:#c4c0b6;--line:#3d4d5c;--accent:#d97706;}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Georgia,"Iowan Old Style",serif;}
+main{max-width:76rem;margin:0 auto;padding:1.4rem 1.2rem 2.5rem;}
+h1{font-size:2rem;margin:0 0 .2rem;letter-spacing:-.02em;}
+.when{color:var(--muted);margin:0 0 .9rem;}
+form{margin:0 0 .8rem;}
+input[type=search]{width:min(22rem,100%);box-sizing:border-box;border-radius:999px;border:1px solid var(--line);background:#1a2430;color:var(--fg);padding:.45rem .75rem;font:inherit;}
+table{width:100%;border-collapse:collapse;font-size:.92rem;}
+th,td{text-align:left;padding:.4rem .45rem;border-bottom:1px solid var(--line);white-space:nowrap;}
+th{color:var(--accent);font-size:.78rem;letter-spacing:.03em;}
+.team-badge{display:inline-flex;align-items:center;justify-content:center;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--team);color:var(--team-ink);font:700 .58rem/1 system-ui,sans-serif;vertical-align:middle;margin-right:.3rem;}
+table.sortable th{cursor:pointer;user-select:none;}table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
+</style>
+</head>
+<body>
+<main>
+<h1>DET @ CAR</h1>
+<p class="when">October 5, 2026</p>
+<form id="playerSearchForm" action="#" role="search">
+<input id="playerSearch" type="search" placeholder="Search players" autocomplete="off"/>
+</form>
+<table class="sortable">
+<thead><tr><th data-col="0">Player</th><th data-col="1">Team</th><th data-col="2">Pos</th><th data-col="3">Status</th><th data-col="4">FLEX</th><th data-col="5">CPT</th><th data-col="6">ETR Proj</th><th data-col="7">ETR Value</th><th data-col="8">ETR Floor</th><th data-col="9">ETR Ceiling</th><th data-col="10">Small</th><th data-col="11">Large</th><th data-col="12">ETR Salary</th></tr></thead>
+<tbody>
+<tr><td>AJ Dillon</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>RB</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Ahmani Marshall</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>RB</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Amon-Ra St. Brown</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>WR</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Anthony Tyus III</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>RB</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Brock Wright</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>TE</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Brycen Tremayne</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>WR</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Casey Washington</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>WR</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Chris Brazzell II</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>WR</td><td>IR</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Chuba Hubbard</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>RB</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Darren Waller</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>TE</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>David Moore</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>WR</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Dominic Lovett</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>WR</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Feleipe Franks</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>TE</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Isaac TeSlaa</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>WR</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Isiah Pacheco</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>RB</td><td>IR</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Ja&#x27;Tavion Sanders</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>TE</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Ja&#x27;seem Reed</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>WR</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Jabari Small</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>RB</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Jackson Meeks</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>TE</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Jacob Saylors</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>RB</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Jahmyr Gibbs</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>RB</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Jalen Coker</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>WR</td><td>Q</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Jameson Williams</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>WR</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>John Metchie III</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>WR</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Jonathon Brooks</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>RB</td><td>IR</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Kendrick Law</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>WR</td><td>IR</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Lawrence Keys III</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>WR</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Lucky Jackson</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>WR</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Miles Kitselman</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>TE</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Mitchell Evans</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>TE</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Sam LaPorta</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>TE</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Sione Vaki</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>RB</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Tay Martin</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>WR</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Tetairoa McMillan</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>WR</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Thomas Gordon</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>TE</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Tom Kennedy</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>WR</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Tommy Tremble</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>TE</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Trevor Etienne</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>RB</td><td>IR</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Tyler Conklin</td><td><span class="team-badge" style="--team:#0076B6;--team-ink:#B0B7BC">DET</span> DET</td><td>TE</td><td>—</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Xavier Legette</td><td><span class="team-badge" style="--team:#0085CA;--team-ink:#101820">CAR</span> CAR</td><td>WR</td><td>IR</td><td data-n="0">$0</td><td data-n="0">$0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+</tbody>
+</table>
+</main>
+<script>
+document.getElementById('playerSearchForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  var q=(document.getElementById('playerSearch').value||'').toLowerCase();
+  var first=null;
+  document.querySelectorAll('tbody tr').forEach(function(tr){
+    var hit=!q || tr.textContent.toLowerCase().indexOf(q)>=0;
+    tr.style.display=hit?'':'none';
+    if(hit && !first) first=tr;
+  });
+  if(q && first) first.scrollIntoView({block:'center'});
+});
+document.getElementById('playerSearch').addEventListener('input', function(){
+  document.getElementById('playerSearchForm').dispatchEvent(new Event('submit'));
+});
+</script>
+<script>
+(function(){
+  function val(td){
+    if(!td) return {n:false, v:null, s:''};
+    var dn=td.getAttribute('data-n');
+    if(dn!==null && dn!==''){
+      var n=parseFloat(dn);
+      if(!isNaN(n)) return {n:true, v:n, s:dn};
+    }
+    if(td.querySelector){
+      if(td.querySelector('.tick.on')) return {n:true, v:1, s:'1'};
+      if(td.querySelector('.tick')) return {n:true, v:0, s:'0'};
+    }
+    var t=(td.textContent||'').trim();
+    if(!t || t==='—' || t==='-') return {n:false, v:null, s:''};
+    var pct=t.match(/(-?\d+(?:\.\d+)?)%/);
+    if(pct) return {n:true, v:parseFloat(pct[1]), s:t};
+    var rec=t.match(/^(-?\d+(?:\.\d+)?)\s*\/\s*(-?\d+(?:\.\d+)?)/);
+    if(rec){
+      var den=parseFloat(rec[2]);
+      if(den) return {n:true, v:parseFloat(rec[1])/den, s:t};
+    }
+    var raw=t.replace(/[$,×x]/g,'').replace(/,/g,'');
+    if(/^-?\d+(\.\d+)?$/.test(raw)) return {n:true, v:parseFloat(raw), s:t};
+    var d=Date.parse(t);
+    if(!isNaN(d) && /[A-Za-z]{3,}/.test(t) && /\d{4}/.test(t)) return {n:true, v:d, s:t};
+    return {n:false, v:t.toLowerCase(), s:t};
+  }
+  function sortTable(table, col, dir){
+    var tb=table && table.tBodies[0];
+    if(!tb) return;
+    Array.prototype.forEach.call(table.querySelectorAll('th'), function(h){
+      h.removeAttribute('data-dir');
+    });
+    var mark=table.querySelector('th[data-col="'+col+'"]');
+    if(!mark){
+      var row=table.querySelector('thead tr');
+      if(row && row.children[col]) mark=row.children[col];
+    }
+    if(mark) mark.setAttribute('data-dir', dir);
+    var rows=Array.prototype.slice.call(tb.rows);
+    rows.sort(function(a,b){
+      var A=val(a.cells[col]);
+      var B=val(b.cells[col]);
+      if(A.v===null && B.v===null) return 0;
+      if(A.v===null) return 1;
+      if(B.v===null) return -1;
+      var cmp=0;
+      if(A.n && B.n) cmp=A.v-B.v;
+      else cmp=String(A.v).localeCompare(String(B.v));
+      return dir==='asc' ? cmp : -cmp;
+    });
+    rows.forEach(function(r){ tb.appendChild(r); });
+  }
+  document.addEventListener('click', function(e){
+    var th=e.target.closest('table.sortable th');
+    if(!th || th.closest('tfoot')) return;
+    var table=th.closest('table');
+    if(!table) return;
+    var raw=th.getAttribute('data-col');
+    var col=raw===null ? Array.prototype.indexOf.call(th.parentNode.children, th) : parseInt(raw,10);
+    if(isNaN(col) || col<0) return;
+    var dir=th.getAttribute('data-dir')==='asc' ? 'desc' : 'asc';
+    sortTable(table, col, dir);
+  });
+  document.querySelectorAll('table.sortable[data-default-sort]').forEach(function(table){
+    var want=(table.getAttribute('data-default-sort')||'').toLowerCase();
+    var ths=table.querySelectorAll('thead th');
+    var idx=-1;
+    for(var i=0;i<ths.length;i++){
+      var t=(ths[i].textContent||'').trim().toLowerCase();
+      if(t===want || t.indexOf(want)>=0 || want.indexOf(t)>=0){
+        var raw=ths[i].getAttribute('data-col');
+        idx=raw===null ? i : parseInt(raw,10);
+        break;
+      }
+    }
+    if(idx>=0) sortTable(table, idx, 'desc');
+  });
+})();
+</script>
+</body>
+</html>
