@@ -97,7 +97,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
   .rail,.noprint{display:none !important;}
   main{max-width:none;padding:0;}
   .panel,.appendix{display:block !important;page-break-after:always;}
-  .game-report,.etr-board,.player-book,.preview-board{display:block !important;}
+  .game-report,.etr-board,.player-book,.preview-board,.game-report-link{display:block !important;}
   .week-panel,.week-panel[hidden]{display:block !important;}
   .week-pills,.week-pill{display:none !important;}
   .appendix{page-break-after:auto;}
@@ -116,18 +116,23 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 #v-etr:checked ~ .shell .rail label[for=v-etr]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-preview:checked ~ .shell .rail label[for=v-preview]{background:var(--accent);color:#fff;border-color:var(--accent);}
-.player-book,.etr-board,.preview-board{display:none;}
+#v-game:checked ~ .shell .rail label[for=v-game]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.player-book,.etr-board,.preview-board,.game-report-link{display:none;}
 #v-book:checked ~ .shell main,#v-etr:checked ~ .shell main{max-width:none;}
-#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .etr-board,#v-book:checked ~ .shell main .preview-board{display:none;}
+#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .etr-board,#v-book:checked ~ .shell main .preview-board,#v-book:checked ~ .shell main .game-report-link{display:none;}
 #v-book:checked ~ .shell main .player-book{display:block;}
-#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .player-book,#v-etr:checked ~ .shell main .preview-board{display:none;}
+#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .player-book,#v-etr:checked ~ .shell main .preview-board,#v-etr:checked ~ .shell main .game-report-link{display:none;}
 #v-etr:checked ~ .shell main .etr-board{display:block;}
 #v-preview:checked ~ .shell main{max-width:none;}
-#v-preview:checked ~ .shell main .game-report,#v-preview:checked ~ .shell main .etr-board,#v-preview:checked ~ .shell main .player-book{display:none;}
+#v-preview:checked ~ .shell main .game-report,#v-preview:checked ~ .shell main .etr-board,#v-preview:checked ~ .shell main .player-book,#v-preview:checked ~ .shell main .game-report-link{display:none;}
 #v-preview:checked ~ .shell main .preview-board{display:block;}
+#v-game:checked ~ .shell main{max-width:none;}
+#v-game:checked ~ .shell main .game-report,#v-game:checked ~ .shell main .etr-board,#v-game:checked ~ .shell main .player-book,#v-game:checked ~ .shell main .preview-board{display:none;}
+#v-game:checked ~ .shell main .game-report-link{display:block;}
 </style>
 </head><body>
 <input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-game"/>
 <input class="tab" type="radio" name="v" id="v-etr"/>
 <input class="tab" type="radio" name="v" id="v-book"/>
 <div class="shell">
@@ -135,7 +140,8 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <p class="brand">CFB SHOWDOWN<br/>2026-10-03<br/>BYU @ TCU</p>
 <a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
 <div class="view-row">
-<label class="pill" for="v-report">Report</label>
+<label class="pill" for="v-report">Depth chart</label>
+<label class="pill" for="v-game">Game report</label>
 <label class="pill" for="v-etr">ETR Value</label>
 <label class="pill" for="v-book">Player book</label>
 </div>
@@ -148,69 +154,6 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <article class="panel">
 <div class="game-report">
 <h2>BYU @ TCU</h2>
-<p class="line-blast">BYU <b>-6.5</b>. Total <b>47.5</b>.</p>
-<h3>Game Script</h3>
-<p><b>This slate is four out of five stars.</b></p>
-<p><b>How they want to play</b></p>
-<ul>
-<li><b>BYU:</b> In 3 games BYU has thrown 65 times (22 a game) for 219 yards a game and run it 125 times (42 a game) for 273 yards a game.</li>
-<li><b>TCU:</b> Says Jaden Craig has not put together a clean game and LJ Martin plus Bear Bachmeier are the BYU run game.</li>
-</ul>
-<p><b>Where the defense is weaker</b></p>
-<ul>
-<li><b>BYU:</b> In 3 games opponents are averaging 272 passing yards and 108 rushing yards a game against BYU. The yards have come through the air. Those games were Utah Tech, Arizona, and Colorado State.</li>
-<li><b>TCU:</b> In 6 games opponents are averaging 205 passing yards and 85 rushing yards a game against TCU. The yards have come through the air. Those games were North Carolina, Grambling, Grambling, Arkansas State, Arkansas State, and UCF.</li>
-</ul>
-<p><b>What the scoreboard forces:</b> Predicts BYU 27, TCU 17.</p>
-<p><b>Who that points at:</b> Keep these names on the card — they are the jobs we already gathered: Jaden Craig.</p>
-<p><b>What the writers are saying:</b> 7 p.m. ET on ESPN.</p>
-<h3>WHO MATTERS</h3>
-<h4>BYU</h4>
-<p><b>Quarterbacks</b></p>
-<ul>
-<li><b>Bear Bachmeier</b> — runs and throws. Last week vs CSU he threw 16 times for 227 and had 2 carries for -3. That was a quiet rushing night. He usually runs more than that.</li>
-<li><b>Treyson Bourguet</b> — Sit him — a backup priced like a starter is still the backup. Last week vs CSU he threw 1 times for 0.</li>
-</ul>
-<p><b>Running backs</b></p>
-<ul>
-<li><b>LJ Martin</b> — Starter.</li>
-</ul>
-<p><b>Receiving room</b></p>
-<ul>
-<li><b>Legend Glasker</b> — Starter.</li>
-<li><b>Walker Lyons</b> — Starter.</li>
-<li><b>Kyler Kasper</b> — Starter.</li>
-<li><b>Jojo Phillips</b> — Starter.</li>
-<li><b>Reggie Frischknecht</b> — Backup.</li>
-<li><b>Roger Saleapaga II</b> — Backup.</li>
-<li><b>Tiger Bachmeier</b> — Backup.</li>
-<li><b>Tei Nacua</b> — Backup.</li>
-</ul>
-<h4>TCU</h4>
-<p><b>Quarterbacks</b></p>
-<ul>
-<li><b>Adam Schobel</b> — Sit him — a backup priced like a starter is still the backup. Last week vs Grambling he threw 1 times for 0.</li>
-</ul>
-<p><b>Running backs</b></p>
-<ul>
-<li><b>Jeremy Payne</b> — Lead back (Denman #2). Script favorite vs UNC without Dwyer. Starter.</li>
-<li><b>Jon Denman</b> — Backup.</li>
-</ul>
-<p><b>Receiving room</b></p>
-<ul>
-<li><b>Jeremy Scott</b> — Starter.</li>
-<li><b>Ed Small</b> — Starter.</li>
-<li><b>Ka&#x27;Morreun Pimpton</b> — Starter.</li>
-<li><b>Jacobe Hayes</b> — Starter.</li>
-<li><b>Kari Ashley</b> — Backup.</li>
-<li><b>Dane Jones</b> — Backup.</li>
-<li><b>James Scott</b> — Backup.</li>
-<li><b>Terry Shelton</b> — Backup.</li>
-</ul>
-<ul>
-<li><b>Sit:</b> Jordan Dwyer — Out. Sit him.</li>
-<li><b>Sit:</b> Dozie Ezukanma — Out. Sit him.</li>
-</ul>
 <h3>DEPTH CHART</h3>
 <p>Offense skill. A missing name is —.</p>
 <h4 class="team-break">BYU</h4>
@@ -252,7 +195,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tbody>
 <tr><td>Jaden Craig</td><td>TCU</td><td>Jaden Craig is making a first start.</td></tr>
 </tbody></table>
-<h3>ETR BUILD 1</h3>
+<h3>Example ETR Build 1</h3>
 <table class="sortable">
 <thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
@@ -264,7 +207,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tr><td>FLEX</td><td>Ka&#x27;Morreun Pimpton</td><td>TCU</td><td>TE</td><td>$3,000</td><td>1.36</td><td>—</td></tr>
 </tbody></table>
 <p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
-<h3>ETR BUILD 2</h3>
+<h3>Example ETR Build 2</h3>
 <table class="sortable">
 <thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
@@ -276,7 +219,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tr><td>FLEX</td><td>Walker Lyons</td><td>BYU</td><td>TE</td><td>$3,200</td><td>2.20</td><td>receptions 2.5</td></tr>
 </tbody></table>
 <p class="left">Leftover: $300  (spent $49,700 / $50,000)</p>
-<h3>ETR BUILD 3</h3>
+<h3>Example ETR Build 3</h3>
 <table class="sortable">
 <thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
@@ -289,6 +232,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 </tbody></table>
 <p class="left">Leftover: $400  (spent $49,600 / $50,000)</p>
 </div>
+<div class="game-report-link"><h2>Game report</h2><p><a href="https://www.actionnetwork.com/ncaaf/ncaaf-picks-predictions-7-college-football-night-spots-week-5-saturday-october-3">NCAAF Picks, Predictions: Stuckey&#x27;s 7 College Football Night Spots for Week 5</a></p><p>Action Network</p></div>
 
 <div class="etr-board"><h3>ETR VALUE</h3>
 <p>Every name on ETR&#x27;s sheet for this game, both teams in one table. Click a column to sort. A blank cell is —. <b>ETR salary</b> and <b>Owned</b> are their main-slate numbers. <b>Slate</b> is their sheet label. <b>Points per $1k</b> is their projected points versus our DraftKings salary for this game. Negative sheet values stay on the table. Both teams sit in one list so you can sort them together. Every Showdown skill player stays on the table (— if ETR did not list them). Not a Top 20.</p>
@@ -568,6 +512,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
       var sel = id==='v-report' ? '.game-report'
               : id==='v-etr' ? '.etr-board'
               : id==='v-preview' ? '.preview-board'
+              : id==='v-game' ? '.game-report-link'
               : id==='v-book' ? '.player-book' : '';
       if(!sel) return;
       lab.classList.toggle('search-miss', !!(q && !panelHasHit(sel)));

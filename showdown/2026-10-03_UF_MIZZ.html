@@ -97,7 +97,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
   .rail,.noprint{display:none !important;}
   main{max-width:none;padding:0;}
   .panel,.appendix{display:block !important;page-break-after:always;}
-  .game-report,.etr-board,.player-book,.preview-board{display:block !important;}
+  .game-report,.etr-board,.player-book,.preview-board,.game-report-link{display:block !important;}
   .week-panel,.week-panel[hidden]{display:block !important;}
   .week-pills,.week-pill{display:none !important;}
   .appendix{page-break-after:auto;}
@@ -116,18 +116,23 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 #v-etr:checked ~ .shell .rail label[for=v-etr]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-preview:checked ~ .shell .rail label[for=v-preview]{background:var(--accent);color:#fff;border-color:var(--accent);}
-.player-book,.etr-board,.preview-board{display:none;}
+#v-game:checked ~ .shell .rail label[for=v-game]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.player-book,.etr-board,.preview-board,.game-report-link{display:none;}
 #v-book:checked ~ .shell main,#v-etr:checked ~ .shell main{max-width:none;}
-#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .etr-board,#v-book:checked ~ .shell main .preview-board{display:none;}
+#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .etr-board,#v-book:checked ~ .shell main .preview-board,#v-book:checked ~ .shell main .game-report-link{display:none;}
 #v-book:checked ~ .shell main .player-book{display:block;}
-#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .player-book,#v-etr:checked ~ .shell main .preview-board{display:none;}
+#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .player-book,#v-etr:checked ~ .shell main .preview-board,#v-etr:checked ~ .shell main .game-report-link{display:none;}
 #v-etr:checked ~ .shell main .etr-board{display:block;}
 #v-preview:checked ~ .shell main{max-width:none;}
-#v-preview:checked ~ .shell main .game-report,#v-preview:checked ~ .shell main .etr-board,#v-preview:checked ~ .shell main .player-book{display:none;}
+#v-preview:checked ~ .shell main .game-report,#v-preview:checked ~ .shell main .etr-board,#v-preview:checked ~ .shell main .player-book,#v-preview:checked ~ .shell main .game-report-link{display:none;}
 #v-preview:checked ~ .shell main .preview-board{display:block;}
+#v-game:checked ~ .shell main{max-width:none;}
+#v-game:checked ~ .shell main .game-report,#v-game:checked ~ .shell main .etr-board,#v-game:checked ~ .shell main .player-book,#v-game:checked ~ .shell main .preview-board{display:none;}
+#v-game:checked ~ .shell main .game-report-link{display:block;}
 </style>
 </head><body>
 <input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-game"/>
 <input class="tab" type="radio" name="v" id="v-etr"/>
 <input class="tab" type="radio" name="v" id="v-book"/>
 <div class="shell">
@@ -135,7 +140,8 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <p class="brand">CFB SHOWDOWN<br/>2026-10-03<br/>Florida @ Missouri</p>
 <a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
 <div class="view-row">
-<label class="pill" for="v-report">Report</label>
+<label class="pill" for="v-report">Depth chart</label>
+<label class="pill" for="v-game">Game report</label>
 <label class="pill" for="v-etr">ETR Value</label>
 <label class="pill" for="v-book">Player book</label>
 </div>
@@ -148,67 +154,6 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <article class="panel">
 <div class="game-report">
 <h2>Florida @ Missouri</h2>
-<h3>Game Script</h3>
-<p><b>This slate is two out of five stars.</b></p>
-<p><b>How they want to play</b></p>
-<ul>
-<li>Jon Sumrall came from Tulane.</li>
-<li><b>Missouri:</b> In 5 games Missouri has thrown 275 times (55 a game) for 476 yards a game and run it 340 times (68 a game) for 288 yards a game.</li>
-</ul>
-<p><b>Where the defense is weaker</b></p>
-<ul>
-<li><b>Florida:</b> In 4 games opponents are averaging 439 passing yards and 214 rushing yards a game against Florida. The yards have come through the air. Those games were Florida, Campbell Fighting, Auburn, and Ole Miss.</li>
-<li><b>Missouri:</b> In 5 games opponents are averaging 255 passing yards and 94 rushing yards a game against Missouri. The yards have come through the air. Those games were Arkansas-Pine Bluff, Kansas, Kansas, Troy, and Mississippi State.</li>
-</ul>
-<p><b>What the writers are saying:</b> 3:30 p.m. ET at Faurot Field. Plays Missouri +5.5. Florida 4-0 under Jon Sumrall.</p>
-<h3>WHO MATTERS</h3>
-<h4>Florida</h4>
-<p><b>Quarterbacks</b></p>
-<ul>
-<li><b>Tramell Jones Jr.</b> — Sit him — a backup priced like a starter is still the backup. Last week vs Campbell he threw 11 times for 58.</li>
-</ul>
-<p><b>Running backs</b></p>
-<ul>
-<li><b>Jadan Baugh</b> — Starter.</li>
-<li><b>Evan Pryor</b> — Backup.</li>
-</ul>
-<p><b>Receiving room</b></p>
-<ul>
-<li><b>Eric Singleton Jr.</b> — Starter.</li>
-<li><b>Amir Jackson</b> — Starter.</li>
-<li><b>Vernell Brown III</b> — Starter.</li>
-<li><b>Dallas Wilson</b> — Starter.</li>
-<li><b>Bailey Stockton</b> — Backup.</li>
-<li><b>TJ Abrams</b> — Backup.</li>
-<li><b>Micah Mays Jr.</b> — Backup.</li>
-<li><b>Lacota Dippre</b> — Backup.</li>
-</ul>
-<h4>Missouri</h4>
-<p><b>Quarterbacks</b></p>
-<ul>
-<li><b>Austin Simmons</b> — UAPB: 17 of 19, 252, 4 scores, 0 INT in less than a half. TDs to Olugbode (2), Terry, Lee. Drinkwitz: throw-first emphasis after slow run start. Last week vs Mississippi State he threw 39 times for 295, 3 passing scores and had 3 carries for 0.</li>
-<li><b>Matt Zollers</b> — Sit him — a backup priced like a starter is still the backup. Last week vs Kansas he threw 1 times for 0.</li>
-</ul>
-<p><b>Running backs</b></p>
-<ul>
-<li><b>Jamal Roberts</b> — UAPB: 13 catches for 47 and 1 scores, 31 snaps. Slow ground start (22 yds first 11 team rushes). 143-1 vs KU last year. Starter.</li>
-<li><b>Xai&#x27;Shaun Edwards</b> — Backup.</li>
-</ul>
-<p><b>Receiving room</b></p>
-<ul>
-<li><b>Cayden Lee</b> — Starter.</li>
-<li><b>Donovan Olugbode</b> — Missouri&#x27;s school recap/8 catches for 116 and 2 scores vs UAPB first half only, all 8 targets. Not 7-107. One fumble. Starter.</li>
-<li><b>Brett Norfleet</b> — Starter.</li>
-<li><b>Naeshaun Montgomery</b> — Starter.</li>
-<li><b>Shaun Terry II</b> — Backup.</li>
-<li><b>Caleb Goodie Sr.</b> — Backup.</li>
-<li><b>DaMarion Fowlkes</b> — Backup.</li>
-<li><b>Jordon Harris</b> — Backup.</li>
-</ul>
-<ul>
-<li><b>Sit:</b> Ahmad Hardy — Out. Sit him.</li>
-<li><b>Sit:</b> Malae Fonoti — Out. Sit him.</li>
-</ul>
 <h3>DEPTH CHART</h3>
 <p>Offense skill. A missing name is —.</p>
 <h4 class="team-break">Florida</h4>
@@ -253,7 +198,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tbody>
 <tr><td>Vernell Brown III</td><td>Florida</td><td>He is the receiver. He is doubtful. Bailey Stockton is next if he sits.</td></tr>
 </tbody></table>
-<h3>ETR BUILD 1</h3>
+<h3>Example ETR Build 1</h3>
 <table class="sortable">
 <thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
@@ -265,7 +210,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tr><td>FLEX</td><td>TJ Abrams</td><td>Florida</td><td>WR</td><td>$1,400</td><td>2.21</td><td>—</td></tr>
 </tbody></table>
 <p class="left">Leftover: $300  (spent $49,700 / $50,000)</p>
-<h3>ETR BUILD 2</h3>
+<h3>Example ETR Build 2</h3>
 <table class="sortable">
 <thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
@@ -277,7 +222,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tr><td>FLEX</td><td>Bailey Stockton</td><td>Florida</td><td>WR</td><td>$3,400</td><td>2.60</td><td>—</td></tr>
 </tbody></table>
 <p class="left">Leftover: $600  (spent $49,400 / $50,000)</p>
-<h3>ETR BUILD 3</h3>
+<h3>Example ETR Build 3</h3>
 <table class="sortable">
 <thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
@@ -290,6 +235,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 </tbody></table>
 <p class="left">Leftover: $0  (spent $50,000 / $50,000)</p>
 </div>
+<div class="game-report-link"><h2>Game report</h2><p><a href="https://www.actionnetwork.com/ncaaf/college-football-predictions-picks-expert-bets-stuckey-missouri-vs-florida-clemson-vs-miami-more-saturday-oct-3">College Football Predictions, Picks: Stuckey&#x27;s Expert Bets for Missouri vs Florida, Clemson vs Miami, More</a></p><p>Action Network</p></div>
 
 <div class="etr-board"><h3>ETR VALUE</h3>
 <p>Every name on ETR&#x27;s sheet for this game, both teams in one table. Click a column to sort. A blank cell is —. <b>ETR salary</b> and <b>Owned</b> are their main-slate numbers. <b>Slate</b> is their sheet label. <b>Points per $1k</b> is their projected points versus our DraftKings salary for this game. Negative sheet values stay on the table. Both teams sit in one list so you can sort them together. Every Showdown skill player stays on the table (— if ETR did not list them). Not a Top 20.</p>
@@ -566,6 +512,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
       var sel = id==='v-report' ? '.game-report'
               : id==='v-etr' ? '.etr-board'
               : id==='v-preview' ? '.preview-board'
+              : id==='v-game' ? '.game-report-link'
               : id==='v-book' ? '.player-book' : '';
       if(!sel) return;
       lab.classList.toggle('search-miss', !!(q && !panelHasHit(sel)));

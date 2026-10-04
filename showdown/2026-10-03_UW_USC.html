@@ -97,7 +97,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
   .rail,.noprint{display:none !important;}
   main{max-width:none;padding:0;}
   .panel,.appendix{display:block !important;page-break-after:always;}
-  .game-report,.etr-board,.player-book,.preview-board{display:block !important;}
+  .game-report,.etr-board,.player-book,.preview-board,.game-report-link{display:block !important;}
   .week-panel,.week-panel[hidden]{display:block !important;}
   .week-pills,.week-pill{display:none !important;}
   .appendix{page-break-after:auto;}
@@ -116,18 +116,23 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 #v-etr:checked ~ .shell .rail label[for=v-etr]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-preview:checked ~ .shell .rail label[for=v-preview]{background:var(--accent);color:#fff;border-color:var(--accent);}
-.player-book,.etr-board,.preview-board{display:none;}
+#v-game:checked ~ .shell .rail label[for=v-game]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.player-book,.etr-board,.preview-board,.game-report-link{display:none;}
 #v-book:checked ~ .shell main,#v-etr:checked ~ .shell main{max-width:none;}
-#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .etr-board,#v-book:checked ~ .shell main .preview-board{display:none;}
+#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .etr-board,#v-book:checked ~ .shell main .preview-board,#v-book:checked ~ .shell main .game-report-link{display:none;}
 #v-book:checked ~ .shell main .player-book{display:block;}
-#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .player-book,#v-etr:checked ~ .shell main .preview-board{display:none;}
+#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .player-book,#v-etr:checked ~ .shell main .preview-board,#v-etr:checked ~ .shell main .game-report-link{display:none;}
 #v-etr:checked ~ .shell main .etr-board{display:block;}
 #v-preview:checked ~ .shell main{max-width:none;}
-#v-preview:checked ~ .shell main .game-report,#v-preview:checked ~ .shell main .etr-board,#v-preview:checked ~ .shell main .player-book{display:none;}
+#v-preview:checked ~ .shell main .game-report,#v-preview:checked ~ .shell main .etr-board,#v-preview:checked ~ .shell main .player-book,#v-preview:checked ~ .shell main .game-report-link{display:none;}
 #v-preview:checked ~ .shell main .preview-board{display:block;}
+#v-game:checked ~ .shell main{max-width:none;}
+#v-game:checked ~ .shell main .game-report,#v-game:checked ~ .shell main .etr-board,#v-game:checked ~ .shell main .player-book,#v-game:checked ~ .shell main .preview-board{display:none;}
+#v-game:checked ~ .shell main .game-report-link{display:block;}
 </style>
 </head><body>
 <input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-game"/>
 <input class="tab" type="radio" name="v" id="v-etr"/>
 <input class="tab" type="radio" name="v" id="v-book"/>
 <div class="shell">
@@ -135,7 +140,8 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <p class="brand">CFB SHOWDOWN<br/>2026-10-03<br/>Washington @ USC</p>
 <a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
 <div class="view-row">
-<label class="pill" for="v-report">Report</label>
+<label class="pill" for="v-report">Depth chart</label>
+<label class="pill" for="v-game">Game report</label>
 <label class="pill" for="v-etr">ETR Value</label>
 <label class="pill" for="v-book">Player book</label>
 </div>
@@ -148,73 +154,6 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <article class="panel">
 <div class="game-report">
 <h2>Washington @ USC</h2>
-<h3>Game Script</h3>
-<p><b>This slate is two out of five stars.</b></p>
-<p><b>How they want to play</b></p>
-<ul>
-<li><b>Washington:</b> In 4 games Washington has thrown 105 times (26 a game) for 222 yards a game and run it 90 times (22 a game) for 74 yards a game.</li>
-<li><b>USC:</b> In 6 games USC has thrown 203 times (34 a game) for 316 yards a game and run it 222 times (37 a game) for 172 yards a game.</li>
-</ul>
-<p><b>Where the defense is weaker</b></p>
-<ul>
-<li><b>Washington:</b> In 4 games opponents are averaging 143 passing yards and 86 rushing yards a game against Washington. Pass and run have both moved the ball. Those games were Washington, Utah State, Eastern Washington, and Minnesota.</li>
-<li><b>USC:</b> In 6 games opponents are averaging 319 passing yards and 156 rushing yards a game against USC. The yards have come through the air. Those games were San José State, Fresno State, Louisville, Louisiana, Rutgers, and Oregon.</li>
-</ul>
-<p><b>What the scoreboard forces:</b> Predicts USC 27, Washington 24.</p>
-<p><b>What the writers are saying:</b> Lists USC -9.5 and a 58.5 total. Says USC listed Mark Bowman questionable on Thursday. Demond Williams Jr. has 1,129 pass yards and 165 rush yards.</p>
-<h3>WHO MATTERS</h3>
-<h4>USC</h4>
-<p><b>Quarterbacks</b></p>
-<ul>
-<li><b>Sam Huard</b> — Sit him — a backup priced like a starter is still the backup.</li>
-</ul>
-<p><b>Running backs</b></p>
-<ul>
-<li><b>King Miller</b> — Starter.</li>
-<li><b>Waymond Jordan</b> — Backup.</li>
-</ul>
-<p><b>Receiving room</b></p>
-<ul>
-<li><b>Kayden Dixon-Wyatt</b> — Starter.</li>
-<li><b>Mark Bowman</b> — Starter.</li>
-<li><b>Zacharyus Williams</b> — Starter.</li>
-<li><b>Tanook Hines</b> — Riley Thu: game-time decision. Limited camp. Even if active, ramp-up — fade 80+ rec. Starter.</li>
-<li><b>Tron Baker</b> — Backup.</li>
-<li><b>Ethan Feaster</b> — USC roster lists freshman receiver Ethan Feaster. Football Database: 4 games, 0 starts, 3 catches for 14 yards. The depth chart has him second at outside receiver. Backup.</li>
-<li><b>Tucker Ashcraft</b> — Backup.</li>
-<li><b>Roderick Tezeno</b> — Backup.</li>
-</ul>
-<ul>
-<li><b>Sit:</b> Trent Mosley — Out. Sit him.</li>
-<li><b>Sit:</b> Terrell Anderson — Out. Sit him.</li>
-<li><b>Sit:</b> Taniela Tupou — Out. Sit him.</li>
-</ul>
-<h4>Washington</h4>
-<p><b>Quarterbacks</b></p>
-<ul>
-<li><b>Demond Williams Jr.</b> — runs and throws. Last week vs MINN he threw 28 times for 239, 2 passing scores and had 15 carries for 15.</li>
-<li><b>Elijah Brown</b> — Sit him — a backup priced like a starter is still the backup. Last week vs EWU he threw 3 times for 25, 1 passing score.</li>
-</ul>
-<p><b>Running backs</b></p>
-<ul>
-<li><b>Brian Bonner Jr.</b> — Starter.</li>
-<li><b>Trey Cooley</b> — Backup.</li>
-<li><b>Quaid Carr</b> — Starting running back after Jonah Coleman to NFL. Jayden Limar is The backup running back. DK 59.5 rush.</li>
-</ul>
-<p><b>Receiving room</b></p>
-<ul>
-<li><b>Dezmen Roebuck</b> — X 2026-09-06 14:31Z: probable today versus Washington State (personal). RotoWire Aug 19 missed practice personal. Huskies Wire slot starter. Starter.</li>
-<li><b>Chris Lawson</b> — Apple Cup 4-87 team-high receiving; chart versatile WR, not a. Starter.</li>
-<li><b>Decker DeGraaf</b> — Starter.</li>
-<li><b>Rashid Williams</b> — Apple Cup 3-74-1TD; starting Z produced, not only the Roebuck if-out. Starter.</li>
-<li><b>Baron Naone</b> — Backup.</li>
-<li><b>Jordan Clay</b> — Washington lists him as a first-year receiver. Sports-Reference 2026 log: 7 catches, 52 yards, 1 touchdown in three games. The depth chart has him second at outside receiver. Backup.</li>
-<li><b>Mason James</b> — Backup.</li>
-<li><b>Trez Davis</b> — Backup.</li>
-</ul>
-<ul>
-<li><b>Sit:</b> Jordan Washington — Out. Sit him.</li>
-</ul>
 <h3>DEPTH CHART</h3>
 <p>Offense skill. A missing name is —.</p>
 <h4 class="team-break">USC</h4>
@@ -259,7 +198,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tr><td>Mark Bowman</td><td>USC</td><td>Seattle Times: USC listed him questionable Thursday. Not a confirmed out.</td></tr>
 <tr><td>Ethan Feaster</td><td>USC</td><td>Football Database: 4 games, 0 starts, for 14 yards.</td></tr>
 </tbody></table>
-<h3>ETR BUILD 1</h3>
+<h3>Example ETR Build 1</h3>
 <table class="sortable">
 <thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
@@ -271,7 +210,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tr><td>FLEX</td><td>Waymond Jordan</td><td>USC</td><td>RB</td><td>$3,800</td><td>2.62</td><td>rushing yards 39.5</td></tr>
 </tbody></table>
 <p class="left">Leftover: $1,100  (spent $48,900 / $50,000)</p>
-<h3>ETR BUILD 2</h3>
+<h3>Example ETR Build 2</h3>
 <table class="sortable">
 <thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
@@ -283,7 +222,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <tr><td>FLEX</td><td>Ethan Feaster</td><td>USC</td><td>WR</td><td>$1,000</td><td>2.98</td><td>—</td></tr>
 </tbody></table>
 <p class="left">Leftover: $500  (spent $49,500 / $50,000)</p>
-<h3>ETR BUILD 3</h3>
+<h3>Example ETR Build 3</h3>
 <table class="sortable">
 <thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
@@ -296,6 +235,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 </tbody></table>
 <p class="left">Leftover: $300  (spent $49,700 / $50,000)</p>
 </div>
+<div class="game-report-link"><h2>Game report</h2><p><a href="https://www.actionnetwork.com/ncaaf/college-football-picks-predictions-expert-bets-week-5-alabama-vs-mississippi-state-ohio-state-vs-iowa-more-oct-3">College Football Picks, Predictions: Week 5 Expert Bets for Alabama vs Mississippi State, Ohio State vs Iowa</a></p><p>Action Network</p></div>
 
 <div class="etr-board"><h3>ETR VALUE</h3>
 <p>Every name on ETR&#x27;s sheet for this game, both teams in one table. Click a column to sort. A blank cell is —. <b>ETR salary</b> and <b>Owned</b> are their main-slate numbers. <b>Slate</b> is their sheet label. <b>Points per $1k</b> is their projected points versus our DraftKings salary for this game. Negative sheet values stay on the table. Both teams sit in one list so you can sort them together. Every Showdown skill player stays on the table (— if ETR did not list them). Not a Top 20.</p>
@@ -578,6 +518,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
       var sel = id==='v-report' ? '.game-report'
               : id==='v-etr' ? '.etr-board'
               : id==='v-preview' ? '.preview-board'
+              : id==='v-game' ? '.game-report-link'
               : id==='v-book' ? '.player-book' : '';
       if(!sel) return;
       lab.classList.toggle('search-miss', !!(q && !panelHasHit(sel)));
