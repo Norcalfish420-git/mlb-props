@@ -2,12 +2,12 @@
   "pages": {
     "cfb.html": "f1649fa30bccbc30075ca022a1a909c4bd14611d21054388464d713cd1c0322a",
     "classic.html": "ac1e5a48085dab3ce00ec11edb19fac0163c6b511aba76495841a8db8d22f28d",
-    "hub.html": "b6bb166dbdcc3459d0949c739b98d8b5a6ca6e9d2ffa7ee8bad2527cf0a733f2",
+    "hub.html": "17b819035cd2c88ff86b8c948eb484e41f330dced3afd75eef7d568c3b97b784",
     "mlb.html": "c85f5c9ce642b3abbd60544d5844e5e31ca7bd0625a1f5a6647d35fddaf6febb",
     "nfl-showdown.html": "2d67a168242f6b89b8267111b42913c993974c77491f4a88c50b2e7d52b01019",
-    "nfl.html": "a2c424fba2a7fa95206906601863d6fa29901096423b6dcbbd03e1a769c5f2de",
+    "nfl.html": "6c0480800e9b5da19a67311d296fc4ec74d86024793e544d6abed356a6ac93f3",
     "results.html": "d3a75ea1aa6d6b1518f55e1031237c35715380ec1cc7e66738fd018b870bbe08",
-    "showdown.html": "79cefac75f3d580490cc48475f8c9f82934fa4537bacad99dd44145f043e8d89"
+    "showdown.html": "a73e1db07f968f390a9ca6d159f81b25efee10d91abe09a0b71b54f589560203"
   },
   "schema": 1
 }
