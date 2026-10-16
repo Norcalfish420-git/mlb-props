@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CFB Showdown 2026-10-16 · Memphis @ TUL</title>
+<style>
+:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#fb7185;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#be123c;--table:#262626;--cell:#525252;--th:#393939;--val:#fb7185;--h:#fb7185;--code:#fb7185;--up:#3ddbd9;--down:#ff8389;--up-bg:rgba(61,219,217,.16);--down-bg:rgba(255,131,137,.16);--wk-alt:rgba(190,18,60,.08);}
+html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#9f1239;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#9f1239;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#9f1239;--h:#9f1239;--code:#9f1239;--up:#005d5d;--down:#a2191f;--up-bg:rgba(0,93,93,.1);--down-bg:rgba(162,25,31,.1);--wk-alt:rgba(190,18,60,.06);}
+html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+body{background-image:linear-gradient(180deg,rgba(22,22,22,.82),rgba(10,14,18,.93)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
+html.light body{background-image:linear-gradient(180deg,rgba(242,244,248,.88),rgba(242,244,248,.94)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");}
+.tab{position:absolute;left:-9999px;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;overflow-y:auto;}
+.rail .brand{order:0;}
+.rail a.pill.home{order:1;}
+.rail > *:not(.brand):not(a.pill.home){order:2;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);text-decoration:none;}
+a.pill.home{border-color:var(--val);}
+.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
+.pill:hover{background:var(--pill-hover);}
+button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
+button.pdf:hover{filter:brightness(1.08);}
+button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.5rem .7rem;}
+button.theme:hover{background:var(--pill-hover);}
+form.search-form{margin:0;display:flex;flex-direction:column;gap:.15rem;}
+label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35rem 0 0;}
+input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
+input.search:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.pill.search-miss{opacity:.42;}
+table.search-empty{display:none;}
+li.name-hit,tr.name-hit{background:rgba(190,18,60,.28);outline:1px solid var(--accent);}
+.hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
+.view-row{display:flex;flex-direction:column;gap:.35rem;margin:.15rem 0 .35rem;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:54rem;min-width:0;}
+h1{font-size:1.6rem;margin:0 0 .3rem;}
+h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
+.line-blast{font-size:1.42rem;line-height:1.35;font-weight:700;margin:.35rem 0 1.2rem;padding:.95rem 1.05rem;background:var(--table);border:2px solid var(--accent);border-left-width:8px;}
+.line-blast b{color:var(--val);font-size:1.08em;}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
+h3.second-pass{border-top:2px solid var(--accent);padding-top:1.15rem;margin-top:2rem;}
+h4{margin:.8rem 0 .4rem;}
+h4.team-break{font-size:1.28rem;font-weight:800;letter-spacing:.01em;margin:2.35rem 0 .55rem;padding:1.05rem 0 .35rem;border-top:3px solid var(--accent);}
+h3 + p + h4.team-break,h3 + h4.team-break{margin-top:.75rem;padding-top:.1rem;border-top:none;}
+h5{font-size:.95rem;margin:1.05rem 0 .3rem;color:var(--muted);font-weight:700;}
+.sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
+table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.92rem;background:var(--table);}
+th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
+th{background:var(--th);color:var(--pill-fg);}
+table.sortable th{cursor:pointer;user-select:none;}table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
+.etr-board tr.pos-qb td{background:rgba(59,130,246,.18);box-shadow:inset 4px 0 0 #3b82f6;}
+.etr-board tr.pos-rb td{background:rgba(34,197,94,.18);box-shadow:inset 4px 0 0 #22c55e;}
+.etr-board tr.pos-wr td{background:rgba(245,158,11,.20);box-shadow:inset 4px 0 0 #f59e0b;}
+.etr-board tr.pos-te td{background:rgba(168,85,247,.18);box-shadow:inset 4px 0 0 #a855f7;}
+.etr-board tr.pos-k td{background:rgba(148,163,184,.22);box-shadow:inset 4px 0 0 #94a3b8;}
+table.game-log{width:100%;table-layout:auto;}
+table.game-log th,table.game-log td{text-align:center;white-space:nowrap;}
+table.game-log th:nth-child(1),table.game-log td:nth-child(1),table.game-log th:nth-child(2),table.game-log td:nth-child(2){text-align:left;}
+.week-pills,.team-pills{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 .8rem;}
+.week-pill,.team-pill{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--pill);color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:999px;padding:.4rem .75rem;}
+.week-pill.on,.team-pill.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+.week-panel{margin:0 0 1.6rem;}
+.week-panel.search-empty,.game-box.search-empty,.box-side.search-empty{display:none;}
+.week-lab{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.2rem 0 .6rem;}
+.trend-up-strip{margin:.4rem 0 1rem;padding:.7rem .85rem;background:var(--table);border-left:6px solid var(--accent);}
+.trend-up-strip h4{margin:0 0 .35rem;}
+.trend-up-strip ul{margin:.2rem 0 0;}
+.game-box{margin:0 0 1.8rem;padding:0 0 .4rem;border-bottom:1px solid var(--cell);}
+.box-score{font-size:1.2rem;margin:.4rem 0 .15rem;}
+.box-line{font-size:1.02rem;font-weight:700;color:var(--muted);margin:0 0 .55rem;}
+.run-pass{color:var(--muted);margin:0 0 .55rem;}
+.box-side{margin:0 0 1.15rem;}
+table.espn-box{font-size:.9rem;width:100%;}
+table.espn-box th,table.espn-box td{text-align:right;}
+table.espn-box th:first-child,table.espn-box td:first-child{text-align:left;}
+.pos-book{margin:0 0 1.6rem;}
+.pos-book.search-empty{display:none;}
+.pos-book h4{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.4rem 0 .45rem;}
+td.trend-up{background:var(--up-bg) !important;color:var(--up);font-weight:700;}
+td.trend-down{background:var(--down-bg) !important;color:var(--down);font-weight:700;}
+span.delta{font-size:.68em;font-weight:700;margin-left:.28em;opacity:.92;}
+td.val{font-weight:700;color:var(--val);white-space:nowrap;}
+.left{font-weight:700;margin:.2rem 0 1rem;}
+.game-report-link{max-width:42rem;line-height:1.55;}
+.game-report-link h2{margin-top:0;}
+.game-report-link .pick{font-size:1.45rem;font-weight:700;color:var(--val);margin:.2rem 0 .35rem;}
+.game-report-link .byline{color:var(--muted);font-size:.95rem;margin:0 0 1rem;}
+.game-report-link p{margin:.75rem 0;}
+.game-report-link .source{margin-top:1.4rem;}
+.game-report-link .source a{color:var(--val);}
+ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
+ul ul{margin:.15rem 0 .4rem;padding-left:1.15rem;}
+li{margin:.35rem 0;}
+code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
+.panel{display:block;}
+.appendix{display:none;}
+@media print{
+  html,body,html.light,html.light body{background:#fff;color:#111;background-image:none !important;}
+  .shell{display:block;}
+  .rail,.noprint{display:none !important;}
+  main{max-width:none;padding:0;}
+  .panel,.appendix{display:block !important;page-break-after:always;}
+  .game-report,.card-build,.etr-board,.player-book,.preview-board,.game-report-link{display:block !important;}
+  .week-panel,.week-panel[hidden]{display:block !important;}
+  .week-pills,.week-pill,.team-pills,.team-pill{display:none !important;}
+  .game-box[hidden]{display:block !important;}
+  .trend-up-strip li[hidden]{display:list-item !important;}
+  .appendix{page-break-after:auto;}
+  table{background:#fff;page-break-inside:avoid;}
+  th{background:#eee;color:#333;}
+  td.val{color:#000;}
+  td.trend-up{color:#005d5d;background:#e6f6f6 !important;}
+  td.trend-down{color:#a2191f;background:#fce8e8 !important;}
+  h2,h3,h4,h5{page-break-after:avoid;color:#111;}
+  h4.team-break{border-top-color:#111;}
+  .line-blast{background:#fff;border-color:#111;color:#111;}
+  .line-blast b{color:#000;}
+}
+@page{margin:.5in;}
+#v-report:checked ~ .shell .rail label[for=v-report]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-cards:checked ~ .shell .rail label[for=v-cards]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-etr:checked ~ .shell .rail label[for=v-etr]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-preview:checked ~ .shell .rail label[for=v-preview]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-game:checked ~ .shell .rail label[for=v-game]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.card-build,.player-book,.etr-board,.preview-board,.game-report-link{display:none;}
+#v-report:checked ~ .shell main .card-build{display:none;}
+#v-cards:checked ~ .shell main .game-report,#v-cards:checked ~ .shell main .etr-board,#v-cards:checked ~ .shell main .player-book,#v-cards:checked ~ .shell main .preview-board,#v-cards:checked ~ .shell main .game-report-link{display:none;}
+#v-cards:checked ~ .shell main .card-build{display:block;}
+#v-book:checked ~ .shell main,#v-etr:checked ~ .shell main{max-width:none;}
+#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .card-build,#v-book:checked ~ .shell main .etr-board,#v-book:checked ~ .shell main .preview-board,#v-book:checked ~ .shell main .game-report-link{display:none;}
+#v-book:checked ~ .shell main .player-book{display:block;}
+#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .card-build,#v-etr:checked ~ .shell main .player-book,#v-etr:checked ~ .shell main .preview-board,#v-etr:checked ~ .shell main .game-report-link{display:none;}
+#v-etr:checked ~ .shell main .etr-board{display:block;}
+#v-preview:checked ~ .shell main{max-width:none;}
+#v-preview:checked ~ .shell main .game-report,#v-preview:checked ~ .shell main .card-build,#v-preview:checked ~ .shell main .etr-board,#v-preview:checked ~ .shell main .player-book,#v-preview:checked ~ .shell main .game-report-link{display:none;}
+#v-preview:checked ~ .shell main .preview-board{display:block;}
+#v-game:checked ~ .shell main{max-width:none;}
+#v-game:checked ~ .shell main .game-report,#v-game:checked ~ .shell main .card-build,#v-game:checked ~ .shell main .etr-board,#v-game:checked ~ .shell main .player-book,#v-game:checked ~ .shell main .preview-board{display:none;}
+#v-game:checked ~ .shell main .game-report-link{display:block;}
+</style>
+</head><body>
+<input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-cards"/>
+<input class="tab" type="radio" name="v" id="v-game"/>
+<input class="tab" type="radio" name="v" id="v-etr"/>
+<input class="tab" type="radio" name="v" id="v-book"/>
+<div class="shell">
+<aside class="rail noprint">
+<p class="brand">CFB SHOWDOWN<br/>2026-10-16<br/>Memphis @ TUL</p>
+<a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
+<div class="view-row">
+<label class="pill" for="v-report">Depth chart</label>
+<label class="pill" for="v-cards">Card Build</label>
+<label class="pill" for="v-etr">ETR Value</label>
+<label class="pill" for="v-book">Player book</label>
+<label class="pill" for="v-game">Game report</label>
+</div>
+<form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
+<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
+<button class="pdf" type="button" onclick="window.print()">Save as PDF</button><p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
+</aside>
+<main>
+<h1>CFB Showdown — 2026-10-16 · Memphis @ TUL</h1>
+<article class="panel">
+<div class="game-report">
+<h2>Memphis @ TUL</h2>
+<h3>Game Script</h3>
+<p><b>This slate is two out of five stars.</b></p>
+<p><b>How they want to play</b></p>
+<ul>
+<li><b>Memphis:</b> Marcus Stokes + RB Jaylin Carter power a top-7 offense; Tulane weak vs the run. Charles Huff came from Southern Miss.</li>
+</ul>
+<p><b>Where the defense is weaker</b></p>
+<ul>
+<li><b>Memphis:</b> In 7 games opponents are averaging 216 passing yards and 176 rushing yards a game against Memphis. Pass and run have both moved the ball. Those games were UNLV, UNLV, Arkansas State, Boise State, UT Martin, Charlotte, and UAB.</li>
+</ul>
+<p><b>What the scoreboard forces:</b> Memphis 34-24, Memphis -7.5.</p>
+<p><b>What the writers are saying:</b> Memphis 31-24. Tulane has not played well enough to beat a team like Memphis; Tigers&#x27; edge is big TD plays through the air and on the ground regardless of which QB Tulane uses (Trace Johnson/others).</p>
+<h3>DEPTH CHART</h3>
+<h4 class="team-break">Memphis</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Marcus Stokes</td><td>Air Noland</td></tr>
+<tr><td>RB</td><td>Jaylin Carter</td><td>Manny Covey</td></tr>
+<tr><td>WR-X</td><td>Stonka Burnside</td><td>Jemyri Davis</td></tr>
+<tr><td>WR-Z</td><td>Brady Kluse</td><td>Jermane Hayes</td></tr>
+<tr><td>WR-SL</td><td>Tychaun Chapman</td><td>Alante Brown</td></tr>
+<tr><td>TE</td><td>Hunter Tipton</td><td>Aidan O&#x27;Callaghan</td></tr>
+<tr><td>PK</td><td>Philippe Laforge</td><td>Tarik Ahmetbasic</td></tr>
+</tbody></table>
+<h4 class="team-break">TUL</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Baylor Hayes</td><td>Dexter Williams II</td></tr>
+<tr><td>RB</td><td>Damari Alston</td><td>Trequan Jones</td></tr>
+<tr><td>WR-X</td><td>Jimmy Calloway</td><td>Donnell Gee Jr.</td></tr>
+<tr><td>WR-Z</td><td>David Wells Jr.</td><td>Grayson Tempest</td></tr>
+<tr><td>WR-SL</td><td>Oran Singleton Jr.</td><td>Javon Ross</td></tr>
+<tr><td>TE</td><td>Chris Gacayan II</td><td>Jewlyen Roberts</td></tr>
+<tr><td>PK</td><td>Owen Carey</td><td>Marlon Hauck</td></tr>
+</tbody></table>
+<h3>INJURIES</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Status</th><th scope="col" data-col="3">Tonight</th></tr></thead>
+<tbody>
+<tr><td>—</td><td>—</td><td>—</td><td>Nobody on this board is tagged.</td></tr>
+</tbody></table>
+<h3>CHART NOTES</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Note</th></tr></thead>
+<tbody>
+<tr><td>—</td><td>—</td><td>Chart and news agree.</td></tr>
+</tbody></table>
+</div>
+<div class="card-build"><h2>Card Build</h2><h3>Example ETR Build 1</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Marcus Stokes</td><td>Memphis</td><td>QB</td><td>$17,400</td><td>1.82</td><td>passing yards 225.5</td></tr>
+<tr><td>FLEX</td><td>Jaylin Carter</td><td>Memphis</td><td>RB</td><td>$10,000</td><td>1.85</td><td>rushing yards 86.5</td></tr>
+<tr><td>FLEX</td><td>Kadin Semonza</td><td>TUL</td><td>QB</td><td>$8,800</td><td>1.58</td><td>passing yards 166.5</td></tr>
+<tr><td>FLEX</td><td>Destyn Hill</td><td>TUL</td><td>WR</td><td>$6,200</td><td>1.75</td><td>receiving yards 43.5</td></tr>
+<tr><td>FLEX</td><td>Jermane Hayes</td><td>Memphis</td><td>WR</td><td>$5,800</td><td>1.77</td><td>receptions 4.5</td></tr>
+<tr><td>FLEX</td><td>DJ Dugar</td><td>TUL</td><td>RB</td><td>$1,000</td><td>5.06</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $800  (spent $49,200 / $50,000)</p>
+<h3>Example ETR Build 2</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Kadin Semonza</td><td>TUL</td><td>QB</td><td>$13,200</td><td>1.58</td><td>passing yards 166.5</td></tr>
+<tr><td>FLEX</td><td>Marcus Stokes</td><td>Memphis</td><td>QB</td><td>$11,600</td><td>1.82</td><td>passing yards 225.5</td></tr>
+<tr><td>FLEX</td><td>Jaylin Carter</td><td>Memphis</td><td>RB</td><td>$10,000</td><td>1.85</td><td>rushing yards 86.5</td></tr>
+<tr><td>FLEX</td><td>Destyn Hill</td><td>TUL</td><td>WR</td><td>$6,200</td><td>1.75</td><td>receiving yards 43.5</td></tr>
+<tr><td>FLEX</td><td>Jermane Hayes</td><td>Memphis</td><td>WR</td><td>$5,800</td><td>1.77</td><td>receptions 4.5</td></tr>
+<tr><td>FLEX</td><td>Bredell Richardson</td><td>TUL</td><td>WR</td><td>$3,200</td><td>1.67</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $0  (spent $50,000 / $50,000)</p>
+<h3>Example ETR Build 3</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Destyn Hill</td><td>TUL</td><td>WR</td><td>$9,300</td><td>1.75</td><td>receiving yards 43.5</td></tr>
+<tr><td>FLEX</td><td>Marcus Stokes</td><td>Memphis</td><td>QB</td><td>$11,600</td><td>1.82</td><td>passing yards 225.5</td></tr>
+<tr><td>FLEX</td><td>Jaylin Carter</td><td>Memphis</td><td>RB</td><td>$10,000</td><td>1.85</td><td>rushing yards 86.5</td></tr>
+<tr><td>FLEX</td><td>Kadin Semonza</td><td>TUL</td><td>QB</td><td>$8,800</td><td>1.58</td><td>passing yards 166.5</td></tr>
+<tr><td>FLEX</td><td>Jermane Hayes</td><td>Memphis</td><td>WR</td><td>$5,800</td><td>1.77</td><td>receptions 4.5</td></tr>
+<tr><td>FLEX</td><td>Hunter Tipton</td><td>Memphis</td><td>TE</td><td>$4,200</td><td>2.37</td><td>receptions 3.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $300  (spent $49,700 / $50,000)</p></div>
+<div class="game-report-link"><h2>Game report</h2><p class="byline">USA Today / College Sports Wire</p><p>Memphis 34-24, Memphis -7.5. Marcus Stokes + RB Jaylin Carter power a top-7 offense; Tulane weak vs the run. Tulane run game Maurice Turner + Jaylin Lucas.</p><p class="source"><a href="https://collegesportswire.usatoday.com/story/sports/college/college-football/2026/10/16/tulane-memphis-week-7-betting-odds-prediction/92235827007/">USA Today / College Sports Wire</a></p></div>
+
+<div class="etr-board"><h3>ETR VALUE</h3>
+<table class="sortable" data-default-sort="Points per $1k">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Pos</th><th scope="col" data-col="3">Salary</th><th scope="col" data-col="4">Projected points</th><th scope="col" data-col="5">Sheet value</th><th scope="col" data-col="6">Owned</th><th scope="col" data-col="7">Slate</th><th scope="col" data-col="8">Points per $1k</th></tr></thead>
+<tbody>
+<tr class="pos-rb"><td>DJ Dugar</td><td>TUL</td><td>RB</td><td>$1,000</td><td>5.06</td><td>-2.9</td><td>0</td><td>Friday</td><td class="val">5.06</td></tr>
+<tr class="pos-wr"><td>Dawson Johnson</td><td>TUL</td><td>WR</td><td>$1,600</td><td>4.76</td><td>-1.9</td><td>0</td><td>Friday</td><td class="val">2.97</td></tr>
+<tr class="pos-wr"><td>Garrett Mmahat</td><td>TUL</td><td>WR</td><td>$1,800</td><td>4.62</td><td>-2.2</td><td>0</td><td>Friday</td><td class="val">2.57</td></tr>
+<tr class="pos-wr"><td>Hunter Tipton</td><td>Memphis</td><td>WR</td><td>$4,200</td><td>9.95</td><td>1.8</td><td>0</td><td>Friday</td><td class="val">2.37</td></tr>
+<tr class="pos-wr"><td>Jemyri Davis</td><td>Memphis</td><td>WR</td><td>$2,400</td><td>4.66</td><td>-2.1</td><td>0</td><td>Friday</td><td class="val">1.94</td></tr>
+<tr class="pos-wr"><td>Tychaun Chapman</td><td>Memphis</td><td>WR</td><td>$4,600</td><td>8.77</td><td>0.2</td><td>0</td><td>Friday</td><td class="val">1.91</td></tr>
+<tr class="pos-wr"><td>Stonka Burnside</td><td>Memphis</td><td>WR</td><td>$4,400</td><td>8.26</td><td>0</td><td>0</td><td>Friday</td><td class="val">1.88</td></tr>
+<tr class="pos-rb"><td>Jaylin Carter</td><td>Memphis</td><td>RB</td><td>$10,000</td><td>18.55</td><td>5</td><td>0</td><td>Friday</td><td class="val">1.85</td></tr>
+<tr class="pos-qb"><td>Marcus Stokes</td><td>Memphis</td><td>QB</td><td>$11,600</td><td>21.08</td><td>6.8</td><td>0</td><td>Friday</td><td class="val">1.82</td></tr>
+<tr class="pos-wr"><td>Jermane Hayes</td><td>Memphis</td><td>WR</td><td>$5,800</td><td>10.29</td><td>1.1</td><td>0</td><td>Friday</td><td class="val">1.77</td></tr>
+<tr class="pos-wr"><td>Destyn Hill</td><td>TUL</td><td>WR</td><td>$6,200</td><td>10.84</td><td>1.5</td><td>0</td><td>Friday</td><td class="val">1.75</td></tr>
+<tr class="pos-wr"><td>Bredell Richardson</td><td>TUL</td><td>WR</td><td>$3,200</td><td>5.35</td><td>-1.8</td><td>0</td><td>Friday</td><td class="val">1.67</td></tr>
+<tr class="pos-rb"><td>Manny Covey</td><td>Memphis</td><td>RB</td><td>$5,400</td><td>8.79</td><td>-0.3</td><td>0</td><td>Friday</td><td class="val">1.63</td></tr>
+<tr class="pos-qb"><td>Kadin Semonza</td><td>TUL</td><td>QB</td><td>$8,800</td><td>13.87</td><td>2.7</td><td>0</td><td>Friday</td><td class="val">1.58</td></tr>
+<tr class="pos-wr"><td>Anthony Brown-Stephens</td><td>TUL</td><td>WR</td><td>$5,000</td><td>7.71</td><td>-1.2</td><td>0</td><td>Friday</td><td class="val">1.54</td></tr>
+<tr class="pos-wr"><td>Aidan O&#x27;Callaghan</td><td>Memphis</td><td>WR</td><td>$3,400</td><td>5.21</td><td>-1.9</td><td>0</td><td>Friday</td><td class="val">1.53</td></tr>
+<tr class="pos-rb"><td>Jaylin Lucas</td><td>TUL</td><td>RB</td><td>$5,600</td><td>7.43</td><td>-1.8</td><td>0</td><td>Friday</td><td class="val">1.33</td></tr>
+<tr class="pos-rb"><td>Johnnie Daniels</td><td>TUL</td><td>RB</td><td>$8,000</td><td>10.32</td><td>-1.1</td><td>0</td><td>Friday</td><td class="val">1.29</td></tr>
+<tr class="pos-wr"><td>Terrell Timmons Jr.</td><td>Memphis</td><td>WR</td><td>$2,200</td><td>2.81</td><td>-4</td><td>0</td><td>Friday</td><td class="val">1.28</td></tr>
+<tr class="pos-wr"><td>Alante Brown</td><td>Memphis</td><td>WR</td><td>$1,200</td><td>1.12</td><td>-5.5</td><td>0</td><td>Friday</td><td class="val">0.93</td></tr>
+<tr class="pos-wr"><td>Vance Bolyard</td><td>TUL</td><td>WR</td><td>$1,000</td><td>0.91</td><td>-5.6</td><td>0</td><td>Friday</td><td class="val">0.91</td></tr>
+<tr class="pos-wr"><td>Gabe Lovorn</td><td>TUL</td><td>WR</td><td>$1,000</td><td>0.9</td><td>-5.6</td><td>0</td><td>Friday</td><td class="val">0.9</td></tr>
+<tr class="pos-wr"><td>Cameron Roberts</td><td>TUL</td><td>WR</td><td>$1,000</td><td>0.88</td><td>-5.6</td><td>0</td><td>Friday</td><td class="val">0.88</td></tr>
+<tr class="pos-rb"><td>Jamauri McClure</td><td>TUL</td><td>RB</td><td>$8,400</td><td>7.21</td><td>-4.7</td><td>0</td><td>Friday</td><td class="val">0.86</td></tr>
+<tr class="pos-k"><td>Oliver Castaneda</td><td>Memphis</td><td>K</td><td>$5,200</td><td>3.75</td><td>-6.1</td><td>0</td><td>Friday</td><td class="val">0.72</td></tr>
+<tr class="pos-wr"><td>Oliver Mitchell Jr.</td><td>TUL</td><td>WR</td><td>$1,400</td><td>0.95</td><td>-5.7</td><td>0</td><td>Friday</td><td class="val">0.68</td></tr>
+<tr class="pos-rb"><td>Dallan Hayden</td><td>Memphis</td><td>RB</td><td>$6,400</td><td>3.06</td><td>-6.4</td><td>0</td><td>Friday</td><td class="val">0.48</td></tr>
+<tr class="pos-wr"><td>Brady Kluse</td><td>Memphis</td><td>WR</td><td>$3,800</td><td>1.72</td><td>-6</td><td>0</td><td>Friday</td><td class="val">0.45</td></tr>
+<tr class="pos-wr"><td>Zycarl Lewis Jr.</td><td>TUL</td><td>WR</td><td>$3,000</td><td>1.35</td><td>-5.8</td><td>0</td><td>Friday</td><td class="val">0.45</td></tr>
+<tr class="pos-qb"><td>Air Noland</td><td>Memphis</td><td>QB</td><td>$9,800</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Bryce Dorsey</td><td>Memphis</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Denzel Gardner</td><td>Memphis</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Eric Perry</td><td>Memphis</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Garrett Essner</td><td>Memphis</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Gavin Owens</td><td>Memphis</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Grant Troutman</td><td>Memphis</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Isaiah McGill</td><td>Memphis</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jamar Jenkins</td><td>Memphis</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jaylin Taylor</td><td>Memphis</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jonathan Harding</td><td>Memphis</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Jordan Thompson</td><td>Memphis</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Joshua Joseph</td><td>Memphis</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Justice Spann</td><td>Memphis</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Marshall Smith Jr.</td><td>Memphis</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-k"><td>Philippe Laforge</td><td>Memphis</td><td>K</td><td>$5,200</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>TJ Johnson</td><td>Memphis</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-k"><td>Tarik Ahmetbasic</td><td>Memphis</td><td>K</td><td>$5,200</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Zechariah Jenkins</td><td>Memphis</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Cade Scott</td><td>TUL</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Cash Semonza</td><td>TUL</td><td>WR</td><td>$2,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Colby Simpson</td><td>TUL</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-k"><td>Cooper Helmke</td><td>TUL</td><td>K</td><td>$4,800</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>DJ Cicero</td><td>TUL</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Dagan Bruno</td><td>TUL</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Deuce Hadley Jr.</td><td>TUL</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Evan Mickow</td><td>TUL</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Gabe Daniels</td><td>TUL</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Gabe Mocek</td><td>TUL</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Holt Teichman</td><td>TUL</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-k"><td>Jackson Courville</td><td>TUL</td><td>K</td><td>$4,800</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Jake Randle</td><td>TUL</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jakson Judge</td><td>TUL</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Jay Beamon</td><td>TUL</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>John Barton</td><td>TUL</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Jordan West</td><td>TUL</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Kajuan Banks</td><td>TUL</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Kellen Tasby</td><td>TUL</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>KeyShaun Coleman</td><td>TUL</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Maurice Turner</td><td>TUL</td><td>RB</td><td>$7,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Michael Igbinoghene</td><td>TUL</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Seth Gale</td><td>TUL</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Trace Johnson</td><td>TUL</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Ty Thompson</td><td>TUL</td><td>WR</td><td>$2,600</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Walker Davis</td><td>TUL</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-k"><td>Zach Marini</td><td>TUL</td><td>K</td><td>$4,800</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Zeon Chriss-Gremillion</td><td>TUL</td><td>QB</td><td>$7,400</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+</tbody></table></div>
+<div class="player-book"><h3>Player book</h3><div class="team-pills noprint"><button type="button" class="team-pill on" data-team="MEM">Memphis</button><button type="button" class="team-pill" data-team="TUL">TUL</button></div><div class="week-pills noprint"><button type="button" class="week-pill" data-week="0">W0</button><button type="button" class="week-pill" data-week="1">W1</button><button type="button" class="week-pill" data-week="2">W2</button><button type="button" class="week-pill" data-week="3">W3</button><button type="button" class="week-pill" data-week="4">W4</button><button type="button" class="week-pill" data-week="5">W5</button><button type="button" class="week-pill on" data-week="6">W6</button><button type="button" class="week-pill" data-week="season">Season</button></div><section class="week-panel" data-week="0" hidden><h4 class="week-lab">Week 0</h4><article class="game-box" data-team="MEM"><h3 class="box-score">Memphis 27, UNLV 21</h3><p class="box-line">O/U 55.5</p><div class="box-side"><h4>Memphis</h4><p class="run-pass">Memphis threw for 223, 2 passing scores and ran for 195, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Marcus Stokes</td><td data-n="26.0">26</td><td data-n="223.0">223</td><td data-n="2.0">2</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jaylin Carter</td><td data-n="15.0">15</td><td data-n="97.0">97</td><td data-n="1.0">1</td></tr><tr><td>Manny Covey</td><td data-n="11.0">11</td><td data-n="46.0">46</td><td data-n="0.0">0</td></tr><tr><td>Marcus Stokes</td><td data-n="7.0">7</td><td data-n="45.0">45</td><td data-n="0.0">0</td></tr><tr><td>Dallan Hayden</td><td data-n="1.0">1</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Jemyri Davis</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="62.0">62</td><td data-n="0.0">0</td></tr><tr><td>Stonka Burnside</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="48.0">48</td><td data-n="1.0">1</td></tr><tr><td>Tychaun Chapman</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="34.0">34</td><td data-n="0.0">0</td></tr><tr><td>Hunter Tipton</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="31.0">31</td><td data-n="1.0">1</td></tr><tr><td>Jermane Hayes</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Brady Kluse</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Aidan O&#x27;Callaghan</td><td data-n="1.0">1</td><td>—</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Manny Covey</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Philippe Laforge</td><td data-n="2.0">2</td><td data-n="3.0">3</td></tr></tbody></table></div><div class="box-side"><h4>UNLV</h4><p class="run-pass">UNLV threw for 291, 2 passing scores and ran for 169, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jackson Arnold</td><td data-n="37.0">37</td><td data-n="291.0">291</td><td data-n="2.0">2</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jackson Arnold</td><td data-n="21.0">21</td><td data-n="54.0">54</td><td data-n="1.0">1</td></tr><tr><td>Jaylon Glover</td><td data-n="5.0">5</td><td data-n="49.0">49</td><td data-n="0.0">0</td></tr><tr><td>Jai&#x27;Den Thomas</td><td data-n="12.0">12</td><td data-n="44.0">44</td><td data-n="0.0">0</td></tr><tr><td>Kayden McGee</td><td data-n="1.0">1</td><td data-n="18.0">18</td><td data-n="0.0">0</td></tr><tr><td>Alex Orji</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Darrien Jones</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Jai&#x27;Den Thomas</td><td data-n="6.0">6</td><td data-n="9.0">9</td><td data-n="54.0">54</td><td data-n="0.0">0</td></tr><tr><td>Kayden McGee</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="48.0">48</td><td data-n="1.0">1</td></tr><tr><td>Tastean Reddicks</td><td data-n="3.0">3</td><td>—</td><td data-n="45.0">45</td><td data-n="0.0">0</td></tr><tr><td>Tavian Mcnair</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="38.0">38</td><td data-n="1.0">1</td></tr><tr><td>DeAngelo Irvin Jr.</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="30.0">30</td><td data-n="0.0">0</td></tr><tr><td>Taeshaun Lyons</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Matt Byrnes</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Jae Beasley II</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Peyton Zachary</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Keyan Burnett</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Jaylon Glover</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="-4.0">-4</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Ramon Villela</td><td data-n="0.0">0</td><td data-n="3.0">3</td></tr></tbody></table></div></article><article class="game-box" data-team="TUL" hidden><h3 class="box-score">TUL</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="1" hidden><h4 class="week-lab">Week 1</h4><article class="game-box" data-team="MEM"><h3 class="box-score">Memphis 42, Arkansas State 24</h3><p class="box-line">Memphis −10.5 / 52.5</p><div class="box-side"><h4>Memphis</h4><p class="run-pass">Memphis threw for 188, 2 passing scores and ran for 339, 4 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Marcus Stokes</td><td data-n="15.0">15</td><td data-n="188.0">188</td><td data-n="2.0">2</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jaylin Carter</td><td data-n="19.0">19</td><td data-n="183.0">183</td><td data-n="4.0">4</td></tr><tr><td>Manny Covey</td><td data-n="15.0">15</td><td data-n="103.0">103</td><td data-n="0.0">0</td></tr><tr><td>Dallan Hayden</td><td data-n="6.0">6</td><td data-n="33.0">33</td><td data-n="0.0">0</td></tr><tr><td>Marcus Stokes</td><td data-n="6.0">6</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>Air Noland</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Jemyri Davis</td><td data-n="3.0">3</td><td>—</td><td data-n="62.0">62</td><td data-n="0.0">0</td></tr><tr><td>Brady Kluse</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="40.0">40</td><td data-n="0.0">0</td></tr><tr><td>Jermane Hayes</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="35.0">35</td><td data-n="1.0">1</td></tr><tr><td>Hunter Tipton</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="31.0">31</td><td data-n="0.0">0</td></tr><tr><td>Tychaun Chapman</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Stonka Burnside</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="26.0">26</td><td data-n="0.0">0</td></tr><tr><td>Jaylin Carter</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="18.0">18</td><td data-n="0.0">0</td></tr><tr><td>Aidan O&#x27;Callaghan</td><td data-n="1.0">1</td><td>—</td><td data-n="7.0">7</td><td data-n="1.0">1</td></tr><tr><td>Dallan Hayden</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Philippe Laforge</td><td data-n="0.0">0</td><td data-n="6.0">6</td></tr></tbody></table></div><div class="box-side"><h4>Arkansas State</h4><p class="run-pass">Arkansas State threw for 325, 1 passing scores and ran for 110, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Trey Owens</td><td data-n="30.0">30</td><td data-n="325.0">325</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Kenyon Clay</td><td data-n="13.0">13</td><td data-n="50.0">50</td><td data-n="1.0">1</td></tr><tr><td>Trey Owens</td><td data-n="7.0">7</td><td data-n="33.0">33</td><td data-n="0.0">0</td></tr><tr><td>Ezell Jolly</td><td data-n="3.0">3</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Timothy Carter</td><td data-n="3.0">3</td><td data-n="10.0">10</td><td data-n="1.0">1</td></tr><tr><td>Chauncy Cobb</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Hunter Summers</td><td data-n="5.0">5</td><td data-n="5.0">5</td><td data-n="98.0">98</td><td data-n="0.0">0</td></tr><tr><td>Kenyon Clay</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="85.0">85</td><td data-n="1.0">1</td></tr><tr><td>Chauncy Cobb</td><td data-n="6.0">6</td><td data-n="7.0">7</td><td data-n="75.0">75</td><td data-n="0.0">0</td></tr><tr><td>Jaylen Bonelli</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="43.0">43</td><td data-n="0.0">0</td></tr><tr><td>Jabari Bush</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Joshua Burrell</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>James Lee</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>Ezell Jolly</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="-1.0">-1</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Clune Van Andel</td><td data-n="1.0">1</td><td data-n="3.0">3</td></tr></tbody></table></div></article><article class="game-box" data-team="TUL" hidden><h3 class="box-score">TUL</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="2" hidden><h4 class="week-lab">Week 2</h4><article class="game-box" data-team="MEM"><h3 class="box-score">Memphis 20, Boise State 38</h3><div class="box-side"><h4>Memphis</h4><p class="run-pass">Memphis threw for 384, 1 passing scores and ran for 135, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Marcus Stokes</td><td data-n="25.0">25</td><td data-n="384.0">384</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jaylin Carter</td><td data-n="9.0">9</td><td data-n="95.0">95</td><td data-n="1.0">1</td></tr><tr><td>Marcus Stokes</td><td data-n="11.0">11</td><td data-n="24.0">24</td><td data-n="0.0">0</td></tr><tr><td>Manny Covey</td><td data-n="6.0">6</td><td data-n="16.0">16</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Hunter Tipton</td><td data-n="9.0">9</td><td data-n="9.0">9</td><td data-n="229.0">229</td><td data-n="1.0">1</td></tr><tr><td>Terrell Timmons Jr.</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="68.0">68</td><td data-n="0.0">0</td></tr><tr><td>Tychaun Chapman</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="58.0">58</td><td data-n="0.0">0</td></tr><tr><td>Jaylin Carter</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Brady Kluse</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Jermane Hayes</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>J&#x27;Mond Tapp</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Philippe Laforge</td><td data-n="2.0">2</td><td data-n="2.0">2</td></tr></tbody></table></div><div class="box-side"><h4>Boise State</h4><p class="run-pass">Boise State threw for 221, 1 passing scores and ran for 359, 3 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Maddux Madsen</td><td data-n="28.0">28</td><td data-n="221.0">221</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Dylan Riley</td><td data-n="19.0">19</td><td data-n="206.0">206</td><td data-n="0.0">0</td></tr><tr><td>Sire Gaines</td><td data-n="17.0">17</td><td data-n="93.0">93</td><td data-n="1.0">1</td></tr><tr><td>Juelz Goff</td><td data-n="3.0">3</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Rasean Jones</td><td data-n="2.0">2</td><td data-n="19.0">19</td><td data-n="1.0">1</td></tr><tr><td>Maddux Madsen</td><td data-n="3.0">3</td><td data-n="10.0">10</td><td data-n="1.0">1</td></tr><tr><td>Harry Stewart III</td><td data-n="2.0">2</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Akeem Wright</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="84.0">84</td><td data-n="1.0">1</td></tr><tr><td>Rasean Jones</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="61.0">61</td><td data-n="0.0">0</td></tr><tr><td>Cam Bates</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="24.0">24</td><td data-n="0.0">0</td></tr><tr><td>Matt Wagner</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Dylan Riley</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Qumonte Williams Jr.</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Austin Terry</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Sire Gaines</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Canaan Moore</td><td data-n="1.0">1</td><td data-n="5.0">5</td></tr></tbody></table></div></article><article class="game-box" data-team="TUL" hidden><h3 class="box-score">TUL</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="3" hidden><h4 class="week-lab">Week 3</h4><article class="game-box" data-team="MEM"><h3 class="box-score">Memphis 45, UT Martin 21</h3><div class="box-side"><h4>Memphis</h4><p class="run-pass">Memphis threw for 273, 5 passing scores and ran for 299, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Marcus Stokes</td><td data-n="32.0">32</td><td data-n="258.0">258</td><td data-n="4.0">4</td></tr><tr><td>Air Noland</td><td data-n="3.0">3</td><td data-n="15.0">15</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jordan Thompson</td><td data-n="6.0">6</td><td data-n="110.0">110</td><td data-n="1.0">1</td></tr><tr><td>Dallan Hayden</td><td data-n="11.0">11</td><td data-n="85.0">85</td><td data-n="0.0">0</td></tr><tr><td>Jaylin Carter</td><td data-n="12.0">12</td><td data-n="62.0">62</td><td data-n="0.0">0</td></tr><tr><td>Manny Covey</td><td data-n="3.0">3</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Denzel Gardner</td><td data-n="4.0">4</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Air Noland</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Marcus Stokes</td><td data-n="3.0">3</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Jermane Hayes</td><td data-n="8.0">8</td><td data-n="9.0">9</td><td data-n="57.0">57</td><td data-n="0.0">0</td></tr><tr><td>Jemyri Davis</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="45.0">45</td><td data-n="0.0">0</td></tr><tr><td>Tychaun Chapman</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="32.0">32</td><td data-n="1.0">1</td></tr><tr><td>Aidan O&#x27;Callaghan</td><td data-n="3.0">3</td><td>—</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Brady Kluse</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Stonka Burnside</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Jaylin Carter</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="17.0">17</td><td data-n="1.0">1</td></tr><tr><td>Hunter Tipton</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="16.0">16</td><td data-n="1.0">1</td></tr><tr><td>Terrell Timmons Jr.</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="16.0">16</td><td data-n="0.0">0</td></tr><tr><td>Joshua Joseph</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="15.0">15</td><td data-n="1.0">1</td></tr><tr><td>Jonathan Harding</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="9.0">9</td><td data-n="1.0">1</td></tr><tr><td>Alante Brown</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Philippe Laforge</td><td data-n="1.0">1</td><td data-n="6.0">6</td></tr></tbody></table></div><div class="box-side"><h4>UT Martin</h4><p class="run-pass">UT Martin threw for 177, 2 passing scores and ran for 114, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Tate Surber</td><td data-n="29.0">29</td><td data-n="177.0">177</td><td data-n="2.0">2</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jaydon Peete</td><td data-n="6.0">6</td><td data-n="38.0">38</td><td data-n="0.0">0</td></tr><tr><td>Tommy Ansley</td><td data-n="10.0">10</td><td data-n="34.0">34</td><td data-n="1.0">1</td></tr><tr><td>Chris Franklin</td><td data-n="7.0">7</td><td data-n="26.0">26</td><td data-n="0.0">0</td></tr><tr><td>Tate Surber</td><td data-n="4.0">4</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Anthony Carter</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Deuce Oliver</td><td data-n="4.0">4</td><td data-n="7.0">7</td><td data-n="69.0">69</td><td data-n="0.0">0</td></tr><tr><td>Makhia Sherrard</td><td data-n="4.0">4</td><td data-n="5.0">5</td><td data-n="53.0">53</td><td data-n="1.0">1</td></tr><tr><td>Tommy Ansley</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="16.0">16</td><td data-n="0.0">0</td></tr><tr><td>Jaydon Peete</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Anthony Carter</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Phaizon Wilson</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Kaleb Washington</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="1.0">1</td></tr><tr><td>Dawson Adams-Grenier</td><td data-n="1.0">1</td><td>—</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Connie Hewitt II</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Brandon Sims</td><td data-n="0.0">0</td><td data-n="3.0">3</td></tr></tbody></table></div></article><article class="game-box" data-team="TUL" hidden><h3 class="box-score">TUL</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="4" hidden><h4 class="week-lab">Week 4</h4><article class="game-box" data-team="MEM"><h3 class="box-score">Memphis</h3><p class="sub">No box for this week.</p></article><article class="game-box" data-team="TUL" hidden><h3 class="box-score">TUL</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="5" hidden><h4 class="week-lab">Week 5</h4><article class="game-box" data-team="MEM"><h3 class="box-score">Memphis 59, Charlotte 8</h3><p class="box-line">Memphis −20.5 / 52</p><div class="box-side"><h4>Memphis</h4><p class="run-pass">Memphis threw for 386, 6 passing scores and ran for 291, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Marcus Stokes</td><td data-n="25.0">25</td><td data-n="318.0">318</td><td data-n="5.0">5</td></tr><tr><td>Air Noland</td><td data-n="6.0">6</td><td data-n="68.0">68</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jaylin Carter</td><td data-n="15.0">15</td><td data-n="76.0">76</td><td data-n="0.0">0</td></tr><tr><td>Marcus Stokes</td><td data-n="9.0">9</td><td data-n="61.0">61</td><td data-n="0.0">0</td></tr><tr><td>Jordan Thompson</td><td data-n="12.0">12</td><td data-n="48.0">48</td><td data-n="1.0">1</td></tr><tr><td>Dallan Hayden</td><td data-n="9.0">9</td><td data-n="47.0">47</td><td data-n="1.0">1</td></tr><tr><td>Manny Covey</td><td data-n="7.0">7</td><td data-n="31.0">31</td><td data-n="0.0">0</td></tr><tr><td>Air Noland</td><td data-n="3.0">3</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Jermane Hayes</td><td data-n="6.0">6</td><td data-n="6.0">6</td><td data-n="123.0">123</td><td data-n="1.0">1</td></tr><tr><td>Hunter Tipton</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="60.0">60</td><td data-n="2.0">2</td></tr><tr><td>Stonka Burnside</td><td data-n="4.0">4</td><td data-n="6.0">6</td><td data-n="50.0">50</td><td data-n="1.0">1</td></tr><tr><td>Brady Kluse</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="37.0">37</td><td data-n="1.0">1</td></tr><tr><td>Jemyri Davis</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="25.0">25</td><td data-n="1.0">1</td></tr><tr><td>Tychaun Chapman</td><td data-n="2.0">2</td><td data-n="5.0">5</td><td data-n="24.0">24</td><td data-n="0.0">0</td></tr><tr><td>Alante Brown</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="21.0">21</td><td data-n="0.0">0</td></tr><tr><td>Manny Covey</td><td data-n="1.0">1</td><td>—</td><td data-n="16.0">16</td><td data-n="0.0">0</td></tr><tr><td>Aidan O&#x27;Callaghan</td><td data-n="1.0">1</td><td>—</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Jaylin Carter</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Dallan Hayden</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Terrell Timmons Jr.</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Jaylin Taylor</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Philippe Laforge</td><td data-n="1.0">1</td><td data-n="8.0">8</td></tr></tbody></table></div><div class="box-side"><h4>Charlotte</h4><p class="run-pass">Charlotte threw for 77, 0 passing scores and ran for 152, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Cole Gonzales</td><td data-n="14.0">14</td><td data-n="73.0">73</td><td data-n="0.0">0</td></tr><tr><td>Jaylen White</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Henry Rutledge</td><td data-n="6.0">6</td><td data-n="111.0">111</td><td data-n="1.0">1</td></tr><tr><td>Khamani Alexander</td><td data-n="6.0">6</td><td data-n="25.0">25</td><td data-n="0.0">0</td></tr><tr><td>D&#x27;Mariun Perteet</td><td data-n="6.0">6</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Jariel Cobb</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Jaylen White</td><td data-n="1.0">1</td><td data-n="-3.0">-3</td><td data-n="0.0">0</td></tr><tr><td>Cole Gonzales</td><td data-n="3.0">3</td><td data-n="-9.0">-9</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Derrick Eley</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Khamani Alexander</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Jaden Barnes</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Jariel Cobb</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Logan Mauldin</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr></tbody></table></div></article><article class="game-box" data-team="TUL" hidden><h3 class="box-score">TUL</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="6"><h4 class="week-lab">Week 6</h4><article class="game-box" data-team="MEM"><h3 class="box-score">Memphis 38, UAB 13</h3><p class="box-line">Memphis −14.5 / 53.5</p><div class="box-side"><h4>Memphis</h4><p class="run-pass">Memphis threw for 164, 2 passing scores and ran for 230, 3 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Marcus Stokes</td><td data-n="21.0">21</td><td data-n="164.0">164</td><td data-n="2.0">2</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jaylin Carter</td><td data-n="19.0">19</td><td data-n="132.0">132</td><td data-n="2.0">2</td></tr><tr><td>Manny Covey</td><td data-n="11.0">11</td><td data-n="47.0">47</td><td data-n="0.0">0</td></tr><tr><td>Marcus Stokes</td><td data-n="9.0">9</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Dallan Hayden</td><td data-n="4.0">4</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Hunter Tipton</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="1.0">1</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Tychaun Chapman</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="57.0">57</td><td data-n="1.0">1</td></tr><tr><td>Stonka Burnside</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="47.0">47</td><td data-n="0.0">0</td></tr><tr><td>Aidan O&#x27;Callaghan</td><td data-n="3.0">3</td><td>—</td><td data-n="35.0">35</td><td data-n="1.0">1</td></tr><tr><td>Jemyri Davis</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Manny Covey</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Jermane Hayes</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Hunter Tipton</td><td>—</td><td data-n="2.0">2</td><td>—</td><td>—</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Philippe Laforge</td><td data-n="1.0">1</td><td data-n="5.0">5</td></tr></tbody></table></div><div class="box-side"><h4>UAB</h4><p class="run-pass">UAB threw for 131, 0 passing scores and ran for 182, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Ryder Burton</td><td data-n="20.0">20</td><td data-n="131.0">131</td><td data-n="0.0">0</td></tr><tr><td>Nate Rogers</td><td data-n="2.0">2</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Rod Robinson II</td><td data-n="19.0">19</td><td data-n="65.0">65</td><td data-n="0.0">0</td></tr><tr><td>Bam McReynolds</td><td data-n="9.0">9</td><td data-n="56.0">56</td><td data-n="0.0">0</td></tr><tr><td>KJ Daniels</td><td data-n="2.0">2</td><td data-n="39.0">39</td><td data-n="0.0">0</td></tr><tr><td>Ja&#x27;Vin Simpkins</td><td data-n="5.0">5</td><td data-n="20.0">20</td><td data-n="1.0">1</td></tr><tr><td>Jayson Moll</td><td data-n="2.0">2</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Nate Rogers</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Ryder Burton</td><td data-n="9.0">9</td><td data-n="-8.0">-8</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Ty Mims</td><td data-n="3.0">3</td><td>—</td><td data-n="79.0">79</td><td data-n="0.0">0</td></tr><tr><td>AJ Johnson</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="24.0">24</td><td data-n="0.0">0</td></tr><tr><td>EJ Reid</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>C.J. Smith</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Lamar White</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Rod Robinson II</td><td data-n="1.0">1</td><td>—</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>KJ Daniels</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>Ja&#x27;Vin Simpkins</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Jonah Delange</td><td data-n="2.0">2</td><td data-n="1.0">1</td></tr></tbody></table></div></article><article class="game-box" data-team="TUL" hidden><h3 class="box-score">TUL</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="season" hidden><h4 class="week-lab">Season totals</h4><article class="game-box" data-team="MEM"><h3 class="box-score">Memphis · 6 games</h3><div class="box-side"><h4>Memphis</h4><p class="run-pass">Memphis threw for 1618, 18 passing scores and ran for 1489, 12 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Marcus Stokes</td><td data-n="144.0">144</td><td data-n="1535.0">1535</td><td data-n="16.0">16</td></tr><tr><td>Air Noland</td><td data-n="9.0">9</td><td data-n="83.0">83</td><td data-n="2.0">2</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jaylin Carter</td><td data-n="89.0">89</td><td data-n="645.0">645</td><td data-n="8.0">8</td></tr><tr><td>Manny Covey</td><td data-n="53.0">53</td><td data-n="265.0">265</td><td data-n="0.0">0</td></tr><tr><td>Marcus Stokes</td><td data-n="45.0">45</td><td data-n="188.0">188</td><td data-n="0.0">0</td></tr><tr><td>Dallan Hayden</td><td data-n="31.0">31</td><td data-n="183.0">183</td><td data-n="1.0">1</td></tr><tr><td>Jordan Thompson</td><td data-n="18.0">18</td><td data-n="158.0">158</td><td data-n="2.0">2</td></tr><tr><td>Air Noland</td><td data-n="5.0">5</td><td data-n="32.0">32</td><td data-n="0.0">0</td></tr><tr><td>Denzel Gardner</td><td data-n="4.0">4</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Hunter Tipton</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="1.0">1</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Hunter Tipton</td><td data-n="19.0">19</td><td data-n="23.0">23</td><td data-n="367.0">367</td><td data-n="5.0">5</td></tr><tr><td>Jermane Hayes</td><td data-n="23.0">23</td><td data-n="28.0">28</td><td data-n="245.0">245</td><td data-n="2.0">2</td></tr><tr><td>Tychaun Chapman</td><td data-n="14.0">14</td><td data-n="21.0">21</td><td data-n="233.0">233</td><td data-n="2.0">2</td></tr><tr><td>Jemyri Davis</td><td data-n="11.0">11</td><td>—</td><td data-n="207.0">207</td><td data-n="1.0">1</td></tr><tr><td>Stonka Burnside</td><td data-n="11.0">11</td><td data-n="18.0">18</td><td data-n="190.0">190</td><td data-n="2.0">2</td></tr><tr><td>Brady Kluse</td><td data-n="6.0">6</td><td data-n="9.0">9</td><td data-n="126.0">126</td><td data-n="1.0">1</td></tr><tr><td>Terrell Timmons Jr.</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="88.0">88</td><td data-n="0.0">0</td></tr><tr><td>Aidan O&#x27;Callaghan</td><td data-n="9.0">9</td><td>—</td><td data-n="78.0">78</td><td data-n="2.0">2</td></tr><tr><td>Jaylin Carter</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="56.0">56</td><td data-n="1.0">1</td></tr><tr><td>Manny Covey</td><td data-n="3.0">3</td><td>—</td><td data-n="27.0">27</td><td data-n="0.0">0</td></tr><tr><td>Alante Brown</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="26.0">26</td><td data-n="0.0">0</td></tr><tr><td>Joshua Joseph</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="15.0">15</td><td data-n="1.0">1</td></tr><tr><td>Dallan Hayden</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Jonathan Harding</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="9.0">9</td><td data-n="1.0">1</td></tr><tr><td>Jaylin Taylor</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>J&#x27;Mond Tapp</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Philippe Laforge</td><td data-n="7.0">7</td><td data-n="30.0">30</td></tr></tbody></table></div></article><article class="game-box" data-team="TUL" hidden><h3 class="box-score">TUL · season</h3><p class="sub">No season totals yet.</p></article></section></div>
+</article>
+</main></div>
+<script>
+(function(){
+  function applyTeam(book, pill){
+    if(!book || !pill) return;
+    book.querySelectorAll('.team-pill').forEach(function(p){
+      p.classList.toggle('on', p===pill);
+    });
+    var team=pill.getAttribute('data-team')||'';
+    book.querySelectorAll('.game-box').forEach(function(box){
+      box.hidden = (box.getAttribute('data-team')||'')!==team;
+    });
+    book.querySelectorAll('.trend-up-strip li[data-team]').forEach(function(li){
+      li.hidden = (li.getAttribute('data-team')||'')!==team;
+    });
+  }
+  window.applyShowdownTeam = applyTeam;
+  function applyWeek(book, pill){
+    if(!book || !pill) return;
+    book.querySelectorAll('.week-pill').forEach(function(p){
+      p.classList.toggle('on', p===pill);
+    });
+    var wk=pill.getAttribute('data-week')||'';
+    book.querySelectorAll('.week-panel').forEach(function(panel){
+      panel.hidden = (panel.getAttribute('data-week')||'')!==wk;
+    });
+    var inp=document.getElementById('playerSearch');
+    if(inp) inp.dispatchEvent(new Event('input'));
+  }
+  document.addEventListener('click', function(e){
+    var teamPill=e.target.closest('.team-pill');
+    if(teamPill){
+      var teamBook=teamPill.closest('.player-book');
+      if(!teamBook) return;
+      applyTeam(teamBook, teamPill);
+      var teamInp=document.getElementById('playerSearch');
+      if(teamInp) teamInp.dispatchEvent(new Event('input'));
+      return;
+    }
+    var pill=e.target.closest('.week-pill');
+    if(!pill) return;
+    var book=pill.closest('.player-book');
+    if(!book) return;
+    applyWeek(book, pill);
+  });
+})();
+</script>
+<script>
+(function(){
+  var KEY='desk-report-theme';
+  function apply(mode){
+    document.documentElement.classList.toggle('light', mode==='light');
+    var b=document.getElementById('themeBtn');
+    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  var saved=null;
+  try { saved=localStorage.getItem(KEY); } catch (e) {}
+  apply(saved==='light'?'light':'dark');
+  window.toggleDeskTheme=function(){
+    apply(document.documentElement.classList.contains('light')?'dark':'light');
+  };
+})();
+</script>
+<script>
+(function(){
+  function val(td){
+    if(!td) return {n:false, v:null, s:''};
+    var dn=td.getAttribute('data-n');
+    if(dn!==null && dn!==''){
+      var n=parseFloat(dn);
+      if(!isNaN(n)) return {n:true, v:n, s:dn};
+    }
+    if(td.querySelector){
+      if(td.querySelector('.tick.on')) return {n:true, v:1, s:'1'};
+      if(td.querySelector('.tick')) return {n:true, v:0, s:'0'};
+    }
+    var t=(td.textContent||'').trim();
+    if(!t || t==='—' || t==='-') return {n:false, v:null, s:''};
+    var pct=t.match(/(-?\d+(?:\.\d+)?)%/);
+    if(pct) return {n:true, v:parseFloat(pct[1]), s:t};
+    var rec=t.match(/^(-?\d+(?:\.\d+)?)\s*\/\s*(-?\d+(?:\.\d+)?)/);
+    if(rec){
+      var den=parseFloat(rec[2]);
+      if(den) return {n:true, v:parseFloat(rec[1])/den, s:t};
+    }
+    var raw=t.replace(/[$,×x]/g,'').replace(/,/g,'');
+    if(/^-?\d+(\.\d+)?$/.test(raw)) return {n:true, v:parseFloat(raw), s:t};
+    var d=Date.parse(t);
+    if(!isNaN(d) && /[A-Za-z]{3,}/.test(t) && /\d{4}/.test(t)) return {n:true, v:d, s:t};
+    return {n:false, v:t.toLowerCase(), s:t};
+  }
+  function sortTable(table, col, dir){
+    var tb=table && table.tBodies[0];
+    if(!tb) return;
+    Array.prototype.forEach.call(table.querySelectorAll('th'), function(h){
+      h.removeAttribute('data-dir');
+    });
+    var mark=table.querySelector('th[data-col="'+col+'"]');
+    if(!mark){
+      var row=table.querySelector('thead tr');
+      if(row && row.children[col]) mark=row.children[col];
+    }
+    if(mark) mark.setAttribute('data-dir', dir);
+    var rows=Array.prototype.slice.call(tb.rows);
+    rows.sort(function(a,b){
+      var A=val(a.cells[col]);
+      var B=val(b.cells[col]);
+      if(A.v===null && B.v===null) return 0;
+      if(A.v===null) return 1;
+      if(B.v===null) return -1;
+      var cmp=0;
+      if(A.n && B.n) cmp=A.v-B.v;
+      else cmp=String(A.v).localeCompare(String(B.v));
+      return dir==='asc' ? cmp : -cmp;
+    });
+    rows.forEach(function(r){ tb.appendChild(r); });
+  }
+  document.addEventListener('click', function(e){
+    var th=e.target.closest('table.sortable th');
+    if(!th || th.closest('tfoot')) return;
+    var table=th.closest('table');
+    if(!table) return;
+    var raw=th.getAttribute('data-col');
+    var col=raw===null ? Array.prototype.indexOf.call(th.parentNode.children, th) : parseInt(raw,10);
+    if(isNaN(col) || col<0) return;
+    var dir=th.getAttribute('data-dir')==='asc' ? 'desc' : 'asc';
+    sortTable(table, col, dir);
+  });
+  document.querySelectorAll('table.sortable[data-default-sort]').forEach(function(table){
+    var want=(table.getAttribute('data-default-sort')||'').toLowerCase();
+    var ths=table.querySelectorAll('thead th');
+    var idx=-1;
+    for(var i=0;i<ths.length;i++){
+      var t=(ths[i].textContent||'').trim().toLowerCase();
+      if(t===want || t.indexOf(want)>=0 || want.indexOf(t)>=0){
+        var raw=ths[i].getAttribute('data-col');
+        idx=raw===null ? i : parseInt(raw,10);
+        break;
+      }
+    }
+    if(idx>=0) sortTable(table, idx, 'desc');
+  });
+})();
+</script>
+<script>
+(function(){
+  function norm(s){
+    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+  }
+  function skip(el){
+    return !!(el.closest && el.closest('dialog, .pcard, .rail'));
+  }
+  function playerIdx(table){
+    var ths=table.querySelectorAll('thead th');
+    for(var i=0;i<ths.length;i++){
+      var t=norm(ths[i].textContent);
+      if(t==='player'||t==='name') return i;
+    }
+    return -1;
+  }
+  function rowHit(tr, q, pidx){
+    if(!q) return true;
+    if(pidx>=0 && tr.cells[pidx]) return norm(tr.cells[pidx].textContent).indexOf(q)>=0;
+    return norm(tr.textContent).indexOf(q)>=0;
+  }
+  function apply(opts){
+    opts = opts || {};
+    var inp=document.getElementById('playerSearch');
+    if(!inp) return;
+    var q=norm(inp.value);
+    var n=0;
+    var hitSel='tbody tr:not([hidden]), li:not([hidden])';
+    function teamOk(tr){
+      return true;
+    }
+    function mark(el, hit){
+      el.hidden = !hit;
+      el.classList.toggle('name-hit', !!(q && hit));
+      if(q && hit) n++;
+    }
+    function panelHasHit(sel){
+      var panel=document.querySelector(sel);
+      if(!panel) return false;
+      var hit=false;
+      panel.querySelectorAll('tbody tr, li').forEach(function(el){
+        if(!el.hidden) hit=true;
+      });
+      return hit;
+    }
+    document.querySelectorAll('table tbody tr').forEach(function(tr){
+      if(skip(tr)) return;
+      var ok=teamOk(tr) && rowHit(tr, q, playerIdx(tr.closest('table')));
+      mark(tr, ok);
+    });
+    document.querySelectorAll('table').forEach(function(t){
+      if(skip(t)) return;
+      var any=false;
+      var tb=t.tBodies[0];
+      if(tb){
+        Array.prototype.forEach.call(tb.rows, function(r){ if(!r.hidden) any=true; });
+      }
+      t.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.pos-book,.week-panel,.box-side,.game-box').forEach(function(sec){
+      var any=false;
+      sec.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) any=true; });
+      if(!sec.querySelector('tbody tr')) any=true;
+      sec.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.week-book-wrap').forEach(function(w){
+      var t=w.querySelector('table');
+      w.classList.toggle('search-empty', !!(t && t.classList.contains('search-empty')));
+    });
+    function selectedTeam(book){
+      var pill=book && book.querySelector('.team-pill.on');
+      return pill ? (pill.getAttribute('data-team')||'') : '';
+    }
+    function teamHasName(book, team){
+      var hit=false;
+      book.querySelectorAll('.game-box').forEach(function(box){
+        if((box.getAttribute('data-team')||'')!==team) return;
+        box.querySelectorAll('tbody tr').forEach(function(r){
+          if(rowHit(r, q, playerIdx(r.closest('table')))) hit=true;
+        });
+      });
+      book.querySelectorAll('.trend-up-strip li[data-team]').forEach(function(li){
+        if((li.getAttribute('data-team')||'')!==team) return;
+        if(norm(li.textContent).indexOf(q)>=0) hit=true;
+      });
+      return hit;
+    }
+    document.querySelectorAll('.team-pill').forEach(function(pill){
+      var book=pill.closest('.player-book');
+      if(!book) return;
+      var team=pill.getAttribute('data-team')||'';
+      pill.classList.toggle('search-miss', !!(q && !teamHasName(book, team)));
+    });
+    if(opts.jump){
+      document.querySelectorAll('.player-book').forEach(function(book){
+        var on=book.querySelector('.team-pill.on');
+        var sel=selectedTeam(book);
+        if(!q || !on || teamHasName(book, sel)) return;
+        var alt=book.querySelector('.team-pill:not(.search-miss)');
+        if(alt && alt!==on && window.applyShowdownTeam) window.applyShowdownTeam(book, alt);
+      });
+    }
+    document.querySelectorAll('.player-book').forEach(function(book){
+      var sel=selectedTeam(book);
+      book.querySelectorAll('.trend-up-strip li[data-team]').forEach(function(li){
+        var teamHit=!sel || (li.getAttribute('data-team')||'')===sel;
+        var nameHit=!q || norm(li.textContent).indexOf(q)>=0;
+        mark(li, teamHit && nameHit);
+      });
+    });
+    document.querySelectorAll('.week-pill').forEach(function(pill){
+      var book=pill.closest('.player-book');
+      if(!book) return;
+      var sel=selectedTeam(book);
+      var wk=pill.getAttribute('data-week')||'';
+      var panel=book.querySelector('.week-panel[data-week="'+wk+'"]');
+      var hit=false;
+      if(panel){
+        panel.querySelectorAll('.game-box').forEach(function(box){
+          if(sel && (box.getAttribute('data-team')||'')!==sel) return;
+          box.querySelectorAll('tbody tr').forEach(function(r){
+            if(rowHit(r, q, playerIdx(r.closest('table')))) hit=true;
+          });
+        });
+        if(!panel.querySelector('tbody tr')) hit=true;
+      }
+      pill.classList.toggle('search-miss', !!(q && !hit));
+    });
+    document.querySelectorAll('li').forEach(function(li){
+      if(skip(li)) return;
+      if(li.hasAttribute('data-team')) return;
+      mark(li, !q || norm(li.textContent).indexOf(q)>=0);
+    });
+    var hint=document.getElementById('playerSearchHint');
+    if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
+    document.querySelectorAll('label.pill[for]').forEach(function(lab){
+      var id=lab.getAttribute('for');
+      var sel = id==='v-report' ? '.game-report'
+              : id==='v-cards' ? '.card-build'
+              : id==='v-etr' ? '.etr-board'
+              : id==='v-preview' ? '.preview-board'
+              : id==='v-game' ? '.game-report-link'
+              : id==='v-book' ? '.player-book' : '';
+      if(!sel) return;
+      lab.classList.toggle('search-miss', !!(q && !panelHasHit(sel)));
+    });
+    if(opts.jump){
+      var book=document.querySelector('.player-book');
+      if(book && q){
+        var on=book.querySelector('.week-pill.on');
+        var cur=on ? (on.getAttribute('data-week')||'') : '';
+        var curPanel=cur ? book.querySelector('.week-panel[data-week="'+cur+'"]') : null;
+        var curHit=false;
+        if(curPanel){
+          var selNow=book.querySelector('.team-pill.on');
+          var selTeam=selNow ? (selNow.getAttribute('data-team')||'') : '';
+          curPanel.querySelectorAll('tbody tr.name-hit').forEach(function(r){
+            var box=r.closest('.game-box');
+            if(selTeam && box && (box.getAttribute('data-team')||'')!==selTeam) return;
+            curHit=true;
+          });
+        }
+        if(!curHit){
+          var alt=book.querySelector('.week-pill:not(.search-miss)');
+          if(alt && alt!==on){
+            book.querySelectorAll('.week-pill').forEach(function(p){ p.classList.toggle('on', p===alt); });
+            var aw=alt.getAttribute('data-week')||'';
+            book.querySelectorAll('.week-panel').forEach(function(panel){
+              panel.hidden = (panel.getAttribute('data-week')||'')!==aw;
+            });
+          }
+        }
+      }
+      var shownArt=document.querySelector('article.panel');
+      var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
+      if(jumpEl){
+        setTimeout(function(){
+          try { jumpEl.scrollIntoView({block:'center', behavior:'smooth'}); }
+          catch (err) { jumpEl.scrollIntoView(true); }
+        }, 40);
+      }
+    }
+  }
+  var form=document.getElementById('playerSearchForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      apply({jump:true});
+    });
+  }
+  var inp=document.getElementById('playerSearch');
+  if(inp){
+    inp.addEventListener('input', function(){ apply({}); });
+    inp.addEventListener('search', function(){ apply({jump:true}); });
+    inp.addEventListener('keydown', function(e){
+      if(e.key==='Enter' || e.keyCode===13){
+        e.preventDefault();
+        apply({jump:true});
+      }
+    });
+  }
+  apply({});
+})();
+</script>
+</body></html>
