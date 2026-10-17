@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CFB Higher/Lower — October 17, 2026</title>
+<style>
+:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#fb7185;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#e11d48;--table:#262626;--cell:#525252;--th:#393939;--val:#fb7185;--h:#fb7185;--code:#fb7185;}
+html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#9f1239;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#be123c;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#be123c;--h:#be123c;--code:#9f1239;}
+html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+body{background-image:linear-gradient(180deg,rgba(22,22,22,.82),rgba(10,14,18,.93)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
+html.light body{background-image:linear-gradient(180deg,rgba(242,244,248,.88),rgba(242,244,248,.94)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");}
+.tab{position:absolute;left:-9999px;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;overflow-y:auto;}
+.rail .brand{order:0;}
+.rail a.pill.home{order:1;}
+.rail > *:not(.brand):not(a.pill.home){order:2;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);text-decoration:none;}
+a.pill.home{border-color:var(--val);}
+.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
+.pill:hover{background:var(--pill-hover);}
+button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
+button.pdf:hover{filter:brightness(1.08);}
+button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.5rem .7rem;}
+button.theme:hover{background:var(--pill-hover);}
+form.search-form{margin:0;display:flex;flex-direction:column;gap:.15rem;}
+label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35rem 0 0;}
+input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
+input.search:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.pill.search-miss{opacity:.42;}
+table.search-empty{display:none;}
+li.name-hit,tr.name-hit{background:rgba(225,29,72,.28);outline:1px solid var(--accent);}
+.hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:58rem;}
+h1{font-size:1.6rem;margin:0 0 .3rem;}
+h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
+.line-blast{font-size:1.42rem;line-height:1.35;font-weight:700;margin:.35rem 0 1.2rem;padding:.95rem 1.05rem;background:var(--table);border:2px solid var(--accent);border-left-width:8px;}
+.line-blast b{color:var(--val);font-size:1.08em;}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
+h4{margin:.8rem 0 .4rem;}
+.sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
+table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.88rem;background:var(--table);}
+th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
+th{background:var(--th);color:var(--pill-fg);}
+table.sortable th{cursor:pointer;user-select:none;}table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
+td.val{font-weight:700;color:var(--val);white-space:nowrap;}
+ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
+ul ul{margin:.15rem 0 .4rem;padding-left:1.15rem;}
+li{margin:.35rem 0;}
+code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
+.panel{display:none;}
+@media print{
+  html,body,html.light,html.light body{background:#fff;color:#111;background-image:none !important;}
+  .shell{display:block;}
+  .rail,.noprint{display:none !important;}
+  main{max-width:none;padding:0;}
+  .panel{display:block !important;page-break-after:always;}
+  .panel:last-child{page-break-after:auto;}
+  table{background:#fff;page-break-inside:avoid;}
+  th{background:#eee;color:#333;}
+  td.val{color:#000;}
+  h2,h3,h4{page-break-after:avoid;color:#111;}
+  .line-blast{background:#fff;border-color:#111;color:#111;}
+  .line-blast b{color:#000;}
+}
+@page{margin:.5in;}
+#g0:checked ~ .shell .rail label[for=g0]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g0:checked ~ .shell main .p0{display:block;}
+#g1:checked ~ .shell .rail label[for=g1]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g1:checked ~ .shell main .p1{display:block;}
+#g2:checked ~ .shell .rail label[for=g2]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g2:checked ~ .shell main .p2{display:block;}
+#g3:checked ~ .shell .rail label[for=g3]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g3:checked ~ .shell main .p3{display:block;}
+#g4:checked ~ .shell .rail label[for=g4]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g4:checked ~ .shell main .p4{display:block;}
+#g5:checked ~ .shell .rail label[for=g5]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g5:checked ~ .shell main .p5{display:block;}
+#g6:checked ~ .shell .rail label[for=g6]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g6:checked ~ .shell main .p6{display:block;}
+#g7:checked ~ .shell .rail label[for=g7]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g7:checked ~ .shell main .p7{display:block;}
+#g8:checked ~ .shell .rail label[for=g8]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g8:checked ~ .shell main .p8{display:block;}
+#g9:checked ~ .shell .rail label[for=g9]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#g9:checked ~ .shell main .p9{display:block;}
+</style>
+</head><body>
+<input class="tab" type="radio" name="g" id="g0" checked/>
+<input class="tab" type="radio" name="g" id="g1"/>
+<input class="tab" type="radio" name="g" id="g2"/>
+<input class="tab" type="radio" name="g" id="g3"/>
+<input class="tab" type="radio" name="g" id="g4"/>
+<input class="tab" type="radio" name="g" id="g5"/>
+<input class="tab" type="radio" name="g" id="g6"/>
+<input class="tab" type="radio" name="g" id="g7"/>
+<input class="tab" type="radio" name="g" id="g8"/>
+<input class="tab" type="radio" name="g" id="g9"/>
+<div class="shell">
+<aside class="rail noprint">
+<p class="brand">CFB PROPS<br/>2026-10-17</p>
+<a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
+<label class="pill" for="g0">THE PACK</label>
+<label class="pill" for="g1">Slate times</label>
+<label class="pill" for="g2">ETR VALUE</label>
+<label class="pill" for="g3">Ohio State @ Indiana</label>
+<label class="pill" for="g4">Alabama @ Tennessee</label>
+<label class="pill" for="g5">Florida State @ Miami</label>
+<label class="pill" for="g6">Notre Dame @ BYU</label>
+<label class="pill" for="g7">Nebraska @ Oregon</label>
+<label class="pill" for="g8">Utah @ Colorado</label>
+<label class="pill" for="g9">SOURCES</label>
+<form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
+<button class="pdf" type="button" onclick="window.print()">Save as PDF</button>
+<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
+<p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
+</aside>
+<main>
+<h1>CFB Higher/Lower — October 17, 2026</h1>
+<p class="sub">Pick 6 plus three $20 Pick 3s. Posted numbers only.</p>
+<article class="panel p0">
+<h3>GLOSSARY</h3>
+<ul>
+<li><b>Over / Under</b> — Higher or Lower than the posted player number (hits the book line, not a fantasy score).</li>
+<li><b>Pick 6</b> — six legs on one ticket.</li>
+<li><b>$20 Pick 3</b> — three disjoint three-leg tickets at $20 each.</li>
+</ul>
+<h3>THE PACK</h3>
+<h4>Pick 6</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Jeremiah Smith</td><td>Ohio State</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">128.5</td></tr>
+<tr><td>2</td><td>Sam Leavitt</td><td>LSU</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">33.5</td></tr>
+<tr><td>3</td><td>Malachi Toney</td><td>Miami</td><td class="val">receptions</td><td class="val">O</td><td class="val">7.5</td></tr>
+<tr><td>4</td><td>Avery Johnson</td><td>Kansas State</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">45.5</td></tr>
+<tr><td>5</td><td>Mark Fletcher Jr.</td><td>Miami</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">83.5</td></tr>
+<tr><td>6</td><td>Wayne Knight</td><td>James Madison</td><td class="val">anytime TD</td><td class="val">O</td><td class="val">0.5</td></tr>
+</tbody></table>
+<h4>$20 Pick 3 A</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Drew Mestemaker</td><td>Oklahoma State</td><td class="val">passing yards</td><td class="val">O</td><td class="val">289.5</td></tr>
+<tr><td>2</td><td>DJ Lagway</td><td>Florida</td><td class="val">passing yards</td><td class="val">O</td><td class="val">251.5</td></tr>
+<tr><td>3</td><td>Dylan Edwards</td><td>Kansas State</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">63.5</td></tr>
+</tbody></table>
+<h4>$20 Pick 3 B</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Bear Bachmeier</td><td>BYU</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">37.5</td></tr>
+<tr><td>2</td><td>Messiah Hampton</td><td>Oregon</td><td class="val">receptions</td><td class="val">O</td><td class="val">3.5</td></tr>
+<tr><td>3</td><td>Joe Jackson</td><td>Kansas State</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">44.5</td></tr>
+</tbody></table>
+<h4>$20 Pick 3 C</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Braden Pegan</td><td>Utah</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">58.5</td></tr>
+<tr><td>2</td><td>Kwazi Gilmer</td><td>Nebraska</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">61.5</td></tr>
+<tr><td>3</td><td>Hollywood Smothers</td><td>Texas</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">61.5</td></tr>
+</tbody></table>
+<h3>WHY THIS PACK</h3>
+<p>Each ticket stays on one game script. We did not mix clock-kill rush with a favorite throwing the ball all day, or a dog passing Over with a favorite that wants to sit on the lead.</p>
+</article>
+<article class="panel p1">
+<h3>Slate times</h3>
+<p>Same recs as THE PACK, grouped by kick. Morning is before 1 p.m. ET. Afternoon is 1–4 p.m. ET. Late is 4 p.m. ET and after.</p>
+<h4>Morning</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th><th data-col="6">Kick</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Jeremiah Smith</td><td>OHIO STATE</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">128.5</td><td>12:00 p.m. ET</td></tr>
+<tr><td>2</td><td>Sam Leavitt</td><td>LSU</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">33.5</td><td>12:00 p.m. ET</td></tr>
+<tr><td>3</td><td>Avery Johnson</td><td>KANSAS STATE WILDCATS</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">45.5</td><td>12:00 p.m. ET</td></tr>
+<tr><td>4</td><td>Wayne Knight</td><td>JAMES MADISON DUKES</td><td class="val">anytime TD</td><td class="val">O</td><td class="val">0.5</td><td>12:00 p.m. ET</td></tr>
+<tr><td>5</td><td>DJ Lagway</td><td>FLORIDA GATORS</td><td class="val">passing yards</td><td class="val">O</td><td class="val">251.5</td><td>12:00 p.m. ET</td></tr>
+<tr><td>6</td><td>Dylan Edwards</td><td>KANSAS STATE WILDCATS</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">63.5</td><td>12:00 p.m. ET</td></tr>
+<tr><td>7</td><td>Joe Jackson</td><td>KANSAS STATE WILDCATS</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">44.5</td><td>12:00 p.m. ET</td></tr>
+<tr><td>8</td><td>Hollywood Smothers</td><td>TEX</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">61.5</td><td>12:00 p.m. ET</td></tr>
+</tbody></table>
+<h4>Late</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th><th data-col="6">Kick</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Malachi Toney</td><td>MIAMI</td><td class="val">receptions</td><td class="val">O</td><td class="val">7.5</td><td>7:00 p.m. ET</td></tr>
+<tr><td>2</td><td>Mark Fletcher Jr.</td><td>MIA</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">83.5</td><td>7:00 p.m. ET</td></tr>
+<tr><td>3</td><td>Drew Mestemaker</td><td>OKST</td><td class="val">passing yards</td><td class="val">O</td><td class="val">289.5</td><td>7:30 p.m. ET</td></tr>
+<tr><td>4</td><td>Bear Bachmeier</td><td>BYU COUGARS</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">37.5</td><td>7:30 p.m. ET</td></tr>
+<tr><td>5</td><td>Braden Pegan</td><td>UTAH</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">58.5</td><td>10:15 p.m. ET</td></tr>
+<tr><td>6</td><td>Messiah Hampton</td><td>ORE</td><td class="val">receptions</td><td class="val">O</td><td class="val">3.5</td><td>11:00 p.m. ET</td></tr>
+<tr><td>7</td><td>Kwazi Gilmer</td><td>NEBRASKA</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">61.5</td><td>11:00 p.m. ET</td></tr>
+</tbody></table>
+</article>
+<article class="panel p2">
+<h3>ETR VALUE</h3>
+<p>Top 40 by ETR thesis (main slate), grouped by type. Rank is 1–40 across types. Over on a starter-band role, Under when ETR is well below that band. Slightly negative Value can still be a starter. ETR fantasy points are not a book line.</p>
+<h4>Passing yards</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>9</td><td>Darian Mensah</td><td>Miami</td><td class="val">O</td><td class="val">279.5</td><td>11.2</td><td>26.84</td><td class="val">-44.0</td></tr>
+<tr><td>30</td><td>Ethan Grunkemeyer</td><td>Virginia Tech</td><td class="val">O</td><td class="val">290.5</td><td>9.7</td><td>22.23</td><td class="val">-130.5</td></tr>
+<tr><td>39</td><td>Austin Simmons</td><td>Missouri</td><td class="val">O</td><td class="val">254.5</td><td>7.9</td><td>18.3</td><td class="val">-6.8</td></tr>
+</tbody></table>
+<h4>Rushing yards</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>5</td><td>J&#x27;Koby Williams</td><td>Texas Tech</td><td class="val">O</td><td class="val">86.5</td><td>12.5</td><td>24.56</td><td class="val">-13.4</td></tr>
+<tr><td>7</td><td>Nate Sheppard</td><td>Duke</td><td class="val">O</td><td class="val">129.5</td><td>12.4</td><td>29.37</td><td class="val">+1.8</td></tr>
+<tr><td>8</td><td>Sam Leavitt</td><td>LSU</td><td class="val">O</td><td class="val">33.5</td><td>11.5</td><td>26.95</td><td class="val">+11.9</td></tr>
+<tr><td>13</td><td>Gio Lopez</td><td>Wake Forest</td><td class="val">O</td><td class="val">26.5</td><td>10.9</td><td>25.34</td><td class="val">-2.9</td></tr>
+<tr><td>15</td><td>Dilin Jones</td><td>Wisconsin</td><td class="val">O</td><td class="val">87.5</td><td>10.7</td><td>25.03</td><td class="val">-16.7</td></tr>
+<tr><td>16</td><td>Avery Johnson</td><td>Kansas State</td><td class="val">O</td><td class="val">45.5</td><td>10.7</td><td>23.9</td><td class="val">+22.7</td></tr>
+<tr><td>17</td><td>Gunner Stockton</td><td>Georgia</td><td class="val">O</td><td class="val">24.5</td><td>10.7</td><td>23.47</td><td class="val">-4.0</td></tr>
+<tr><td>19</td><td>Jamal Roberts</td><td>Missouri</td><td class="val">O</td><td class="val">119.5</td><td>10.6</td><td>25.34</td><td class="val">-0.7</td></tr>
+<tr><td>25</td><td>Wayshawn Parker</td><td>Utah</td><td class="val">O</td><td class="val">98.5</td><td>10.2</td><td>24.8</td><td class="val">-23.0</td></tr>
+<tr><td>27</td><td>Mark Fletcher Jr.</td><td>Miami</td><td class="val">O</td><td class="val">83.5</td><td>10.2</td><td>22.66</td><td class="val">+29.5</td></tr>
+<tr><td>29</td><td>Jeffrey Overton Jr.</td><td>Virginia Tech</td><td class="val">O</td><td class="val">83.5</td><td>10.0</td><td>21.7</td><td class="val">+14.4</td></tr>
+<tr><td>38</td><td>Wayne Knight</td><td>James Madison</td><td class="val">O</td><td class="val">86.5</td><td>8.1</td><td>22.84</td><td class="val">+34.9</td></tr>
+</tbody></table>
+<h4>Receiving yards</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>2</td><td>Jeremiah Smith</td><td>Ohio State</td><td class="val">O</td><td class="val">128.5</td><td>13.7</td><td>30.26</td><td class="val">+129.5</td></tr>
+<tr><td>11</td><td>Malachi Toney</td><td>Miami</td><td class="val">O</td><td class="val">104.5</td><td>11.2</td><td>26.14</td><td class="val">-13.2</td></tr>
+<tr><td>21</td><td>Chris Marshall</td><td>Arkansas</td><td class="val">O</td><td class="val">87.5</td><td>10.6</td><td>21.33</td><td class="val">-30.7</td></tr>
+<tr><td>32</td><td>Cayden Lee</td><td>Missouri</td><td class="val">O</td><td class="val">95.5</td><td>9.5</td><td>22.59</td><td class="val">+8.8</td></tr>
+<tr><td>35</td><td>Isaiah Sategna</td><td>Oklahoma</td><td class="val">O</td><td class="val">70.5</td><td>9.2</td><td>20.33</td><td class="val">-13.2</td></tr>
+</tbody></table>
+<h4>Receptions</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>3</td><td>Jeremiah Smith</td><td>Ohio State</td><td class="val">O</td><td class="val">8.5</td><td>13.7</td><td>30.26</td><td class="val">-0.1</td></tr>
+<tr><td>12</td><td>Malachi Toney</td><td>Miami</td><td class="val">O</td><td class="val">7.5</td><td>11.2</td><td>26.14</td><td class="val">+2.1</td></tr>
+<tr><td>22</td><td>Chris Marshall</td><td>Arkansas</td><td class="val">O</td><td class="val">6.5</td><td>10.6</td><td>21.33</td><td class="val">-0.5</td></tr>
+<tr><td>33</td><td>Cayden Lee</td><td>Missouri</td><td class="val">O</td><td class="val">7.5</td><td>9.5</td><td>22.59</td><td class="val">-1.4</td></tr>
+<tr><td>36</td><td>Isaiah Sategna</td><td>Oklahoma</td><td class="val">O</td><td class="val">5.5</td><td>9.2</td><td>20.33</td><td class="val">-0.5</td></tr>
+</tbody></table>
+<h4>Anytime TD</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Jeremiah Smith</td><td>Ohio State</td><td class="val">O</td><td class="val">0.5</td><td>13.7</td><td>30.26</td><td class="val">-0.0</td></tr>
+<tr><td>4</td><td>J&#x27;Koby Williams</td><td>Texas Tech</td><td class="val">O</td><td class="val">1.5</td><td>12.5</td><td>24.56</td><td class="val">-0.9</td></tr>
+<tr><td>6</td><td>Nate Sheppard</td><td>Duke</td><td class="val">O</td><td class="val">1.5</td><td>12.4</td><td>29.37</td><td class="val">-1.0</td></tr>
+<tr><td>10</td><td>Malachi Toney</td><td>Miami</td><td class="val">O</td><td class="val">0.5</td><td>11.2</td><td>26.14</td><td class="val">+0.3</td></tr>
+<tr><td>14</td><td>Dilin Jones</td><td>Wisconsin</td><td class="val">O</td><td class="val">0.5</td><td>10.7</td><td>25.03</td><td class="val">+0.3</td></tr>
+<tr><td>18</td><td>Jamal Roberts</td><td>Missouri</td><td class="val">O</td><td class="val">1.5</td><td>10.6</td><td>25.34</td><td class="val">-0.7</td></tr>
+<tr><td>20</td><td>Chris Marshall</td><td>Arkansas</td><td class="val">O</td><td class="val">0.5</td><td>10.6</td><td>21.33</td><td class="val">-0.0</td></tr>
+<tr><td>23</td><td>Ashten Emory</td><td>California Golden</td><td class="val">O</td><td class="val">0.5</td><td>10.5</td><td>20.27</td><td class="val">+0.0</td></tr>
+<tr><td>24</td><td>Wayshawn Parker</td><td>Utah</td><td class="val">O</td><td class="val">1.5</td><td>10.2</td><td>24.8</td><td class="val">-0.7</td></tr>
+<tr><td>26</td><td>Mark Fletcher Jr.</td><td>Miami</td><td class="val">O</td><td class="val">0.5</td><td>10.2</td><td>22.66</td><td class="val">-0.0</td></tr>
+<tr><td>28</td><td>Jeffrey Overton Jr.</td><td>Virginia Tech</td><td class="val">O</td><td class="val">0.5</td><td>10.0</td><td>21.7</td><td class="val">+0.1</td></tr>
+<tr><td>31</td><td>Cayden Lee</td><td>Missouri</td><td class="val">O</td><td class="val">0.5</td><td>9.5</td><td>22.59</td><td class="val">-0.1</td></tr>
+<tr><td>34</td><td>Isaiah Sategna</td><td>Oklahoma</td><td class="val">O</td><td class="val">0.5</td><td>9.2</td><td>20.33</td><td class="val">-0.3</td></tr>
+<tr><td>37</td><td>Wayne Knight</td><td>James Madison</td><td class="val">O</td><td class="val">0.5</td><td>8.1</td><td>22.84</td><td class="val">+0.3</td></tr>
+<tr><td>40</td><td>Carlos Hernandez</td><td>Wake Forest</td><td class="val">O</td><td class="val">0.5</td><td>7.8</td><td>20.75</td><td class="val">-0.5</td></tr>
+</tbody></table>
+</article>
+<article class="panel p3">
+<p class="line-blast">Ohio State <b>-3</b>. Total <b>50.5</b>. 12:00 p.m. ET.</p>
+<h3>Game Script</h3>
+<p>No hunt-written Game Script for this game. We will not invent a hole.</p>
+<h3>ETR VALUE</h3>
+<p>Top 10 by ETR thesis (main slate), grouped by type. Rank is 1–10 across types. Over on a starter-band role, Under when ETR is well below that band. Slightly negative Value can still be a starter. ETR fantasy points are not a book line.</p>
+<h4>Rushing yards</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>9</td><td>Bo Jackson</td><td>Ohio State</td><td class="val">O</td><td class="val">76.5</td><td>3.8</td><td>17.08</td><td class="val">-10.9</td></tr>
+<tr><td>10</td><td>James Peoples</td><td>Ohio State</td><td class="val">U</td><td class="val">24.5</td><td>-3.8</td><td>6.63</td><td class="val">+15.7</td></tr>
+</tbody></table>
+<h4>Receiving yards</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>2</td><td>Jeremiah Smith</td><td>Ohio State</td><td class="val">O</td><td class="val">128.5</td><td>13.7</td><td>30.26</td><td class="val">+129.5</td></tr>
+<tr><td>5</td><td>Charlie Becker</td><td>Indiana</td><td class="val">O</td><td class="val">72.5</td><td>4.9</td><td>18.44</td><td class="val">-45.8</td></tr>
+<tr><td>7</td><td>Nick Marsh</td><td>Indiana</td><td class="val">O</td><td class="val">74.5</td><td>4.4</td><td>17.19</td><td class="val">-19.3</td></tr>
+</tbody></table>
+<h4>Receptions</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>3</td><td>Jeremiah Smith</td><td>Ohio State</td><td class="val">O</td><td class="val">8.5</td><td>13.7</td><td>30.26</td><td class="val">-0.1</td></tr>
+<tr><td>6</td><td>Charlie Becker</td><td>Indiana</td><td class="val">O</td><td class="val">4.5</td><td>4.9</td><td>18.44</td><td class="val">+0.6</td></tr>
+<tr><td>8</td><td>Nick Marsh</td><td>Indiana</td><td class="val">O</td><td class="val">5.5</td><td>4.4</td><td>17.19</td><td class="val">+0.1</td></tr>
+</tbody></table>
+<h4>Anytime TD</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Jeremiah Smith</td><td>Ohio State</td><td class="val">O</td><td class="val">0.5</td><td>13.7</td><td>30.26</td><td class="val">-0.0</td></tr>
+<tr><td>4</td><td>Charlie Becker</td><td>Indiana</td><td class="val">O</td><td class="val">0.5</td><td>4.9</td><td>18.44</td><td class="val">+0.3</td></tr>
+</tbody></table>
+</article>
+<article class="panel p4">
+<p class="line-blast">Alabama <b>-7.5</b>. Total <b>50.5</b>. 3:30 p.m. ET.</p>
+<h3>Game Script</h3>
+<p>No hunt-written Game Script for this game. We will not invent a hole.</p>
+<h3>ETR VALUE</h3>
+<p>Top 8 by ETR thesis (main slate), grouped by type. Rank is 1–8 across types. Over on a starter-band role, Under when ETR is well below that band. Slightly negative Value can still be a starter. ETR fantasy points are not a book line.</p>
+<h4>Rushing yards</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Keelon Russell</td><td>Alabama</td><td class="val">O</td><td class="val">26.5</td><td>6.5</td><td>21.22</td><td class="val">-22.0</td></tr>
+<tr><td>2</td><td>DeSean Bishop</td><td>Tennessee</td><td class="val">O</td><td class="val">93.5</td><td>5.0</td><td>19.0</td><td class="val">-17.0</td></tr>
+</tbody></table>
+<h4>Receiving yards</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>3</td><td>Lotzeir Brooks</td><td>Alabama</td><td class="val">O</td><td class="val">69.5</td><td>4.8</td><td>15.53</td><td class="val">-32.5</td></tr>
+<tr><td>4</td><td>Rico Scott</td><td>Alabama</td><td class="val">O</td><td class="val">44.5</td><td>4.4</td><td>13.16</td><td class="val">-33.1</td></tr>
+<tr><td>5</td><td>Braylon Staley</td><td>Tennessee</td><td class="val">O</td><td class="val">38.5</td><td>1.2</td><td>10.73</td><td class="val">-19.4</td></tr>
+<tr><td>7</td><td>Mike Matthews</td><td>Tennessee</td><td class="val">O</td><td class="val">57.5</td><td>1.0</td><td>12.42</td><td class="val">-16.7</td></tr>
+</tbody></table>
+<h4>Receptions</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>6</td><td>Braylon Staley</td><td>Tennessee</td><td class="val">O</td><td class="val">3.5</td><td>1.2</td><td>10.73</td><td class="val">+0.6</td></tr>
+<tr><td>8</td><td>Mike Matthews</td><td>Tennessee</td><td class="val">O</td><td class="val">3.5</td><td>1.0</td><td>12.42</td><td class="val">-0.3</td></tr>
+</tbody></table>
+</article>
+<article class="panel p5">
+<p class="line-blast">Miami <b>-20.5</b>. Total <b>56.5</b>. 7:00 p.m. ET.</p>
+<h3>Game Script</h3>
+<p>No hunt-written Game Script for this game. We will not invent a hole.</p>
+<h3>ETR VALUE</h3>
+<p>Top 8 by ETR thesis (main slate), grouped by type. Rank is 1–8 across types. Over on a starter-band role, Under when ETR is well below that band. Slightly negative Value can still be a starter. ETR fantasy points are not a book line.</p>
+<h4>Passing yards</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Darian Mensah</td><td>Miami</td><td class="val">O</td><td class="val">279.5</td><td>11.2</td><td>26.84</td><td class="val">-44.0</td></tr>
+</tbody></table>
+<h4>Rushing yards</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>6</td><td>Mark Fletcher Jr.</td><td>Miami</td><td class="val">O</td><td class="val">83.5</td><td>10.2</td><td>22.66</td><td class="val">+29.5</td></tr>
+</tbody></table>
+<h4>Receiving yards</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>3</td><td>Malachi Toney</td><td>Miami</td><td class="val">O</td><td class="val">104.5</td><td>11.2</td><td>26.14</td><td class="val">-13.2</td></tr>
+<tr><td>7</td><td>Cooper Barkate</td><td>Miami</td><td class="val">O</td><td class="val">55.5</td><td>4.3</td><td>14.25</td><td class="val">-8.1</td></tr>
+</tbody></table>
+<h4>Receptions</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>4</td><td>Malachi Toney</td><td>Miami</td><td class="val">O</td><td class="val">7.5</td><td>11.2</td><td>26.14</td><td class="val">+2.1</td></tr>
+<tr><td>8</td><td>Cooper Barkate</td><td>Miami</td><td class="val">O</td><td class="val">4.5</td><td>4.3</td><td>14.25</td><td class="val">-1.0</td></tr>
+</tbody></table>
+<h4>Anytime TD</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>2</td><td>Malachi Toney</td><td>Miami</td><td class="val">O</td><td class="val">0.5</td><td>11.2</td><td>26.14</td><td class="val">+0.3</td></tr>
+<tr><td>5</td><td>Mark Fletcher Jr.</td><td>Miami</td><td class="val">O</td><td class="val">0.5</td><td>10.2</td><td>22.66</td><td class="val">-0.0</td></tr>
+</tbody></table>
+</article>
+<article class="panel p6">
+<p class="line-blast">Notre Dame <b>-10.5</b>. Total <b>46.5</b>. 7:30 p.m. ET.</p>
+<h3>Game Script</h3>
+<p>No hunt-written Game Script for this game. We will not invent a hole.</p>
+<h3>ETR VALUE</h3>
+<p>Top 5 by ETR thesis (main slate), grouped by type. Rank is 1–5 across types. Over on a starter-band role, Under when ETR is well below that band. Slightly negative Value can still be a starter. ETR fantasy points are not a book line.</p>
+<h4>Rushing yards</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Bear Bachmeier</td><td>BYU</td><td class="val">O</td><td class="val">37.5</td><td>5.9</td><td>19.43</td><td class="val">+20.1</td></tr>
+</tbody></table>
+<h4>Receiving yards</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>2</td><td>Jordan Faison</td><td>Notre Dame</td><td class="val">O</td><td class="val">55.5</td><td>2.6</td><td>13.91</td><td class="val">+45.8</td></tr>
+<tr><td>4</td><td>Legend Glasker</td><td>BYU</td><td class="val">O</td><td class="val">45.5</td><td>1.4</td><td>11.46</td><td class="val">+12.2</td></tr>
+</tbody></table>
+<h4>Receptions</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>3</td><td>Jordan Faison</td><td>Notre Dame</td><td class="val">O</td><td class="val">4.5</td><td>2.6</td><td>13.91</td><td class="val">+2.6</td></tr>
+<tr><td>5</td><td>Legend Glasker</td><td>BYU</td><td class="val">O</td><td class="val">3.5</td><td>1.4</td><td>11.46</td><td class="val">+0.3</td></tr>
+</tbody></table>
+</article>
+<article class="panel p7">
+<p class="line-blast">Oregon <b>-6.5</b>. Total <b>51.5</b>. 11:00 p.m. ET.</p>
+<h3>Game Script</h3>
+<p>No hunt-written Game Script for this game. We will not invent a hole.</p>
+<h3>ETR VALUE</h3>
+<p>Top 9 by ETR thesis (main slate), grouped by type. Rank is 1–9 across types. Over on a starter-band role, Under when ETR is well below that band. Slightly negative Value can still be a starter. ETR fantasy points are not a book line.</p>
+<h4>Rushing yards</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>5</td><td>Dierre Hill Jr.</td><td>Oregon</td><td class="val">O</td><td class="val">61.5</td><td>3.2</td><td>14.91</td><td class="val">+2.5</td></tr>
+</tbody></table>
+<h4>Receiving yards</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Dakorien Moore</td><td>Oregon</td><td class="val">O</td><td class="val">56.5</td><td>5.2</td><td>15.64</td><td class="val">+8.2</td></tr>
+<tr><td>3</td><td>Messiah Hampton</td><td>Oregon</td><td class="val">O</td><td class="val">38.5</td><td>4.5</td><td>12.98</td><td class="val">-6.6</td></tr>
+<tr><td>6</td><td>Kwazi Gilmer</td><td>Nebraska</td><td class="val">O</td><td class="val">61.5</td><td>3.0</td><td>12.96</td><td class="val">+19.8</td></tr>
+<tr><td>8</td><td>Jacory Barney Jr.</td><td>Nebraska</td><td class="val">O</td><td class="val">38.5</td><td>1.5</td><td>10.23</td><td class="val">+37.4</td></tr>
+</tbody></table>
+<h4>Receptions</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>2</td><td>Dakorien Moore</td><td>Oregon</td><td class="val">O</td><td class="val">3.5</td><td>5.2</td><td>15.64</td><td class="val">+0.2</td></tr>
+<tr><td>4</td><td>Messiah Hampton</td><td>Oregon</td><td class="val">O</td><td class="val">3.5</td><td>4.5</td><td>12.98</td><td class="val">+0.5</td></tr>
+<tr><td>7</td><td>Kwazi Gilmer</td><td>Nebraska</td><td class="val">O</td><td class="val">5.5</td><td>3.0</td><td>12.96</td><td class="val">+0.3</td></tr>
+<tr><td>9</td><td>Jacory Barney Jr.</td><td>Nebraska</td><td class="val">O</td><td class="val">3.5</td><td>1.5</td><td>10.23</td><td class="val">+1.3</td></tr>
+</tbody></table>
+</article>
+<article class="panel p8">
+<p class="line-blast">UTAH <b>-14.5</b>. Total <b>49.5</b>. 10:15 p.m. ET.</p>
+<h3>Game Script</h3>
+<p>No hunt-written Game Script for this game. We will not invent a hole.</p>
+<h3>ETR VALUE</h3>
+<p>Top 10 by ETR thesis (main slate), grouped by type. Rank is 1–10 across types. Over on a starter-band role, Under when ETR is well below that band. Slightly negative Value can still be a starter. ETR fantasy points are not a book line.</p>
+<h4>Rushing yards</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>2</td><td>Wayshawn Parker</td><td>Utah</td><td class="val">O</td><td class="val">98.5</td><td>10.2</td><td>24.8</td><td class="val">-23.0</td></tr>
+</tbody></table>
+<h4>Receiving yards</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>3</td><td>Joseph Williams</td><td>Colorado</td><td class="val">O</td><td class="val">68.5</td><td>4.6</td><td>16.52</td><td class="val">-17.2</td></tr>
+<tr><td>5</td><td>Braden Pegan</td><td>Utah</td><td class="val">O</td><td class="val">58.5</td><td>3.6</td><td>15.66</td><td class="val">+17.0</td></tr>
+<tr><td>7</td><td>Omarion Miller</td><td>Colorado</td><td class="val">O</td><td class="val">51.5</td><td>2.5</td><td>13.84</td><td class="val">+12.8</td></tr>
+<tr><td>9</td><td>DeAndre Moore Jr.</td><td>Colorado</td><td class="val">O</td><td class="val">42.5</td><td>1.4</td><td>10.28</td><td class="val">-5.5</td></tr>
+</tbody></table>
+<h4>Receptions</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>4</td><td>Joseph Williams</td><td>Colorado</td><td class="val">O</td><td class="val">5.5</td><td>4.6</td><td>16.52</td><td class="val">-1.2</td></tr>
+<tr><td>6</td><td>Braden Pegan</td><td>Utah</td><td class="val">O</td><td class="val">4.5</td><td>3.6</td><td>15.66</td><td class="val">-0.5</td></tr>
+<tr><td>8</td><td>Omarion Miller</td><td>Colorado</td><td class="val">O</td><td class="val">5.5</td><td>2.5</td><td>13.84</td><td class="val">-1.9</td></tr>
+<tr><td>10</td><td>DeAndre Moore Jr.</td><td>Colorado</td><td class="val">O</td><td class="val">3.5</td><td>1.4</td><td>10.28</td><td class="val">-0.1</td></tr>
+</tbody></table>
+<h4>Anytime TD</h4>
+<table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Wayshawn Parker</td><td>Utah</td><td class="val">O</td><td class="val">1.5</td><td>10.2</td><td>24.8</td><td class="val">-0.7</td></tr>
+</tbody></table>
+</article>
+<article class="panel p9">
+<h3>SOURCES</h3>
+<p>WRITER CONSENSUS</p>
+<p>quoted=0  desks=0  urls=0  articles=0  youtube=0</p>
+<p>(no quoted recs yet — hunt desks, then <code>add</code>)</p>
+<p>WRITER HUNT SEEDS</p>
+<p>quoted=0  desks=0  urls=0  articles=0  youtube=0</p>
+<ul>
+<li>site:on3.com CFB 2026-10-17 player props player props</li>
+<li>site:247sports.com CFB 2026-10-17 player props player props</li>
+<li>site:actionnetwork.com CFB 2026-10-17 player props player props</li>
+<li>site:covers.com CFB 2026-10-17 player props player props</li>
+<li>site:oddsshopper.com CFB 2026-10-17 player props player props</li>
+<li>site:fantasypros.com CFB 2026-10-17 player props player props</li>
+<li>site:cbssports.com CFB 2026-10-17 player props player props</li>
+<li>site:espn.com CFB 2026-10-17 player props player props</li>
+<li>site:athlon.com CFB 2026-10-17 player props player props</li>
+<li>site:pickswise.com CFB 2026-10-17 player props player props</li>
+<li>site:rotoballer.com CFB 2026-10-17 player props player props</li>
+<li>CFB 2026-10-17 player props player props best bets</li>
+<li>CFB 2026-10-17 player props player prop picks</li>
+<li>college football 2026 player props</li>
+<li>On3 CFB 2026-10-17 player props player props</li>
+<li>247Sports CFB 2026-10-17 player props player props</li>
+<li>Action Network CFB 2026-10-17 player props player props</li>
+<li>Covers CFB 2026-10-17 player props player props</li>
+<li>OddsShopper CFB 2026-10-17 player props player props</li>
+<li>FantasyPros CFB 2026-10-17 player props player props</li>
+<li>CBS Sports CFB 2026-10-17 player props player props</li>
+<li>ESPN CFB 2026-10-17 player props player props</li>
+<li>Athlon CFB 2026-10-17 player props player props</li>
+<li>Pickswise CFB 2026-10-17 player props player props</li>
+<li>RotoBaller CFB 2026-10-17 player props player props</li>
+<li>site:youtube.com CFB 2026-10-17 player props player props</li>
+<li>site:youtube.com college football 2026 prop bets</li>
+</ul>
+<p>Quote the body (player + market + Over/Under + URL). Never invent a line.</p>
+<p>WARN: unique URLs under the 10-article floor.</p>
+</article>
+</main></div>
+<script>
+(function(){
+  var KEY='desk-report-theme';
+  function apply(mode){
+    document.documentElement.classList.toggle('light', mode==='light');
+    var b=document.getElementById('themeBtn');
+    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  var saved=null;
+  try { saved=localStorage.getItem(KEY); } catch (e) {}
+  apply(saved==='light'?'light':'dark');
+  window.toggleDeskTheme=function(){
+    apply(document.documentElement.classList.contains('light')?'dark':'light');
+  };
+})();
+</script>
+<script>
+(function(){
+  function norm(s){
+    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+  }
+  function skip(el){
+    return !!(el.closest && el.closest('dialog, .pcard, .rail'));
+  }
+  function playerIdx(table){
+    var ths=table.querySelectorAll('thead th');
+    for(var i=0;i<ths.length;i++){
+      var t=norm(ths[i].textContent);
+      if(t==='player'||t==='name') return i;
+    }
+    return -1;
+  }
+  function rowHit(tr, q, pidx){
+    if(!q) return true;
+    if(pidx>=0 && tr.cells[pidx]) return norm(tr.cells[pidx].textContent).indexOf(q)>=0;
+    return norm(tr.textContent).indexOf(q)>=0;
+  }
+  function apply(opts){
+    opts = opts || {};
+    var inp=document.getElementById('playerSearch');
+    if(!inp) return;
+    var q=norm(inp.value);
+    var n=0;
+    var hitSel='tbody tr:not([hidden]), li:not([hidden]), .roster-btn:not([hidden])';
+    function mark(el, hit){
+      el.hidden = !!(q && !hit);
+      el.classList.toggle('name-hit', !!(q && hit));
+      if(q && hit) n++;
+    }
+    document.querySelectorAll('table tbody tr').forEach(function(tr){
+      if(skip(tr)) return;
+      mark(tr, rowHit(tr, q, playerIdx(tr.closest('table'))));
+    });
+    document.querySelectorAll('table').forEach(function(t){
+      if(skip(t)) return;
+      var any=false;
+      var tb=t.tBodies[0];
+      if(tb){
+        Array.prototype.forEach.call(tb.rows, function(r){ if(!r.hidden) any=true; });
+      }
+      t.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('li').forEach(function(li){
+      if(skip(li)) return;
+      mark(li, !q || norm(li.textContent).indexOf(q)>=0);
+    });
+    var hint=document.getElementById('playerSearchHint');
+    if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
+    var first=-1;
+    document.querySelectorAll('article.panel').forEach(function(art, i){
+      var hit=!!art.querySelector(hitSel);
+      var lab=document.querySelector('label[for="g'+i+'"]');
+      if(lab) lab.classList.toggle('search-miss', !!(q && !hit));
+      if(hit && first<0) first=i;
+    });
+    if(q && first>=0){
+      var cur=document.querySelector('input.tab[name="g"]:checked');
+      var curI=cur ? parseInt((cur.id||'').replace(/^g/,''),10) : -1;
+      var curArt=document.querySelector('article.p'+curI);
+      var curHit=curArt && curArt.querySelector(hitSel);
+      if(!curHit){
+        var radio=document.getElementById('g'+first);
+        if(radio) radio.checked=true;
+      }
+    }
+    if(opts.jump){
+      var shown=document.querySelector('input.tab[name="g"]:checked');
+      var shownI=shown ? parseInt((shown.id||'').replace(/^g/,''),10) : 0;
+      var shownArt=document.querySelector('article.p'+shownI);
+      var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
+      if(jumpEl){
+        setTimeout(function(){
+          try { jumpEl.scrollIntoView({block:'center', behavior:'smooth'}); }
+          catch (err) { jumpEl.scrollIntoView(true); }
+        }, 40);
+      }
+    }
+  }
+  var form=document.getElementById('playerSearchForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      apply({jump:true});
+    });
+  }
+  var inp=document.getElementById('playerSearch');
+  if(inp){
+    inp.addEventListener('input', function(){ apply({}); });
+    inp.addEventListener('search', function(){ apply({jump:true}); });
+    inp.addEventListener('keydown', function(e){
+      if(e.key==='Enter' || e.keyCode===13){
+        e.preventDefault();
+        apply({jump:true});
+      }
+    });
+  }
+})();
+</script>
+<script>
+(function(){
+  function val(td){
+    if(!td) return {n:false, v:null, s:''};
+    var dn=td.getAttribute('data-n');
+    if(dn!==null && dn!==''){
+      var n=parseFloat(dn);
+      if(!isNaN(n)) return {n:true, v:n, s:dn};
+    }
+    if(td.querySelector){
+      if(td.querySelector('.tick.on')) return {n:true, v:1, s:'1'};
+      if(td.querySelector('.tick')) return {n:true, v:0, s:'0'};
+    }
+    var t=(td.textContent||'').trim();
+    if(!t || t==='—' || t==='-') return {n:false, v:null, s:''};
+    var pct=t.match(/(-?\d+(?:\.\d+)?)%/);
+    if(pct) return {n:true, v:parseFloat(pct[1]), s:t};
+    var rec=t.match(/^(-?\d+(?:\.\d+)?)\s*\/\s*(-?\d+(?:\.\d+)?)/);
+    if(rec){
+      var den=parseFloat(rec[2]);
+      if(den) return {n:true, v:parseFloat(rec[1])/den, s:t};
+    }
+    var raw=t.replace(/[$,×x]/g,'').replace(/,/g,'');
+    if(/^-?\d+(\.\d+)?$/.test(raw)) return {n:true, v:parseFloat(raw), s:t};
+    var d=Date.parse(t);
+    if(!isNaN(d) && /[A-Za-z]{3,}/.test(t) && /\d{4}/.test(t)) return {n:true, v:d, s:t};
+    return {n:false, v:t.toLowerCase(), s:t};
+  }
+  function sortTable(table, col, dir){
+    var tb=table && table.tBodies[0];
+    if(!tb) return;
+    Array.prototype.forEach.call(table.querySelectorAll('th'), function(h){
+      h.removeAttribute('data-dir');
+    });
+    var mark=table.querySelector('th[data-col="'+col+'"]');
+    if(!mark){
+      var row=table.querySelector('thead tr');
+      if(row && row.children[col]) mark=row.children[col];
+    }
+    if(mark) mark.setAttribute('data-dir', dir);
+    var rows=Array.prototype.slice.call(tb.rows);
+    rows.sort(function(a,b){
+      var A=val(a.cells[col]);
+      var B=val(b.cells[col]);
+      if(A.v===null && B.v===null) return 0;
+      if(A.v===null) return 1;
+      if(B.v===null) return -1;
+      var cmp=0;
+      if(A.n && B.n) cmp=A.v-B.v;
+      else cmp=String(A.v).localeCompare(String(B.v));
+      return dir==='asc' ? cmp : -cmp;
+    });
+    rows.forEach(function(r){ tb.appendChild(r); });
+  }
+  document.addEventListener('click', function(e){
+    var th=e.target.closest('table.sortable th');
+    if(!th || th.closest('tfoot')) return;
+    var table=th.closest('table');
+    if(!table) return;
+    var raw=th.getAttribute('data-col');
+    var col=raw===null ? Array.prototype.indexOf.call(th.parentNode.children, th) : parseInt(raw,10);
+    if(isNaN(col) || col<0) return;
+    var dir=th.getAttribute('data-dir')==='asc' ? 'desc' : 'asc';
+    sortTable(table, col, dir);
+  });
+  document.querySelectorAll('table.sortable[data-default-sort]').forEach(function(table){
+    var want=(table.getAttribute('data-default-sort')||'').toLowerCase();
+    var ths=table.querySelectorAll('thead th');
+    var idx=-1;
+    for(var i=0;i<ths.length;i++){
+      var t=(ths[i].textContent||'').trim().toLowerCase();
+      if(t===want || t.indexOf(want)>=0 || want.indexOf(t)>=0){
+        var raw=ths[i].getAttribute('data-col');
+        idx=raw===null ? i : parseInt(raw,10);
+        break;
+      }
+    }
+    if(idx>=0) sortTable(table, idx, 'desc');
+  });
+})();
+</script>
+</body></html>
