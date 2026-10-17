@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CFB Showdown 2026-10-17 · Notre Dame @ BYU</title>
+<style>
+:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#fb7185;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#be123c;--table:#262626;--cell:#525252;--th:#393939;--val:#fb7185;--h:#fb7185;--code:#fb7185;--up:#3ddbd9;--down:#ff8389;--up-bg:rgba(61,219,217,.16);--down-bg:rgba(255,131,137,.16);--wk-alt:rgba(190,18,60,.08);}
+html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#9f1239;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#9f1239;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#9f1239;--h:#9f1239;--code:#9f1239;--up:#005d5d;--down:#a2191f;--up-bg:rgba(0,93,93,.1);--down-bg:rgba(162,25,31,.1);--wk-alt:rgba(190,18,60,.06);}
+html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+body{background-image:linear-gradient(180deg,rgba(22,22,22,.82),rgba(10,14,18,.93)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
+html.light body{background-image:linear-gradient(180deg,rgba(242,244,248,.88),rgba(242,244,248,.94)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");}
+.tab{position:absolute;left:-9999px;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;overflow-y:auto;}
+.rail .brand{order:0;}
+.rail a.pill.home{order:1;}
+.rail > *:not(.brand):not(a.pill.home){order:2;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);text-decoration:none;}
+a.pill.home{border-color:var(--val);}
+.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
+.pill:hover{background:var(--pill-hover);}
+button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
+button.pdf:hover{filter:brightness(1.08);}
+button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.5rem .7rem;}
+button.theme:hover{background:var(--pill-hover);}
+form.search-form{margin:0;display:flex;flex-direction:column;gap:.15rem;}
+label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35rem 0 0;}
+input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
+input.search:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.pill.search-miss{opacity:.42;}
+table.search-empty{display:none;}
+li.name-hit,tr.name-hit{background:rgba(190,18,60,.28);outline:1px solid var(--accent);}
+.hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
+.view-row{display:flex;flex-direction:column;gap:.35rem;margin:.15rem 0 .35rem;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:54rem;min-width:0;}
+h1{font-size:1.6rem;margin:0 0 .3rem;}
+h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
+.line-blast{font-size:1.42rem;line-height:1.35;font-weight:700;margin:.35rem 0 1.2rem;padding:.95rem 1.05rem;background:var(--table);border:2px solid var(--accent);border-left-width:8px;}
+.line-blast b{color:var(--val);font-size:1.08em;}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
+h3.second-pass{border-top:2px solid var(--accent);padding-top:1.15rem;margin-top:2rem;}
+h4{margin:.8rem 0 .4rem;}
+h4.team-break{font-size:1.28rem;font-weight:800;letter-spacing:.01em;margin:2.35rem 0 .55rem;padding:1.05rem 0 .35rem;border-top:3px solid var(--accent);}
+h3 + p + h4.team-break,h3 + h4.team-break{margin-top:.75rem;padding-top:.1rem;border-top:none;}
+h5{font-size:.95rem;margin:1.05rem 0 .3rem;color:var(--muted);font-weight:700;}
+.sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
+table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.92rem;background:var(--table);}
+th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
+th{background:var(--th);color:var(--pill-fg);}
+table.sortable th{cursor:pointer;user-select:none;}table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
+.etr-board tr.pos-qb td{background:rgba(59,130,246,.18);box-shadow:inset 4px 0 0 #3b82f6;}
+.etr-board tr.pos-rb td{background:rgba(34,197,94,.18);box-shadow:inset 4px 0 0 #22c55e;}
+.etr-board tr.pos-wr td{background:rgba(245,158,11,.20);box-shadow:inset 4px 0 0 #f59e0b;}
+.etr-board tr.pos-te td{background:rgba(168,85,247,.18);box-shadow:inset 4px 0 0 #a855f7;}
+.etr-board tr.pos-k td{background:rgba(148,163,184,.22);box-shadow:inset 4px 0 0 #94a3b8;}
+table.game-log{width:100%;table-layout:auto;}
+table.game-log th,table.game-log td{text-align:center;white-space:nowrap;}
+table.game-log th:nth-child(1),table.game-log td:nth-child(1),table.game-log th:nth-child(2),table.game-log td:nth-child(2){text-align:left;}
+.week-pills,.team-pills{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 .8rem;}
+.week-pill,.team-pill{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--pill);color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:999px;padding:.4rem .75rem;}
+.week-pill.on,.team-pill.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+.week-panel{margin:0 0 1.6rem;}
+.week-panel.search-empty,.game-box.search-empty,.box-side.search-empty{display:none;}
+.week-lab{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.2rem 0 .6rem;}
+.trend-up-strip{margin:.4rem 0 1rem;padding:.7rem .85rem;background:var(--table);border-left:6px solid var(--accent);}
+.trend-up-strip h4{margin:0 0 .35rem;}
+.trend-up-strip ul{margin:.2rem 0 0;}
+.game-box{margin:0 0 1.8rem;padding:0 0 .4rem;border-bottom:1px solid var(--cell);}
+.box-score{font-size:1.2rem;margin:.4rem 0 .15rem;}
+.box-line{font-size:1.02rem;font-weight:700;color:var(--muted);margin:0 0 .55rem;}
+.run-pass{color:var(--muted);margin:0 0 .55rem;}
+.box-side{margin:0 0 1.15rem;}
+table.espn-box{font-size:.9rem;width:100%;}
+table.espn-box th,table.espn-box td{text-align:right;}
+table.espn-box th:first-child,table.espn-box td:first-child{text-align:left;}
+.pos-book{margin:0 0 1.6rem;}
+.pos-book.search-empty{display:none;}
+.pos-book h4{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.4rem 0 .45rem;}
+td.trend-up{background:var(--up-bg) !important;color:var(--up);font-weight:700;}
+td.trend-down{background:var(--down-bg) !important;color:var(--down);font-weight:700;}
+span.delta{font-size:.68em;font-weight:700;margin-left:.28em;opacity:.92;}
+td.val{font-weight:700;color:var(--val);white-space:nowrap;}
+.left{font-weight:700;margin:.2rem 0 1rem;}
+.game-report-link{max-width:42rem;line-height:1.55;}
+.game-report-link h2{margin-top:0;}
+.game-report-link .pick{font-size:1.45rem;font-weight:700;color:var(--val);margin:.2rem 0 .35rem;}
+.game-report-link .byline{color:var(--muted);font-size:.95rem;margin:0 0 1rem;}
+.game-report-link p{margin:.75rem 0;}
+.game-report-link .source{margin-top:1.4rem;}
+.game-report-link .source a{color:var(--val);}
+ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
+ul ul{margin:.15rem 0 .4rem;padding-left:1.15rem;}
+li{margin:.35rem 0;}
+code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
+.panel{display:block;}
+.appendix{display:none;}
+@media print{
+  html,body,html.light,html.light body{background:#fff;color:#111;background-image:none !important;}
+  .shell{display:block;}
+  .rail,.noprint{display:none !important;}
+  main{max-width:none;padding:0;}
+  .panel,.appendix{display:block !important;page-break-after:always;}
+  .game-report,.card-build,.etr-board,.player-book,.preview-board,.game-report-link{display:block !important;}
+  .week-panel,.week-panel[hidden]{display:block !important;}
+  .week-pills,.week-pill,.team-pills,.team-pill{display:none !important;}
+  .game-box[hidden]{display:block !important;}
+  .trend-up-strip li[hidden]{display:list-item !important;}
+  .appendix{page-break-after:auto;}
+  table{background:#fff;page-break-inside:avoid;}
+  th{background:#eee;color:#333;}
+  td.val{color:#000;}
+  td.trend-up{color:#005d5d;background:#e6f6f6 !important;}
+  td.trend-down{color:#a2191f;background:#fce8e8 !important;}
+  h2,h3,h4,h5{page-break-after:avoid;color:#111;}
+  h4.team-break{border-top-color:#111;}
+  .line-blast{background:#fff;border-color:#111;color:#111;}
+  .line-blast b{color:#000;}
+}
+@page{margin:.5in;}
+#v-report:checked ~ .shell .rail label[for=v-report]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-cards:checked ~ .shell .rail label[for=v-cards]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-etr:checked ~ .shell .rail label[for=v-etr]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-preview:checked ~ .shell .rail label[for=v-preview]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-game:checked ~ .shell .rail label[for=v-game]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.card-build,.player-book,.etr-board,.preview-board,.game-report-link{display:none;}
+#v-report:checked ~ .shell main .card-build{display:none;}
+#v-cards:checked ~ .shell main .game-report,#v-cards:checked ~ .shell main .etr-board,#v-cards:checked ~ .shell main .player-book,#v-cards:checked ~ .shell main .preview-board,#v-cards:checked ~ .shell main .game-report-link{display:none;}
+#v-cards:checked ~ .shell main .card-build{display:block;}
+#v-book:checked ~ .shell main,#v-etr:checked ~ .shell main{max-width:none;}
+#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .card-build,#v-book:checked ~ .shell main .etr-board,#v-book:checked ~ .shell main .preview-board,#v-book:checked ~ .shell main .game-report-link{display:none;}
+#v-book:checked ~ .shell main .player-book{display:block;}
+#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .card-build,#v-etr:checked ~ .shell main .player-book,#v-etr:checked ~ .shell main .preview-board,#v-etr:checked ~ .shell main .game-report-link{display:none;}
+#v-etr:checked ~ .shell main .etr-board{display:block;}
+#v-preview:checked ~ .shell main{max-width:none;}
+#v-preview:checked ~ .shell main .game-report,#v-preview:checked ~ .shell main .card-build,#v-preview:checked ~ .shell main .etr-board,#v-preview:checked ~ .shell main .player-book,#v-preview:checked ~ .shell main .game-report-link{display:none;}
+#v-preview:checked ~ .shell main .preview-board{display:block;}
+#v-game:checked ~ .shell main{max-width:none;}
+#v-game:checked ~ .shell main .game-report,#v-game:checked ~ .shell main .card-build,#v-game:checked ~ .shell main .etr-board,#v-game:checked ~ .shell main .player-book,#v-game:checked ~ .shell main .preview-board{display:none;}
+#v-game:checked ~ .shell main .game-report-link{display:block;}
+</style>
+</head><body>
+<input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-cards"/>
+<input class="tab" type="radio" name="v" id="v-game"/>
+<input class="tab" type="radio" name="v" id="v-etr"/>
+<input class="tab" type="radio" name="v" id="v-book"/>
+<div class="shell">
+<aside class="rail noprint">
+<p class="brand">CFB SHOWDOWN<br/>2026-10-17<br/>Notre Dame @ BYU</p>
+<a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
+<div class="view-row">
+<label class="pill" for="v-report">Depth chart</label>
+<label class="pill" for="v-cards">Card Build</label>
+<label class="pill" for="v-etr">ETR Value</label>
+<label class="pill" for="v-book">Player book</label>
+<label class="pill" for="v-game">Game report</label>
+</div>
+<form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
+<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
+<button class="pdf" type="button" onclick="window.print()">Save as PDF</button><p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
+</aside>
+<main>
+<h1>CFB Showdown — 2026-10-17 · Notre Dame @ BYU</h1>
+<article class="panel">
+<div class="game-report">
+<h2>Notre Dame @ BYU</h2>
+<p class="line-blast">Notre Dame <b>-10.5</b>. Total <b>46.5</b>.</p>
+<h3>Game Script</h3>
+<p class="line-blast">Notre Dame <b>-10.5</b>. Total <b>46.5</b>.</p>
+<p><b>This slate is three out of five stars.</b></p>
+<p><b>What the writers are saying:</b> The previews make Notre Dame a double-digit road favorite behind the nation&#x27;s stingiest defense, and BYU is banged up in the backfield — down two running backs and leaning on a freshman. The pick is Notre Dame by two scores unless BYU&#x27;s dual-threat quarterback keeps it on the ground and shortens the game.</p>
+<p><b>What the scoreboard forces:</b> A 10.5-point line with a low 46.5 total points to a grind — not many possessions, defense and the run game decide it, so the Notre Dame backfield and BYU&#x27;s quarterback are the captain anchors.</p>
+<p><b>How they want to play</b></p>
+<ul>
+<li><b>Notre Dame:</b> Last week: 29 throws.</li>
+<li><b>BYU:</b> Last week: 38 rushing attempts and 24 throws. Bear Bachmeier runs and throws.</li>
+</ul>
+<p><b>Where the defense is weaker</b></p>
+<ul>
+<li><b>Notre Dame:</b> In 5 games opponents are averaging 158 passing yards and 58 rushing yards a game against Notre Dame. The yards have come through the air. Those games were Wisconsin, RICE, Michigan State, Purdue, and North Carolina.</li>
+<li><b>BYU:</b> In 4 games opponents are averaging 193 passing yards and 75 rushing yards a game against BYU. The yards have come through the air. Those games were Utah Tech, Arizona, Colorado State, and TCU.</li>
+</ul>
+<h3>DEPTH CHART</h3>
+<h4 class="team-break">Notre Dame</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>CJ Carr</td><td>Noah Grubbs</td></tr>
+<tr><td>RB</td><td>Aneyas Williams</td><td>Nolan James Jr.</td></tr>
+<tr><td>WR-X</td><td>Jordan Faison</td><td>Matt Jeffery</td></tr>
+<tr><td>WR-Z</td><td>Micah Gilbert</td><td>Jerome Bettis Jr.</td></tr>
+<tr><td>WR-SL</td><td>Jaden Greathouse</td><td>Mylan Graham</td></tr>
+<tr><td>TE</td><td>Cooper Flanagan</td><td>James Flanigan</td></tr>
+<tr><td>PK</td><td>Spencer Porath</td><td>Micah Drescher</td></tr>
+</tbody></table>
+<h4 class="team-break">BYU</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Bear Bachmeier</td><td>Treyson Bourguet</td></tr>
+<tr><td>RB</td><td>Preston Rex</td><td>Journee Tonga</td></tr>
+<tr><td>WR-X</td><td>Kyler Kasper</td><td>Reggie Frischknecht</td></tr>
+<tr><td>WR-Z</td><td>Jojo Phillips</td><td>Tei Nacua</td></tr>
+<tr><td>WR-SL</td><td>Legend Glasker</td><td>Tiger Bachmeier</td></tr>
+<tr><td>TE</td><td>Walker Lyons</td><td>Roger Saleapaga II</td></tr>
+<tr><td>PK</td><td>Matthias Dunn</td><td>Brody Laga</td></tr>
+</tbody></table>
+<h3>INJURIES</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Status</th><th scope="col" data-col="3">Tonight</th></tr></thead>
+<tbody>
+<tr><td>Quincy Porter</td><td>Notre Dame</td><td>Out</td><td>He is on the board. He is out.</td></tr>
+</tbody></table>
+<h3>CHART NOTES</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Note</th></tr></thead>
+<tbody>
+<tr><td>—</td><td>—</td><td>Chart and news agree.</td></tr>
+</tbody></table>
+</div>
+<div class="card-build"><h2>Card Build</h2><h3>Example ETR Build 1</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Bear Bachmeier</td><td>BYU</td><td>QB</td><td>$15,600</td><td>1.87</td><td>passing yards 181.5</td></tr>
+<tr><td>FLEX</td><td>CJ Carr</td><td>Notre Dame</td><td>QB</td><td>$11,200</td><td>1.51</td><td>passing yards 231.5</td></tr>
+<tr><td>FLEX</td><td>Jordan Faison</td><td>Notre Dame</td><td>WR</td><td>$7,800</td><td>1.78</td><td>receiving yards 55.5</td></tr>
+<tr><td>FLEX</td><td>Legend Glasker</td><td>BYU</td><td>WR</td><td>$6,800</td><td>1.69</td><td>receiving yards 45.5</td></tr>
+<tr><td>FLEX</td><td>Kyler Kasper</td><td>BYU</td><td>WR</td><td>$5,400</td><td>1.81</td><td>receiving yards 33.5</td></tr>
+<tr><td>FLEX</td><td>Walker Lyons</td><td>BYU</td><td>TE</td><td>$2,800</td><td>2.28</td><td>receptions 2.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $400  (spent $49,600 / $50,000)</p>
+<h3>Example ETR Build 2</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>CJ Carr</td><td>Notre Dame</td><td>QB</td><td>$16,800</td><td>1.51</td><td>passing yards 231.5</td></tr>
+<tr><td>FLEX</td><td>Bear Bachmeier</td><td>BYU</td><td>QB</td><td>$10,400</td><td>1.87</td><td>passing yards 181.5</td></tr>
+<tr><td>FLEX</td><td>Jonaz Walton</td><td>Notre Dame</td><td>RB</td><td>$7,200</td><td>1.65</td><td>rushing yards 60.5</td></tr>
+<tr><td>FLEX</td><td>Legend Glasker</td><td>BYU</td><td>WR</td><td>$6,800</td><td>1.69</td><td>receiving yards 45.5</td></tr>
+<tr><td>FLEX</td><td>Kyler Kasper</td><td>BYU</td><td>WR</td><td>$5,400</td><td>1.81</td><td>receiving yards 33.5</td></tr>
+<tr><td>FLEX</td><td>Jaden Greathouse</td><td>Notre Dame</td><td>WR</td><td>$3,400</td><td>2.20</td><td>receiving yards 26.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $0  (spent $50,000 / $50,000)</p>
+<h3>Example ETR Build 3</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Jordan Faison</td><td>Notre Dame</td><td>WR</td><td>$11,700</td><td>1.78</td><td>receiving yards 55.5</td></tr>
+<tr><td>FLEX</td><td>CJ Carr</td><td>Notre Dame</td><td>QB</td><td>$11,200</td><td>1.51</td><td>passing yards 231.5</td></tr>
+<tr><td>FLEX</td><td>Bear Bachmeier</td><td>BYU</td><td>QB</td><td>$10,400</td><td>1.87</td><td>passing yards 181.5</td></tr>
+<tr><td>FLEX</td><td>Jonaz Walton</td><td>Notre Dame</td><td>RB</td><td>$7,200</td><td>1.65</td><td>rushing yards 60.5</td></tr>
+<tr><td>FLEX</td><td>Kyler Kasper</td><td>BYU</td><td>WR</td><td>$5,400</td><td>1.81</td><td>receiving yards 33.5</td></tr>
+<tr><td>FLEX</td><td>Jaden Greathouse</td><td>Notre Dame</td><td>WR</td><td>$3,400</td><td>2.20</td><td>receiving yards 26.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $700  (spent $49,300 / $50,000)</p></div>
+<div class="game-report-link"><h2>Game report</h2><p class="byline">Covers</p><p>ND -10.5 to -11.5; Notre Dame No 1 total defense; BYU without RB LJ Martin and Sione Moa; freshman RB Jonaz Walton emerging</p><p class="source"><a href="https://www.covers.com/ncaaf/college-football-predictions-week-7-2026">Covers</a></p></div>
+
+<div class="etr-board"><h3>ETR VALUE</h3>
+<table class="sortable" data-default-sort="Points per $1k">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Pos</th><th scope="col" data-col="3">Salary</th><th scope="col" data-col="4">Projected points</th><th scope="col" data-col="5">Sheet value</th><th scope="col" data-col="6">Owned</th><th scope="col" data-col="7">Slate</th><th scope="col" data-col="8">Points per $1k</th></tr></thead>
+<tbody>
+<tr class="pos-wr"><td>Jerome Bettis Jr.</td><td>Notre Dame</td><td>WR</td><td>$1,000</td><td>2.7</td><td>-3.8</td><td>0</td><td>Night</td><td class="val">2.7</td></tr>
+<tr class="pos-wr"><td>Reggie Frischknecht</td><td>BYU</td><td>WR</td><td>$1,200</td><td>2.97</td><td>-3.7</td><td>0</td><td>Night</td><td class="val">2.48</td></tr>
+<tr class="pos-wr"><td>Walker Lyons</td><td>BYU</td><td>WR</td><td>$2,800</td><td>6.37</td><td>-1.3</td><td>0</td><td>Night</td><td class="val">2.28</td></tr>
+<tr class="pos-wr"><td>Roger Saleapaga II</td><td>BYU</td><td>WR</td><td>$1,600</td><td>3.57</td><td>-3.4</td><td>0</td><td>Night</td><td class="val">2.23</td></tr>
+<tr class="pos-wr"><td>Jaden Greathouse</td><td>Notre Dame</td><td>WR</td><td>$3,400</td><td>7.49</td><td>-0.5</td><td>0</td><td>Night</td><td class="val">2.2</td></tr>
+<tr class="pos-wr"><td>Jojo Phillips</td><td>BYU</td><td>WR</td><td>$2,600</td><td>5.41</td><td>-2.3</td><td>0</td><td>Night</td><td class="val">2.08</td></tr>
+<tr class="pos-wr"><td>Ty Washington</td><td>Notre Dame</td><td>WR</td><td>$1,000</td><td>2.07</td><td>-4.4</td><td>0</td><td>Night</td><td class="val">2.07</td></tr>
+<tr class="pos-wr"><td>Cooper Flanagan</td><td>Notre Dame</td><td>WR</td><td>$1,800</td><td>3.58</td><td>-3.4</td><td>0</td><td>Night</td><td class="val">1.99</td></tr>
+<tr class="pos-qb"><td>Bear Bachmeier</td><td>BYU</td><td>QB</td><td>$10,400</td><td>19.43</td><td>5.9</td><td>0</td><td>Night</td><td class="val">1.87</td></tr>
+<tr class="pos-wr"><td>James Flanigan</td><td>Notre Dame</td><td>WR</td><td>$1,400</td><td>2.6</td><td>-4.2</td><td>0</td><td>Night</td><td class="val">1.86</td></tr>
+<tr class="pos-wr"><td>Kyler Kasper</td><td>BYU</td><td>WR</td><td>$5,400</td><td>9.76</td><td>1</td><td>0</td><td>Night</td><td class="val">1.81</td></tr>
+<tr class="pos-wr"><td>Jordan Faison</td><td>Notre Dame</td><td>WR</td><td>$7,800</td><td>13.91</td><td>2.6</td><td>0</td><td>Night</td><td class="val">1.78</td></tr>
+<tr class="pos-wr"><td>Mylan Graham</td><td>Notre Dame</td><td>WR</td><td>$2,000</td><td>3.52</td><td>-3.6</td><td>0</td><td>Night</td><td class="val">1.76</td></tr>
+<tr class="pos-wr"><td>Legend Glasker</td><td>BYU</td><td>WR</td><td>$6,800</td><td>11.46</td><td>1.4</td><td>0</td><td>Night</td><td class="val">1.69</td></tr>
+<tr class="pos-rb"><td>Jonaz Walton</td><td>Notre Dame</td><td>RB</td><td>$7,200</td><td>11.87</td><td>1.5</td><td>0</td><td>Night</td><td class="val">1.65</td></tr>
+<tr class="pos-qb"><td>CJ Carr</td><td>Notre Dame</td><td>QB</td><td>$11,200</td><td>16.95</td><td>2.6</td><td>0</td><td>Night</td><td class="val">1.51</td></tr>
+<tr class="pos-rb"><td>Preston Rex</td><td>BYU</td><td>RB</td><td>$5,600</td><td>8.04</td><td>-1</td><td>0</td><td>Night</td><td class="val">1.44</td></tr>
+<tr class="pos-rb"><td>Aneyas Williams</td><td>Notre Dame</td><td>RB</td><td>$8,200</td><td>9.57</td><td>-2.2</td><td>0</td><td>Night</td><td class="val">1.17</td></tr>
+<tr class="pos-wr"><td>Micah Gilbert</td><td>Notre Dame</td><td>WR</td><td>$7,400</td><td>8.41</td><td>-2.1</td><td>0</td><td>Night</td><td class="val">1.14</td></tr>
+<tr class="pos-k"><td>Spencer Porath</td><td>Notre Dame</td><td>K</td><td>$4,800</td><td>5.42</td><td>-3.8</td><td>0</td><td>Night</td><td class="val">1.13</td></tr>
+<tr class="pos-rb"><td>Nolan James Jr.</td><td>Notre Dame</td><td>RB</td><td>$9,000</td><td>10.04</td><td>-2.6</td><td>0</td><td>Night</td><td class="val">1.12</td></tr>
+<tr class="pos-wr"><td>Matt Jeffery</td><td>Notre Dame</td><td>WR</td><td>$1,000</td><td>1.12</td><td>-5.4</td><td>0</td><td>Night</td><td class="val">1.12</td></tr>
+<tr class="pos-rb"><td>Journee Tonga</td><td>BYU</td><td>RB</td><td>$6,200</td><td>6.6</td><td>-2.9</td><td>0</td><td>Night</td><td class="val">1.06</td></tr>
+<tr class="pos-k"><td>Matthias Dunn</td><td>BYU</td><td>K</td><td>$4,400</td><td>4.32</td><td>-4.3</td><td>0</td><td>Night</td><td class="val">0.98</td></tr>
+<tr class="pos-wr"><td>Tiger Bachmeier</td><td>BYU</td><td>WR</td><td>$1,000</td><td>0.87</td><td>-5.6</td><td>0</td><td>Night</td><td class="val">0.87</td></tr>
+<tr class="pos-wr"><td>Logan Saldate</td><td>Notre Dame</td><td>WR</td><td>$1,000</td><td>0.59</td><td>-5.9</td><td>0</td><td>Night</td><td class="val">0.59</td></tr>
+<tr class="pos-wr"><td>Jack Larsen</td><td>Notre Dame</td><td>WR</td><td>$1,000</td><td>0.57</td><td>-5.9</td><td>0</td><td>Night</td><td class="val">0.57</td></tr>
+<tr class="pos-wr"><td>Devin Fitzgerald</td><td>Notre Dame</td><td>WR</td><td>$1,000</td><td>0.56</td><td>-5.9</td><td>0</td><td>Night</td><td class="val">0.56</td></tr>
+<tr class="pos-rb"><td>Devaughn Eka</td><td>BYU</td><td>RB</td><td>$3,800</td><td>0.89</td><td>-7.3</td><td>0</td><td>Night</td><td class="val">0.23</td></tr>
+<tr class="pos-wr"><td>Elijah Burress</td><td>Notre Dame</td><td>WR</td><td>$3,200</td><td>0.58</td><td>-7.1</td><td>0</td><td>Night</td><td class="val">0.18</td></tr>
+<tr class="pos-wr"><td>Asher Young</td><td>BYU</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-k"><td>Brody Laga</td><td>BYU</td><td>K</td><td>$4,400</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Charlie Miska</td><td>BYU</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Enoch Watson</td><td>BYU</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Ethan Wood</td><td>BYU</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Fisher Ingersoll</td><td>BYU</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jacob Nye</td><td>BYU</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jared Esplin</td><td>BYU</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jaron Pula</td><td>BYU</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jett Nelson</td><td>BYU</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>John Sanders</td><td>BYU</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Josh Davis</td><td>BYU</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Jovesa Damuni</td><td>BYU</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Keayen Nead</td><td>BYU</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Kila Keone</td><td>BYU</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>LJ Martin</td><td>BYU</td><td>RB</td><td>$8,600</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Logan Payne</td><td>BYU</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Lucky Finau</td><td>BYU</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Matthew Fredrick</td><td>BYU</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Micah Beckstead</td><td>BYU</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Noah Moeaki</td><td>BYU</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Owen Geilman</td><td>BYU</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Sione Moa</td><td>BYU</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Tei Nacua</td><td>BYU</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Terrance Saryon</td><td>BYU</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Trey Roberts</td><td>BYU</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Treyson Bourguet</td><td>BYU</td><td>QB</td><td>$9,200</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Will Zundel</td><td>BYU</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Austin Ratigan</td><td>Notre Dame</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Blake Hebert</td><td>Notre Dame</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Brayden Robinson</td><td>Notre Dame</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Bubba Frazier</td><td>Notre Dame</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Cam Williams</td><td>Notre Dame</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Dylan Faison</td><td>Notre Dame</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Henry Garrity</td><td>Notre Dame</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Ian Premer</td><td>Notre Dame</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Javian Osborne</td><td>Notre Dame</td><td>RB</td><td>$4,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Kaydon Finley</td><td>Notre Dame</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Kedren Young</td><td>Notre Dame</td><td>RB</td><td>$3,600</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Kurt Smith</td><td>Notre Dame</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Matt Williams</td><td>Notre Dame</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-k"><td>Micah Drescher</td><td>Notre Dame</td><td>K</td><td>$4,800</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Noah Grubbs</td><td>Notre Dame</td><td>QB</td><td>$9,600</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Preston Fryzel</td><td>Notre Dame</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Quincy Porter</td><td>Notre Dame</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Teddy Jarrard</td><td>Notre Dame</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Xavier Southall</td><td>Notre Dame</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+</tbody></table></div>
+<div class="player-book"><h3>Player book</h3><div class="trend-up-strip"><h4>Trending up</h4><ul><li data-team="ND">Jonaz Walton · ND · 19.8 last game (3.6 before)</li><li data-team="BYU" hidden>Matthias Dunn · BYU · 11 last game (5 before)</li><li data-team="BYU" hidden>Reggie Frischknecht · BYU · 9.5 last game (3 before)</li><li data-team="ND">Matt Jeffery · ND · 7.4 last game (4.8 before)</li><li data-team="ND">Noah Grubbs · ND · 5.2 last game (3.1 before)</li></ul></div><div class="team-pills noprint"><button type="button" class="team-pill on" data-team="ND">Notre Dame</button><button type="button" class="team-pill" data-team="BYU">BYU</button></div><div class="week-pills noprint"><button type="button" class="week-pill" data-week="0">W0</button><button type="button" class="week-pill" data-week="1">W1</button><button type="button" class="week-pill" data-week="2">W2</button><button type="button" class="week-pill" data-week="3">W3</button><button type="button" class="week-pill" data-week="4">W4</button><button type="button" class="week-pill" data-week="5">W5</button><button type="button" class="week-pill on" data-week="6">W6</button><button type="button" class="week-pill" data-week="season">Season</button></div><section class="week-panel" data-week="0" hidden><h4 class="week-lab">Week 0</h4><article class="game-box" data-team="ND"><h3 class="box-score">Notre Dame</h3><p class="sub">No box for this week.</p></article><article class="game-box" data-team="BYU" hidden><h3 class="box-score">BYU</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="1" hidden><h4 class="week-lab">Week 1</h4><article class="game-box" data-team="ND"><h3 class="box-score">Notre Dame vs Wisconsin</h3><p class="box-line">Notre Dame −20.5 / 46.5</p><div class="box-side"><h4>Notre Dame</h4><p class="run-pass">Notre Dame threw for 239, 2 passing scores and ran for 111, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>C.J. Carr</td><td data-n="29.0">29</td><td data-n="239.0">239</td><td data-n="2.0">2</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Aneyas Williams</td><td data-n="20.0">20</td><td data-n="90.0">90</td><td data-n="2.0">2</td></tr><tr><td>Nolan James Jr.</td><td data-n="7.0">7</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Kedren Young</td><td data-n="3.0">3</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>C.J. Carr</td><td data-n="2.0">2</td><td data-n="-6.0">-6</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Jordan Faison</td><td data-n="4.0">4</td><td>—</td><td data-n="81.0">81</td><td data-n="0.0">0</td></tr><tr><td>Nolan James Jr.</td><td data-n="4.0">4</td><td>—</td><td data-n="67.0">67</td><td data-n="1.0">1</td></tr><tr><td>Micah Gilbert</td><td data-n="3.0">3</td><td>—</td><td data-n="34.0">34</td><td data-n="0.0">0</td></tr><tr><td>Cooper Flanagan</td><td data-n="2.0">2</td><td>—</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Aneyas Williams</td><td data-n="1.0">1</td><td>—</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Kedren Young</td><td data-n="1.0">1</td><td>—</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>James Flanigan</td><td data-n="2.0">2</td><td>—</td><td data-n="10.0">10</td><td data-n="1.0">1</td></tr><tr><td>Jaden Greathouse</td><td data-n="1.0">1</td><td>—</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Ty Washington</td><td data-n="1.0">1</td><td>—</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Spencer Porath</td><td data-n="2.0">2</td><td data-n="5.0">5</td></tr></tbody></table></div><div class="box-side"><h4>Wisconsin</h4><p class="run-pass">Wisconsin threw for 217, 1 passing scores and ran for 67, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Colton Joseph</td><td data-n="30.0">30</td><td data-n="217.0">217</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Abu Sama III</td><td data-n="15.0">15</td><td data-n="49.0">49</td><td data-n="0.0">0</td></tr><tr><td>Darrion Dupree</td><td data-n="4.0">4</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Colton Joseph</td><td data-n="12.0">12</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Malachi Coleman</td><td data-n="4.0">4</td><td>—</td><td data-n="76.0">76</td><td data-n="1.0">1</td></tr><tr><td>Tyrell Henry</td><td data-n="4.0">4</td><td>—</td><td data-n="42.0">42</td><td data-n="0.0">0</td></tr><tr><td>Chris Brooks Jr.</td><td data-n="3.0">3</td><td>—</td><td data-n="38.0">38</td><td data-n="0.0">0</td></tr><tr><td>Eugene Hilton Jr.</td><td data-n="3.0">3</td><td>—</td><td data-n="31.0">31</td><td data-n="0.0">0</td></tr><tr><td>Grant Stec</td><td data-n="3.0">3</td><td>—</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>Darrion Dupree</td><td data-n="1.0">1</td><td>—</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Jacob Harris</td><td data-n="1.0">1</td><td>—</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr></tbody></table></div></article><article class="game-box" data-team="BYU" hidden><h3 class="box-score">BYU 63, Utah Tech 7</h3><p class="box-line">BYU −50.5 / 61.5</p><div class="box-side"><h4>BYU</h4><p class="run-pass">BYU threw for 213, 3 passing scores and ran for 312, 5 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Bear Bachmeier</td><td data-n="20.0">20</td><td data-n="198.0">198</td><td data-n="3.0">3</td></tr><tr><td>Treyson Bourguet</td><td data-n="2.0">2</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Devaughn Eka</td><td data-n="8.0">8</td><td data-n="59.0">59</td><td data-n="1.0">1</td></tr><tr><td>LJ Martin</td><td data-n="7.0">7</td><td data-n="54.0">54</td><td data-n="0.0">0</td></tr><tr><td>Journee Tonga</td><td data-n="2.0">2</td><td data-n="38.0">38</td><td data-n="1.0">1</td></tr><tr><td>Preston Rex</td><td data-n="5.0">5</td><td data-n="38.0">38</td><td data-n="1.0">1</td></tr><tr><td>Bear Bachmeier</td><td data-n="4.0">4</td><td data-n="30.0">30</td><td data-n="1.0">1</td></tr><tr><td>Logan Payne</td><td data-n="5.0">5</td><td data-n="30.0">30</td><td data-n="0.0">0</td></tr><tr><td>Sione Moa</td><td data-n="6.0">6</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Treyson Bourguet</td><td data-n="1.0">1</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Legend Glasker</td><td data-n="2.0">2</td><td data-n="16.0">16</td><td data-n="1.0">1</td></tr><tr><td>Charlie Miska</td><td data-n="2.0">2</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Terrance Saryon</td><td data-n="2.0">2</td><td data-n="-1.0">-1</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Legend Glasker</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="65.0">65</td><td data-n="2.0">2</td></tr><tr><td>Kyler Kasper</td><td data-n="4.0">4</td><td data-n="5.0">5</td><td data-n="42.0">42</td><td data-n="0.0">0</td></tr><tr><td>Roger Saleapaga</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Walker Lyons</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Reggie Frischknecht</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>Jojo Phillips</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="16.0">16</td><td data-n="1.0">1</td></tr><tr><td>Jared Esplin</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>LJ Martin</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Tiger Bachmeier</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Brody Laga</td><td data-n="0.0">0</td><td data-n="3.0">3</td></tr><tr><td>Matthias Dunn</td><td data-n="0.0">0</td><td data-n="6.0">6</td></tr></tbody></table></div><div class="box-side"><h4>Utah Tech</h4><p class="run-pass">Utah Tech threw for 135, 0 passing scores and ran for 49, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Bronson Barben</td><td data-n="22.0">22</td><td data-n="115.0">115</td><td data-n="0.0">0</td></tr><tr><td>CJ Tiller</td><td data-n="9.0">9</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Ace Chatman</td><td data-n="12.0">12</td><td data-n="38.0">38</td><td data-n="1.0">1</td></tr><tr><td>Kona Crowell</td><td data-n="3.0">3</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Bronson Barben</td><td data-n="5.0">5</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Ja&#x27;Kheo Mitchell</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Darnell O&#x27;Quinn</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Junior Curtis</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>CJ Tiller</td><td data-n="2.0">2</td><td data-n="-9.0">-9</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Darnell O&#x27;Quinn</td><td data-n="3.0">3</td><td>—</td><td data-n="41.0">41</td><td data-n="0.0">0</td></tr><tr><td>Will Greene</td><td data-n="3.0">3</td><td data-n="7.0">7</td><td data-n="35.0">35</td><td data-n="0.0">0</td></tr><tr><td>Kona Crowell</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="21.0">21</td><td data-n="0.0">0</td></tr><tr><td>Zay Morris</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Isaac McMullin</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Mike Williams</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Ja&#x27;Kheo Mitchell</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Ace Chatman</td><td>—</td><td data-n="2.0">2</td><td>—</td><td>—</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Dax Iverson</td><td data-n="0.0">0</td><td data-n="1.0">1</td></tr></tbody></table></div></article></section><section class="week-panel" data-week="2" hidden><h4 class="week-lab">Week 2</h4><article class="game-box" data-team="ND"><h3 class="box-score">Notre Dame 52, RICE 0</h3><p class="box-line">Notre Dame −44.5 / 54.5</p><div class="box-side"><h4>Notre Dame</h4><p class="run-pass">Notre Dame threw for 360, 4 passing scores and ran for 118, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>CJ Carr</td><td data-n="20.0">20</td><td data-n="253.0">253</td><td data-n="4.0">4</td></tr><tr><td>Noah Grubbs</td><td data-n="11.0">11</td><td data-n="78.0">78</td><td data-n="0.0">0</td></tr><tr><td>Teddy Jarrard</td><td data-n="2.0">2</td><td data-n="29.0">29</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jonaz Walton</td><td data-n="8.0">8</td><td data-n="48.0">48</td><td data-n="0.0">0</td></tr><tr><td>Aneyas Williams</td><td data-n="9.0">9</td><td data-n="29.0">29</td><td data-n="0.0">0</td></tr><tr><td>Nolan James Jr.</td><td data-n="6.0">6</td><td data-n="29.0">29</td><td data-n="2.0">2</td></tr><tr><td>Kedren Young</td><td data-n="4.0">4</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Javian Osborne</td><td data-n="5.0">5</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Jerome Bettis Jr.</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="61.0">61</td><td data-n="0.0">0</td></tr><tr><td>Jordan Faison</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="54.0">54</td><td data-n="2.0">2</td></tr><tr><td>Jaden Greathouse</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="48.0">48</td><td data-n="0.0">0</td></tr><tr><td>Micah Gilbert</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="47.0">47</td><td data-n="1.0">1</td></tr><tr><td>Logan Saldate</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Elijah Burress</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="33.0">33</td><td data-n="0.0">0</td></tr><tr><td>Matt Jeffery</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Mylan Graham</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="24.0">24</td><td data-n="0.0">0</td></tr><tr><td>Devin Fitzgerald</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>Kedren Young</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Cooper Flanagan</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="1.0">1</td></tr><tr><td>Aneyas Williams</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr><tr><td>Nolan James Jr.</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="-1.0">-1</td><td data-n="0.0">0</td></tr></tbody></table></div><div class="box-side"><h4>RICE</h4><p class="run-pass">RICE threw for 64, 0 passing scores and ran for 68, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jacurri Brown</td><td data-n="12.0">12</td><td data-n="64.0">64</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jacurri Brown</td><td data-n="16.0">16</td><td data-n="32.0">32</td><td data-n="0.0">0</td></tr><tr><td>Tyvonn Byars</td><td data-n="7.0">7</td><td data-n="24.0">24</td><td data-n="0.0">0</td></tr><tr><td>DAndre Hardeman Jr.</td><td data-n="9.0">9</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Davis Lane</td><td data-n="1.0">1</td><td data-n="-1.0">-1</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Barry Jackson Jr.</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="30.0">30</td><td data-n="0.0">0</td></tr><tr><td>Chris Bruce</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Braylen Walker</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Payton Matthews</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Jordan Clark</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Ben Grice</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="-8.0">-8</td><td data-n="0.0">0</td></tr></tbody></table></div></article><article class="game-box" data-team="BYU" hidden><h3 class="box-score">BYU 28, Arizona 17</h3><div class="box-side"><h4>BYU</h4><p class="run-pass">BYU threw for 217, 3 passing scores and ran for 151, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Bear Bachmeier</td><td data-n="26.0">26</td><td data-n="217.0">217</td><td data-n="3.0">3</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>LJ Martin</td><td data-n="20.0">20</td><td data-n="98.0">98</td><td data-n="0.0">0</td></tr><tr><td>Bear Bachmeier</td><td data-n="6.0">6</td><td data-n="37.0">37</td><td data-n="1.0">1</td></tr><tr><td>Preston Rex</td><td data-n="1.0">1</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Legend Glasker</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Legend Glasker</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="74.0">74</td><td data-n="0.0">0</td></tr><tr><td>Kyler Kasper</td><td data-n="4.0">4</td><td data-n="9.0">9</td><td data-n="51.0">51</td><td data-n="2.0">2</td></tr><tr><td>LJ Martin</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="27.0">27</td><td data-n="0.0">0</td></tr><tr><td>Reggie Frischknecht</td><td data-n="1.0">1</td><td>—</td><td data-n="25.0">25</td><td data-n="1.0">1</td></tr><tr><td>Walker Lyons</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Preston Rex</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Roger Saleapaga II</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Matthias Dunn</td><td data-n="0.0">0</td><td data-n="4.0">4</td></tr></tbody></table></div><div class="box-side"><h4>Arizona</h4><p class="run-pass">Arizona threw for 230, 1 passing scores and ran for 97, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Noah Fifita</td><td data-n="31.0">31</td><td data-n="230.0">230</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Kedrick Reescano</td><td data-n="15.0">15</td><td data-n="49.0">49</td><td data-n="0.0">0</td></tr><tr><td>Noah Fifita</td><td data-n="11.0">11</td><td data-n="38.0">38</td><td data-n="1.0">1</td></tr><tr><td>Quincy Craig</td><td data-n="3.0">3</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Chris Hunter III</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Tre Spivey</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Cole Rusk</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="48.0">48</td><td data-n="0.0">0</td></tr><tr><td>Giovanni Richardson</td><td data-n="5.0">5</td><td data-n="6.0">6</td><td data-n="48.0">48</td><td data-n="0.0">0</td></tr><tr><td>Brandon Phelps</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="30.0">30</td><td data-n="0.0">0</td></tr><tr><td>Rodney Gallagher III</td><td data-n="5.0">5</td><td data-n="5.0">5</td><td data-n="26.0">26</td><td data-n="0.0">0</td></tr><tr><td>Quincy Craig</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Shane King</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="21.0">21</td><td data-n="1.0">1</td></tr><tr><td>Tre Spivey</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Chris Hunter III</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Caleb Smith</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Kedrick Reescano</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Michael Salgado-Medina</td><td data-n="1.0">1</td><td data-n="2.0">2</td></tr></tbody></table></div></article></section><section class="week-panel" data-week="3" hidden><h4 class="week-lab">Week 3</h4><article class="game-box" data-team="ND"><h3 class="box-score">Notre Dame 27, Michigan State 10</h3><p class="box-line">Notre Dame −29 / 51.5</p><div class="box-side"><h4>Notre Dame</h4><p class="run-pass">Notre Dame threw for 234, 0 passing scores and ran for 165, 3 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>CJ Carr</td><td data-n="24.0">24</td><td data-n="234.0">234</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Nolan James Jr.</td><td data-n="26.0">26</td><td data-n="121.0">121</td><td data-n="1.0">1</td></tr><tr><td>Aneyas Williams</td><td data-n="9.0">9</td><td data-n="25.0">25</td><td data-n="1.0">1</td></tr><tr><td>Brayden Robinson</td><td data-n="1.0">1</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>CJ Carr</td><td data-n="3.0">3</td><td data-n="9.0">9</td><td data-n="1.0">1</td></tr><tr><td>Jonaz Walton</td><td data-n="1.0">1</td><td data-n="-1.0">-1</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Micah Gilbert</td><td data-n="8.0">8</td><td data-n="9.0">9</td><td data-n="170.0">170</td><td data-n="0.0">0</td></tr><tr><td>Jordan Faison</td><td data-n="5.0">5</td><td data-n="7.0">7</td><td data-n="38.0">38</td><td data-n="0.0">0</td></tr><tr><td>Aneyas Williams</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Mylan Graham</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Nolan James Jr.</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Jonaz Walton</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table></div><div class="box-side"><h4>Michigan State</h4><p class="run-pass">Michigan State threw for 123, 0 passing scores and ran for 44, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Alessio Milivojevic</td><td data-n="17.0">17</td><td data-n="123.0">123</td><td data-n="0.0">0</td></tr><tr><td>Cam Fancher</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Cam Edwards</td><td data-n="12.0">12</td><td data-n="38.0">38</td><td data-n="0.0">0</td></tr><tr><td>Cam Fancher</td><td data-n="2.0">2</td><td data-n="18.0">18</td><td data-n="1.0">1</td></tr><tr><td>Marvis Parrish</td><td data-n="5.0">5</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Alessio Milivojevic</td><td data-n="8.0">8</td><td data-n="-20.0">-20</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Rodney Bullard Jr.</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="66.0">66</td><td data-n="0.0">0</td></tr><tr><td>Jayden Savoury</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="30.0">30</td><td data-n="0.0">0</td></tr><tr><td>Fredrick Moore</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Kai Rios</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Chrishon McCray</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Cam Edwards</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr><tr><td>Cam Fancher</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table></div></article><article class="game-box" data-team="BYU" hidden><h3 class="box-score">BYU 41, Colorado State 23</h3><p class="box-line">BYU −17.5 / 52.5</p><div class="box-side"><h4>BYU</h4><p class="run-pass">BYU threw for 227, 0 passing scores and ran for 337, 5 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Bear Bachmeier</td><td data-n="16.0">16</td><td data-n="227.0">227</td><td data-n="0.0">0</td></tr><tr><td>Treyson Bourguet</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>LJ Martin</td><td data-n="15.0">15</td><td data-n="176.0">176</td><td data-n="3.0">3</td></tr><tr><td>Journee Tonga</td><td data-n="10.0">10</td><td data-n="91.0">91</td><td data-n="0.0">0</td></tr><tr><td>Devaughn Eka</td><td data-n="4.0">4</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Preston Rex</td><td data-n="4.0">4</td><td data-n="24.0">24</td><td data-n="1.0">1</td></tr><tr><td>Legend Glasker</td><td data-n="3.0">3</td><td data-n="21.0">21</td><td data-n="1.0">1</td></tr><tr><td>Bear Bachmeier</td><td data-n="2.0">2</td><td data-n="-3.0">-3</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Legend Glasker</td><td data-n="5.0">5</td><td data-n="5.0">5</td><td data-n="131.0">131</td><td data-n="0.0">0</td></tr><tr><td>Walker Lyons</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="40.0">40</td><td data-n="0.0">0</td></tr><tr><td>Kyler Kasper</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Jojo Phillips</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="18.0">18</td><td data-n="0.0">0</td></tr><tr><td>LJ Martin</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Keayen Nead</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Matthias Dunn</td><td data-n="2.0">2</td><td data-n="5.0">5</td></tr></tbody></table></div><div class="box-side"><h4>Colorado State</h4><p class="run-pass">Colorado State threw for 220, 2 passing scores and ran for 84, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Hauss Hejny</td><td data-n="10.0">10</td><td data-n="80.0">80</td><td data-n="1.0">1</td></tr><tr><td>Darius Curry</td><td data-n="8.0">8</td><td data-n="70.0">70</td><td data-n="1.0">1</td></tr><tr><td>K&#x27;saan Farrar</td><td data-n="23.0">23</td><td data-n="70.0">70</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Durell Robinson</td><td data-n="6.0">6</td><td data-n="29.0">29</td><td data-n="1.0">1</td></tr><tr><td>Mel Brown</td><td data-n="9.0">9</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>K&#x27;saan Farrar</td><td data-n="2.0">2</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Darius Curry</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Hauss Hejny</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Cedric Ross</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td></tr><tr><td>Oliver Lundberg</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Oliver Lundberg-Coleman</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Cedric Ross</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="85.0">85</td><td data-n="0.0">0</td></tr><tr><td>RJ Vick</td><td data-n="5.0">5</td><td data-n="7.0">7</td><td data-n="67.0">67</td><td data-n="1.0">1</td></tr><tr><td>Durell Robinson</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Mel Brown</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Jaivyn Moore</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Lavon Brown</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Juice Vereen</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Dominic Toy</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Jackson Harper</td><td data-n="3.0">3</td><td data-n="9.0">9</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Nader Chirchi</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="1.0">1</td></tr><tr><td>Terrence Smith Jr.</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>Tommy Maher</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="-1.0">-1</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Kali Nguma</td><td data-n="0.0">0</td><td data-n="1.0">1</td></tr></tbody></table></div></article></section><section class="week-panel" data-week="4" hidden><h4 class="week-lab">Week 4</h4><article class="game-box" data-team="ND"><h3 class="box-score">Notre Dame 49, Purdue 10</h3><p class="box-line">Notre Dame −27.5 / 57.5</p><div class="box-side"><h4>Notre Dame</h4><p class="run-pass">Notre Dame threw for 267, 4 passing scores and ran for 179, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>C.J. Carr</td><td data-n="22.0">22</td><td data-n="237.0">237</td><td data-n="3.0">3</td></tr><tr><td>Noah Grubbs</td><td data-n="4.0">4</td><td data-n="30.0">30</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Aneyas Williams</td><td data-n="14.0">14</td><td data-n="80.0">80</td><td data-n="1.0">1</td></tr><tr><td>Jonaz Walton</td><td data-n="7.0">7</td><td data-n="61.0">61</td><td data-n="0.0">0</td></tr><tr><td>Nolan James Jr.</td><td data-n="7.0">7</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>C.J. Carr</td><td data-n="3.0">3</td><td data-n="10.0">10</td><td data-n="1.0">1</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Micah Gilbert</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="83.0">83</td><td data-n="1.0">1</td></tr><tr><td>Jordan Faison</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="66.0">66</td><td data-n="0.0">0</td></tr><tr><td>Jaden Greathouse</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Cooper Flanagan</td><td data-n="2.0">2</td><td>—</td><td data-n="29.0">29</td><td data-n="1.0">1</td></tr><tr><td>Jerome Bettis Jr.</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="26.0">26</td><td data-n="0.0">0</td></tr><tr><td>James Flanigan</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Nolan James Jr.</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="8.0">8</td><td data-n="1.0">1</td></tr><tr><td>Aneyas Williams</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Matt Jeffery</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="1.0">1</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Spencer Porath</td><td data-n="0.0">0</td><td data-n="7.0">7</td></tr></tbody></table></div><div class="box-side"><h4>Purdue</h4><p class="run-pass">Purdue threw for 178, 1 passing scores and ran for 40, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Ryan Browne</td><td data-n="28.0">28</td><td data-n="111.0">111</td><td data-n="0.0">0</td></tr><tr><td>Evans Chuba</td><td data-n="9.0">9</td><td data-n="67.0">67</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Fame Ijeboi</td><td data-n="12.0">12</td><td data-n="41.0">41</td><td data-n="0.0">0</td></tr><tr><td>Antonio Harris</td><td data-n="3.0">3</td><td data-n="16.0">16</td><td data-n="0.0">0</td></tr><tr><td>Jerrick Gibson</td><td data-n="6.0">6</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Evans Chuba</td><td data-n="4.0">4</td><td data-n="-6.0">-6</td><td data-n="0.0">0</td></tr><tr><td>Ryan Browne</td><td data-n="6.0">6</td><td data-n="-23.0">-23</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Tra&#x27;Mar Harris</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Asaad Waseem</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="34.0">34</td><td data-n="0.0">0</td></tr><tr><td>Bisi Owens</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="23.0">23</td><td data-n="1.0">1</td></tr><tr><td>Xavier Townsend</td><td data-n="5.0">5</td><td data-n="7.0">7</td><td data-n="16.0">16</td><td data-n="0.0">0</td></tr><tr><td>Chauncey Magwood</td><td data-n="2.0">2</td><td data-n="7.0">7</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Cooper McCutchan</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Ar&#x27;mari Towns</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>De&#x27;Nylon Morrissette</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Jerrick Gibson</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Jesse Watson</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Fame Ijeboi</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Jacobo Echeverria Lozano</td><td data-n="1.0">1</td><td data-n="1.0">1</td></tr></tbody></table></div></article><article class="game-box" data-team="BYU" hidden><h3 class="box-score">BYU</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="5" hidden><h4 class="week-lab">Week 5</h4><article class="game-box" data-team="ND"><h3 class="box-score">Notre Dame 37, North Carolina 26</h3><p class="box-line">Notre Dame −21.5 / 46.5</p><div class="box-side"><h4>Notre Dame</h4><p class="run-pass">Notre Dame threw for 234, 4 passing scores and ran for 242, 1 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>CJ Carr</td><td data-n="29.0">29</td><td data-n="234.0">234</td><td data-n="4.0">4</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jonaz Walton</td><td data-n="23.0">23</td><td data-n="120.0">120</td><td data-n="0.0">0</td></tr><tr><td>Nolan James Jr.</td><td data-n="9.0">9</td><td data-n="65.0">65</td><td data-n="0.0">0</td></tr><tr><td>Aneyas Williams</td><td data-n="8.0">8</td><td data-n="42.0">42</td><td data-n="0.0">0</td></tr><tr><td>CJ Carr</td><td data-n="4.0">4</td><td data-n="15.0">15</td><td data-n="1.0">1</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Jordan Faison</td><td data-n="8.0">8</td><td data-n="9.0">9</td><td data-n="132.0">132</td><td data-n="2.0">2</td></tr><tr><td>Micah Gilbert</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="34.0">34</td><td data-n="0.0">0</td></tr><tr><td>Jonaz Walton</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Jaden Greathouse</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="18.0">18</td><td data-n="1.0">1</td></tr><tr><td>Aneyas Williams</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Nolan James Jr.</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="1.0">1</td></tr><tr><td>Ty Washington</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Cooper Flanagan</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr></tbody></table></div><div class="box-side"><h4>North Carolina</h4><p class="run-pass">North Carolina threw for 209, 3 passing scores and ran for 77, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Billy Edwards Jr.</td><td data-n="28.0">28</td><td data-n="209.0">209</td><td data-n="3.0">3</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Benjamin Hall</td><td data-n="10.0">10</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Jaylen McGill</td><td data-n="4.0">4</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Billy Edwards Jr.</td><td data-n="3.0">3</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Demon June</td><td data-n="6.0">6</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Jordan Shipp</td><td data-n="7.0">7</td><td data-n="7.0">7</td><td data-n="109.0">109</td><td data-n="0.0">0</td></tr><tr><td>Jelani Thurman</td><td data-n="5.0">5</td><td data-n="8.0">8</td><td data-n="50.0">50</td><td data-n="2.0">2</td></tr><tr><td>Shamar Easter</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="24.0">24</td><td data-n="1.0">1</td></tr><tr><td>C.J. Sadler</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr><tr><td>Demon June</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Benjamin Hall</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table></div></article><article class="game-box" data-team="BYU" hidden><h3 class="box-score">BYU 17, TCU 10</h3><p class="box-line">BYU −6.5 / 47.5</p><div class="box-side"><h4>BYU</h4><p class="run-pass">BYU threw for 62, 0 passing scores and ran for 157, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Bear Bachmeier</td><td data-n="24.0">24</td><td data-n="62.0">62</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Bear Bachmeier</td><td data-n="15.0">15</td><td data-n="66.0">66</td><td data-n="2.0">2</td></tr><tr><td>Journee Tonga</td><td data-n="7.0">7</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Legend Glasker</td><td data-n="4.0">4</td><td data-n="26.0">26</td><td data-n="0.0">0</td></tr><tr><td>Preston Rex</td><td data-n="8.0">8</td><td data-n="21.0">21</td><td data-n="0.0">0</td></tr><tr><td>LJ Martin</td><td data-n="2.0">2</td><td data-n="16.0">16</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Kyler Kasper</td><td data-n="2.0">2</td><td data-n="5.0">5</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Preston Rex</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Legend Glasker</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Roger Saleapaga II</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Jojo Phillips</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Walker Lyons</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>LJ Martin</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr><tr><td>Journee Tonga</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table></div><div class="box-side"><h4>TCU</h4><p class="run-pass">TCU threw for 187, 1 passing scores and ran for 72, 0 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jaden Craig</td><td data-n="25.0">25</td><td data-n="187.0">187</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Jeremy Payne</td><td data-n="14.0">14</td><td data-n="77.0">77</td><td data-n="0.0">0</td></tr><tr><td>Jon Denman</td><td data-n="7.0">7</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Kari Ashley</td><td data-n="1.0">1</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Major Everhart</td><td data-n="1.0">1</td><td data-n="-4.0">-4</td><td data-n="0.0">0</td></tr><tr><td>Jaden Craig</td><td data-n="7.0">7</td><td data-n="-27.0">-27</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Kari Ashley</td><td data-n="6.0">6</td><td data-n="8.0">8</td><td data-n="108.0">108</td><td data-n="1.0">1</td></tr><tr><td>Ed Small</td><td data-n="4.0">4</td><td data-n="6.0">6</td><td data-n="32.0">32</td><td data-n="0.0">0</td></tr><tr><td>Jeremy Payne</td><td data-n="4.0">4</td><td data-n="4.0">4</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Ka&#x27;Morreun Pimpton</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr><tr><td>Jacobe Hayes</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="10.0">10</td><td data-n="0.0">0</td></tr><tr><td>Jon Denman</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr></tbody></table></div></article></section><section class="week-panel" data-week="6"><h4 class="week-lab">Week 6</h4><article class="game-box" data-team="ND"><h3 class="box-score">Notre Dame</h3><p class="sub">No box for this week.</p></article><article class="game-box" data-team="BYU" hidden><h3 class="box-score">BYU</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="season" hidden><h4 class="week-lab">Season totals</h4><article class="game-box" data-team="ND"><h3 class="box-score">Notre Dame · 5 games</h3><div class="box-side"><h4>Notre Dame</h4><p class="run-pass">Notre Dame threw for 1334, 14 passing scores and ran for 815, 10 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>C.J. Carr</td><td data-n="124.0">124</td><td data-n="1197.0">1197</td><td data-n="13.0">13</td></tr><tr><td>Noah Grubbs</td><td data-n="15.0">15</td><td data-n="108.0">108</td><td data-n="1.0">1</td></tr><tr><td>Teddy Jarrard</td><td data-n="2.0">2</td><td data-n="29.0">29</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Aneyas Williams</td><td data-n="60.0">60</td><td data-n="266.0">266</td><td data-n="4.0">4</td></tr><tr><td>Nolan James Jr.</td><td data-n="55.0">55</td><td data-n="262.0">262</td><td data-n="3.0">3</td></tr><tr><td>Jonaz Walton</td><td data-n="39.0">39</td><td data-n="228.0">228</td><td data-n="0.0">0</td></tr><tr><td>C.J. Carr</td><td data-n="12.0">12</td><td data-n="28.0">28</td><td data-n="3.0">3</td></tr><tr><td>Kedren Young</td><td data-n="7.0">7</td><td data-n="16.0">16</td><td data-n="0.0">0</td></tr><tr><td>Brayden Robinson</td><td data-n="1.0">1</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr><tr><td>Javian Osborne</td><td data-n="5.0">5</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Jordan Faison</td><td data-n="25.0">25</td><td>—</td><td data-n="371.0">371</td><td data-n="4.0">4</td></tr><tr><td>Micah Gilbert</td><td data-n="18.0">18</td><td>—</td><td data-n="368.0">368</td><td data-n="2.0">2</td></tr><tr><td>Jaden Greathouse</td><td data-n="8.0">8</td><td>—</td><td data-n="108.0">108</td><td data-n="1.0">1</td></tr><tr><td>Jerome Bettis Jr.</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="87.0">87</td><td data-n="0.0">0</td></tr><tr><td>Nolan James Jr.</td><td data-n="10.0">10</td><td>—</td><td data-n="87.0">87</td><td data-n="3.0">3</td></tr><tr><td>Cooper Flanagan</td><td data-n="6.0">6</td><td>—</td><td data-n="48.0">48</td><td data-n="2.0">2</td></tr><tr><td>Logan Saldate</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Aneyas Williams</td><td data-n="7.0">7</td><td>—</td><td data-n="34.0">34</td><td data-n="0.0">0</td></tr><tr><td>Elijah Burress</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="33.0">33</td><td data-n="0.0">0</td></tr><tr><td>Matt Jeffery</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="32.0">32</td><td data-n="1.0">1</td></tr><tr><td>Mylan Graham</td><td data-n="3.0">3</td><td data-n="5.0">5</td><td data-n="32.0">32</td><td data-n="0.0">0</td></tr><tr><td>Jonaz Walton</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Devin Fitzgerald</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>James Flanigan</td><td data-n="3.0">3</td><td>—</td><td data-n="19.0">19</td><td data-n="1.0">1</td></tr><tr><td>Kedren Young</td><td data-n="2.0">2</td><td>—</td><td data-n="19.0">19</td><td data-n="0.0">0</td></tr><tr><td>Ty Washington</td><td data-n="2.0">2</td><td>—</td><td data-n="12.0">12</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Spencer Porath</td><td data-n="2.0">2</td><td data-n="12.0">12</td></tr></tbody></table></div></article><article class="game-box" data-team="BYU" hidden><h3 class="box-score">BYU · 4 games</h3><div class="box-side"><h4>BYU</h4><p class="run-pass">BYU threw for 719, 6 passing scores and ran for 957, 13 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Bear Bachmeier</td><td data-n="86.0">86</td><td data-n="704.0">704</td><td data-n="6.0">6</td></tr><tr><td>Treyson Bourguet</td><td data-n="3.0">3</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>LJ Martin</td><td data-n="44.0">44</td><td data-n="344.0">344</td><td data-n="3.0">3</td></tr><tr><td>Journee Tonga</td><td data-n="19.0">19</td><td data-n="157.0">157</td><td data-n="1.0">1</td></tr><tr><td>Bear Bachmeier</td><td data-n="27.0">27</td><td data-n="130.0">130</td><td data-n="4.0">4</td></tr><tr><td>Preston Rex</td><td data-n="18.0">18</td><td data-n="94.0">94</td><td data-n="2.0">2</td></tr><tr><td>Devaughn Eka</td><td data-n="12.0">12</td><td data-n="87.0">87</td><td data-n="1.0">1</td></tr><tr><td>Legend Glasker</td><td data-n="10.0">10</td><td data-n="68.0">68</td><td data-n="2.0">2</td></tr><tr><td>Logan Payne</td><td data-n="5.0">5</td><td data-n="30.0">30</td><td data-n="0.0">0</td></tr><tr><td>Sione Moa</td><td data-n="6.0">6</td><td data-n="22.0">22</td><td data-n="0.0">0</td></tr><tr><td>Treyson Bourguet</td><td data-n="1.0">1</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Charlie Miska</td><td data-n="2.0">2</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Terrance Saryon</td><td data-n="2.0">2</td><td data-n="-1.0">-1</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Legend Glasker</td><td data-n="14.0">14</td><td data-n="16.0">16</td><td data-n="279.0">279</td><td data-n="2.0">2</td></tr><tr><td>Kyler Kasper</td><td data-n="11.0">11</td><td data-n="22.0">22</td><td data-n="138.0">138</td><td data-n="2.0">2</td></tr><tr><td>Walker Lyons</td><td data-n="8.0">8</td><td data-n="11.0">11</td><td data-n="89.0">89</td><td data-n="0.0">0</td></tr><tr><td>Reggie Frischknecht</td><td data-n="2.0">2</td><td>—</td><td data-n="45.0">45</td><td data-n="1.0">1</td></tr><tr><td>LJ Martin</td><td data-n="5.0">5</td><td data-n="8.0">8</td><td data-n="41.0">41</td><td data-n="0.0">0</td></tr><tr><td>Jojo Phillips</td><td data-n="5.0">5</td><td data-n="8.0">8</td><td data-n="40.0">40</td><td data-n="1.0">1</td></tr><tr><td>Roger Saleapaga</td><td data-n="4.0">4</td><td data-n="7.0">7</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Preston Rex</td><td data-n="3.0">3</td><td data-n="4.0">4</td><td data-n="20.0">20</td><td data-n="0.0">0</td></tr><tr><td>Jared Esplin</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Keayen Nead</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Tiger Bachmeier</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="5.0">5</td><td data-n="0.0">0</td></tr><tr><td>Journee Tonga</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Brody Laga</td><td data-n="0.0">0</td><td data-n="3.0">3</td></tr><tr><td>Matthias Dunn</td><td data-n="2.0">2</td><td data-n="15.0">15</td></tr></tbody></table></div></article></section></div>
+</article>
+</main></div>
+<script>
+(function(){
+  function applyTeam(book, pill){
+    if(!book || !pill) return;
+    book.querySelectorAll('.team-pill').forEach(function(p){
+      p.classList.toggle('on', p===pill);
+    });
+    var team=pill.getAttribute('data-team')||'';
+    book.querySelectorAll('.game-box').forEach(function(box){
+      box.hidden = (box.getAttribute('data-team')||'')!==team;
+    });
+    book.querySelectorAll('.trend-up-strip li[data-team]').forEach(function(li){
+      li.hidden = (li.getAttribute('data-team')||'')!==team;
+    });
+  }
+  window.applyShowdownTeam = applyTeam;
+  function applyWeek(book, pill){
+    if(!book || !pill) return;
+    book.querySelectorAll('.week-pill').forEach(function(p){
+      p.classList.toggle('on', p===pill);
+    });
+    var wk=pill.getAttribute('data-week')||'';
+    book.querySelectorAll('.week-panel').forEach(function(panel){
+      panel.hidden = (panel.getAttribute('data-week')||'')!==wk;
+    });
+    var inp=document.getElementById('playerSearch');
+    if(inp) inp.dispatchEvent(new Event('input'));
+  }
+  document.addEventListener('click', function(e){
+    var teamPill=e.target.closest('.team-pill');
+    if(teamPill){
+      var teamBook=teamPill.closest('.player-book');
+      if(!teamBook) return;
+      applyTeam(teamBook, teamPill);
+      var teamInp=document.getElementById('playerSearch');
+      if(teamInp) teamInp.dispatchEvent(new Event('input'));
+      return;
+    }
+    var pill=e.target.closest('.week-pill');
+    if(!pill) return;
+    var book=pill.closest('.player-book');
+    if(!book) return;
+    applyWeek(book, pill);
+  });
+})();
+</script>
+<script>
+(function(){
+  var KEY='desk-report-theme';
+  function apply(mode){
+    document.documentElement.classList.toggle('light', mode==='light');
+    var b=document.getElementById('themeBtn');
+    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  var saved=null;
+  try { saved=localStorage.getItem(KEY); } catch (e) {}
+  apply(saved==='light'?'light':'dark');
+  window.toggleDeskTheme=function(){
+    apply(document.documentElement.classList.contains('light')?'dark':'light');
+  };
+})();
+</script>
+<script>
+(function(){
+  function val(td){
+    if(!td) return {n:false, v:null, s:''};
+    var dn=td.getAttribute('data-n');
+    if(dn!==null && dn!==''){
+      var n=parseFloat(dn);
+      if(!isNaN(n)) return {n:true, v:n, s:dn};
+    }
+    if(td.querySelector){
+      if(td.querySelector('.tick.on')) return {n:true, v:1, s:'1'};
+      if(td.querySelector('.tick')) return {n:true, v:0, s:'0'};
+    }
+    var t=(td.textContent||'').trim();
+    if(!t || t==='—' || t==='-') return {n:false, v:null, s:''};
+    var pct=t.match(/(-?\d+(?:\.\d+)?)%/);
+    if(pct) return {n:true, v:parseFloat(pct[1]), s:t};
+    var rec=t.match(/^(-?\d+(?:\.\d+)?)\s*\/\s*(-?\d+(?:\.\d+)?)/);
+    if(rec){
+      var den=parseFloat(rec[2]);
+      if(den) return {n:true, v:parseFloat(rec[1])/den, s:t};
+    }
+    var raw=t.replace(/[$,×x]/g,'').replace(/,/g,'');
+    if(/^-?\d+(\.\d+)?$/.test(raw)) return {n:true, v:parseFloat(raw), s:t};
+    var d=Date.parse(t);
+    if(!isNaN(d) && /[A-Za-z]{3,}/.test(t) && /\d{4}/.test(t)) return {n:true, v:d, s:t};
+    return {n:false, v:t.toLowerCase(), s:t};
+  }
+  function sortTable(table, col, dir){
+    var tb=table && table.tBodies[0];
+    if(!tb) return;
+    Array.prototype.forEach.call(table.querySelectorAll('th'), function(h){
+      h.removeAttribute('data-dir');
+    });
+    var mark=table.querySelector('th[data-col="'+col+'"]');
+    if(!mark){
+      var row=table.querySelector('thead tr');
+      if(row && row.children[col]) mark=row.children[col];
+    }
+    if(mark) mark.setAttribute('data-dir', dir);
+    var rows=Array.prototype.slice.call(tb.rows);
+    rows.sort(function(a,b){
+      var A=val(a.cells[col]);
+      var B=val(b.cells[col]);
+      if(A.v===null && B.v===null) return 0;
+      if(A.v===null) return 1;
+      if(B.v===null) return -1;
+      var cmp=0;
+      if(A.n && B.n) cmp=A.v-B.v;
+      else cmp=String(A.v).localeCompare(String(B.v));
+      return dir==='asc' ? cmp : -cmp;
+    });
+    rows.forEach(function(r){ tb.appendChild(r); });
+  }
+  document.addEventListener('click', function(e){
+    var th=e.target.closest('table.sortable th');
+    if(!th || th.closest('tfoot')) return;
+    var table=th.closest('table');
+    if(!table) return;
+    var raw=th.getAttribute('data-col');
+    var col=raw===null ? Array.prototype.indexOf.call(th.parentNode.children, th) : parseInt(raw,10);
+    if(isNaN(col) || col<0) return;
+    var dir=th.getAttribute('data-dir')==='asc' ? 'desc' : 'asc';
+    sortTable(table, col, dir);
+  });
+  document.querySelectorAll('table.sortable[data-default-sort]').forEach(function(table){
+    var want=(table.getAttribute('data-default-sort')||'').toLowerCase();
+    var ths=table.querySelectorAll('thead th');
+    var idx=-1;
+    for(var i=0;i<ths.length;i++){
+      var t=(ths[i].textContent||'').trim().toLowerCase();
+      if(t===want || t.indexOf(want)>=0 || want.indexOf(t)>=0){
+        var raw=ths[i].getAttribute('data-col');
+        idx=raw===null ? i : parseInt(raw,10);
+        break;
+      }
+    }
+    if(idx>=0) sortTable(table, idx, 'desc');
+  });
+})();
+</script>
+<script>
+(function(){
+  function norm(s){
+    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+  }
+  function skip(el){
+    return !!(el.closest && el.closest('dialog, .pcard, .rail'));
+  }
+  function playerIdx(table){
+    var ths=table.querySelectorAll('thead th');
+    for(var i=0;i<ths.length;i++){
+      var t=norm(ths[i].textContent);
+      if(t==='player'||t==='name') return i;
+    }
+    return -1;
+  }
+  function rowHit(tr, q, pidx){
+    if(!q) return true;
+    if(pidx>=0 && tr.cells[pidx]) return norm(tr.cells[pidx].textContent).indexOf(q)>=0;
+    return norm(tr.textContent).indexOf(q)>=0;
+  }
+  function apply(opts){
+    opts = opts || {};
+    var inp=document.getElementById('playerSearch');
+    if(!inp) return;
+    var q=norm(inp.value);
+    var n=0;
+    var hitSel='tbody tr:not([hidden]), li:not([hidden])';
+    function teamOk(tr){
+      return true;
+    }
+    function mark(el, hit){
+      el.hidden = !hit;
+      el.classList.toggle('name-hit', !!(q && hit));
+      if(q && hit) n++;
+    }
+    function panelHasHit(sel){
+      var panel=document.querySelector(sel);
+      if(!panel) return false;
+      var hit=false;
+      panel.querySelectorAll('tbody tr, li').forEach(function(el){
+        if(!el.hidden) hit=true;
+      });
+      return hit;
+    }
+    document.querySelectorAll('table tbody tr').forEach(function(tr){
+      if(skip(tr)) return;
+      var ok=teamOk(tr) && rowHit(tr, q, playerIdx(tr.closest('table')));
+      mark(tr, ok);
+    });
+    document.querySelectorAll('table').forEach(function(t){
+      if(skip(t)) return;
+      var any=false;
+      var tb=t.tBodies[0];
+      if(tb){
+        Array.prototype.forEach.call(tb.rows, function(r){ if(!r.hidden) any=true; });
+      }
+      t.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.pos-book,.week-panel,.box-side,.game-box').forEach(function(sec){
+      var any=false;
+      sec.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) any=true; });
+      if(!sec.querySelector('tbody tr')) any=true;
+      sec.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.week-book-wrap').forEach(function(w){
+      var t=w.querySelector('table');
+      w.classList.toggle('search-empty', !!(t && t.classList.contains('search-empty')));
+    });
+    function selectedTeam(book){
+      var pill=book && book.querySelector('.team-pill.on');
+      return pill ? (pill.getAttribute('data-team')||'') : '';
+    }
+    function teamHasName(book, team){
+      var hit=false;
+      book.querySelectorAll('.game-box').forEach(function(box){
+        if((box.getAttribute('data-team')||'')!==team) return;
+        box.querySelectorAll('tbody tr').forEach(function(r){
+          if(rowHit(r, q, playerIdx(r.closest('table')))) hit=true;
+        });
+      });
+      book.querySelectorAll('.trend-up-strip li[data-team]').forEach(function(li){
+        if((li.getAttribute('data-team')||'')!==team) return;
+        if(norm(li.textContent).indexOf(q)>=0) hit=true;
+      });
+      return hit;
+    }
+    document.querySelectorAll('.team-pill').forEach(function(pill){
+      var book=pill.closest('.player-book');
+      if(!book) return;
+      var team=pill.getAttribute('data-team')||'';
+      pill.classList.toggle('search-miss', !!(q && !teamHasName(book, team)));
+    });
+    if(opts.jump){
+      document.querySelectorAll('.player-book').forEach(function(book){
+        var on=book.querySelector('.team-pill.on');
+        var sel=selectedTeam(book);
+        if(!q || !on || teamHasName(book, sel)) return;
+        var alt=book.querySelector('.team-pill:not(.search-miss)');
+        if(alt && alt!==on && window.applyShowdownTeam) window.applyShowdownTeam(book, alt);
+      });
+    }
+    document.querySelectorAll('.player-book').forEach(function(book){
+      var sel=selectedTeam(book);
+      book.querySelectorAll('.trend-up-strip li[data-team]').forEach(function(li){
+        var teamHit=!sel || (li.getAttribute('data-team')||'')===sel;
+        var nameHit=!q || norm(li.textContent).indexOf(q)>=0;
+        mark(li, teamHit && nameHit);
+      });
+    });
+    document.querySelectorAll('.week-pill').forEach(function(pill){
+      var book=pill.closest('.player-book');
+      if(!book) return;
+      var sel=selectedTeam(book);
+      var wk=pill.getAttribute('data-week')||'';
+      var panel=book.querySelector('.week-panel[data-week="'+wk+'"]');
+      var hit=false;
+      if(panel){
+        panel.querySelectorAll('.game-box').forEach(function(box){
+          if(sel && (box.getAttribute('data-team')||'')!==sel) return;
+          box.querySelectorAll('tbody tr').forEach(function(r){
+            if(rowHit(r, q, playerIdx(r.closest('table')))) hit=true;
+          });
+        });
+        if(!panel.querySelector('tbody tr')) hit=true;
+      }
+      pill.classList.toggle('search-miss', !!(q && !hit));
+    });
+    document.querySelectorAll('li').forEach(function(li){
+      if(skip(li)) return;
+      if(li.hasAttribute('data-team')) return;
+      mark(li, !q || norm(li.textContent).indexOf(q)>=0);
+    });
+    var hint=document.getElementById('playerSearchHint');
+    if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
+    document.querySelectorAll('label.pill[for]').forEach(function(lab){
+      var id=lab.getAttribute('for');
+      var sel = id==='v-report' ? '.game-report'
+              : id==='v-cards' ? '.card-build'
+              : id==='v-etr' ? '.etr-board'
+              : id==='v-preview' ? '.preview-board'
+              : id==='v-game' ? '.game-report-link'
+              : id==='v-book' ? '.player-book' : '';
+      if(!sel) return;
+      lab.classList.toggle('search-miss', !!(q && !panelHasHit(sel)));
+    });
+    if(opts.jump){
+      var book=document.querySelector('.player-book');
+      if(book && q){
+        var on=book.querySelector('.week-pill.on');
+        var cur=on ? (on.getAttribute('data-week')||'') : '';
+        var curPanel=cur ? book.querySelector('.week-panel[data-week="'+cur+'"]') : null;
+        var curHit=false;
+        if(curPanel){
+          var selNow=book.querySelector('.team-pill.on');
+          var selTeam=selNow ? (selNow.getAttribute('data-team')||'') : '';
+          curPanel.querySelectorAll('tbody tr.name-hit').forEach(function(r){
+            var box=r.closest('.game-box');
+            if(selTeam && box && (box.getAttribute('data-team')||'')!==selTeam) return;
+            curHit=true;
+          });
+        }
+        if(!curHit){
+          var alt=book.querySelector('.week-pill:not(.search-miss)');
+          if(alt && alt!==on){
+            book.querySelectorAll('.week-pill').forEach(function(p){ p.classList.toggle('on', p===alt); });
+            var aw=alt.getAttribute('data-week')||'';
+            book.querySelectorAll('.week-panel').forEach(function(panel){
+              panel.hidden = (panel.getAttribute('data-week')||'')!==aw;
+            });
+          }
+        }
+      }
+      var shownArt=document.querySelector('article.panel');
+      var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
+      if(jumpEl){
+        setTimeout(function(){
+          try { jumpEl.scrollIntoView({block:'center', behavior:'smooth'}); }
+          catch (err) { jumpEl.scrollIntoView(true); }
+        }, 40);
+      }
+    }
+  }
+  var form=document.getElementById('playerSearchForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      apply({jump:true});
+    });
+  }
+  var inp=document.getElementById('playerSearch');
+  if(inp){
+    inp.addEventListener('input', function(){ apply({}); });
+    inp.addEventListener('search', function(){ apply({jump:true}); });
+    inp.addEventListener('keydown', function(e){
+      if(e.key==='Enter' || e.keyCode===13){
+        e.preventDefault();
+        apply({jump:true});
+      }
+    });
+  }
+  apply({});
+})();
+</script>
+</body></html>
