@@ -1,0 +1,185 @@
+{
+  "schema": "cursor-handoff-nfl-v1",
+  "source": "ChatGPT user-approved relay",
+  "date": "2026-10-19",
+  "matchup": "WAS@SF",
+  "contest": "DraftKings NFL Showdown double-up",
+  "status": "CANDIDATE_NEEDS_CURSOR_QC",
+  "notes": [
+    "Based on previous ChatGPT response; not independently verified in this handoff.",
+    "Check players' actual teams, active status, DK slate inclusion, CPT/FLEX salaries, and current DK prop lines before publishing.",
+    "ETR is paid licensed source: do not publish underlying CSV, full ETR values or proprietary projection dataset. Derived lineup estimates only.",
+    "Precheck QC is nonblocking for candidate transmission; publication should clearly denote any pending verification."
+  ],
+  "lineups": [
+    {
+      "rank": 1,
+      "label": "primary cash",
+      "salary": 49900,
+      "etr_derived_total": 99.4,
+      "players": [
+        [
+          "CPT",
+          "Christian McCaffrey",
+          17700
+        ],
+        [
+          "FLEX",
+          "Brock Purdy",
+          10800
+        ],
+        [
+          "FLEX",
+          "George Kittle",
+          8200
+        ],
+        [
+          "FLEX",
+          "Rachaad White",
+          6600
+        ],
+        [
+          "FLEX",
+          "Eddy Pineiro",
+          5200
+        ],
+        [
+          "FLEX",
+          "Kyle Juszczyk",
+          1400
+        ]
+      ],
+      "risk": "Juszczyk limited role; verify White/team and DK slate"
+    },
+    {
+      "rank": 2,
+      "label": "pivot 1 no sub-2000 punt",
+      "salary": 50000,
+      "etr_derived_total": 99.2,
+      "players": [
+        [
+          "CPT",
+          "Brock Purdy",
+          16200
+        ],
+        [
+          "FLEX",
+          "Christian McCaffrey",
+          11800
+        ],
+        [
+          "FLEX",
+          "George Kittle",
+          8200
+        ],
+        [
+          "FLEX",
+          "Rachaad White",
+          6600
+        ],
+        [
+          "FLEX",
+          "Drew Stevens",
+          5000
+        ],
+        [
+          "FLEX",
+          "Jacob Cowing",
+          2200
+        ]
+      ],
+      "risk": "Verify Cowing snaps and Stevens availability"
+    },
+    {
+      "rank": 3,
+      "label": "pivot 2 highest numerical estimate, high punt risk",
+      "salary": 50000,
+      "etr_derived_total": 100.6,
+      "players": [
+        [
+          "CPT",
+          "Brock Purdy",
+          16200
+        ],
+        [
+          "FLEX",
+          "Christian McCaffrey",
+          11800
+        ],
+        [
+          "FLEX",
+          "Jayden Daniels",
+          10000
+        ],
+        [
+          "FLEX",
+          "Rachaad White",
+          6600
+        ],
+        [
+          "FLEX",
+          "Eddy Pineiro",
+          5200
+        ],
+        [
+          "FLEX",
+          "Craig Reynolds",
+          200
+        ]
+      ],
+      "risk": "Reynolds floor and 200 dollar slot, avoid cash absent role verification"
+    }
+  ],
+  "props": [
+    {
+      "rank": 1,
+      "player": "George Kittle",
+      "market": "receiving yards",
+      "side": "OVER",
+      "line": "60+ alternate",
+      "reported_price": "-143",
+      "confidence": "medium-high"
+    },
+    {
+      "rank": 2,
+      "player": "Rachaad White",
+      "market": "receiving yards",
+      "side": "OVER",
+      "line": "12.5",
+      "reported_price": "-114",
+      "confidence": "medium-high"
+    },
+    {
+      "rank": 3,
+      "player": "Christian McCaffrey",
+      "market": "rushing yards",
+      "side": "UNDER",
+      "line": "61.5 or higher",
+      "confidence": "medium"
+    },
+    {
+      "rank": 4,
+      "player": "Brock Purdy",
+      "market": "passing yards",
+      "side": "OVER",
+      "line": "245.5",
+      "reported_price": "-113",
+      "confidence": "medium"
+    },
+    {
+      "rank": 5,
+      "player": "Jayden Daniels",
+      "market": "completions",
+      "side": "UNDER",
+      "line": "19.5",
+      "confidence": "medium"
+    }
+  ],
+  "cursor_actions": [
+    "Validate candidate names/teams vs 2026 WAS@SF DK slate and repair invalid entries if found.",
+    "Verify salaries, starting lineups and injuries, then rerun double-up optimization with cash-floor discipline and exactly one primary plus two ranked pivots.",
+    "Check prop line availability and odds at the sportsbook, re-rank by verified edge and remove unconfirmed recommendations.",
+    "Publish cleaned NFL props and NFL showdown to existing hub paths and record provenance/QC result.",
+    "Do not publish licensed ETR raw input."
+  ]
+}
