@@ -4,97 +4,23 @@
   "date": "2026-10-19",
   "matchup": "WAS@SF",
   "contest": "DraftKings NFL Showdown double-up",
-  "status": "CANDIDATE_NEEDS_CURSOR_QC",
+  "status": "USER_DESIGNATED_OFFICIAL_CARD",
   "notes": [
-    "Based on previous ChatGPT response; not independently verified in this handoff.",
-    "Check players' actual teams, active status, DK slate inclusion, CPT/FLEX salaries, and current DK prop lines before publishing.",
-    "ETR is paid licensed source: do not publish underlying CSV, full ETR values or proprietary projection dataset. Derived lineup estimates only.",
-    "Precheck QC is nonblocking for candidate transmission; publication should clearly denote any pending verification."
+    "Explicit user instruction: ship McNichols revision as updated official card for Cursor.",
+    "Official means user-selected primary; availability check and $50,000 arithmetic completed. Full protocol QC and direct DK slot/salary verification not asserted.",
+    "McNichols projection unavailable in uploaded ETR snapshot; total remains null. Do not reuse Reynolds total 100.6.",
+    "Prior lineups retained as superseded history, not active pivots. Cursor should supply two ranked protocol-compliant pivots without changing user-selected primary silently.",
+    "Existing props preserved from earlier handoff and not refreshed or re-endorsed in this revision.",
+    "Do not publish licensed ETR raw input. Precheck is nonblocking for handoff transmission."
   ],
   "lineups": [
     {
       "rank": 1,
-      "label": "primary cash",
-      "salary": 49900,
-      "etr_derived_total": 99.4,
-      "players": [
-        [
-          "CPT",
-          "Christian McCaffrey",
-          17700
-        ],
-        [
-          "FLEX",
-          "Brock Purdy",
-          10800
-        ],
-        [
-          "FLEX",
-          "George Kittle",
-          8200
-        ],
-        [
-          "FLEX",
-          "Rachaad White",
-          6600
-        ],
-        [
-          "FLEX",
-          "Eddy Pineiro",
-          5200
-        ],
-        [
-          "FLEX",
-          "Kyle Juszczyk",
-          1400
-        ]
-      ],
-      "risk": "Juszczyk limited role; verify White/team and DK slate"
-    },
-    {
-      "rank": 2,
-      "label": "pivot 1 no sub-2000 punt",
+      "label": "official primary — both QBs, McCaffrey + White, McNichols FLEX",
+      "status": "USER_DESIGNATED_OFFICIAL_CARD",
       "salary": 50000,
-      "etr_derived_total": 99.2,
-      "players": [
-        [
-          "CPT",
-          "Brock Purdy",
-          16200
-        ],
-        [
-          "FLEX",
-          "Christian McCaffrey",
-          11800
-        ],
-        [
-          "FLEX",
-          "George Kittle",
-          8200
-        ],
-        [
-          "FLEX",
-          "Rachaad White",
-          6600
-        ],
-        [
-          "FLEX",
-          "Drew Stevens",
-          5000
-        ],
-        [
-          "FLEX",
-          "Jacob Cowing",
-          2200
-        ]
-      ],
-      "risk": "Verify Cowing snaps and Stevens availability"
-    },
-    {
-      "rank": 3,
-      "label": "pivot 2 highest numerical estimate, high punt risk",
-      "salary": 50000,
-      "etr_derived_total": 100.6,
+      "remaining_salary": 0,
+      "etr_derived_total": null,
       "players": [
         [
           "CPT",
@@ -123,11 +49,13 @@
         ],
         [
           "FLEX",
-          "Craig Reynolds",
+          "Jeremy McNichols",
           200
         ]
       ],
-      "risk": "Reynolds floor and 200 dollar slot, avoid cash absent role verification"
+      "risk": "McNichols active after IR return; offensive workload unverified. White shares backfield; not certified as workhorse. McNichols missing from uploaded ETR file; prior 100.6 total withdrawn.",
+      "change": "Replace Craig Reynolds with Jeremy McNichols at $200 and promote revised both-QB build to official primary by explicit user instruction.",
+      "salary_evidence": "Other five salaries match uploaded DK NFL Showdown Projections(1).csv; McNichols $200 from third-party slate table, not direct DK verification."
     }
   ],
   "props": [
@@ -176,10 +104,150 @@
     }
   ],
   "cursor_actions": [
-    "Validate candidate names/teams vs 2026 WAS@SF DK slate and repair invalid entries if found.",
-    "Verify salaries, starting lineups and injuries, then rerun double-up optimization with cash-floor discipline and exactly one primary plus two ranked pivots.",
-    "Check prop line availability and odds at the sportsbook, re-rank by verified edge and remove unconfirmed recommendations.",
-    "Publish cleaned NFL props and NFL showdown to existing hub paths and record provenance/QC result.",
-    "Do not publish licensed ETR raw input."
-  ]
+    "Take this revision as the user-designated official WAS@SF Showdown primary; replace any previous primary and Reynolds version.",
+    "Publish the official six-player card on the existing hub with workload/projection limitations accurately labeled; do not claim complete QC.",
+    "Verify McNichols direct DK slate salary/eligibility and current offensive role; report any contradiction explicitly.",
+    "Prepare exactly two ranked cash-protocol pivots, prioritizing both starting QBs and independently qualifying RB roles; retain superseded lineups only as history.",
+    "Do not reuse old 100.6 projection; obtain a current sourced McNichols projection before showing a six-player estimate.",
+    "Props unchanged in this revision; refresh independently before any props publish.",
+    "Record adoption/publish path and receipt for ChatGPT/user."
+  ],
+  "superseded_lineups": [
+    {
+      "rank": 1,
+      "label": "primary cash",
+      "salary": 49900,
+      "etr_derived_total": 99.4,
+      "players": [
+        [
+          "CPT",
+          "Christian McCaffrey",
+          17700
+        ],
+        [
+          "FLEX",
+          "Brock Purdy",
+          10800
+        ],
+        [
+          "FLEX",
+          "George Kittle",
+          8200
+        ],
+        [
+          "FLEX",
+          "Rachaad White",
+          6600
+        ],
+        [
+          "FLEX",
+          "Eddy Pineiro",
+          5200
+        ],
+        [
+          "FLEX",
+          "Kyle Juszczyk",
+          1400
+        ]
+      ],
+      "risk": "Juszczyk limited role; verify White/team and DK slate",
+      "status": "SUPERSEDED_NOT_CURRENT_OFFICIAL",
+      "reason": "User selected both-QB McNichols lineup as official; do not publish these as current recommendations."
+    },
+    {
+      "rank": 2,
+      "label": "pivot 1 no sub-2000 punt",
+      "salary": 50000,
+      "etr_derived_total": 99.2,
+      "players": [
+        [
+          "CPT",
+          "Brock Purdy",
+          16200
+        ],
+        [
+          "FLEX",
+          "Christian McCaffrey",
+          11800
+        ],
+        [
+          "FLEX",
+          "George Kittle",
+          8200
+        ],
+        [
+          "FLEX",
+          "Rachaad White",
+          6600
+        ],
+        [
+          "FLEX",
+          "Drew Stevens",
+          5000
+        ],
+        [
+          "FLEX",
+          "Jacob Cowing",
+          2200
+        ]
+      ],
+      "risk": "Verify Cowing snaps and Stevens availability",
+      "status": "SUPERSEDED_NOT_CURRENT_OFFICIAL",
+      "reason": "User selected both-QB McNichols lineup as official; do not publish these as current recommendations."
+    },
+    {
+      "rank": 3,
+      "label": "pivot 2 highest numerical estimate, high punt risk",
+      "salary": 50000,
+      "etr_derived_total": 100.6,
+      "players": [
+        [
+          "CPT",
+          "Brock Purdy",
+          16200
+        ],
+        [
+          "FLEX",
+          "Christian McCaffrey",
+          11800
+        ],
+        [
+          "FLEX",
+          "Jayden Daniels",
+          10000
+        ],
+        [
+          "FLEX",
+          "Rachaad White",
+          6600
+        ],
+        [
+          "FLEX",
+          "Eddy Pineiro",
+          5200
+        ],
+        [
+          "FLEX",
+          "Craig Reynolds",
+          200
+        ]
+      ],
+      "risk": "Reynolds floor and 200 dollar slot, avoid cash absent role verification",
+      "status": "SUPERSEDED_NOT_CURRENT_OFFICIAL",
+      "reason": "User selected both-QB McNichols lineup as official; do not publish these as current recommendations."
+    }
+  ],
+  "revision": "2026-10-19-MCNICHOLS",
+  "updated_at": "2026-10-19T18:41:27-05:00",
+  "availability_check": {
+    "date": "2026-10-19",
+    "primary_players_on_official_inactive_lists": [],
+    "mcnichols": "Activated from IR, removed from injury report and not on final inactive list.",
+    "sources": [
+      "https://www.commanders.com/news/commanders-activate-amos-magee-mcnichols-croskey-merritt-jean-baptiste",
+      "https://www.commanders.com/news/inactives-commanders-vs-49ers-week-6",
+      "https://www.49ers.com/news/mike-evans-active-kirk-out-vs-commanders-inactives-week-6-wasvssf"
+    ],
+    "mcnichols_salary_source": "https://desk.sharksnip.com/dfs/showdown/nfl"
+  }
 }
