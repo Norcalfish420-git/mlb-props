@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0",
+  "kind": "horse_racing_postmortem",
+  "date": "2026-10-18",
+  "status": "provisional_needs_source_reverification",
+  "verification_note": "Transcribed from ChatGPT same-conversation audit; race outcomes and payouts must be independently validated before labeling confirmed. No actual wagers documented.",
+  "races": [
+    {
+      "track": "Keeneland",
+      "race": 5,
+      "primary": {
+        "number": 10,
+        "name": "Covert Law",
+        "finish": 6
+      },
+      "winner": {
+        "number": 1,
+        "name": "Johny's Rendezvous"
+      },
+      "other": {
+        "number": 9,
+        "name": "Mesero",
+        "finish": 3
+      }
+    },
+    {
+      "track": "Keeneland",
+      "race": 7,
+      "primary": {
+        "number": 9,
+        "name": "Speed Shopper",
+        "finish": 3
+      },
+      "winner": {
+        "number": 2,
+        "name": "Malibu Smart"
+      },
+      "backup": {
+        "number": 5,
+        "name": "Fionn",
+        "finish": 2
+      }
+    },
+    {
+      "track": "Santa Anita",
+      "race": 5,
+      "primary": {
+        "number": 9,
+        "name": "Regal Patriot",
+        "finish": 2
+      },
+      "winner": {
+        "number": 10,
+        "name": "Known Idea",
+        "reported_win_payout_per_2_usd": 6
+      },
+      "backup": {
+        "number": 10,
+        "name": "Known Idea",
+        "finish": 1
+      },
+      "other": {
+        "number": 2,
+        "name": "Code Duello",
+        "finish": 4
+      },
+      "note": "Top two finished in reverse order; exacta ticket not documented."
+    },
+    {
+      "track": "Santa Anita",
+      "race": 7,
+      "primary": {
+        "number": 7,
+        "name": "Divisible By",
+        "finish": null,
+        "outcome": "did_not_win"
+      },
+      "winner": {
+        "number": 1,
+        "name": "Essos"
+      },
+      "backup": {
+        "number": 1,
+        "name": "Essos",
+        "finish": 1
+      }
+    }
+  ],
+  "aggregates": {
+    "reviewed_races": 4,
+    "primary_wins": 0,
+    "winning_horse_in_recorded_options": 3,
+    "certified_wagers": 0,
+    "roi": null,
+    "all_track_coverage": false
+  },
+  "lessons": [
+    "Model should optimize primary-vs-backup ranking, not merely include winner in candidates.",
+    "Investigate overlooked long-odds winners and pace/upset scenarios, particularly Keeneland R7.",
+    "Separate watchlist, qualifying-price signal, certified bet, result and verified ROI.",
+    "Recheck races, scratches, official charts, prices and provenance before public confirmed status."
+  ],
+  "hub": {
+    "section": "Horses",
+    "display": "Postmortem / Results",
+    "label": "2026-10-18 Horse Audit",
+    "public_status": "Provisional",
+    "exclude_from_verified_win_rate": true
+  }
+}
