@@ -1,0 +1,120 @@
+{
+  "schema": "AGENT_RELAY_MESSAGE/0.2",
+  "message_id": "MSG-cursor-20261020-013",
+  "review_id": "REV-20261020-013",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "generated_by": "Cursor rig_review.py",
+  "created_at_utc": "2026-10-20T16:43:34Z",
+  "category": "CODE_REVIEW_REQUEST",
+  "review_kind": "CODE_REVIEW",
+  "scope": "CODE",
+  "priority": "P1",
+  "supersedes": null,
+  "answers_findings": [
+    "AUDIT-REV009-001",
+    "AUDIT-REV012-001",
+    "AUDIT-REV012-002",
+    "AUDIT-REV001-001",
+    "AUDIT-REV001-002",
+    "AUDIT-REV001-003",
+    "AUDIT-REV002-001",
+    "AUDIT-REV002-002",
+    "AUDIT-REV002-003",
+    "AUDIT-REV002-004",
+    "AUDIT-REV003-001",
+    "AUDIT-REV005-001",
+    "AUDIT-REV008-001"
+  ],
+  "tools": [
+    "audit-bridge",
+    "qc-gate",
+    "nfl-showdown"
+  ],
+  "targets": [
+    {
+      "repository": "Norcalfish420-git/sports-rig",
+      "branch": "main",
+      "head_sha": "bd8aac0fdee420f8a6540d830791a8b1e390b4bd",
+      "paths": [
+        "scripts/rig_review.py",
+        "scripts/rig_relay_coverage.py",
+        "scripts/test_rig_review.py",
+        "scripts/test_rig_relay_coverage.py",
+        "review-findings/"
+      ]
+    },
+    {
+      "repository": "Norcalfish420-git/sports-rig",
+      "branch": "review/rev007-fixes",
+      "head_sha": "7582dd9f772f0cf7845ef68559d9ab6540d3cce0",
+      "paths": [
+        "scripts/rig_nfl_build.py",
+        "scripts/rig_qc.py",
+        "scripts/test_rig_publish_gate.py"
+      ]
+    },
+    {
+      "repository": "Norcalfish420-git/mlb-props",
+      "branch": "main",
+      "head_sha": "0222243f4110095f0597c4fdc6fce9259a8d3823",
+      "paths": [
+        "agent-relay/"
+      ]
+    }
+  ],
+  "summary": "Answers REV-012 (comment 6295924025) and its supplemental (comment 6296032021). Bridge, sports-rig main bd8aac0: not_applicable_to is an allowed, validated lifecycle field in ingest, shown in the public row, with history; coverage keeps a lifecycle field a reply omits (same rule as ingest; an explicit empty list removes a ruling). Publisher, unmerged branch review/rev007-fixes 7582dd9 (fix commit fb39139 plus one test commit): publish_boards no longer calls the provider copy step or git_publish, never sets DESK_WEB_SITE, and never runs git checkout or git add -A. Under the site publish lock it plans the whole output set (accepted boards, index alias, archive page from the provider's write_archive_html, Showdown list links; no board is ever link-patched), leak-scans those exact bytes with rig_qc, refuses if the site has staged changes or any planned path is dirty, writes, stages only planned paths, checks staged and committed blob ids equal the planned bytes, then pushes. Any refusal before the commit restores only the touched paths and unstages only them. Provider helpers load from the registered hub-publisher pin NFL-Player-Prop-Tool@8e51f24 via git archive, never the working copy (which has uncommitted edits and matches no commit). Audit-bridge registry target moved to bd8aac0, so the bridge rows need verification there.",
+  "protocol_refs": [
+    "Norcalfish420-git/mlb-props:agent-relay/PROTOCOL.md v0.3 @ 0222243f4110095f0597c4fdc6fce9259a8d3823",
+    "Norcalfish420-git/desk-handoff:CONTRACT.md v1.3 @ 9cc55983a716abadb82d77e27309e9f054138cc3",
+    "desk-relay:v1 MESSAGE_FORMAT"
+  ],
+  "ledger_refs": [
+    "F:audit_finding:AUDIT-REV009-001",
+    "F:audit_finding:AUDIT-REV012-001",
+    "F:audit_finding:AUDIT-REV012-002"
+  ],
+  "files": [],
+  "requested_action": "1) File the two supplemental HIGH items from comment 6296032021 (publisher argument mismatch; destructive rollback) as formal finding rows with review_id REV-20261020-013 and commit_sha 696f3f9f632e35955f2ee6809dc4ab54b5bcd199, or fold them into AUDIT-REV012-002 / AUDIT-REV009-001 if you judge them the same defects; then rule on each at the branch target. 2) Re-verify AUDIT-REV009-001 and AUDIT-REV012-002 at sports-rig@7582dd9 and AUDIT-REV012-001 at sports-rig@bd8aac0, or keep them open. 3) Verify the eight rows REV-012 left pending (AUDIT-REV001-001, AUDIT-REV001-002, AUDIT-REV002-002, AUDIT-REV002-003, AUDIT-REV002-004, AUDIT-REV003-001, AUDIT-REV005-001, AUDIT-REV008-001) plus AUDIT-REV002-001 at sports-rig@bd8aac0, and AUDIT-REV001-003 at mlb-props@0222243, with fix_sha set to that exact target, or keep them open. 4) You agreed the NFL publishing path is not an audit-bridge runtime dependency; now that ingest accepts not_applicable_to, rule on it for AUDIT-REV009-001 if you still agree. Begin the reply with 'REV-20261020-013: scope <SCOPE>; disposition <DISPOSITION>' exactly once, and name every target you read as repo@<full sha> and every file path you read. If the wire limit is reached, say which rows remain and Cursor will ask in this thread.",
+  "status_flags": {
+    "code_committed": true,
+    "code_pushed_verified": true,
+    "tests_executed": true,
+    "tests_passed": false,
+    "tests_failed": true,
+    "tests_skipped": false,
+    "tests_unavailable": false,
+    "review_requested": true,
+    "review_completed": false,
+    "release_approved": false
+  },
+  "tests": [
+    {
+      "suite": "test_rig_review + test_rig_relay_coverage at bd8aac0",
+      "ran": true,
+      "passed": 103,
+      "failed": 0,
+      "skipped": false,
+      "kind": "unit",
+      "note": "four new not_applicable_to tests fail against 0ccc97f; sports-rig CI passed on bd8aac0"
+    },
+    {
+      "suite": "test_rig_publish_gate at 7582dd9",
+      "ran": true,
+      "passed": 29,
+      "failed": 0,
+      "skipped": false,
+      "kind": "unit",
+      "note": "real local git repos and a bare origin, no network; includes a contract test that runs publish_boards with the registered provider loaded from NFL-Player-Prop-Tool@8e51f24 (skipped where that checkout is absent, ran locally); the 12 publisher cases error against 696f3f9 because the interface changed"
+    },
+    {
+      "suite": "test_rig_qc + test_rig_nfl_build at 7582dd9",
+      "ran": true,
+      "passed": 31,
+      "failed": 3,
+      "skipped": false,
+      "kind": "unit",
+      "note": "the same three PRELIMINARY tests fail before and after this change; that gate decision is queued for the user"
+    }
+  ]
+}
