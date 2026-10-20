@@ -1,8 +1,8 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T14:38:25Z",
-  "relay_head_sha": "5822e0b84df7cde1bf2dd967bbaaf516a9e523b6",
-  "cursor_building": "REV-20261020-004 re-verification request",
+  "generated_at_utc": "2026-10-20T14:38:29Z",
+  "relay_head_sha": "0d2a395f32fca9c9acdd5b4eac8450a9724f41a6",
+  "cursor_building": "REV-20261020-004 waiting for ChatGPT",
   "last_review_request": "REV-20261020-004",
   "awaiting_chatgpt": [
     "REV-20261020-001",
@@ -64,7 +64,6 @@
     "audit-bridge: AUDIT-REV002-002 (HIGH)"
   ],
   "untrusted_pins": [
-    "REV-20261020-001: pin lacks manifest.json and HANDOFF.md hashes",
-    "REV-20261020-004: not pinned"
+    "REV-20261020-001: pin lacks manifest.json and HANDOFF.md hashes"
   ]
 }
