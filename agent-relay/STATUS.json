@@ -1,11 +1,12 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T15:57:27Z",
-  "relay_head_sha": "f2fc3bd223f7ef9fc8055eadbcfd60cfa2b2ed5a",
+  "generated_at_utc": "2026-10-20T15:58:29Z",
+  "relay_head_sha": "b6c56c787d3fd45abb87b78fb74d7964f02be921",
   "cursor_building": "",
-  "last_review_request": "REV-20261020-009",
+  "last_review_request": "REV-20261020-010",
   "awaiting_chatgpt": [
-    "REV-20261020-001"
+    "REV-20261020-001",
+    "REV-20261020-010"
   ],
   "answered_reviews": [
     {
