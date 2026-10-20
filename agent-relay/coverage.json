@@ -1,6 +1,6 @@
 {
   "schema": "AGENT_RELAY_COVERAGE/0.2",
-  "generated_at_utc": "2026-10-20T14:38:29Z",
+  "generated_at_utc": "2026-10-20T14:38:52Z",
   "relay_head_sha": "0d2a395f32fca9c9acdd5b4eac8450a9724f41a6",
   "replies_checked_against_pr1": true,
   "tools": [
