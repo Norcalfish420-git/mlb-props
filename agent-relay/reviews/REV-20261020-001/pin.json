@@ -1,0 +1,6 @@
+{
+  "review_id": "REV-20261020-001",
+  "relay_commit_sha": "9c1eb057e549158c3c4e64e8e213570e8ba7ee51",
+  "pinned_at_utc": "2026-10-20T13:54:15Z",
+  "verified_by": "git ls-remote origin refs/heads/main"
+}

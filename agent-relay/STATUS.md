@@ -1,8 +1,8 @@
 # Agent relay status
 
-Generated 2026-10-20T13:53:39Z. Relay head `unknown`. Do not edit by hand.
+Generated 2026-10-20T13:54:15Z. Relay head `9c1eb05`. Do not edit by hand.
 
-- Cursor is building: Audit bridge v0.1: agent-relay protocol, coverage dashboard, first architecture handoff REV-20261020-001
+- Cursor is building: Audit bridge v0.1 published; waiting for ChatGPT design review of REV-20261020-001; next: rig_review.py and sports-rig CI
 - Last review request: REV-20261020-001
 - Waiting for ChatGPT: `REV-20261020-001`
 - Completed independent reviews: none

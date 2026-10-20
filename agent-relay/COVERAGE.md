@@ -1,7 +1,7 @@
 # Audit coverage
 
-Generated 2026-10-20T13:53:39Z by `sports-rig:scripts/rig_relay_coverage.py` from
-`registry/tools.json`, review manifests and findings. Relay head: `unknown`.
+Generated 2026-10-20T13:54:15Z by `sports-rig:scripts/rig_relay_coverage.py` from
+`registry/tools.json`, review manifests and findings. Relay head: `9c1eb05`.
 Do not edit by hand. Cursor test counts never set the verdict.
 
 | Tool | Verdict | Current SHAs | Last independently reviewed | Reviews | Open findings (C/H/M/L/I) | Cursor tests (last request) |
@@ -16,6 +16,6 @@ Do not edit by hand. Cursor test counts never set the verdict.
 | Research skeleton, facts, lessons, headless author and challenger | NOT_REVIEWED | sports-rig@ecb6627 | never | none | 0/0/0/0/0 | none recorded |
 | Hub publisher and site pages | NOT_REVIEWED | NFL-Player-Prop-Tool@8e51f24 | never | none | 0/0/0/0/0 | none recorded |
 | desk-handoff bridge relay (ChatGPT-owned transport; Cursor runs a pinned copy) | NOT_REVIEWED | desk-handoff@a67fb46 | never | none | 0/0/0/0/0 | none recorded |
-| This audit bridge (agent-relay protocol, status and coverage) | REVIEW_PENDING | mlb-props@unknown | never | REV-20261020-001 | 0/0/0/0/0 | 374 run, 5 failed |
+| This audit bridge (agent-relay protocol, status and coverage) | REVIEW_PENDING | mlb-props@9c1eb05 | never | REV-20261020-001 | 0/0/0/0/0 | 374 run, 5 failed |
 
 Verdicts: NOT_REVIEWED, REVIEW_PENDING, REVIEWED_OPEN_FINDINGS, STALE_SINCE_REVIEW, REVIEWED_CLEAN_AT_SHA.

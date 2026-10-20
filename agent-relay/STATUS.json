@@ -1,8 +1,8 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.1",
-  "generated_at_utc": "2026-10-20T13:53:39Z",
-  "relay_head_sha": null,
-  "cursor_building": "Audit bridge v0.1: agent-relay protocol, coverage dashboard, first architecture handoff REV-20261020-001",
+  "generated_at_utc": "2026-10-20T13:54:15Z",
+  "relay_head_sha": "9c1eb057e549158c3c4e64e8e213570e8ba7ee51",
+  "cursor_building": "Audit bridge v0.1 published; waiting for ChatGPT design review of REV-20261020-001; next: rig_review.py and sports-rig CI",
   "last_review_request": "REV-20261020-001",
   "awaiting_chatgpt": [
     "REV-20261020-001"
