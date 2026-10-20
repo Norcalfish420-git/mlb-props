@@ -1,7 +1,7 @@
 {
   "schema": "AGENT_RELAY_COVERAGE/0.2",
-  "generated_at_utc": "2026-10-20T16:09:59Z",
-  "relay_head_sha": "b6c56c787d3fd45abb87b78fb74d7964f02be921",
+  "generated_at_utc": "2026-10-20T16:10:53Z",
+  "relay_head_sha": "b96870c180f78f053882d1d1b22d2a0ffbce58a2",
   "replies_checked_against_pr1": true,
   "tools": [
     {
@@ -242,7 +242,7 @@
       "tool_id": "audit-bridge",
       "name": "This audit bridge (agent-relay protocol, review tool, coverage generator)",
       "current_targets": [
-        "Norcalfish420-git/mlb-props@b6c56c787d3fd45abb87b78fb74d7964f02be921",
+        "Norcalfish420-git/mlb-props@b96870c180f78f053882d1d1b22d2a0ffbce58a2",
         "Norcalfish420-git/sports-rig@0a0d57e9049dd05b731f82ea1961dd1b1ea23bfe"
       ],
       "last_reviewed_targets": [
@@ -257,7 +257,8 @@
         "REV-20261020-005",
         "REV-20261020-006",
         "REV-20261020-009",
-        "REV-20261020-010"
+        "REV-20261020-010",
+        "REV-20261020-011"
       ],
       "answered_review_ids": [
         "REV-20261020-002",

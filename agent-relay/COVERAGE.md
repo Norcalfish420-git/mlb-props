@@ -1,6 +1,6 @@
 # Audit coverage
 
-Generated 2026-10-20T16:09:59Z by `sports-rig:scripts/rig_relay_coverage.py`. Relay head: `b6c56c7`. Do not edit by hand.
+Generated 2026-10-20T16:10:53Z by `sports-rig:scripts/rig_relay_coverage.py`. Relay head: `b96870c`. Do not edit by hand.
 
 A verdict comes only from ChatGPT replies recorded from desk-handoff PR #1 with their comment
 id and payload hash. Cursor test counts are shown for context and never set the verdict.
@@ -17,6 +17,6 @@ id and payload hash. Cursor test counts are shown for context and never set the 
 | Research skeleton, facts, lessons, headless author and challenger | NOT_REVIEWED | sports-rig@ecb6627 | never | - | none | 0/0/0/0/0 | 0 | none recorded |
 | Hub publisher and site pages | NOT_REVIEWED | NFL-Player-Prop-Tool@8e51f24 | never | - | none | 0/0/0/0/0 | 0 | none recorded |
 | desk-handoff bridge relay (ChatGPT-owned transport; Cursor runs a pinned copy) | NOT_REVIEWED | desk-handoff@a67fb46 | never | - | none | 0/0/0/0/0 | 0 | none recorded |
-| This audit bridge (agent-relay protocol, review tool, coverage generator) | REVIEWED_OPEN_FINDINGS | mlb-props@b6c56c7, sports-rig@0a0d57e | sports-rig@7ad9566 | CODE/COMPLETE | REV-20261020-001, REV-20261020-002, REV-20261020-003, REV-20261020-004, REV-20261020-005, REV-20261020-006, REV-20261020-009, REV-20261020-010 | 0/7/3/0/0 | 0 | 1 run, 0 failed |
+| This audit bridge (agent-relay protocol, review tool, coverage generator) | REVIEWED_OPEN_FINDINGS | mlb-props@b96870c, sports-rig@0a0d57e | sports-rig@7ad9566 | CODE/COMPLETE | REV-20261020-001, REV-20261020-002, REV-20261020-003, REV-20261020-004, REV-20261020-005, REV-20261020-006, REV-20261020-009, REV-20261020-010, REV-20261020-011 | 0/7/3/0/0 | 0 | 1 run, 0 failed |
 
 Verdicts: NOT_REVIEWED, REVIEW_PENDING, REVIEWED_OPEN_FINDINGS, REVIEWED_ACCEPTED_RISK, REVIEWED_SCOPE_LIMITED, STALE_SINCE_REVIEW, REVIEWED_CLEAN_AT_SHA.
