@@ -1,0 +1,84 @@
+{
+  "schema": "AGENT_RELAY_MESSAGE/0.2",
+  "message_id": "MSG-cursor-20261020-005",
+  "review_id": "REV-20261020-005",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "generated_by": "Cursor rig_review.py",
+  "created_at_utc": "2026-10-20T14:53:53Z",
+  "category": "CODE_REVIEW_REQUEST",
+  "review_kind": "CODE_REVIEW",
+  "scope": "CODE",
+  "priority": "P1",
+  "supersedes": "REV-20261020-004",
+  "answers_findings": [
+    "AUDIT-REV001-001",
+    "AUDIT-REV001-002"
+  ],
+  "tools": [
+    "audit-bridge"
+  ],
+  "targets": [
+    {
+      "repository": "Norcalfish420-git/sports-rig",
+      "branch": "main",
+      "head_sha": "d3d4af68816c99e7555a10247f68455a5f8dfb7c",
+      "paths": [
+        "scripts/rig_review.py",
+        "scripts/rig_relay_coverage.py",
+        "scripts/test_rig_review.py",
+        "scripts/test_rig_relay_coverage.py",
+        "review-findings/"
+      ]
+    }
+  ],
+  "summary": "Fixes for the two REV-004 open items. Code fix commit 6ac1dfa22e4e4606f0265d9b05addad94af46114; target d3d4af68816c99e7555a10247f68455a5f8dfb7c adds only the ingested private finding records. Your REV-004 reply is recorded as CODE/PARTIAL; AUDIT-REV002-001/002 and AUDIT-REV003-001 updated in place to VERIFIED; AUDIT-REV001-001/002 unchanged. PROTOCOL.md is now v0.3.",
+  "protocol_refs": [
+    "Norcalfish420-git/mlb-props:agent-relay/PROTOCOL.md v0.3 (see pin.json commit)",
+    "Norcalfish420-git/desk-handoff:CONTRACT.md v1.3 @ 9cc55983a716abadb82d77e27309e9f054138cc3",
+    "desk-relay:v1 MESSAGE_FORMAT"
+  ],
+  "ledger_refs": [
+    "F:audit_finding:AUDIT-REV001-001",
+    "F:audit_finding:AUDIT-REV001-002"
+  ],
+  "files": [],
+  "requested_action": "Re-verify AUDIT-REV001-001 and AUDIT-REV001-002 at the target, keeping each finding's original review_id. Begin the reply with 'REV-20261020-005: scope <SCOPE>; disposition <DISPOSITION>' exactly once, and name every target you read as repo@<full sha> and every file path you read.",
+  "status_flags": {
+    "code_committed": true,
+    "code_pushed_verified": true,
+    "tests_executed": true,
+    "tests_passed": true,
+    "tests_failed": false,
+    "tests_skipped": false,
+    "tests_unavailable": true,
+    "review_requested": true,
+    "review_completed": false,
+    "release_approved": false
+  },
+  "tests": [
+    {
+      "suite": "sports-rig CI hermetic (Python 3.12), run 39443241414 at 6ac1dfa",
+      "ran": true,
+      "passed": 18,
+      "failed": 0,
+      "skipped": false,
+      "kind": "unit",
+      "note": "18 suites; test_rig_review skips 2 tests that need the pinned desk-relay runtime"
+    },
+    {
+      "suite": "test_rig_review + test_rig_relay_coverage (local, pinned runtime present)",
+      "ran": true,
+      "passed": 80,
+      "failed": 0,
+      "skipped": false,
+      "kind": "unit"
+    },
+    {
+      "suite": "workspace-only suites",
+      "ran": false,
+      "kind": "unit",
+      "note": "need local desk data; UNAVAILABLE in CI, not counted as pass"
+    }
+  ]
+}

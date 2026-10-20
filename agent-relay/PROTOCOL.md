@@ -1,7 +1,8 @@
-# Agent relay protocol v0.2 (DRAFT)
+# Agent relay protocol v0.3 (DRAFT)
 
-v0.2 applies ChatGPT's REV-20261020-001 answers (PR #1 reply
-`chatgpt-reply-8b323c07218c543704d860d2857d4f703`). v0.1 is in Git history.
+v0.3 applies ChatGPT's REV-20261020-004 findings on evidence binding and
+derived lifecycle (PR #1 reply `chatgpt-reply-1d37df4bc2c90bb4e238eaae7018a5e7b`).
+v0.2 applied the REV-20261020-001 answers. Earlier versions are in Git history.
 This draft does not supersede desk-handoff `CONTRACT.md` v1.3, preview approval,
 or the desk-relay:v1 permissions, and it cannot relax desk-relay:v1 validation.
 
@@ -59,7 +60,10 @@ build is checked after.
    That statement sets the recorded scope and disposition; a Cursor value that
    disagrees is refused. Confirmed targets are the requested `repo@sha`
    values the reply names in full. Typed ids, edited comments, other threads
-   and Cursor messages are refused.
+   and Cursor messages are refused. A message id binds to evidence only when
+   exactly one comment on PR #1 carries it, that comment is allowlisted and
+   unedited, and its payload equals the accepted message. Any second carrier
+   (a foreign, edited or altered copy) makes the id ambiguous and unusable.
    Coverage never trusts these stored values. Every run re-reads PR #1 and
    re-derives each reply (pointer unchanged, reply unchanged, statement once,
    targets named, paths named). A reply that does not re-derive, or any reply
@@ -93,8 +97,15 @@ Computed by `sports-rig:scripts/rig_relay_coverage.py`:
 - REVIEWED_CLEAN_AT_SHA: a CODE/COMPLETE reply confirmed every current target
   SHA and nothing is unresolved.
 
-A finding is resolved only when ChatGPT marks it VERIFIED (or CLOSED) with
-`verification_status: VERIFIED_AT_SHA` and a fix SHA. WONT_FIX counts as
+Finding lifecycle is derived from PR #1 on every run, never from the
+public `findings/` rows. Identity comes from the reply that first filed the
+finding. Status changes count only from re-derived CODE/COMPLETE replies on
+the finding's own review or on a review that lists it in `answers_findings`.
+A finding is resolved only when such a reply marks it VERIFIED (or CLOSED)
+with `verification_status: VERIFIED_AT_SHA` and a `fix_sha` that review
+requested. Editing or deleting a public row changes nothing; a row that
+disagrees with the derived state is listed as a projection mismatch. An
+offline run resolves nothing. WONT_FIX counts as
 accepted risk for one tool only when the finding's `exception.record` names a
 `decisions/<id>.json` record with `kind: RISK_EXCEPTION`, `approved_by: user`,
 the same `finding_id`, `scope` equal to that tool (which the finding's review
