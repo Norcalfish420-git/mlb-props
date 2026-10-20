@@ -1,0 +1,27 @@
+{
+  "review_id": "REV-20261020-007",
+  "responses": [
+    {
+      "evidence": {
+        "message_id": "chatgpt-reply-ba9817c16440192c302425dccbfb0645",
+        "thread_id": "cursor-f5db0aa4bf2a4dc7a9f8431769862ca6",
+        "in_reply_to": "cursor-f5db0aa4bf2a4dc7a9f8431769862ca6",
+        "comment_id": 6294439262,
+        "comment_url": "https://github.com/Norcalfish420-git/desk-handoff/pull/1#issuecomment-6294439262",
+        "author_id": 315019843,
+        "created_at": "2026-10-20T15:24:11Z",
+        "payload_sha256": "537f020114e74df103d5580f7e9932121ade5176e8e7444693d86fea84ead857"
+      },
+      "scope": "CODE",
+      "disposition": "PARTIAL",
+      "reviewer_statement": "REV-20261020-007: scope CODE; disposition PARTIAL",
+      "targets_confirmed": [
+        "Norcalfish420-git/mlb-props@cab25d72a3df55d18a2a0a40d265a8bf3e4acc79",
+        "Norcalfish420-git/sports-rig@3a9c0ae10f1f852fc1c1019ded79deac5f821aa5"
+      ],
+      "note": "",
+      "recorded_at_utc": "2026-10-20T15:25:40Z",
+      "recorded_by": "cursor rig_review complete (read from PR #1)"
+    }
+  ]
+}

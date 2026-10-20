@@ -1,12 +1,11 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T15:13:46Z",
+  "generated_at_utc": "2026-10-20T15:25:42Z",
   "relay_head_sha": "cab25d72a3df55d18a2a0a40d265a8bf3e4acc79",
   "cursor_building": "",
   "last_review_request": "REV-20261020-007",
   "awaiting_chatgpt": [
-    "REV-20261020-001",
-    "REV-20261020-007"
+    "REV-20261020-001"
   ],
   "answered_reviews": [
     {
@@ -38,9 +37,20 @@
       "replies": [
         "CODE/COMPLETE chatgpt-reply-28b4463cdb50d3fc1a414da6cc8ee07b"
       ]
+    },
+    {
+      "review_id": "REV-20261020-007",
+      "replies": [
+        "CODE/PARTIAL chatgpt-reply-ba9817c16440192c302425dccbfb0645"
+      ]
     }
   ],
-  "open_findings": [],
+  "open_findings": [
+    "AUDIT-REV007-001 (HIGH, OPEN)",
+    "AUDIT-REV007-002 (HIGH, OPEN)",
+    "AUDIT-REV007-003 (MEDIUM, OPEN)",
+    "AUDIT-REV007-004 (MEDIUM, OPEN)"
+  ],
   "fixes_awaiting_reverification": [],
   "accepted_risk": [],
   "open_protocol_conflicts": [],
@@ -56,7 +66,7 @@
       "hub-publisher",
       "desk-handoff-relay"
     ],
-    "REVIEW_PENDING": [
+    "REVIEWED_OPEN_FINDINGS": [
       "nfl-showdown",
       "qc-gate"
     ],
@@ -65,8 +75,13 @@
     ]
   },
   "replies_checked_against_pr1": true,
-  "release_check": "CLEAR",
-  "release_blocks": [],
+  "release_check": "BLOCKED",
+  "release_blocks": [
+    "nfl-showdown: AUDIT-REV007-001 (HIGH)",
+    "qc-gate: AUDIT-REV007-001 (HIGH)",
+    "nfl-showdown: AUDIT-REV007-002 (HIGH)",
+    "qc-gate: AUDIT-REV007-002 (HIGH)"
+  ],
   "projection_mismatches": [],
   "untrusted_pins": [
     "REV-20261020-001: pin lacks manifest.json and HANDOFF.md hashes"

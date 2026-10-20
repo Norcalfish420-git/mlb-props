@@ -1,6 +1,6 @@
 {
   "schema": "AGENT_RELAY_COVERAGE/0.2",
-  "generated_at_utc": "2026-10-20T15:13:46Z",
+  "generated_at_utc": "2026-10-20T15:25:42Z",
   "relay_head_sha": "cab25d72a3df55d18a2a0a40d265a8bf3e4acc79",
   "replies_checked_against_pr1": true,
   "tools": [
@@ -33,22 +33,27 @@
         "Norcalfish420-git/NFL-Player-Prop-Tool@5d41ae4a00d8b7b1579cb6ed5cdd7479c44e6cc9",
         "Norcalfish420-git/sports-rig@3a9c0ae10f1f852fc1c1019ded79deac5f821aa5"
       ],
-      "last_reviewed_targets": [],
-      "last_review_scope": null,
+      "last_reviewed_targets": [
+        "Norcalfish420-git/mlb-props@cab25d72a3df55d18a2a0a40d265a8bf3e4acc79",
+        "Norcalfish420-git/sports-rig@3a9c0ae10f1f852fc1c1019ded79deac5f821aa5"
+      ],
+      "last_review_scope": "CODE/PARTIAL",
       "review_ids": [
         "REV-20261020-007"
       ],
-      "answered_review_ids": [],
+      "answered_review_ids": [
+        "REV-20261020-007"
+      ],
       "open_findings": {
         "CRITICAL": 0,
-        "HIGH": 0,
-        "MEDIUM": 0,
+        "HIGH": 2,
+        "MEDIUM": 2,
         "LOW": 0,
         "IMPROVEMENT": 0
       },
       "accepted_risk": 0,
       "cursor_tests_last_request": "3 run, 3 failed",
-      "verdict": "REVIEW_PENDING"
+      "verdict": "REVIEWED_OPEN_FINDINGS"
     },
     {
       "tool_id": "cfb-showdown-intake",
@@ -119,22 +124,27 @@
       "current_targets": [
         "Norcalfish420-git/sports-rig@3a9c0ae10f1f852fc1c1019ded79deac5f821aa5"
       ],
-      "last_reviewed_targets": [],
-      "last_review_scope": null,
+      "last_reviewed_targets": [
+        "Norcalfish420-git/mlb-props@cab25d72a3df55d18a2a0a40d265a8bf3e4acc79",
+        "Norcalfish420-git/sports-rig@3a9c0ae10f1f852fc1c1019ded79deac5f821aa5"
+      ],
+      "last_review_scope": "CODE/PARTIAL",
       "review_ids": [
         "REV-20261020-007"
       ],
-      "answered_review_ids": [],
+      "answered_review_ids": [
+        "REV-20261020-007"
+      ],
       "open_findings": {
         "CRITICAL": 0,
-        "HIGH": 0,
-        "MEDIUM": 0,
+        "HIGH": 2,
+        "MEDIUM": 2,
         "LOW": 0,
         "IMPROVEMENT": 0
       },
       "accepted_risk": 0,
       "cursor_tests_last_request": "3 run, 3 failed",
-      "verdict": "REVIEW_PENDING"
+      "verdict": "REVIEWED_OPEN_FINDINGS"
     },
     {
       "tool_id": "ledgers",
