@@ -1,8 +1,8 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T14:10:11Z",
+  "generated_at_utc": "2026-10-20T14:12:37Z",
   "relay_head_sha": "fff853ed103727bc522cd8333d2fe90fcf5d3501",
-  "cursor_building": "",
+  "cursor_building": "REV-20261020-002 waiting for ChatGPT re-verification; release-block check built (rig_qc wiring after the open rig_qc edit lands)",
   "last_review_request": "REV-20261020-002",
   "awaiting_chatgpt": [
     "REV-20261020-002"
@@ -44,5 +44,10 @@
     "REVIEWED_OPEN_FINDINGS": [
       "audit-bridge"
     ]
-  }
+  },
+  "release_blocks": [
+    "audit-bridge: AUDIT-REV001-001 (HIGH)",
+    "audit-bridge: AUDIT-REV001-002 (HIGH)",
+    "audit-bridge: AUDIT-REV001-003 (HIGH)"
+  ]
 }
