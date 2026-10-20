@@ -12,12 +12,20 @@
       "regression_test": "test_rig_publish_gate: test_board_replaced_after_the_final_validation_is_not_what_is_published, test_receipt_for_different_bytes_at_the_board_path_is_refused, test_publisher_gets_a_private_read_only_copy_with_the_accepted_digest, PublishBoardsTests (identical bytes publish; missing or wrong digest has no side effect; differing site copy rolled back and not pushed)",
       "created_at_utc": "2026-10-20T16:21:14Z",
       "verification_status": "NOT_VERIFIED"
+    },
+    {
+      "cursor_response": "ACCEPTED",
+      "evidence": "",
+      "fix_sha": "fb3913916fad388ed6700689d70007f7a16bb31a",
+      "regression_test": "test_rig_publish_gate.PublishBoardsTests: planned-set commit, board listing showdown games unchanged, link transform leak refused, dirty alias or staged change refused, unrelated dirt not committed, rollback after write, unverified commit not pushed, stale board removal",
+      "created_at_utc": "2026-10-20T16:41:13Z",
+      "verification_status": "NOT_VERIFIED"
     }
   ],
   "cursor_response": "ACCEPTED",
   "evidence": "",
-  "fix_sha": "696f3f9f632e35955f2ee6809dc4ab54b5bcd199",
-  "regression_test": "test_rig_publish_gate: test_board_replaced_after_the_final_validation_is_not_what_is_published, test_receipt_for_different_bytes_at_the_board_path_is_refused, test_publisher_gets_a_private_read_only_copy_with_the_accepted_digest, PublishBoardsTests (identical bytes publish; missing or wrong digest has no side effect; differing site copy rolled back and not pushed)",
-  "created_at_utc": "2026-10-20T16:21:14Z",
+  "fix_sha": "fb3913916fad388ed6700689d70007f7a16bb31a",
+  "regression_test": "test_rig_publish_gate.PublishBoardsTests: planned-set commit, board listing showdown games unchanged, link transform leak refused, dirty alias or staged change refused, unrelated dirt not committed, rollback after write, unverified commit not pushed, stale board removal",
+  "created_at_utc": "2026-10-20T16:41:13Z",
   "verification_status": "NOT_VERIFIED"
 }

@@ -1,0 +1,23 @@
+{
+  "schema": "AGENT_RELAY_RESPONSE/0.2",
+  "review_id": "REV-20261020-012",
+  "finding_id": "AUDIT-REV012-002",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "history": [
+    {
+      "cursor_response": "ACCEPTED",
+      "evidence": "",
+      "fix_sha": "fb3913916fad388ed6700689d70007f7a16bb31a",
+      "regression_test": "test_rig_publish_gate: PinnedProviderContractTests (registered provider loaded from its pin), test_provider_comes_from_the_pin_and_an_unknown_pin_refuses",
+      "created_at_utc": "2026-10-20T16:41:13Z",
+      "verification_status": "NOT_VERIFIED"
+    }
+  ],
+  "cursor_response": "ACCEPTED",
+  "evidence": "",
+  "fix_sha": "fb3913916fad388ed6700689d70007f7a16bb31a",
+  "regression_test": "test_rig_publish_gate: PinnedProviderContractTests (registered provider loaded from its pin), test_provider_comes_from_the_pin_and_an_unknown_pin_refuses",
+  "created_at_utc": "2026-10-20T16:41:13Z",
+  "verification_status": "NOT_VERIFIED"
+}

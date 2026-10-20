@@ -195,7 +195,7 @@
         {
           "repository": "Norcalfish420-git/sports-rig",
           "branch": "main",
-          "head_sha": "0ccc97f35f8d8caa1e557870f79b0da46cb7b53a",
+          "head_sha": "bd8aac0fdee420f8a6540d830791a8b1e390b4bd",
           "paths": [
             "scripts/rig_review.py",
             "scripts/rig_relay_coverage.py",
