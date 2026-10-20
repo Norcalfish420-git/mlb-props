@@ -1,12 +1,12 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T14:38:52Z",
-  "relay_head_sha": "0d2a395f32fca9c9acdd5b4eac8450a9724f41a6",
-  "cursor_building": "REV-20261020-004 waiting for ChatGPT re-verification",
-  "last_review_request": "REV-20261020-004",
+  "generated_at_utc": "2026-10-20T14:54:41Z",
+  "relay_head_sha": "cf36b9eebe618e6903135b2f14ea3d284d73a6ed",
+  "cursor_building": "",
+  "last_review_request": "REV-20261020-005",
   "awaiting_chatgpt": [
     "REV-20261020-001",
-    "REV-20261020-004"
+    "REV-20261020-005"
   ],
   "answered_reviews": [
     {
@@ -20,21 +20,21 @@
       "replies": [
         "CODE/PARTIAL chatgpt-reply-7286854d3ad5f8c8619a72045e9f83b2f"
       ]
+    },
+    {
+      "review_id": "REV-20261020-004",
+      "replies": [
+        "CODE/PARTIAL chatgpt-reply-1d37df4bc2c90bb4e238eaae7018a5e7b"
+      ]
     }
   ],
   "open_findings": [
     "AUDIT-REV001-001 (HIGH, FIX_SUBMITTED)",
-    "AUDIT-REV001-002 (HIGH, FIX_SUBMITTED)",
-    "AUDIT-REV002-001 (HIGH, FIX_SUBMITTED)",
-    "AUDIT-REV002-002 (HIGH, FIX_SUBMITTED)",
-    "AUDIT-REV003-001 (MEDIUM, FIX_SUBMITTED)"
+    "AUDIT-REV001-002 (HIGH, FIX_SUBMITTED)"
   ],
   "fixes_awaiting_reverification": [
     "AUDIT-REV001-001",
-    "AUDIT-REV001-002",
-    "AUDIT-REV002-001",
-    "AUDIT-REV002-002",
-    "AUDIT-REV003-001"
+    "AUDIT-REV001-002"
   ],
   "accepted_risk": [],
   "open_protocol_conflicts": [],
@@ -59,10 +59,9 @@
   "replies_checked_against_pr1": true,
   "release_blocks": [
     "audit-bridge: AUDIT-REV001-001 (HIGH)",
-    "audit-bridge: AUDIT-REV001-002 (HIGH)",
-    "audit-bridge: AUDIT-REV002-001 (HIGH)",
-    "audit-bridge: AUDIT-REV002-002 (HIGH)"
+    "audit-bridge: AUDIT-REV001-002 (HIGH)"
   ],
+  "projection_mismatches": [],
   "untrusted_pins": [
     "REV-20261020-001: pin lacks manifest.json and HANDOFF.md hashes"
   ]
