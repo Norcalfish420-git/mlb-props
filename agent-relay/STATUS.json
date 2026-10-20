@@ -1,12 +1,11 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T15:58:29Z",
+  "generated_at_utc": "2026-10-20T16:09:59Z",
   "relay_head_sha": "b6c56c787d3fd45abb87b78fb74d7964f02be921",
   "cursor_building": "",
   "last_review_request": "REV-20261020-010",
   "awaiting_chatgpt": [
-    "REV-20261020-001",
-    "REV-20261020-010"
+    "REV-20261020-001"
   ],
   "answered_reviews": [
     {
@@ -56,12 +55,19 @@
       "replies": [
         "CODE/PARTIAL chatgpt-reply-569812c8efedf911021c07d811d47b32"
       ]
+    },
+    {
+      "review_id": "REV-20261020-010",
+      "replies": [
+        "CODE/PARTIAL chatgpt-reply-de2c407308452ed12fd39e6dbbda1cb2",
+        "CODE/PARTIAL chatgpt-reply-a00b89c463ff2ae6ce6f43a9c1f90f0b"
+      ]
     }
   ],
   "open_findings": [
     "AUDIT-REV001-001 (HIGH, VERIFIED)",
     "AUDIT-REV001-002 (HIGH, VERIFIED)",
-    "AUDIT-REV001-003 (HIGH, VERIFIED)",
+    "AUDIT-REV001-003 (HIGH, OPEN)",
     "AUDIT-REV002-001 (HIGH, VERIFIED)",
     "AUDIT-REV002-002 (HIGH, VERIFIED)",
     "AUDIT-REV002-003 (HIGH, VERIFIED)",
@@ -72,25 +78,24 @@
     "AUDIT-REV007-002 (HIGH, FIX_SUBMITTED)",
     "AUDIT-REV007-003 (MEDIUM, FIX_SUBMITTED)",
     "AUDIT-REV007-004 (MEDIUM, FIX_SUBMITTED)",
-    "AUDIT-REV008-001 (HIGH, FIX_SUBMITTED)"
+    "AUDIT-REV008-001 (HIGH, VERIFIED)"
   ],
   "fixes_awaiting_reverification": [
     "AUDIT-REV007-001",
     "AUDIT-REV007-002",
     "AUDIT-REV007-003",
-    "AUDIT-REV007-004",
-    "AUDIT-REV008-001"
+    "AUDIT-REV007-004"
   ],
   "fixes_not_in_current_target": [
     "AUDIT-REV001-001 (audit-bridge)",
     "AUDIT-REV001-002 (audit-bridge)",
-    "AUDIT-REV001-003 (audit-bridge)",
     "AUDIT-REV002-001 (audit-bridge)",
     "AUDIT-REV002-002 (audit-bridge)",
     "AUDIT-REV002-003 (audit-bridge)",
     "AUDIT-REV002-004 (audit-bridge)",
     "AUDIT-REV003-001 (audit-bridge)",
-    "AUDIT-REV005-001 (audit-bridge)"
+    "AUDIT-REV005-001 (audit-bridge)",
+    "AUDIT-REV008-001 (audit-bridge, nfl-showdown, qc-gate)"
   ],
   "accepted_risk": [],
   "open_protocol_conflicts": [],
@@ -129,7 +134,9 @@
     "nfl-showdown: AUDIT-REV008-001 (HIGH)",
     "qc-gate: AUDIT-REV008-001 (HIGH)"
   ],
-  "projection_mismatches": [],
+  "projection_mismatches": [
+    "AUDIT-REV001-003: public row says VERIFIED, PR #1 says OPEN"
+  ],
   "untrusted_pins": [
     "REV-20261020-001: pin lacks manifest.json and HANDOFF.md hashes"
   ]

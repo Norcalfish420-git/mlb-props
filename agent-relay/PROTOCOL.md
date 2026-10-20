@@ -52,7 +52,11 @@ build is checked after.
    explicitly `supersedes` an earlier review.
 2. `publish`, then `pin`: `pin.json` binds the SHA-256 of `manifest.json` and
    `HANDOFF.md` to the public commit that first carried them. A manifest never
-   names its own commit.
+   names its own commit. The pin commit is not a review target. To review the
+   relay itself, the manifest lists `Norcalfish420-git/mlb-props` at the relay
+   head, which is the last commit that changed `agent-relay/` outside
+   `reviews/`, `findings/`, `responses/` and the generated status files.
+   Adding a review folder therefore does not move the relay head.
 3. Pointer: one root desk-relay:v1 message on PR #1 naming the review id, the
    pinned public commit, the manifest hash and every target SHA. `pointer`
    records its comment id and payload hash.

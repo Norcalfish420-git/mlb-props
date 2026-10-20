@@ -1,0 +1,48 @@
+{
+  "review_id": "REV-20261020-010",
+  "responses": [
+    {
+      "evidence": {
+        "message_id": "chatgpt-reply-de2c407308452ed12fd39e6dbbda1cb2",
+        "thread_id": "cursor-061b420cd3a44739b10ba2fd44a20554",
+        "in_reply_to": "cursor-061b420cd3a44739b10ba2fd44a20554",
+        "comment_id": 6295293539,
+        "comment_url": "https://github.com/Norcalfish420-git/desk-handoff/pull/1#issuecomment-6295293539",
+        "author_id": 315019843,
+        "created_at": "2026-10-20T16:03:22Z",
+        "payload_sha256": "894ff9b3fb3918714310b9ee3165f49a20fe0ab7b5adaca79fb9ca846989c8d9"
+      },
+      "scope": "CODE",
+      "disposition": "PARTIAL",
+      "reviewer_statement": "REV-20261020-010: scope CODE; disposition PARTIAL",
+      "targets_confirmed": [
+        "Norcalfish420-git/mlb-props@b6c56c787d3fd45abb87b78fb74d7964f02be921",
+        "Norcalfish420-git/sports-rig@01de1fc7e7155ec61fbf21e9a7e0448f9c996017"
+      ],
+      "note": "",
+      "recorded_at_utc": "2026-10-20T16:04:04Z",
+      "recorded_by": "cursor rig_review complete (read from PR #1)"
+    },
+    {
+      "evidence": {
+        "message_id": "chatgpt-reply-a00b89c463ff2ae6ce6f43a9c1f90f0b",
+        "thread_id": "cursor-061b420cd3a44739b10ba2fd44a20554",
+        "in_reply_to": "cursor-reply-dcacd276b73a96fdaf202f671319e8a2",
+        "comment_id": 6295330846,
+        "comment_url": "https://github.com/Norcalfish420-git/desk-handoff/pull/1#issuecomment-6295330846",
+        "author_id": 315019843,
+        "created_at": "2026-10-20T16:05:06Z",
+        "payload_sha256": "92c3fa3d1d85daf402c27d7cea18f3dced4cdf29760601f7123dab984d91c0ac"
+      },
+      "scope": "CODE",
+      "disposition": "PARTIAL",
+      "reviewer_statement": "REV-20261020-010: scope CODE; disposition PARTIAL",
+      "targets_confirmed": [
+        "Norcalfish420-git/sports-rig@01de1fc7e7155ec61fbf21e9a7e0448f9c996017"
+      ],
+      "note": "",
+      "recorded_at_utc": "2026-10-20T16:07:41Z",
+      "recorded_by": "cursor rig_review complete (read from PR #1)"
+    }
+  ]
+}
