@@ -1,0 +1,10 @@
+{
+  "review_id": "REV-20261020-009",
+  "relay_commit_sha": "f2fc3bd223f7ef9fc8055eadbcfd60cfa2b2ed5a",
+  "content_sha256": {
+    "manifest.json": "ecbdb987326093060bfb79616f28af3e7af61b483ba5a13b2536b73cd099a8e7",
+    "HANDOFF.md": "005e3dff461a75a75644cd8270ef9e0e5830fa47c6e6acd70657bd6b11c64b48"
+  },
+  "pinned_at_utc": "2026-10-20T15:50:07Z",
+  "verified_by": "git: commit exists, is an ancestor of origin/main after fetch, and its manifest.json and HANDOFF.md bytes match these hashes"
+}

@@ -1,7 +1,7 @@
 {
   "schema": "AGENT_RELAY_COVERAGE/0.2",
-  "generated_at_utc": "2026-10-20T15:41:50Z",
-  "relay_head_sha": "d608db2919c2563a2975f8cb9453c1f996831772",
+  "generated_at_utc": "2026-10-20T15:50:25Z",
+  "relay_head_sha": "f2fc3bd223f7ef9fc8055eadbcfd60cfa2b2ed5a",
   "replies_checked_against_pr1": true,
   "tools": [
     {
@@ -40,7 +40,8 @@
       "last_review_scope": "CODE/PARTIAL",
       "review_ids": [
         "REV-20261020-007",
-        "REV-20261020-008"
+        "REV-20261020-008",
+        "REV-20261020-009"
       ],
       "answered_review_ids": [
         "REV-20261020-007",
@@ -133,7 +134,8 @@
       "last_review_scope": "CODE/PARTIAL",
       "review_ids": [
         "REV-20261020-007",
-        "REV-20261020-008"
+        "REV-20261020-008",
+        "REV-20261020-009"
       ],
       "answered_review_ids": [
         "REV-20261020-007",
@@ -238,8 +240,8 @@
       "tool_id": "audit-bridge",
       "name": "This audit bridge (agent-relay protocol, review tool, coverage generator)",
       "current_targets": [
-        "Norcalfish420-git/mlb-props@d608db2919c2563a2975f8cb9453c1f996831772",
-        "Norcalfish420-git/sports-rig@7ad9566ba6232628c1727780e8db59b135059f1b"
+        "Norcalfish420-git/mlb-props@f2fc3bd223f7ef9fc8055eadbcfd60cfa2b2ed5a",
+        "Norcalfish420-git/sports-rig@7dd06869b3c09ffd35d3c064d717445f4e5b1fd9"
       ],
       "last_reviewed_targets": [
         "Norcalfish420-git/mlb-props@74afc073e6f3e8a9633477a7f7b2d0437dbbdd40",
@@ -252,7 +254,8 @@
         "REV-20261020-003",
         "REV-20261020-004",
         "REV-20261020-005",
-        "REV-20261020-006"
+        "REV-20261020-006",
+        "REV-20261020-009"
       ],
       "answered_review_ids": [
         "REV-20261020-002",
@@ -263,14 +266,14 @@
       ],
       "open_findings": {
         "CRITICAL": 0,
-        "HIGH": 0,
-        "MEDIUM": 0,
+        "HIGH": 7,
+        "MEDIUM": 3,
         "LOW": 0,
         "IMPROVEMENT": 0
       },
       "accepted_risk": 0,
-      "cursor_tests_last_request": "2 run, 0 failed",
-      "verdict": "STALE_SINCE_REVIEW"
+      "cursor_tests_last_request": "3 run, 4 failed",
+      "verdict": "REVIEWED_OPEN_FINDINGS"
     }
   ]
 }
