@@ -1,0 +1,89 @@
+{
+  "schema": "AGENT_RELAY_MESSAGE/0.2",
+  "message_id": "MSG-cursor-20261020-007",
+  "review_id": "REV-20261020-007",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "generated_by": "Cursor rig_review.py",
+  "created_at_utc": "2026-10-20T15:13:12Z",
+  "category": "CODE_REVIEW_REQUEST",
+  "review_kind": "CODE_REVIEW",
+  "scope": "CODE",
+  "priority": "P1",
+  "supersedes": null,
+  "answers_findings": [],
+  "tools": [
+    "qc-gate",
+    "nfl-showdown"
+  ],
+  "targets": [
+    {
+      "repository": "Norcalfish420-git/sports-rig",
+      "branch": "main",
+      "head_sha": "3a9c0ae10f1f852fc1c1019ded79deac5f821aa5",
+      "paths": [
+        "scripts/rig_qc.py",
+        "scripts/test_rig_qc.py",
+        "scripts/rig_nfl_build.py",
+        "scripts/test_rig_nfl_build.py",
+        "scripts/nfl_packet.py",
+        "scripts/rig_showdown_cash.py",
+        "scripts/test_rig_showdown_cash.py"
+      ]
+    }
+  ],
+  "summary": "Pilot CODE review of the NFL pre-publish gate: rig_qc (run_qc, assert_publishable, leak scan, inherited engine controls) and rig_nfl_build.real_engine plus the publish branch. These files are unchanged since ecb6627. The NFL-Player-Prop-Tool engine import is not a target here, so nfl-showdown cannot be whole-tool clean from this review.",
+  "protocol_refs": [
+    "Norcalfish420-git/mlb-props:agent-relay/PROTOCOL.md v0.3 (see pin.json commit)",
+    "Norcalfish420-git/desk-handoff:CONTRACT.md v1.3 @ 9cc55983a716abadb82d77e27309e9f054138cc3",
+    "desk-relay:v1 MESSAGE_FORMAT"
+  ],
+  "ledger_refs": [],
+  "files": [],
+  "requested_action": "Review the listed paths at the target. Begin the reply with 'REV-20261020-007: scope <SCOPE>; disposition <DISPOSITION>' exactly once, name every target you read as repo@<full sha> and every file path you read, and include a findings JSON array (empty if none).",
+  "status_flags": {
+    "code_committed": true,
+    "code_pushed_verified": true,
+    "tests_executed": true,
+    "tests_passed": false,
+    "tests_failed": true,
+    "tests_skipped": false,
+    "tests_unavailable": true,
+    "review_requested": true,
+    "review_completed": false,
+    "release_approved": false
+  },
+  "tests": [
+    {
+      "suite": "test_rig_qc at 3a9c0ae (clean detached worktree inside the workspace, inherited engine present)",
+      "ran": true,
+      "passed": 14,
+      "failed": 0,
+      "skipped": false,
+      "kind": "unit"
+    },
+    {
+      "suite": "test_rig_nfl_build at 3a9c0ae (same worktree)",
+      "ran": true,
+      "passed": 17,
+      "failed": 3,
+      "skipped": false,
+      "kind": "unit",
+      "note": "test_clean_board_passes_real_qc_before_publish, test_qc_block_records_an_empty_lineup, test_qc_block_stops_the_publish_and_empties_the_lineup: tests expect publish/BLOCKED, code returns PRELIMINARY"
+    },
+    {
+      "suite": "test_rig_showdown_cash at 3a9c0ae",
+      "ran": true,
+      "passed": 2,
+      "failed": 0,
+      "skipped": false,
+      "kind": "unit"
+    },
+    {
+      "suite": "sports-rig CI hermetic",
+      "ran": false,
+      "kind": "unit",
+      "note": "CI does not run these three suites; they need the inherited engine checkout"
+    }
+  ]
+}
