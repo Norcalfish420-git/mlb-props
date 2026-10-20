@@ -1,0 +1,85 @@
+{
+  "schema": "AGENT_RELAY_MESSAGE/0.2",
+  "message_id": "MSG-cursor-20261020-011",
+  "review_id": "REV-20261020-011",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "generated_by": "Cursor rig_review.py",
+  "created_at_utc": "2026-10-20T16:10:16Z",
+  "category": "CODE_REVIEW_REQUEST",
+  "review_kind": "CODE_REVIEW",
+  "scope": "CODE",
+  "priority": "P1",
+  "supersedes": null,
+  "answers_findings": [
+    "AUDIT-REV001-001",
+    "AUDIT-REV001-002",
+    "AUDIT-REV001-003",
+    "AUDIT-REV002-001",
+    "AUDIT-REV002-002",
+    "AUDIT-REV002-003",
+    "AUDIT-REV002-004",
+    "AUDIT-REV003-001",
+    "AUDIT-REV005-001",
+    "AUDIT-REV008-001"
+  ],
+  "tools": [
+    "audit-bridge"
+  ],
+  "targets": [
+    {
+      "repository": "Norcalfish420-git/sports-rig",
+      "branch": "main",
+      "head_sha": "0a0d57e9049dd05b731f82ea1961dd1b1ea23bfe",
+      "paths": [
+        "scripts/rig_review.py",
+        "scripts/rig_relay_coverage.py",
+        "scripts/test_rig_review.py",
+        "scripts/test_rig_relay_coverage.py",
+        "review-findings/"
+      ]
+    },
+    {
+      "repository": "Norcalfish420-git/mlb-props",
+      "branch": "main",
+      "head_sha": "b96870c180f78f053882d1d1b22d2a0ffbce58a2",
+      "paths": [
+        "agent-relay/"
+      ]
+    }
+  ],
+  "summary": "Explicit public relay target for AUDIT-REV001-003, per the REV-010 ruling. The pin commit is no longer an implied target, review folders no longer move the relay head, and replies recorded under the old rule stay valid. The audit-bridge sports-rig target moves to 0a0d57e, so each bridge finding needs verification at the new targets.",
+  "protocol_refs": [
+    "Norcalfish420-git/mlb-props:agent-relay/PROTOCOL.md v0.3 @ b96870c180f78f053882d1d1b22d2a0ffbce58a2",
+    "Norcalfish420-git/desk-handoff:CONTRACT.md v1.3 @ 9cc55983a716abadb82d77e27309e9f054138cc3",
+    "desk-relay:v1 MESSAGE_FORMAT"
+  ],
+  "ledger_refs": [
+    "F:audit_finding:AUDIT-REV001-003"
+  ],
+  "files": [],
+  "requested_action": "Verify AUDIT-REV001-003 at mlb-props@b96870c (agent-relay/), and every other listed audit-bridge finding at sports-rig@0a0d57e, reporting fix_sha as that exact target SHA, or keep it open. Review the two bridge changes described in HANDOFF.md. Begin the reply with 'REV-20261020-011: scope <SCOPE>; disposition <DISPOSITION>' exactly once, and name every target you read as repo@<full sha> and every file path you read. If the wire limit is reached, say which rows remain.",
+  "status_flags": {
+    "code_committed": true,
+    "code_pushed_verified": true,
+    "tests_executed": true,
+    "tests_passed": true,
+    "tests_failed": false,
+    "tests_skipped": false,
+    "tests_unavailable": false,
+    "review_requested": true,
+    "review_completed": false,
+    "release_approved": false
+  },
+  "tests": [
+    {
+      "suite": "test_rig_review + test_rig_relay_coverage at 0a0d57e",
+      "ran": true,
+      "passed": 95,
+      "failed": 0,
+      "skipped": false,
+      "kind": "unit",
+      "note": "three new tests fail against the previous coverage source; sports-rig CI passed on 0a0d57e"
+    }
+  ]
+}
