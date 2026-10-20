@@ -1,12 +1,12 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T16:44:51Z",
-  "relay_head_sha": "0222243f4110095f0597c4fdc6fce9259a8d3823",
-  "cursor_building": "REV-013 awaiting ChatGPT; CFB replay challenge inventory",
-  "last_review_request": "REV-20261020-013",
+  "generated_at_utc": "2026-10-20T17:01:00Z",
+  "relay_head_sha": "6a98b790b719fec2278480d94c4f3f698bb38115",
+  "cursor_building": "REV-014 awaiting ChatGPT; CFB replay challenge inventory",
+  "last_review_request": "REV-20261020-014",
   "awaiting_chatgpt": [
     "REV-20261020-001",
-    "REV-20261020-013"
+    "REV-20261020-014"
   ],
   "answered_reviews": [
     {
@@ -77,6 +77,12 @@
       "replies": [
         "CODE/PARTIAL chatgpt-reply-5a9c61616abfc18f3c7ca2d161072a74"
       ]
+    },
+    {
+      "review_id": "REV-20261020-013",
+      "replies": [
+        "CODE/PARTIAL chatgpt-reply-2aac5a3e782d4e1f6710d6aacd3b49b2"
+      ]
     }
   ],
   "open_findings": [
@@ -95,8 +101,10 @@
     "AUDIT-REV007-004 (MEDIUM, FIX_SUBMITTED)",
     "AUDIT-REV008-001 (HIGH, VERIFIED)",
     "AUDIT-REV009-001 (HIGH, FIX_SUBMITTED)",
-    "AUDIT-REV012-001 (MEDIUM, FIX_SUBMITTED)",
-    "AUDIT-REV012-002 (MEDIUM, FIX_SUBMITTED)"
+    "AUDIT-REV012-001 (MEDIUM, VERIFIED)",
+    "AUDIT-REV012-002 (MEDIUM, FIX_SUBMITTED)",
+    "AUDIT-REV013-001 (HIGH, FIX_SUBMITTED)",
+    "AUDIT-REV013-002 (MEDIUM, FIX_SUBMITTED)"
   ],
   "fixes_awaiting_reverification": [
     "AUDIT-REV007-001",
@@ -104,8 +112,9 @@
     "AUDIT-REV007-003",
     "AUDIT-REV007-004",
     "AUDIT-REV009-001",
-    "AUDIT-REV012-001",
-    "AUDIT-REV012-002"
+    "AUDIT-REV012-002",
+    "AUDIT-REV013-001",
+    "AUDIT-REV013-002"
   ],
   "fixes_not_in_current_target": [
     "AUDIT-REV001-001 (audit-bridge)",
@@ -117,7 +126,8 @@
     "AUDIT-REV002-004 (audit-bridge)",
     "AUDIT-REV003-001 (audit-bridge)",
     "AUDIT-REV005-001 (audit-bridge)",
-    "AUDIT-REV008-001 (audit-bridge, nfl-showdown, qc-gate)"
+    "AUDIT-REV008-001 (audit-bridge, nfl-showdown, qc-gate)",
+    "AUDIT-REV012-001 (audit-bridge, nfl-showdown, qc-gate)"
   ],
   "accepted_risk": [],
   "open_protocol_conflicts": [],
@@ -155,9 +165,10 @@
     "audit-bridge: AUDIT-REV008-001 (HIGH)",
     "nfl-showdown: AUDIT-REV008-001 (HIGH)",
     "qc-gate: AUDIT-REV008-001 (HIGH)",
-    "audit-bridge: AUDIT-REV009-001 (HIGH)",
     "nfl-showdown: AUDIT-REV009-001 (HIGH)",
-    "qc-gate: AUDIT-REV009-001 (HIGH)"
+    "qc-gate: AUDIT-REV009-001 (HIGH)",
+    "nfl-showdown: AUDIT-REV013-001 (HIGH)",
+    "qc-gate: AUDIT-REV013-001 (HIGH)"
   ],
   "projection_mismatches": [],
   "untrusted_pins": [

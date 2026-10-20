@@ -1,7 +1,7 @@
 {
   "schema": "AGENT_RELAY_COVERAGE/0.2",
-  "generated_at_utc": "2026-10-20T16:44:51Z",
-  "relay_head_sha": "0222243f4110095f0597c4fdc6fce9259a8d3823",
+  "generated_at_utc": "2026-10-20T17:01:00Z",
+  "relay_head_sha": "6a98b790b719fec2278480d94c4f3f698bb38115",
   "replies_checked_against_pr1": true,
   "tools": [
     {
@@ -34,9 +34,9 @@
         "Norcalfish420-git/sports-rig@3a9c0ae10f1f852fc1c1019ded79deac5f821aa5"
       ],
       "last_reviewed_targets": [
-        "Norcalfish420-git/mlb-props@5e37ad4bae39e1ea52fdf6774822df539d9c86d2",
-        "Norcalfish420-git/sports-rig@0ccc97f35f8d8caa1e557870f79b0da46cb7b53a",
-        "Norcalfish420-git/sports-rig@696f3f9f632e35955f2ee6809dc4ab54b5bcd199"
+        "Norcalfish420-git/mlb-props@0222243f4110095f0597c4fdc6fce9259a8d3823",
+        "Norcalfish420-git/sports-rig@7582dd9f772f0cf7845ef68559d9ab6540d3cce0",
+        "Norcalfish420-git/sports-rig@bd8aac0fdee420f8a6540d830791a8b1e390b4bd"
       ],
       "last_review_scope": "CODE/PARTIAL",
       "review_ids": [
@@ -44,18 +44,20 @@
         "REV-20261020-008",
         "REV-20261020-009",
         "REV-20261020-012",
-        "REV-20261020-013"
+        "REV-20261020-013",
+        "REV-20261020-014"
       ],
       "answered_review_ids": [
         "REV-20261020-007",
         "REV-20261020-008",
         "REV-20261020-009",
-        "REV-20261020-012"
+        "REV-20261020-012",
+        "REV-20261020-013"
       ],
       "open_findings": {
         "CRITICAL": 0,
-        "HIGH": 4,
-        "MEDIUM": 4,
+        "HIGH": 5,
+        "MEDIUM": 5,
         "LOW": 0,
         "IMPROVEMENT": 0
       },
@@ -133,9 +135,9 @@
         "Norcalfish420-git/sports-rig@3a9c0ae10f1f852fc1c1019ded79deac5f821aa5"
       ],
       "last_reviewed_targets": [
-        "Norcalfish420-git/mlb-props@5e37ad4bae39e1ea52fdf6774822df539d9c86d2",
-        "Norcalfish420-git/sports-rig@0ccc97f35f8d8caa1e557870f79b0da46cb7b53a",
-        "Norcalfish420-git/sports-rig@696f3f9f632e35955f2ee6809dc4ab54b5bcd199"
+        "Norcalfish420-git/mlb-props@0222243f4110095f0597c4fdc6fce9259a8d3823",
+        "Norcalfish420-git/sports-rig@7582dd9f772f0cf7845ef68559d9ab6540d3cce0",
+        "Norcalfish420-git/sports-rig@bd8aac0fdee420f8a6540d830791a8b1e390b4bd"
       ],
       "last_review_scope": "CODE/PARTIAL",
       "review_ids": [
@@ -143,18 +145,20 @@
         "REV-20261020-008",
         "REV-20261020-009",
         "REV-20261020-012",
-        "REV-20261020-013"
+        "REV-20261020-013",
+        "REV-20261020-014"
       ],
       "answered_review_ids": [
         "REV-20261020-007",
         "REV-20261020-008",
         "REV-20261020-009",
-        "REV-20261020-012"
+        "REV-20261020-012",
+        "REV-20261020-013"
       ],
       "open_findings": {
         "CRITICAL": 0,
-        "HIGH": 4,
-        "MEDIUM": 4,
+        "HIGH": 5,
+        "MEDIUM": 5,
         "LOW": 0,
         "IMPROVEMENT": 0
       },
@@ -250,8 +254,8 @@
       "tool_id": "audit-bridge",
       "name": "This audit bridge (agent-relay protocol, review tool, coverage generator)",
       "current_targets": [
-        "Norcalfish420-git/mlb-props@0222243f4110095f0597c4fdc6fce9259a8d3823",
-        "Norcalfish420-git/sports-rig@bd8aac0fdee420f8a6540d830791a8b1e390b4bd"
+        "Norcalfish420-git/mlb-props@6a98b790b719fec2278480d94c4f3f698bb38115",
+        "Norcalfish420-git/sports-rig@326ea12a70e1f7cd61f1d64c5b2d0b5d43d7bde1"
       ],
       "last_reviewed_targets": [
         "Norcalfish420-git/sports-rig@7ad9566ba6232628c1727780e8db59b135059f1b"
@@ -268,7 +272,8 @@
         "REV-20261020-010",
         "REV-20261020-011",
         "REV-20261020-012",
-        "REV-20261020-013"
+        "REV-20261020-013",
+        "REV-20261020-014"
       ],
       "answered_review_ids": [
         "REV-20261020-002",
@@ -279,12 +284,13 @@
         "REV-20261020-009",
         "REV-20261020-010",
         "REV-20261020-011",
-        "REV-20261020-012"
+        "REV-20261020-012",
+        "REV-20261020-013"
       ],
       "open_findings": {
         "CRITICAL": 0,
-        "HIGH": 8,
-        "MEDIUM": 5,
+        "HIGH": 7,
+        "MEDIUM": 4,
         "LOW": 0,
         "IMPROVEMENT": 0
       },
