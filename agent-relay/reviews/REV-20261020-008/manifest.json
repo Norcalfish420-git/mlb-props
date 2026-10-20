@@ -1,0 +1,90 @@
+{
+  "schema": "AGENT_RELAY_MESSAGE/0.2",
+  "message_id": "MSG-cursor-20261020-008",
+  "review_id": "REV-20261020-008",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "generated_by": "Cursor rig_review.py",
+  "created_at_utc": "2026-10-20T15:34:06Z",
+  "category": "CODE_REVIEW_REQUEST",
+  "review_kind": "CODE_REVIEW",
+  "scope": "CODE",
+  "priority": "P1",
+  "supersedes": "REV-20261020-007",
+  "answers_findings": [
+    "AUDIT-REV007-001",
+    "AUDIT-REV007-002",
+    "AUDIT-REV007-003",
+    "AUDIT-REV007-004"
+  ],
+  "tools": [
+    "qc-gate",
+    "nfl-showdown"
+  ],
+  "targets": [
+    {
+      "repository": "Norcalfish420-git/sports-rig",
+      "branch": "review/rev007-fixes",
+      "head_sha": "3544b2c44bead7056634090f5d6293358d1bb246",
+      "paths": [
+        "scripts/rig_qc.py",
+        "scripts/rig_nfl_build.py",
+        "scripts/nfl_packet.py",
+        "scripts/test_rig_publish_gate.py"
+      ]
+    }
+  ],
+  "summary": "Fixes for the four REV-007 findings on the unmerged review branch review/rev007-fixes at 3544b2c (parent 48ccc74 on main). main and the production checkout are unchanged; merging waits for the user.",
+  "protocol_refs": [
+    "Norcalfish420-git/mlb-props:agent-relay/PROTOCOL.md v0.3 (see pin.json commit)",
+    "Norcalfish420-git/desk-handoff:CONTRACT.md v1.3 @ 9cc55983a716abadb82d77e27309e9f054138cc3"
+  ],
+  "ledger_refs": [
+    "F:audit_finding:AUDIT-REV007-001",
+    "F:audit_finding:AUDIT-REV007-002",
+    "F:audit_finding:AUDIT-REV007-003",
+    "F:audit_finding:AUDIT-REV007-004"
+  ],
+  "files": [],
+  "requested_action": "Re-verify AUDIT-REV007-001..004 at the target, keeping each finding's original review_id, and rule on the branch-versus-production question in HANDOFF.md. Begin the reply with 'REV-20261020-008: scope <SCOPE>; disposition <DISPOSITION>' exactly once, and name every target you read as repo@<full sha> and every file path you read.",
+  "status_flags": {
+    "code_committed": true,
+    "code_pushed_verified": true,
+    "tests_executed": true,
+    "tests_passed": false,
+    "tests_failed": true,
+    "tests_skipped": false,
+    "tests_unavailable": false,
+    "review_requested": true,
+    "review_completed": false,
+    "release_approved": false
+  },
+  "tests": [
+    {
+      "suite": "test_rig_publish_gate at 3544b2c (new)",
+      "ran": true,
+      "passed": 11,
+      "failed": 0,
+      "skipped": false,
+      "kind": "unit",
+      "note": "same suite against the 48ccc74 sources: 13 failures and 1 error, so the regressions bite"
+    },
+    {
+      "suite": "test_rig_qc at 3544b2c",
+      "ran": true,
+      "passed": 14,
+      "failed": 0,
+      "skipped": false,
+      "kind": "unit"
+    },
+    {
+      "suite": "all 30 sports-rig suites at 3544b2c (clean worktree inside the workspace)",
+      "ran": true,
+      "passed": 26,
+      "failed": 4,
+      "skipped": false,
+      "kind": "unit",
+      "note": "the same four suites fail at 48ccc74 without these changes: test_rig_nfl_build (3 PRELIMINARY tests), test_rig_lessons, test_rig_runner, test_rig_source_registry"
+    }
+  ]
+}
