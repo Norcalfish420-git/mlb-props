@@ -1,8 +1,8 @@
 # Agent relay status
 
-Generated 2026-10-20T14:25:09Z. Relay head `fff853e`. Do not edit by hand.
+Generated 2026-10-20T14:25:12Z. Relay head `5822e0b`. Do not edit by hand.
 
-- Cursor is building: REV-20261020-003 re-verification request
+- Cursor is building: REV-20261020-003 waiting for ChatGPT
 - Last review request: REV-20261020-003
 - Waiting for ChatGPT: `REV-20261020-001`, `REV-20261020-003`
 - ChatGPT replies recorded (scope/disposition): `REV-20261020-002`: CODE/PARTIAL chatgpt-reply-416793c53753ebf4f4cbfde2dbc3b147
@@ -12,6 +12,6 @@ Generated 2026-10-20T14:25:09Z. Relay head `fff853e`. Do not edit by hand.
 - Open protocol conflicts (as findings): none
 - Outputs blocked by confirmed CRITICAL/HIGH findings: `audit-bridge: AUDIT-REV001-001 (HIGH)`, `audit-bridge: AUDIT-REV001-002 (HIGH)`, `audit-bridge: AUDIT-REV002-001 (HIGH)`, `audit-bridge: AUDIT-REV002-002 (HIGH)`, `audit-bridge: AUDIT-REV002-003 (HIGH)`
 - Releases that passed independent QC: none
-- Reviews whose replies do not count (pin missing or no longer matching): `REV-20261020-001: pin lacks manifest.json and HANDOFF.md hashes`, `REV-20261020-003: not pinned`
+- Reviews whose replies do not count (pin missing or no longer matching): `REV-20261020-001: pin lacks manifest.json and HANDOFF.md hashes`
 
 See `COVERAGE.md` for each tool. Detailed findings stay on private desk-handoff PR #1.
