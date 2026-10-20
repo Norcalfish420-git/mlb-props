@@ -1,6 +1,6 @@
 # Audit coverage
 
-Generated 2026-10-20T14:25:12Z by `sports-rig:scripts/rig_relay_coverage.py`. Relay head: `5822e0b`. Do not edit by hand.
+Generated 2026-10-20T14:25:46Z by `sports-rig:scripts/rig_relay_coverage.py`. Relay head: `5822e0b`. Do not edit by hand.
 
 A verdict comes only from ChatGPT replies recorded from desk-handoff PR #1 with their comment
 id and payload hash. Cursor test counts are shown for context and never set the verdict.

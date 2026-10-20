@@ -1,8 +1,8 @@
 # Agent relay status
 
-Generated 2026-10-20T14:25:12Z. Relay head `5822e0b`. Do not edit by hand.
+Generated 2026-10-20T14:25:46Z. Relay head `5822e0b`. Do not edit by hand.
 
-- Cursor is building: REV-20261020-003 waiting for ChatGPT
+- Cursor is building: REV-20261020-003 waiting for ChatGPT re-verification
 - Last review request: REV-20261020-003
 - Waiting for ChatGPT: `REV-20261020-001`, `REV-20261020-003`
 - ChatGPT replies recorded (scope/disposition): `REV-20261020-002`: CODE/PARTIAL chatgpt-reply-416793c53753ebf4f4cbfde2dbc3b147
