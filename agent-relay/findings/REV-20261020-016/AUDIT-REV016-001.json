@@ -1,0 +1,17 @@
+{
+  "finding_id": "AUDIT-REV016-001",
+  "review_id": "REV-20261020-016",
+  "severity": "MEDIUM",
+  "classification": "CONFIRMED",
+  "status": "OPEN",
+  "category": "MALFORMED_INPUT_AVAILABILITY",
+  "verification_status": "NOT_VERIFIED",
+  "fix_sha": null,
+  "review_scope": null,
+  "not_applicable_to": null,
+  "source": {
+    "message_id": "chatgpt-reply-a32aaa0ef2d109ccb4202cfe302fefa5",
+    "comment_id": 6296972391,
+    "payload_sha256": "5288ef363b37b8571b3ebdec794ee415e3a71bf587345ed4765c3faa3cd878a0"
+  }
+}

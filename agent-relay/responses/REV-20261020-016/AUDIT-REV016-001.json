@@ -1,0 +1,23 @@
+{
+  "schema": "AGENT_RELAY_RESPONSE/0.2",
+  "review_id": "REV-20261020-016",
+  "finding_id": "AUDIT-REV016-001",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "history": [
+    {
+      "cursor_response": "ACCEPTED",
+      "evidence": "",
+      "fix_sha": "8c9b95f4f26b32bfca3acb27ec99695b5ecfb483",
+      "regression_test": "test_rig_relay_coverage.test_malformed_ids_neither_crash_nor_earn_credit (list, object, null and int finding_id; list and null review_id; each beside a valid HIGH and a HIGH public row); test_malformed_public_row_is_a_controlled_error; test_rig_review.test_malformed_rows_fail_validation_without_crashing (adds list, object and null finding_id)",
+      "created_at_utc": "2026-10-20T17:40:24Z",
+      "verification_status": "NOT_VERIFIED"
+    }
+  ],
+  "cursor_response": "ACCEPTED",
+  "evidence": "",
+  "fix_sha": "8c9b95f4f26b32bfca3acb27ec99695b5ecfb483",
+  "regression_test": "test_rig_relay_coverage.test_malformed_ids_neither_crash_nor_earn_credit (list, object, null and int finding_id; list and null review_id; each beside a valid HIGH and a HIGH public row); test_malformed_public_row_is_a_controlled_error; test_rig_review.test_malformed_rows_fail_validation_without_crashing (adds list, object and null finding_id)",
+  "created_at_utc": "2026-10-20T17:40:24Z",
+  "verification_status": "NOT_VERIFIED"
+}
