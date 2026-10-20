@@ -1,12 +1,12 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T17:24:18Z",
-  "relay_head_sha": "da2bd0093b97c89d1b69625a22f39f78e539982c",
-  "cursor_building": "REV-016 awaiting ChatGPT (AUDIT-REV014-001 typed validator at sports-rig ac4bd2f); CFB UTAH_COL replay phase-1 inventory awaiting ChatGPT",
-  "last_review_request": "REV-20261020-016",
+  "generated_at_utc": "2026-10-20T17:41:15Z",
+  "relay_head_sha": "3518d926558aa2a8493a9f68b08fb7c555565182",
+  "cursor_building": "REV-017 awaiting ChatGPT (AUDIT-REV016-001 at sports-rig 8c9b95f); CFB UTAH_COL replay evidence awaiting ChatGPT review",
+  "last_review_request": "REV-20261020-017",
   "awaiting_chatgpt": [
     "REV-20261020-001",
-    "REV-20261020-016"
+    "REV-20261020-017"
   ],
   "answered_reviews": [
     {
@@ -95,6 +95,12 @@
       "replies": [
         "CODE/PARTIAL chatgpt-reply-df3277d03db1a1aeaf165b65bc478549"
       ]
+    },
+    {
+      "review_id": "REV-20261020-016",
+      "replies": [
+        "CODE/PARTIAL chatgpt-reply-a32aaa0ef2d109ccb4202cfe302fefa5"
+      ]
     }
   ],
   "open_findings": [
@@ -117,7 +123,8 @@
     "AUDIT-REV012-002 (MEDIUM, FIX_SUBMITTED)",
     "AUDIT-REV013-001 (HIGH, FIX_SUBMITTED)",
     "AUDIT-REV013-002 (MEDIUM, FIX_SUBMITTED)",
-    "AUDIT-REV014-001 (HIGH, FIX_SUBMITTED)"
+    "AUDIT-REV014-001 (HIGH, VERIFIED)",
+    "AUDIT-REV016-001 (MEDIUM, FIX_SUBMITTED)"
   ],
   "fixes_awaiting_reverification": [
     "AUDIT-REV007-001",
@@ -128,7 +135,7 @@
     "AUDIT-REV012-002",
     "AUDIT-REV013-001",
     "AUDIT-REV013-002",
-    "AUDIT-REV014-001"
+    "AUDIT-REV016-001"
   ],
   "fixes_not_in_current_target": [
     "AUDIT-REV001-001 (audit-bridge)",
@@ -141,7 +148,8 @@
     "AUDIT-REV003-001 (audit-bridge)",
     "AUDIT-REV005-001 (audit-bridge)",
     "AUDIT-REV008-001 (audit-bridge, nfl-showdown, qc-gate)",
-    "AUDIT-REV012-001 (audit-bridge, nfl-showdown, qc-gate)"
+    "AUDIT-REV012-001 (audit-bridge, nfl-showdown, qc-gate)",
+    "AUDIT-REV014-001 (audit-bridge)"
   ],
   "accepted_risk": [],
   "open_protocol_conflicts": [],
