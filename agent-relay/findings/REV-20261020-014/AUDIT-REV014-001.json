@@ -1,0 +1,20 @@
+{
+  "finding_id": "AUDIT-REV014-001",
+  "review_id": "REV-20261020-014",
+  "severity": "HIGH",
+  "classification": "CONFIRMED",
+  "status": "OPEN",
+  "category": "FINDING_IDENTITY",
+  "verification_status": "NOT_VERIFIED",
+  "fix_sha": null,
+  "review_scope": null,
+  "not_applicable_to": [
+    "qc-gate",
+    "nfl-showdown"
+  ],
+  "source": {
+    "message_id": "chatgpt-reply-89dd8e15ae25d6cbe128ce4fa9723737",
+    "comment_id": 6296640837,
+    "payload_sha256": "069d2133cf45982834a2124016516edabca2db061b8327984256bc515c6345cb"
+  }
+}

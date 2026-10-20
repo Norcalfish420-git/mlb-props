@@ -6,11 +6,12 @@
   "status": "VERIFIED",
   "category": "FINDING_LIFECYCLE",
   "verification_status": "VERIFIED_AT_SHA",
-  "fix_sha": "0a0d57e9049dd05b731f82ea1961dd1b1ea23bfe",
+  "fix_sha": "326ea12a70e1f7cd61f1d64c5b2d0b5d43d7bde1",
   "review_scope": null,
+  "not_applicable_to": null,
   "source": {
-    "message_id": "chatgpt-reply-bcba9ac7508e2829da593a4a51a94264",
-    "comment_id": 6295638610,
-    "payload_sha256": "4accb3888d5cfa59c846466c2d3a36f151f9c7693048a0290b291db8227b4482"
+    "message_id": "chatgpt-reply-89dd8e15ae25d6cbe128ce4fa9723737",
+    "comment_id": 6296640837,
+    "payload_sha256": "069d2133cf45982834a2124016516edabca2db061b8327984256bc515c6345cb"
   }
 }
