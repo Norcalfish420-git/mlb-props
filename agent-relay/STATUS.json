@@ -1,12 +1,12 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T17:01:00Z",
-  "relay_head_sha": "6a98b790b719fec2278480d94c4f3f698bb38115",
-  "cursor_building": "REV-014 awaiting ChatGPT; CFB replay challenge inventory",
-  "last_review_request": "REV-20261020-014",
+  "generated_at_utc": "2026-10-20T17:16:18Z",
+  "relay_head_sha": "e41ec0b153192b9bfd7832ec0dac3ddbbc896a00",
+  "cursor_building": "REV-015 awaiting ChatGPT; CFB replay inventory sent",
+  "last_review_request": "REV-20261020-015",
   "awaiting_chatgpt": [
     "REV-20261020-001",
-    "REV-20261020-014"
+    "REV-20261020-015"
   ],
   "answered_reviews": [
     {
@@ -83,6 +83,12 @@
       "replies": [
         "CODE/PARTIAL chatgpt-reply-2aac5a3e782d4e1f6710d6aacd3b49b2"
       ]
+    },
+    {
+      "review_id": "REV-20261020-014",
+      "replies": [
+        "CODE/PARTIAL chatgpt-reply-89dd8e15ae25d6cbe128ce4fa9723737"
+      ]
     }
   ],
   "open_findings": [
@@ -104,7 +110,8 @@
     "AUDIT-REV012-001 (MEDIUM, VERIFIED)",
     "AUDIT-REV012-002 (MEDIUM, FIX_SUBMITTED)",
     "AUDIT-REV013-001 (HIGH, FIX_SUBMITTED)",
-    "AUDIT-REV013-002 (MEDIUM, FIX_SUBMITTED)"
+    "AUDIT-REV013-002 (MEDIUM, FIX_SUBMITTED)",
+    "AUDIT-REV014-001 (HIGH, FIX_SUBMITTED)"
   ],
   "fixes_awaiting_reverification": [
     "AUDIT-REV007-001",
@@ -114,7 +121,8 @@
     "AUDIT-REV009-001",
     "AUDIT-REV012-002",
     "AUDIT-REV013-001",
-    "AUDIT-REV013-002"
+    "AUDIT-REV013-002",
+    "AUDIT-REV014-001"
   ],
   "fixes_not_in_current_target": [
     "AUDIT-REV001-001 (audit-bridge)",
@@ -168,7 +176,8 @@
     "nfl-showdown: AUDIT-REV009-001 (HIGH)",
     "qc-gate: AUDIT-REV009-001 (HIGH)",
     "nfl-showdown: AUDIT-REV013-001 (HIGH)",
-    "qc-gate: AUDIT-REV013-001 (HIGH)"
+    "qc-gate: AUDIT-REV013-001 (HIGH)",
+    "audit-bridge: AUDIT-REV014-001 (HIGH)"
   ],
   "projection_mismatches": [],
   "untrusted_pins": [
