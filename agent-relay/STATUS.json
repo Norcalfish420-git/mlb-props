@@ -1,11 +1,12 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T16:23:12Z",
-  "relay_head_sha": "b96870c180f78f053882d1d1b22d2a0ffbce58a2",
+  "generated_at_utc": "2026-10-20T16:25:37Z",
+  "relay_head_sha": "5e37ad4bae39e1ea52fdf6774822df539d9c86d2",
   "cursor_building": "",
-  "last_review_request": "REV-20261020-011",
+  "last_review_request": "REV-20261020-012",
   "awaiting_chatgpt": [
-    "REV-20261020-001"
+    "REV-20261020-001",
+    "REV-20261020-012"
   ],
   "answered_reviews": [
     {
@@ -75,6 +76,7 @@
   "open_findings": [
     "AUDIT-REV001-001 (HIGH, VERIFIED)",
     "AUDIT-REV001-002 (HIGH, VERIFIED)",
+    "AUDIT-REV001-003 (HIGH, VERIFIED)",
     "AUDIT-REV002-001 (HIGH, VERIFIED)",
     "AUDIT-REV002-002 (HIGH, VERIFIED)",
     "AUDIT-REV002-003 (HIGH, VERIFIED)",
@@ -98,6 +100,7 @@
   "fixes_not_in_current_target": [
     "AUDIT-REV001-001 (audit-bridge)",
     "AUDIT-REV001-002 (audit-bridge)",
+    "AUDIT-REV001-003 (audit-bridge)",
     "AUDIT-REV002-001 (audit-bridge)",
     "AUDIT-REV002-002 (audit-bridge)",
     "AUDIT-REV002-003 (audit-bridge)",
@@ -131,6 +134,7 @@
   "release_blocks": [
     "audit-bridge: AUDIT-REV001-001 (HIGH)",
     "audit-bridge: AUDIT-REV001-002 (HIGH)",
+    "audit-bridge: AUDIT-REV001-003 (HIGH)",
     "audit-bridge: AUDIT-REV002-001 (HIGH)",
     "audit-bridge: AUDIT-REV002-002 (HIGH)",
     "audit-bridge: AUDIT-REV002-003 (HIGH)",
