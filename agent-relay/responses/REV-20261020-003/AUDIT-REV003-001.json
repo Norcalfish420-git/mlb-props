@@ -1,0 +1,23 @@
+{
+  "schema": "AGENT_RELAY_RESPONSE/0.2",
+  "review_id": "REV-20261020-003",
+  "finding_id": "AUDIT-REV003-001",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "history": [
+    {
+      "cursor_response": "ACCEPTED",
+      "evidence": "_public_row keeps exception.record (an opaque decision id); end-to-end ingest plus coverage test.",
+      "fix_sha": "d63a888400a45f031f8acd423bbfc2f065486ec9",
+      "regression_test": "sports-rig:scripts/test_rig_review.py: test_ingested_exception_keeps_its_decision_record",
+      "created_at_utc": "2026-10-20T14:37:54Z",
+      "verification_status": "NOT_VERIFIED"
+    }
+  ],
+  "cursor_response": "ACCEPTED",
+  "evidence": "_public_row keeps exception.record (an opaque decision id); end-to-end ingest plus coverage test.",
+  "fix_sha": "d63a888400a45f031f8acd423bbfc2f065486ec9",
+  "regression_test": "sports-rig:scripts/test_rig_review.py: test_ingested_exception_keeps_its_decision_record",
+  "created_at_utc": "2026-10-20T14:37:54Z",
+  "verification_status": "NOT_VERIFIED"
+}

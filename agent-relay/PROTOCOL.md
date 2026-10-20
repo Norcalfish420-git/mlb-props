@@ -57,10 +57,14 @@ build is checked after.
    PR #1. The reply must state, exactly once,
    `<review_id>: scope <CODE|ARCHITECTURE|ACCESS_CHECK|PROTOCOL>; disposition <COMPLETE|PARTIAL|BLOCKED>`.
    That statement sets the recorded scope and disposition; a Cursor value that
-   disagrees is refused. A target counts as confirmed only when the reply names
-   it as `repo@<full 40-character sha>`. Typed ids, edited comments, other
-   threads and Cursor messages are refused. Paths read are not yet bound per
-   path; coverage is per repository and SHA.
+   disagrees is refused. Confirmed targets are the requested `repo@sha`
+   values the reply names in full. Typed ids, edited comments, other threads
+   and Cursor messages are refused.
+   Coverage never trusts these stored values. Every run re-reads PR #1 and
+   re-derives each reply (pointer unchanged, reply unchanged, statement once,
+   targets named, paths named). A reply that does not re-derive, or any reply
+   in an offline run, earns no credit. A clean verdict also needs the reply to
+   name every path the registry lists for that tool target.
 5. `ingest`: parses the findings array from that reply without reformatting.
    Same content is a no-op. Lifecycle-only changes (status, verification,
    fix SHA, exception) append history. Any other difference is quarantined
@@ -91,13 +95,18 @@ Computed by `sports-rig:scripts/rig_relay_coverage.py`:
 
 A finding is resolved only when ChatGPT marks it VERIFIED (or CLOSED) with
 `verification_status: VERIFIED_AT_SHA` and a fix SHA. WONT_FIX counts as
-accepted risk only when the finding's `exception.record` names a
+accepted risk for one tool only when the finding's `exception.record` names a
 `decisions/<id>.json` record with `kind: RISK_EXCEPTION`, `approved_by: user`,
-the same `finding_id`, `scope` (a tool the finding's review covers), `sha`
-(still one of that tool's current target SHAs), `expires_utc` in the future,
-and the user's own words with their source. Any code change to that tool
-voids the exception. Agent text is never a user approval. Otherwise the
-finding stays open.
+the same `finding_id`, `scope` equal to that tool (which the finding's review
+covers), `targets` equal to that tool's exact current target set, an
+unexpired `expires_utc`, and an approval resolved from user evidence the
+agents cannot write. Other tools on the same review stay blocked. Any change
+to the tool's targets voids the exception.
+
+No such approval source exists today: both agents act through the user's one
+GitHub account and Cursor can write every local file. Until the user names an
+approval channel, every exception fails closed and the finding stays open.
+Agent text is never a user approval.
 
 Replies count only for a review whose `pin.json` still matches: the current
 manifest and handoff bytes equal the pinned hashes, and the pinned commit

@@ -1,0 +1,16 @@
+{
+  "finding_id": "AUDIT-REV003-001",
+  "review_id": "REV-20261020-003",
+  "severity": "MEDIUM",
+  "classification": "CONFIRMED",
+  "status": "OPEN",
+  "category": "FINDING_LIFECYCLE",
+  "verification_status": "NOT_VERIFIED",
+  "fix_sha": null,
+  "review_scope": null,
+  "source": {
+    "message_id": "chatgpt-reply-7286854d3ad5f8c8619a72045e9f83b2f",
+    "comment_id": 6293295747,
+    "payload_sha256": "5de1edfa295c9b33b3f9190987ef73b190bfaa4cac8391db49eab19921bc2b9e"
+  }
+}

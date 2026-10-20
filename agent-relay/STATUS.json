@@ -1,18 +1,24 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T14:25:46Z",
+  "generated_at_utc": "2026-10-20T14:38:25Z",
   "relay_head_sha": "5822e0b84df7cde1bf2dd967bbaaf516a9e523b6",
-  "cursor_building": "REV-20261020-003 waiting for ChatGPT re-verification",
-  "last_review_request": "REV-20261020-003",
+  "cursor_building": "REV-20261020-004 re-verification request",
+  "last_review_request": "REV-20261020-004",
   "awaiting_chatgpt": [
     "REV-20261020-001",
-    "REV-20261020-003"
+    "REV-20261020-004"
   ],
   "answered_reviews": [
     {
       "review_id": "REV-20261020-002",
       "replies": [
         "CODE/PARTIAL chatgpt-reply-416793c53753ebf4f4cbfde2dbc3b147"
+      ]
+    },
+    {
+      "review_id": "REV-20261020-003",
+      "replies": [
+        "CODE/PARTIAL chatgpt-reply-7286854d3ad5f8c8619a72045e9f83b2f"
       ]
     }
   ],
@@ -21,16 +27,14 @@
     "AUDIT-REV001-002 (HIGH, FIX_SUBMITTED)",
     "AUDIT-REV002-001 (HIGH, FIX_SUBMITTED)",
     "AUDIT-REV002-002 (HIGH, FIX_SUBMITTED)",
-    "AUDIT-REV002-003 (HIGH, FIX_SUBMITTED)",
-    "AUDIT-REV002-004 (MEDIUM, FIX_SUBMITTED)"
+    "AUDIT-REV003-001 (MEDIUM, FIX_SUBMITTED)"
   ],
   "fixes_awaiting_reverification": [
     "AUDIT-REV001-001",
     "AUDIT-REV001-002",
     "AUDIT-REV002-001",
     "AUDIT-REV002-002",
-    "AUDIT-REV002-003",
-    "AUDIT-REV002-004"
+    "AUDIT-REV003-001"
   ],
   "accepted_risk": [],
   "open_protocol_conflicts": [],
@@ -52,14 +56,15 @@
       "audit-bridge"
     ]
   },
+  "replies_checked_against_pr1": true,
   "release_blocks": [
     "audit-bridge: AUDIT-REV001-001 (HIGH)",
     "audit-bridge: AUDIT-REV001-002 (HIGH)",
     "audit-bridge: AUDIT-REV002-001 (HIGH)",
-    "audit-bridge: AUDIT-REV002-002 (HIGH)",
-    "audit-bridge: AUDIT-REV002-003 (HIGH)"
+    "audit-bridge: AUDIT-REV002-002 (HIGH)"
   ],
   "untrusted_pins": [
-    "REV-20261020-001: pin lacks manifest.json and HANDOFF.md hashes"
+    "REV-20261020-001: pin lacks manifest.json and HANDOFF.md hashes",
+    "REV-20261020-004: not pinned"
   ]
 }
