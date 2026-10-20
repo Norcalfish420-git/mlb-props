@@ -1,12 +1,11 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T15:05:52Z",
+  "generated_at_utc": "2026-10-20T15:10:43Z",
   "relay_head_sha": "74afc073e6f3e8a9633477a7f7b2d0437dbbdd40",
   "cursor_building": "",
   "last_review_request": "REV-20261020-006",
   "awaiting_chatgpt": [
-    "REV-20261020-001",
-    "REV-20261020-006"
+    "REV-20261020-001"
   ],
   "answered_reviews": [
     {
@@ -32,16 +31,16 @@
       "replies": [
         "CODE/PARTIAL chatgpt-reply-2754bfdbcd1129c185f962f1b1502cb8f"
       ]
+    },
+    {
+      "review_id": "REV-20261020-006",
+      "replies": [
+        "CODE/COMPLETE chatgpt-reply-28b4463cdb50d3fc1a414da6cc8ee07b"
+      ]
     }
   ],
-  "open_findings": [
-    "AUDIT-REV001-002 (HIGH, FIX_SUBMITTED)",
-    "AUDIT-REV005-001 (MEDIUM, FIX_SUBMITTED)"
-  ],
-  "fixes_awaiting_reverification": [
-    "AUDIT-REV001-002",
-    "AUDIT-REV005-001"
-  ],
+  "open_findings": [],
+  "fixes_awaiting_reverification": [],
   "accepted_risk": [],
   "open_protocol_conflicts": [],
   "releases_passed_independent_qc": [],
@@ -58,15 +57,13 @@
       "hub-publisher",
       "desk-handoff-relay"
     ],
-    "REVIEWED_OPEN_FINDINGS": [
+    "REVIEWED_CLEAN_AT_SHA": [
       "audit-bridge"
     ]
   },
   "replies_checked_against_pr1": true,
-  "release_check": "BLOCKED",
-  "release_blocks": [
-    "audit-bridge: AUDIT-REV001-002 (HIGH)"
-  ],
+  "release_check": "CLEAR",
+  "release_blocks": [],
   "projection_mismatches": [],
   "untrusted_pins": [
     "REV-20261020-001: pin lacks manifest.json and HANDOFF.md hashes"

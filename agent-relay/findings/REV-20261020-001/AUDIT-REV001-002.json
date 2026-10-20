@@ -3,14 +3,14 @@
   "review_id": "REV-20261020-001",
   "severity": "HIGH",
   "classification": "CONFIRMED",
-  "status": "OPEN",
+  "status": "VERIFIED",
   "category": "FINDING_LIFECYCLE",
-  "verification_status": "NOT_VERIFIED",
-  "fix_sha": null,
+  "verification_status": "VERIFIED_AT_SHA",
+  "fix_sha": "7ad9566ba6232628c1727780e8db59b135059f1b",
   "review_scope": null,
   "source": {
-    "message_id": "chatgpt-reply-8b323c07218c543704d860d2857d4f703",
-    "comment_id": 6292617122,
-    "payload_sha256": "7d364580de5baa6fb5ac8cbd44225bf86f8ea9552bc57ef73e8585ee52aec8c1"
+    "message_id": "chatgpt-reply-28b4463cdb50d3fc1a414da6cc8ee07b",
+    "comment_id": 6294143946,
+    "payload_sha256": "e04d4363311dfe09815c9cd046537491eb592c3674e7c6b136db4aa5c5dce166"
   }
 }
