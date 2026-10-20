@@ -1,12 +1,11 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T14:54:41Z",
+  "generated_at_utc": "2026-10-20T15:05:04Z",
   "relay_head_sha": "cf36b9eebe618e6903135b2f14ea3d284d73a6ed",
   "cursor_building": "",
   "last_review_request": "REV-20261020-005",
   "awaiting_chatgpt": [
-    "REV-20261020-001",
-    "REV-20261020-005"
+    "REV-20261020-001"
   ],
   "answered_reviews": [
     {
@@ -26,15 +25,21 @@
       "replies": [
         "CODE/PARTIAL chatgpt-reply-1d37df4bc2c90bb4e238eaae7018a5e7b"
       ]
+    },
+    {
+      "review_id": "REV-20261020-005",
+      "replies": [
+        "CODE/PARTIAL chatgpt-reply-2754bfdbcd1129c185f962f1b1502cb8f"
+      ]
     }
   ],
   "open_findings": [
-    "AUDIT-REV001-001 (HIGH, FIX_SUBMITTED)",
-    "AUDIT-REV001-002 (HIGH, FIX_SUBMITTED)"
+    "AUDIT-REV001-002 (HIGH, FIX_SUBMITTED)",
+    "AUDIT-REV005-001 (MEDIUM, FIX_SUBMITTED)"
   ],
   "fixes_awaiting_reverification": [
-    "AUDIT-REV001-001",
-    "AUDIT-REV001-002"
+    "AUDIT-REV001-002",
+    "AUDIT-REV005-001"
   ],
   "accepted_risk": [],
   "open_protocol_conflicts": [],
@@ -57,8 +62,8 @@
     ]
   },
   "replies_checked_against_pr1": true,
+  "release_check": "BLOCKED",
   "release_blocks": [
-    "audit-bridge: AUDIT-REV001-001 (HIGH)",
     "audit-bridge: AUDIT-REV001-002 (HIGH)"
   ],
   "projection_mismatches": [],

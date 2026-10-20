@@ -1,7 +1,9 @@
 # Agent relay protocol v0.3 (DRAFT)
 
-v0.3 applies ChatGPT's REV-20261020-004 findings on evidence binding and
-derived lifecycle (PR #1 reply `chatgpt-reply-1d37df4bc2c90bb4e238eaae7018a5e7b`).
+v0.3 applies ChatGPT's REV-20261020-004 and -005 findings on evidence binding,
+thread ancestry and derived lifecycle (PR #1 replies
+`chatgpt-reply-1d37df4bc2c90bb4e238eaae7018a5e7b` and
+`chatgpt-reply-2754bfdbcd1129c185f962f1b1502cb8f`).
 v0.2 applied the REV-20261020-001 answers. Earlier versions are in Git history.
 This draft does not supersede desk-handoff `CONTRACT.md` v1.3, preview approval,
 or the desk-relay:v1 permissions, and it cannot relax desk-relay:v1 validation.
@@ -63,7 +65,9 @@ build is checked after.
    and Cursor messages are refused. A message id binds to evidence only when
    exactly one comment on PR #1 carries it, that comment is allowlisted and
    unedited, and its payload equals the accepted message. Any second carrier
-   (a foreign, edited or altered copy) makes the id ambiguous and unusable.
+   (a foreign, edited or altered copy) makes the id ambiguous and unusable,
+   and every message below it in that thread is dropped too. A reply counts
+   only if its whole parent chain up to the pointer is bound evidence.
    Coverage never trusts these stored values. Every run re-reads PR #1 and
    re-derives each reply (pointer unchanged, reply unchanged, statement once,
    targets named, paths named). A reply that does not re-derive, or any reply
@@ -99,13 +103,21 @@ Computed by `sports-rig:scripts/rig_relay_coverage.py`:
 
 Finding lifecycle is derived from PR #1 on every run, never from the
 public `findings/` rows. Identity comes from the reply that first filed the
-finding. Status changes count only from re-derived CODE/COMPLETE replies on
-the finding's own review or on a review that lists it in `answers_findings`.
-A finding is resolved only when such a reply marks it VERIFIED (or CLOSED)
-with `verification_status: VERIFIED_AT_SHA` and a `fix_sha` that review
-requested. Editing or deleting a public row changes nothing; a row that
-disagrees with the derived state is listed as a projection mismatch. An
-offline run resolves nothing. WONT_FIX counts as
+finding. Status changes count only from re-derived CODE-scope replies that
+are not BLOCKED, on the finding's own review or on a review that lists it in
+`answers_findings`. An overall CODE/PARTIAL reply may verify a single finding
+at an inspected target; PARTIAL never makes the whole tool clean, and earlier
+finding-level verifications are not reopened because a review was PARTIAL.
+ARCHITECTURE, ACCESS_CHECK, PROTOCOL or BLOCKED replies cannot close a CODE
+finding. A finding is resolved only when such a reply marks it VERIFIED (or
+CLOSED) with `verification_status: VERIFIED_AT_SHA` and a full 40-character
+`fix_sha` that, joined to the finding's `repository`, is a `repo@sha` the
+review requested. Editing or deleting a public row changes nothing; a row
+that disagrees with the derived state is listed as a projection mismatch.
+
+A release check that cannot read PR #1 resolves nothing and reports
+UNVERIFIED (`--check` exit 3), never CLEAR. Known blocks still show
+(exit 1). UNVERIFIED is a preliminary result, not a publication hold. WONT_FIX counts as
 accepted risk for one tool only when the finding's `exception.record` names a
 `decisions/<id>.json` record with `kind: RISK_EXCEPTION`, `approved_by: user`,
 the same `finding_id`, `scope` equal to that tool (which the finding's review

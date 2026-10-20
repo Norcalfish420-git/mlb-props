@@ -1,6 +1,6 @@
 {
   "schema": "AGENT_RELAY_COVERAGE/0.2",
-  "generated_at_utc": "2026-10-20T14:54:41Z",
+  "generated_at_utc": "2026-10-20T15:05:04Z",
   "relay_head_sha": "cf36b9eebe618e6903135b2f14ea3d284d73a6ed",
   "replies_checked_against_pr1": true,
   "tools": [
@@ -224,8 +224,8 @@
         "Norcalfish420-git/sports-rig@d3d4af68816c99e7555a10247f68455a5f8dfb7c"
       ],
       "last_reviewed_targets": [
-        "Norcalfish420-git/mlb-props@0d2a395f32fca9c9acdd5b4eac8450a9724f41a6",
-        "Norcalfish420-git/sports-rig@a0e63210dc4ad521aec7307279b366f8b36971db"
+        "Norcalfish420-git/mlb-props@cf36b9eebe618e6903135b2f14ea3d284d73a6ed",
+        "Norcalfish420-git/sports-rig@d3d4af68816c99e7555a10247f68455a5f8dfb7c"
       ],
       "last_review_scope": "CODE/PARTIAL",
       "review_ids": [
@@ -238,12 +238,13 @@
       "answered_review_ids": [
         "REV-20261020-002",
         "REV-20261020-003",
-        "REV-20261020-004"
+        "REV-20261020-004",
+        "REV-20261020-005"
       ],
       "open_findings": {
         "CRITICAL": 0,
-        "HIGH": 2,
-        "MEDIUM": 0,
+        "HIGH": 1,
+        "MEDIUM": 1,
         "LOW": 0,
         "IMPROVEMENT": 0
       },

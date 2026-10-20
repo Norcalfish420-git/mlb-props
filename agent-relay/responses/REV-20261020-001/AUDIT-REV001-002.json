@@ -36,12 +36,20 @@
       "regression_test": "test_rig_relay_coverage: test_row_only_closure_keeps_the_hold, test_deleted_row_does_not_lift_the_hold, test_closure_needs_an_authorized_review_and_requested_fix_target, test_offline_run_resolves_nothing; test_rig_review: test_full_finding_repair_retest_resolution",
       "created_at_utc": "2026-10-20T14:53:07Z",
       "verification_status": "NOT_VERIFIED"
+    },
+    {
+      "cursor_response": "ACCEPTED",
+      "evidence": "",
+      "fix_sha": "5fed8a17265b9e6ee9f8039e7982f7a4aacd7fb3",
+      "regression_test": "test_rig_relay_coverage: test_architecture_or_blocked_reply_cannot_close_a_code_finding, test_relay_pin_sha_cannot_stand_in_for_the_fix_repository, test_code_partial_reply_can_verify_one_finding, test_offline_check_is_unverified_never_clear, test_check_cli_exit_code",
+      "created_at_utc": "2026-10-20T15:04:59Z",
+      "verification_status": "NOT_VERIFIED"
     }
   ],
   "cursor_response": "ACCEPTED",
   "evidence": "",
-  "fix_sha": "6ac1dfa22e4e4606f0265d9b05addad94af46114",
-  "regression_test": "test_rig_relay_coverage: test_row_only_closure_keeps_the_hold, test_deleted_row_does_not_lift_the_hold, test_closure_needs_an_authorized_review_and_requested_fix_target, test_offline_run_resolves_nothing; test_rig_review: test_full_finding_repair_retest_resolution",
-  "created_at_utc": "2026-10-20T14:53:07Z",
+  "fix_sha": "5fed8a17265b9e6ee9f8039e7982f7a4aacd7fb3",
+  "regression_test": "test_rig_relay_coverage: test_architecture_or_blocked_reply_cannot_close_a_code_finding, test_relay_pin_sha_cannot_stand_in_for_the_fix_repository, test_code_partial_reply_can_verify_one_finding, test_offline_check_is_unverified_never_clear, test_check_cli_exit_code",
+  "created_at_utc": "2026-10-20T15:04:59Z",
   "verification_status": "NOT_VERIFIED"
 }

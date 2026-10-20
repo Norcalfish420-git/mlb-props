@@ -3,14 +3,14 @@
   "review_id": "REV-20261020-001",
   "severity": "HIGH",
   "classification": "CONFIRMED",
-  "status": "OPEN",
+  "status": "VERIFIED",
   "category": "REVIEW_INTEGRITY",
-  "verification_status": "NOT_VERIFIED",
-  "fix_sha": null,
+  "verification_status": "VERIFIED_AT_SHA",
+  "fix_sha": "d3d4af68816c99e7555a10247f68455a5f8dfb7c",
   "review_scope": null,
   "source": {
-    "message_id": "chatgpt-reply-8b323c07218c543704d860d2857d4f703",
-    "comment_id": 6292617122,
-    "payload_sha256": "7d364580de5baa6fb5ac8cbd44225bf86f8ea9552bc57ef73e8585ee52aec8c1"
+    "message_id": "chatgpt-reply-2754bfdbcd1129c185f962f1b1502cb8f",
+    "comment_id": 6293929535,
+    "payload_sha256": "4d1cb974a18de94358e43860d2276bc10785e69fb69919e2e22d434631e75f80"
   }
 }
