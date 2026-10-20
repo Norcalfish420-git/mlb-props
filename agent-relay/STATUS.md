@@ -1,14 +1,14 @@
 # Agent relay status
 
-Generated 2026-10-20T15:25:42Z. Relay head `cab25d7`. Do not edit by hand.
+Generated 2026-10-20T15:35:09Z. Relay head `d608db2`. Do not edit by hand.
 
 - Cursor is building: nothing recorded
 - Replies re-derived from PR #1 for this run: yes
-- Last review request: REV-20261020-007
-- Waiting for ChatGPT: `REV-20261020-001`
+- Last review request: REV-20261020-008
+- Waiting for ChatGPT: `REV-20261020-001`, `REV-20261020-008`
 - ChatGPT replies recorded (scope/disposition): `REV-20261020-002`: CODE/PARTIAL chatgpt-reply-416793c53753ebf4f4cbfde2dbc3b147; `REV-20261020-003`: CODE/PARTIAL chatgpt-reply-7286854d3ad5f8c8619a72045e9f83b2f; `REV-20261020-004`: CODE/PARTIAL chatgpt-reply-1d37df4bc2c90bb4e238eaae7018a5e7b; `REV-20261020-005`: CODE/PARTIAL chatgpt-reply-2754bfdbcd1129c185f962f1b1502cb8f; `REV-20261020-006`: CODE/COMPLETE chatgpt-reply-28b4463cdb50d3fc1a414da6cc8ee07b; `REV-20261020-007`: CODE/PARTIAL chatgpt-reply-ba9817c16440192c302425dccbfb0645
-- Open findings: `AUDIT-REV007-001 (HIGH, OPEN)`, `AUDIT-REV007-002 (HIGH, OPEN)`, `AUDIT-REV007-003 (MEDIUM, OPEN)`, `AUDIT-REV007-004 (MEDIUM, OPEN)`
-- Fixes awaiting ChatGPT re-verification: none
+- Open findings: `AUDIT-REV007-001 (HIGH, FIX_SUBMITTED)`, `AUDIT-REV007-002 (HIGH, FIX_SUBMITTED)`, `AUDIT-REV007-003 (MEDIUM, FIX_SUBMITTED)`, `AUDIT-REV007-004 (MEDIUM, FIX_SUBMITTED)`
+- Fixes awaiting ChatGPT re-verification: `AUDIT-REV007-001`, `AUDIT-REV007-002`, `AUDIT-REV007-003`, `AUDIT-REV007-004`
 - Accepted risk (user exception): none
 - Open protocol conflicts (as findings): none
 - Release check: BLOCKED

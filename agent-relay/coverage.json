@@ -1,7 +1,7 @@
 {
   "schema": "AGENT_RELAY_COVERAGE/0.2",
-  "generated_at_utc": "2026-10-20T15:25:42Z",
-  "relay_head_sha": "cab25d72a3df55d18a2a0a40d265a8bf3e4acc79",
+  "generated_at_utc": "2026-10-20T15:35:09Z",
+  "relay_head_sha": "d608db2919c2563a2975f8cb9453c1f996831772",
   "replies_checked_against_pr1": true,
   "tools": [
     {
@@ -39,7 +39,8 @@
       ],
       "last_review_scope": "CODE/PARTIAL",
       "review_ids": [
-        "REV-20261020-007"
+        "REV-20261020-007",
+        "REV-20261020-008"
       ],
       "answered_review_ids": [
         "REV-20261020-007"
@@ -52,7 +53,7 @@
         "IMPROVEMENT": 0
       },
       "accepted_risk": 0,
-      "cursor_tests_last_request": "3 run, 3 failed",
+      "cursor_tests_last_request": "3 run, 4 failed",
       "verdict": "REVIEWED_OPEN_FINDINGS"
     },
     {
@@ -130,7 +131,8 @@
       ],
       "last_review_scope": "CODE/PARTIAL",
       "review_ids": [
-        "REV-20261020-007"
+        "REV-20261020-007",
+        "REV-20261020-008"
       ],
       "answered_review_ids": [
         "REV-20261020-007"
@@ -143,7 +145,7 @@
         "IMPROVEMENT": 0
       },
       "accepted_risk": 0,
-      "cursor_tests_last_request": "3 run, 3 failed",
+      "cursor_tests_last_request": "3 run, 4 failed",
       "verdict": "REVIEWED_OPEN_FINDINGS"
     },
     {
@@ -234,7 +236,7 @@
       "tool_id": "audit-bridge",
       "name": "This audit bridge (agent-relay protocol, review tool, coverage generator)",
       "current_targets": [
-        "Norcalfish420-git/mlb-props@cab25d72a3df55d18a2a0a40d265a8bf3e4acc79",
+        "Norcalfish420-git/mlb-props@d608db2919c2563a2975f8cb9453c1f996831772",
         "Norcalfish420-git/sports-rig@7ad9566ba6232628c1727780e8db59b135059f1b"
       ],
       "last_reviewed_targets": [
