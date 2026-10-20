@@ -1,0 +1,10 @@
+{
+  "review_id": "REV-20261020-002",
+  "relay_commit_sha": "fff853ed103727bc522cd8333d2fe90fcf5d3501",
+  "content_sha256": {
+    "HANDOFF.md": "7c57da53d5d4ba09836dcd8ccdeea0f2ac280d42cdd59cac892fdc1595300db4",
+    "manifest.json": "cfc6d3d9abc3c1941c77aa4dabf7bafc0830f8e898f10d50689b5c4c10481844"
+  },
+  "pinned_at_utc": "2026-10-20T14:09:47Z",
+  "verified_by": "git ls-remote origin"
+}
