@@ -1,12 +1,11 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T17:41:15Z",
+  "generated_at_utc": "2026-10-20T17:44:50Z",
   "relay_head_sha": "3518d926558aa2a8493a9f68b08fb7c555565182",
-  "cursor_building": "REV-017 awaiting ChatGPT (AUDIT-REV016-001 at sports-rig 8c9b95f); CFB UTAH_COL replay evidence awaiting ChatGPT review",
+  "cursor_building": "Audit bridge findings all verified at sports-rig 8c9b95f (REV-017 COMPLETE). Open: publisher branch findings await the user's merge; CFB UTAH_COL replay evidence awaits ChatGPT review",
   "last_review_request": "REV-20261020-017",
   "awaiting_chatgpt": [
-    "REV-20261020-001",
-    "REV-20261020-017"
+    "REV-20261020-001"
   ],
   "answered_reviews": [
     {
@@ -101,18 +100,15 @@
       "replies": [
         "CODE/PARTIAL chatgpt-reply-a32aaa0ef2d109ccb4202cfe302fefa5"
       ]
+    },
+    {
+      "review_id": "REV-20261020-017",
+      "replies": [
+        "CODE/COMPLETE chatgpt-reply-00b16e88739ef5e67754d076d6043633"
+      ]
     }
   ],
   "open_findings": [
-    "AUDIT-REV001-001 (HIGH, VERIFIED)",
-    "AUDIT-REV001-002 (HIGH, VERIFIED)",
-    "AUDIT-REV001-003 (HIGH, VERIFIED)",
-    "AUDIT-REV002-001 (HIGH, VERIFIED)",
-    "AUDIT-REV002-002 (HIGH, VERIFIED)",
-    "AUDIT-REV002-003 (HIGH, VERIFIED)",
-    "AUDIT-REV002-004 (MEDIUM, VERIFIED)",
-    "AUDIT-REV003-001 (MEDIUM, VERIFIED)",
-    "AUDIT-REV005-001 (MEDIUM, VERIFIED)",
     "AUDIT-REV007-001 (HIGH, FIX_SUBMITTED)",
     "AUDIT-REV007-002 (HIGH, FIX_SUBMITTED)",
     "AUDIT-REV007-003 (MEDIUM, FIX_SUBMITTED)",
@@ -122,9 +118,7 @@
     "AUDIT-REV012-001 (MEDIUM, VERIFIED)",
     "AUDIT-REV012-002 (MEDIUM, FIX_SUBMITTED)",
     "AUDIT-REV013-001 (HIGH, FIX_SUBMITTED)",
-    "AUDIT-REV013-002 (MEDIUM, FIX_SUBMITTED)",
-    "AUDIT-REV014-001 (HIGH, VERIFIED)",
-    "AUDIT-REV016-001 (MEDIUM, FIX_SUBMITTED)"
+    "AUDIT-REV013-002 (MEDIUM, FIX_SUBMITTED)"
   ],
   "fixes_awaiting_reverification": [
     "AUDIT-REV007-001",
@@ -134,22 +128,11 @@
     "AUDIT-REV009-001",
     "AUDIT-REV012-002",
     "AUDIT-REV013-001",
-    "AUDIT-REV013-002",
-    "AUDIT-REV016-001"
+    "AUDIT-REV013-002"
   ],
   "fixes_not_in_current_target": [
-    "AUDIT-REV001-001 (audit-bridge)",
-    "AUDIT-REV001-002 (audit-bridge)",
-    "AUDIT-REV001-003 (audit-bridge)",
-    "AUDIT-REV002-001 (audit-bridge)",
-    "AUDIT-REV002-002 (audit-bridge)",
-    "AUDIT-REV002-003 (audit-bridge)",
-    "AUDIT-REV002-004 (audit-bridge)",
-    "AUDIT-REV003-001 (audit-bridge)",
-    "AUDIT-REV005-001 (audit-bridge)",
-    "AUDIT-REV008-001 (audit-bridge, nfl-showdown, qc-gate)",
-    "AUDIT-REV012-001 (audit-bridge, nfl-showdown, qc-gate)",
-    "AUDIT-REV014-001 (audit-bridge)"
+    "AUDIT-REV008-001 (nfl-showdown, qc-gate)",
+    "AUDIT-REV012-001 (nfl-showdown, qc-gate)"
   ],
   "accepted_risk": [],
   "open_protocol_conflicts": [],
@@ -167,31 +150,25 @@
     ],
     "REVIEWED_OPEN_FINDINGS": [
       "nfl-showdown",
-      "qc-gate",
+      "qc-gate"
+    ],
+    "REVIEWED_CLEAN_AT_SHA": [
       "audit-bridge"
     ]
   },
   "replies_checked_against_pr1": true,
   "release_check": "BLOCKED",
   "release_blocks": [
-    "audit-bridge: AUDIT-REV001-001 (HIGH)",
-    "audit-bridge: AUDIT-REV001-002 (HIGH)",
-    "audit-bridge: AUDIT-REV001-003 (HIGH)",
-    "audit-bridge: AUDIT-REV002-001 (HIGH)",
-    "audit-bridge: AUDIT-REV002-002 (HIGH)",
-    "audit-bridge: AUDIT-REV002-003 (HIGH)",
     "nfl-showdown: AUDIT-REV007-001 (HIGH)",
     "qc-gate: AUDIT-REV007-001 (HIGH)",
     "nfl-showdown: AUDIT-REV007-002 (HIGH)",
     "qc-gate: AUDIT-REV007-002 (HIGH)",
-    "audit-bridge: AUDIT-REV008-001 (HIGH)",
     "nfl-showdown: AUDIT-REV008-001 (HIGH)",
     "qc-gate: AUDIT-REV008-001 (HIGH)",
     "nfl-showdown: AUDIT-REV009-001 (HIGH)",
     "qc-gate: AUDIT-REV009-001 (HIGH)",
     "nfl-showdown: AUDIT-REV013-001 (HIGH)",
-    "qc-gate: AUDIT-REV013-001 (HIGH)",
-    "audit-bridge: AUDIT-REV014-001 (HIGH)"
+    "qc-gate: AUDIT-REV013-001 (HIGH)"
   ],
   "projection_mismatches": [],
   "untrusted_pins": [
