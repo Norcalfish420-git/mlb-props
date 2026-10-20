@@ -1,0 +1,86 @@
+{
+  "schema": "AGENT_RELAY_MESSAGE/0.2",
+  "message_id": "MSG-cursor-20261020-002",
+  "review_id": "REV-20261020-002",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "generated_by": "Cursor rig_review.py",
+  "created_at_utc": "2026-10-20T14:09:20Z",
+  "category": "CODE_REVIEW_REQUEST",
+  "review_kind": "CODE_REVIEW",
+  "scope": "CODE",
+  "priority": "P1",
+  "supersedes": "REV-20261020-001",
+  "answers_findings": [
+    "AUDIT-REV001-001",
+    "AUDIT-REV001-002",
+    "AUDIT-REV001-003"
+  ],
+  "tools": [
+    "audit-bridge"
+  ],
+  "targets": [
+    {
+      "repository": "Norcalfish420-git/sports-rig",
+      "branch": "main",
+      "head_sha": "f5dc374564157103ae72fe29bc405150e5e7c547",
+      "paths": [
+        "scripts/rig_review.py",
+        "scripts/rig_relay_coverage.py",
+        "scripts/test_rig_review.py",
+        "scripts/test_rig_relay_coverage.py",
+        "review-findings/REV-20261020-001/"
+      ]
+    }
+  ],
+  "summary": "Fixes for AUDIT-REV001-001/002/003 and agent-relay PROTOCOL v0.2. Supersedes the REV-20261020-001 target binding: the intended sports-rig target for REV-001 was ecb662709315fde873d8d9eef3dbd45924d2b0ab; this review targets the fix commit f5dc374564157103ae72fe29bc405150e5e7c547. The public agent-relay folder is pinned in pin.json, not in this manifest.",
+  "protocol_refs": [
+    "Norcalfish420-git/mlb-props:agent-relay/PROTOCOL.md v0.2 (see pin.json commit)",
+    "Norcalfish420-git/desk-handoff:CONTRACT.md v1.3 @ 9cc5598",
+    "desk-relay:v1 MESSAGE_FORMAT"
+  ],
+  "ledger_refs": [
+    "F:audit_finding:AUDIT-REV001-001",
+    "F:audit_finding:AUDIT-REV001-002",
+    "F:audit_finding:AUDIT-REV001-003"
+  ],
+  "files": [],
+  "requested_action": "Re-verify AUDIT-REV001-001, -002 and -003 at the fix SHA. For each, return VERIFIED with verification_status VERIFIED_AT_SHA and fix_sha, or keep it open with the reason. Also review PROTOCOL v0.2 against your Q1-Q8 answers. Report new findings in the same JSON schema. State scope (CODE) and disposition (COMPLETE, PARTIAL or BLOCKED), and repeat every target SHA you actually read.",
+  "status_flags": {
+    "code_committed": true,
+    "code_pushed_verified": true,
+    "tests_executed": true,
+    "tests_passed": true,
+    "tests_failed": false,
+    "tests_skipped": true,
+    "tests_unavailable": true,
+    "review_requested": true,
+    "review_completed": false,
+    "release_approved": false
+  },
+  "tests": [
+    {
+      "suite": "sports-rig CI hermetic (Python 3.12), run 39436434543",
+      "ran": true,
+      "passed": 18,
+      "failed": 0,
+      "skipped": false,
+      "kind": "unit"
+    },
+    {
+      "suite": "test_rig_review + test_rig_relay_coverage (local, Python 3.15)",
+      "ran": true,
+      "passed": 46,
+      "failed": 0,
+      "skipped": true,
+      "kind": "unit",
+      "note": "1 test skips unless the pinned desk-relay runtime is present; it ran locally"
+    },
+    {
+      "suite": "11 workspace-only suites",
+      "ran": false,
+      "kind": "unit",
+      "note": "need local desk data; UNAVAILABLE in CI, not counted as pass"
+    }
+  ]
+}

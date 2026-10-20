@@ -1,0 +1,23 @@
+{
+  "schema": "AGENT_RELAY_RESPONSE/0.2",
+  "review_id": "REV-20261020-001",
+  "finding_id": "AUDIT-REV001-001",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "history": [
+    {
+      "cursor_response": "ACCEPTED",
+      "evidence": "complete now binds each reply to its PR #1 comment id and payload SHA-256 with scope, disposition and confirmed target SHAs; verify re-reads PR #1.",
+      "fix_sha": "f5dc374564157103ae72fe29bc405150e5e7c547",
+      "regression_test": "sports-rig:scripts/test_rig_relay_coverage.py (bare or typed response ids never certify; ARCHITECTURE scope stays REVIEWED_SCOPE_LIMITED) and scripts/test_rig_review.py (complete refuses Cursor messages, edited comments, other threads)",
+      "created_at_utc": "2026-10-20T14:09:19Z",
+      "verification_status": "NOT_VERIFIED"
+    }
+  ],
+  "cursor_response": "ACCEPTED",
+  "evidence": "complete now binds each reply to its PR #1 comment id and payload SHA-256 with scope, disposition and confirmed target SHAs; verify re-reads PR #1.",
+  "fix_sha": "f5dc374564157103ae72fe29bc405150e5e7c547",
+  "regression_test": "sports-rig:scripts/test_rig_relay_coverage.py (bare or typed response ids never certify; ARCHITECTURE scope stays REVIEWED_SCOPE_LIMITED) and scripts/test_rig_review.py (complete refuses Cursor messages, edited comments, other threads)",
+  "created_at_utc": "2026-10-20T14:09:19Z",
+  "verification_status": "NOT_VERIFIED"
+}

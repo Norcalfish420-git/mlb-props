@@ -1,15 +1,31 @@
 {
-  "schema": "AGENT_RELAY_STATUS/0.1",
-  "generated_at_utc": "2026-10-20T13:54:15Z",
+  "schema": "AGENT_RELAY_STATUS/0.2",
+  "generated_at_utc": "2026-10-20T14:09:39Z",
   "relay_head_sha": "9c1eb057e549158c3c4e64e8e213570e8ba7ee51",
-  "cursor_building": "Audit bridge v0.1 published; waiting for ChatGPT design review of REV-20261020-001; next: rig_review.py and sports-rig CI",
-  "last_review_request": "REV-20261020-001",
+  "cursor_building": "",
+  "last_review_request": "REV-20261020-002",
   "awaiting_chatgpt": [
-    "REV-20261020-001"
+    "REV-20261020-002"
   ],
-  "completed_reviews": [],
-  "open_findings": [],
-  "fixes_awaiting_reverification": [],
+  "answered_reviews": [
+    {
+      "review_id": "REV-20261020-001",
+      "replies": [
+        "ARCHITECTURE/PARTIAL chatgpt-reply-8b323c07218c543704d860d2857d4f703"
+      ]
+    }
+  ],
+  "open_findings": [
+    "AUDIT-REV001-001 (HIGH, FIX_SUBMITTED)",
+    "AUDIT-REV001-002 (HIGH, FIX_SUBMITTED)",
+    "AUDIT-REV001-003 (HIGH, FIX_SUBMITTED)"
+  ],
+  "fixes_awaiting_reverification": [
+    "AUDIT-REV001-001",
+    "AUDIT-REV001-002",
+    "AUDIT-REV001-003"
+  ],
+  "accepted_risk": [],
   "open_protocol_conflicts": [],
   "releases_passed_independent_qc": [],
   "tools_by_verdict": {
@@ -25,7 +41,7 @@
       "hub-publisher",
       "desk-handoff-relay"
     ],
-    "REVIEW_PENDING": [
+    "REVIEWED_OPEN_FINDINGS": [
       "audit-bridge"
     ]
   }
