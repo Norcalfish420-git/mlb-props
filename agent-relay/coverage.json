@@ -1,6 +1,6 @@
 {
   "schema": "AGENT_RELAY_COVERAGE/0.2",
-  "generated_at_utc": "2026-10-20T15:50:25Z",
+  "generated_at_utc": "2026-10-20T15:57:27Z",
   "relay_head_sha": "f2fc3bd223f7ef9fc8055eadbcfd60cfa2b2ed5a",
   "replies_checked_against_pr1": true,
   "tools": [
@@ -34,8 +34,9 @@
         "Norcalfish420-git/sports-rig@3a9c0ae10f1f852fc1c1019ded79deac5f821aa5"
       ],
       "last_reviewed_targets": [
-        "Norcalfish420-git/mlb-props@d608db2919c2563a2975f8cb9453c1f996831772",
-        "Norcalfish420-git/sports-rig@3544b2c44bead7056634090f5d6293358d1bb246"
+        "Norcalfish420-git/mlb-props@f2fc3bd223f7ef9fc8055eadbcfd60cfa2b2ed5a",
+        "Norcalfish420-git/sports-rig@7dd06869b3c09ffd35d3c064d717445f4e5b1fd9",
+        "Norcalfish420-git/sports-rig@d6d02f972190dfb841982b954c9b3e7b591be4dd"
       ],
       "last_review_scope": "CODE/PARTIAL",
       "review_ids": [
@@ -45,7 +46,8 @@
       ],
       "answered_review_ids": [
         "REV-20261020-007",
-        "REV-20261020-008"
+        "REV-20261020-008",
+        "REV-20261020-009"
       ],
       "open_findings": {
         "CRITICAL": 0,
@@ -128,8 +130,9 @@
         "Norcalfish420-git/sports-rig@3a9c0ae10f1f852fc1c1019ded79deac5f821aa5"
       ],
       "last_reviewed_targets": [
-        "Norcalfish420-git/mlb-props@d608db2919c2563a2975f8cb9453c1f996831772",
-        "Norcalfish420-git/sports-rig@3544b2c44bead7056634090f5d6293358d1bb246"
+        "Norcalfish420-git/mlb-props@f2fc3bd223f7ef9fc8055eadbcfd60cfa2b2ed5a",
+        "Norcalfish420-git/sports-rig@7dd06869b3c09ffd35d3c064d717445f4e5b1fd9",
+        "Norcalfish420-git/sports-rig@d6d02f972190dfb841982b954c9b3e7b591be4dd"
       ],
       "last_review_scope": "CODE/PARTIAL",
       "review_ids": [
@@ -139,7 +142,8 @@
       ],
       "answered_review_ids": [
         "REV-20261020-007",
-        "REV-20261020-008"
+        "REV-20261020-008",
+        "REV-20261020-009"
       ],
       "open_findings": {
         "CRITICAL": 0,
@@ -241,7 +245,7 @@
       "name": "This audit bridge (agent-relay protocol, review tool, coverage generator)",
       "current_targets": [
         "Norcalfish420-git/mlb-props@f2fc3bd223f7ef9fc8055eadbcfd60cfa2b2ed5a",
-        "Norcalfish420-git/sports-rig@7dd06869b3c09ffd35d3c064d717445f4e5b1fd9"
+        "Norcalfish420-git/sports-rig@01de1fc7e7155ec61fbf21e9a7e0448f9c996017"
       ],
       "last_reviewed_targets": [
         "Norcalfish420-git/mlb-props@74afc073e6f3e8a9633477a7f7b2d0437dbbdd40",
@@ -262,7 +266,8 @@
         "REV-20261020-003",
         "REV-20261020-004",
         "REV-20261020-005",
-        "REV-20261020-006"
+        "REV-20261020-006",
+        "REV-20261020-009"
       ],
       "open_findings": {
         "CRITICAL": 0,

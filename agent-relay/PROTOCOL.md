@@ -114,9 +114,11 @@ CLOSED) with `verification_status: VERIFIED_AT_SHA` and a full 40-character
 `fix_sha` that, joined to the finding's `repository`, is a `repo@sha` the
 review requested. A verified fix resolves the finding for a tool only when
 the fix is in that tool's current target: the tool's target in the finding's
-repository is that exact `repo@fix_sha`, or a later CODE-scope, non-BLOCKED
-reply on a review naming the tool confirmed that exact current target.
-Otherwise the finding shows FIX_NOT_IN_TARGET for that tool and still blocks
+repository must be a `repo@fix_sha` at which a qualifying reply verified this
+finding (VERIFIED or CLOSED, VERIFIED_AT_SHA, on the finding's review or one
+that lists it in `answers_findings`). A later reopen discards earlier target
+verifications. A reply that only read or confirmed the target, verified other
+findings, or omitted this one proves nothing about this fix. Otherwise the finding shows FIX_NOT_IN_TARGET for that tool and still blocks
 it; a fix on an unmerged branch never clears an older production target. A
 finding counts against every tool its review names and every tool whose
 registered paths hold the finding's `file`. Open findings outrank
