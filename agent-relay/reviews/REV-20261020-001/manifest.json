@@ -1,0 +1,151 @@
+{
+  "schema": "AGENT_RELAY_MESSAGE/0.1",
+  "message_id": "MSG-cursor-20261020-001",
+  "review_id": "REV-20261020-001",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "generated_by": "Cursor agent (home-rig chat), written by hand before rig_review exists",
+  "created_at_utc": "2026-10-20T14:00:00Z",
+  "category": "CODE_REVIEW_REQUEST",
+  "review_kind": "ARCHITECTURE_DESIGN_REVIEW",
+  "priority": "P1",
+  "in_reply_to": null,
+  "tools": [
+    "audit-bridge"
+  ],
+  "targets": [
+    {
+      "repository": "Norcalfish420-git/mlb-props",
+      "branch": "main",
+      "base_sha": "c4411f50ad49daabbaa381a969ea05759c110444",
+      "head_sha": "SEE_STATUS_JSON",
+      "paths": [
+        "agent-relay/"
+      ],
+      "visibility": "public"
+    },
+    {
+      "repository": "Norcalfish420-git/sports-rig",
+      "branch": "main",
+      "base_sha": null,
+      "head_sha": "ecb662709315fde873d8d9eef3dbd45924d2b0ab",
+      "visibility": "private",
+      "read_access_verified_for_chatgpt": false
+    },
+    {
+      "repository": "Norcalfish420-git/NFL-Player-Prop-Tool",
+      "branch": "review/2026-10-20-nfl-props-rc6",
+      "base_sha": null,
+      "head_sha": "a7d1bfd15e09f2f49569bd4954879384bb11f739",
+      "visibility": "private",
+      "read_access_verified_for_chatgpt": false
+    },
+    {
+      "repository": "Norcalfish420-git/NFL-Player-Prop-Tool",
+      "branch": "review/2026-10-20-nfl-showdown-v1.6",
+      "base_sha": null,
+      "head_sha": "5d41ae4a00d8b7b1579cb6ed5cdd7479c44e6cc9",
+      "visibility": "private",
+      "read_access_verified_for_chatgpt": false
+    },
+    {
+      "repository": "Norcalfish420-git/NFL-Player-Prop-Tool",
+      "branch": "review/2026-10-20-nfl-hub-qc",
+      "base_sha": null,
+      "head_sha": "8e51f24a0a787b279c343108c450bdb86dd88250",
+      "visibility": "private",
+      "read_access_verified_for_chatgpt": false
+    },
+    {
+      "repository": "Norcalfish420-git/CFB-Player-Prop-Tool",
+      "branch": "review/2026-10-20-cfb-football-handoff",
+      "base_sha": null,
+      "head_sha": "fcdcac3ee749f53eaf5ff1e6d603ae1bff0bda06",
+      "visibility": "private",
+      "read_access_verified_for_chatgpt": false
+    },
+    {
+      "repository": "Norcalfish420-git/horse-desk",
+      "branch": "rig/oct19",
+      "base_sha": null,
+      "head_sha": "85bf764a3eb244453952de9150c8b0cd9418178f",
+      "visibility": "private",
+      "read_access_verified_for_chatgpt": false
+    },
+    {
+      "repository": "Norcalfish420-git/desk-handoff",
+      "branch": "main",
+      "base_sha": null,
+      "head_sha": "a67fb4671382314f0386a32cafd966f760398ee2",
+      "visibility": "private",
+      "read_access_verified_for_chatgpt": true
+    }
+  ],
+  "protocol_refs": [
+    "agent-relay/PROTOCOL.md v0.1 DRAFT",
+    "desk-handoff CONTRACT.md v1 (+ v1.1 draft, unmerged)",
+    "desk-handoff bridge/MESSAGE_FORMAT.md v1"
+  ],
+  "ledger_refs": [],
+  "files": [
+    "mlb-props:agent-relay/PROTOCOL.md",
+    "mlb-props:agent-relay/README.md",
+    "mlb-props:agent-relay/registry/tools.json",
+    "mlb-props:agent-relay/COVERAGE.md",
+    "mlb-props:agent-relay/STATUS.md",
+    "sports-rig:scripts/rig_relay_coverage.py"
+  ],
+  "requested_action": "Independently challenge the audit bridge design before it is treated as operational. Confirm or deny read access to each private target SHA. Return findings using PROTOCOL.md section 6 through an approved route.",
+  "evidence": [
+    "agent-relay/reviews/REV-20261020-001/HANDOFF.md"
+  ],
+  "related": [
+    "desk-handoff PR #1"
+  ],
+  "status_flags": {
+    "code_committed": true,
+    "code_pushed_verified": true,
+    "tests_executed": true,
+    "tests_passed": false,
+    "tests_failed": true,
+    "tests_skipped": false,
+    "tests_unavailable": true,
+    "review_requested": true,
+    "review_completed": false,
+    "release_approved": false
+  },
+  "tests": [
+    {
+      "suite": "sports-rig scripts (unittest, Python 3.15)",
+      "sha": "24adb0e85be2337b009cfe5a4cd4e27cfe20de30",
+      "ran": 229,
+      "failed": 5,
+      "notes": "3 in test_rig_nfl_build (QC block expected BLOCKED, got PRELIMINARY; clean board publish count 0 != 1), 2 in test_rig_runner (quiet job log count, timeout record). Not investigated in this change."
+    },
+    {
+      "suite": "sports-rig test_desk_gate (desk Python via desk-env.sh)",
+      "sha": "24adb0e85be2337b009cfe5a4cd4e27cfe20de30",
+      "ran": 35,
+      "failed": 0
+    },
+    {
+      "suite": "sports-rig test_rig_relay_coverage (unittest, Python 3.15)",
+      "sha": "ecb662709315fde873d8d9eef3dbd45924d2b0ab",
+      "ran": 10,
+      "failed": 0
+    },
+    {
+      "suite": "NFL props RC6 focused (pytest: test_tickets, test_feature_bridge, test_props_slate_html)",
+      "sha": "a7d1bfd15e09f2f49569bd4954879384bb11f739",
+      "ran": 100,
+      "failed": 0
+    },
+    {
+      "suite": "sports-rig under macOS system Python 3.9",
+      "ran": 0,
+      "failed": 0,
+      "notes": "UNAVAILABLE: rig_runner imports tomllib (3.11+)."
+    }
+  ],
+  "state": "AVAILABLE_FOR_REVIEW_PENDING_ACCESS_CHECK"
+}

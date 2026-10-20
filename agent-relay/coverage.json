@@ -1,0 +1,272 @@
+{
+  "schema": "AGENT_RELAY_COVERAGE/0.1",
+  "generated_at_utc": "2026-10-20T13:53:39Z",
+  "relay_head_sha": null,
+  "tools": [
+    {
+      "tool_id": "nfl-props",
+      "name": "NFL props board (one prop per player, RC6 research gate, T-60 recheck)",
+      "current_targets": [
+        [
+          "Norcalfish420-git/NFL-Player-Prop-Tool",
+          "review/2026-10-20-nfl-props-rc6",
+          "a7d1bfd15e09f2f49569bd4954879384bb11f739"
+        ],
+        [
+          "Norcalfish420-git/sports-rig",
+          "main",
+          "ecb662709315fde873d8d9eef3dbd45924d2b0ab"
+        ]
+      ],
+      "last_reviewed_targets": [],
+      "review_ids": [],
+      "completed_review_ids": [],
+      "open_findings": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0,
+        "IMPROVEMENT": 0
+      },
+      "cursor_tests_last_request": "none recorded",
+      "verdict": "NOT_REVIEWED"
+    },
+    {
+      "tool_id": "nfl-showdown",
+      "name": "NFL double-up Showdown (v1.6 engine, ranked handoff, NFL_CASH_CORE_FIRST/1.0, real_engine wrapper)",
+      "current_targets": [
+        [
+          "Norcalfish420-git/NFL-Player-Prop-Tool",
+          "review/2026-10-20-nfl-showdown-v1.6",
+          "5d41ae4a00d8b7b1579cb6ed5cdd7479c44e6cc9"
+        ],
+        [
+          "Norcalfish420-git/sports-rig",
+          "main",
+          "ecb662709315fde873d8d9eef3dbd45924d2b0ab"
+        ]
+      ],
+      "last_reviewed_targets": [],
+      "review_ids": [],
+      "completed_review_ids": [],
+      "open_findings": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0,
+        "IMPROVEMENT": 0
+      },
+      "cursor_tests_last_request": "none recorded",
+      "verdict": "NOT_REVIEWED"
+    },
+    {
+      "tool_id": "cfb-showdown-intake",
+      "name": "CFB Showdown bundle intake and preview (ChatGPT picks; Cursor validates structure only)",
+      "current_targets": [
+        [
+          "Norcalfish420-git/CFB-Player-Prop-Tool",
+          "review/2026-10-20-cfb-football-handoff",
+          "fcdcac3ee749f53eaf5ff1e6d603ae1bff0bda06"
+        ]
+      ],
+      "last_reviewed_targets": [],
+      "review_ids": [],
+      "completed_review_ids": [],
+      "open_findings": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0,
+        "IMPROVEMENT": 0
+      },
+      "cursor_tests_last_request": "none recorded",
+      "verdict": "NOT_REVIEWED"
+    },
+    {
+      "tool_id": "cfb-props",
+      "name": "CFB props desk",
+      "current_targets": [
+        [
+          "Norcalfish420-git/CFB-Player-Prop-Tool",
+          "review/2026-10-20-cfb-football-handoff",
+          "fcdcac3ee749f53eaf5ff1e6d603ae1bff0bda06"
+        ]
+      ],
+      "last_reviewed_targets": [],
+      "review_ids": [],
+      "completed_review_ids": [],
+      "open_findings": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0,
+        "IMPROVEMENT": 0
+      },
+      "cursor_tests_last_request": "none recorded",
+      "verdict": "NOT_REVIEWED"
+    },
+    {
+      "tool_id": "horse-racing",
+      "name": "Horse desk (check_horses, entries pages, eligibility screen)",
+      "current_targets": [
+        [
+          "Norcalfish420-git/horse-desk",
+          "rig/oct19",
+          "85bf764a3eb244453952de9150c8b0cd9418178f"
+        ]
+      ],
+      "last_reviewed_targets": [],
+      "review_ids": [],
+      "completed_review_ids": [],
+      "open_findings": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0,
+        "IMPROVEMENT": 0
+      },
+      "cursor_tests_last_request": "none recorded",
+      "verdict": "NOT_REVIEWED"
+    },
+    {
+      "tool_id": "qc-gate",
+      "name": "Pre-publish QC gate and leak scan (rig_qc.run_qc / assert_publishable)",
+      "current_targets": [
+        [
+          "Norcalfish420-git/sports-rig",
+          "main",
+          "ecb662709315fde873d8d9eef3dbd45924d2b0ab"
+        ]
+      ],
+      "last_reviewed_targets": [],
+      "review_ids": [],
+      "completed_review_ids": [],
+      "open_findings": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0,
+        "IMPROVEMENT": 0
+      },
+      "cursor_tests_last_request": "none recorded",
+      "verdict": "NOT_REVIEWED"
+    },
+    {
+      "tool_id": "ledgers",
+      "name": "Ledgers A-H index, decision record, source registry, rules view",
+      "current_targets": [
+        [
+          "Norcalfish420-git/sports-rig",
+          "main",
+          "ecb662709315fde873d8d9eef3dbd45924d2b0ab"
+        ]
+      ],
+      "last_reviewed_targets": [],
+      "review_ids": [],
+      "completed_review_ids": [],
+      "open_findings": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0,
+        "IMPROVEMENT": 0
+      },
+      "cursor_tests_last_request": "none recorded",
+      "verdict": "NOT_REVIEWED"
+    },
+    {
+      "tool_id": "research-author",
+      "name": "Research skeleton, facts, lessons, headless author and challenger",
+      "current_targets": [
+        [
+          "Norcalfish420-git/sports-rig",
+          "main",
+          "ecb662709315fde873d8d9eef3dbd45924d2b0ab"
+        ]
+      ],
+      "last_reviewed_targets": [],
+      "review_ids": [],
+      "completed_review_ids": [],
+      "open_findings": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0,
+        "IMPROVEMENT": 0
+      },
+      "cursor_tests_last_request": "none recorded",
+      "verdict": "NOT_REVIEWED"
+    },
+    {
+      "tool_id": "hub-publisher",
+      "name": "Hub publisher and site pages",
+      "current_targets": [
+        [
+          "Norcalfish420-git/NFL-Player-Prop-Tool",
+          "review/2026-10-20-nfl-hub-qc",
+          "8e51f24a0a787b279c343108c450bdb86dd88250"
+        ]
+      ],
+      "last_reviewed_targets": [],
+      "review_ids": [],
+      "completed_review_ids": [],
+      "open_findings": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0,
+        "IMPROVEMENT": 0
+      },
+      "cursor_tests_last_request": "none recorded",
+      "verdict": "NOT_REVIEWED"
+    },
+    {
+      "tool_id": "desk-handoff-relay",
+      "name": "desk-handoff bridge relay (ChatGPT-owned transport; Cursor runs a pinned copy)",
+      "current_targets": [
+        [
+          "Norcalfish420-git/desk-handoff",
+          "main",
+          "a67fb4671382314f0386a32cafd966f760398ee2"
+        ]
+      ],
+      "last_reviewed_targets": [],
+      "review_ids": [],
+      "completed_review_ids": [],
+      "open_findings": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0,
+        "IMPROVEMENT": 0
+      },
+      "cursor_tests_last_request": "none recorded",
+      "verdict": "NOT_REVIEWED"
+    },
+    {
+      "tool_id": "audit-bridge",
+      "name": "This audit bridge (agent-relay protocol, status and coverage)",
+      "current_targets": [
+        [
+          "Norcalfish420-git/mlb-props",
+          "main",
+          null
+        ]
+      ],
+      "last_reviewed_targets": [],
+      "review_ids": [
+        "REV-20261020-001"
+      ],
+      "completed_review_ids": [],
+      "open_findings": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0,
+        "IMPROVEMENT": 0
+      },
+      "cursor_tests_last_request": "374 run, 5 failed",
+      "verdict": "REVIEW_PENDING"
+    }
+  ]
+}

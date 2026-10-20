@@ -1,0 +1,32 @@
+{
+  "schema": "AGENT_RELAY_STATUS/0.1",
+  "generated_at_utc": "2026-10-20T13:53:39Z",
+  "relay_head_sha": null,
+  "cursor_building": "Audit bridge v0.1: agent-relay protocol, coverage dashboard, first architecture handoff REV-20261020-001",
+  "last_review_request": "REV-20261020-001",
+  "awaiting_chatgpt": [
+    "REV-20261020-001"
+  ],
+  "completed_reviews": [],
+  "open_findings": [],
+  "fixes_awaiting_reverification": [],
+  "open_protocol_conflicts": [],
+  "releases_passed_independent_qc": [],
+  "tools_by_verdict": {
+    "NOT_REVIEWED": [
+      "nfl-props",
+      "nfl-showdown",
+      "cfb-showdown-intake",
+      "cfb-props",
+      "horse-racing",
+      "qc-gate",
+      "ledgers",
+      "research-author",
+      "hub-publisher",
+      "desk-handoff-relay"
+    ],
+    "REVIEW_PENDING": [
+      "audit-bridge"
+    ]
+  }
+}

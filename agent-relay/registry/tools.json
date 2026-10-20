@@ -1,0 +1,85 @@
+{
+  "schema": "AGENT_RELAY_TOOLS/0.1",
+  "updated_at_utc": "2026-10-20T14:00:00Z",
+  "tools": [
+    {
+      "tool_id": "nfl-props",
+      "name": "NFL props board (one prop per player, RC6 research gate, T-60 recheck)",
+      "targets": [
+        {"repository": "Norcalfish420-git/NFL-Player-Prop-Tool", "branch": "review/2026-10-20-nfl-props-rc6", "head_sha": "a7d1bfd15e09f2f49569bd4954879384bb11f739", "paths": ["tools/build_tickets.py", "tools/feature_bridge.py", "tools/props_slate_html.py"]},
+        {"repository": "Norcalfish420-git/sports-rig", "branch": "main", "head_sha": "ecb662709315fde873d8d9eef3dbd45924d2b0ab", "paths": ["scripts/rig_nfl_props.py"]}
+      ]
+    },
+    {
+      "tool_id": "nfl-showdown",
+      "name": "NFL double-up Showdown (v1.6 engine, ranked handoff, NFL_CASH_CORE_FIRST/1.0, real_engine wrapper)",
+      "targets": [
+        {"repository": "Norcalfish420-git/NFL-Player-Prop-Tool", "branch": "review/2026-10-20-nfl-showdown-v1.6", "head_sha": "5d41ae4a00d8b7b1579cb6ed5cdd7479c44e6cc9", "paths": ["imports/nfl-showdown-v1.6/"]},
+        {"repository": "Norcalfish420-git/sports-rig", "branch": "main", "head_sha": "ecb662709315fde873d8d9eef3dbd45924d2b0ab", "paths": ["scripts/rig_nfl_build.py", "scripts/nfl_packet.py", "scripts/rig_showdown_cash.py"]}
+      ]
+    },
+    {
+      "tool_id": "cfb-showdown-intake",
+      "name": "CFB Showdown bundle intake and preview (ChatGPT picks; Cursor validates structure only)",
+      "targets": [
+        {"repository": "Norcalfish420-git/CFB-Player-Prop-Tool", "branch": "review/2026-10-20-cfb-football-handoff", "head_sha": "fcdcac3ee749f53eaf5ff1e6d603ae1bff0bda06", "paths": ["tools/handoff_cli.py", "tools/handoff/"]}
+      ]
+    },
+    {
+      "tool_id": "cfb-props",
+      "name": "CFB props desk",
+      "targets": [
+        {"repository": "Norcalfish420-git/CFB-Player-Prop-Tool", "branch": "review/2026-10-20-cfb-football-handoff", "head_sha": "fcdcac3ee749f53eaf5ff1e6d603ae1bff0bda06", "paths": ["tools/"]}
+      ]
+    },
+    {
+      "tool_id": "horse-racing",
+      "name": "Horse desk (check_horses, entries pages, eligibility screen)",
+      "targets": [
+        {"repository": "Norcalfish420-git/horse-desk", "branch": "rig/oct19", "head_sha": "85bf764a3eb244453952de9150c8b0cd9418178f", "paths": ["scripts/"]}
+      ]
+    },
+    {
+      "tool_id": "qc-gate",
+      "name": "Pre-publish QC gate and leak scan (rig_qc.run_qc / assert_publishable)",
+      "targets": [
+        {"repository": "Norcalfish420-git/sports-rig", "branch": "main", "head_sha": "ecb662709315fde873d8d9eef3dbd45924d2b0ab", "paths": ["scripts/rig_qc.py", "scripts/test_rig_qc.py"]}
+      ]
+    },
+    {
+      "tool_id": "ledgers",
+      "name": "Ledgers A-H index, decision record, source registry, rules view",
+      "targets": [
+        {"repository": "Norcalfish420-git/sports-rig", "branch": "main", "head_sha": "ecb662709315fde873d8d9eef3dbd45924d2b0ab", "paths": ["scripts/rig_ledgers.py", "scripts/rig_decision_record.py", "scripts/rig_source_registry.py", "scripts/rig_rules_view.py", "registry/"]}
+      ]
+    },
+    {
+      "tool_id": "research-author",
+      "name": "Research skeleton, facts, lessons, headless author and challenger",
+      "targets": [
+        {"repository": "Norcalfish420-git/sports-rig", "branch": "main", "head_sha": "ecb662709315fde873d8d9eef3dbd45924d2b0ab", "paths": ["scripts/rig_research_skeleton.py", "scripts/rig_research_author.py", "scripts/rig_facts.py", "scripts/rig_lessons.py", "scripts/rig_challenge.py", "prompts/"]}
+      ]
+    },
+    {
+      "tool_id": "hub-publisher",
+      "name": "Hub publisher and site pages",
+      "targets": [
+        {"repository": "Norcalfish420-git/NFL-Player-Prop-Tool", "branch": "review/2026-10-20-nfl-hub-qc", "head_sha": "8e51f24a0a787b279c343108c450bdb86dd88250", "paths": ["tools/hubrender.py", "tools/publish_html_web.py"]}
+      ]
+    },
+    {
+      "tool_id": "desk-handoff-relay",
+      "name": "desk-handoff bridge relay (ChatGPT-owned transport; Cursor runs a pinned copy)",
+      "targets": [
+        {"repository": "Norcalfish420-git/desk-handoff", "branch": "main", "head_sha": "a67fb4671382314f0386a32cafd966f760398ee2", "paths": ["bridge/"]}
+      ]
+    },
+    {
+      "tool_id": "audit-bridge",
+      "name": "This audit bridge (agent-relay protocol, status and coverage)",
+      "targets": [
+        {"repository": "Norcalfish420-git/mlb-props", "branch": "main", "head_sha": "SEE_STATUS_JSON", "paths": ["agent-relay/"]}
+      ]
+    }
+  ]
+}
