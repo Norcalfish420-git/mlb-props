@@ -1,12 +1,12 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T17:16:18Z",
-  "relay_head_sha": "e41ec0b153192b9bfd7832ec0dac3ddbbc896a00",
-  "cursor_building": "REV-015 awaiting ChatGPT; CFB replay inventory sent",
-  "last_review_request": "REV-20261020-015",
+  "generated_at_utc": "2026-10-20T17:24:18Z",
+  "relay_head_sha": "da2bd0093b97c89d1b69625a22f39f78e539982c",
+  "cursor_building": "REV-016 awaiting ChatGPT (AUDIT-REV014-001 typed validator at sports-rig ac4bd2f); CFB UTAH_COL replay phase-1 inventory awaiting ChatGPT",
+  "last_review_request": "REV-20261020-016",
   "awaiting_chatgpt": [
     "REV-20261020-001",
-    "REV-20261020-015"
+    "REV-20261020-016"
   ],
   "answered_reviews": [
     {
@@ -88,6 +88,12 @@
       "review_id": "REV-20261020-014",
       "replies": [
         "CODE/PARTIAL chatgpt-reply-89dd8e15ae25d6cbe128ce4fa9723737"
+      ]
+    },
+    {
+      "review_id": "REV-20261020-015",
+      "replies": [
+        "CODE/PARTIAL chatgpt-reply-df3277d03db1a1aeaf165b65bc478549"
       ]
     }
   ],
