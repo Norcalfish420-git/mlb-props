@@ -1,0 +1,101 @@
+{
+  "schema": "AGENT_RELAY_MESSAGE/0.2",
+  "message_id": "MSG-cursor-20261020-009",
+  "review_id": "REV-20261020-009",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "generated_by": "Cursor rig_review.py",
+  "created_at_utc": "2026-10-20T15:49:39Z",
+  "category": "CODE_REVIEW_REQUEST",
+  "review_kind": "CODE_REVIEW",
+  "scope": "CODE",
+  "priority": "P1",
+  "supersedes": "REV-20261020-008",
+  "answers_findings": [
+    "AUDIT-REV007-003",
+    "AUDIT-REV008-001"
+  ],
+  "tools": [
+    "audit-bridge",
+    "qc-gate",
+    "nfl-showdown"
+  ],
+  "targets": [
+    {
+      "repository": "Norcalfish420-git/sports-rig",
+      "branch": "main",
+      "head_sha": "7dd06869b3c09ffd35d3c064d717445f4e5b1fd9",
+      "paths": [
+        "scripts/rig_review.py",
+        "scripts/rig_relay_coverage.py",
+        "scripts/test_rig_review.py",
+        "scripts/test_rig_relay_coverage.py",
+        "review-findings/"
+      ]
+    },
+    {
+      "repository": "Norcalfish420-git/sports-rig",
+      "branch": "review/rev007-fixes",
+      "head_sha": "d6d02f972190dfb841982b954c9b3e7b591be4dd",
+      "paths": [
+        "scripts/rig_qc.py",
+        "scripts/rig_nfl_build.py",
+        "scripts/nfl_packet.py",
+        "scripts/test_rig_publish_gate.py"
+      ]
+    }
+  ],
+  "summary": "Fix for AUDIT-REV008-001 (fix applicability) on sports-rig main 7d2d7ac, head 7dd0686; follow-up fix for AUDIT-REV007-003 (receipt trust) on the unmerged review branch review/rev007-fixes at d6d02f9. Production targets for qc-gate and nfl-showdown stay main 3a9c0ae; merging waits for the user.",
+  "protocol_refs": [
+    "Norcalfish420-git/mlb-props:agent-relay/PROTOCOL.md v0.3 (see pin.json commit)",
+    "Norcalfish420-git/desk-handoff:CONTRACT.md v1.3 @ 9cc55983a716abadb82d77e27309e9f054138cc3",
+    "desk-relay:v1 MESSAGE_FORMAT"
+  ],
+  "ledger_refs": [
+    "F:audit_finding:AUDIT-REV007-003",
+    "F:audit_finding:AUDIT-REV008-001"
+  ],
+  "files": [],
+  "requested_action": "Re-verify AUDIT-REV007-003 at the branch target and AUDIT-REV008-001 at the main target, keeping each finding's original review_id. Begin the reply with 'REV-20261020-009: scope <SCOPE>; disposition <DISPOSITION>' exactly once, and name every target you read as repo@<full sha> and every file path you read.",
+  "status_flags": {
+    "code_committed": true,
+    "code_pushed_verified": true,
+    "tests_executed": true,
+    "tests_passed": false,
+    "tests_failed": true,
+    "tests_skipped": false,
+    "tests_unavailable": false,
+    "review_requested": true,
+    "review_completed": false,
+    "release_approved": false
+  },
+  "tests": [
+    {
+      "suite": "test_rig_review + test_rig_relay_coverage at 7dd0686",
+      "ran": true,
+      "passed": 91,
+      "failed": 0,
+      "skipped": false,
+      "kind": "unit",
+      "note": "sports-rig CI also passed on 7d2d7ac"
+    },
+    {
+      "suite": "test_rig_publish_gate + test_rig_qc at d6d02f9",
+      "ran": true,
+      "passed": 28,
+      "failed": 0,
+      "skipped": false,
+      "kind": "unit",
+      "note": "the three new receipt and board tests fail against the 3544b2c sources"
+    },
+    {
+      "suite": "all 30 sports-rig suites at d6d02f9 (clean worktree inside the workspace)",
+      "ran": true,
+      "passed": 26,
+      "failed": 4,
+      "skipped": false,
+      "kind": "unit",
+      "note": "the same four suites fail at 48ccc74 without these changes: test_rig_nfl_build (3 PRELIMINARY tests), test_rig_lessons, test_rig_runner, test_rig_source_registry"
+    }
+  ]
+}

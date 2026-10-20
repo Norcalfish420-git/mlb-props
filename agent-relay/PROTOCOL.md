@@ -112,7 +112,15 @@ ARCHITECTURE, ACCESS_CHECK, PROTOCOL or BLOCKED replies cannot close a CODE
 finding. A finding is resolved only when such a reply marks it VERIFIED (or
 CLOSED) with `verification_status: VERIFIED_AT_SHA` and a full 40-character
 `fix_sha` that, joined to the finding's `repository`, is a `repo@sha` the
-review requested. Editing or deleting a public row changes nothing; a row
+review requested. A verified fix resolves the finding for a tool only when
+the fix is in that tool's current target: the tool's target in the finding's
+repository is that exact `repo@fix_sha`, or a later CODE-scope, non-BLOCKED
+reply on a review naming the tool confirmed that exact current target.
+Otherwise the finding shows FIX_NOT_IN_TARGET for that tool and still blocks
+it; a fix on an unmerged branch never clears an older production target. A
+finding counts against every tool its review names and every tool whose
+registered paths hold the finding's `file`. Open findings outrank
+NOT_REVIEWED. Editing or deleting a public row changes nothing; a row
 that disagrees with the derived state is listed as a projection mismatch.
 
 A release check that cannot read PR #1 resolves nothing and reports

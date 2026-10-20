@@ -1,6 +1,6 @@
 {
   "schema": "AGENT_RELAY_COVERAGE/0.2",
-  "generated_at_utc": "2026-10-20T15:35:09Z",
+  "generated_at_utc": "2026-10-20T15:41:50Z",
   "relay_head_sha": "d608db2919c2563a2975f8cb9453c1f996831772",
   "replies_checked_against_pr1": true,
   "tools": [
@@ -34,8 +34,8 @@
         "Norcalfish420-git/sports-rig@3a9c0ae10f1f852fc1c1019ded79deac5f821aa5"
       ],
       "last_reviewed_targets": [
-        "Norcalfish420-git/mlb-props@cab25d72a3df55d18a2a0a40d265a8bf3e4acc79",
-        "Norcalfish420-git/sports-rig@3a9c0ae10f1f852fc1c1019ded79deac5f821aa5"
+        "Norcalfish420-git/mlb-props@d608db2919c2563a2975f8cb9453c1f996831772",
+        "Norcalfish420-git/sports-rig@3544b2c44bead7056634090f5d6293358d1bb246"
       ],
       "last_review_scope": "CODE/PARTIAL",
       "review_ids": [
@@ -43,11 +43,12 @@
         "REV-20261020-008"
       ],
       "answered_review_ids": [
-        "REV-20261020-007"
+        "REV-20261020-007",
+        "REV-20261020-008"
       ],
       "open_findings": {
         "CRITICAL": 0,
-        "HIGH": 2,
+        "HIGH": 3,
         "MEDIUM": 2,
         "LOW": 0,
         "IMPROVEMENT": 0
@@ -126,8 +127,8 @@
         "Norcalfish420-git/sports-rig@3a9c0ae10f1f852fc1c1019ded79deac5f821aa5"
       ],
       "last_reviewed_targets": [
-        "Norcalfish420-git/mlb-props@cab25d72a3df55d18a2a0a40d265a8bf3e4acc79",
-        "Norcalfish420-git/sports-rig@3a9c0ae10f1f852fc1c1019ded79deac5f821aa5"
+        "Norcalfish420-git/mlb-props@d608db2919c2563a2975f8cb9453c1f996831772",
+        "Norcalfish420-git/sports-rig@3544b2c44bead7056634090f5d6293358d1bb246"
       ],
       "last_review_scope": "CODE/PARTIAL",
       "review_ids": [
@@ -135,11 +136,12 @@
         "REV-20261020-008"
       ],
       "answered_review_ids": [
-        "REV-20261020-007"
+        "REV-20261020-007",
+        "REV-20261020-008"
       ],
       "open_findings": {
         "CRITICAL": 0,
-        "HIGH": 2,
+        "HIGH": 3,
         "MEDIUM": 2,
         "LOW": 0,
         "IMPROVEMENT": 0
