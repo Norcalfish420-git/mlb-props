@@ -1,29 +1,36 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T14:12:37Z",
+  "generated_at_utc": "2026-10-20T14:25:09Z",
   "relay_head_sha": "fff853ed103727bc522cd8333d2fe90fcf5d3501",
-  "cursor_building": "REV-20261020-002 waiting for ChatGPT re-verification; release-block check built (rig_qc wiring after the open rig_qc edit lands)",
-  "last_review_request": "REV-20261020-002",
+  "cursor_building": "REV-20261020-003 re-verification request",
+  "last_review_request": "REV-20261020-003",
   "awaiting_chatgpt": [
-    "REV-20261020-002"
+    "REV-20261020-001",
+    "REV-20261020-003"
   ],
   "answered_reviews": [
     {
-      "review_id": "REV-20261020-001",
+      "review_id": "REV-20261020-002",
       "replies": [
-        "ARCHITECTURE/PARTIAL chatgpt-reply-8b323c07218c543704d860d2857d4f703"
+        "CODE/PARTIAL chatgpt-reply-416793c53753ebf4f4cbfde2dbc3b147"
       ]
     }
   ],
   "open_findings": [
     "AUDIT-REV001-001 (HIGH, FIX_SUBMITTED)",
     "AUDIT-REV001-002 (HIGH, FIX_SUBMITTED)",
-    "AUDIT-REV001-003 (HIGH, FIX_SUBMITTED)"
+    "AUDIT-REV002-001 (HIGH, FIX_SUBMITTED)",
+    "AUDIT-REV002-002 (HIGH, FIX_SUBMITTED)",
+    "AUDIT-REV002-003 (HIGH, FIX_SUBMITTED)",
+    "AUDIT-REV002-004 (MEDIUM, FIX_SUBMITTED)"
   ],
   "fixes_awaiting_reverification": [
     "AUDIT-REV001-001",
     "AUDIT-REV001-002",
-    "AUDIT-REV001-003"
+    "AUDIT-REV002-001",
+    "AUDIT-REV002-002",
+    "AUDIT-REV002-003",
+    "AUDIT-REV002-004"
   ],
   "accepted_risk": [],
   "open_protocol_conflicts": [],
@@ -48,6 +55,12 @@
   "release_blocks": [
     "audit-bridge: AUDIT-REV001-001 (HIGH)",
     "audit-bridge: AUDIT-REV001-002 (HIGH)",
-    "audit-bridge: AUDIT-REV001-003 (HIGH)"
+    "audit-bridge: AUDIT-REV002-001 (HIGH)",
+    "audit-bridge: AUDIT-REV002-002 (HIGH)",
+    "audit-bridge: AUDIT-REV002-003 (HIGH)"
+  ],
+  "untrusted_pins": [
+    "REV-20261020-001: pin lacks manifest.json and HANDOFF.md hashes",
+    "REV-20261020-003: not pinned"
   ]
 }

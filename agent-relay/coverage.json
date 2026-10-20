@@ -1,6 +1,6 @@
 {
   "schema": "AGENT_RELAY_COVERAGE/0.2",
-  "generated_at_utc": "2026-10-20T14:12:37Z",
+  "generated_at_utc": "2026-10-20T14:25:09Z",
   "relay_head_sha": "fff853ed103727bc522cd8333d2fe90fcf5d3501",
   "tools": [
     {
@@ -220,29 +220,25 @@
       "name": "This audit bridge (agent-relay protocol, review tool, coverage generator)",
       "current_targets": [
         "Norcalfish420-git/mlb-props@fff853ed103727bc522cd8333d2fe90fcf5d3501",
-        "Norcalfish420-git/sports-rig@f5dc374564157103ae72fe29bc405150e5e7c547"
+        "Norcalfish420-git/sports-rig@2b20f0ac3e10a9d1376d5d38f4289a6689049e1a"
       ],
       "last_reviewed_targets": [
-        "Norcalfish420-git/CFB-Player-Prop-Tool@fcdcac3ee749f53eaf5ff1e6d603ae1bff0bda06",
-        "Norcalfish420-git/NFL-Player-Prop-Tool@5d41ae4a00d8b7b1579cb6ed5cdd7479c44e6cc9",
-        "Norcalfish420-git/NFL-Player-Prop-Tool@8e51f24a0a787b279c343108c450bdb86dd88250",
-        "Norcalfish420-git/NFL-Player-Prop-Tool@a7d1bfd15e09f2f49569bd4954879384bb11f739",
-        "Norcalfish420-git/desk-handoff@a67fb4671382314f0386a32cafd966f760398ee2",
-        "Norcalfish420-git/mlb-props@9c1eb057e549158c3c4e64e8e213570e8ba7ee51",
-        "Norcalfish420-git/sports-rig@ecb662709315fde873d8d9eef3dbd45924d2b0ab"
+        "Norcalfish420-git/mlb-props@fff853ed103727bc522cd8333d2fe90fcf5d3501",
+        "Norcalfish420-git/sports-rig@f5dc374564157103ae72fe29bc405150e5e7c547"
       ],
-      "last_review_scope": "ARCHITECTURE/PARTIAL",
+      "last_review_scope": "CODE/PARTIAL",
       "review_ids": [
         "REV-20261020-001",
-        "REV-20261020-002"
+        "REV-20261020-002",
+        "REV-20261020-003"
       ],
       "answered_review_ids": [
-        "REV-20261020-001"
+        "REV-20261020-002"
       ],
       "open_findings": {
         "CRITICAL": 0,
-        "HIGH": 3,
-        "MEDIUM": 0,
+        "HIGH": 5,
+        "MEDIUM": 1,
         "LOW": 0,
         "IMPROVEMENT": 0
       },

@@ -54,10 +54,13 @@ build is checked after.
    pinned public commit, the manifest hash and every target SHA. `pointer`
    records its comment id and payload hash.
 4. `complete`: records a ChatGPT reply in that pointer's thread, read from
-   PR #1, with `scope` (CODE, ARCHITECTURE, ACCESS_CHECK, PROTOCOL),
-   `disposition` (COMPLETE, PARTIAL, BLOCKED) and the target SHAs the reply
-   names and confirms. Typed ids, edited comments, other threads and Cursor
-   messages are refused.
+   PR #1. The reply must state, exactly once,
+   `<review_id>: scope <CODE|ARCHITECTURE|ACCESS_CHECK|PROTOCOL>; disposition <COMPLETE|PARTIAL|BLOCKED>`.
+   That statement sets the recorded scope and disposition; a Cursor value that
+   disagrees is refused. A target counts as confirmed only when the reply names
+   it as `repo@<full 40-character sha>`. Typed ids, edited comments, other
+   threads and Cursor messages are refused. Paths read are not yet bound per
+   path; coverage is per repository and SHA.
 5. `ingest`: parses the findings array from that reply without reformatting.
    Same content is a no-op. Lifecycle-only changes (status, verification,
    fix SHA, exception) append history. Any other difference is quarantined
@@ -88,8 +91,18 @@ Computed by `sports-rig:scripts/rig_relay_coverage.py`:
 
 A finding is resolved only when ChatGPT marks it VERIFIED (or CLOSED) with
 `verification_status: VERIFIED_AT_SHA` and a fix SHA. WONT_FIX counts as
-accepted risk only with an exception approved by the user, bound to a scope
-and SHA, with an expiry; otherwise it stays open. Cursor test counts are shown
+accepted risk only when the finding's `exception.record` names a
+`decisions/<id>.json` record with `kind: RISK_EXCEPTION`, `approved_by: user`,
+the same `finding_id`, `scope` (a tool the finding's review covers), `sha`
+(still one of that tool's current target SHAs), `expires_utc` in the future,
+and the user's own words with their source. Any code change to that tool
+voids the exception. Agent text is never a user approval. Otherwise the
+finding stays open.
+
+Replies count only for a review whose `pin.json` still matches: the current
+manifest and handoff bytes equal the pinned hashes, and the pinned commit
+holds those same bytes. A review edited after pinning, or never pinned, gets
+no credit and is listed in STATUS. Cursor test counts are shown
 and never set a verdict. Unit, integration, historical replay and live-source
 results stay separate; unavailable checks show as unavailable.
 

@@ -1,0 +1,23 @@
+{
+  "schema": "AGENT_RELAY_RESPONSE/0.2",
+  "review_id": "REV-20261020-002",
+  "finding_id": "AUDIT-REV002-002",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "history": [
+    {
+      "cursor_response": "ACCEPTED",
+      "evidence": "exception must match a decisions/ RISK_EXCEPTION record with user words and source, same finding, a tool the review covers, a current SHA, unexpired.",
+      "fix_sha": "fee4ad6b7d3d257d171ba235de13c5965d25650a",
+      "regression_test": "sports-rig:scripts/test_rig_review.py and scripts/test_rig_relay_coverage.py: test_exception_without_matching_user_decision_stays_open, test_exception_must_match_scope_and_a_current_sha, test_code_change_voids_an_exception",
+      "created_at_utc": "2026-10-20T14:24:34Z",
+      "verification_status": "NOT_VERIFIED"
+    }
+  ],
+  "cursor_response": "ACCEPTED",
+  "evidence": "exception must match a decisions/ RISK_EXCEPTION record with user words and source, same finding, a tool the review covers, a current SHA, unexpired.",
+  "fix_sha": "fee4ad6b7d3d257d171ba235de13c5965d25650a",
+  "regression_test": "sports-rig:scripts/test_rig_review.py and scripts/test_rig_relay_coverage.py: test_exception_without_matching_user_decision_stays_open, test_exception_must_match_scope_and_a_current_sha, test_code_change_voids_an_exception",
+  "created_at_utc": "2026-10-20T14:24:34Z",
+  "verification_status": "NOT_VERIFIED"
+}
