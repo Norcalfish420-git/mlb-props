@@ -122,7 +122,14 @@ repository must be a `repo@fix_sha` at which a qualifying reply verified this
 finding (VERIFIED or CLOSED, VERIFIED_AT_SHA, on the finding's review or one
 that lists it in `answers_findings`). A later reopen discards earlier target
 verifications. A reply that only read or confirmed the target, verified other
-findings, or omitted this one proves nothing about this fix. Otherwise the finding shows FIX_NOT_IN_TARGET for that tool and still blocks
+findings, or omitted this one proves nothing about this fix. A registry tool may
+list `depends_on` (tool ids it consumes). A finding also counts against every
+tool that depends, directly or transitively, on a tool it counts against. For
+such a consumer the fix must be shown in each providing tool's current target.
+A qualifying reply may list `not_applicable_to` (tool ids) on the finding to
+correct a false association with a tool its review named. That never removes
+a tool whose paths hold the finding's file or a dependent consumer, and the
+latest qualifying reply's list is the one that counts. Otherwise the finding shows FIX_NOT_IN_TARGET for that tool and still blocks
 it; a fix on an unmerged branch never clears an older production target. A
 finding counts against every tool its review names and every tool whose
 registered paths hold the finding's `file`. Open findings outrank

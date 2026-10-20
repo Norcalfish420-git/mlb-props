@@ -1,12 +1,11 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T16:10:53Z",
+  "generated_at_utc": "2026-10-20T16:23:12Z",
   "relay_head_sha": "b96870c180f78f053882d1d1b22d2a0ffbce58a2",
   "cursor_building": "",
   "last_review_request": "REV-20261020-011",
   "awaiting_chatgpt": [
-    "REV-20261020-001",
-    "REV-20261020-011"
+    "REV-20261020-001"
   ],
   "answered_reviews": [
     {
@@ -54,7 +53,8 @@
     {
       "review_id": "REV-20261020-009",
       "replies": [
-        "CODE/PARTIAL chatgpt-reply-569812c8efedf911021c07d811d47b32"
+        "CODE/PARTIAL chatgpt-reply-569812c8efedf911021c07d811d47b32",
+        "CODE/PARTIAL chatgpt-followup-ce144d43115080dac77d894b73d35af0"
       ]
     },
     {
@@ -63,12 +63,18 @@
         "CODE/PARTIAL chatgpt-reply-de2c407308452ed12fd39e6dbbda1cb2",
         "CODE/PARTIAL chatgpt-reply-a00b89c463ff2ae6ce6f43a9c1f90f0b"
       ]
+    },
+    {
+      "review_id": "REV-20261020-011",
+      "replies": [
+        "CODE/PARTIAL chatgpt-reply-4caaa7480e6454926ad87b18ae15aa31",
+        "CODE/PARTIAL chatgpt-reply-bcba9ac7508e2829da593a4a51a94264"
+      ]
     }
   ],
   "open_findings": [
     "AUDIT-REV001-001 (HIGH, VERIFIED)",
     "AUDIT-REV001-002 (HIGH, VERIFIED)",
-    "AUDIT-REV001-003 (HIGH, OPEN)",
     "AUDIT-REV002-001 (HIGH, VERIFIED)",
     "AUDIT-REV002-002 (HIGH, VERIFIED)",
     "AUDIT-REV002-003 (HIGH, VERIFIED)",
@@ -79,13 +85,15 @@
     "AUDIT-REV007-002 (HIGH, FIX_SUBMITTED)",
     "AUDIT-REV007-003 (MEDIUM, FIX_SUBMITTED)",
     "AUDIT-REV007-004 (MEDIUM, FIX_SUBMITTED)",
-    "AUDIT-REV008-001 (HIGH, VERIFIED)"
+    "AUDIT-REV008-001 (HIGH, VERIFIED)",
+    "AUDIT-REV009-001 (HIGH, FIX_SUBMITTED)"
   ],
   "fixes_awaiting_reverification": [
     "AUDIT-REV007-001",
     "AUDIT-REV007-002",
     "AUDIT-REV007-003",
-    "AUDIT-REV007-004"
+    "AUDIT-REV007-004",
+    "AUDIT-REV009-001"
   ],
   "fixes_not_in_current_target": [
     "AUDIT-REV001-001 (audit-bridge)",
@@ -123,7 +131,6 @@
   "release_blocks": [
     "audit-bridge: AUDIT-REV001-001 (HIGH)",
     "audit-bridge: AUDIT-REV001-002 (HIGH)",
-    "audit-bridge: AUDIT-REV001-003 (HIGH)",
     "audit-bridge: AUDIT-REV002-001 (HIGH)",
     "audit-bridge: AUDIT-REV002-002 (HIGH)",
     "audit-bridge: AUDIT-REV002-003 (HIGH)",
@@ -133,11 +140,12 @@
     "qc-gate: AUDIT-REV007-002 (HIGH)",
     "audit-bridge: AUDIT-REV008-001 (HIGH)",
     "nfl-showdown: AUDIT-REV008-001 (HIGH)",
-    "qc-gate: AUDIT-REV008-001 (HIGH)"
+    "qc-gate: AUDIT-REV008-001 (HIGH)",
+    "audit-bridge: AUDIT-REV009-001 (HIGH)",
+    "nfl-showdown: AUDIT-REV009-001 (HIGH)",
+    "qc-gate: AUDIT-REV009-001 (HIGH)"
   ],
-  "projection_mismatches": [
-    "AUDIT-REV001-003: public row says VERIFIED, PR #1 says OPEN"
-  ],
+  "projection_mismatches": [],
   "untrusted_pins": [
     "REV-20261020-001: pin lacks manifest.json and HANDOFF.md hashes"
   ]

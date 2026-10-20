@@ -48,6 +48,12 @@
             "scripts/rig_showdown_cash.py"
           ]
         }
+      ],
+      "depends_on": [
+        "qc-gate",
+        "hub-publisher",
+        "ledgers",
+        "research-author"
       ]
     },
     {
@@ -189,7 +195,7 @@
         {
           "repository": "Norcalfish420-git/sports-rig",
           "branch": "main",
-          "head_sha": "0a0d57e9049dd05b731f82ea1961dd1b1ea23bfe",
+          "head_sha": "0ccc97f35f8d8caa1e557870f79b0da46cb7b53a",
           "paths": [
             "scripts/rig_review.py",
             "scripts/rig_relay_coverage.py",

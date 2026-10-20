@@ -1,0 +1,23 @@
+{
+  "schema": "AGENT_RELAY_RESPONSE/0.2",
+  "review_id": "REV-20261020-009",
+  "finding_id": "AUDIT-REV009-001",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "history": [
+    {
+      "cursor_response": "ACCEPTED",
+      "evidence": "",
+      "fix_sha": "696f3f9f632e35955f2ee6809dc4ab54b5bcd199",
+      "regression_test": "test_rig_publish_gate: test_board_replaced_after_the_final_validation_is_not_what_is_published, test_receipt_for_different_bytes_at_the_board_path_is_refused, test_publisher_gets_a_private_read_only_copy_with_the_accepted_digest, PublishBoardsTests (identical bytes publish; missing or wrong digest has no side effect; differing site copy rolled back and not pushed)",
+      "created_at_utc": "2026-10-20T16:21:14Z",
+      "verification_status": "NOT_VERIFIED"
+    }
+  ],
+  "cursor_response": "ACCEPTED",
+  "evidence": "",
+  "fix_sha": "696f3f9f632e35955f2ee6809dc4ab54b5bcd199",
+  "regression_test": "test_rig_publish_gate: test_board_replaced_after_the_final_validation_is_not_what_is_published, test_receipt_for_different_bytes_at_the_board_path_is_refused, test_publisher_gets_a_private_read_only_copy_with_the_accepted_digest, PublishBoardsTests (identical bytes publish; missing or wrong digest has no side effect; differing site copy rolled back and not pushed)",
+  "created_at_utc": "2026-10-20T16:21:14Z",
+  "verification_status": "NOT_VERIFIED"
+}
