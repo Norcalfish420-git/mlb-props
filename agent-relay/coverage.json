@@ -1,7 +1,7 @@
 {
   "schema": "AGENT_RELAY_COVERAGE/0.2",
-  "generated_at_utc": "2026-10-20T15:10:43Z",
-  "relay_head_sha": "74afc073e6f3e8a9633477a7f7b2d0437dbbdd40",
+  "generated_at_utc": "2026-10-20T15:13:46Z",
+  "relay_head_sha": "cab25d72a3df55d18a2a0a40d265a8bf3e4acc79",
   "replies_checked_against_pr1": true,
   "tools": [
     {
@@ -31,11 +31,13 @@
       "name": "NFL double-up Showdown (v1.6 engine, ranked handoff, NFL_CASH_CORE_FIRST/1.0, real_engine wrapper)",
       "current_targets": [
         "Norcalfish420-git/NFL-Player-Prop-Tool@5d41ae4a00d8b7b1579cb6ed5cdd7479c44e6cc9",
-        "Norcalfish420-git/sports-rig@ecb662709315fde873d8d9eef3dbd45924d2b0ab"
+        "Norcalfish420-git/sports-rig@3a9c0ae10f1f852fc1c1019ded79deac5f821aa5"
       ],
       "last_reviewed_targets": [],
       "last_review_scope": null,
-      "review_ids": [],
+      "review_ids": [
+        "REV-20261020-007"
+      ],
       "answered_review_ids": [],
       "open_findings": {
         "CRITICAL": 0,
@@ -45,8 +47,8 @@
         "IMPROVEMENT": 0
       },
       "accepted_risk": 0,
-      "cursor_tests_last_request": "none recorded",
-      "verdict": "NOT_REVIEWED"
+      "cursor_tests_last_request": "3 run, 3 failed",
+      "verdict": "REVIEW_PENDING"
     },
     {
       "tool_id": "cfb-showdown-intake",
@@ -115,11 +117,13 @@
       "tool_id": "qc-gate",
       "name": "Pre-publish QC gate and leak scan (rig_qc.run_qc / assert_publishable)",
       "current_targets": [
-        "Norcalfish420-git/sports-rig@ecb662709315fde873d8d9eef3dbd45924d2b0ab"
+        "Norcalfish420-git/sports-rig@3a9c0ae10f1f852fc1c1019ded79deac5f821aa5"
       ],
       "last_reviewed_targets": [],
       "last_review_scope": null,
-      "review_ids": [],
+      "review_ids": [
+        "REV-20261020-007"
+      ],
       "answered_review_ids": [],
       "open_findings": {
         "CRITICAL": 0,
@@ -129,8 +133,8 @@
         "IMPROVEMENT": 0
       },
       "accepted_risk": 0,
-      "cursor_tests_last_request": "none recorded",
-      "verdict": "NOT_REVIEWED"
+      "cursor_tests_last_request": "3 run, 3 failed",
+      "verdict": "REVIEW_PENDING"
     },
     {
       "tool_id": "ledgers",
@@ -220,7 +224,7 @@
       "tool_id": "audit-bridge",
       "name": "This audit bridge (agent-relay protocol, review tool, coverage generator)",
       "current_targets": [
-        "Norcalfish420-git/mlb-props@74afc073e6f3e8a9633477a7f7b2d0437dbbdd40",
+        "Norcalfish420-git/mlb-props@cab25d72a3df55d18a2a0a40d265a8bf3e4acc79",
         "Norcalfish420-git/sports-rig@7ad9566ba6232628c1727780e8db59b135059f1b"
       ],
       "last_reviewed_targets": [
@@ -252,7 +256,7 @@
       },
       "accepted_risk": 0,
       "cursor_tests_last_request": "2 run, 0 failed",
-      "verdict": "REVIEWED_CLEAN_AT_SHA"
+      "verdict": "STALE_SINCE_REVIEW"
     }
   ]
 }

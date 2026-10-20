@@ -1,11 +1,12 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T15:10:43Z",
-  "relay_head_sha": "74afc073e6f3e8a9633477a7f7b2d0437dbbdd40",
+  "generated_at_utc": "2026-10-20T15:13:46Z",
+  "relay_head_sha": "cab25d72a3df55d18a2a0a40d265a8bf3e4acc79",
   "cursor_building": "",
-  "last_review_request": "REV-20261020-006",
+  "last_review_request": "REV-20261020-007",
   "awaiting_chatgpt": [
-    "REV-20261020-001"
+    "REV-20261020-001",
+    "REV-20261020-007"
   ],
   "answered_reviews": [
     {
@@ -47,17 +48,19 @@
   "tools_by_verdict": {
     "NOT_REVIEWED": [
       "nfl-props",
-      "nfl-showdown",
       "cfb-showdown-intake",
       "cfb-props",
       "horse-racing",
-      "qc-gate",
       "ledgers",
       "research-author",
       "hub-publisher",
       "desk-handoff-relay"
     ],
-    "REVIEWED_CLEAN_AT_SHA": [
+    "REVIEW_PENDING": [
+      "nfl-showdown",
+      "qc-gate"
+    ],
+    "STALE_SINCE_REVIEW": [
       "audit-bridge"
     ]
   },
