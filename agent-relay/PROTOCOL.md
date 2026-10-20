@@ -129,7 +129,9 @@ such a consumer the fix must be shown in each providing tool's current target.
 A qualifying reply may list `not_applicable_to` (tool ids) on the finding to
 correct a false association with a tool its review named. That never removes
 a tool whose paths hold the finding's file or a dependent consumer, and the
-latest qualifying reply's list is the one that counts. Otherwise the finding shows FIX_NOT_IN_TARGET for that tool and still blocks
+latest qualifying reply's list is the one that counts. A lifecycle field a
+qualifying reply leaves out keeps its prior value; an empty `not_applicable_to`
+list removes the ruling (REV-20261020-013). Otherwise the finding shows FIX_NOT_IN_TARGET for that tool and still blocks
 it; a fix on an unmerged branch never clears an older production target. A
 finding counts against every tool its review names and every tool whose
 registered paths hold the finding's `file`. Open findings outrank
@@ -173,8 +175,18 @@ Optional, validated when present: `branch`, `file`, `line_reference`,
 (NOT_VERIFIED, VERIFIED_AT_SHA, REJECTED), `fix_sha`, `review_scope`,
 `sport`, `lane`, `impact`, `reproduction_environment`, `reproduction_command`,
 `evidence_hashes` (SHA-256), `expected_disposition`, `observed_disposition`,
-`first_seen_utc`, `verified_utc`, `fix_target`, `supersedes`, and `exception`
-(`approved_by`, `record`, `scope`, `sha`, `expires_utc`).
+`first_seen_utc`, `verified_utc`, `fix_target`, `supersedes`, `exception`
+(`approved_by`, `record`, `scope`, `sha`, `expires_utc`), and
+`not_applicable_to` (tool ids).
+
+Lifecycle row: once a finding has been filed from a full row, a later row for
+the same `finding_id` may carry only `finding_id`, `review_id` and the fields
+it changes (for example `status`, `verification_status`, `fix_sha`,
+`not_applicable_to`). Omitted fields keep the filed values. A changed
+identity field (severity, classification, category, repository, commit_sha,
+description and the other required text) is still quarantined, and a
+lifecycle row with no filed full row before it counts for nothing. This keeps
+re-verification replies under the relay wire limit.
 
 Betting-logic findings add `betting_evidence`: event, player, market, side,
 line, book, odds, observed and expiry UTC, price limit, sensitivity result,

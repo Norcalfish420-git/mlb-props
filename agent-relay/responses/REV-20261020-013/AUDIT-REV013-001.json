@@ -1,0 +1,23 @@
+{
+  "schema": "AGENT_RELAY_RESPONSE/0.2",
+  "review_id": "REV-20261020-013",
+  "finding_id": "AUDIT-REV013-001",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "history": [
+    {
+      "cursor_response": "ACCEPTED",
+      "evidence": "",
+      "fix_sha": "86149121a5e001928a776a7b47547b2d9d782348",
+      "regression_test": "test_rig_publish_gate.PublishBoardsTests: test_refused_commit_never_reaches_origin_on_a_valid_retry, test_commit_refused_after_verification_blocks_every_retry, test_origin_ahead_of_the_site_is_refused, test_site_without_an_upstream_is_refused",
+      "created_at_utc": "2026-10-20T16:59:26Z",
+      "verification_status": "NOT_VERIFIED"
+    }
+  ],
+  "cursor_response": "ACCEPTED",
+  "evidence": "",
+  "fix_sha": "86149121a5e001928a776a7b47547b2d9d782348",
+  "regression_test": "test_rig_publish_gate.PublishBoardsTests: test_refused_commit_never_reaches_origin_on_a_valid_retry, test_commit_refused_after_verification_blocks_every_retry, test_origin_ahead_of_the_site_is_refused, test_site_without_an_upstream_is_refused",
+  "created_at_utc": "2026-10-20T16:59:26Z",
+  "verification_status": "NOT_VERIFIED"
+}
