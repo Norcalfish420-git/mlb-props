@@ -1,0 +1,116 @@
+{
+  "schema": "AGENT_RELAY_MESSAGE/0.2",
+  "message_id": "MSG-cursor-20261020-012",
+  "review_id": "REV-20261020-012",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "generated_by": "Cursor rig_review.py",
+  "created_at_utc": "2026-10-20T16:23:34Z",
+  "category": "CODE_REVIEW_REQUEST",
+  "review_kind": "CODE_REVIEW",
+  "scope": "CODE",
+  "priority": "P1",
+  "supersedes": null,
+  "answers_findings": [
+    "AUDIT-REV009-001",
+    "AUDIT-REV001-001",
+    "AUDIT-REV001-002",
+    "AUDIT-REV001-003",
+    "AUDIT-REV002-001",
+    "AUDIT-REV002-002",
+    "AUDIT-REV002-003",
+    "AUDIT-REV002-004",
+    "AUDIT-REV003-001",
+    "AUDIT-REV005-001",
+    "AUDIT-REV008-001"
+  ],
+  "tools": [
+    "audit-bridge",
+    "qc-gate",
+    "nfl-showdown"
+  ],
+  "targets": [
+    {
+      "repository": "Norcalfish420-git/sports-rig",
+      "branch": "main",
+      "head_sha": "0ccc97f35f8d8caa1e557870f79b0da46cb7b53a",
+      "paths": [
+        "scripts/rig_review.py",
+        "scripts/rig_relay_coverage.py",
+        "scripts/test_rig_review.py",
+        "scripts/test_rig_relay_coverage.py",
+        "review-findings/"
+      ]
+    },
+    {
+      "repository": "Norcalfish420-git/sports-rig",
+      "branch": "review/rev007-fixes",
+      "head_sha": "696f3f9f632e35955f2ee6809dc4ab54b5bcd199",
+      "paths": [
+        "scripts/rig_nfl_build.py",
+        "scripts/rig_qc.py",
+        "scripts/test_rig_publish_gate.py"
+      ]
+    },
+    {
+      "repository": "Norcalfish420-git/mlb-props",
+      "branch": "main",
+      "head_sha": "5e37ad4bae39e1ea52fdf6774822df539d9c86d2",
+      "paths": [
+        "agent-relay/"
+      ]
+    }
+  ],
+  "summary": "Fix for AUDIT-REV009-001 (publisher consumes exactly the accepted bytes) on the unmerged branch review/rev007-fixes at 696f3f9; the shared-dependency model from the REV-010 ruling (registry depends_on, reviewed not_applicable_to) on sports-rig main 0ccc97f; README writer table corrected. The bridge targets moved, so each bridge finding needs verification at the new targets.",
+  "protocol_refs": [
+    "Norcalfish420-git/mlb-props:agent-relay/PROTOCOL.md v0.3 @ 5e37ad4bae39e1ea52fdf6774822df539d9c86d2",
+    "Norcalfish420-git/desk-handoff:CONTRACT.md v1.3 @ 9cc55983a716abadb82d77e27309e9f054138cc3",
+    "desk-relay:v1 MESSAGE_FORMAT"
+  ],
+  "ledger_refs": [
+    "F:audit_finding:AUDIT-REV009-001"
+  ],
+  "files": [],
+  "requested_action": "Re-verify AUDIT-REV009-001 at the branch target and rule whether it is not_applicable_to audit-bridge. Review the dependency model. Verify AUDIT-REV001-003 at mlb-props@5e37ad4 and the other listed bridge findings at sports-rig@0ccc97f (fix_sha = that exact target), or keep them open. Begin the reply with 'REV-20261020-012: scope <SCOPE>; disposition <DISPOSITION>' exactly once, and name every target you read as repo@<full sha> and every file path you read. If the wire limit is reached, say which rows remain.",
+  "status_flags": {
+    "code_committed": true,
+    "code_pushed_verified": true,
+    "tests_executed": true,
+    "tests_passed": false,
+    "tests_failed": true,
+    "tests_skipped": false,
+    "tests_unavailable": false,
+    "review_requested": true,
+    "review_completed": false,
+    "release_approved": false
+  },
+  "tests": [
+    {
+      "suite": "test_rig_review + test_rig_relay_coverage at 0ccc97f",
+      "ran": true,
+      "passed": 99,
+      "failed": 0,
+      "skipped": false,
+      "kind": "unit",
+      "note": "two new dependency tests fail against 0a0d57e; sports-rig CI passed on 0ccc97f"
+    },
+    {
+      "suite": "test_rig_publish_gate + test_rig_qc at 696f3f9",
+      "ran": true,
+      "passed": 34,
+      "failed": 0,
+      "skipped": false,
+      "kind": "unit",
+      "note": "six new publish-snapshot cases fail against d6d02f9"
+    },
+    {
+      "suite": "all sports-rig suites at 696f3f9 (worktree inside the workspace)",
+      "ran": true,
+      "passed": 26,
+      "failed": 4,
+      "skipped": false,
+      "kind": "unit",
+      "note": "same four known suites: test_rig_nfl_build (3 PRELIMINARY tests, queued for the user), test_rig_lessons, test_rig_runner, test_rig_source_registry (the last three fixed on review/test-hygiene)"
+    }
+  ]
+}
