@@ -1,12 +1,12 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-21T01:09:59Z",
-  "relay_head_sha": "3518d926558aa2a8493a9f68b08fb7c555565182",
-  "cursor_building": "REV-20261021-001 sent (integration, PRELIMINARY publication, ledger e2e); CFB protocol packet sent (cursor-391d16331cbb412b90bfc5c541478dea)",
-  "last_review_request": "REV-20261021-001",
+  "generated_at_utc": "2026-10-21T01:40:31Z",
+  "relay_head_sha": "660cb95e3f7d604d6fcfee4665a3445fa4894a97",
+  "cursor_building": "REV-20261021-002 re-verification requested; training pointer sent",
+  "last_review_request": "REV-20261021-002",
   "awaiting_chatgpt": [
     "REV-20261020-001",
-    "REV-20261021-001"
+    "REV-20261021-002"
   ],
   "answered_reviews": [
     {
@@ -107,33 +107,45 @@
       "replies": [
         "CODE/COMPLETE chatgpt-reply-00b16e88739ef5e67754d076d6043633"
       ]
+    },
+    {
+      "review_id": "REV-20261021-001",
+      "replies": [
+        "CODE/PARTIAL chatgpt-reply-c9dd2a5547dc27c99469e35598299229"
+      ]
     }
   ],
   "open_findings": [
-    "AUDIT-REV007-001 (HIGH, FIX_SUBMITTED)",
-    "AUDIT-REV007-002 (HIGH, FIX_SUBMITTED)",
-    "AUDIT-REV007-003 (MEDIUM, FIX_SUBMITTED)",
-    "AUDIT-REV007-004 (MEDIUM, FIX_SUBMITTED)",
+    "AUDIT-20261021-001-001 (HIGH, FIX_SUBMITTED)",
+    "AUDIT-20261021-001-002 (MEDIUM, FIX_SUBMITTED)",
+    "AUDIT-REV001-003 (HIGH, VERIFIED)",
+    "AUDIT-REV007-001 (HIGH, VERIFIED)",
+    "AUDIT-REV007-002 (HIGH, VERIFIED)",
+    "AUDIT-REV007-003 (MEDIUM, VERIFIED)",
+    "AUDIT-REV007-004 (MEDIUM, VERIFIED)",
     "AUDIT-REV008-001 (HIGH, VERIFIED)",
-    "AUDIT-REV009-001 (HIGH, FIX_SUBMITTED)",
+    "AUDIT-REV009-001 (HIGH, VERIFIED)",
     "AUDIT-REV012-001 (MEDIUM, VERIFIED)",
-    "AUDIT-REV012-002 (MEDIUM, FIX_SUBMITTED)",
-    "AUDIT-REV013-001 (HIGH, FIX_SUBMITTED)",
-    "AUDIT-REV013-002 (MEDIUM, FIX_SUBMITTED)"
+    "AUDIT-REV012-002 (MEDIUM, VERIFIED)",
+    "AUDIT-REV013-001 (HIGH, VERIFIED)",
+    "AUDIT-REV013-002 (MEDIUM, VERIFIED)"
   ],
   "fixes_awaiting_reverification": [
-    "AUDIT-REV007-001",
-    "AUDIT-REV007-002",
-    "AUDIT-REV007-003",
-    "AUDIT-REV007-004",
-    "AUDIT-REV009-001",
-    "AUDIT-REV012-002",
-    "AUDIT-REV013-001",
-    "AUDIT-REV013-002"
+    "AUDIT-20261021-001-001",
+    "AUDIT-20261021-001-002"
   ],
   "fixes_not_in_current_target": [
+    "AUDIT-REV001-003 (audit-bridge)",
+    "AUDIT-REV007-001 (nfl-showdown, qc-gate)",
+    "AUDIT-REV007-002 (nfl-showdown, qc-gate)",
+    "AUDIT-REV007-003 (nfl-showdown, qc-gate)",
+    "AUDIT-REV007-004 (nfl-showdown, qc-gate)",
     "AUDIT-REV008-001 (nfl-showdown, qc-gate)",
-    "AUDIT-REV012-001 (nfl-showdown, qc-gate)"
+    "AUDIT-REV009-001 (nfl-showdown, qc-gate)",
+    "AUDIT-REV012-001 (nfl-showdown, qc-gate)",
+    "AUDIT-REV012-002 (nfl-showdown, qc-gate)",
+    "AUDIT-REV013-001 (nfl-showdown, qc-gate)",
+    "AUDIT-REV013-002 (nfl-showdown, qc-gate)"
   ],
   "accepted_risk": [],
   "open_protocol_conflicts": [],
@@ -148,20 +160,20 @@
       "hub-publisher",
       "desk-handoff-relay"
     ],
-    "REVIEW_PENDING": [
-      "ledgers"
-    ],
     "REVIEWED_OPEN_FINDINGS": [
       "nfl-showdown",
-      "qc-gate"
-    ],
-    "REVIEWED_CLEAN_AT_SHA": [
+      "qc-gate",
+      "ledgers",
       "audit-bridge"
     ]
   },
   "replies_checked_against_pr1": true,
   "release_check": "BLOCKED",
   "release_blocks": [
+    "ledgers: AUDIT-20261021-001-001 (HIGH)",
+    "nfl-showdown: AUDIT-20261021-001-001 (HIGH)",
+    "qc-gate: AUDIT-20261021-001-001 (HIGH)",
+    "audit-bridge: AUDIT-REV001-003 (HIGH)",
     "nfl-showdown: AUDIT-REV007-001 (HIGH)",
     "qc-gate: AUDIT-REV007-001 (HIGH)",
     "nfl-showdown: AUDIT-REV007-002 (HIGH)",
