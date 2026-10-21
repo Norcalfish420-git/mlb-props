@@ -1,0 +1,10 @@
+{
+  "review_id": "REV-20261021-003",
+  "relay_commit_sha": "e0ea5186219c5bcfe96ac243d55670dc2cebc9ee",
+  "content_sha256": {
+    "manifest.json": "1c76f76e348049ee0f68faa53130cbfdba9b26ca100486c01f1d57ea627bb56a",
+    "HANDOFF.md": "3f78d3df408dc03626775c65c314ef1686151629788eac9b623ae090380835b6"
+  },
+  "pinned_at_utc": "2026-10-21T02:49:18Z",
+  "verified_by": "git: commit exists, is an ancestor of origin/review/release-recovery-20261021 after fetch, and its manifest.json and HANDOFF.md bytes match these hashes"
+}
