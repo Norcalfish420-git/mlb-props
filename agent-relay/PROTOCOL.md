@@ -216,3 +216,18 @@ recommendation.
 
 Each re-review answers named open findings (`answers_findings`). The relay hop
 limit of 4 applies. At the limit, report a concrete blocker.
+
+## 9. Training rounds
+
+A training round is coaching under `docs/training/TEACHER_STUDENT_PROTOCOL.md`
+in `Norcalfish420-git/sports-rig`. It is not a review in section 3. It does
+not use `request`, `complete`, `ingest`, or `respond`, and a grade from it
+does not hold a PRELIMINARY build.
+
+The round files stay in the private `sports-rig` repo at
+`training/<assignment-id>/`. The public pointer is one desk-relay question
+(`kind: question`) naming the assignment id, the sports-rig commit, and the
+SHA-256 of each training file. The pointer does not carry lineup text, salary
+rows, projection rows, finding descriptions, or local paths. ChatGPT's grade
+comes back on that same thread. Cursor locks the blind file before reading
+the grade, then answers with a revision commit and a new pointer.
