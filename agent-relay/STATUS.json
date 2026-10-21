@@ -1,11 +1,12 @@
 {
   "schema": "AGENT_RELAY_STATUS/0.2",
-  "generated_at_utc": "2026-10-20T17:44:50Z",
+  "generated_at_utc": "2026-10-21T01:09:59Z",
   "relay_head_sha": "3518d926558aa2a8493a9f68b08fb7c555565182",
-  "cursor_building": "Audit bridge findings all verified at sports-rig 8c9b95f (REV-017 COMPLETE). Open: publisher branch findings await the user's merge; CFB UTAH_COL replay evidence awaits ChatGPT review",
-  "last_review_request": "REV-20261020-017",
+  "cursor_building": "REV-20261021-001 sent (integration, PRELIMINARY publication, ledger e2e); CFB protocol packet sent (cursor-391d16331cbb412b90bfc5c541478dea)",
+  "last_review_request": "REV-20261021-001",
   "awaiting_chatgpt": [
-    "REV-20261020-001"
+    "REV-20261020-001",
+    "REV-20261021-001"
   ],
   "answered_reviews": [
     {
@@ -143,10 +144,12 @@
       "cfb-showdown-intake",
       "cfb-props",
       "horse-racing",
-      "ledgers",
       "research-author",
       "hub-publisher",
       "desk-handoff-relay"
+    ],
+    "REVIEW_PENDING": [
+      "ledgers"
     ],
     "REVIEWED_OPEN_FINDINGS": [
       "nfl-showdown",

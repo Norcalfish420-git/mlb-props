@@ -1,11 +1,11 @@
 # Agent relay status
 
-Generated 2026-10-20T17:44:50Z. Relay head `3518d92`. Do not edit by hand.
+Generated 2026-10-21T01:09:59Z. Relay head `3518d92`. Do not edit by hand.
 
-- Cursor is building: Audit bridge findings all verified at sports-rig 8c9b95f (REV-017 COMPLETE). Open: publisher branch findings await the user's merge; CFB UTAH_COL replay evidence awaits ChatGPT review
+- Cursor is building: REV-20261021-001 sent (integration, PRELIMINARY publication, ledger e2e); CFB protocol packet sent (cursor-391d16331cbb412b90bfc5c541478dea)
 - Replies re-derived from PR #1 for this run: yes
-- Last review request: REV-20261020-017
-- Waiting for ChatGPT: `REV-20261020-001`
+- Last review request: REV-20261021-001
+- Waiting for ChatGPT: `REV-20261020-001`, `REV-20261021-001`
 - ChatGPT replies recorded (scope/disposition): `REV-20261020-002`: CODE/PARTIAL chatgpt-reply-416793c53753ebf4f4cbfde2dbc3b147; `REV-20261020-003`: CODE/PARTIAL chatgpt-reply-7286854d3ad5f8c8619a72045e9f83b2f; `REV-20261020-004`: CODE/PARTIAL chatgpt-reply-1d37df4bc2c90bb4e238eaae7018a5e7b; `REV-20261020-005`: CODE/PARTIAL chatgpt-reply-2754bfdbcd1129c185f962f1b1502cb8f; `REV-20261020-006`: CODE/COMPLETE chatgpt-reply-28b4463cdb50d3fc1a414da6cc8ee07b; `REV-20261020-007`: CODE/PARTIAL chatgpt-reply-ba9817c16440192c302425dccbfb0645; `REV-20261020-008`: CODE/PARTIAL chatgpt-reply-62f6ed70ff5e77fd2d03b91f21982520; `REV-20261020-009`: CODE/PARTIAL chatgpt-reply-569812c8efedf911021c07d811d47b32, CODE/PARTIAL chatgpt-followup-ce144d43115080dac77d894b73d35af0; `REV-20261020-010`: CODE/PARTIAL chatgpt-reply-de2c407308452ed12fd39e6dbbda1cb2, CODE/PARTIAL chatgpt-reply-a00b89c463ff2ae6ce6f43a9c1f90f0b; `REV-20261020-011`: CODE/PARTIAL chatgpt-reply-4caaa7480e6454926ad87b18ae15aa31, CODE/PARTIAL chatgpt-reply-bcba9ac7508e2829da593a4a51a94264; `REV-20261020-012`: CODE/PARTIAL chatgpt-reply-5a9c61616abfc18f3c7ca2d161072a74; `REV-20261020-013`: CODE/PARTIAL chatgpt-reply-2aac5a3e782d4e1f6710d6aacd3b49b2; `REV-20261020-014`: CODE/PARTIAL chatgpt-reply-89dd8e15ae25d6cbe128ce4fa9723737; `REV-20261020-015`: CODE/PARTIAL chatgpt-reply-df3277d03db1a1aeaf165b65bc478549; `REV-20261020-016`: CODE/PARTIAL chatgpt-reply-a32aaa0ef2d109ccb4202cfe302fefa5; `REV-20261020-017`: CODE/COMPLETE chatgpt-reply-00b16e88739ef5e67754d076d6043633
 - Open findings: `AUDIT-REV007-001 (HIGH, FIX_SUBMITTED)`, `AUDIT-REV007-002 (HIGH, FIX_SUBMITTED)`, `AUDIT-REV007-003 (MEDIUM, FIX_SUBMITTED)`, `AUDIT-REV007-004 (MEDIUM, FIX_SUBMITTED)`, `AUDIT-REV008-001 (HIGH, VERIFIED)`, `AUDIT-REV009-001 (HIGH, FIX_SUBMITTED)`, `AUDIT-REV012-001 (MEDIUM, VERIFIED)`, `AUDIT-REV012-002 (MEDIUM, FIX_SUBMITTED)`, `AUDIT-REV013-001 (HIGH, FIX_SUBMITTED)`, `AUDIT-REV013-002 (MEDIUM, FIX_SUBMITTED)`
 - Fixes awaiting ChatGPT re-verification: `AUDIT-REV007-001`, `AUDIT-REV007-002`, `AUDIT-REV007-003`, `AUDIT-REV007-004`, `AUDIT-REV009-001`, `AUDIT-REV012-002`, `AUDIT-REV013-001`, `AUDIT-REV013-002`

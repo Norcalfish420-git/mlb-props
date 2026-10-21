@@ -1,6 +1,6 @@
 {
   "schema": "AGENT_RELAY_COVERAGE/0.2",
-  "generated_at_utc": "2026-10-20T17:44:50Z",
+  "generated_at_utc": "2026-10-21T01:09:59Z",
   "relay_head_sha": "3518d926558aa2a8493a9f68b08fb7c555565182",
   "replies_checked_against_pr1": true,
   "tools": [
@@ -45,7 +45,8 @@
         "REV-20261020-009",
         "REV-20261020-012",
         "REV-20261020-013",
-        "REV-20261020-014"
+        "REV-20261020-014",
+        "REV-20261021-001"
       ],
       "answered_review_ids": [
         "REV-20261020-007",
@@ -63,7 +64,7 @@
         "IMPROVEMENT": 0
       },
       "accepted_risk": 0,
-      "cursor_tests_last_request": "3 run, 3 failed",
+      "cursor_tests_last_request": "3 run, 0 failed",
       "verdict": "REVIEWED_OPEN_FINDINGS"
     },
     {
@@ -147,7 +148,8 @@
         "REV-20261020-009",
         "REV-20261020-012",
         "REV-20261020-013",
-        "REV-20261020-014"
+        "REV-20261020-014",
+        "REV-20261021-001"
       ],
       "answered_review_ids": [
         "REV-20261020-007",
@@ -165,7 +167,7 @@
         "IMPROVEMENT": 0
       },
       "accepted_risk": 0,
-      "cursor_tests_last_request": "3 run, 3 failed",
+      "cursor_tests_last_request": "3 run, 0 failed",
       "verdict": "REVIEWED_OPEN_FINDINGS"
     },
     {
@@ -176,7 +178,9 @@
       ],
       "last_reviewed_targets": [],
       "last_review_scope": null,
-      "review_ids": [],
+      "review_ids": [
+        "REV-20261021-001"
+      ],
       "answered_review_ids": [],
       "open_findings": {
         "CRITICAL": 0,
@@ -186,8 +190,8 @@
         "IMPROVEMENT": 0
       },
       "accepted_risk": 0,
-      "cursor_tests_last_request": "none recorded",
-      "verdict": "NOT_REVIEWED"
+      "cursor_tests_last_request": "3 run, 0 failed",
+      "verdict": "REVIEW_PENDING"
     },
     {
       "tool_id": "research-author",
