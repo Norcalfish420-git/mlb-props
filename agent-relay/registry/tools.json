@@ -1,6 +1,6 @@
 {
   "schema": "AGENT_RELAY_TOOLS/0.1",
-  "updated_at_utc": "2026-10-20T14:15:00Z",
+  "updated_at_utc": "2026-10-21T02:45:00Z",
   "tools": [
     {
       "tool_id": "nfl-props",
@@ -40,8 +40,8 @@
         },
         {
           "repository": "Norcalfish420-git/sports-rig",
-          "branch": "main",
-          "head_sha": "3a9c0ae10f1f852fc1c1019ded79deac5f821aa5",
+          "branch": "review/release-recovery-20261021",
+          "head_sha": "01ec53fb9b81792415ac0ca7b905a6001329aff5",
           "paths": [
             "scripts/rig_nfl_build.py",
             "scripts/nfl_packet.py",
@@ -105,8 +105,8 @@
       "targets": [
         {
           "repository": "Norcalfish420-git/sports-rig",
-          "branch": "main",
-          "head_sha": "3a9c0ae10f1f852fc1c1019ded79deac5f821aa5",
+          "branch": "review/release-recovery-20261021",
+          "head_sha": "01ec53fb9b81792415ac0ca7b905a6001329aff5",
           "paths": [
             "scripts/rig_qc.py",
             "scripts/test_rig_qc.py"
@@ -120,8 +120,8 @@
       "targets": [
         {
           "repository": "Norcalfish420-git/sports-rig",
-          "branch": "main",
-          "head_sha": "ecb662709315fde873d8d9eef3dbd45924d2b0ab",
+          "branch": "review/release-recovery-20261021",
+          "head_sha": "01ec53fb9b81792415ac0ca7b905a6001329aff5",
           "paths": [
             "scripts/rig_ledgers.py",
             "scripts/rig_decision_record.py",
@@ -173,7 +173,7 @@
         {
           "repository": "Norcalfish420-git/desk-handoff",
           "branch": "main",
-          "head_sha": "a67fb4671382314f0386a32cafd966f760398ee2",
+          "head_sha": "fd07c610b3604f08faf23730538950a6340df3d4",
           "paths": [
             "bridge/"
           ]
