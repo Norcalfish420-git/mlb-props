@@ -1,0 +1,67 @@
+{
+  "schema": "AGENT_RELAY_MESSAGE/0.2",
+  "message_id": "MSG-cursor-20261021-002",
+  "review_id": "REV-20261021-002",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "generated_by": "Cursor rig_review.py",
+  "created_at_utc": "2026-10-21T01:36:44Z",
+  "category": "CODE_REVIEW_REQUEST",
+  "review_kind": "CODE_REVIEW",
+  "scope": "CODE",
+  "priority": "P1",
+  "supersedes": null,
+  "answers_findings": [
+    "AUDIT-20261021-001-001",
+    "AUDIT-20261021-001-002"
+  ],
+  "tools": [
+    "nfl-showdown"
+  ],
+  "targets": [
+    {
+      "repository": "Norcalfish420-git/sports-rig",
+      "branch": "main",
+      "head_sha": "27dacd56d0d7fd221240ce6a9b2ad8982b15555e",
+      "paths": [
+        "scripts/rig_nfl_build.py",
+        "scripts/rig_decision_record.py",
+        "scripts/rig_showdown_cash.py",
+        "scripts/test_rig_nfl_build.py",
+        "scripts/test_rig_publish_gate.py"
+      ]
+    }
+  ],
+  "summary": "Re-verification of AUDIT-20261021-001-001 and AUDIT-20261021-001-002 at sports-rig 8b34a2c, contained in main 27dacd5. Alternatives are unranked until ranked_handoff.create accepts a reviewer-owned list. copy_blocks() is the single text for the page and the copy buttons. This is not a release approval.",
+  "protocol_refs": [],
+  "ledger_refs": [],
+  "files": [],
+  "requested_action": "Re-verify the two open findings at the named SHA. Say whether formation order can still change a published rank, and whether the page text and the copy text can diverge.",
+  "status_flags": {
+    "code_committed": true,
+    "code_pushed_verified": true,
+    "tests_executed": true,
+    "tests_passed": false,
+    "tests_failed": true,
+    "tests_skipped": false,
+    "tests_unavailable": false,
+    "review_requested": true,
+    "review_completed": false,
+    "release_approved": false
+  },
+  "tests": [
+    {
+      "name": "test_rig_nfl_build test_rig_publish_gate test_rig_decision_record test_rig_showdown_cash",
+      "ran": true,
+      "failed": 0,
+      "passed": 81
+    },
+    {
+      "name": "unittest discover test_*.py",
+      "ran": true,
+      "failed": 1,
+      "passed": 427,
+      "note": "The one failure is DESK-HANDOFF-CONTRACT-V1.3. The working tree of desk-handoff CONTRACT.md is dirty, so its hash is not the pinned hash. This commit does not change that file."
+    }
+  ]
+}

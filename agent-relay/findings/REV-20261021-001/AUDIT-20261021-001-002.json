@@ -1,0 +1,17 @@
+{
+  "finding_id": "AUDIT-20261021-001-002",
+  "review_id": "REV-20261021-001",
+  "severity": "MEDIUM",
+  "classification": "CONFIRMED",
+  "status": "OPEN",
+  "category": "COPY_OUTPUT_INTEGRITY",
+  "verification_status": "NOT_VERIFIED",
+  "fix_sha": null,
+  "review_scope": "CODE",
+  "not_applicable_to": null,
+  "source": {
+    "message_id": "chatgpt-reply-c9dd2a5547dc27c99469e35598299229",
+    "comment_id": 6305601925,
+    "payload_sha256": "f6b94a60b3eed56091ee7a76cc183db91f84174bb92da24069d90d87bd15e4ba"
+  }
+}

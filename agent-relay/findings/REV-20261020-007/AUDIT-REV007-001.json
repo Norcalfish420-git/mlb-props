@@ -3,14 +3,15 @@
   "review_id": "REV-20261020-007",
   "severity": "HIGH",
   "classification": "CONFIRMED",
-  "status": "FIX_SUBMITTED",
+  "status": "VERIFIED",
   "category": "PUBLISH_GATE",
   "verification_status": "VERIFIED_AT_SHA",
-  "fix_sha": "3544b2c44bead7056634090f5d6293358d1bb246",
+  "fix_sha": "0c8bf42b60320d11556a064d90da13bab7db94e3",
   "review_scope": "CODE",
+  "not_applicable_to": null,
   "source": {
-    "message_id": "chatgpt-reply-62f6ed70ff5e77fd2d03b91f21982520",
-    "comment_id": 6294808609,
-    "payload_sha256": "f76bc60dbb699378458e65b20b1361d77e966458260801a2470c08e51627438b"
+    "message_id": "chatgpt-reply-c9dd2a5547dc27c99469e35598299229",
+    "comment_id": 6305601925,
+    "payload_sha256": "f6b94a60b3eed56091ee7a76cc183db91f84174bb92da24069d90d87bd15e4ba"
   }
 }
