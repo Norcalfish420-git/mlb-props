@@ -1,0 +1,109 @@
+{
+  "schema": "AGENT_RELAY_MESSAGE/0.2",
+  "message_id": "MSG-cursor-20261021-001",
+  "review_id": "REV-20261021-001",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "generated_by": "Cursor rig_review.py",
+  "created_at_utc": "2026-10-21T01:08:57Z",
+  "category": "CODE_REVIEW_REQUEST",
+  "review_kind": "CODE_REVIEW",
+  "scope": "CODE",
+  "priority": "P1",
+  "supersedes": null,
+  "answers_findings": [
+    "AUDIT-REV007-001",
+    "AUDIT-REV007-002",
+    "AUDIT-REV007-003",
+    "AUDIT-REV007-004",
+    "AUDIT-REV009-001",
+    "AUDIT-REV012-002",
+    "AUDIT-REV013-001",
+    "AUDIT-REV013-002"
+  ],
+  "tools": [
+    "nfl-showdown",
+    "qc-gate",
+    "ledgers"
+  ],
+  "targets": [
+    {
+      "repository": "Norcalfish420-git/sports-rig",
+      "branch": "main",
+      "head_sha": "0c8bf42b60320d11556a064d90da13bab7db94e3",
+      "paths": [
+        "scripts/rig_nfl_build.py",
+        "scripts/nfl_packet.py",
+        "scripts/rig_qc.py",
+        "scripts/test_rig_publish_gate.py",
+        "scripts/test_rig_nfl_build.py",
+        "scripts/rig_source_registry.py",
+        "scripts/test_rig_source_registry.py",
+        "scripts/test_registry.py",
+        "registry/",
+        "evidence/ledger-e2e/"
+      ]
+    },
+    {
+      "repository": "Norcalfish420-git/mlb-props",
+      "branch": "main",
+      "head_sha": "d3396bd1b5274b0e679fb7cb7f113f5a9db86817",
+      "paths": [
+        "agent-relay/"
+      ]
+    }
+  ],
+  "summary": "User-directed integration (2026-10-20). review/rev007-fixes (verified at branch 8614912 in REV-014) and review/test-hygiene merged into sports-rig main (b08469b, 60d18b7). 69a1490 repins desk-handoff CONTRACT.md after the user's private-ETR amendment 1ecf188. 6e5f788: NFL PRELIMINARY builds (three engine lineups, ranked handoff and full QC not run) now publish as PRELIMINARY through the same publish QC with the real_engine PRELIMINARY marker, the contract v1.3 sentence from the recorded decision time and a missing-checks list in fixed public wording; never the PASS marker; real_engine sets research_complete only after compare_and_select accepts the research and QC still blocks a PRELIMINARY lineup without it (RESEARCH-LINEUP); HOLD and QC blocks never post. 9faefd5: ETR sources relabeled user-owned with the paid-private guards kept. 0c8bf42: ledger pipeline end-to-end evidence (local execution). Main suite 418 OK; live checkout 422 OK. Rig unpaused at 20:02 CDT.",
+  "protocol_refs": [
+    "Norcalfish420-git/mlb-props:agent-relay/PROTOCOL.md v0.3 @ d3396bd1b5274b0e679fb7cb7f113f5a9db86817",
+    "Norcalfish420-git/desk-handoff:CONTRACT.md v1.3 @ 1ecf1884d1f953c357513beffcabc067ec06fa3b",
+    "desk-relay:v1 MESSAGE_FORMAT"
+  ],
+  "ledger_refs": [
+    "F:audit_finding:AUDIT-REV013-001",
+    "F:audit_finding:AUDIT-REV013-002"
+  ],
+  "files": [],
+  "requested_action": "Re-verify AUDIT-REV007-001..004, AUDIT-REV009-001, AUDIT-REV012-002 and AUDIT-REV013-001/002 at the production target sports-rig@0c8bf42b60320d11556a064d90da13bab7db94e3 or keep them open. Review the PRELIMINARY publication change, the user-owned access class and the CONTRACT repin for defects. Review evidence/ledger-e2e/LEDGER_E2E_20261020.json as evidence (you cannot re-run it on the Mac). Begin the reply with 'REV-20261021-001: scope <SCOPE>; disposition <DISPOSITION>' exactly once, and name every target you read as repo@<full sha> and every file path you read.",
+  "status_flags": {
+    "code_committed": true,
+    "code_pushed_verified": true,
+    "tests_executed": true,
+    "tests_passed": true,
+    "tests_failed": false,
+    "tests_skipped": false,
+    "tests_unavailable": false,
+    "review_requested": true,
+    "review_completed": false,
+    "release_approved": false
+  },
+  "tests": [
+    {
+      "suite": "sports-rig main full discover at 9faefd5 (clean worktree)",
+      "ran": true,
+      "passed": 418,
+      "failed": 0,
+      "skipped": false,
+      "kind": "unit",
+      "note": "before the merge, main had 3 test_rig_nfl_build failures (PRELIMINARY gate) and 1 test_registry failure (CONTRACT repin); all fixed"
+    },
+    {
+      "suite": "live audit checkout full discover at 9faefd5 plus another task's uncommitted edits",
+      "ran": true,
+      "passed": 422,
+      "failed": 0,
+      "skipped": false,
+      "kind": "unit",
+      "note": "uncommitted edits: rig_qc, rig_nfl_props and their tests"
+    },
+    {
+      "suite": "ledger e2e (installed reindex, real ledgers)",
+      "ran": true,
+      "passed": 6,
+      "failed": 0,
+      "skipped": false,
+      "kind": "integration",
+      "note": "local execution on the Mac; expected 20 = actual 20 rows; duplicate run wrote 0 and changed no byte"
+    }
+  ]
+}
