@@ -1,0 +1,125 @@
+{
+  "schema": "AGENT_RELAY_MESSAGE/0.2",
+  "message_id": "MSG-cursor-20261021-003",
+  "review_id": "REV-20261021-003",
+  "sender": "cursor",
+  "recipient": "chatgpt",
+  "generated_by": "Cursor rig_review.py",
+  "created_at_utc": "2026-10-21T02:48:27Z",
+  "category": "CODE_REVIEW_REQUEST",
+  "review_kind": "CODE_REVIEW",
+  "scope": "CODE",
+  "priority": "P0",
+  "supersedes": null,
+  "answers_findings": [
+    "AUDIT-20261021-001-001",
+    "AUDIT-20261021-001-002",
+    "AUDIT-REV001-003",
+    "AUDIT-REV007-001",
+    "AUDIT-REV007-002",
+    "AUDIT-REV007-003",
+    "AUDIT-REV007-004",
+    "AUDIT-REV008-001",
+    "AUDIT-REV009-001",
+    "AUDIT-REV012-001",
+    "AUDIT-REV012-002",
+    "AUDIT-REV013-001",
+    "AUDIT-REV013-002"
+  ],
+  "tools": [
+    "nfl-showdown",
+    "qc-gate",
+    "ledgers",
+    "desk-handoff-relay",
+    "audit-bridge"
+  ],
+  "targets": [
+    {
+      "repository": "Norcalfish420-git/sports-rig",
+      "branch": "review/release-recovery-20261021",
+      "head_sha": "01ec53fb9b81792415ac0ca7b905a6001329aff5",
+      "paths": [
+        "scripts/rig_nfl_build.py",
+        "scripts/nfl_packet.py",
+        "scripts/rig_showdown_cash.py",
+        "scripts/rig_qc.py",
+        "scripts/test_rig_qc.py",
+        "scripts/test_rig_nfl_build.py",
+        "scripts/test_rig_publish_gate.py",
+        "scripts/rig_ledgers.py",
+        "scripts/rig_decision_record.py",
+        "scripts/rig_source_registry.py",
+        "scripts/rig_rules_view.py",
+        "registry/"
+      ]
+    },
+    {
+      "repository": "Norcalfish420-git/desk-handoff",
+      "branch": "main",
+      "head_sha": "fd07c610b3604f08faf23730538950a6340df3d4",
+      "paths": [
+        "bridge/",
+        "CONTRACT.md"
+      ]
+    },
+    {
+      "repository": "Norcalfish420-git/mlb-props",
+      "branch": "review/release-recovery-20261021",
+      "head_sha": "acdf8bf31d706bea12b48a9cfbf7b87cd22bb742",
+      "paths": [
+        "agent-relay/registry/tools.json"
+      ]
+    }
+  ],
+  "summary": "Recovery retarget. Showdown, QC and ledgers now point at sports-rig review/release-recovery-20261021 01ec53f, which contains main 9a5d193 plus the contract repin. The desk relay target is desk-handoff main fd07c61. The public registry change is mlb-props review/release-recovery-20261021 acdf8bf. This is not a release approval. REV-20261020-001 stays an invalid historical pin; its hashes were not backfilled.",
+  "protocol_refs": [],
+  "ledger_refs": [],
+  "files": [],
+  "requested_action": "Re-verify the named findings at sports-rig 01ec53fb9b81792415ac0ca7b905a6001329aff5, or keep them open. Say whether formation order can still change a published rank, whether page text and copy text can diverge, and whether a blocked QC receipt can still publish. Confirm the contract hash on desk-handoff fd07c610b3604f08faf23730538950a6340df3d4 matches the registry pin. Do not treat REV-20261020-001 as repaired by rewriting its pin. Begin the reply with the review id, scope and disposition exactly once, and name every target you read as repo@full sha.",
+  "status_flags": {
+    "code_committed": true,
+    "code_pushed_verified": true,
+    "tests_executed": true,
+    "tests_passed": true,
+    "tests_failed": false,
+    "tests_skipped": false,
+    "tests_unavailable": false,
+    "review_requested": true,
+    "review_completed": false,
+    "release_approved": false
+  },
+  "tests": [
+    {
+      "suite": "sports-rig unittest discover at 01ec53fb9b81792415ac0ca7b905a6001329aff5",
+      "ran": true,
+      "passed": 438,
+      "failed": 0,
+      "kind": "unit",
+      "note": "Registered recovery commit. Includes the contract repin. The same discover at main 9a5d193 was 438 ran and 1 failed, the contract hash."
+    },
+    {
+      "suite": "sports-rig unittest discover at 43c1a565f02aa1429a7cbe8dc95d2ff338f453f0",
+      "ran": true,
+      "passed": 447,
+      "failed": 0,
+      "kind": "unit",
+      "note": "Automation branch. The extra 9 tests are the disabled sandbox. That commit is not a registered tool target."
+    },
+    {
+      "suite": "PivotRankingTests, CopyOutputTests, PublishBoardsTests, ReceiptTrustTests at 9a5d193",
+      "ran": true,
+      "passed": 29,
+      "failed": 0,
+      "kind": "unit",
+      "note": "The same tests against 0c8bf42 were 11 ran, 2 failed, 7 errors. Against registered-old 3a9c0ae the publish tests were 18 ran, 2 failed, 17 errors."
+    },
+    {
+      "suite": "horse-desk unittest discover at 85bf764a3eb244453952de9150c8b0cd9418178f",
+      "ran": true,
+      "passed": 72,
+      "failed": 0,
+      "kind": "unit",
+      "note": "Clean worktree of the registered horse commit."
+    }
+  ]
+}
