@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CFB Showdown 2026-10-24 · Houston @ UTAH</title>
+<style>
+:root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#fb7185;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#be123c;--table:#262626;--cell:#525252;--th:#393939;--val:#fb7185;--h:#fb7185;--code:#fb7185;--up:#3ddbd9;--down:#ff8389;--up-bg:rgba(61,219,217,.16);--down-bg:rgba(255,131,137,.16);--wk-alt:rgba(190,18,60,.08);}
+html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#9f1239;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#9f1239;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#9f1239;--h:#9f1239;--code:#9f1239;--up:#005d5d;--down:#a2191f;--up-bg:rgba(0,93,93,.1);--down-bg:rgba(162,25,31,.1);--wk-alt:rgba(190,18,60,.06);}
+html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,serif;}
+body{background-image:linear-gradient(180deg,rgba(22,22,22,.82),rgba(10,14,18,.93)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
+html.light body{background-image:linear-gradient(180deg,rgba(242,244,248,.88),rgba(242,244,248,.94)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");}
+.tab{position:absolute;left:-9999px;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:11.5rem;flex:0 0 11.5rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1rem .75rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.45rem;overflow-y:auto;}
+.rail .brand{order:0;}
+.rail a.pill.home{order:1;}
+.rail > *:not(.brand):not(a.pill.home){order:2;}
+.brand{font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin:0 0 .4rem;}
+.pill{display:block;border-radius:999px;padding:.55rem .7rem;background:var(--pill);color:var(--pill-fg);cursor:pointer;font-size:.82rem;font-weight:700;line-height:1.2;border:1px solid var(--pill-line);text-decoration:none;}
+a.pill.home{border-color:var(--val);}
+.pill .when{display:block;font-weight:400;color:var(--muted);font-size:.7rem;margin-bottom:.1rem;}
+.pill:hover{background:var(--pill-hover);}
+button.pdf{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--accent);color:#fff;border:0;border-radius:.4rem;padding:.55rem .7rem;margin-top:.5rem;}
+button.pdf:hover{filter:brightness(1.08);}
+button.theme{font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.5rem .7rem;}
+button.theme:hover{background:var(--pill-hover);}
+form.search-form{margin:0;display:flex;flex-direction:column;gap:.15rem;}
+label.search-lab{font-size:.72rem;font-weight:700;color:var(--muted);margin:.35rem 0 0;}
+input.search{width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;background:var(--bg);color:var(--fg);border:1px solid var(--pill-line);border-radius:.4rem;padding:.45rem .5rem;}
+input.search:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.pill.search-miss{opacity:.42;}
+table.search-empty{display:none;}
+li.name-hit,tr.name-hit{background:rgba(190,18,60,.28);outline:1px solid var(--accent);}
+.hint{color:var(--hint);font-size:.68rem;margin:.25rem 0 0;line-height:1.3;}
+.view-row{display:flex;flex-direction:column;gap:.35rem;margin:.15rem 0 .35rem;}
+main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:54rem;min-width:0;}
+h1{font-size:1.6rem;margin:0 0 .3rem;}
+h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margin-top:1.6rem;}
+.line-blast{font-size:1.42rem;line-height:1.35;font-weight:700;margin:.35rem 0 1.2rem;padding:.95rem 1.05rem;background:var(--table);border:2px solid var(--accent);border-left-width:8px;}
+.line-blast b{color:var(--val);font-size:1.08em;}
+h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
+h3.second-pass{border-top:2px solid var(--accent);padding-top:1.15rem;margin-top:2rem;}
+h4{margin:.8rem 0 .4rem;}
+h4.team-break{font-size:1.28rem;font-weight:800;letter-spacing:.01em;margin:2.35rem 0 .55rem;padding:1.05rem 0 .35rem;border-top:3px solid var(--accent);}
+h3 + p + h4.team-break,h3 + h4.team-break{margin-top:.75rem;padding-top:.1rem;border-top:none;}
+h5{font-size:.95rem;margin:1.05rem 0 .3rem;color:var(--muted);font-weight:700;}
+.sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
+table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.92rem;background:var(--table);}
+th,td{border:1px solid var(--cell);padding:.35rem .45rem;text-align:left;}
+th{background:var(--th);color:var(--pill-fg);}
+table.sortable th{cursor:pointer;user-select:none;}table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
+.etr-board tr.pos-qb td{background:rgba(59,130,246,.18);box-shadow:inset 4px 0 0 #3b82f6;}
+.etr-board tr.pos-rb td{background:rgba(34,197,94,.18);box-shadow:inset 4px 0 0 #22c55e;}
+.etr-board tr.pos-wr td{background:rgba(245,158,11,.20);box-shadow:inset 4px 0 0 #f59e0b;}
+.etr-board tr.pos-te td{background:rgba(168,85,247,.18);box-shadow:inset 4px 0 0 #a855f7;}
+.etr-board tr.pos-k td{background:rgba(148,163,184,.22);box-shadow:inset 4px 0 0 #94a3b8;}
+table.game-log{width:100%;table-layout:auto;}
+table.game-log th,table.game-log td{text-align:center;white-space:nowrap;}
+table.game-log th:nth-child(1),table.game-log td:nth-child(1),table.game-log th:nth-child(2),table.game-log td:nth-child(2){text-align:left;}
+.week-pills,.team-pills{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0 .8rem;}
+.week-pill,.team-pill{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;background:var(--pill);color:var(--pill-fg);border:1px solid var(--pill-line);border-radius:999px;padding:.4rem .75rem;}
+.week-pill.on,.team-pill.on{background:var(--accent);color:#fff;border-color:var(--accent);}
+.week-panel{margin:0 0 1.6rem;}
+.week-panel.search-empty,.game-box.search-empty,.box-side.search-empty{display:none;}
+.week-lab{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.2rem 0 .6rem;}
+.trend-up-strip{margin:.4rem 0 1rem;padding:.7rem .85rem;background:var(--table);border-left:6px solid var(--accent);}
+.trend-up-strip h4{margin:0 0 .35rem;}
+.trend-up-strip ul{margin:.2rem 0 0;}
+.game-box{margin:0 0 1.8rem;padding:0 0 .4rem;border-bottom:1px solid var(--cell);}
+.box-score{font-size:1.2rem;margin:.4rem 0 .15rem;}
+.box-line{font-size:1.02rem;font-weight:700;color:var(--muted);margin:0 0 .55rem;}
+.run-pass{color:var(--muted);margin:0 0 .55rem;}
+.box-side{margin:0 0 1.15rem;}
+table.espn-box{font-size:.9rem;width:100%;}
+table.espn-box th,table.espn-box td{text-align:right;}
+table.espn-box th:first-child,table.espn-box td:first-child{text-align:left;}
+.pos-book{margin:0 0 1.6rem;}
+.pos-book.search-empty{display:none;}
+.pos-book h4{font-size:1.12rem;font-weight:800;color:var(--h);margin:1.4rem 0 .45rem;}
+td.trend-up{background:var(--up-bg) !important;color:var(--up);font-weight:700;}
+td.trend-down{background:var(--down-bg) !important;color:var(--down);font-weight:700;}
+span.delta{font-size:.68em;font-weight:700;margin-left:.28em;opacity:.92;}
+td.val{font-weight:700;color:var(--val);white-space:nowrap;}
+.left{font-weight:700;margin:.2rem 0 1rem;}
+.game-report-link{max-width:42rem;line-height:1.55;}
+.game-report-link h2{margin-top:0;}
+.game-report-link .pick{font-size:1.45rem;font-weight:700;color:var(--val);margin:.2rem 0 .35rem;}
+.game-report-link .byline{color:var(--muted);font-size:.95rem;margin:0 0 1rem;}
+.game-report-link p{margin:.75rem 0;}
+.game-report-link .source{margin-top:1.4rem;}
+.game-report-link .source a{color:var(--val);}
+ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
+ul ul{margin:.15rem 0 .4rem;padding-left:1.15rem;}
+li{margin:.35rem 0;}
+code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
+.panel{display:block;}
+.appendix{display:none;}
+@media print{
+  html,body,html.light,html.light body{background:#fff;color:#111;background-image:none !important;}
+  .shell{display:block;}
+  .rail,.noprint{display:none !important;}
+  main{max-width:none;padding:0;}
+  .panel,.appendix{display:block !important;page-break-after:always;}
+  .game-report,.card-build,.etr-board,.player-book,.preview-board,.game-report-link{display:block !important;}
+  .week-panel,.week-panel[hidden]{display:block !important;}
+  .week-pills,.week-pill,.team-pills,.team-pill{display:none !important;}
+  .game-box[hidden]{display:block !important;}
+  .trend-up-strip li[hidden]{display:list-item !important;}
+  .appendix{page-break-after:auto;}
+  table{background:#fff;page-break-inside:avoid;}
+  th{background:#eee;color:#333;}
+  td.val{color:#000;}
+  td.trend-up{color:#005d5d;background:#e6f6f6 !important;}
+  td.trend-down{color:#a2191f;background:#fce8e8 !important;}
+  h2,h3,h4,h5{page-break-after:avoid;color:#111;}
+  h4.team-break{border-top-color:#111;}
+  .line-blast{background:#fff;border-color:#111;color:#111;}
+  .line-blast b{color:#000;}
+}
+@page{margin:.5in;}
+#v-report:checked ~ .shell .rail label[for=v-report]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-cards:checked ~ .shell .rail label[for=v-cards]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-etr:checked ~ .shell .rail label[for=v-etr]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-preview:checked ~ .shell .rail label[for=v-preview]{background:var(--accent);color:#fff;border-color:var(--accent);}
+#v-game:checked ~ .shell .rail label[for=v-game]{background:var(--accent);color:#fff;border-color:var(--accent);}
+.card-build,.player-book,.etr-board,.preview-board,.game-report-link{display:none;}
+#v-report:checked ~ .shell main .card-build{display:none;}
+#v-cards:checked ~ .shell main .game-report,#v-cards:checked ~ .shell main .etr-board,#v-cards:checked ~ .shell main .player-book,#v-cards:checked ~ .shell main .preview-board,#v-cards:checked ~ .shell main .game-report-link{display:none;}
+#v-cards:checked ~ .shell main .card-build{display:block;}
+#v-book:checked ~ .shell main,#v-etr:checked ~ .shell main{max-width:none;}
+#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .card-build,#v-book:checked ~ .shell main .etr-board,#v-book:checked ~ .shell main .preview-board,#v-book:checked ~ .shell main .game-report-link{display:none;}
+#v-book:checked ~ .shell main .player-book{display:block;}
+#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .card-build,#v-etr:checked ~ .shell main .player-book,#v-etr:checked ~ .shell main .preview-board,#v-etr:checked ~ .shell main .game-report-link{display:none;}
+#v-etr:checked ~ .shell main .etr-board{display:block;}
+#v-preview:checked ~ .shell main{max-width:none;}
+#v-preview:checked ~ .shell main .game-report,#v-preview:checked ~ .shell main .card-build,#v-preview:checked ~ .shell main .etr-board,#v-preview:checked ~ .shell main .player-book,#v-preview:checked ~ .shell main .game-report-link{display:none;}
+#v-preview:checked ~ .shell main .preview-board{display:block;}
+#v-game:checked ~ .shell main{max-width:none;}
+#v-game:checked ~ .shell main .game-report,#v-game:checked ~ .shell main .card-build,#v-game:checked ~ .shell main .etr-board,#v-game:checked ~ .shell main .player-book,#v-game:checked ~ .shell main .preview-board{display:none;}
+#v-game:checked ~ .shell main .game-report-link{display:block;}
+</style>
+</head><body>
+<input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-cards"/>
+<input class="tab" type="radio" name="v" id="v-game"/>
+<input class="tab" type="radio" name="v" id="v-etr"/>
+<input class="tab" type="radio" name="v" id="v-book"/>
+<div class="shell">
+<aside class="rail noprint">
+<p class="brand">CFB SHOWDOWN<br/>2026-10-24<br/>Houston @ UTAH</p>
+<a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
+<div class="view-row">
+<label class="pill" for="v-report">Depth chart</label>
+<label class="pill" for="v-cards">Card Build</label>
+<label class="pill" for="v-etr">ETR Value</label>
+<label class="pill" for="v-book">Player book</label>
+<label class="pill" for="v-game">Game report</label>
+</div>
+<form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
+<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
+<button class="pdf" type="button" onclick="window.print()">Save as PDF</button><p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
+</aside>
+<main>
+<h1>CFB Showdown — 2026-10-24 · Houston @ UTAH</h1>
+<article class="panel">
+<div class="game-report">
+<h2>Houston @ UTAH</h2>
+<p class="line-blast">UTAH <b>-6.5</b>. Total <b>57.5</b>.</p>
+<h3>Game Script</h3>
+<p class="line-blast">UTAH <b>-6.5</b>. Total <b>57.5</b>.</p>
+<p><b>This slate is two out of five stars.</b></p>
+<p><b>How they want to play</b></p>
+<ul>
+<li><b>Houston:</b> Last week: 31 throws, and the quarterback ran it 9 times. Conner Weigman runs and throws.</li>
+<li><b>UTAH:</b> He says Utah barely survived Colorado and has not faced an offense like Conner Weigman&#x27;s. Morgan Scalley came from Utah DC — first year of a new staff. Morgan Scalley came from Utah DC.</li>
+</ul>
+<p><b>Where the defense is weaker</b></p>
+<ul>
+<li><b>UTAH:</b> Morgan Scalley came from Utah DC. That is a new scheme on that side of the ball. We still do not have a writer saying they cannot stop the run or the pass. He says Utah&#x27;s defense will limit Houston, and the Cougars still win a close one.</li>
+</ul>
+<p><b>What the scoreboard forces:</b></p>
+<ul>
+<li>Thomas has Utah 31, Houston 28 and likes Houston +6.5.</li>
+<li>Bartle has Utah 34, Houston 27.</li>
+<li>Crum has Houston 35, Utah 24.</li>
+<li>Gupta has Houston 33, Utah 30.</li>
+<li>Clay has Houston 33, Utah 30.</li>
+<li>He has Utah 34, Houston 27.</li>
+</ul>
+<p><b>What the writers are saying:</b> Utah escaped Colorado 27-24. Conner Weigman threw for 343 yards and five touchdowns against Oklahoma State. College GameDay is on campus for an 8:15 p.m. MT kickoff and a 100th straight sellout. Patrick Overmyer has seven tight-end touchdowns, most in the country. Wayshawn Parker is his impact player. Jonathan Dimas kicks the winner, Weigman keeps throwing, and Makhi Hughes has a big game. Bartle writes that Houston beat Oklahoma State 35-32 and that Utah has not lost.</p>
+<h3>DEPTH CHART</h3>
+<h4 class="team-break">Houston</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Conner Weigman</td><td>Keisean Henderson</td></tr>
+<tr><td>RB</td><td>Makhi Hughes</td><td>Re&#x27;Shaun Sanford II</td></tr>
+<tr><td>WR-X</td><td>Koby Young</td><td>Tyson Turner</td></tr>
+<tr><td>WR-Z</td><td>Trent Walker</td><td>Harvey Broussard III</td></tr>
+<tr><td>WR-SL</td><td>Amare Thomas</td><td>Jaquise Martin</td></tr>
+<tr><td>TE</td><td>Patrick Overmyer</td><td>Kaleb Thomas</td></tr>
+<tr><td>PK</td><td>Jonathan Dimas</td><td>Zac Yoakam</td></tr>
+</tbody></table>
+<h4 class="team-break">UTAH</h4>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
+<tbody>
+<tr><td>QB</td><td>Devon Dampier</td><td>Byrd Ficklin</td></tr>
+<tr><td>RB</td><td>Wayshawn Parker</td><td>Daniel Bray</td></tr>
+<tr><td>WR-X</td><td>Ricky Johnson</td><td>Kyri Shoels</td></tr>
+<tr><td>WR-Z</td><td>Braden Pegan</td><td>Larry Simmons</td></tr>
+<tr><td>WR-SL</td><td>Creed Whittemore</td><td>Mana Carvalho</td></tr>
+<tr><td>TE</td><td>Noah Bennee</td><td>Hunter Andrews</td></tr>
+<tr><td>PK</td><td>Dillon Curtis</td><td>Tanner Cragun</td></tr>
+</tbody></table>
+<h3>INJURIES</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Status</th><th scope="col" data-col="3">Tonight</th></tr></thead>
+<tbody>
+<tr><td>Jeffrey Strozier Jr.</td><td>Houston</td><td>Out</td><td>He is on the board. He is out.</td></tr>
+<tr><td>Stephon Johnson</td><td>Houston</td><td>Out</td><td>He is on the board. He is out.</td></tr>
+</tbody></table>
+<h3>CHART NOTES</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Note</th></tr></thead>
+<tbody>
+<tr><td>—</td><td>—</td><td>Chart and news agree.</td></tr>
+</tbody></table>
+</div>
+<div class="card-build"><h2>Card Build</h2><h3>Example ETR Build 1</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Devon Dampier</td><td>UTAH</td><td>QB</td><td>$15,600</td><td>2.39</td><td>passing yards 237.5</td></tr>
+<tr><td>FLEX</td><td>Conner Weigman</td><td>Houston</td><td>QB</td><td>$11,000</td><td>2.01</td><td>passing yards 233.5</td></tr>
+<tr><td>FLEX</td><td>Wayshawn Parker</td><td>UTAH</td><td>RB</td><td>$9,800</td><td>2.44</td><td>rushing yards 99.5</td></tr>
+<tr><td>FLEX</td><td>Braden Pegan</td><td>UTAH</td><td>WR</td><td>$8,200</td><td>2.33</td><td>receiving yards 33.5</td></tr>
+<tr><td>FLEX</td><td>Noah Bennee</td><td>UTAH</td><td>TE</td><td>$4,000</td><td>2.07</td><td>receptions 2.5</td></tr>
+<tr><td>FLEX</td><td>Kaleb Thomas</td><td>Houston</td><td>TE</td><td>$1,000</td><td>0.55</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $400  (spent $49,600 / $50,000)</p>
+<h3>Example ETR Build 2</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Conner Weigman</td><td>Houston</td><td>QB</td><td>$16,500</td><td>2.01</td><td>passing yards 233.5</td></tr>
+<tr><td>FLEX</td><td>Devon Dampier</td><td>UTAH</td><td>QB</td><td>$10,400</td><td>2.39</td><td>passing yards 237.5</td></tr>
+<tr><td>FLEX</td><td>Braden Pegan</td><td>UTAH</td><td>WR</td><td>$8,200</td><td>2.33</td><td>receiving yards 33.5</td></tr>
+<tr><td>FLEX</td><td>Trent Walker</td><td>Houston</td><td>WR</td><td>$6,200</td><td>2.05</td><td>receptions 3.5</td></tr>
+<tr><td>FLEX</td><td>Koby Young</td><td>Houston</td><td>WR</td><td>$4,600</td><td>1.64</td><td>receiving yards 26.5</td></tr>
+<tr><td>FLEX</td><td>Noah Bennee</td><td>UTAH</td><td>TE</td><td>$4,000</td><td>2.07</td><td>receptions 2.5</td></tr>
+</tbody></table>
+<p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
+<h3>Example ETR Build 3</h3>
+<table class="sortable">
+<thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">ETR value</th><th scope="col" data-col="6">Line</th></tr></thead>
+<tbody>
+<tr><td>Captain</td><td>Braden Pegan</td><td>UTAH</td><td>WR</td><td>$12,300</td><td>2.33</td><td>receiving yards 33.5</td></tr>
+<tr><td>FLEX</td><td>Conner Weigman</td><td>Houston</td><td>QB</td><td>$11,000</td><td>2.01</td><td>passing yards 233.5</td></tr>
+<tr><td>FLEX</td><td>Devon Dampier</td><td>UTAH</td><td>QB</td><td>$10,400</td><td>2.39</td><td>passing yards 237.5</td></tr>
+<tr><td>FLEX</td><td>Wayshawn Parker</td><td>UTAH</td><td>RB</td><td>$9,800</td><td>2.44</td><td>rushing yards 99.5</td></tr>
+<tr><td>FLEX</td><td>Koby Young</td><td>Houston</td><td>WR</td><td>$4,600</td><td>1.64</td><td>receiving yards 26.5</td></tr>
+<tr><td>FLEX</td><td>Kaleb Thomas</td><td>Houston</td><td>TE</td><td>$1,000</td><td>0.55</td><td>—</td></tr>
+</tbody></table>
+<p class="left">Leftover: $900  (spent $49,100 / $50,000)</p></div>
+<div class="game-report-link"><h2>Game report</h2><p class="byline">Sporting News</p><p>Thomas has Utah 31, Houston 28 and likes Houston +6.5. Utah escaped Colorado 27-24. Conner Weigman threw for 343 yards and five touchdowns against Oklahoma State. Houston converts 57.5 percent of third downs, but Utah allows 2.62 points per scoring chance.</p><p class="source"><a href="https://www.sportingnews.com/us/betting/news/utah-vs-houston-expert-picks-college-odds-best-bets-promos/f1aefc704e1c4baf4c3d7333">Sporting News</a></p></div>
+
+<div class="etr-board"><h3>ETR VALUE</h3>
+<table class="sortable" data-default-sort="Points per $1k">
+<thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Pos</th><th scope="col" data-col="3">Salary</th><th scope="col" data-col="4">Projected points</th><th scope="col" data-col="5">Sheet value</th><th scope="col" data-col="6">Owned</th><th scope="col" data-col="7">Slate</th><th scope="col" data-col="8">Points per $1k</th></tr></thead>
+<tbody>
+<tr class="pos-rb"><td>Wayshawn Parker</td><td>UTAH</td><td>RB</td><td>$9,800</td><td>23.88</td><td>9.4</td><td>0</td><td>Late Night</td><td class="val">2.44</td></tr>
+<tr class="pos-qb"><td>Devon Dampier</td><td>UTAH</td><td>QB</td><td>$10,400</td><td>24.87</td><td>10.9</td><td>0</td><td>Late Night</td><td class="val">2.39</td></tr>
+<tr class="pos-wr"><td>Braden Pegan</td><td>UTAH</td><td>WR</td><td>$8,200</td><td>19.08</td><td>6.6</td><td>0</td><td>Late Night</td><td class="val">2.33</td></tr>
+<tr class="pos-wr"><td>Creed Whittemore</td><td>UTAH</td><td>WR</td><td>$3,600</td><td>7.66</td><td>0.4</td><td>0</td><td>Late Night</td><td class="val">2.13</td></tr>
+<tr class="pos-wr"><td>Patrick Overmyer</td><td>Houston</td><td>WR</td><td>$6,800</td><td>14.33</td><td>4.4</td><td>0</td><td>Late Night</td><td class="val">2.11</td></tr>
+<tr class="pos-wr"><td>Noah Bennee</td><td>UTAH</td><td>WR</td><td>$4,000</td><td>8.27</td><td>0.9</td><td>0</td><td>Late Night</td><td class="val">2.07</td></tr>
+<tr class="pos-wr"><td>Trent Walker</td><td>Houston</td><td>WR</td><td>$6,200</td><td>12.73</td><td>4</td><td>0</td><td>Late Night</td><td class="val">2.05</td></tr>
+<tr class="pos-qb"><td>Conner Weigman</td><td>Houston</td><td>QB</td><td>$11,000</td><td>22.07</td><td>7.2</td><td>0</td><td>Late Night</td><td class="val">2.01</td></tr>
+<tr class="pos-wr"><td>Ricky Johnson</td><td>UTAH</td><td>WR</td><td>$5,000</td><td>8.19</td><td>0</td><td>0</td><td>Late Night</td><td class="val">1.64</td></tr>
+<tr class="pos-wr"><td>Koby Young</td><td>Houston</td><td>WR</td><td>$4,600</td><td>7.55</td><td>-0.5</td><td>0</td><td>Late Night</td><td class="val">1.64</td></tr>
+<tr class="pos-rb"><td>Makhi Hughes</td><td>Houston</td><td>RB</td><td>$7,000</td><td>11.1</td><td>1</td><td>0</td><td>Late Night</td><td class="val">1.59</td></tr>
+<tr class="pos-wr"><td>Amare Thomas</td><td>Houston</td><td>WR</td><td>$8,800</td><td>13.9</td><td>0.6</td><td>0</td><td>Late Night</td><td class="val">1.58</td></tr>
+<tr class="pos-wr"><td>Hunter Andrews</td><td>UTAH</td><td>WR</td><td>$3,000</td><td>4.74</td><td>-2.2</td><td>0</td><td>Late Night</td><td class="val">1.58</td></tr>
+<tr class="pos-wr"><td>Kyri Shoels</td><td>UTAH</td><td>WR</td><td>$1,000</td><td>1.26</td><td>-5.2</td><td>0</td><td>Late Night</td><td class="val">1.26</td></tr>
+<tr class="pos-k"><td>Jonathan Dimas</td><td>Houston</td><td>K</td><td>$4,800</td><td>6</td><td>-3.2</td><td>0</td><td>Late Night</td><td class="val">1.25</td></tr>
+<tr class="pos-k"><td>Dillon Curtis</td><td>UTAH</td><td>K</td><td>$5,200</td><td>6.33</td><td>-3.5</td><td>0</td><td>Late Night</td><td class="val">1.22</td></tr>
+<tr class="pos-rb"><td>Re&#x27;Shaun Sanford II</td><td>Houston</td><td>RB</td><td>$7,600</td><td>9.12</td><td>-1.6</td><td>0</td><td>Late Night</td><td class="val">1.2</td></tr>
+<tr class="pos-rb"><td>Daniel Bray</td><td>UTAH</td><td>RB</td><td>$5,600</td><td>6.64</td><td>-2</td><td>0</td><td>Late Night</td><td class="val">1.19</td></tr>
+<tr class="pos-wr"><td>Larry Simmons</td><td>UTAH</td><td>WR</td><td>$2,800</td><td>2.52</td><td>-4.3</td><td>0</td><td>Late Night</td><td class="val">0.9</td></tr>
+<tr class="pos-wr"><td>Semi Taulanga</td><td>UTAH</td><td>WR</td><td>$1,000</td><td>0.66</td><td>-5.8</td><td>0</td><td>Late Night</td><td class="val">0.66</td></tr>
+<tr class="pos-wr"><td>Will Monney</td><td>UTAH</td><td>WR</td><td>$1,000</td><td>0.66</td><td>-5.8</td><td>0</td><td>Late Night</td><td class="val">0.66</td></tr>
+<tr class="pos-wr"><td>Kaleb Thomas</td><td>Houston</td><td>WR</td><td>$1,000</td><td>0.55</td><td>-5.9</td><td>0</td><td>Late Night</td><td class="val">0.55</td></tr>
+<tr class="pos-qb"><td>Byrd Ficklin</td><td>UTAH</td><td>QB</td><td>$8,600</td><td>3.62</td><td>-9.5</td><td>0</td><td>Late Night</td><td class="val">0.42</td></tr>
+<tr class="pos-wr"><td>Traville Frederick Jr.</td><td>Houston</td><td>WR</td><td>$1,400</td><td>0.55</td><td>-6</td><td>0</td><td>Late Night</td><td class="val">0.39</td></tr>
+<tr class="pos-wr"><td>Luke McGary</td><td>Houston</td><td>WR</td><td>$2,600</td><td>0.57</td><td>-6.1</td><td>0</td><td>Late Night</td><td class="val">0.22</td></tr>
+<tr class="pos-wr"><td>Braeden Robinson</td><td>Houston</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Canon Toon</td><td>Houston</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>DJ Butler</td><td>Houston</td><td>RB</td><td>$4,200</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Dorian Barnes</td><td>Houston</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-k"><td>Evan Noel</td><td>Houston</td><td>K</td><td>$4,800</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Harvey Broussard III</td><td>Houston</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jack Newhouse</td><td>Houston</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jacory Thurman</td><td>Houston</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jaivion Martin</td><td>Houston</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Jake Sock</td><td>Houston</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jaquise Martin</td><td>Houston</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>JayShon Ridgle</td><td>Houston</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jeffrey Strozier Jr.</td><td>Houston</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Jeremiah Bushnell</td><td>Houston</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>John Hebert</td><td>Houston</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Keavon Roberts</td><td>Houston</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Keisean Henderson</td><td>Houston</td><td>QB</td><td>$9,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Luke Carney</td><td>Houston</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Muizz Tounkara</td><td>Houston</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Nehemiah Warmate</td><td>Houston</td><td>RB</td><td>$2,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Ryan Smith</td><td>Houston</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Samuel Padgitt</td><td>Houston</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Stephon Johnson</td><td>Houston</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Tyson Turner</td><td>Houston</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Wyatt Herbel</td><td>Houston</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-k"><td>Zac Yoakam</td><td>Houston</td><td>K</td><td>$4,800</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Zane Smith</td><td>Houston</td><td>RB</td><td>$2,200</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Anthony Hernandez</td><td>UTAH</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Bear Fisher</td><td>UTAH</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Brandon Rose</td><td>UTAH</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Broderick Redden</td><td>UTAH</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Bryson Baker</td><td>UTAH</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Daidren Zipperer</td><td>UTAH</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Jojo Ward</td><td>UTAH</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Junior Coughlin</td><td>UTAH</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Kana&#x27;i Lopes</td><td>UTAH</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Kane Archer</td><td>UTAH</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>LaMarcus Bell</td><td>UTAH</td><td>RB</td><td>$1,800</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Mana Carvalho</td><td>UTAH</td><td>WR</td><td>$1,200</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Mateaki Helu</td><td>UTAH</td><td>RB</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Matt Clark</td><td>UTAH</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Max Ausmus</td><td>UTAH</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Michael Johnson</td><td>UTAH</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-qb"><td>Nate Johnson</td><td>UTAH</td><td>QB</td><td>$6,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Peyton Rice</td><td>UTAH</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Sione Motuapuaka</td><td>UTAH</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-rb"><td>Steve Chavez-Soto</td><td>UTAH</td><td>RB</td><td>$1,600</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-k"><td>Tanner Cragun</td><td>UTAH</td><td>K</td><td>$5,200</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Teague Matthews</td><td>UTAH</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+<tr class="pos-wr"><td>Tobias Merriweather</td><td>UTAH</td><td>WR</td><td>$1,000</td><td>—</td><td>—</td><td>—</td><td>—</td><td class="val">—</td></tr>
+</tbody></table></div>
+<div class="player-book"><h3>Player book</h3><div class="team-pills noprint"><button type="button" class="team-pill on" data-team="UH">Houston</button><button type="button" class="team-pill" data-team="UTAH">UTAH</button></div><div class="week-pills noprint"><button type="button" class="week-pill" data-week="0">W0</button><button type="button" class="week-pill" data-week="1">W1</button><button type="button" class="week-pill" data-week="2">W2</button><button type="button" class="week-pill" data-week="3">W3</button><button type="button" class="week-pill" data-week="4">W4</button><button type="button" class="week-pill" data-week="5">W5</button><button type="button" class="week-pill" data-week="6">W6</button><button type="button" class="week-pill on" data-week="7">W7</button><button type="button" class="week-pill" data-week="season">Season</button></div><section class="week-panel" data-week="0" hidden><h4 class="week-lab">Week 0</h4><article class="game-box" data-team="UH"><h3 class="box-score">Houston</h3><p class="sub">No box for this week.</p></article><article class="game-box" data-team="UTAH" hidden><h3 class="box-score">UTAH</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="1" hidden><h4 class="week-lab">Week 1</h4><article class="game-box" data-team="UH"><h3 class="box-score">Houston vs Oregon State</h3><p class="box-line">Houston −20.5 / 50.5</p><div class="box-side"><h4>Houston</h4><p class="run-pass">Houston threw for 305, 1 passing scores and ran for 231, 3 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Conner Weigman</td><td data-n="30.0">30</td><td data-n="305.0">305</td><td data-n="1.0">1</td></tr><tr><td>Keisean Henderson</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Makhi Hughes</td><td data-n="17.0">17</td><td data-n="98.0">98</td><td data-n="1.0">1</td></tr><tr><td>Re&#x27;Shaun Sanford II</td><td data-n="11.0">11</td><td data-n="75.0">75</td><td data-n="1.0">1</td></tr><tr><td>Conner Weigman</td><td data-n="9.0">9</td><td data-n="30.0">30</td><td data-n="1.0">1</td></tr><tr><td>DJ Butler</td><td data-n="2.0">2</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Koby Young</td><td data-n="1.0">1</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Amare Thomas</td><td data-n="8.0">8</td><td>—</td><td data-n="133.0">133</td><td data-n="1.0">1</td></tr><tr><td>Patrick Overmyer</td><td data-n="6.0">6</td><td>—</td><td data-n="84.0">84</td><td data-n="0.0">0</td></tr><tr><td>Koby Young</td><td data-n="1.0">1</td><td>—</td><td data-n="47.0">47</td><td data-n="0.0">0</td></tr><tr><td>Trent Walker</td><td data-n="2.0">2</td><td>—</td><td data-n="24.0">24</td><td data-n="0.0">0</td></tr><tr><td>Re&#x27;Shaun Sanford II</td><td data-n="1.0">1</td><td>—</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Makhi Hughes</td><td data-n="2.0">2</td><td>—</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Jonathan Dimas</td><td data-n="2.0">2</td><td data-n="3.0">3</td></tr></tbody></table></div><div class="box-side"><h4>Oregon State</h4><p class="run-pass">Oregon State threw for 376, 1 passing scores and ran for 26, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Braden Atkinson</td><td data-n="48.0">48</td><td data-n="376.0">376</td><td data-n="1.0">1</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Kourdey Glass</td><td data-n="6.0">6</td><td data-n="25.0">25</td><td data-n="0.0">0</td></tr><tr><td>AJ Newberry</td><td data-n="7.0">7</td><td data-n="17.0">17</td><td data-n="1.0">1</td></tr><tr><td>Tre Garrison</td><td data-n="2.0">2</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Cornell Hatcher Jr.</td><td data-n="3.0">3</td><td data-n="7.0">7</td><td data-n="0.0">0</td></tr><tr><td>Braden Atkinson</td><td data-n="7.0">7</td><td data-n="-31.0">-31</td><td data-n="1.0">1</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Jesse Legree</td><td data-n="5.0">5</td><td>—</td><td data-n="136.0">136</td><td data-n="1.0">1</td></tr><tr><td>Eric Olsen</td><td data-n="4.0">4</td><td>—</td><td data-n="54.0">54</td><td data-n="0.0">0</td></tr><tr><td>Cynai Thomas</td><td data-n="2.0">2</td><td>—</td><td data-n="36.0">36</td><td data-n="0.0">0</td></tr><tr><td>Xayvion Noland</td><td data-n="3.0">3</td><td>—</td><td data-n="34.0">34</td><td data-n="0.0">0</td></tr><tr><td>D.C. Temple</td><td data-n="5.0">5</td><td>—</td><td data-n="30.0">30</td><td data-n="0.0">0</td></tr><tr><td>AJ Newberry</td><td data-n="2.0">2</td><td>—</td><td data-n="29.0">29</td><td data-n="0.0">0</td></tr><tr><td>Aeryn Hampton</td><td data-n="4.0">4</td><td>—</td><td data-n="28.0">28</td><td data-n="0.0">0</td></tr><tr><td>Kourdey Glass</td><td data-n="3.0">3</td><td>—</td><td data-n="15.0">15</td><td data-n="0.0">0</td></tr><tr><td>Malachi Durant</td><td data-n="1.0">1</td><td>—</td><td data-n="14.0">14</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Caleb Ojeda</td><td data-n="0.0">0</td><td data-n="2.0">2</td></tr></tbody></table></div></article><article class="game-box" data-team="UTAH" hidden><h3 class="box-score">UTAH 66, Idaho 14</h3><p class="box-line">UTAH −37.5 / 59.5</p><div class="box-side"><h4>UTAH</h4><p class="run-pass">UTAH threw for 269, 5 passing scores and ran for 365, 4 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Devon Dampier</td><td data-n="18.0">18</td><td data-n="176.0">176</td><td data-n="3.0">3</td></tr><tr><td>Byrd Ficklin</td><td data-n="8.0">8</td><td data-n="93.0">93</td><td data-n="2.0">2</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>LaMarcus Bell</td><td data-n="7.0">7</td><td data-n="87.0">87</td><td data-n="1.0">1</td></tr><tr><td>Wayshawn Parker</td><td data-n="12.0">12</td><td data-n="71.0">71</td><td data-n="1.0">1</td></tr><tr><td>Byrd Ficklin</td><td data-n="8.0">8</td><td data-n="70.0">70</td><td data-n="0.0">0</td></tr><tr><td>Steve Chavez-Soto</td><td data-n="6.0">6</td><td data-n="35.0">35</td><td data-n="1.0">1</td></tr><tr><td>Devon Dampier</td><td data-n="6.0">6</td><td data-n="31.0">31</td><td data-n="0.0">0</td></tr><tr><td>Mateaki Helu</td><td data-n="3.0">3</td><td data-n="25.0">25</td><td data-n="0.0">0</td></tr><tr><td>Daniel Bray</td><td data-n="2.0">2</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Hunter Andrews</td><td data-n="1.0">1</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Braden Pegan</td><td data-n="1.0">1</td><td data-n="12.0">12</td><td data-n="1.0">1</td></tr><tr><td>Brandon Rose</td><td data-n="2.0">2</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Braden Pegan</td><td data-n="4.0">4</td><td data-n="5.0">5</td><td data-n="81.0">81</td><td data-n="1.0">1</td></tr><tr><td>Larry Simmons</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="41.0">41</td><td data-n="0.0">0</td></tr><tr><td>Noah Bennee</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="35.0">35</td><td data-n="1.0">1</td></tr><tr><td>Creed Whittemore</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="27.0">27</td><td data-n="0.0">0</td></tr><tr><td>Ricky Johnson</td><td data-n="2.0">2</td><td data-n="5.0">5</td><td data-n="25.0">25</td><td data-n="0.0">0</td></tr><tr><td>Mana Carvalho</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Wayshawn Parker</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="23.0">23</td><td data-n="2.0">2</td></tr><tr><td>Hunter Andrews</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="14.0">14</td><td data-n="1.0">1</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Dillon Curtis</td><td data-n="1.0">1</td><td data-n="7.0">7</td></tr><tr><td>Tanner Cragun</td><td data-n="0.0">0</td><td data-n="2.0">2</td></tr></tbody></table></div><div class="box-side"><h4>Idaho</h4><p class="run-pass">Idaho threw for 119, 0 passing scores and ran for 106, 2 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Joshua Wood</td><td data-n="27.0">27</td><td data-n="111.0">111</td><td data-n="0.0">0</td></tr><tr><td>Israel Carter</td><td data-n="3.0">3</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Joshua Wood</td><td data-n="9.0">9</td><td data-n="41.0">41</td><td data-n="1.0">1</td></tr><tr><td>Hayden Kincheloe</td><td data-n="7.0">7</td><td data-n="37.0">37</td><td data-n="1.0">1</td></tr><tr><td>Kenny Golston</td><td data-n="3.0">3</td><td data-n="24.0">24</td><td data-n="0.0">0</td></tr><tr><td>Damonte Bias</td><td data-n="3.0">3</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Ferrari Miller</td><td data-n="4.0">4</td><td data-n="1.0">1</td><td data-n="0.0">0</td></tr><tr><td>Israel Carter</td><td data-n="5.0">5</td><td data-n="-3.0">-3</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Noah West-Baranco</td><td data-n="1.0">1</td><td>—</td><td data-n="44.0">44</td><td data-n="0.0">0</td></tr><tr><td>Tony Harste</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Lonyatta Alexander Jr.</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Daveon Superales</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Ryan Jezioro</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr><tr><td>Marquawn McCraney</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Zack Card</td><td data-n="2.0">2</td><td data-n="7.0">7</td><td data-n="6.0">6</td><td data-n="0.0">0</td></tr><tr><td>Hayden Kincheloe</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="4.0">4</td><td data-n="0.0">0</td></tr><tr><td>Ferrari Miller</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="2.0">2</td><td data-n="0.0">0</td></tr><tr><td>Damonte Bias</td><td>—</td><td data-n="1.0">1</td><td>—</td><td>—</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Owen Forsman</td><td data-n="0.0">0</td><td data-n="2.0">2</td></tr></tbody></table></div></article></section><section class="week-panel" data-week="2" hidden><h4 class="week-lab">Week 2</h4><article class="game-box" data-team="UH"><h3 class="box-score">Houston</h3><p class="sub">No box for this week.</p></article><article class="game-box" data-team="UTAH" hidden><h3 class="box-score">UTAH</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="3" hidden><h4 class="week-lab">Week 3</h4><article class="game-box" data-team="UH"><h3 class="box-score">Houston</h3><p class="sub">No box for this week.</p></article><article class="game-box" data-team="UTAH" hidden><h3 class="box-score">UTAH</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="4" hidden><h4 class="week-lab">Week 4</h4><article class="game-box" data-team="UH"><h3 class="box-score">Houston</h3><p class="sub">No box for this week.</p></article><article class="game-box" data-team="UTAH" hidden><h3 class="box-score">UTAH</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="5" hidden><h4 class="week-lab">Week 5</h4><article class="game-box" data-team="UH"><h3 class="box-score">Houston</h3><p class="sub">No box for this week.</p></article><article class="game-box" data-team="UTAH" hidden><h3 class="box-score">UTAH</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="6" hidden><h4 class="week-lab">Week 6</h4><article class="game-box" data-team="UH"><h3 class="box-score">Houston</h3><p class="sub">No box for this week.</p></article><article class="game-box" data-team="UTAH" hidden><h3 class="box-score">UTAH</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="7"><h4 class="week-lab">Week 7</h4><article class="game-box" data-team="UH"><h3 class="box-score">Houston</h3><p class="sub">No box for this week.</p></article><article class="game-box" data-team="UTAH" hidden><h3 class="box-score">UTAH</h3><p class="sub">No box for this week.</p></article></section><section class="week-panel" data-week="season" hidden><h4 class="week-lab">Season totals</h4><article class="game-box" data-team="UH"><h3 class="box-score">Houston · 1 game</h3><div class="box-side"><h4>Houston</h4><p class="run-pass">Houston threw for 305, 1 passing scores and ran for 231, 3 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Conner Weigman</td><td data-n="30.0">30</td><td data-n="305.0">305</td><td data-n="1.0">1</td></tr><tr><td>Keisean Henderson</td><td data-n="1.0">1</td><td data-n="0.0">0</td><td data-n="0.0">0</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Makhi Hughes</td><td data-n="17.0">17</td><td data-n="98.0">98</td><td data-n="1.0">1</td></tr><tr><td>Re&#x27;Shaun Sanford II</td><td data-n="11.0">11</td><td data-n="75.0">75</td><td data-n="1.0">1</td></tr><tr><td>Conner Weigman</td><td data-n="9.0">9</td><td data-n="30.0">30</td><td data-n="1.0">1</td></tr><tr><td>DJ Butler</td><td data-n="2.0">2</td><td data-n="17.0">17</td><td data-n="0.0">0</td></tr><tr><td>Koby Young</td><td data-n="1.0">1</td><td data-n="11.0">11</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Amare Thomas</td><td data-n="8.0">8</td><td>—</td><td data-n="133.0">133</td><td data-n="1.0">1</td></tr><tr><td>Patrick Overmyer</td><td data-n="6.0">6</td><td>—</td><td data-n="84.0">84</td><td data-n="0.0">0</td></tr><tr><td>Koby Young</td><td data-n="1.0">1</td><td>—</td><td data-n="47.0">47</td><td data-n="0.0">0</td></tr><tr><td>Trent Walker</td><td data-n="2.0">2</td><td>—</td><td data-n="24.0">24</td><td data-n="0.0">0</td></tr><tr><td>Re&#x27;Shaun Sanford II</td><td data-n="1.0">1</td><td>—</td><td data-n="9.0">9</td><td data-n="0.0">0</td></tr><tr><td>Makhi Hughes</td><td data-n="2.0">2</td><td>—</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Jonathan Dimas</td><td data-n="2.0">2</td><td data-n="3.0">3</td></tr></tbody></table></div></article><article class="game-box" data-team="UTAH" hidden><h3 class="box-score">UTAH · 1 game</h3><div class="box-side"><h4>UTAH</h4><p class="run-pass">UTAH threw for 269, 5 passing scores and ran for 365, 4 rushing scores.</p><h5>Passing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>Devon Dampier</td><td data-n="18.0">18</td><td data-n="176.0">176</td><td data-n="3.0">3</td></tr><tr><td>Byrd Ficklin</td><td data-n="8.0">8</td><td data-n="93.0">93</td><td data-n="2.0">2</td></tr></tbody></table><h5>Rushing</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Att</th><th scope="col" data-col="2">Yds</th><th scope="col" data-col="3">TD</th></tr></thead><tbody><tr><td>LaMarcus Bell</td><td data-n="7.0">7</td><td data-n="87.0">87</td><td data-n="1.0">1</td></tr><tr><td>Wayshawn Parker</td><td data-n="12.0">12</td><td data-n="71.0">71</td><td data-n="1.0">1</td></tr><tr><td>Byrd Ficklin</td><td data-n="8.0">8</td><td data-n="70.0">70</td><td data-n="0.0">0</td></tr><tr><td>Steve Chavez-Soto</td><td data-n="6.0">6</td><td data-n="35.0">35</td><td data-n="1.0">1</td></tr><tr><td>Devon Dampier</td><td data-n="6.0">6</td><td data-n="31.0">31</td><td data-n="0.0">0</td></tr><tr><td>Mateaki Helu</td><td data-n="3.0">3</td><td data-n="25.0">25</td><td data-n="0.0">0</td></tr><tr><td>Daniel Bray</td><td data-n="2.0">2</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Hunter Andrews</td><td data-n="1.0">1</td><td data-n="13.0">13</td><td data-n="0.0">0</td></tr><tr><td>Braden Pegan</td><td data-n="1.0">1</td><td data-n="12.0">12</td><td data-n="1.0">1</td></tr><tr><td>Brandon Rose</td><td data-n="2.0">2</td><td data-n="8.0">8</td><td data-n="0.0">0</td></tr></tbody></table><h5>Receiving</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Rec</th><th scope="col" data-col="2">Tgt</th><th scope="col" data-col="3">Yds</th><th scope="col" data-col="4">TD</th></tr></thead><tbody><tr><td>Braden Pegan</td><td data-n="4.0">4</td><td data-n="5.0">5</td><td data-n="81.0">81</td><td data-n="1.0">1</td></tr><tr><td>Larry Simmons</td><td data-n="2.0">2</td><td data-n="2.0">2</td><td data-n="41.0">41</td><td data-n="0.0">0</td></tr><tr><td>Noah Bennee</td><td data-n="1.0">1</td><td data-n="1.0">1</td><td data-n="35.0">35</td><td data-n="1.0">1</td></tr><tr><td>Creed Whittemore</td><td data-n="2.0">2</td><td data-n="4.0">4</td><td data-n="27.0">27</td><td data-n="0.0">0</td></tr><tr><td>Ricky Johnson</td><td data-n="2.0">2</td><td data-n="5.0">5</td><td data-n="25.0">25</td><td data-n="0.0">0</td></tr><tr><td>Mana Carvalho</td><td data-n="1.0">1</td><td data-n="3.0">3</td><td data-n="23.0">23</td><td data-n="0.0">0</td></tr><tr><td>Wayshawn Parker</td><td data-n="3.0">3</td><td data-n="3.0">3</td><td data-n="23.0">23</td><td data-n="2.0">2</td></tr><tr><td>Hunter Andrews</td><td data-n="2.0">2</td><td data-n="3.0">3</td><td data-n="14.0">14</td><td data-n="1.0">1</td></tr></tbody></table><h5>Kickers</h5><table class="sortable espn-box"><thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">FG</th><th scope="col" data-col="2">XP</th></tr></thead><tbody><tr><td>Dillon Curtis</td><td data-n="1.0">1</td><td data-n="7.0">7</td></tr><tr><td>Tanner Cragun</td><td data-n="0.0">0</td><td data-n="2.0">2</td></tr></tbody></table></div></article></section></div>
+</article>
+</main></div>
+<script>
+(function(){
+  function applyTeam(book, pill){
+    if(!book || !pill) return;
+    book.querySelectorAll('.team-pill').forEach(function(p){
+      p.classList.toggle('on', p===pill);
+    });
+    var team=pill.getAttribute('data-team')||'';
+    book.querySelectorAll('.game-box').forEach(function(box){
+      box.hidden = (box.getAttribute('data-team')||'')!==team;
+    });
+    book.querySelectorAll('.trend-up-strip li[data-team]').forEach(function(li){
+      li.hidden = (li.getAttribute('data-team')||'')!==team;
+    });
+  }
+  window.applyShowdownTeam = applyTeam;
+  function applyWeek(book, pill){
+    if(!book || !pill) return;
+    book.querySelectorAll('.week-pill').forEach(function(p){
+      p.classList.toggle('on', p===pill);
+    });
+    var wk=pill.getAttribute('data-week')||'';
+    book.querySelectorAll('.week-panel').forEach(function(panel){
+      panel.hidden = (panel.getAttribute('data-week')||'')!==wk;
+    });
+    var inp=document.getElementById('playerSearch');
+    if(inp) inp.dispatchEvent(new Event('input'));
+  }
+  document.addEventListener('click', function(e){
+    var teamPill=e.target.closest('.team-pill');
+    if(teamPill){
+      var teamBook=teamPill.closest('.player-book');
+      if(!teamBook) return;
+      applyTeam(teamBook, teamPill);
+      var teamInp=document.getElementById('playerSearch');
+      if(teamInp) teamInp.dispatchEvent(new Event('input'));
+      return;
+    }
+    var pill=e.target.closest('.week-pill');
+    if(!pill) return;
+    var book=pill.closest('.player-book');
+    if(!book) return;
+    applyWeek(book, pill);
+  });
+})();
+</script>
+<script>
+(function(){
+  var KEY='desk-report-theme';
+  function apply(mode){
+    document.documentElement.classList.toggle('light', mode==='light');
+    var b=document.getElementById('themeBtn');
+    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
+  }
+  var saved=null;
+  try { saved=localStorage.getItem(KEY); } catch (e) {}
+  apply(saved==='light'?'light':'dark');
+  window.toggleDeskTheme=function(){
+    apply(document.documentElement.classList.contains('light')?'dark':'light');
+  };
+})();
+</script>
+<script>
+(function(){
+  function val(td){
+    if(!td) return {n:false, v:null, s:''};
+    var dn=td.getAttribute('data-n');
+    if(dn!==null && dn!==''){
+      var n=parseFloat(dn);
+      if(!isNaN(n)) return {n:true, v:n, s:dn};
+    }
+    if(td.querySelector){
+      if(td.querySelector('.tick.on')) return {n:true, v:1, s:'1'};
+      if(td.querySelector('.tick')) return {n:true, v:0, s:'0'};
+    }
+    var t=(td.textContent||'').trim();
+    if(!t || t==='—' || t==='-') return {n:false, v:null, s:''};
+    var pct=t.match(/(-?\d+(?:\.\d+)?)%/);
+    if(pct) return {n:true, v:parseFloat(pct[1]), s:t};
+    var rec=t.match(/^(-?\d+(?:\.\d+)?)\s*\/\s*(-?\d+(?:\.\d+)?)/);
+    if(rec){
+      var den=parseFloat(rec[2]);
+      if(den) return {n:true, v:parseFloat(rec[1])/den, s:t};
+    }
+    var raw=t.replace(/[$,×x]/g,'').replace(/,/g,'');
+    if(/^-?\d+(\.\d+)?$/.test(raw)) return {n:true, v:parseFloat(raw), s:t};
+    var d=Date.parse(t);
+    if(!isNaN(d) && /[A-Za-z]{3,}/.test(t) && /\d{4}/.test(t)) return {n:true, v:d, s:t};
+    return {n:false, v:t.toLowerCase(), s:t};
+  }
+  function sortTable(table, col, dir){
+    var tb=table && table.tBodies[0];
+    if(!tb) return;
+    Array.prototype.forEach.call(table.querySelectorAll('th'), function(h){
+      h.removeAttribute('data-dir');
+    });
+    var mark=table.querySelector('th[data-col="'+col+'"]');
+    if(!mark){
+      var row=table.querySelector('thead tr');
+      if(row && row.children[col]) mark=row.children[col];
+    }
+    if(mark) mark.setAttribute('data-dir', dir);
+    var rows=Array.prototype.slice.call(tb.rows);
+    rows.sort(function(a,b){
+      var A=val(a.cells[col]);
+      var B=val(b.cells[col]);
+      if(A.v===null && B.v===null) return 0;
+      if(A.v===null) return 1;
+      if(B.v===null) return -1;
+      var cmp=0;
+      if(A.n && B.n) cmp=A.v-B.v;
+      else cmp=String(A.v).localeCompare(String(B.v));
+      return dir==='asc' ? cmp : -cmp;
+    });
+    rows.forEach(function(r){ tb.appendChild(r); });
+  }
+  document.addEventListener('click', function(e){
+    var th=e.target.closest('table.sortable th');
+    if(!th || th.closest('tfoot')) return;
+    var table=th.closest('table');
+    if(!table) return;
+    var raw=th.getAttribute('data-col');
+    var col=raw===null ? Array.prototype.indexOf.call(th.parentNode.children, th) : parseInt(raw,10);
+    if(isNaN(col) || col<0) return;
+    var dir=th.getAttribute('data-dir')==='asc' ? 'desc' : 'asc';
+    sortTable(table, col, dir);
+  });
+  document.querySelectorAll('table.sortable[data-default-sort]').forEach(function(table){
+    var want=(table.getAttribute('data-default-sort')||'').toLowerCase();
+    var ths=table.querySelectorAll('thead th');
+    var idx=-1;
+    for(var i=0;i<ths.length;i++){
+      var t=(ths[i].textContent||'').trim().toLowerCase();
+      if(t===want || t.indexOf(want)>=0 || want.indexOf(t)>=0){
+        var raw=ths[i].getAttribute('data-col');
+        idx=raw===null ? i : parseInt(raw,10);
+        break;
+      }
+    }
+    if(idx>=0) sortTable(table, idx, 'desc');
+  });
+})();
+</script>
+<script>
+(function(){
+  function norm(s){
+    return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+  }
+  function skip(el){
+    return !!(el.closest && el.closest('dialog, .pcard, .rail'));
+  }
+  function playerIdx(table){
+    var ths=table.querySelectorAll('thead th');
+    for(var i=0;i<ths.length;i++){
+      var t=norm(ths[i].textContent);
+      if(t==='player'||t==='name') return i;
+    }
+    return -1;
+  }
+  function rowHit(tr, q, pidx){
+    if(!q) return true;
+    if(pidx>=0 && tr.cells[pidx]) return norm(tr.cells[pidx].textContent).indexOf(q)>=0;
+    return norm(tr.textContent).indexOf(q)>=0;
+  }
+  function apply(opts){
+    opts = opts || {};
+    var inp=document.getElementById('playerSearch');
+    if(!inp) return;
+    var q=norm(inp.value);
+    var n=0;
+    var hitSel='tbody tr:not([hidden]), li:not([hidden])';
+    function teamOk(tr){
+      return true;
+    }
+    function mark(el, hit){
+      el.hidden = !hit;
+      el.classList.toggle('name-hit', !!(q && hit));
+      if(q && hit) n++;
+    }
+    function panelHasHit(sel){
+      var panel=document.querySelector(sel);
+      if(!panel) return false;
+      var hit=false;
+      panel.querySelectorAll('tbody tr, li').forEach(function(el){
+        if(!el.hidden) hit=true;
+      });
+      return hit;
+    }
+    document.querySelectorAll('table tbody tr').forEach(function(tr){
+      if(skip(tr)) return;
+      var ok=teamOk(tr) && rowHit(tr, q, playerIdx(tr.closest('table')));
+      mark(tr, ok);
+    });
+    document.querySelectorAll('table').forEach(function(t){
+      if(skip(t)) return;
+      var any=false;
+      var tb=t.tBodies[0];
+      if(tb){
+        Array.prototype.forEach.call(tb.rows, function(r){ if(!r.hidden) any=true; });
+      }
+      t.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.pos-book,.week-panel,.box-side,.game-box').forEach(function(sec){
+      var any=false;
+      sec.querySelectorAll('tbody tr').forEach(function(r){ if(!r.hidden) any=true; });
+      if(!sec.querySelector('tbody tr')) any=true;
+      sec.classList.toggle('search-empty', !!(q && !any));
+    });
+    document.querySelectorAll('.week-book-wrap').forEach(function(w){
+      var t=w.querySelector('table');
+      w.classList.toggle('search-empty', !!(t && t.classList.contains('search-empty')));
+    });
+    function selectedTeam(book){
+      var pill=book && book.querySelector('.team-pill.on');
+      return pill ? (pill.getAttribute('data-team')||'') : '';
+    }
+    function teamHasName(book, team){
+      var hit=false;
+      book.querySelectorAll('.game-box').forEach(function(box){
+        if((box.getAttribute('data-team')||'')!==team) return;
+        box.querySelectorAll('tbody tr').forEach(function(r){
+          if(rowHit(r, q, playerIdx(r.closest('table')))) hit=true;
+        });
+      });
+      book.querySelectorAll('.trend-up-strip li[data-team]').forEach(function(li){
+        if((li.getAttribute('data-team')||'')!==team) return;
+        if(norm(li.textContent).indexOf(q)>=0) hit=true;
+      });
+      return hit;
+    }
+    document.querySelectorAll('.team-pill').forEach(function(pill){
+      var book=pill.closest('.player-book');
+      if(!book) return;
+      var team=pill.getAttribute('data-team')||'';
+      pill.classList.toggle('search-miss', !!(q && !teamHasName(book, team)));
+    });
+    if(opts.jump){
+      document.querySelectorAll('.player-book').forEach(function(book){
+        var on=book.querySelector('.team-pill.on');
+        var sel=selectedTeam(book);
+        if(!q || !on || teamHasName(book, sel)) return;
+        var alt=book.querySelector('.team-pill:not(.search-miss)');
+        if(alt && alt!==on && window.applyShowdownTeam) window.applyShowdownTeam(book, alt);
+      });
+    }
+    document.querySelectorAll('.player-book').forEach(function(book){
+      var sel=selectedTeam(book);
+      book.querySelectorAll('.trend-up-strip li[data-team]').forEach(function(li){
+        var teamHit=!sel || (li.getAttribute('data-team')||'')===sel;
+        var nameHit=!q || norm(li.textContent).indexOf(q)>=0;
+        mark(li, teamHit && nameHit);
+      });
+    });
+    document.querySelectorAll('.week-pill').forEach(function(pill){
+      var book=pill.closest('.player-book');
+      if(!book) return;
+      var sel=selectedTeam(book);
+      var wk=pill.getAttribute('data-week')||'';
+      var panel=book.querySelector('.week-panel[data-week="'+wk+'"]');
+      var hit=false;
+      if(panel){
+        panel.querySelectorAll('.game-box').forEach(function(box){
+          if(sel && (box.getAttribute('data-team')||'')!==sel) return;
+          box.querySelectorAll('tbody tr').forEach(function(r){
+            if(rowHit(r, q, playerIdx(r.closest('table')))) hit=true;
+          });
+        });
+        if(!panel.querySelector('tbody tr')) hit=true;
+      }
+      pill.classList.toggle('search-miss', !!(q && !hit));
+    });
+    document.querySelectorAll('li').forEach(function(li){
+      if(skip(li)) return;
+      if(li.hasAttribute('data-team')) return;
+      mark(li, !q || norm(li.textContent).indexOf(q)>=0);
+    });
+    var hint=document.getElementById('playerSearchHint');
+    if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
+    document.querySelectorAll('label.pill[for]').forEach(function(lab){
+      var id=lab.getAttribute('for');
+      var sel = id==='v-report' ? '.game-report'
+              : id==='v-cards' ? '.card-build'
+              : id==='v-etr' ? '.etr-board'
+              : id==='v-preview' ? '.preview-board'
+              : id==='v-game' ? '.game-report-link'
+              : id==='v-book' ? '.player-book' : '';
+      if(!sel) return;
+      lab.classList.toggle('search-miss', !!(q && !panelHasHit(sel)));
+    });
+    if(opts.jump){
+      var book=document.querySelector('.player-book');
+      if(book && q){
+        var on=book.querySelector('.week-pill.on');
+        var cur=on ? (on.getAttribute('data-week')||'') : '';
+        var curPanel=cur ? book.querySelector('.week-panel[data-week="'+cur+'"]') : null;
+        var curHit=false;
+        if(curPanel){
+          var selNow=book.querySelector('.team-pill.on');
+          var selTeam=selNow ? (selNow.getAttribute('data-team')||'') : '';
+          curPanel.querySelectorAll('tbody tr.name-hit').forEach(function(r){
+            var box=r.closest('.game-box');
+            if(selTeam && box && (box.getAttribute('data-team')||'')!==selTeam) return;
+            curHit=true;
+          });
+        }
+        if(!curHit){
+          var alt=book.querySelector('.week-pill:not(.search-miss)');
+          if(alt && alt!==on){
+            book.querySelectorAll('.week-pill').forEach(function(p){ p.classList.toggle('on', p===alt); });
+            var aw=alt.getAttribute('data-week')||'';
+            book.querySelectorAll('.week-panel').forEach(function(panel){
+              panel.hidden = (panel.getAttribute('data-week')||'')!==aw;
+            });
+          }
+        }
+      }
+      var shownArt=document.querySelector('article.panel');
+      var jumpEl=shownArt && shownArt.querySelector(hitSel+'.name-hit, '+hitSel);
+      if(jumpEl){
+        setTimeout(function(){
+          try { jumpEl.scrollIntoView({block:'center', behavior:'smooth'}); }
+          catch (err) { jumpEl.scrollIntoView(true); }
+        }, 40);
+      }
+    }
+  }
+  var form=document.getElementById('playerSearchForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      apply({jump:true});
+    });
+  }
+  var inp=document.getElementById('playerSearch');
+  if(inp){
+    inp.addEventListener('input', function(){ apply({}); });
+    inp.addEventListener('search', function(){ apply({jump:true}); });
+    inp.addEventListener('keydown', function(e){
+      if(e.key==='Enter' || e.keyCode===13){
+        e.preventDefault();
+        apply({jump:true});
+      }
+    });
+  }
+  apply({});
+})();
+</script>
+</body></html>
