@@ -11,7 +11,7 @@
   } catch (e) {}
 })();
 </script>
-<title>Prop Boards</title>
+<title>GAMBIT</title>
 <style>
 :root{--bg:#121820;--fg:#f3efe6;--rail:#1a2430cc;--rail-line:#2e3c4a;--muted:#c4c0b6;--pill:#243140;--pill-fg:#f0c674;--pill-line:#3d4d5c;--accent:#a85d22;--val:#e8b86d;--card:#1a2430e6;--card-line:#3d4d5c;--desk:#a85d22;}
 html{color-scheme:dark;}
@@ -22,6 +22,7 @@ html.light{color-scheme:light;--bg:#f6f1e8;--fg:#1a1c20;--rail:#ebe4d6ee;--rail-
 .page-cfb{--desk:#e11d48;--accent:#e11d48;}
 .page-showdown{--desk:#be123c;--accent:#be123c;}
 .page-classic{--desk:#e11d48;--accent:#e11d48;}
+.page-horses{--desk:#15803d;--accent:#15803d;}
 html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,"Iowan Old Style",serif;}
 body{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("./assets/desk-bg-hub.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
 body.page-mlb{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("./assets/desk-bg-mlb.jpg");}
@@ -36,7 +37,12 @@ html.light body.page-cfb,html.light body.page-showdown,html.light body.page-clas
 .rail .brand{order:0;}
 .rail a.pill.home{order:1;}
 .rail > *:not(.brand):not(a.pill.home):not(button.theme){order:2;}
-.brand{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .55rem;line-height:1.35;}
+.brand{font-size:1.15rem;letter-spacing:.28em;font-weight:700;text-transform:uppercase;color:#e8b86d;margin:.15rem 0 .85rem;line-height:1;}
+body.page-hub main{max-width:64rem;padding-top:1.1rem;}
+.hero-splash{position:relative;padding:0;overflow:hidden;border:1px solid rgba(232,184,109,.55);background:#07090d;box-shadow:0 0 0 1px rgba(56,120,220,.28),0 24px 60px rgba(0,0,0,.48);}
+.hero-splash img{display:block;width:100%;height:auto;}
+.hero-splash h1{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+html.light .hero-splash{box-shadow:0 18px 40px rgba(40,30,10,.16);}
 .pill{display:block;border-radius:999px;padding:.55rem .75rem;background:var(--pill);color:var(--pill-fg);text-decoration:none;font-size:.82rem;font-weight:700;line-height:1.25;border:1px solid var(--pill-line);}
 .pill.on{background:var(--desk);color:#fff;border-color:var(--desk);}
 .pill.home{border-color:var(--val);}
@@ -46,12 +52,14 @@ html.light body.page-cfb,html.light body.page-showdown,html.light body.page-clas
 .pill.lane-cfb{border-color:#e11d48;color:#fb7185;}
 .pill.lane-showdown{border-color:#be123c;color:#fb7185;}
 .pill.lane-classic{border-color:#e11d48;color:#fb7185;}
+.pill.lane-horses{border-color:#15803d;color:#4ade80;}
 .pill.lane-mlb.on{background:#1f6feb;color:#fff;border-color:#1f6feb;}
 .pill.lane-nfl.on{background:#d97706;color:#fff;border-color:#d97706;}
 .pill.lane-nflshowdown.on{background:#d97706;color:#fff;border-color:#d97706;}
 .pill.lane-cfb.on{background:#e11d48;color:#fff;border-color:#e11d48;}
 .pill.lane-showdown.on{background:#be123c;color:#fff;border-color:#be123c;}
 .pill.lane-classic.on{background:#e11d48;color:#fff;border-color:#e11d48;}
+.pill.lane-horses.on{background:#15803d;color:#fff;border-color:#15803d;}
 .search-form{margin:.35rem 0 .2rem;}
 .search-form input{width:100%;box-sizing:border-box;border-radius:999px;border:1px solid var(--pill-line);background:#121820cc;color:var(--fg);padding:.45rem .7rem;font:inherit;font-size:.8rem;}
 main{flex:1;padding:1.6rem 1.8rem 3rem;max-width:48rem;}
@@ -61,6 +69,7 @@ main{flex:1;padding:1.6rem 1.8rem 3rem;max-width:48rem;}
 .page-cfb .hero{border-color:rgba(225,29,72,.35);background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(225,29,72,.22));}
 .page-showdown .hero{border-color:rgba(190,18,60,.35);background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(190,18,60,.22));}
 .page-classic .hero{border-color:rgba(225,29,72,.35);background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(225,29,72,.22));}
+.page-horses .hero{border-color:rgba(21,128,61,.35);background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(21,128,61,.22));}
 h1{font-size:2.05rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
 .sub{color:var(--muted);margin:0;font-size:1.02rem;}
 .desk{margin:0 0 2.1rem;padding-top:.2rem;}
@@ -75,7 +84,19 @@ h1{font-size:2.05rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
 .games li{margin:0 0 .5rem;}
 .games a{display:block;color:var(--fg);font-size:1.18rem;font-weight:700;text-decoration:none;padding:.7rem .9rem;background:var(--card);border:1px solid var(--card-line);border-left:5px solid var(--desk);border-radius:.7rem;}
 .games a:hover,.games a:focus{border-color:var(--desk);color:#fff;outline:none;}
-.tools-head{font-size:1.15rem;margin:1.5rem 0 .35rem;letter-spacing:-.01em;}
+.games a .when{display:inline;font-weight:700;font-size:1.35rem;letter-spacing:.01em;color:var(--val);margin:0 0 0 .75rem;}
+.games a:hover .when,.games a:focus .when,html.light .games a:hover .when,html.light .games a:focus .when{color:var(--val);}
+.tools-head{font-size:1.48rem;margin:2.1rem 0 .65rem;letter-spacing:-.02em;font-weight:800;line-height:1.2;color:var(--fg);}
+.tools-head.section-head{padding-bottom:.45rem;border-bottom:2px solid rgba(232,184,109,.38);}
+html.light .tools-head.section-head{border-bottom-color:rgba(138,75,22,.28);}
+.games-latest{margin:.15rem 0 1.5rem;}
+.games-latest a{border-left-width:6px;font-size:1.22rem;}
+.games-latest li.lane-mlb a{--desk:#1f6feb;border-left-color:#1f6feb;}
+.games-latest li.lane-nfl a,.games-latest li.lane-nflshowdown a{--desk:#d97706;border-left-color:#d97706;}
+.games-latest li.lane-cfb a,.games-latest li.lane-classic a{--desk:#e11d48;border-left-color:#e11d48;}
+.games-latest li.lane-showdown a{--desk:#be123c;border-left-color:#be123c;}
+.games-latest li.lane-horses a{--desk:#15803d;border-left-color:#15803d;}
+.latest-empty{margin:.25rem 0 1.5rem;font-size:1.02rem;}
 .tools{display:grid;gap:.75rem;margin-top:.4rem;}
 .tool{display:grid;grid-template-columns:1fr auto;gap:.15rem .8rem;align-items:center;background:var(--card);border:1px solid var(--card-line);border-left:5px solid var(--desk);border-radius:.8rem;padding:.95rem 1.05rem;text-decoration:none;color:inherit;box-shadow:0 8px 24px rgba(0,0,0,.22);}
 .tool.lane-mlb{--desk:#1f6feb;}
@@ -84,6 +105,7 @@ h1{font-size:2.05rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
 .tool.lane-cfb{--desk:#e11d48;}
 .tool.lane-showdown{--desk:#be123c;}
 .tool.lane-classic{--desk:#e11d48;}
+.tool.lane-horses{--desk:#15803d;}
 .tool:hover,.tool:focus{border-color:var(--desk);outline:none;transform:translateY(-1px);}
 .tool .when{font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);}
 .tool .game{grid-column:1;font-size:1.35rem;font-weight:700;}
@@ -93,12 +115,14 @@ h1{font-size:2.05rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
 html.light .pill.lane-mlb{color:#1558c0;}
 html.light .pill.lane-nfl,html.light .pill.lane-nflshowdown{color:#b45309;}
 html.light .pill.lane-cfb,html.light .pill.lane-classic{color:#be123c;}
+html.light .pill.lane-horses{color:#166534;}
 html.light .pill.lane-showdown{color:#9f1239;}
 html.light .search-form input{background:#fffdf8cc;}
 html.light .hero{background:linear-gradient(135deg,rgba(255,253,248,.9),rgba(168,93,34,.14));box-shadow:0 12px 40px rgba(90,70,40,.12);}
 html.light .page-mlb .hero{background:linear-gradient(135deg,rgba(255,253,248,.9),rgba(31,111,235,.14));}
 html.light .page-nfl .hero,html.light .page-nflshowdown .hero{background:linear-gradient(135deg,rgba(255,253,248,.9),rgba(217,119,6,.16));}
 html.light .page-cfb .hero,html.light .page-classic .hero{background:linear-gradient(135deg,rgba(255,253,248,.9),rgba(225,29,72,.12));}
+html.light .page-horses .hero{background:linear-gradient(135deg,rgba(255,253,248,.9),rgba(21,128,61,.14));}
 html.light .page-showdown .hero{background:linear-gradient(135deg,rgba(255,253,248,.9),rgba(190,18,60,.12));}
 html.light .day h3 a.day-link:hover,html.light .day h3 a.day-link:focus,html.light .games a:hover,html.light .games a:focus{color:var(--fg);}
 button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--fg);border:1px solid var(--pill-line);border-radius:999px;padding:.5rem .75rem;text-align:left;}
@@ -117,14 +141,12 @@ button.theme:hover{background:var(--pill);}
 <body class="page-hub">
 <div class="shell">
 <aside class="rail">
-<p class="brand">Prop Boards<br/>Home</p>
+<p class="brand">GAMBIT</p>
 <a class="pill home on" href="./hub.html">Home</a>
-<a class="pill lane-mlb" href="./mlb.html">MLB Player Props</a>
-<a class="pill lane-nfl" href="./nfl.html">NFL Player Props</a>
 <a class="pill lane-nflshowdown" href="./nfl-showdown.html">NFL DK Showdown</a>
-<a class="pill lane-cfb" href="./cfb.html">CFB Player Props</a>
 <a class="pill lane-showdown" href="./showdown.html">CFB DK Showdowns</a>
 <a class="pill lane-classic" href="./classic.html">CFB DK Classic Lineups</a>
+<a class="pill lane-horses" href="./horses.html">Horse Racing</a>
 <a class="pill" href="./results.html">Results</a>
 <form class="search-form" id="playerSearchForm" action="#" role="search">
 <input id="hubSearch" type="search" placeholder="Search a game or date" autocomplete="off"/>
@@ -132,71 +154,11 @@ button.theme:hover{background:var(--pill);}
 <button class="theme" type="button" id="themeBtn" onclick="toggleHubTheme()">Light mode</button>
 </aside>
 <main id="top">
-<div class="hero">
-<h1>Prop Boards</h1>
-<p class="sub">Tonight’s slips. One board per sport.</p>
-</div>
-<h2 class="tools-head" id="boards">Boards</h2><div class="tools"><a class="tool lane-mlb" href="./mlb.html"><span class="game">MLB Player Props</span><span class="go">Open</span></a>
-<a class="tool lane-nfl" href="./nfl.html"><span class="game">NFL Player Props</span><span class="go">Open</span></a>
-<a class="tool lane-nflshowdown" href="./nfl-showdown.html"><span class="game">NFL DK Showdown</span><span class="go">Open</span></a>
-<a class="tool lane-cfb" href="./cfb.html"><span class="game">CFB Player Props</span><span class="go">Open</span></a>
+<div class="hero hero-splash"><img src="./assets/gambit-splash.jpg" alt=""/><h1>GAMBIT</h1></div>
+<div class="tools" id="boards"><a class="tool lane-nflshowdown" href="./nfl-showdown.html"><span class="game">NFL DK Showdown</span><span class="go">Open</span></a>
 <a class="tool lane-showdown" href="./showdown.html"><span class="game">CFB DK Showdowns</span><span class="go">Open</span></a>
-<a class="tool lane-classic" href="./classic.html"><span class="game">CFB DK Classic Lineups</span><span class="go">Open</span></a></div><h2 class="tools-head" id="latest">Latest</h2><div class="day" data-date="2026-10-14">
-<h3><a class="day-link" href="./2026-10-14.html" data-search="MLB Player Props October 14, 2026">MLB Player Props · October 14, 2026</a></h3>
-</div>
-<div class="day" data-date="2026-09-27">
-<h3><a class="day-link" href="./nfl/2026-09-27.html" data-search="NFL Player Props September 27, 2026">NFL Player Props · September 27, 2026</a></h3>
-</div>
-<div class="day" data-date="2026-10-25">
-<h3>NFL DK Showdown · October 25, 2026</h3>
-<ul class="games">
-<li><a href="./nfl-showdown/2026-10-25_TB_CAR.html" data-search="NFL DK Showdown October 25, 2026  TB @ CAR">TB @ CAR</a></li>
-<li><a href="./nfl-showdown/2026-10-25_SF_ATL.html" data-search="NFL DK Showdown October 25, 2026  SF @ ATL">SF @ ATL</a></li>
-<li><a href="./nfl-showdown/2026-10-25_NYG_HOU.html" data-search="NFL DK Showdown October 25, 2026  NYG @ HOU">NYG @ HOU</a></li>
-<li><a href="./nfl-showdown/2026-10-25_MIA_NYJ.html" data-search="NFL DK Showdown October 25, 2026  MIA @ NYJ">MIA @ NYJ</a></li>
-<li><a href="./nfl-showdown/2026-10-25_LAR_LV.html" data-search="NFL DK Showdown October 25, 2026  LAR @ LV">LAR @ LV</a></li>
-<li><a href="./nfl-showdown/2026-10-25_IND_MIN.html" data-search="NFL DK Showdown October 25, 2026  IND @ MIN">IND @ MIN</a></li>
-<li><a href="./nfl-showdown/2026-10-25_GB_DET.html" data-search="NFL DK Showdown October 25, 2026  GB @ DET">GB @ DET</a></li>
-<li><a href="./nfl-showdown/2026-10-25_DEN_ARI.html" data-search="NFL DK Showdown October 25, 2026  DEN @ ARI">DEN @ ARI</a></li>
-<li><a href="./nfl-showdown/2026-10-25_CLE_TEN.html" data-search="NFL DK Showdown October 25, 2026  CLE @ TEN">CLE @ TEN</a></li>
-<li><a href="./nfl-showdown/2026-10-25_CIN_BAL.html" data-search="NFL DK Showdown October 25, 2026  CIN @ BAL">CIN @ BAL</a></li>
-</ul>
-</div>
-<div class="day" data-date="2026-10-11">
-<h3>NFL DK Showdown · October 11, 2026</h3>
-<ul class="games">
-<li><a href="./nfl-showdown/2026-10-19_WAS_SF.html">WAS @ SF</a></li>
-<li><a href="./nfl-showdown/2026-10-11_CHI_GB.html" data-search="NFL DK Showdown October 11, 2026 CHI @ GB">CHI @ GB</a></li>
-<li><a href="./nfl-showdown/2026-10-11_CLE_NYJ.html" data-search="NFL DK Showdown October 11, 2026 CLE @ NYJ">CLE @ NYJ</a></li>
-<li><a href="./nfl-showdown/2026-10-11_CIN_MIA.html" data-search="NFL DK Showdown October 11, 2026 Cincinnati @ Miami">Cincinnati @ Miami</a></li>
-<li><a href="./nfl-showdown/2026-10-11_DEN_LAC.html" data-search="NFL DK Showdown October 11, 2026 DEN @ LAC">DEN @ LAC</a></li>
-<li><a href="./nfl-showdown/2026-10-11_DET_ARI.html" data-search="NFL DK Showdown October 11, 2026 DET @ ARI">DET @ ARI</a></li>
-<li><a href="./nfl-showdown/2026-10-11_HOU_TEN.html" data-search="NFL DK Showdown October 11, 2026 Houston @ TEN">Houston @ TEN</a></li>
-<li><a href="./nfl-showdown/2026-10-11_IND_PIT.html" data-search="NFL DK Showdown October 11, 2026 IND @ PIT">IND @ PIT</a></li>
-<li><a href="./nfl-showdown/2026-10-11_LV_NE.html" data-search="NFL DK Showdown October 11, 2026 LV @ NE">LV @ NE</a></li>
-<li><a href="./nfl-showdown/2026-10-11_MIN_NO.html" data-search="NFL DK Showdown October 11, 2026 MIN @ NO">MIN @ NO</a></li>
-<li><a href="./nfl-showdown/2026-10-11_NYG_WAS.html" data-search="NFL DK Showdown October 11, 2026 NYG @ WAS">NYG @ WAS</a></li>
-<li><a href="./nfl-showdown/2026-10-11_PHI_JAX.html" data-search="NFL DK Showdown October 11, 2026 PHI @ JAX">PHI @ JAX</a></li>
-<li><a href="./nfl-showdown/2026-10-11_SF_SEA.html" data-search="NFL DK Showdown October 11, 2026 SF @ SEA">SF @ SEA</a></li>
-</ul>
-</div>
-<div class="day" data-date="2026-10-15">
-<h3><a class="day-link" href="./cfb/2026-10-15.html" data-search="CFB Player Props October 15, 2026">CFB Player Props · October 15, 2026</a></h3>
-<ul class="games">
-<li><a href="./cfb/2026-10-15_CSU_TXST.html" data-search="CFB Player Props October 15, 2026 Colorado State @ Texas State">Colorado State @ Texas State</a></li>
-<li><a href="./cfb/2026-10-15_ECU_UAB.html" data-search="CFB Player Props October 15, 2026 East Carolina @ UAB">East Carolina @ UAB</a></li>
-<li><a href="./cfb/2026-10-15_GASO_ODU.html" data-search="CFB Player Props October 15, 2026 Georgia Southern @ Old Dominion">Georgia Southern @ Old Dominion</a></li>
-</ul>
-</div>
-<div class="day" data-date="2026-10-15">
-<h3>CFB DK Showdowns · October 15, 2026</h3>
-<ul class="games">
-<li><a href="./showdown/2026-10-15_CSU_TXST.html" data-search="CFB DK Showdowns October 15, 2026 Colorado State @ Texas State">Colorado State @ Texas State</a></li>
-</ul>
-</div>
-<div class="day" data-date="2026-09-26">
-<h3><a class="day-link" href="./classic/2026-09-26.html" data-search="CFB DK Classic Lineups September 26, 2026">CFB DK Classic Lineups · September 26, 2026</a></h3>
-</div>
+<a class="tool lane-classic" href="./classic.html"><span class="game">CFB DK Classic Lineups</span><span class="go">Open</span></a>
+<a class="tool lane-horses" href="./horses.html"><span class="game">Horse Racing</span><span class="go">Open</span></a></div><h2 class="tools-head section-head" id="latest">Latest</h2><p class="lede latest-empty">Nothing upcoming right now.</p>
 </main>
 </div>
 <script>
@@ -229,7 +191,7 @@ button.theme:hover{background:var(--pill);}
   function filter(){
     var q=(box.value||'').trim().toLowerCase();
     document.querySelectorAll('.day').forEach(function(day){
-      var head=day.querySelector('.day-link');
+      var head=day.querySelector('h3');
       var games=day.querySelectorAll('.games a');
       var headHit=!!(head && hayOf(head).indexOf(q)>=0);
       var gameHit=false;
@@ -239,7 +201,6 @@ button.theme:hover{background:var(--pill);}
         if(link.parentElement) link.parentElement.classList.toggle('hide', !hit);
         if(hit) gameHit=true;
       });
-      if(head) head.classList.remove('hide');
       var show=!q || headHit || gameHit;
       day.classList.toggle('hide', !show);
     });
@@ -254,7 +215,7 @@ button.theme:hover{background:var(--pill);}
     });
   }
   function jump(){
-    var first=document.querySelector('.day-link:not(.hide), .games a:not(.hide)');
+    var first=document.querySelector('.games a:not(.hide)');
     if(first) first.focus();
   }
 })();
