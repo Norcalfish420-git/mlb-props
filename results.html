@@ -33,7 +33,7 @@ html.light body.page-mlb{background-image:linear-gradient(180deg,rgba(246,241,23
 html.light body.page-nfl,html.light body.page-nflshowdown,html.light body.page-nfldesk,html.light body.page-nflclassic{background-image:linear-gradient(180deg,rgba(246,241,232,.9),rgba(246,241,232,.94)),url("./assets/desk-bg-nfl.jpg");}
 html.light body.page-cfb,html.light body.page-showdown,html.light body.page-classic,html.light body.page-cfbdesk{background-image:linear-gradient(180deg,rgba(246,241,232,.9),rgba(246,241,232,.94)),url("./assets/desk-bg-cfb.jpg");}
 .shell{display:flex;min-height:100vh;}
-.rail{width:14rem;flex:0 0 14rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1.1rem .8rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.4rem;backdrop-filter:blur(14px);}
+.rail{width:18rem;flex:0 0 18rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1.1rem .8rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.4rem;backdrop-filter:blur(14px);}
 .brand{display:block;margin:0;line-height:0;text-decoration:none;}
 .brand img{display:block;width:100%;height:auto;max-height:2rem;object-fit:contain;object-position:left center;}
 a.brand.on{border-radius:.45rem;box-shadow:0 0 0 1px var(--val);}
@@ -71,6 +71,8 @@ html.light .tool.tool-sport-banner .go{text-shadow:0 1px 6px rgba(0,0,0,.45),0 0
 .pill.pill-banner:not(.pill-sport) img{display:block;width:100%;height:100%;object-fit:cover;object-position:left center;}
 .pill.pill-banner .pill-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 .pill.pill-banner.on{background:transparent;color:inherit;border-color:var(--desk);box-shadow:0 0 0 1px var(--desk);}
+.pill.pill-results{border:0;}
+.pill.pill-results.on{border:0;box-shadow:0 0 0 1px var(--val);}
 .pill.home{border-color:var(--val);}
 .pill.lane-mlb{border-color:#1f6feb;color:#8ab4ff;}
 .pill.lane-nfl{border-color:#d97706;color:#fbbf24;}
@@ -160,8 +162,10 @@ html.light .page-cfb .hero,html.light .page-classic .hero{background:linear-grad
 html.light .page-horses .hero{background:linear-gradient(135deg,rgba(255,253,248,.9),rgba(21,128,61,.14));}
 html.light .page-showdown .hero{background:linear-gradient(135deg,rgba(255,253,248,.9),rgba(190,18,60,.12));}
 html.light .day h3 a.day-link:hover,html.light .day h3 a.day-link:focus,html.light .games a:hover,html.light .games a:focus{color:var(--fg);}
-button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:1.1rem;font-weight:700;cursor:pointer;background:transparent;color:var(--fg);border:1px solid var(--pill-line);border-radius:999px;padding:.5rem .75rem;text-align:center;line-height:1.2;}
-button.theme:hover{background:var(--pill);}
+button.theme{display:block;width:100%;box-sizing:border-box;padding:0;margin:0;border:0;background:transparent;cursor:pointer;line-height:0;border-radius:.85rem;overflow:hidden;position:relative;}
+button.theme img{display:block;width:100%;height:auto;}
+button.theme .pill-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+button.theme:hover{filter:brightness(1.06);}
 @media (max-width:720px){
   html.rail-closed .rail{width:2.7rem !important;flex-basis:2.7rem !important;flex-direction:column;flex-wrap:nowrap;overflow:hidden;align-items:flex-start;}
   html.rail-closed .rail > *:not(.rail-head){display:none !important;}
@@ -186,11 +190,11 @@ button.theme:hover{background:var(--pill);}
 <a class="pill pill-banner pill-sport lane-nfl" href="./nfl-desk.html"><img src="./assets/sport-nfl.jpg" alt=""/><span class="pill-label">NFL</span></a>
 <a class="pill pill-banner pill-sport lane-cfb" href="./cfb-desk.html"><img src="./assets/sport-cfb.jpg" alt=""/><span class="pill-label">CFB</span></a>
 <a class="pill pill-banner pill-sport lane-horses" href="./horses.html"><img src="./assets/sport-horses.jpg" alt=""/><span class="pill-label">Horses</span></a>
-<a class="pill on" href="./results.html">Results</a>
+<a class="pill pill-banner pill-sport pill-results on" href="./results.html"><img src="./assets/results-pill.jpg" alt=""/><span class="pill-label">Results</span></a>
 <form class="search-form" id="playerSearchForm" action="#" role="search">
 <input id="hubSearch" type="search" placeholder="Search a game or date" autocomplete="off"/>
 </form>
-<button class="theme" type="button" id="themeBtn" onclick="toggleHubTheme()" aria-label="Light">☀️</button>
+<button class="theme" type="button" id="themeBtn" onclick="toggleHubTheme()" aria-label="Light"><img src="./assets/theme-pill.jpg" alt=""/><span class="pill-label">Light / Dark Mode</span></button>
 </aside>
 <main id="top">
 
@@ -206,7 +210,7 @@ button.theme:hover{background:var(--pill);}
   function apply(mode){
     document.documentElement.classList.toggle('light', mode==='light');
     var b=document.getElementById('themeBtn');
-    if(b){ b.textContent = mode==='light' ? '\uD83C\uDF19' : '\u2600\uFE0F'; b.setAttribute('aria-label', mode==='light' ? 'Dark' : 'Light'); }
+    if(b){ b.setAttribute('aria-label', mode==='light' ? 'Dark' : 'Light'); }
     try { localStorage.setItem(KEY, mode); } catch (e) {}
   }
   var saved=null;
