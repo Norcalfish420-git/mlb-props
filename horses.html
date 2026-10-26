@@ -151,6 +151,8 @@ html.light .day h3 a.day-link:hover,html.light .day h3 a.day-link:focus,html.lig
 button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:1.1rem;font-weight:700;cursor:pointer;background:transparent;color:var(--fg);border:1px solid var(--pill-line);border-radius:999px;padding:.5rem .75rem;text-align:center;line-height:1.2;}
 button.theme:hover{background:var(--pill);}
 @media (max-width:720px){
+  html.rail-closed .rail{width:2.7rem !important;flex-basis:2.7rem !important;flex-direction:column;flex-wrap:nowrap;overflow:hidden;align-items:flex-start;}
+  html.rail-closed .rail > *:not(.rail-head){display:none !important;}
   body{background-attachment:scroll;}
   .shell{display:block;}
   .rail{width:auto;height:auto;position:relative;flex-direction:row;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--rail-line);}
@@ -397,21 +399,17 @@ button.theme:hover{background:var(--pill);}
     b.textContent = closed ? '›' : '‹';
     b.setAttribute('aria-label', closed ? 'Show menu' : 'Hide menu');
   }
-  paint(document.documentElement.classList.contains('rail-closed'));
+  document.documentElement.classList.remove('rail-closed');
+  paint(false);
   window.toggleHubRail=function(){
     var closed=!document.documentElement.classList.contains('rail-closed');
     paint(closed);
     try { localStorage.setItem(KEY, closed ? 'closed' : 'open'); } catch (e) {}
   };
-  try {
-    var saved=localStorage.getItem(KEY);
-    if(saved!=='open'){
-      setTimeout(function(){
-        if(!document.documentElement.classList.contains('rail-closed'))
-          window.toggleHubRail();
-      }, 5000);
-    }
-  } catch (e) {}
+  setTimeout(function(){
+    if(!document.documentElement.classList.contains('rail-closed'))
+      window.toggleHubRail();
+  }, 5000);
 })();
 </script>
 <script>

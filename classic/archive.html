@@ -15,14 +15,6 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Ge
 main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:40rem;}
 a{color:var(--val);}
 </style>
-<script>
-(function(){
-  try {
-    if(localStorage.getItem('desk-hub-rail')==='closed')
-      document.documentElement.classList.add('rail-closed');
-  } catch (e) {}
-})();
-</script>
 <style>
 </style>
 <style>
@@ -68,21 +60,17 @@ html.rail-closed .rail .rail-head .brand{display:none;}
     b.textContent = closed ? '\u203A' : '\u2039';
     b.setAttribute('aria-label', closed ? 'Show menu' : 'Hide menu');
   }
-  paint(document.documentElement.classList.contains('rail-closed'));
+  document.documentElement.classList.remove('rail-closed');
+  paint(false);
   window.toggleHubRail=function(){
     var closed=!document.documentElement.classList.contains('rail-closed');
     paint(closed);
     try { localStorage.setItem(KEY, closed ? 'closed' : 'open'); } catch (e) {}
   };
-  try {
-    var saved=localStorage.getItem(KEY);
-    if(saved!=='open'){
-      setTimeout(function(){
-        if(!document.documentElement.classList.contains('rail-closed'))
-          window.toggleHubRail();
-      }, 5000);
-    }
-  } catch (e) {}
+  setTimeout(function(){
+    if(!document.documentElement.classList.contains('rail-closed'))
+      window.toggleHubRail();
+  }, 5000);
 })();
 </script>
 </body>

@@ -107,14 +107,6 @@ html.light td.pct-lo{background:rgba(218,30,40,.18);color:#5c0a0f;}
 
 a{color:var(--val);}
 </style>
-<script>
-(function(){
-  try {
-    if(localStorage.getItem('desk-hub-rail')==='closed')
-      document.documentElement.classList.add('rail-closed');
-  } catch (e) {}
-})();
-</script>
 <style>
 </style>
 <style>
@@ -357,21 +349,17 @@ html.rail-closed .rail .rail-head .brand{display:none;}
     b.textContent = closed ? '\u203A' : '\u2039';
     b.setAttribute('aria-label', closed ? 'Show menu' : 'Hide menu');
   }
-  paint(document.documentElement.classList.contains('rail-closed'));
+  document.documentElement.classList.remove('rail-closed');
+  paint(false);
   window.toggleHubRail=function(){
     var closed=!document.documentElement.classList.contains('rail-closed');
     paint(closed);
     try { localStorage.setItem(KEY, closed ? 'closed' : 'open'); } catch (e) {}
   };
-  try {
-    var saved=localStorage.getItem(KEY);
-    if(saved!=='open'){
-      setTimeout(function(){
-        if(!document.documentElement.classList.contains('rail-closed'))
-          window.toggleHubRail();
-      }, 5000);
-    }
-  } catch (e) {}
+  setTimeout(function(){
+    if(!document.documentElement.classList.contains('rail-closed'))
+      window.toggleHubRail();
+  }, 5000);
 })();
 </script>
 </body>

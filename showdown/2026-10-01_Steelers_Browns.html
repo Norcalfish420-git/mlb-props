@@ -55,14 +55,6 @@ li.name-hit,tr.name-hit{outline:2px solid var(--accent);}
   th{background:#eee;color:#111;}
 }
 </style>
-<script>
-(function(){
-  try {
-    if(localStorage.getItem('desk-hub-rail')==='closed')
-      document.documentElement.classList.add('rail-closed');
-  } catch (e) {}
-})();
-</script>
 <style>
 </style>
 <style>
@@ -270,21 +262,17 @@ document.getElementById("playerSearch").addEventListener("input", function(){
     b.textContent = closed ? '\u203A' : '\u2039';
     b.setAttribute('aria-label', closed ? 'Show menu' : 'Hide menu');
   }
-  paint(document.documentElement.classList.contains('rail-closed'));
+  document.documentElement.classList.remove('rail-closed');
+  paint(false);
   window.toggleHubRail=function(){
     var closed=!document.documentElement.classList.contains('rail-closed');
     paint(closed);
     try { localStorage.setItem(KEY, closed ? 'closed' : 'open'); } catch (e) {}
   };
-  try {
-    var saved=localStorage.getItem(KEY);
-    if(saved!=='open'){
-      setTimeout(function(){
-        if(!document.documentElement.classList.contains('rail-closed'))
-          window.toggleHubRail();
-      }, 5000);
-    }
-  } catch (e) {}
+  setTimeout(function(){
+    if(!document.documentElement.classList.contains('rail-closed'))
+      window.toggleHubRail();
+  }, 5000);
 })();
 </script>
 </body>

@@ -33,14 +33,6 @@ html[data-theme=light] .search{background:#fff;}
 @media print{.rail{display:none;} .etr-board,.builds-board{display:block;}}
 table.sortable th{cursor:pointer;user-select:none;}table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
 </style>
-<script>
-(function(){
-  try {
-    if(localStorage.getItem('desk-hub-rail')==='closed')
-      document.documentElement.classList.add('rail-closed');
-  } catch (e) {}
-})();
-</script>
 <style>
 </style>
 <style>
@@ -199,21 +191,17 @@ document.getElementById('playerSearch').addEventListener('input', function(){
     b.textContent = closed ? '\u203A' : '\u2039';
     b.setAttribute('aria-label', closed ? 'Show menu' : 'Hide menu');
   }
-  paint(document.documentElement.classList.contains('rail-closed'));
+  document.documentElement.classList.remove('rail-closed');
+  paint(false);
   window.toggleHubRail=function(){
     var closed=!document.documentElement.classList.contains('rail-closed');
     paint(closed);
     try { localStorage.setItem(KEY, closed ? 'closed' : 'open'); } catch (e) {}
   };
-  try {
-    var saved=localStorage.getItem(KEY);
-    if(saved!=='open'){
-      setTimeout(function(){
-        if(!document.documentElement.classList.contains('rail-closed'))
-          window.toggleHubRail();
-      }, 5000);
-    }
-  } catch (e) {}
+  setTimeout(function(){
+    if(!document.documentElement.classList.contains('rail-closed'))
+      window.toggleHubRail();
+  }, 5000);
 })();
 </script>
 </body>
