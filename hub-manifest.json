@@ -1,17 +1,17 @@
 {
   "pages": {
-    "cfb-desk.html": "89a15e09f89ed44971624e20bec6e5a6c6eb571b92e22e8fa073368119561a0b",
-    "cfb.html": "5325a4072ae75eb42500287fa247fad77c438bf68529da02c12347f483c91d68",
-    "classic.html": "850c290fa210a353409de9fac243b62d149107c1ebec9c4b52e8ee21f4dd7199",
-    "horses.html": "1b82a25bb9950823fec0a4b7b132268a50807d04ce382cac65f06907158355b9",
-    "hub.html": "d24084b9c9da53a0f99e59feb896b57c493fe48560a720a70a121001e50d8f56",
-    "mlb.html": "5b78eec7d2d9bfc3e213cbc671d587bfa1acdf45cee5e1e10a01a17a91157d74",
-    "nfl-classic.html": "bdd6636aa7eccdf15330d80b6a4aa3e6a1a5b3e609ef9f1954b390f1b9c7314a",
-    "nfl-desk.html": "c322714eaf8635fd52b40c10f407915f9c5222bba1072e192cbbf4754fd71a13",
-    "nfl-showdown.html": "341fcb768d6879a960c3f2d2f42a7c49e885e3512bd426ded77cc8c6f29a0018",
-    "nfl.html": "420931b854c03ab6e888ce6eb46720ffe8f76a22bab02d1733c31d5f65742fbb",
-    "results.html": "93b7a60fc850efc090722e15d7a7b649ea25c01152d987d2f3554da41b899c44",
-    "showdown.html": "cf1cdef7a7356ce01cc76d0c026176eca837f8f39f080d72aa3ef523637131f1"
+    "cfb-desk.html": "cb0d615f9d57114ba6aefcd2262f70bc895d0c25b797fdc78f3e16b2678db4b2",
+    "cfb.html": "72da8b58243d74b1ce42b6f3c2c6c74710db318e9b2136d8160822ccd4a85ea5",
+    "classic.html": "bdefe19818b7d62861cf628ff2577844006c2e657c3291a618f3fd69982f7a2d",
+    "horses.html": "c58c45dfcd0260c29ccc10a7ea6949881303ff3b910be1ae6e238eec9ac7eafd",
+    "hub.html": "c222218bcbcd618dd123a3dcaa14115289306f617b28fb69a6163597493c5bde",
+    "mlb.html": "5f1750685908a34baf02d5b06ef2fcf8f070a57c5900fbbae2bdfcccc53c60ba",
+    "nfl-classic.html": "c4b68ce869ac85ca4470ae980bc5f69deb9d9a3d521b28580438e0642ef78298",
+    "nfl-desk.html": "368a1ad6dcc2e8db67248b8c05dc89022c8fbc4b42742027eb2ccf298b375ee7",
+    "nfl-showdown.html": "81071e9bab6c393b90f08085695eed2cc267eb8bd98f7f6cfac592560d8cd69a",
+    "nfl.html": "caaa59c681da9929996bdd7b209ff4cfd7204e197ea27bf8a030dc063d59debd",
+    "results.html": "fee7ba0c5ba61d2395ed7b02c998a44f244ba7e3af6a61c7df0a3f52df3ea67a",
+    "showdown.html": "f6b656d696064dd31c21ed8c471a9ec9601d4d145e1e9436a0645793a97198e9"
   },
   "schema": 1
 }

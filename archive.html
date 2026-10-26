@@ -2,7 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/><script>
+(function(){
+  try {
+    var _th=localStorage.getItem('desk-hub-theme');
+    if(_th!=='light'&&_th!=='dark')_th=localStorage.getItem('desk-report-theme');
+    if(_th==='light') document.documentElement.classList.add('light');
+  } catch (e) {}
+})();
+</script>
 <title>MLB PROPS — Past slates</title>
 <style>
 :root{--bg:#121820;--fg:#f3efe6;--rail:#1a2430;--rail-line:#2e3c4a;--muted:#c4c0b6;--pill:#243140;--pill-fg:#8ab4ff;--pill-line:#3d4d5c;--pill-hover:#2e3d4d;--accent:#1f6feb;--val:#e8b86d;}
@@ -21,7 +29,7 @@ h1{font-size:1.6rem;margin:0 0 .3rem;}
 ul{margin:.3rem 0 1rem;padding-left:1.2rem;}
 li{margin:.45rem 0;}
 a{color:var(--val);}
-</style>
+.site-header{position:sticky;top:0;z-index:50;background:var(--bg,#161616);border-bottom:1px solid var(--rail-line,#393939);padding:.35rem .75rem;}a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.55rem;overflow:hidden;max-width:64rem;margin:0 auto;}a.gambit-home img{display:block;width:100%;height:auto;}.rail button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg,var(--fg));border:1px solid var(--pill-line,var(--line,#525252));border-radius:.5rem;padding:.62rem .85rem;min-height:2.35rem;text-align:center;}.rail button.theme:hover{background:var(--pill-hover,var(--pill,#393939));}</style>
 <style>
 </style>
 <style>
@@ -35,6 +43,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 </style>
 </head>
 <body>
+<header class="site-header noprint"><a class="gambit-home" href="./hub.html"><img src="./assets/gambit-home.jpg" alt="GAMBIT Home"/></a></header>
 <div class="shell">
 <aside class="rail">
 <div class="rail-head">

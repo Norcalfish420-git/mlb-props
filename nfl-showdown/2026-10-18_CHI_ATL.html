@@ -2,7 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/><script>
+(function(){
+  try {
+    var _th=localStorage.getItem('desk-hub-theme');
+    if(_th!=='light'&&_th!=='dark')_th=localStorage.getItem('desk-report-theme');
+    if(_th==='light') document.documentElement.classList.add('light');
+  } catch (e) {}
+})();
+</script>
 <title>NFL Showdown 2026-10-18 · CHI @ ATL</title>
 <style>
 :root{--bg:#121820;--fg:#f3efe6;--muted:#c4c0b6;--line:#3d4d5c;--accent:#d97706;--rail:#1a2430;}
@@ -32,7 +40,7 @@ html[data-theme=light]{--bg:#f6f3ec;--fg:#1c1915;--muted:#5c564c;--line:#d9d1c3;
 html[data-theme=light] .search{background:#fff;}
 @media print{.rail{display:none;} .etr-board,.card-build{display:block;}}
 table.sortable th{cursor:pointer;user-select:none;}table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
-</style>
+.site-header{position:sticky;top:0;z-index:50;background:var(--bg,#161616);border-bottom:1px solid var(--rail-line,#393939);padding:.35rem .75rem;}a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.55rem;overflow:hidden;max-width:64rem;margin:0 auto;}a.gambit-home img{display:block;width:100%;height:auto;}.rail button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg,var(--fg));border:1px solid var(--pill-line,var(--line,#525252));border-radius:.5rem;padding:.62rem .85rem;min-height:2.35rem;text-align:center;}.rail button.theme:hover{background:var(--pill-hover,var(--pill,#393939));}</style>
 <style>
 </style>
 <style>
@@ -46,6 +54,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 </style>
 </head>
 <body>
+<header class="site-header noprint"><a class="gambit-home" href="../hub.html"><img src="../assets/gambit-home.jpg" alt="GAMBIT Home"/></a></header>
 <input class="tab" type="radio" name="v" id="v-cards" checked/>
 <input class="tab" type="radio" name="v" id="v-etr"/>
 <div class="shell">
