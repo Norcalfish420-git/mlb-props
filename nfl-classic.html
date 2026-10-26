@@ -34,12 +34,12 @@ html.light body.page-nfl,html.light body.page-nflshowdown,html.light body.page-n
 html.light body.page-cfb,html.light body.page-showdown,html.light body.page-classic,html.light body.page-cfbdesk{background-image:linear-gradient(180deg,rgba(246,241,232,.9),rgba(246,241,232,.94)),url("./assets/desk-bg-cfb.jpg");}
 .shell{display:flex;min-height:100vh;}
 .rail{width:18rem;flex:0 0 18rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1.1rem .8rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.4rem;backdrop-filter:blur(14px);}
-.brand{display:block;margin:0;line-height:0;text-decoration:none;}
-.brand img{display:block;width:100%;height:auto;max-height:2rem;object-fit:contain;object-position:left center;}
-a.brand.on{border-radius:.45rem;box-shadow:0 0 0 1px var(--val);}
-.rail-head{display:flex;align-items:center;gap:.5rem;width:100%;margin:0 0 .85rem;flex:0 0 auto;}
-.rail-head .brand{margin:0;flex:1;min-width:0;line-height:1.1;}
-.rail-toggle{flex:0 0 auto;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
+.brand{display:block;margin:0;line-height:0;text-decoration:none;border-radius:999px;overflow:hidden;}
+.brand img{display:block;width:100%;height:auto;}
+a.brand.on{box-shadow:0 0 0 1px var(--val);}
+.rail-head{display:flex;flex-direction:column;align-items:stretch;gap:.35rem;width:100%;margin:0 0 .45rem;flex:0 0 auto;}
+.rail-head .brand{margin:0;width:100%;min-width:0;line-height:0;order:1;}
+.rail-toggle{align-self:flex-end;order:0;flex:0 0 auto;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
 html.rail-closed .rail{width:2.7rem;flex-basis:2.7rem;padding:.7rem .4rem;overflow:hidden;align-items:flex-start;}
 html.rail-closed .rail > *:not(.rail-head){display:none !important;}
 html.rail-closed .rail .rail-head{margin:0;width:100%;}
@@ -171,8 +171,10 @@ button.theme:hover{filter:brightness(1.06);}
   html.rail-closed .rail > *:not(.rail-head){display:none !important;}
   body{background-attachment:scroll;}
   .shell{display:block;}
-  .rail{width:auto;height:auto;position:relative;flex-direction:row;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--rail-line);}
-  .brand{flex:1 1 100%;}
+  .rail{width:100%;max-width:100%;height:auto;position:relative;flex-direction:row;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--rail-line);overflow:hidden;}
+  .rail-head{flex:1 1 100%;width:100%;max-width:100%;min-width:0;}
+  .brand{flex:1 1 100%;max-width:100%;}
+  .brand img{max-width:100%;}
   .pill{flex:1 1 auto;}
   .pill.pill-banner{flex:1 1 100%;}
   .pill.pill-banner:not(.pill-sport){height:2.65rem;}
@@ -184,7 +186,7 @@ button.theme:hover{filter:brightness(1.06);}
 <div class="shell">
 <aside class="rail">
 <div class="rail-head">
-<a class="brand" href="./hub.html"><img src="./assets/gambit-wordmark.png" alt="GAMBIT"/></a>
+<a class="brand" href="./hub.html"><img src="./assets/gambit-home.jpg" alt="GAMBIT Home"/></a>
 <button class="rail-toggle" type="button" id="railToggle" onclick="toggleHubRail()" aria-label="Hide menu">‹</button>
 </div>
 <a class="pill back" href="./nfl-desk.html">Back</a>
