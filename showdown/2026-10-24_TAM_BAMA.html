@@ -102,7 +102,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
   .rail,.noprint{display:none !important;}
   main{max-width:none;padding:0;}
   .panel,.appendix{display:block !important;page-break-after:always;}
-  .game-report,.card-build,.etr-board,.player-book,.preview-board,.game-report-link{display:block !important;}
+  .game-script,.game-report,.card-build,.etr-board,.player-book,.preview-board,.game-report-link{display:block !important;}
   .week-panel,.week-panel[hidden]{display:block !important;}
   .week-pills,.week-pill,.team-pills,.team-pill{display:none !important;}
   .game-box[hidden]{display:block !important;}
@@ -119,30 +119,32 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
   .line-blast b{color:#000;}
 }
 @page{margin:.5in;}
+#v-script:checked ~ .shell .rail label[for=v-script]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-report:checked ~ .shell .rail label[for=v-report]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-cards:checked ~ .shell .rail label[for=v-cards]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-etr:checked ~ .shell .rail label[for=v-etr]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-book:checked ~ .shell .rail label[for=v-book]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-preview:checked ~ .shell .rail label[for=v-preview]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #v-game:checked ~ .shell .rail label[for=v-game]{background:var(--accent);color:#fff;border-color:var(--accent);}
-.card-build,.player-book,.etr-board,.preview-board,.game-report-link{display:none;}
-#v-report:checked ~ .shell main .card-build{display:none;}
-#v-cards:checked ~ .shell main .game-report,#v-cards:checked ~ .shell main .etr-board,#v-cards:checked ~ .shell main .player-book,#v-cards:checked ~ .shell main .preview-board,#v-cards:checked ~ .shell main .game-report-link{display:none;}
+.game-script,.game-report,.card-build,.player-book,.etr-board,.preview-board,.game-report-link{display:none;}
+#v-script:checked ~ .shell main .game-script{display:block;}#v-report:checked ~ .shell main .game-script{display:none;}#v-report:checked ~ .shell main .game-report{display:block;}#v-report:checked ~ .shell main .card-build{display:none;}
+#v-cards:checked ~ .shell main .game-script,#v-cards:checked ~ .shell main .game-report,#v-cards:checked ~ .shell main .etr-board,#v-cards:checked ~ .shell main .player-book,#v-cards:checked ~ .shell main .preview-board,#v-cards:checked ~ .shell main .game-report-link{display:none;}
 #v-cards:checked ~ .shell main .card-build{display:block;}
 #v-book:checked ~ .shell main,#v-etr:checked ~ .shell main{max-width:none;}
-#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .card-build,#v-book:checked ~ .shell main .etr-board,#v-book:checked ~ .shell main .preview-board,#v-book:checked ~ .shell main .game-report-link{display:none;}
+#v-book:checked ~ .shell main .game-script,#v-book:checked ~ .shell main .game-report,#v-book:checked ~ .shell main .card-build,#v-book:checked ~ .shell main .etr-board,#v-book:checked ~ .shell main .preview-board,#v-book:checked ~ .shell main .game-report-link{display:none;}
 #v-book:checked ~ .shell main .player-book{display:block;}
-#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .card-build,#v-etr:checked ~ .shell main .player-book,#v-etr:checked ~ .shell main .preview-board,#v-etr:checked ~ .shell main .game-report-link{display:none;}
+#v-etr:checked ~ .shell main .game-script,#v-etr:checked ~ .shell main .game-report,#v-etr:checked ~ .shell main .card-build,#v-etr:checked ~ .shell main .player-book,#v-etr:checked ~ .shell main .preview-board,#v-etr:checked ~ .shell main .game-report-link{display:none;}
 #v-etr:checked ~ .shell main .etr-board{display:block;}
 #v-preview:checked ~ .shell main{max-width:none;}
-#v-preview:checked ~ .shell main .game-report,#v-preview:checked ~ .shell main .card-build,#v-preview:checked ~ .shell main .etr-board,#v-preview:checked ~ .shell main .player-book,#v-preview:checked ~ .shell main .game-report-link{display:none;}
+#v-preview:checked ~ .shell main .game-script,#v-preview:checked ~ .shell main .game-report,#v-preview:checked ~ .shell main .card-build,#v-preview:checked ~ .shell main .etr-board,#v-preview:checked ~ .shell main .player-book,#v-preview:checked ~ .shell main .game-report-link{display:none;}
 #v-preview:checked ~ .shell main .preview-board{display:block;}
 #v-game:checked ~ .shell main{max-width:none;}
-#v-game:checked ~ .shell main .game-report,#v-game:checked ~ .shell main .card-build,#v-game:checked ~ .shell main .etr-board,#v-game:checked ~ .shell main .player-book,#v-game:checked ~ .shell main .preview-board{display:none;}
+#v-game:checked ~ .shell main .game-script,#v-game:checked ~ .shell main .game-report,#v-game:checked ~ .shell main .card-build,#v-game:checked ~ .shell main .etr-board,#v-game:checked ~ .shell main .player-book,#v-game:checked ~ .shell main .preview-board{display:none;}
 #v-game:checked ~ .shell main .game-report-link{display:block;}
 </style>
 </head><body>
-<input class="tab" type="radio" name="v" id="v-report" checked/>
+<input class="tab" type="radio" name="v" id="v-script" checked/>
+<input class="tab" type="radio" name="v" id="v-report"/>
 <input class="tab" type="radio" name="v" id="v-cards"/>
 <input class="tab" type="radio" name="v" id="v-game"/>
 <input class="tab" type="radio" name="v" id="v-etr"/>
@@ -152,6 +154,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <p class="brand">CFB SHOWDOWN<br/>2026-10-24<br/>Texas A&amp;M @ Alabama</p>
 <a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
 <div class="view-row">
+<label class="pill" for="v-script">Game Script</label>
 <label class="pill" for="v-report">Depth chart</label>
 <label class="pill" for="v-cards">Card Build</label>
 <label class="pill" for="v-etr">ETR Value</label>
@@ -165,7 +168,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <main>
 <h1>CFB Showdown — 2026-10-24 · Texas A&amp;M @ Alabama</h1>
 <article class="panel">
-<div class="game-report">
+<div class="game-script">
 <h2>Texas A&amp;M @ Alabama</h2>
 <p class="line-blast">Alabama <b>-13.5</b>. Total <b>49.5</b>.</p>
 <h3>Game Script</h3>
@@ -183,6 +186,8 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <li>Becker: Alabama 37, Texas A&amp;M 27</li>
 </ul>
 <p>Four of the five have Alabama winning. Only Andress (31-17) and Raley (35-21) have the Tide covering 13.5. Gay, Becker, and Ruiz all finish inside the number, and Ruiz is the only upset. The card is a home win that does not have to be a blowout, and it still depends on Russell looking like the quarterback he was in September.</p>
+</div>
+<div class="game-report">
 <h3>DEPTH CHART</h3>
 <h4 class="team-break">Alabama</h4>
 <table class="sortable">
@@ -635,7 +640,8 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
     if(hint) hint.textContent = q ? (n ? n+' name'+(n===1?'':'s') : 'No names') : '';
     document.querySelectorAll('label.pill[for]').forEach(function(lab){
       var id=lab.getAttribute('for');
-      var sel = id==='v-report' ? '.game-report'
+      var sel = id==='v-script' ? '.game-script'
+              : id==='v-report' ? '.game-report'
               : id==='v-cards' ? '.card-build'
               : id==='v-etr' ? '.etr-board'
               : id==='v-preview' ? '.preview-board'
