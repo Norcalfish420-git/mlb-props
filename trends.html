@@ -149,11 +149,26 @@ html.light td.pct-lo{background:rgba(218,30,40,.18);color:#5c0a0f;}
 
 a{color:var(--val);}
 </style>
+<script>
+(function(){
+  try {
+    if(localStorage.getItem('desk-hub-rail')==='closed')
+      document.documentElement.classList.add('rail-closed');
+  } catch (e) {}
+})();
+</script>
+<style>
+.rail-toggle{order:0;align-self:flex-end;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
+html.rail-closed .rail{width:2.7rem;flex-basis:2.7rem;padding:.7rem .4rem;overflow:hidden;}
+html.rail-closed .rail > *:not(.rail-toggle){display:none !important;}
+html.rail-closed .rail .rail-toggle{display:block;align-self:center;}
+</style>
 </head>
 <body data-hits="201" data-misses="179" data-nights="34" data-last="2026-09-25">
 <input class="tab" type="radio" name="g" id="g0" checked/><input class="tab" type="radio" name="g" id="g1"/><input class="tab" type="radio" name="g" id="g2"/><input class="tab" type="radio" name="g" id="g3"/>
 <div class="shell">
 <aside class="rail">
+<button class="rail-toggle" type="button" id="railToggle" onclick="toggleHubRail()" aria-label="Hide menu">‹</button>
 <p class="brand">MLB PROPS<br/>RESULTS</p>
 <a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
 <label class="pill" for="g0">Season</label><label class="pill" for="g1">By prop</label><label class="pill" for="g2">Nights</label><label class="pill" for="g3">Last night</label>
@@ -374,6 +389,24 @@ a{color:var(--val);}
     }
     if(idx>=0) sortTable(table, idx, 'desc');
   });
+})();
+</script>
+<script>
+(function(){
+  var KEY='desk-hub-rail';
+  function paint(closed){
+    document.documentElement.classList.toggle('rail-closed', closed);
+    var b=document.getElementById('railToggle');
+    if(!b) return;
+    b.textContent = closed ? '\u203A' : '\u2039';
+    b.setAttribute('aria-label', closed ? 'Show menu' : 'Hide menu');
+  }
+  paint(document.documentElement.classList.contains('rail-closed'));
+  window.toggleHubRail=function(){
+    var closed=!document.documentElement.classList.contains('rail-closed');
+    paint(closed);
+    try { localStorage.setItem(KEY, closed ? 'closed' : 'open'); } catch (e) {}
+  };
 })();
 </script>
 </body>

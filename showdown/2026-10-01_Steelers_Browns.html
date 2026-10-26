@@ -55,10 +55,25 @@ li.name-hit,tr.name-hit{outline:2px solid var(--accent);}
   th{background:#eee;color:#111;}
 }
 </style>
+<script>
+(function(){
+  try {
+    if(localStorage.getItem('desk-hub-rail')==='closed')
+      document.documentElement.classList.add('rail-closed');
+  } catch (e) {}
+})();
+</script>
+<style>
+.rail-toggle{order:0;align-self:flex-end;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
+html.rail-closed .rail{width:2.7rem;flex-basis:2.7rem;padding:.7rem .4rem;overflow:hidden;}
+html.rail-closed .rail > *:not(.rail-toggle){display:none !important;}
+html.rail-closed .rail .rail-toggle{display:block;align-self:center;}
+</style>
 </head>
 <body>
 <div class="shell">
 <aside class="rail">
+<button class="rail-toggle" type="button" id="railToggle" onclick="toggleHubRail()" aria-label="Hide menu">‹</button>
 <p class="brand">NFL SHOWDOWN<br/>Oct 1, 2026<br/>Steelers at Browns</p>
 <a class="pill home" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
 <a class="pill" href="https://norcalfish420-git.github.io/mlb-props/showdown.html">DK Showdown</a>
@@ -236,6 +251,24 @@ document.getElementById("playerSearch").addEventListener("input", function(){
   });
   if(first)first.scrollIntoView({block:"center", behavior:"smooth"});
 });
+</script>
+<script>
+(function(){
+  var KEY='desk-hub-rail';
+  function paint(closed){
+    document.documentElement.classList.toggle('rail-closed', closed);
+    var b=document.getElementById('railToggle');
+    if(!b) return;
+    b.textContent = closed ? '\u203A' : '\u2039';
+    b.setAttribute('aria-label', closed ? 'Show menu' : 'Hide menu');
+  }
+  paint(document.documentElement.classList.contains('rail-closed'));
+  window.toggleHubRail=function(){
+    var closed=!document.documentElement.classList.contains('rail-closed');
+    paint(closed);
+    try { localStorage.setItem(KEY, closed ? 'closed' : 'open'); } catch (e) {}
+  };
+})();
 </script>
 </body>
 </html>
