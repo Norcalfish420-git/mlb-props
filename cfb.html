@@ -36,9 +36,6 @@ html.light body.page-nfl,html.light body.page-nflshowdown,html.light body.page-n
 html.light body.page-cfb,html.light body.page-showdown,html.light body.page-classic,html.light body.page-cfbdesk{background-image:linear-gradient(180deg,rgba(246,241,232,.9),rgba(246,241,232,.94)),url("./assets/desk-bg-cfb.jpg");}
 .shell{display:flex;min-height:100vh;}
 .rail{width:14rem;flex:0 0 14rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1.1rem .8rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.4rem;backdrop-filter:blur(14px);}
-.rail .brand{order:0;}
-.rail a.pill.home{order:1;}
-.rail > *:not(.brand):not(a.pill.home):not(button.theme){order:2;}
 .brand{font-size:1.15rem;letter-spacing:.28em;font-weight:700;text-transform:uppercase;color:#e8b86d;margin:.15rem 0 .85rem;line-height:1;}
 .rail-head{display:flex;align-items:center;gap:.5rem;width:100%;margin:0 0 .85rem;flex:0 0 auto;}
 .rail-head .brand{margin:0;flex:1;min-width:0;line-height:1.1;}
@@ -134,9 +131,8 @@ html.light .page-cfb .hero,html.light .page-classic .hero{background:linear-grad
 html.light .page-horses .hero{background:linear-gradient(135deg,rgba(255,253,248,.9),rgba(21,128,61,.14));}
 html.light .page-showdown .hero{background:linear-gradient(135deg,rgba(255,253,248,.9),rgba(190,18,60,.12));}
 html.light .day h3 a.day-link:hover,html.light .day h3 a.day-link:focus,html.light .games a:hover,html.light .games a:focus{color:var(--fg);}
-button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.82rem;font-weight:700;cursor:pointer;background:transparent;color:var(--fg);border:1px solid var(--pill-line);border-radius:999px;padding:.5rem .75rem;text-align:left;}
+button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:1.1rem;font-weight:700;cursor:pointer;background:transparent;color:var(--fg);border:1px solid var(--pill-line);border-radius:999px;padding:.5rem .75rem;text-align:center;line-height:1.2;}
 button.theme:hover{background:var(--pill);}
-.rail button.theme{order:1;}
 @media (max-width:720px){
   body{background-attachment:scroll;}
   .shell{display:block;}
@@ -151,8 +147,8 @@ button.theme:hover{background:var(--pill);}
 <div class="shell">
 <aside class="rail">
 <div class="rail-head">
-<button class="rail-toggle" type="button" id="railToggle" onclick="toggleHubRail()" aria-label="Hide menu">‹</button>
 <p class="brand">GAMBIT</p>
+<button class="rail-toggle" type="button" id="railToggle" onclick="toggleHubRail()" aria-label="Hide menu">‹</button>
 </div>
 <a class="pill back" href="./cfb-desk.html">Back</a>
 <a class="pill home" href="./hub.html">Home</a>
@@ -163,7 +159,7 @@ button.theme:hover{background:var(--pill);}
 <form class="search-form" id="playerSearchForm" action="#" role="search">
 <input id="hubSearch" type="search" placeholder="Search a game or date" autocomplete="off"/>
 </form>
-<button class="theme" type="button" id="themeBtn" onclick="toggleHubTheme()">Light mode</button>
+<button class="theme" type="button" id="themeBtn" onclick="toggleHubTheme()" aria-label="Light">☀️</button>
 </aside>
 <main id="top">
 <div class="hero">
@@ -176,33 +172,55 @@ button.theme:hover{background:var(--pill);}
 <p class="lede">Higher / Lower Saturday pack. 11 reports.</p>
 </div>
 <div class="day" data-date="2026-10-24">
-<h3><a class="day-link" href="./cfb/2026-10-24.html" data-search="CFB Player Props October 24, 2026">October 24, 2026</a></h3>
+<h3>October 24, 2026</h3>
+<ul class="games">
+<li><a href="./cfb/2026-10-24.html" data-search="CFB Player Props October 24, 2026  CFB slate">CFB slate</a></li>
+</ul>
 </div>
 <div class="day" data-date="2026-10-17">
-<h3><a class="day-link" href="./cfb/2026-10-17.html" data-search="CFB Player Props October 17, 2026">October 17, 2026</a></h3>
+<h3>October 17, 2026</h3>
+<ul class="games">
+<li><a href="./cfb/2026-10-17.html" data-search="CFB Player Props October 17, 2026  CFB slate">CFB slate</a></li>
+</ul>
 </div>
 <div class="day" data-date="2026-10-15">
-<h3><a class="day-link" href="./cfb/2026-10-15.html" data-search="CFB Player Props October 15, 2026">October 15, 2026</a></h3>
+<h3>October 15, 2026</h3>
 <ul class="games">
+<li><a href="./cfb/2026-10-15.html" data-search="CFB Player Props October 15, 2026  CFB slate">CFB slate</a></li>
 <li><a href="./cfb/2026-10-15_CSU_TXST.html" data-search="CFB Player Props October 15, 2026  CSU @ TXST">CSU @ TXST</a></li>
 <li><a href="./cfb/2026-10-15_ECU_UAB.html" data-search="CFB Player Props October 15, 2026  ECU @ UAB">ECU @ UAB</a></li>
 <li><a href="./cfb/2026-10-15_GASO_ODU.html" data-search="CFB Player Props October 15, 2026  GASO @ ODU">GASO @ ODU</a></li>
 </ul>
 </div>
 <div class="day" data-date="2026-10-01">
-<h3><a class="day-link" href="./cfb/2026-10-01.html" data-search="CFB Player Props October 1, 2026">October 1, 2026</a></h3>
+<h3>October 1, 2026</h3>
+<ul class="games">
+<li><a href="./cfb/2026-10-01.html" data-search="CFB Player Props October 1, 2026  CFB slate">CFB slate</a></li>
+</ul>
 </div>
 <div class="day" data-date="2026-09-26">
-<h3><a class="day-link" href="./cfb/2026-09-26.html" data-search="CFB Player Props September 26, 2026">September 26, 2026</a></h3>
+<h3>September 26, 2026</h3>
+<ul class="games">
+<li><a href="./cfb/2026-09-26.html" data-search="CFB Player Props September 26, 2026  CFB slate">CFB slate</a></li>
+</ul>
 </div>
 <div class="day" data-date="2026-09-25">
-<h3><a class="day-link" href="./cfb/2026-09-25.html" data-search="CFB Player Props September 25, 2026">September 25, 2026</a></h3>
+<h3>September 25, 2026</h3>
+<ul class="games">
+<li><a href="./cfb/2026-09-25.html" data-search="CFB Player Props September 25, 2026  CFB slate">CFB slate</a></li>
+</ul>
 </div>
 <div class="day" data-date="2026-09-19">
-<h3><a class="day-link" href="./cfb/2026-09-19.html" data-search="CFB Player Props September 19, 2026">September 19, 2026</a></h3>
+<h3>September 19, 2026</h3>
+<ul class="games">
+<li><a href="./cfb/2026-09-19.html" data-search="CFB Player Props September 19, 2026  CFB slate">CFB slate</a></li>
+</ul>
 </div>
 <div class="day" data-date="2026-09-12">
-<h3><a class="day-link" href="./cfb/2026-09-12.html" data-search="CFB Player Props September 12, 2026">September 12, 2026</a></h3>
+<h3>September 12, 2026</h3>
+<ul class="games">
+<li><a href="./cfb/2026-09-12.html" data-search="CFB Player Props September 12, 2026  CFB slate">CFB slate</a></li>
+</ul>
 </div>
 </section>
 </main>
@@ -213,7 +231,7 @@ button.theme:hover{background:var(--pill);}
   function apply(mode){
     document.documentElement.classList.toggle('light', mode==='light');
     var b=document.getElementById('themeBtn');
-    if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
+    if(b){ b.textContent = mode==='light' ? '\uD83C\uDF19' : '\u2600\uFE0F'; b.setAttribute('aria-label', mode==='light' ? 'Dark' : 'Light'); }
     try { localStorage.setItem(KEY, mode); } catch (e) {}
   }
   var saved=null;
