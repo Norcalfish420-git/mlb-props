@@ -129,7 +129,17 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 #v-game:checked ~ .shell main{max-width:none;}
 #v-game:checked ~ .shell main .game-report,#v-game:checked ~ .shell main .etr-board,#v-game:checked ~ .shell main .player-book,#v-game:checked ~ .shell main .preview-board{display:none;}
 #v-game:checked ~ .shell main .game-report-link{display:block;}
+.rail-head{display:flex;align-items:center;gap:.5rem;width:100%;margin:0 0 .85rem;flex:0 0 auto;}
+.rail-head .brand{margin:0;flex:1;min-width:0;line-height:1.1;}
+.rail-toggle{flex:0 0 auto;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
+html.rail-closed .rail{width:2.7rem;flex-basis:2.7rem;padding:.7rem .4rem;overflow:hidden;align-items:flex-start;}
+html.rail-closed .rail > *:not(.rail-head){display:none !important;}
+html.rail-closed .rail .rail-head{margin:0;width:100%;}
+html.rail-closed .rail .rail-head .brand{display:none;}
 </style>
+<script>
+(function(){try{if(localStorage.getItem('desk-hub-rail')==='closed')document.documentElement.classList.add('rail-closed');}catch(e){}})();
+</script>
 </head><body>
 <input class="tab" type="radio" name="v" id="v-report" checked/>
 <input class="tab" type="radio" name="v" id="v-game"/>
@@ -137,8 +147,12 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 <input class="tab" type="radio" name="v" id="v-book"/>
 <div class="shell">
 <aside class="rail noprint">
+<div class="rail-head">
+<button class="rail-toggle" type="button" id="railToggle" onclick="toggleHubRail()" aria-label="Hide menu">‹</button>
 <p class="brand">CFB SHOWDOWN<br/>2026-10-03<br/>BYU @ TCU</p>
-<a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
+</div>
+<a class="pill back noprint" href="../showdown.html">Back</a>
+<a class="pill home noprint" href="../hub.html">Home</a>
 <div class="view-row">
 <label class="pill" for="v-report">Depth chart</label>
 <label class="pill" for="v-game">Game report</label>

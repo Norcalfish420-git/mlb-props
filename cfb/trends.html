@@ -116,19 +116,27 @@ a{color:var(--val);}
 })();
 </script>
 <style>
-.rail-toggle{order:0;align-self:flex-end;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
-html.rail-closed .rail{width:2.7rem;flex-basis:2.7rem;padding:.7rem .4rem;overflow:hidden;}
-html.rail-closed .rail > *:not(.rail-toggle){display:none !important;}
-html.rail-closed .rail .rail-toggle{display:block;align-self:center;}
+</style>
+<style>
+.rail-head{display:flex;align-items:center;gap:.5rem;width:100%;margin:0 0 .85rem;flex:0 0 auto;}
+.rail-head .brand{margin:0;flex:1;min-width:0;line-height:1.1;}
+.rail-toggle{flex:0 0 auto;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
+html.rail-closed .rail{width:2.7rem;flex-basis:2.7rem;padding:.7rem .4rem;overflow:hidden;align-items:flex-start;}
+html.rail-closed .rail > *:not(.rail-head){display:none !important;}
+html.rail-closed .rail .rail-head{margin:0;width:100%;}
+html.rail-closed .rail .rail-head .brand{display:none;}
 </style>
 </head>
 <body data-hits="39" data-misses="36" data-nights="5" data-last="2026-10-24">
 <input class="tab" type="radio" name="g" id="g0" checked/><input class="tab" type="radio" name="g" id="g1"/><input class="tab" type="radio" name="g" id="g2"/><input class="tab" type="radio" name="g" id="g3"/>
 <div class="shell">
 <aside class="rail">
+<div class="rail-head">
 <button class="rail-toggle" type="button" id="railToggle" onclick="toggleHubRail()" aria-label="Hide menu">‹</button>
 <p class="brand">CFB PROPS<br/>RESULTS</p>
-<a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
+<a class="pill back noprint" href="../cfb.html">Back</a>
+<a class="pill back noprint" href="../cfb.html">Back</a>
+<a class="pill home noprint" href="../hub.html">Home</a>
 <label class="pill" for="g0">Season</label><label class="pill" for="g1">By prop</label><label class="pill" for="g2">Nights</label><label class="pill" for="g3">Last night</label>
 <form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
 <button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>

@@ -116,7 +116,17 @@ li{margin:.35rem 0;}
 #g2:checked ~ .shell main .p2{display:block;}
 #g3:checked ~ .shell .rail label[for=g3]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #g3:checked ~ .shell main .p3{display:block;}
+.rail-head{display:flex;align-items:center;gap:.5rem;width:100%;margin:0 0 .85rem;flex:0 0 auto;}
+.rail-head .brand{margin:0;flex:1;min-width:0;line-height:1.1;}
+.rail-toggle{flex:0 0 auto;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
+html.rail-closed .rail{width:2.7rem;flex-basis:2.7rem;padding:.7rem .4rem;overflow:hidden;align-items:flex-start;}
+html.rail-closed .rail > *:not(.rail-head){display:none !important;}
+html.rail-closed .rail .rail-head{margin:0;width:100%;}
+html.rail-closed .rail .rail-head .brand{display:none;}
 </style>
+<script>
+(function(){try{if(localStorage.getItem('desk-hub-rail')==='closed')document.documentElement.classList.add('rail-closed');}catch(e){}})();
+</script>
 </head><body>
 <input class="tab" type="radio" name="g" id="g0" checked/>
 <input class="tab" type="radio" name="g" id="g1"/>
@@ -124,7 +134,10 @@ li{margin:.35rem 0;}
 <input class="tab" type="radio" name="g" id="g3"/>
 <div class="shell">
 <aside class="rail noprint">
+<div class="rail-head">
+<button class="rail-toggle" type="button" id="railToggle" onclick="toggleHubRail()" aria-label="Hide menu">‹</button>
 <p class="brand">MLB PROPS<br/>2026-09-17</p>
+</div>
 <a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
 <label class="pill" for="g0">Yesterday</label>
 <label class="pill" for="g1">Over</label>

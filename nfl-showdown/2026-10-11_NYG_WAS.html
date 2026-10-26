@@ -42,10 +42,15 @@ table.sortable th{cursor:pointer;user-select:none;}table.sortable th[data-dir=as
 })();
 </script>
 <style>
-.rail-toggle{order:0;align-self:flex-end;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
-html.rail-closed .rail{width:2.7rem;flex-basis:2.7rem;padding:.7rem .4rem;overflow:hidden;}
-html.rail-closed .rail > *:not(.rail-toggle){display:none !important;}
-html.rail-closed .rail .rail-toggle{display:block;align-self:center;}
+</style>
+<style>
+.rail-head{display:flex;align-items:center;gap:.5rem;width:100%;margin:0 0 .85rem;flex:0 0 auto;}
+.rail-head .brand{margin:0;flex:1;min-width:0;line-height:1.1;}
+.rail-toggle{flex:0 0 auto;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
+html.rail-closed .rail{width:2.7rem;flex-basis:2.7rem;padding:.7rem .4rem;overflow:hidden;align-items:flex-start;}
+html.rail-closed .rail > *:not(.rail-head){display:none !important;}
+html.rail-closed .rail .rail-head{margin:0;width:100%;}
+html.rail-closed .rail .rail-head .brand{display:none;}
 </style>
 </head>
 <body>
@@ -53,9 +58,12 @@ html.rail-closed .rail .rail-toggle{display:block;align-self:center;}
 <input class="tab" type="radio" name="v" id="v-builds"/>
 <div class="shell">
 <aside class="rail">
+<div class="rail-head">
 <button class="rail-toggle" type="button" id="railToggle" onclick="toggleHubRail()" aria-label="Hide menu">‹</button>
 <p class="brand">NFL SHOWDOWN<br/>October 11, 2026<br/>NYG @ WAS</p>
-<a class="pill home" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
+<a class="pill back noprint" href="../nfl-showdown.html">Back</a>
+<a class="pill back noprint" href="../nfl-showdown.html">Back</a>
+<a class="pill home noprint" href="../hub.html">Home</a>
 <label class="pill" for="v-etr">ETR Value</label>
 <label class="pill" for="v-builds">Builds</label>
 <form id="playerSearchForm" action="#" role="search">

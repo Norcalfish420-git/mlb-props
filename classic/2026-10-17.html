@@ -28,12 +28,23 @@ table{width:100%;border-collapse:collapse;margin:.4rem 0 .6rem;}
 th,td{text-align:left;padding:.35rem .4rem;border-bottom:1px solid var(--line);font-size:.92rem;}
 table.sortable th{cursor:pointer;user-select:none;}table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
 @media print{.rail,.tabs,.noprint{display:none !important;} .panel-cards,.panel-results,.panel-pool{display:block !important;}}
+.rail-head{display:flex;align-items:center;gap:.5rem;width:100%;margin:0 0 .85rem;flex:0 0 auto;}
+.rail-head .brand{margin:0;flex:1;min-width:0;line-height:1.1;}
+.rail-toggle{flex:0 0 auto;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
+html.rail-closed .rail{width:2.7rem;flex-basis:2.7rem;padding:.7rem .4rem;overflow:hidden;align-items:flex-start;}
+html.rail-closed .rail > *:not(.rail-head){display:none !important;}
+html.rail-closed .rail .rail-head{margin:0;width:100%;}
+html.rail-closed .rail .rail-head .brand{display:none;}
 </style>
+<script>
+(function(){try{if(localStorage.getItem('desk-hub-rail')==='closed')document.documentElement.classList.add('rail-closed');}catch(e){}})();
+</script>
 </head>
 <body>
 <div class="shell">
 <aside class="rail noprint">
-<a class="pill home" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
+<a class="pill back noprint" href="../classic.html">Back</a>
+<a class="pill home noprint" href="../hub.html">Home</a>
 <label class="pill" for="t0">Cards</label>
 <label class="pill" for="t1">Results</label>
 <label class="pill" for="t2">Pool</label>
@@ -188,6 +199,24 @@ table.sortable th{cursor:pointer;user-select:none;}table.sortable th[data-dir=as
     }
     if(idx>=0) sortTable(table, idx, 'desc');
   });
+})();
+</script>
+<script>
+(function(){
+  var KEY='desk-hub-rail';
+  function paint(closed){
+    document.documentElement.classList.toggle('rail-closed', closed);
+    var b=document.getElementById('railToggle');
+    if(!b) return;
+    b.textContent = closed ? '\u203A' : '\u2039';
+    b.setAttribute('aria-label', closed ? 'Show menu' : 'Hide menu');
+  }
+  paint(document.documentElement.classList.contains('rail-closed'));
+  window.toggleHubRail=function(){
+    var closed=!document.documentElement.classList.contains('rail-closed');
+    paint(closed);
+    try { localStorage.setItem(KEY, closed ? 'closed' : 'open'); } catch (e) {}
+  };
 })();
 </script>
 </body>
