@@ -6,7 +6,7 @@
 <script>
 (function(){
   try {
-    if(localStorage.getItem('desk-hub-theme')==='light')
+    var _th=localStorage.getItem('desk-hub-theme');if(_th!=='light'&&_th!=='dark')_th=localStorage.getItem('desk-report-theme');if(_th==='light')
       document.documentElement.classList.add('light');
   } catch (e) {}
 })();
@@ -23,6 +23,16 @@ html.light{color-scheme:light;--bg:#f6f1e8;--fg:#1a1c20;--rail:#ebe4d6ee;--rail-
 .page-showdown{--desk:#be123c;--accent:#be123c;}
 .page-classic{--desk:#e11d48;--accent:#e11d48;}
 .page-horses{--desk:#15803d;--accent:#15803d;}.page-nfldesk,.page-nflclassic{--desk:#d97706;--accent:#d97706;}.page-cfbdesk{--desk:#e11d48;--accent:#e11d48;}
+.site-header{position:sticky;top:0;z-index:40;background:var(--bg);border-bottom:1px solid var(--rail-line);padding:.4rem 1rem .45rem;backdrop-filter:blur(14px);}
+a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.65rem;overflow:hidden;max-width:64rem;margin:0 auto;}
+a.gambit-home img{display:block;width:100%;height:auto;}
+a.gambit-home.on{box-shadow:0 0 0 1px var(--val);}
+.hub-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:.55rem;max-width:64rem;margin:0 auto;padding:.25rem 1rem .7rem;}
+.hub-toolbar .search-form{margin:0;flex:1 1 11rem;max-width:18rem;}
+button.theme-standalone{width:3.1rem;flex:0 0 3.1rem;}
+.tool.tool-results-compact{display:block;width:min(52%,17.5rem);padding:0;overflow:hidden;position:relative;border:0;background:transparent;box-shadow:0 4px 16px rgba(0,0,0,.18);border-radius:.55rem;}
+.tool.tool-results-compact img{display:block;width:100%;height:auto;}
+.tool.tool-results-compact .pill-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,"Iowan Old Style",serif;}
 body{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("./assets/desk-bg-hub.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
 body.page-mlb{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("./assets/desk-bg-mlb.jpg");}
@@ -32,7 +42,7 @@ html.light body{background-image:linear-gradient(180deg,rgba(246,241,232,.9),rgb
 html.light body.page-mlb{background-image:linear-gradient(180deg,rgba(246,241,232,.9),rgba(246,241,232,.94)),url("./assets/desk-bg-mlb.jpg");}
 html.light body.page-nfl,html.light body.page-nflshowdown,html.light body.page-nfldesk,html.light body.page-nflclassic{background-image:linear-gradient(180deg,rgba(246,241,232,.9),rgba(246,241,232,.94)),url("./assets/desk-bg-nfl.jpg");}
 html.light body.page-cfb,html.light body.page-showdown,html.light body.page-classic,html.light body.page-cfbdesk{background-image:linear-gradient(180deg,rgba(246,241,232,.9),rgba(246,241,232,.94)),url("./assets/desk-bg-cfb.jpg");}
-.shell{display:flex;min-height:100vh;}
+.shell{display:block;min-height:100vh;}
 .rail{width:18rem;flex:0 0 18rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1.1rem .8rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.4rem;backdrop-filter:blur(14px);}
 .brand{display:block;margin:0;line-height:0;text-decoration:none;border-radius:999px;overflow:hidden;}
 .brand img{display:block;width:100%;height:auto;}
@@ -44,7 +54,7 @@ html.rail-closed .rail{width:2.7rem;flex-basis:2.7rem;padding:.7rem .4rem;overfl
 html.rail-closed .rail > *:not(.rail-head){display:none !important;}
 html.rail-closed .rail .rail-head{margin:0;width:100%;}
 html.rail-closed .rail .rail-head .brand{display:none;}
-body.page-hub main{max-width:64rem;padding-top:1.1rem;}
+body.page-hub main{max-width:64rem;padding-top:.85rem;}
 .hero-splash{position:relative;padding:0;overflow:hidden;border:1px solid rgba(232,184,109,.55);background:#07090d;box-shadow:0 0 0 1px rgba(56,120,220,.28),0 24px 60px rgba(0,0,0,.48);}
 .hero-splash img{display:block;width:100%;height:auto;}
 .hero-splash h1{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
@@ -90,7 +100,7 @@ html.light .tool.tool-sport-banner .go{text-shadow:0 1px 6px rgba(0,0,0,.45),0 0
 .pill.lane-horses.on{background:#15803d;color:#fff;border-color:#15803d;}
 .search-form{margin:.35rem 0 .2rem;}
 .search-form input{width:100%;box-sizing:border-box;border-radius:999px;border:1px solid var(--pill-line);background:#121820cc;color:var(--fg);padding:.45rem .7rem;font:inherit;font-size:.8rem;}
-main{flex:1;padding:1.6rem 1.8rem 3rem;max-width:48rem;}
+main{padding:1.6rem 1.8rem 3rem;max-width:48rem;margin:0 auto;}
 .hero{margin:0 0 1.5rem;padding:1.15rem 1.2rem 1.05rem;border:1px solid rgba(232,184,109,.22);border-radius:.9rem;background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(168,93,34,.18));box-shadow:0 12px 40px rgba(0,0,0,.28);}
 .page-mlb .hero{border-color:rgba(31,111,235,.35);background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(31,111,235,.22));}
 .page-nfl .hero,.page-nflshowdown .hero{border-color:rgba(217,119,6,.35);background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(217,119,6,.22));}
@@ -183,21 +193,11 @@ button.theme:hover{filter:brightness(1.06);}
 </style>
 </head>
 <body class="page-cfbdesk">
+<header class="site-header">
+<a class="gambit-home" href="./hub.html"><img src="./assets/gambit-home.jpg" alt="GAMBIT Home"/></a>
+</header>
+
 <div class="shell">
-<aside class="rail">
-<div class="rail-head">
-<a class="brand" href="./hub.html"><img src="./assets/gambit-home.jpg" alt="GAMBIT Home"/></a>
-<button class="rail-toggle" type="button" id="railToggle" onclick="toggleHubRail()" aria-label="Hide menu">‹</button>
-</div>
-<a class="pill pill-banner lane-cfb" href="./cfb.html"><img src="./assets/cfb-player-props.png" alt=""/><span class="pill-label">CFB Player Props</span></a>
-<a class="pill pill-banner lane-showdown" href="./showdown.html"><img src="./assets/cfb-dk-showdowns.png" alt=""/><span class="pill-label">CFB DK Showdowns</span></a>
-<a class="pill pill-banner lane-classic" href="./classic.html"><img src="./assets/cfb-dk-classic-lineups.png" alt=""/><span class="pill-label">CFB DK Classic Lineups</span></a>
-<a class="pill pill-banner pill-sport pill-results" href="./results.html"><img src="./assets/results-pill.jpg" alt=""/><span class="pill-label">Results</span></a>
-<form class="search-form" id="playerSearchForm" action="#" role="search">
-<input id="hubSearch" type="search" placeholder="Search a game or date" autocomplete="off"/>
-</form>
-<button class="theme" type="button" id="themeBtn" onclick="toggleHubTheme()" aria-label="Light"><img src="./assets/theme-pill.jpg" alt=""/><span class="pill-label">Light / Dark Mode</span></button>
-</aside>
 <main id="top">
 <div class="hero hero-splash hero-sport-desk"><img src="./assets/sport-cfb.jpg" alt="CFB"/><h1>CFB</h1></div>
 <div class="tools" id="boards"><a class="tool tool-lane-banner lane-cfb" href="./cfb.html"><img src="./assets/cfb-player-props.png" alt="CFB Player Props"/><span class="game">CFB Player Props</span></a>
@@ -212,7 +212,7 @@ button.theme:hover{filter:brightness(1.06);}
     document.documentElement.classList.toggle('light', mode==='light');
     var b=document.getElementById('themeBtn');
     if(b){ b.setAttribute('aria-label', mode==='light' ? 'Dark' : 'Light'); }
-    try { localStorage.setItem(KEY, mode); } catch (e) {}
+    try { localStorage.setItem(KEY, mode); localStorage.setItem('desk-report-theme', mode); } catch (e) {}
   }
   var saved=null;
   try { saved=localStorage.getItem(KEY); } catch (e) {}
@@ -220,87 +220,6 @@ button.theme:hover{filter:brightness(1.06);}
   window.toggleHubTheme=function(){
     apply(document.documentElement.classList.contains('light')?'dark':'light');
   };
-})();
-</script>
-<script>
-(function(){
-  var KEY='desk-hub-rail';
-  function paint(closed){
-    document.documentElement.classList.toggle('rail-closed', closed);
-    var b=document.getElementById('railToggle');
-    if(!b) return;
-    b.textContent = closed ? '›' : '‹';
-    b.setAttribute('aria-label', closed ? 'Show menu' : 'Hide menu');
-  }
-  document.documentElement.classList.remove('rail-closed');
-  paint(false);
-  window.toggleHubRail=function(){
-    var closed=!document.documentElement.classList.contains('rail-closed');
-    paint(closed);
-    try { localStorage.setItem(KEY, closed ? 'closed' : 'open'); } catch (e) {}
-  };
-  setTimeout(function(){
-    if(!document.documentElement.classList.contains('rail-closed'))
-      window.toggleHubRail();
-  }, 10000);
-})();
-</script>
-<script>
-(function(){
-  var form=document.getElementById('playerSearchForm');
-  var box=document.getElementById('hubSearch');
-  if(!form||!box) return;
-  form.addEventListener('submit', function(e){ e.preventDefault(); filter(); jump(); });
-  box.addEventListener('input', filter);
-  function hayOf(el){
-    return (el.getAttribute('data-search')||el.textContent||'').toLowerCase();
-  }
-  function filter(){
-    var q=(box.value||'').trim().toLowerCase();
-    document.querySelectorAll('.day').forEach(function(day){
-      var head=day.querySelector('h3');
-      var games=day.querySelectorAll('.games a');
-      var headHit=!!(head && hayOf(head).indexOf(q)>=0);
-      var gameHit=false;
-      games.forEach(function(link){
-        var hit=!q || hayOf(link).indexOf(q)>=0;
-        link.classList.toggle('hide', !hit);
-        if(link.parentElement) link.parentElement.classList.toggle('hide', !hit);
-        if(hit) gameHit=true;
-      });
-      var trackHit=false;
-      day.querySelectorAll('.track').forEach(function(track){
-        var th=track.querySelector('h4');
-        var tg=track.querySelectorAll('.games a');
-        var thHit=!!(th && hayOf(th).indexOf(q)>=0);
-        var tGame=false;
-        tg.forEach(function(link){
-          var hit=!q || hayOf(link).indexOf(q)>=0;
-          link.classList.toggle('hide', !hit);
-          if(link.parentElement) link.parentElement.classList.toggle('hide', !hit);
-          if(hit) tGame=true;
-        });
-        var tShow=!q || thHit || tGame;
-        track.classList.toggle('hide', !tShow);
-        if(thHit || tGame) trackHit=true;
-      });
-      var show=!q || headHit || gameHit || trackHit;
-      day.classList.toggle('hide', !show);
-    });
-    document.querySelectorAll('.desk').forEach(function(desk){
-      var hasDay=desk.querySelector('.day');
-      var any=desk.querySelector('.day:not(.hide)');
-      desk.classList.toggle('hide', !!(q && hasDay && !any));
-    });
-    document.querySelectorAll('.tool').forEach(function(link){
-      var hay=(link.textContent||'').toLowerCase();
-      link.classList.toggle('hide', !!(q && hay.indexOf(q)<0));
-    });
-  }
-  function jump(){
-    var first=document.querySelector('.games a:not(.hide)');
-    if(first) first.focus();
-  }
 })();
 </script>
 </body>
