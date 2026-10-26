@@ -8,8 +8,6 @@
   try {
     if(localStorage.getItem('desk-hub-theme')==='light')
       document.documentElement.classList.add('light');
-    if(localStorage.getItem('desk-hub-rail')==='closed')
-      document.documentElement.classList.add('rail-closed');
   } catch (e) {}
 })();
 </script>
@@ -223,6 +221,15 @@ button.theme:hover{background:var(--pill);}
     paint(closed);
     try { localStorage.setItem(KEY, closed ? 'closed' : 'open'); } catch (e) {}
   };
+  try {
+    var saved=localStorage.getItem(KEY);
+    if(saved!=='open'){
+      setTimeout(function(){
+        if(!document.documentElement.classList.contains('rail-closed'))
+          window.toggleHubRail();
+      }, 5000);
+    }
+  } catch (e) {}
 })();
 </script>
 <script>

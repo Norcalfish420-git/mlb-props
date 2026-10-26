@@ -137,9 +137,6 @@ html.rail-closed .rail > *:not(.rail-head){display:none !important;}
 html.rail-closed .rail .rail-head{margin:0;width:100%;}
 html.rail-closed .rail .rail-head .brand{display:none;}
 </style>
-<script>
-(function(){try{if(localStorage.getItem('desk-hub-rail')==='closed')document.documentElement.classList.add('rail-closed');}catch(e){}})();
-</script>
 </head><body>
 <input class="tab" type="radio" name="v" id="v-report" checked/>
 <input class="tab" type="radio" name="v" id="v-etr"/>
@@ -580,4 +577,32 @@ html.rail-closed .rail .rail-head .brand{display:none;}
   apply({});
 })();
 </script>
+<script>
+(function(){
+  var KEY='desk-hub-rail';
+  function paint(closed){
+    document.documentElement.classList.toggle('rail-closed', closed);
+    var b=document.getElementById('railToggle');
+    if(!b) return;
+    b.textContent = closed ? '\u203A' : '\u2039';
+    b.setAttribute('aria-label', closed ? 'Show menu' : 'Hide menu');
+  }
+  paint(document.documentElement.classList.contains('rail-closed'));
+  window.toggleHubRail=function(){
+    var closed=!document.documentElement.classList.contains('rail-closed');
+    paint(closed);
+    try { localStorage.setItem(KEY, closed ? 'closed' : 'open'); } catch (e) {}
+  };
+  try {
+    var saved=localStorage.getItem(KEY);
+    if(saved!=='open'){
+      setTimeout(function(){
+        if(!document.documentElement.classList.contains('rail-closed'))
+          window.toggleHubRail();
+      }, 5000);
+    }
+  } catch (e) {}
+})();
+</script>
+
 </body></html>
