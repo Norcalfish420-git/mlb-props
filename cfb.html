@@ -54,6 +54,7 @@ html.light .hero-splash{box-shadow:0 18px 40px rgba(40,30,10,.16);}
 .tool.tool-sport-banner .game{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 .tool.tool-sport-banner .go{position:absolute;right:.85rem;bottom:.75rem;padding:.4rem .75rem;border-radius:999px;background:rgba(18,24,32,.88);color:var(--desk);font-weight:700;box-shadow:0 4px 16px rgba(0,0,0,.35);}
 html.light .tool.tool-sport-banner .go{background:rgba(255,253,248,.92);}
+.tool.tool-sport-banner.lane-horses .go{display:none;}
 .tool.tool-lane-banner{display:block;padding:0;overflow:hidden;position:relative;border:0;background:transparent;box-shadow:0 8px 24px rgba(0,0,0,.22);}
 .tool.tool-lane-banner img{display:block;width:100%;height:auto;border-radius:.8rem;}
 .tool.tool-lane-banner .game{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
@@ -94,6 +95,8 @@ h1{font-size:2.05rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
 .lede{margin:0;color:var(--muted);font-size:.92rem;flex:1 1 100%;}
 .day{margin:0 0 1.15rem;}
 .day h3{margin:0 0 .45rem;font-size:1.05rem;color:var(--muted);font-weight:700;}
+.track{margin:0 0 .85rem;}
+.track h4{margin:0 0 .35rem;font-size:.98rem;font-weight:800;color:var(--desk);letter-spacing:.02em;}
 .day h3 a.day-link{color:var(--fg);text-decoration:none;border-bottom:2px solid var(--desk);padding-bottom:.08rem;}
 .day h3 a.day-link:hover,.day h3 a.day-link:focus{color:#fff;outline:none;}
 .games{list-style:none;margin:0;padding:0;}
@@ -197,9 +200,9 @@ button.theme:hover{background:var(--pill);}
 <h3>October 15, 2026</h3>
 <ul class="games">
 <li><a href="./cfb/2026-10-15.html" data-search="CFB Player Props October 15, 2026  CFB slate">CFB slate</a></li>
-<li><a href="./cfb/2026-10-15_CSU_TXST.html" data-search="CFB Player Props October 15, 2026  Colorado State @ Texas State">Colorado State @ Texas State</a></li>
-<li><a href="./cfb/2026-10-15_ECU_UAB.html" data-search="CFB Player Props October 15, 2026  East Carolina @ UAB">East Carolina @ UAB</a></li>
-<li><a href="./cfb/2026-10-15_GASO_ODU.html" data-search="CFB Player Props October 15, 2026  Georgia Southern @ Old Dominion">Georgia Southern @ Old Dominion</a></li>
+<li><a href="./cfb/2026-10-15_CSU_TXST.html" data-search="CFB Player Props October 15, 2026  CSU @ TXST">CSU @ TXST</a></li>
+<li><a href="./cfb/2026-10-15_ECU_UAB.html" data-search="CFB Player Props October 15, 2026  ECU @ UAB">ECU @ UAB</a></li>
+<li><a href="./cfb/2026-10-15_GASO_ODU.html" data-search="CFB Player Props October 15, 2026  GASO @ ODU">GASO @ ODU</a></li>
 </ul>
 </div>
 <div class="day" data-date="2026-10-01">
@@ -293,7 +296,23 @@ button.theme:hover{background:var(--pill);}
         if(link.parentElement) link.parentElement.classList.toggle('hide', !hit);
         if(hit) gameHit=true;
       });
-      var show=!q || headHit || gameHit;
+      var trackHit=false;
+      day.querySelectorAll('.track').forEach(function(track){
+        var th=track.querySelector('h4');
+        var tg=track.querySelectorAll('.games a');
+        var thHit=!!(th && hayOf(th).indexOf(q)>=0);
+        var tGame=false;
+        tg.forEach(function(link){
+          var hit=!q || hayOf(link).indexOf(q)>=0;
+          link.classList.toggle('hide', !hit);
+          if(link.parentElement) link.parentElement.classList.toggle('hide', !hit);
+          if(hit) tGame=true;
+        });
+        var tShow=!q || thHit || tGame;
+        track.classList.toggle('hide', !tShow);
+        if(thHit || tGame) trackHit=true;
+      });
+      var show=!q || headHit || gameHit || trackHit;
       day.classList.toggle('hide', !show);
     });
     document.querySelectorAll('.desk').forEach(function(desk){
