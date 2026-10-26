@@ -52,9 +52,11 @@ html.light .hero-splash{box-shadow:0 18px 40px rgba(40,30,10,.16);}
 .tool.tool-sport-banner{display:block;padding:0;overflow:hidden;position:relative;}
 .tool.tool-sport-banner img{display:block;width:100%;height:auto;}
 .tool.tool-sport-banner .game{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-.tool.tool-sport-banner .go{position:absolute;right:.85rem;bottom:.75rem;padding:.4rem .75rem;border-radius:999px;background:rgba(18,24,32,.88);color:var(--desk);font-weight:700;box-shadow:0 4px 16px rgba(0,0,0,.35);}
-html.light .tool.tool-sport-banner .go{background:rgba(255,253,248,.92);}
-.tool.tool-sport-banner.lane-horses .go{display:none;}
+.tool.tool-sport-banner .go{position:absolute;right:.85rem;top:50%;transform:translateY(-50%);padding:0;background:transparent;border:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:.02em;color:var(--desk);box-shadow:none;text-shadow:0 1px 8px rgba(0,0,0,.65),0 0 2px rgba(0,0,0,.5);}
+.tool.tool-sport-banner.lane-nfl .go{color:#fbbf24;}
+.tool.tool-sport-banner.lane-cfb .go{color:#fb7185;}
+.tool.tool-sport-banner.lane-horses .go{color:#4ade80;}
+html.light .tool.tool-sport-banner .go{text-shadow:0 1px 6px rgba(0,0,0,.45),0 0 1px rgba(255,253,248,.8);}
 .tool.tool-lane-banner{display:block;padding:0;overflow:hidden;position:relative;border:0;background:transparent;box-shadow:0 8px 24px rgba(0,0,0,.22);}
 .tool.tool-lane-banner img{display:block;width:100%;height:auto;border-radius:.8rem;}
 .tool.tool-lane-banner .game{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
@@ -62,13 +64,6 @@ html.light .tool.tool-sport-banner .go{background:rgba(255,253,248,.92);}
 .hero-sport-desk{margin-bottom:1.5rem;}
 .pill{display:block;border-radius:999px;padding:.55rem .75rem;background:var(--pill);color:var(--pill-fg);text-decoration:none;font-size:.82rem;font-weight:700;line-height:1.25;border:1px solid var(--pill-line);}
 .pill.on{background:var(--desk);color:#fff;border-color:var(--desk);}
-.pill.pill-banner{display:block;padding:0;border-radius:.7rem;overflow:hidden;background:transparent;line-height:0;position:relative;border:1px solid var(--pill-line);}
-.pill.pill-banner.pill-sport{height:auto;}
-.pill.pill-banner.pill-sport img{display:block;width:100%;height:auto;object-fit:contain;object-position:left center;}
-.pill.pill-banner:not(.pill-sport){height:2.65rem;}
-.pill.pill-banner:not(.pill-sport) img{display:block;width:100%;height:100%;object-fit:cover;object-position:left center;}
-.pill.pill-banner .pill-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-.pill.pill-banner.on{background:transparent;color:inherit;border-color:var(--desk);box-shadow:0 0 0 1px var(--desk);}
 .pill.home{border-color:var(--val);}
 .pill.lane-mlb{border-color:#1f6feb;color:#8ab4ff;}
 .pill.lane-nfl{border-color:#d97706;color:#fbbf24;}
@@ -163,8 +158,6 @@ button.theme:hover{background:var(--pill);}
   .rail{width:auto;height:auto;position:relative;flex-direction:row;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--rail-line);}
   .brand{flex:1 1 100%;}
   .pill{flex:1 1 auto;}
-  .pill.pill-banner{flex:1 1 100%;}
-  .pill.pill-banner:not(.pill-sport){height:2.65rem;}
   main{padding:1rem 1rem 2.5rem;}
 }
 </style>
@@ -173,13 +166,13 @@ button.theme:hover{background:var(--pill);}
 <div class="shell">
 <aside class="rail">
 <div class="rail-head">
-<p class="brand"><img src="./assets/gambit-wordmark.png" alt="GAMBIT"/></p>
+<p class="brand">GAMBIT</p>
 <button class="rail-toggle" type="button" id="railToggle" onclick="toggleHubRail()" aria-label="Hide menu">‹</button>
 </div>
 <a class="pill home" href="./hub.html">Home</a>
-<a class="pill pill-banner pill-sport lane-nfl" href="./nfl-desk.html"><img src="./assets/sport-nfl.jpg" alt=""/><span class="pill-label">NFL</span></a>
-<a class="pill pill-banner pill-sport lane-cfb" href="./cfb-desk.html"><img src="./assets/sport-cfb.jpg" alt=""/><span class="pill-label">CFB</span></a>
-<a class="pill pill-banner pill-sport lane-horses" href="./horses.html"><img src="./assets/sport-horses.jpg" alt=""/><span class="pill-label">Horses</span></a>
+<a class="pill lane-nfl" href="./nfl-desk.html">NFL</a>
+<a class="pill lane-cfb" href="./cfb-desk.html">CFB</a>
+<a class="pill lane-horses" href="./horses.html">Horses</a>
 <a class="pill" href="./results.html">Results</a>
 <form class="search-form" id="playerSearchForm" action="#" role="search">
 <input id="hubSearch" type="search" placeholder="Search a game or date" autocomplete="off"/>
