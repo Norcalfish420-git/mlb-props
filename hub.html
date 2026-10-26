@@ -27,7 +27,15 @@ html.light{color-scheme:light;--bg:#f6f1e8;--fg:#1a1c20;--rail:#ebe4d6ee;--rail-
 a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.65rem;overflow:hidden;max-width:64rem;margin:0 auto;}
 a.gambit-home img{display:block;width:100%;height:auto;}
 a.gambit-home.on{box-shadow:0 0 0 1px var(--val);}
-.hub-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:.55rem;max-width:64rem;margin:0 auto;padding:.25rem 1rem .7rem;}
+.hub-toolbar-wrap{max-width:64rem;margin:0 auto;padding:.25rem 1rem .7rem;}
+.hub-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:.55rem;}
+.hub-search-results{margin:.45rem 0 0;border:1px solid var(--card-line);border-radius:.65rem;background:var(--card);overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.22);}
+.hub-search-results.hide{display:none !important;}
+.hub-search-results a{display:block;padding:.6rem .9rem;text-decoration:none;color:var(--fg);border-bottom:1px solid var(--card-line);font-weight:700;line-height:1.3;}
+.hub-search-results a:last-child{border-bottom:0;}
+.hub-search-results a:hover,.hub-search-results a:focus{background:var(--pill);outline:none;}
+.hub-search-results .desk-hint{display:block;font-size:.72rem;font-weight:400;color:var(--muted);margin-top:.15rem;}
+.hub-search-empty{margin:0;padding:.75rem .9rem;color:var(--muted);font-size:.88rem;}
 .hub-toolbar .search-form{margin:0;flex:1 1 11rem;max-width:18rem;}
 button.theme-standalone{width:min(42%,10.5rem);flex:0 0 auto;min-width:8.5rem;}
 .tool.tool-results-compact{display:block;width:min(52%,17.5rem);padding:0;overflow:hidden;position:relative;border:0;background:transparent;box-shadow:0 4px 16px rgba(0,0,0,.18);border-radius:.55rem;}
@@ -196,7 +204,7 @@ button.theme:hover{filter:brightness(1.06);}
 <header class="site-header">
 <a class="gambit-home on" href="./hub.html"><img src="./assets/gambit-home.jpg" alt="GAMBIT Home"/></a>
 </header>
-<div class="hub-toolbar"><form class="search-form" id="playerSearchForm" action="#" role="search"><input id="hubSearch" type="search" placeholder="Search a game or date" autocomplete="off"/></form><button class="theme theme-standalone" type="button" id="themeBtn" onclick="toggleHubTheme()" aria-label="Light"><img src="./assets/theme-pill.jpg" alt=""/><span class="pill-label">Light / Dark Mode</span></button></div>
+<div class="hub-toolbar-wrap"><div class="hub-toolbar"><form class="search-form" id="playerSearchForm" action="#" role="search"><input id="hubSearch" type="search" placeholder="Search a game or date" autocomplete="off"/></form><button class="theme theme-standalone" type="button" id="themeBtn" onclick="toggleHubTheme()" aria-label="Light"><img src="./assets/theme-pill.jpg" alt=""/><span class="pill-label">Light / Dark Mode</span></button></div><div id="hubSearchResults" class="hub-search-results hide" aria-live="polite"></div></div>
 <div class="shell">
 <main id="top">
 <div class="hero hero-splash"><img src="./assets/gambit-splash.jpg" alt=""/><h1>GAMBIT</h1></div>
@@ -227,14 +235,14 @@ button.theme:hover{filter:brightness(1.06);}
 (function(){
   var form=document.getElementById('playerSearchForm');
   var box=document.getElementById('hubSearch');
+  var panel=document.getElementById('hubSearchResults');
   if(!form||!box) return;
-  form.addEventListener('submit', function(e){ e.preventDefault(); filter(); jump(); });
-  box.addEventListener('input', filter);
+  var index=null;
+  var indexLoading=false;
   function hayOf(el){
     return (el.getAttribute('data-search')||el.textContent||'').toLowerCase();
   }
-  function filter(){
-    var q=(box.value||'').trim().toLowerCase();
+  function filterInPage(q){
     document.querySelectorAll('.day').forEach(function(day){
       var head=day.querySelector('h3');
       var games=day.querySelectorAll('.games a');
@@ -275,10 +283,92 @@ button.theme:hover{filter:brightness(1.06);}
       link.classList.toggle('hide', !!(q && hay.indexOf(q)<0));
     });
   }
-  function jump(){
-    var first=document.querySelector('.games a:not(.hide)');
-    if(first) first.focus();
+  function pageHits(q){
+    var hits=[];
+    var seen=new Set();
+    document.querySelectorAll('.games a, .games-latest a').forEach(function(a){
+      var href=a.getAttribute('href');
+      if(!href||seen.has(href)) return;
+      if(hayOf(a).indexOf(q)<0) return;
+      seen.add(href);
+      hits.push({href:href, label:(a.textContent||'').replace(/\s+/g,' ').trim(), desk:''});
+    });
+    return hits;
   }
+  function indexHits(q){
+    if(!index||!index.length) return [];
+    var out=[];
+    for(var i=0;i<index.length;i++){
+      var e=index[i];
+      if((e.hay||'').indexOf(q)<0) continue;
+      var label=e.label||'';
+      if(e.when) label=label+' · '+e.when;
+      out.push({href:e.href, label:label, desk:e.desk||''});
+      if(out.length>=40) break;
+    }
+    return out;
+  }
+  function mergeHits(a,b){
+    var seen=new Set();
+    var merged=[];
+    function add(it){
+      if(!it.href||seen.has(it.href)) return;
+      seen.add(it.href);
+      merged.push(it);
+    }
+    a.forEach(add);
+    b.forEach(add);
+    return merged.slice(0,40);
+  }
+  function renderPanel(items,q){
+    if(!panel) return;
+    if(!q){
+      panel.classList.add('hide');
+      panel.innerHTML='';
+      return;
+    }
+    if(!items.length){
+      panel.innerHTML='<p class="hub-search-empty">No matches on the hub.</p>';
+      panel.classList.remove('hide');
+      return;
+    }
+    panel.innerHTML=items.map(function(it){
+      var hint=it.desk?'<span class="desk-hint">'+it.desk+'</span>':'';
+      return '<a href="'+it.href+'">'+it.label+hint+'</a>';
+    }).join('');
+    panel.classList.remove('hide');
+  }
+  function loadIndex(cb){
+    if(index){ cb(); return; }
+    if(indexLoading) return;
+    indexLoading=true;
+    fetch('./assets/hub-search-index.json').then(function(r){
+      if(!r.ok) throw new Error('missing');
+      return r.json();
+    }).then(function(j){
+      index=j||[];
+      indexLoading=false;
+      cb();
+    }).catch(function(){
+      index=[];
+      indexLoading=false;
+      cb();
+    });
+  }
+  function run(){
+    var q=(box.value||'').trim().toLowerCase();
+    filterInPage(q);
+    if(!q){
+      renderPanel([],q);
+      return;
+    }
+    var onPage=pageHits(q);
+    loadIndex(function(){
+      renderPanel(mergeHits(onPage, indexHits(q)), q);
+    });
+  }
+  form.addEventListener('submit', function(e){ e.preventDefault(); run(); });
+  box.addEventListener('input', run);
 })();
 </script></body>
 </html>
