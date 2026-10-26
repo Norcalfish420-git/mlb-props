@@ -2,15 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/><script>
-(function(){
-  try {
-    var _th=localStorage.getItem('desk-hub-theme');
-    if(_th!=='light'&&_th!=='dark')_th=localStorage.getItem('desk-report-theme');
-    if(_th==='light') document.documentElement.classList.add('light');
-  } catch (e) {}
-})();
-</script>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>NFL DK LINEUP — Past slates</title>
 <style>
 :root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--pill:#393939;--pill-fg:#fbbf24;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#d97706;--val:#fbbf24;}
@@ -22,28 +14,13 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Ge
 .pill.on{background:var(--accent);color:#fff;border-color:var(--accent);}
 main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:40rem;}
 a{color:var(--val);}
-.site-header{position:sticky;top:0;z-index:50;background:var(--bg,#161616);border-bottom:1px solid var(--rail-line,#393939);padding:.35rem .75rem;}a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.55rem;overflow:hidden;max-width:64rem;margin:0 auto;}a.gambit-home img{display:block;width:100%;height:auto;}.rail button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg,var(--fg));border:1px solid var(--pill-line,var(--line,#525252));border-radius:.5rem;padding:.62rem .85rem;min-height:2.35rem;text-align:center;}.rail button.theme:hover{background:var(--pill-hover,var(--pill,#393939));}</style>
-<style>
-</style>
-<style>
-.rail-head{display:flex;align-items:center;gap:.5rem;width:100%;margin:0 0 .85rem;flex:0 0 auto;}
-.rail-head .brand{margin:0;flex:1;min-width:0;line-height:1.1;}
-.rail-toggle{flex:0 0 auto;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
-html.rail-closed .rail{width:2.7rem;flex-basis:2.7rem;padding:.7rem .4rem;overflow:hidden;align-items:flex-start;}
-html.rail-closed .rail > *:not(.rail-head){display:none !important;}
-html.rail-closed .rail .rail-head{margin:0;width:100%;}
-html.rail-closed .rail .rail-head .brand{display:none;}
 </style>
 </head>
 <body>
-<header class="site-header noprint"><a class="gambit-home" href="../hub.html"><img src="../assets/gambit-home.jpg" alt="GAMBIT Home"/></a></header>
 <div class="shell">
 <aside class="rail">
-<div class="rail-head">
-<button class="rail-toggle" type="button" id="railToggle" onclick="toggleHubRail()" aria-label="Hide menu">‹</button>
 <p class="brand">NFL DK LINEUP<br/>ARCHIVE</p>
-<a class="pill back noprint" href="../nfl-showdown.html">Back</a>
-<a class="pill home noprint" href="../hub.html">Home</a>
+<a class="pill home" href="/mlb-props/hub.html">Home</a>
 <a class="pill" href="./">Today</a>
 <a class="pill on" href="./archive.html">Past slates</a>
 </aside>
@@ -53,6 +30,16 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <ul>
 <li><a href="./">Latest (2026-10-26_DAL_PHI)</a></li>
 <li><a href="./2026-10-26_DAL_PHI.html">October 26, 2026 · DAL PHI</a></li>
+<li><a href="./2026-10-25_TB_CAR.html">October 25, 2026 · TB CAR</a></li>
+<li><a href="./2026-10-25_SF_ATL.html">October 25, 2026 · SF ATL</a></li>
+<li><a href="./2026-10-25_NYG_HOU.html">October 25, 2026 · NYG HOU</a></li>
+<li><a href="./2026-10-25_MIA_NYJ.html">October 25, 2026 · MIA NYJ</a></li>
+<li><a href="./2026-10-25_LAR_LV.html">October 25, 2026 · LAR LV</a></li>
+<li><a href="./2026-10-25_IND_MIN.html">October 25, 2026 · IND MIN</a></li>
+<li><a href="./2026-10-25_GB_DET.html">October 25, 2026 · GB DET</a></li>
+<li><a href="./2026-10-25_DEN_ARI.html">October 25, 2026 · DEN ARI</a></li>
+<li><a href="./2026-10-25_CLE_TEN.html">October 25, 2026 · CLE TEN</a></li>
+<li><a href="./2026-10-25_CIN_BAL.html">October 25, 2026 · CIN BAL</a></li>
 <li><a href="./2026-10-19_WAS_SF.html">October 19, 2026 · WAS SF</a></li>
 <li><a href="./2026-10-18_TEN_IND.html">October 18, 2026 · TEN IND</a></li>
 <li><a href="./2026-10-18_PIT_TB.html">October 18, 2026 · PIT TB</a></li>
@@ -97,28 +84,5 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 </ul>
 </main>
 </div>
-<script>
-(function(){
-  var KEY='desk-hub-rail';
-  function paint(closed){
-    document.documentElement.classList.toggle('rail-closed', closed);
-    var b=document.getElementById('railToggle');
-    if(!b) return;
-    b.textContent = closed ? '\u203A' : '\u2039';
-    b.setAttribute('aria-label', closed ? 'Show menu' : 'Hide menu');
-  }
-  document.documentElement.classList.remove('rail-closed');
-  paint(false);
-  window.toggleHubRail=function(){
-    var closed=!document.documentElement.classList.contains('rail-closed');
-    paint(closed);
-    try { localStorage.setItem(KEY, closed ? 'closed' : 'open'); } catch (e) {}
-  };
-  setTimeout(function(){
-    if(!document.documentElement.classList.contains('rail-closed'))
-      window.toggleHubRail();
-  }, 10000);
-})();
-</script>
 </body>
 </html>
