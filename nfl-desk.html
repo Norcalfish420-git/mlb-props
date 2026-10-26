@@ -49,6 +49,12 @@ body.page-hub main{max-width:64rem;padding-top:1.1rem;}
 .hero-splash img{display:block;width:100%;height:auto;}
 .hero-splash h1{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 html.light .hero-splash{box-shadow:0 18px 40px rgba(40,30,10,.16);}
+.tool.tool-sport-banner{display:block;padding:0;overflow:hidden;position:relative;}
+.tool.tool-sport-banner img{display:block;width:100%;height:auto;}
+.tool.tool-sport-banner .game{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.tool.tool-sport-banner .go{position:absolute;right:.85rem;bottom:.75rem;padding:.4rem .75rem;border-radius:999px;background:rgba(18,24,32,.88);color:var(--desk);font-weight:700;box-shadow:0 4px 16px rgba(0,0,0,.35);}
+html.light .tool.tool-sport-banner .go{background:rgba(255,253,248,.92);}
+.hero-sport-desk{margin-bottom:1.5rem;}
 .pill{display:block;border-radius:999px;padding:.55rem .75rem;background:var(--pill);color:var(--pill-fg);text-decoration:none;font-size:.82rem;font-weight:700;line-height:1.25;border:1px solid var(--pill-line);}
 .pill.on{background:var(--desk);color:#fff;border-color:var(--desk);}
 .pill.home{border-color:var(--val);}
@@ -161,9 +167,7 @@ button.theme:hover{background:var(--pill);}
 <button class="theme" type="button" id="themeBtn" onclick="toggleHubTheme()" aria-label="Light">☀️</button>
 </aside>
 <main id="top">
-<div class="hero">
-<h1>NFL</h1>
-</div>
+<div class="hero hero-splash hero-sport-desk"><img src="./assets/sport-nfl.jpg" alt="NFL"/><h1>NFL</h1></div>
 <div class="tools" id="boards"><a class="tool lane-nfl" href="./nfl.html"><span class="game">🎯 NFL Player Props</span><span class="go">Open</span></a>
 <a class="tool lane-nflshowdown" href="./nfl-showdown.html"><span class="game">⚔️ NFL DK Showdown</span><span class="go">Open</span></a>
 <a class="tool lane-nflclassic" href="./nfl-classic.html"><span class="game">🏆 NFL DK Classic Lineups</span><span class="go">Open</span></a></div>
