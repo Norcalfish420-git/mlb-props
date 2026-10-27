@@ -22,36 +22,23 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Ge
 .pill.on{background:var(--accent);color:#fff;border-color:var(--accent);}
 main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:40rem;}
 a{color:var(--val);}
-.site-header{position:sticky;top:0;z-index:50;background:var(--bg,#161616);border-bottom:1px solid var(--rail-line,#393939);padding:.35rem .75rem;}a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.55rem;overflow:hidden;max-width:64rem;margin:0 auto;}a.gambit-home img{display:block;width:100%;height:auto;}.rail button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg,var(--fg));border:1px solid var(--pill-line,var(--line,#525252));border-radius:.5rem;padding:.62rem .85rem;min-height:2.35rem;text-align:center;}.rail button.theme:hover{background:var(--pill-hover,var(--pill,#393939));}</style>
-<style>
-</style>
-<style>
-.rail-head{display:flex;align-items:center;gap:.5rem;width:100%;margin:0 0 .85rem;flex:0 0 auto;}
-.rail-head .brand{margin:0;flex:1;min-width:0;line-height:1.1;}
-.rail-toggle{flex:0 0 auto;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
-html.rail-closed .rail{width:2.7rem;flex-basis:2.7rem;padding:.7rem .4rem;overflow:hidden;align-items:flex-start;}
-html.rail-closed .rail > *:not(.rail-head){display:none !important;}
-html.rail-closed .rail .rail-head{margin:0;width:100%;}
-html.rail-closed .rail .rail-head .brand{display:none;}
-</style>
+.site-header{position:sticky;top:0;z-index:50;background:var(--bg,#161616);border-bottom:1px solid var(--rail-line,#393939);padding:.35rem .75rem;}a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.55rem;overflow:hidden;max-width:64rem;margin:0 auto;}a.gambit-home img{display:block;width:100%;height:auto;}.rail-search-theme-row{display:flex;flex-direction:row;align-items:flex-end;gap:.45rem;margin:.35rem 0 .25rem;}.rail-search-theme-row form.search-form{flex:1 1 auto;min-width:0;margin:0;}.rail-search-theme-row label.search-lab{margin:.12rem 0 0;}.rail-search-theme-row input.search,.rail-search-theme-row .search-form input{border:2px solid var(--val,var(--accent,#d4d4d4));}.rail-search-theme-row button.theme{flex:0 0 auto;width:auto;min-width:4.75rem;padding:.45rem .55rem;min-height:2.05rem;margin:0;align-self:flex-end;}.rail button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg,var(--fg));border:1px solid var(--pill-line,var(--line,#525252));border-radius:.5rem;padding:.62rem .85rem;min-height:2.35rem;text-align:center;}.rail button.theme:hover{background:var(--pill-hover,var(--pill,#393939));}</style>
 </head>
 <body>
 <header class="site-header noprint"><a class="gambit-home" href="../hub.html"><img src="../assets/gambit-home.jpg" alt="GAMBIT Home"/></a></header>
 <div class="shell">
 <aside class="rail">
-<div class="rail-head">
-<button class="rail-toggle" type="button" id="railToggle" onclick="toggleHubRail()" aria-label="Hide menu">‹</button>
 <p class="brand">NFL PROPS<br/>ARCHIVE</p>
-<a class="pill back noprint" href="../nfl.html">Back</a>
-<a class="pill home noprint" href="../hub.html">Home</a>
+<a class="pill home" href="/mlb-props/hub.html">Home</a>
 <a class="pill" href="./">Today</a>
 <a class="pill on" href="./archive.html">Past slates</a>
 </aside>
 <main>
 <h1>Past slates</h1>
-<p class="sub">Home always shows the latest night (2026-10-19).</p>
+<p class="sub">Home always shows the latest night (2026-10-25).</p>
 <ul>
-<li><a href="./">Latest (2026-10-19)</a></li>
+<li><a href="./">Latest (2026-10-25)</a></li>
+<li><a href="./2026-10-25.html">October 25, 2026</a></li>
 <li><a href="./2026-10-19.html">October 19, 2026</a></li>
 <li><a href="./2026-10-18.html">October 18, 2026</a></li>
 <li><a href="./2026-09-27.html">September 27, 2026</a></li>
@@ -63,28 +50,5 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 </ul>
 </main>
 </div>
-<script>
-(function(){
-  var KEY='desk-hub-rail';
-  function paint(closed){
-    document.documentElement.classList.toggle('rail-closed', closed);
-    var b=document.getElementById('railToggle');
-    if(!b) return;
-    b.textContent = closed ? '\u203A' : '\u2039';
-    b.setAttribute('aria-label', closed ? 'Show menu' : 'Hide menu');
-  }
-  document.documentElement.classList.remove('rail-closed');
-  paint(false);
-  window.toggleHubRail=function(){
-    var closed=!document.documentElement.classList.contains('rail-closed');
-    paint(closed);
-    try { localStorage.setItem(KEY, closed ? 'closed' : 'open'); } catch (e) {}
-  };
-  setTimeout(function(){
-    if(!document.documentElement.classList.contains('rail-closed'))
-      window.toggleHubRail();
-  }, 10000);
-})();
-</script>
 </body>
 </html>
