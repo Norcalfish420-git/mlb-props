@@ -6,8 +6,10 @@
 <script>
 (function(){
   try {
-    var _th=localStorage.getItem('desk-hub-theme');if(_th!=='light'&&_th!=='dark')_th=localStorage.getItem('desk-report-theme');if(_th==='light')
+    if(localStorage.getItem('desk-hub-theme')==='light')
       document.documentElement.classList.add('light');
+    if(localStorage.getItem('desk-hub-rail')==='closed')
+      document.documentElement.classList.add('rail-closed');
   } catch (e) {}
 })();
 </script>
@@ -23,25 +25,6 @@ html.light{color-scheme:light;--bg:#f6f1e8;--fg:#1a1c20;--rail:#ebe4d6ee;--rail-
 .page-showdown{--desk:#be123c;--accent:#be123c;}
 .page-classic{--desk:#e11d48;--accent:#e11d48;}
 .page-horses{--desk:#15803d;--accent:#15803d;}.page-nfldesk,.page-nflclassic{--desk:#d97706;--accent:#d97706;}.page-cfbdesk{--desk:#e11d48;--accent:#e11d48;}
-.site-header{position:sticky;top:0;z-index:40;background:var(--bg);border-bottom:1px solid var(--rail-line);padding:.4rem 1rem .45rem;backdrop-filter:blur(14px);}
-a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.65rem;overflow:hidden;max-width:64rem;margin:0 auto;}
-a.gambit-home img{display:block;width:100%;height:auto;}
-a.gambit-home.on{box-shadow:0 0 0 1px var(--val);}
-.hub-toolbar-wrap{max-width:64rem;margin:0 auto;padding:.25rem 1rem .7rem;}
-.hub-toolbar{display:flex;flex-wrap:nowrap;align-items:center;gap:.55rem;}
-.hub-search-results{margin:.45rem 0 0;border:1px solid var(--card-line);border-radius:.65rem;background:var(--card);overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.22);}
-.hub-search-results.hide{display:none !important;}
-.hub-search-results a{display:block;padding:.6rem .9rem;text-decoration:none;color:var(--fg);border-bottom:1px solid var(--card-line);font-weight:700;line-height:1.3;}
-.hub-search-results a:last-child{border-bottom:0;}
-.hub-search-results a:hover,.hub-search-results a:focus{background:var(--pill);outline:none;}
-.hub-search-results .desk-hint{display:block;font-size:.72rem;font-weight:400;color:var(--muted);margin-top:.15rem;}
-.hub-search-empty{margin:0;padding:.75rem .9rem;color:var(--muted);font-size:.88rem;}
-.hub-toolbar .search-form{margin:0 0 0 auto;flex:0 1 18rem;min-width:0;}
-.hub-toolbar .search-form input{border:2px solid var(--val);box-shadow:0 0 0 1px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.06);}
-html.light .hub-toolbar .search-form input{border-color:var(--accent);box-shadow:0 0 0 1px rgba(90,70,40,.16),inset 0 1px 0 rgba(255,255,255,.5);}
-.tool.tool-results-compact{display:block;width:min(52%,17.5rem);padding:0;overflow:hidden;position:relative;border:0;background:transparent;box-shadow:0 4px 16px rgba(0,0,0,.18);border-radius:.55rem;}
-.tool.tool-results-compact img{display:block;width:100%;height:auto;}
-.tool.tool-results-compact .pill-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,"Iowan Old Style",serif;}
 body{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("./assets/desk-bg-hub.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
 body.page-mlb{background-image:linear-gradient(180deg,rgba(18,24,32,.86),rgba(12,16,22,.93)),url("./assets/desk-bg-mlb.jpg");}
@@ -51,19 +34,18 @@ html.light body{background-image:linear-gradient(180deg,rgba(246,241,232,.9),rgb
 html.light body.page-mlb{background-image:linear-gradient(180deg,rgba(246,241,232,.9),rgba(246,241,232,.94)),url("./assets/desk-bg-mlb.jpg");}
 html.light body.page-nfl,html.light body.page-nflshowdown,html.light body.page-nfldesk,html.light body.page-nflclassic{background-image:linear-gradient(180deg,rgba(246,241,232,.9),rgba(246,241,232,.94)),url("./assets/desk-bg-nfl.jpg");}
 html.light body.page-cfb,html.light body.page-showdown,html.light body.page-classic,html.light body.page-cfbdesk{background-image:linear-gradient(180deg,rgba(246,241,232,.9),rgba(246,241,232,.94)),url("./assets/desk-bg-cfb.jpg");}
-.shell{display:block;min-height:100vh;}
-.rail{width:18rem;flex:0 0 18rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1.1rem .8rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.4rem;backdrop-filter:blur(14px);}
-.brand{display:block;margin:0;line-height:0;text-decoration:none;border-radius:999px;overflow:hidden;}
-.brand img{display:block;width:100%;height:auto;}
-a.brand.on{box-shadow:0 0 0 1px var(--val);}
-.rail-head{display:flex;flex-direction:column;align-items:stretch;gap:.35rem;width:100%;margin:0 0 .45rem;flex:0 0 auto;}
-.rail-head .brand{margin:0;width:100%;min-width:0;line-height:0;order:1;}
-.rail-toggle{align-self:flex-end;order:0;flex:0 0 auto;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
+.shell{display:flex;min-height:100vh;}
+.rail{width:14rem;flex:0 0 14rem;background:var(--rail);border-right:1px solid var(--rail-line);padding:1.1rem .8rem;position:sticky;top:0;height:100vh;box-sizing:border-box;display:flex;flex-direction:column;gap:.4rem;backdrop-filter:blur(14px);}
+.brand{margin:0;line-height:0;}
+.brand img{display:block;width:100%;height:auto;max-height:2rem;object-fit:contain;object-position:left center;}
+.rail-head{display:flex;align-items:center;gap:.5rem;width:100%;margin:0 0 .85rem;flex:0 0 auto;}
+.rail-head .brand{margin:0;flex:1;min-width:0;line-height:1.1;}
+.rail-toggle{flex:0 0 auto;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
 html.rail-closed .rail{width:2.7rem;flex-basis:2.7rem;padding:.7rem .4rem;overflow:hidden;align-items:flex-start;}
 html.rail-closed .rail > *:not(.rail-head){display:none !important;}
 html.rail-closed .rail .rail-head{margin:0;width:100%;}
 html.rail-closed .rail .rail-head .brand{display:none;}
-body.page-hub main{max-width:64rem;padding-top:.85rem;}
+body.page-hub main{max-width:64rem;padding-top:1.1rem;}
 .hero-splash{position:relative;padding:0;overflow:hidden;border:1px solid rgba(232,184,109,.55);background:#07090d;box-shadow:0 0 0 1px rgba(56,120,220,.28),0 24px 60px rgba(0,0,0,.48);}
 .hero-splash img{display:block;width:100%;height:auto;}
 .hero-splash h1{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
@@ -71,11 +53,9 @@ html.light .hero-splash{box-shadow:0 18px 40px rgba(40,30,10,.16);}
 .tool.tool-sport-banner{display:block;padding:0;overflow:hidden;position:relative;}
 .tool.tool-sport-banner img{display:block;width:100%;height:auto;}
 .tool.tool-sport-banner .game{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-.tool.tool-sport-banner .go{position:absolute;right:.85rem;top:50%;transform:translateY(-50%);padding:0;background:transparent;border:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:1.05rem;font-weight:800;letter-spacing:.02em;color:var(--desk);box-shadow:none;text-shadow:0 1px 8px rgba(0,0,0,.65),0 0 2px rgba(0,0,0,.5);}
-.tool.tool-sport-banner.lane-nfl .go{color:#fbbf24;}
-.tool.tool-sport-banner.lane-cfb .go{color:#fb7185;}
-.tool.tool-sport-banner.lane-horses .go{color:#4ade80;}
-html.light .tool.tool-sport-banner .go{text-shadow:0 1px 6px rgba(0,0,0,.45),0 0 1px rgba(255,253,248,.8);}
+.tool.tool-sport-banner .go{position:absolute;right:.85rem;bottom:.75rem;padding:.4rem .75rem;border-radius:999px;background:rgba(18,24,32,.88);color:var(--desk);font-weight:700;box-shadow:0 4px 16px rgba(0,0,0,.35);}
+html.light .tool.tool-sport-banner .go{background:rgba(255,253,248,.92);}
+.tool.tool-sport-banner.lane-horses .go{display:none;}
 .tool.tool-lane-banner{display:block;padding:0;overflow:hidden;position:relative;border:0;background:transparent;box-shadow:0 8px 24px rgba(0,0,0,.22);}
 .tool.tool-lane-banner img{display:block;width:100%;height:auto;border-radius:.8rem;}
 .tool.tool-lane-banner .game{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
@@ -83,15 +63,10 @@ html.light .tool.tool-sport-banner .go{text-shadow:0 1px 6px rgba(0,0,0,.45),0 0
 .hero-sport-desk{margin-bottom:1.5rem;}
 .pill{display:block;border-radius:999px;padding:.55rem .75rem;background:var(--pill);color:var(--pill-fg);text-decoration:none;font-size:.82rem;font-weight:700;line-height:1.25;border:1px solid var(--pill-line);}
 .pill.on{background:var(--desk);color:#fff;border-color:var(--desk);}
-.pill.pill-banner{display:block;padding:0;border-radius:.7rem;overflow:hidden;background:transparent;line-height:0;position:relative;border:1px solid var(--pill-line);}
-.pill.pill-banner.pill-sport{height:auto;}
-.pill.pill-banner.pill-sport img{display:block;width:100%;height:auto;object-fit:contain;object-position:left center;}
-.pill.pill-banner:not(.pill-sport){height:2.65rem;}
-.pill.pill-banner:not(.pill-sport) img{display:block;width:100%;height:100%;object-fit:cover;object-position:left center;}
+.pill.pill-banner{display:block;padding:0;border-radius:.7rem;overflow:hidden;background:transparent;line-height:0;height:2.65rem;position:relative;border:1px solid var(--pill-line);}
+.pill.pill-banner img{display:block;width:100%;height:100%;object-fit:cover;object-position:left center;}
 .pill.pill-banner .pill-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 .pill.pill-banner.on{background:transparent;color:inherit;border-color:var(--desk);box-shadow:0 0 0 1px var(--desk);}
-.pill.pill-results{border:0;}
-.pill.pill-results.on{border:0;box-shadow:0 0 0 1px var(--val);}
 .pill.home{border-color:var(--val);}
 .pill.lane-mlb{border-color:#1f6feb;color:#8ab4ff;}
 .pill.lane-nfl{border-color:#d97706;color:#fbbf24;}
@@ -109,7 +84,7 @@ html.light .tool.tool-sport-banner .go{text-shadow:0 1px 6px rgba(0,0,0,.45),0 0
 .pill.lane-horses.on{background:#15803d;color:#fff;border-color:#15803d;}
 .search-form{margin:.35rem 0 .2rem;}
 .search-form input{width:100%;box-sizing:border-box;border-radius:999px;border:1px solid var(--pill-line);background:#121820cc;color:var(--fg);padding:.45rem .7rem;font:inherit;font-size:.8rem;}
-main{padding:1.6rem 1.8rem 3rem;max-width:48rem;margin:0 auto;}
+main{flex:1;padding:1.6rem 1.8rem 3rem;max-width:48rem;}
 .hero{margin:0 0 1.5rem;padding:1.15rem 1.2rem 1.05rem;border:1px solid rgba(232,184,109,.22);border-radius:.9rem;background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(168,93,34,.18));box-shadow:0 12px 40px rgba(0,0,0,.28);}
 .page-mlb .hero{border-color:rgba(31,111,235,.35);background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(31,111,235,.22));}
 .page-nfl .hero,.page-nflshowdown .hero{border-color:rgba(217,119,6,.35);background:linear-gradient(135deg,rgba(26,36,48,.72),rgba(217,119,6,.22));}
@@ -135,13 +110,6 @@ h1{font-size:2.05rem;margin:.1rem 0 .35rem;letter-spacing:-.02em;}
 .games a:hover,.games a:focus{border-color:var(--desk);color:#fff;outline:none;}
 .games a .when{display:inline;font-weight:700;font-size:1.35rem;letter-spacing:.01em;color:var(--val);margin:0 0 0 .75rem;}
 .games a:hover .when,.games a:focus .when,html.light .games a:hover .when,html.light .games a:focus .when{color:var(--val);}
-.desk-horses .games a.horse-race-banner{padding:0;overflow:hidden;position:relative;border-left:0;background:#07090d;}
-.desk-horses .games a.horse-race-banner img{display:block;width:100%;height:auto;vertical-align:top;}
-.desk-horses .games a.horse-race-banner .horse-race-label{position:absolute;left:0;top:0;bottom:0;display:flex;align-items:center;padding:0 .95rem;font-size:1.12rem;font-weight:800;color:#f3efe6;text-shadow:0 2px 10px rgba(0,0,0,.9),0 0 24px rgba(0,0,0,.65);max-width:72%;}
-.desk-horses .games a.horse-race-banner:hover,.desk-horses .games a.horse-race-banner:focus{color:#fff;outline:none;box-shadow:0 0 0 2px var(--desk);}
-.desk-nfl .games a.slate-banner{padding:0;overflow:hidden;border-left:0;background:#07090d;}
-.desk-nfl .games a.slate-banner img{display:block;width:100%;height:auto;vertical-align:top;}
-.desk-nfl .games a.slate-banner:hover,.desk-nfl .games a.slate-banner:focus{outline:none;box-shadow:0 0 0 2px var(--desk);}
 .tools-head{font-size:1.48rem;margin:2.1rem 0 .65rem;letter-spacing:-.02em;font-weight:800;line-height:1.2;color:var(--fg);}
 .tools-head.section-head{padding-bottom:.45rem;border-bottom:2px solid rgba(232,184,109,.38);}
 html.light .tools-head.section-head{border-bottom-color:rgba(138,75,22,.28);}
@@ -181,43 +149,56 @@ html.light .page-cfb .hero,html.light .page-classic .hero{background:linear-grad
 html.light .page-horses .hero{background:linear-gradient(135deg,rgba(255,253,248,.9),rgba(21,128,61,.14));}
 html.light .page-showdown .hero{background:linear-gradient(135deg,rgba(255,253,248,.9),rgba(190,18,60,.12));}
 html.light .day h3 a.day-link:hover,html.light .day h3 a.day-link:focus,html.light .games a:hover,html.light .games a:focus{color:var(--fg);}
-button.theme{display:block;width:100%;box-sizing:border-box;padding:0;margin:0;border:0;background:transparent;cursor:pointer;line-height:0;border-radius:.85rem;overflow:hidden;position:relative;}
-button.theme img{display:block;width:100%;height:auto;}
-button.theme.theme-standalone{width:5.2rem;height:2.15rem;flex:0 0 auto;min-width:0;align-self:center;border-radius:999px;}
-button.theme.theme-standalone img{display:block;width:100%;height:100%;object-fit:contain;}
-button.theme .pill-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-button.theme:hover{filter:brightness(1.06);}
+button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:1.1rem;font-weight:700;cursor:pointer;background:transparent;color:var(--fg);border:1px solid var(--pill-line);border-radius:999px;padding:.5rem .75rem;text-align:center;line-height:1.2;}
+button.theme:hover{background:var(--pill);}
 @media (max-width:720px){
-  .hub-toolbar{flex-wrap:wrap;}
-  .hub-toolbar .search-form{margin-left:0;flex:1 1 100%;max-width:100%;}
-  html.rail-closed .rail{width:2.7rem !important;flex-basis:2.7rem !important;flex-direction:column;flex-wrap:nowrap;overflow:hidden;align-items:flex-start;}
-  html.rail-closed .rail > *:not(.rail-head){display:none !important;}
   body{background-attachment:scroll;}
   .shell{display:block;}
-  .rail{width:100%;max-width:100%;height:auto;position:relative;flex-direction:row;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--rail-line);overflow:hidden;}
-  .rail-head{flex:1 1 100%;width:100%;max-width:100%;min-width:0;}
-  .brand{flex:1 1 100%;max-width:100%;}
-  .brand img{max-width:100%;}
+  .rail{width:auto;height:auto;position:relative;flex-direction:row;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--rail-line);}
+  .brand{flex:1 1 100%;}
   .pill{flex:1 1 auto;}
-  .pill.pill-banner{flex:1 1 100%;}
-  .pill.pill-banner:not(.pill-sport){height:2.65rem;}
+  .pill.pill-banner{flex:1 1 100%;height:2.65rem;}
   main{padding:1rem 1rem 2.5rem;}
 }
 </style>
 </head>
 <body class="page-hub">
-<div class="hub-toolbar-wrap"><div class="hub-toolbar"><form class="search-form" id="playerSearchForm" action="#" role="search"><input id="hubSearch" type="search" placeholder="Search a game or date" autocomplete="off"/></form><button class="theme theme-standalone" type="button" id="themeBtn" onclick="toggleHubTheme()" aria-label="Light"><img src="./assets/theme-toggle.png" alt=""/><span class="pill-label">Light / Dark Mode</span></button></div><div id="hubSearchResults" class="hub-search-results hide" aria-live="polite"></div></div>
 <div class="shell">
+<aside class="rail">
+<div class="rail-head">
+<p class="brand"><img src="./assets/gambit-wordmark.png" alt="GAMBIT"/></p>
+<button class="rail-toggle" type="button" id="railToggle" onclick="toggleHubRail()" aria-label="Hide menu">‹</button>
+</div>
+<a class="pill home on" href="./hub.html">Home</a>
+<a class="pill lane-nfl" href="./nfl-desk.html">NFL</a>
+<a class="pill lane-cfb" href="./cfb-desk.html">CFB</a>
+<a class="pill lane-horses" href="./horses.html">Horses</a>
+<a class="pill" href="./results.html">Results</a>
+<form class="search-form" id="playerSearchForm" action="#" role="search">
+<input id="hubSearch" type="search" placeholder="Search a game or date" autocomplete="off"/>
+</form>
+<button class="theme" type="button" id="themeBtn" onclick="toggleHubTheme()" aria-label="Light">☀️</button>
+</aside>
 <main id="top">
 <div class="hero hero-splash"><img src="./assets/gambit-splash.jpg" alt=""/><h1>GAMBIT</h1></div>
-<div class="tools" id="boards"><a class="tool tool-sport-banner lane-nfl" href="./nfl-desk.html"><img src="./assets/sport-nfl.jpg" alt="NFL"/><span class="game">NFL</span></a>
-<a class="tool tool-sport-banner lane-cfb" href="./cfb-desk.html"><img src="./assets/sport-cfb.jpg" alt="CFB"/><span class="game">CFB</span></a>
-<a class="tool tool-sport-banner lane-horses" href="./horses.html"><img src="./assets/sport-horses.jpg" alt="Horses"/><span class="game">Horses</span></a>
-<a class="tool tool-results-compact" href="./results.html"><img src="./assets/results-pill.jpg" alt=""/><span class="pill-label">Results</span></a></div><h2 class="tools-head section-head" id="latest">Latest</h2>
+<div class="tools" id="boards"><a class="tool tool-sport-banner lane-nfl" href="./nfl-desk.html"><img src="./assets/sport-nfl.jpg" alt="NFL"/><span class="game">NFL</span><span class="go">Open</span></a>
+<a class="tool tool-sport-banner lane-cfb" href="./cfb-desk.html"><img src="./assets/sport-cfb.jpg" alt="CFB"/><span class="game">CFB</span><span class="go">Open</span></a>
+<a class="tool lane-horses" href="./horses.html"><span class="game">Horses</span><span class="go">Open</span></a></div><h2 class="tools-head section-head" id="latest">Latest</h2>
 <ul class="games games-latest">
-<li class="lane-showdown"><a class="lane-showdown" href="./showdown/2026-10-29_FAU_UNT.html" data-search="CFB DK Showdowns FAU @ UNT 6:30 p.m. CT">FAU @ UNT <span class="when">6:30 p.m. CT</span></a></li>
-<li class="lane-nflshowdown"><a class="lane-nflshowdown" href="./nfl-showdown/2026-10-29_GB_CAR.html" data-search="NFL DK Showdown GB @ CAR 7:15 p.m. CT">GB @ CAR <span class="when">7:15 p.m. CT</span></a></li>
-<li class="lane-nfl"><a class="lane-nfl" href="./nfl/2026-10-29.html" data-search="NFL Player Props NFL Player Props · October 29, 2026 ">NFL Player Props · October 29, 2026</a></li>
+<li class="lane-showdown"><a class="lane-showdown" href="./showdown/2026-10-30_BAY_UCF.html" data-search="CFB DK Showdowns BAY @ UCF 6:30 p.m. CT">BAY @ UCF <span class="when">6:30 p.m. CT</span></a></li>
+<li class="lane-nflshowdown"><a class="lane-nflshowdown" href="./nfl-showdown/2026-11-01_ARI_DAL.html" data-search="NFL DK Showdown ARI @ DAL 12:00 p.m. CT">ARI @ DAL <span class="when">12:00 p.m. CT</span></a></li>
+<li class="lane-nflshowdown"><a class="lane-nflshowdown" href="./nfl-showdown/2026-11-01_ATL_TB.html" data-search="NFL DK Showdown ATL @ TB 12:00 p.m. CT">ATL @ TB <span class="when">12:00 p.m. CT</span></a></li>
+<li class="lane-nflshowdown"><a class="lane-nflshowdown" href="./nfl-showdown/2026-11-01_BAL_BUF.html" data-search="NFL DK Showdown BAL @ BUF 12:00 p.m. CT">BAL @ BUF <span class="when">12:00 p.m. CT</span></a></li>
+<li class="lane-nflshowdown"><a class="lane-nflshowdown" href="./nfl-showdown/2026-11-01_CLE_PIT.html" data-search="NFL DK Showdown CLE @ PIT 12:00 p.m. CT">CLE @ PIT <span class="when">12:00 p.m. CT</span></a></li>
+<li class="lane-nflshowdown"><a class="lane-nflshowdown" href="./nfl-showdown/2026-11-01_IND_JAX.html" data-search="NFL DK Showdown IND @ JAX 12:00 p.m. CT">IND @ JAX <span class="when">12:00 p.m. CT</span></a></li>
+<li class="lane-nflshowdown"><a class="lane-nflshowdown" href="./nfl-showdown/2026-11-01_LV_NYJ.html" data-search="NFL DK Showdown LV @ NYJ 12:00 p.m. CT">LV @ NYJ <span class="when">12:00 p.m. CT</span></a></li>
+<li class="lane-nflshowdown"><a class="lane-nflshowdown" href="./nfl-showdown/2026-11-01_MIN_DET.html" data-search="NFL DK Showdown MIN @ DET 12:00 p.m. CT">MIN @ DET <span class="when">12:00 p.m. CT</span></a></li>
+<li class="lane-nflshowdown"><a class="lane-nflshowdown" href="./nfl-showdown/2026-11-01_TEN_CIN.html" data-search="NFL DK Showdown TEN @ CIN 12:00 p.m. CT">TEN @ CIN <span class="when">12:00 p.m. CT</span></a></li>
+<li class="lane-nflshowdown"><a class="lane-nflshowdown" href="./nfl-showdown/2026-11-01_KC_DEN.html" data-search="NFL DK Showdown KC @ DEN 3:25 p.m. CT">KC @ DEN <span class="when">3:25 p.m. CT</span></a></li>
+<li class="lane-nflshowdown"><a class="lane-nflshowdown" href="./nfl-showdown/2026-11-01_NE_MIA.html" data-search="NFL DK Showdown NE @ MIA 3:25 p.m. CT">NE @ MIA <span class="when">3:25 p.m. CT</span></a></li>
+<li class="lane-showdown"><a class="lane-showdown" href="./showdown/2026-10-30_KENT_SSU.html" data-search="CFB DK Showdowns KENT @ SSU ">KENT @ SSU</a></li>
+<li class="lane-nflshowdown"><a class="lane-nflshowdown" href="./nfl-showdown/2026-11-01_LAC_LAR.html" data-search="NFL DK Showdown LAC @ LAR ">LAC @ LAR</a></li>
+<li class="lane-nfl"><a class="lane-nfl" href="./nfl/2026-11-01.html" data-search="NFL Player Props NFL Player Props · November 1, 2026 ">NFL Player Props · November 1, 2026</a></li>
 </ul>
 </main>
 </div>
@@ -227,8 +208,8 @@ button.theme:hover{filter:brightness(1.06);}
   function apply(mode){
     document.documentElement.classList.toggle('light', mode==='light');
     var b=document.getElementById('themeBtn');
-    if(b){ b.setAttribute('aria-label', mode==='light' ? 'Dark' : 'Light'); }
-    try { localStorage.setItem(KEY, mode); localStorage.setItem('desk-report-theme', mode); } catch (e) {}
+    if(b){ b.textContent = mode==='light' ? '\uD83C\uDF19' : '\u2600\uFE0F'; b.setAttribute('aria-label', mode==='light' ? 'Dark' : 'Light'); }
+    try { localStorage.setItem(KEY, mode); } catch (e) {}
   }
   var saved=null;
   try { saved=localStorage.getItem(KEY); } catch (e) {}
@@ -240,16 +221,34 @@ button.theme:hover{filter:brightness(1.06);}
 </script>
 <script>
 (function(){
+  var KEY='desk-hub-rail';
+  function paint(closed){
+    document.documentElement.classList.toggle('rail-closed', closed);
+    var b=document.getElementById('railToggle');
+    if(!b) return;
+    b.textContent = closed ? '›' : '‹';
+    b.setAttribute('aria-label', closed ? 'Show menu' : 'Hide menu');
+  }
+  paint(document.documentElement.classList.contains('rail-closed'));
+  window.toggleHubRail=function(){
+    var closed=!document.documentElement.classList.contains('rail-closed');
+    paint(closed);
+    try { localStorage.setItem(KEY, closed ? 'closed' : 'open'); } catch (e) {}
+  };
+})();
+</script>
+<script>
+(function(){
   var form=document.getElementById('playerSearchForm');
   var box=document.getElementById('hubSearch');
-  var panel=document.getElementById('hubSearchResults');
   if(!form||!box) return;
-  var index=null;
-  var indexLoading=false;
+  form.addEventListener('submit', function(e){ e.preventDefault(); filter(); jump(); });
+  box.addEventListener('input', filter);
   function hayOf(el){
     return (el.getAttribute('data-search')||el.textContent||'').toLowerCase();
   }
-  function filterInPage(q){
+  function filter(){
+    var q=(box.value||'').trim().toLowerCase();
     document.querySelectorAll('.day').forEach(function(day){
       var head=day.querySelector('h3');
       var games=day.querySelectorAll('.games a');
@@ -290,92 +289,11 @@ button.theme:hover{filter:brightness(1.06);}
       link.classList.toggle('hide', !!(q && hay.indexOf(q)<0));
     });
   }
-  function pageHits(q){
-    var hits=[];
-    var seen=new Set();
-    document.querySelectorAll('.games a, .games-latest a').forEach(function(a){
-      var href=a.getAttribute('href');
-      if(!href||seen.has(href)) return;
-      if(hayOf(a).indexOf(q)<0) return;
-      seen.add(href);
-      hits.push({href:href, label:(a.textContent||'').replace(/\s+/g,' ').trim(), desk:''});
-    });
-    return hits;
+  function jump(){
+    var first=document.querySelector('.games a:not(.hide)');
+    if(first) first.focus();
   }
-  function indexHits(q){
-    if(!index||!index.length) return [];
-    var out=[];
-    for(var i=0;i<index.length;i++){
-      var e=index[i];
-      if((e.hay||'').indexOf(q)<0) continue;
-      var label=e.label||'';
-      if(e.when) label=label+' · '+e.when;
-      out.push({href:e.href, label:label, desk:e.desk||''});
-      if(out.length>=40) break;
-    }
-    return out;
-  }
-  function mergeHits(a,b){
-    var seen=new Set();
-    var merged=[];
-    function add(it){
-      if(!it.href||seen.has(it.href)) return;
-      seen.add(it.href);
-      merged.push(it);
-    }
-    a.forEach(add);
-    b.forEach(add);
-    return merged.slice(0,40);
-  }
-  function renderPanel(items,q){
-    if(!panel) return;
-    if(!q){
-      panel.classList.add('hide');
-      panel.innerHTML='';
-      return;
-    }
-    if(!items.length){
-      panel.innerHTML='<p class="hub-search-empty">No matches on the hub.</p>';
-      panel.classList.remove('hide');
-      return;
-    }
-    panel.innerHTML=items.map(function(it){
-      var hint=it.desk?'<span class="desk-hint">'+it.desk+'</span>':'';
-      return '<a href="'+it.href+'">'+it.label+hint+'</a>';
-    }).join('');
-    panel.classList.remove('hide');
-  }
-  function loadIndex(cb){
-    if(index){ cb(); return; }
-    if(indexLoading) return;
-    indexLoading=true;
-    fetch('./assets/hub-search-index.json').then(function(r){
-      if(!r.ok) throw new Error('missing');
-      return r.json();
-    }).then(function(j){
-      index=j||[];
-      indexLoading=false;
-      cb();
-    }).catch(function(){
-      index=[];
-      indexLoading=false;
-      cb();
-    });
-  }
-  function run(){
-    var q=(box.value||'').trim().toLowerCase();
-    filterInPage(q);
-    if(!q){
-      renderPanel([],q);
-      return;
-    }
-    var onPage=pageHits(q);
-    loadIndex(function(){
-      renderPanel(mergeHits(onPage, indexHits(q)), q);
-    });
-  }
-  form.addEventListener('submit', function(e){ e.preventDefault(); run(); });
-  box.addEventListener('input', run);
 })();
-</script></body>
+</script>
+</body>
 </html>
