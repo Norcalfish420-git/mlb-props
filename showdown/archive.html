@@ -2,15 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/><script>
-(function(){
-  try {
-    var _th=localStorage.getItem('desk-hub-theme');
-    if(_th!=='light'&&_th!=='dark')_th=localStorage.getItem('desk-report-theme');
-    if(_th==='light') document.documentElement.classList.add('light');
-  } catch (e) {}
-})();
-</script>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>DK SHOWDOWN — Past slates</title>
 <style>
 :root{--bg:#121820;--fg:#f3efe6;--rail:#1a2430;--rail-line:#2e3c4a;--muted:#c4c0b6;--pill:#243140;--pill-fg:#f0c674;--pill-line:#3d4d5c;--accent:#be123c;--val:#e8b86d;}
@@ -22,36 +14,22 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:Ge
 .pill.on{background:var(--accent);color:#fff;border-color:var(--accent);}
 main{flex:1;padding:1.25rem 1.5rem 2.5rem;max-width:40rem;}
 a{color:var(--val);}
-.site-header{position:sticky;top:0;z-index:50;background:var(--bg,#161616);border-bottom:1px solid var(--rail-line,#393939);padding:.35rem .75rem;}a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.55rem;overflow:hidden;max-width:64rem;margin:0 auto;}a.gambit-home img{display:block;width:100%;height:auto;}.rail button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg,var(--fg));border:1px solid var(--pill-line,var(--line,#525252));border-radius:.5rem;padding:.62rem .85rem;min-height:2.35rem;text-align:center;}.rail button.theme:hover{background:var(--pill-hover,var(--pill,#393939));}</style>
-<style>
-</style>
-<style>
-.rail-head{display:flex;align-items:center;gap:.5rem;width:100%;margin:0 0 .85rem;flex:0 0 auto;}
-.rail-head .brand{margin:0;flex:1;min-width:0;line-height:1.1;}
-.rail-toggle{flex:0 0 auto;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
-html.rail-closed .rail{width:2.7rem;flex-basis:2.7rem;padding:.7rem .4rem;overflow:hidden;align-items:flex-start;}
-html.rail-closed .rail > *:not(.rail-head){display:none !important;}
-html.rail-closed .rail .rail-head{margin:0;width:100%;}
-html.rail-closed .rail .rail-head .brand{display:none;}
 </style>
 </head>
 <body>
-<header class="site-header noprint"><a class="gambit-home" href="../hub.html"><img src="../assets/gambit-home.jpg" alt="GAMBIT Home"/></a></header>
 <div class="shell">
 <aside class="rail">
-<div class="rail-head">
-<button class="rail-toggle" type="button" id="railToggle" onclick="toggleHubRail()" aria-label="Hide menu">‹</button>
 <p class="brand">DK SHOWDOWN<br/>ARCHIVE</p>
-<a class="pill back noprint" href="../showdown.html">Back</a>
-<a class="pill home noprint" href="../hub.html">Home</a>
+<a class="pill home" href="/mlb-props/hub.html">Home</a>
 <a class="pill" href="./">Today</a>
 <a class="pill on" href="./archive.html">Past slates</a>
 </aside>
 <main>
 <h1>Past slates</h1>
-<p class="sub">One link per contest. Home is the newest file (2026-10-24_UH_UTAH).</p>
+<p class="sub">One link per contest. Home is the newest file (2026-10-29_FAU_UNT).</p>
 <ul>
-<li><a href="./">Latest (2026-10-24_UH_UTAH)</a></li>
+<li><a href="./">Latest (2026-10-29_FAU_UNT)</a></li>
+<li><a href="./2026-10-29_FAU_UNT.html">October 29, 2026 · FAU UNT</a></li>
 <li><a href="./2026-10-24_VT_CLEM.html">October 24, 2026 · VT CLEM</a></li>
 <li><a href="./2026-10-24_UH_UTAH.html">October 24, 2026 · UH UTAH</a></li>
 <li><a href="./2026-10-24_TAM_BAMA.html">October 24, 2026 · TAM BAMA</a></li>
@@ -113,28 +91,5 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 </ul>
 </main>
 </div>
-<script>
-(function(){
-  var KEY='desk-hub-rail';
-  function paint(closed){
-    document.documentElement.classList.toggle('rail-closed', closed);
-    var b=document.getElementById('railToggle');
-    if(!b) return;
-    b.textContent = closed ? '\u203A' : '\u2039';
-    b.setAttribute('aria-label', closed ? 'Show menu' : 'Hide menu');
-  }
-  document.documentElement.classList.remove('rail-closed');
-  paint(false);
-  window.toggleHubRail=function(){
-    var closed=!document.documentElement.classList.contains('rail-closed');
-    paint(closed);
-    try { localStorage.setItem(KEY, closed ? 'closed' : 'open'); } catch (e) {}
-  };
-  setTimeout(function(){
-    if(!document.documentElement.classList.contains('rail-closed'))
-      window.toggleHubRail();
-  }, 10000);
-})();
-</script>
 </body>
 </html>
