@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["title", "rows"],
+  "properties": {
+    "title": { "type": "string" },
+    "subtitle": { "type": "string" },
+    "badge": { "type": "string", "description": "e.g. CURSOR · CHOICE #1" },
+    "rows": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["slot", "player", "team", "pos", "salary"],
+        "properties": {
+          "slot": { "type": "string" },
+          "player": { "type": "string" },
+          "team": { "type": "string" },
+          "pos": { "type": "string" },
+          "salary": { "type": "number" }
+        }
+      }
+    },
+    "total_spent": { "type": "number" },
+    "remaining": { "type": "number" },
+    "footer": { "type": "string" }
+  }
+}

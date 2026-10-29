@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 720px;
+    background: #0a0c10;
+    color: #f3efe6;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    padding: 28px 24px 32px;
+  }
+  #card {
+    border: 1px solid rgba(251, 113, 133, 0.45);
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(165deg, #1a1218 0%, #0d1117 55%, #121820 100%);
+    box-shadow: 0 24px 60px rgba(0,0,0,.55);
+  }
+  .head {
+    padding: 20px 22px 16px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    background: radial-gradient(ellipse 120% 80% at 50% -20%, rgba(190,18,60,.35), transparent);
+  }
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .12em;
+    color: #fb7185;
+    margin-bottom: 8px;
+  }
+  .head h1 {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -.02em;
+    line-height: 1.2;
+  }
+  .head p {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #c4c0b6;
+    font-weight: 600;
+  }
+  .rows { padding: 12px 16px 8px; }
+  .row {
+    display: grid;
+    grid-template-columns: 72px 1fr auto;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    background: rgba(38, 38, 38, 0.85);
+    border: 1px solid rgba(255,255,255,.06);
+  }
+  .row.cpt {
+    background: linear-gradient(90deg, rgba(217,119,6,.25), rgba(38,38,38,.9));
+    border-color: rgba(251, 191, 36, .35);
+  }
+  .slot {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: #fbbf24;
+  }
+  .row.cpt .slot::before { content: "★ "; }
+  .name {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .meta {
+    font-size: 12px;
+    color: #a8a29e;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+  .salary {
+    font-size: 16px;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    color: #86efac;
+  }
+  .foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 22px 18px;
+    border-top: 1px solid rgba(255,255,255,.08);
+    background: rgba(0,0,0,.25);
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .foot .tot { color: #fbbf24; }
+  .foot .rem { color: #86efac; }
+  .note {
+    padding: 0 22px 16px;
+    font-size: 11px;
+    color: #78716c;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div id="card">
+  <div class="head">
+    <div class="badge">{{BADGE}}</div>
+    <h1>{{TITLE}}</h1>
+    <p>{{SUBTITLE}}</p>
+  </div>
+  <div class="rows">{{ROWS}}</div>
+  <div class="foot">
+    <span class="tot">TOTAL {{TOTAL}}</span>
+    <span class="rem">REMAINING {{REMAINING}}</span>
+  </div>
+  <p class="note">{{FOOTER}}</p>
+</div>
+</body>
+</html>

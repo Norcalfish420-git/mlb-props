@@ -1,0 +1,16 @@
+{
+  "title": "Florida Atlantic @ North Texas",
+  "subtitle": "Thursday · October 29, 2026 · DraftKings Showdown",
+  "badge": "CURSOR · CHOICE #1 · RECOMMENDED",
+  "rows": [
+    { "slot": "Captain", "player": "Jahiem White", "team": "UNT", "pos": "RB", "salary": 14100 },
+    { "slot": "FLEX", "player": "Tayven Jackson", "team": "UNT", "pos": "QB", "salary": 10400 },
+    { "slot": "FLEX", "player": "Easton Messer", "team": "FAU", "pos": "WR", "salary": 10000 },
+    { "slot": "FLEX", "player": "Justin Stevenson", "team": "UNT", "pos": "WR", "salary": 7800 },
+    { "slot": "FLEX", "player": "Josiah Martin", "team": "UNT", "pos": "WR", "salary": 3000 },
+    { "slot": "FLEX", "player": "Kyle Koch", "team": "UNT", "pos": "WR", "salary": 4400 }
+  ],
+  "total_spent": 49700,
+  "remaining": 300,
+  "footer": "Engine table on hub · PRELIMINARY"
+}

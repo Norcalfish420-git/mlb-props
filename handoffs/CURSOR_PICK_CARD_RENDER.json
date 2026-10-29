@@ -1,0 +1,14 @@
+{
+  "installed_at": "2026-10-29T17:40:00-05:00",
+  "venv": "tools/.venv-card-render",
+  "playwright": "chromium",
+  "cli": "tools/render-cursor-card.sh",
+  "docs": "tools/cursor_pick_card/README.md",
+  "demo_page": "showdown/2026-10-29_FAU_UNT.html",
+  "demo_assets": [
+    "assets/cursor-picks/2026-10-29_FAU_UNT-cursor-choice1.png",
+    "assets/cursor-picks/2026-10-29_FAU_UNT-cursor-choice2.png",
+    "assets/cursor-picks/2026-10-29_FAU_UNT-cursor-choice3.png"
+  ],
+  "next": "Wire render.py into CFB showdown_slate_html publish so new slates auto-generate PNGs"
+}
