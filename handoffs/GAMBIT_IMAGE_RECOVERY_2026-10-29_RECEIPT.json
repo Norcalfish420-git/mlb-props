@@ -1,0 +1,56 @@
+{
+  "handoff": "bridge/image-handoffs/2026-10-29-recovery-v3.md",
+  "archive_zip_sha256": "c72b76bca4fdf65f53b5774d4d1309313dee5319bde048048bc3096ee870c962",
+  "archive_bytes": 40865270,
+  "manifest_batch": "2026-10-29-recovery-v2",
+  "manifest_sha256": "d7311a0abcb3796fcd80808c0d1fbb4ebcc67a9b1b0576db3fe70d81bd7d8786",
+  "validate_result": "PASS",
+  "references": 15,
+  "unique_objects": 14,
+  "featured_routes": 4,
+  "desk_handoff_git": {
+    "repo": "Norcalfish420-git/desk-handoff",
+    "branch": "main",
+    "commit": "PENDING_COMMIT"
+  },
+  "hub_git": {
+    "repo": "Norcalfish420-git/mlb-props",
+    "branch": "main",
+    "commit": "PENDING_COMMIT"
+  },
+  "legacy_jpeg_receipt": "handoffs/GPT_IMAGE_SYNC_RECEIPT.json",
+  "legacy_jpeg_note": "Prior JPEG uploads are preserved on disk; hub img src now points at verified PNG bytes.",
+  "routes": [
+    {
+      "route": "CFB|DK|SHOWDOWN|2026-10-29|FAU_UNT",
+      "featured_sha256": "4ab8dccc99ba36d2ab5eaf379f20467d3c3f74d6d16e9b6c3d8ad900a57ed9cb",
+      "hub_page": "showdown/2026-10-29_FAU_UNT.html",
+      "asset": "assets/gpt-picks/2026-10-29_FAU_UNT-chatgpt.png",
+      "placement": "Card Build, ChatGPT picks above Cursor picks",
+      "status": "HUB_WIRED"
+    },
+    {
+      "route": "NFL|DK|PROPS|2026-10-29|CAR_GB",
+      "featured_sha256": "cc104668ed835b0f8b9e974cbcf3e53426beee4294676b3a359da19bc120832b",
+      "hub_pages": ["nfl/2026-10-29.html", "nfl/index.html"],
+      "asset": "assets/gpt-picks/2026-10-29_CAR_GB-props-chatgpt.png",
+      "placement": "TOP PROPS (g0), research watchlist label, above Cursor picks",
+      "status": "HUB_WIRED"
+    },
+    {
+      "route": "CFB|DK|SHOWDOWN|2026-10-28|JACST_NMST",
+      "featured_sha256": "859ae6b24760f34f1e364fa1dc2d50b89b5ce6163b7709471820b7214ec69149",
+      "asset_staged": "assets/gpt-picks/2026-10-28_JACST_NMST-showdown-chatgpt.png",
+      "status": "UNRESOLVED_NO_HUB_PAGE",
+      "note": "No showdown/2026-10-28_*.html route in current site; PNG staged only."
+    },
+    {
+      "route": "CFB|DK|CLASSIC|2026-10-28",
+      "featured_sha256": "daff2d506e72f1577d3b65e287bd202117b5c789b4adfc5ef7f8ba3d3adac6d3",
+      "asset_staged": "assets/gpt-picks/2026-10-28_CFB-classic-chatgpt.png",
+      "status": "UNRESOLVED_NO_HUB_PAGE",
+      "note": "No classic/2026-10-28.html route in current site; PNG staged only."
+    }
+  ],
+  "live_verification": "PENDING_PUSH"
+}
