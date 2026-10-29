@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-29T17:35:00-05:00",
+  "source": "local_example_IMG_4480",
+  "index_revision": null,
+  "cards": [
+    {
+      "key": "CFB|DK|SHOWDOWN|2026-10-29|FAU_UNT|PRIMARY",
+      "hub_page": "showdown/2026-10-29_FAU_UNT.html",
+      "asset": "assets/gpt-picks/2026-10-29_FAU_UNT-chatgpt.jpg",
+      "sha256": "842335f4ba8b3e385176c06f1503699fdd388cd7c455a4b64fd4e01ee5b7ef7a",
+      "action": "added",
+      "placement": "Card Build tab, after sub blurb, before Choice #1"
+    }
+  ],
+  "published": true,
+  "note": "Pushed to Norcalfish420-git/mlb-props main for GitHub Pages"
+}
