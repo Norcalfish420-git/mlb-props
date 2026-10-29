@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-29T17:35:00-05:00",
-  "source": "local_example_IMG_4480",
+  "checked_at": "2026-10-29T17:40:00-05:00",
+  "source": "local_example_uploads",
   "index_revision": null,
   "cards": [
     {
@@ -10,6 +10,15 @@
       "sha256": "842335f4ba8b3e385176c06f1503699fdd388cd7c455a4b64fd4e01ee5b7ef7a",
       "action": "added",
       "placement": "Card Build tab, after sub blurb, before Choice #1"
+    },
+    {
+      "key": "NFL|DK|PROPS|2026-10-29|CAR_GB|PRIMARY",
+      "hub_page": "nfl/2026-10-29.html",
+      "hub_page_mirror": "nfl/index.html",
+      "asset": "assets/gpt-picks/2026-10-29_CAR_GB-props-chatgpt.jpg",
+      "sha256": "8160cf7f53e6d66c8938ae6f4be8b5f364cc9a04784412fd4099ccc7f474b469",
+      "action": "added",
+      "placement": "CAR @ GB tab, after game script, before OUR RECS"
     }
   ],
   "published": true,
