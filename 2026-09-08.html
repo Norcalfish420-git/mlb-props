@@ -68,6 +68,7 @@ html.rail-closed .rail > *:not(.rail-head){display:none !important;}
 html.rail-closed .rail .rail-head{margin:0;width:100%;}
 html.rail-closed .rail .rail-head .brand{display:none;}
 .site-header{position:sticky;top:0;z-index:50;background:var(--bg,#161616);border-bottom:1px solid var(--rail-line,#393939);padding:.35rem .75rem;}a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.55rem;overflow:hidden;max-width:64rem;margin:0 auto;}a.gambit-home img{display:block;width:100%;height:auto;}.rail button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg,var(--fg));border:1px solid var(--pill-line,var(--line,#525252));border-radius:.5rem;padding:.62rem .85rem;min-height:2.35rem;text-align:center;}.rail button.theme:hover{background:var(--pill-hover,var(--pill,#393939));}</style>
+<link rel="stylesheet" data-gambit-responsive="1" href="assets/gambit-responsive.css?v=20261029"/>
 </head><body>
 <header class="site-header noprint"><a class="gambit-home" href="./hub.html"><img src="./assets/gambit-home.jpg" alt="GAMBIT Home"/></a></header>
 <input class="tab" type="radio" name="g" id="g0" checked/>
@@ -93,7 +94,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <h3>YESTERDAY&#x27;S RESULTS (2026-09-07)</h3>
 <p><b>11 games</b> (all Final) | <b>49 legs graded</b> | HIT 19 / MISS 25 / VOID 5 | <b>Overall hit rate: 19/44 (43.2%)</b></p>
 <h4>Card results</h4>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>Card</th><th>Record</th><th>H/M/V</th></tr></thead>
 <tbody>
 <tr><td>Jeff McNeil, Zack Gelof, Henry Bolte, Brett Bateman, Nathan Lukes, Vladimir Guerrero Jr.</td><td>3/6</td><td>3/3/0</td></tr>
@@ -105,10 +106,10 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>Jeff McNeil, Sean Murphy, Daylen Lile, Tyrone Taylor, Pete Crow-Armstrong, Jackson Chourio</td><td>3/5</td><td>3/2/1</td></tr>
 <tr><td>Made the Cut · Pick 6 — Rafael Devers, Tommy Edman, Pete Crow-Armstrong, Bryce Eldridge, Michael Conforto, Freddie Freeman</td><td>3/5</td><td>3/2/1</td></tr>
 <tr><td>Nathan Lukes, Tim Tawa, Owen Caissie, Sal Frelick, Jakob Marsee, Ryan Waldschmidt, Matt Olson, Bryson Stott, Michael Harris II, Abimelec Ortiz, Carlos Cortes, Victor Scott II</td><td>5/10</td><td>5/5/2</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>Made the Cut — grade board</h3>
 <p>Every recommended bat with pick-time overall, boxscore result, and ship flags.</p>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>Pick</th><th>Team</th><th>Overall</th><th>Line</th><th>HRR</th><th>Grade</th><th>On $20 slip</th><th>Lab P6</th></tr></thead>
 <tbody>
 <tr><td>Pete Crow-Armstrong</td><td>CHC</td><td class="val">100</td><td class="val">O1.5</td><td class="val">5</td><td class="val"><b>HIT</b></td><td>rec only</td><td>—</td></tr>
@@ -123,9 +124,9 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>Andrew Vaughn</td><td>MIL</td><td class="val">86</td><td class="val">O1.5</td><td class="val">1</td><td class="val"><b>MISS</b></td><td>rec only</td><td>—</td></tr>
 <tr><td>Michael Conforto</td><td>CHC</td><td class="val">84</td><td class="val">1.5*</td><td class="val">—</td><td class="val"><b>—</b></td><td>rec only</td><td>—</td></tr>
 <tr><td>Jonah Cox</td><td>SF</td><td class="val">82</td><td class="val">1.5*</td><td class="val">—</td><td class="val"><b>—</b></td><td>rec only</td><td>—</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Summary</h4>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>Bucket</th><th>HIT</th><th>MISS</th><th>VOID</th><th>Hit rate</th></tr></thead>
 <tbody>
 <tr><td><b>Made the Cut (12)</b></td><td>3</td><td>3</td><td>1</td><td><b>50.0% (3/6)</b></td></tr>
@@ -135,10 +136,10 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>Overall 80–89</td><td>0</td><td>1</td><td>—</td><td>0.0% (0/1)</td></tr>
 <tr><td>Line O1.5</td><td>3</td><td>3</td><td>—</td><td>50.0% (3/6)</td></tr>
 <tr><td>Line O2.5</td><td>0</td><td>0</td><td>—</td><td>—</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>Under the Cut — grade board</h3>
 <p>Less / Under recs. HIT when hits+runs+RBIs stayed under the line (U1.5 → ≤1, U2.5 → ≤2).</p>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>Pick</th><th>Team</th><th>Overall</th><th>Under line</th><th>Under score</th><th>HRR</th><th>Grade</th></tr></thead>
 <tbody>
 <tr><td>Tim Tawa</td><td>AZ</td><td class="val">57</td><td>U1.5*</td><td>98</td><td class="val">1</td><td class="val"><b>HIT</b></td></tr>
@@ -153,14 +154,14 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>Carlos Cortes</td><td>ATH</td><td class="val">48</td><td>U1.5*</td><td>84</td><td class="val">3</td><td class="val"><b>MISS</b></td></tr>
 <tr><td>Victor Scott II</td><td>STL</td><td class="val">58</td><td>U1.5*</td><td>84</td><td class="val">0</td><td class="val"><b>VOID</b></td></tr>
 <tr><td>Nathan Lukes</td><td>TOR</td><td class="val">59</td><td>U1.5</td><td>83</td><td class="val">3</td><td class="val"><b>MISS</b></td></tr>
-</tbody></table>
+</tbody></table></div>
 <p><b>Under the Cut (12):</b> HIT 5 / MISS 5 / VOID 2 · hit rate 50.0% (5/10)</p>
 <p><b>Calibrated:</b> yes</p>
 </article>
 <article class="panel p1">
 <h2>ADVANCED — TOP 20 · 2026-09-08</h2>
 <p>Grouped by team (A–Z). # is Advanced rank. Ticket = on the stacked Pick 6.</p>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Matchup</th><th>Why</th><th>Ticket</th></tr></thead><tbody>
 <tr><td class="val">8</td><td>Henry Bolte</td><td>ATH</td><td>1</td><td class="val">O1.5</td><td class="val">100</td><td>22/35/8</td><td>vs Soriano (soft)</td><td>Hot week. Road ERA 3.45. Lineup rolling (3 hot). Team L3 12.</td><td>rec only</td></tr>
 <tr><td class="val">9</td><td>Jeff McNeil</td><td>ATH</td><td>2</td><td class="val">O1.5</td><td class="val">100</td><td>22/37/3</td><td>vs Soriano (soft)</td><td>Hot week. Road ERA 3.45. Lineup rolling (3 hot). Team L3 12.</td><td>rec only</td></tr>
@@ -182,28 +183,28 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td class="val">3</td><td>Nathan Lukes</td><td>TOR</td><td>6</td><td class="val">1.5@0.8x</td><td class="val">100</td><td>19/40/9</td><td>vs Perkins (cold)</td><td>Warm week. Pen ERA 5.4. Home ERA 7.04 (leaky). Lineup rolling (2 hot). Team L3 10.</td><td>on a ticket</td></tr>
 <tr><td class="val">5</td><td>Brett Bateman</td><td>TOR</td><td>1</td><td class="val">1.5@0.8x</td><td class="val">100</td><td>15/33/4</td><td>vs Perkins (cold)</td><td>Warm week. Pen ERA 5.4. Home ERA 7.04 (leaky). Lineup rolling (2 hot). Team L3 10.</td><td>on a ticket</td></tr>
 <tr><td class="val">7</td><td>Vladimir Guerrero Jr.</td><td>TOR</td><td>3</td><td class="val">O2.5</td><td class="val">100</td><td>18/25/3</td><td>vs Perkins (cold)</td><td>Warm week. Pen ERA 5.4. Home ERA 7.04 (leaky). Lineup rolling (2 hot). Team L3 10.</td><td>rec only</td></tr>
-</tbody></table>
+</tbody></table></div>
 </article>
 <article class="panel p2">
 <h2>Advanced · Pick 6 (2+2+2)</h2>
 <h3>TOR</h3>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Why</th></tr></thead><tbody>
 <tr><td class="val">1</td><td>Nathan Lukes</td><td>TOR</td><td>6</td><td class="val">1.5@0.8x</td><td class="val">100</td><td>19/40/9</td><td>Warm week vs Perkins (cold). Pen ERA 5.4. Home ERA 7.04 (leaky). Lineup rolling (2 hot).</td></tr>
 <tr><td class="val">2</td><td>Brett Bateman</td><td>TOR</td><td>1</td><td class="val">1.5@0.8x</td><td class="val">100</td><td>15/33/4</td><td>Warm week vs Perkins (cold). Pen ERA 5.4. Home ERA 7.04 (leaky). Lineup rolling (2 hot).</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>LAD</h3>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Why</th></tr></thead><tbody>
 <tr><td class="val">3</td><td>Teoscar Hernández</td><td>LAD</td><td>5</td><td class="val">O1.5</td><td class="val">100</td><td>22/35/11</td><td>Hot week vs Lodolo (cold). Cooked pen. Road ERA 6.00 (leaky). Lineup rolling (3 hot).</td></tr>
 <tr><td class="val">4</td><td>Freddie Freeman</td><td>LAD</td><td>2</td><td class="val">O1.5</td><td class="val">100</td><td>15/29/3</td><td>Warm week vs Lodolo (cold). Cooked pen. Road ERA 6.00 (leaky). Lineup rolling (3 hot).</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>TB</h3>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Why</th></tr></thead><tbody>
 <tr><td class="val">5</td><td>Junior Caminero</td><td>TB</td><td>3</td><td class="val">1.5@0.8x</td><td class="val">98</td><td>14/35/10</td><td>Warm week vs Smith-Shawver (cold). Home ERA 5.40 (soft). Lineup rolling (3 hot).</td></tr>
 <tr><td class="val">6</td><td>Yandy Díaz</td><td>TB</td><td>1</td><td class="val">O1.5</td><td class="val">100</td><td>17/31/9</td><td>Warm week vs Smith-Shawver (cold). Home ERA 5.40 (soft).</td></tr>
-</tbody></table>
+</tbody></table></div>
 </article>
 </main></div>
 <script>

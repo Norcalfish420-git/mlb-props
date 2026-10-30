@@ -94,6 +94,7 @@ html.rail-closed .rail > *:not(.rail-head){display:none !important;}
 html.rail-closed .rail .rail-head{margin:0;width:100%;}
 html.rail-closed .rail .rail-head .brand{display:none;}
 .site-header{position:sticky;top:0;z-index:50;background:var(--bg,#161616);border-bottom:1px solid var(--rail-line,#393939);padding:.35rem .75rem;}a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.55rem;overflow:hidden;max-width:64rem;margin:0 auto;}a.gambit-home img{display:block;width:100%;height:auto;}.rail button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg,var(--fg));border:1px solid var(--pill-line,var(--line,#525252));border-radius:.5rem;padding:.62rem .85rem;min-height:2.35rem;text-align:center;}.rail button.theme:hover{background:var(--pill-hover,var(--pill,#393939));}</style>
+<link rel="stylesheet" data-gambit-responsive="1" href="../assets/gambit-responsive.css?v=20261029"/>
 </head><body>
 <header class="site-header noprint"><a class="gambit-home" href="../hub.html"><img src="../assets/gambit-home.jpg" alt="GAMBIT Home"/></a></header>
 <input class="tab" type="radio" name="g" id="g0" checked/>
@@ -109,7 +110,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <p class="brand">CFB PROPS<br/>2026-09-25</p>
 </div>
 <a class="pill back noprint" href="../cfb.html">Back</a>
-<a class="pill home noprint" href="../hub.html">Home</a>
+
 <label class="pill" for="g0">THE PACK</label>
 <label class="pill" for="g1">Slate times</label>
 <label class="pill" for="g2">ETR VALUE</label>
@@ -144,23 +145,23 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <h3>ETR VALUE</h3>
 <p>Top 26 by ETR thesis (main slate), grouped by type. Rank is 1–26 across types. Over on a starter-band role, Under when ETR is well below that band. Slightly negative Value can still be a starter. ETR fantasy points are not a book line.</p>
 <h4>Passing yards</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>6</td><td>Josh Hoover</td><td>INDIANA</td><td class="val">O</td><td class="val">259.5</td><td>7.6</td><td>22.97</td><td class="val">-28.5</td></tr>
 <tr><td>17</td><td>Jaron-Keawe Sagapolutele</td><td>CALIFORNIA</td><td class="val">O</td><td class="val">259.5</td><td>4.6</td><td>18.16</td><td class="val">-15.6</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Rushing yards</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>5</td><td>Adam Mohammed</td><td>CAL</td><td class="val">O</td><td class="val">93.5</td><td>8.9</td><td>23.53</td><td class="val">-3.9</td></tr>
 <tr><td>14</td><td>Turbo Richard</td><td>INDIANA</td><td class="val">O</td><td class="val">90.5</td><td>4.9</td><td>17.84</td><td class="val">-26.6</td></tr>
 <tr><td>20</td><td>Gideon Davidson</td><td>CLEM</td><td class="val">O</td><td class="val">76.5</td><td>4.3</td><td>16.69</td><td class="val">-22.0</td></tr>
 <tr><td>23</td><td>Lee Beebe</td><td>INDIANA</td><td class="val">O</td><td class="val">57.5</td><td>3.0</td><td>13.2</td><td class="val">-21.1</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Receiving yards</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>2</td><td>Charlie Becker</td><td>INDIANA</td><td class="val">O</td><td class="val">79.5</td><td>9.2</td><td>21.87</td><td class="val">-15.5</td></tr>
@@ -173,9 +174,9 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>22</td><td>Olsen Patt-Henry</td><td>CLEM</td><td class="val">U</td><td class="val">14.5</td><td>-3.4</td><td>3.72</td><td class="val">-2.8</td></tr>
 <tr><td>24</td><td>EJ Reid</td><td>UAB</td><td class="val">O</td><td class="val">48.5</td><td>2.5</td><td>10.61</td><td class="val">-14.8</td></tr>
 <tr><td>25</td><td>Griffin Wilde</td><td>NORTHWESTERN</td><td class="val">O</td><td class="val">59.5</td><td>2.1</td><td>12.51</td><td class="val">+34.1</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Receptions</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>3</td><td>Charlie Becker</td><td>INDIANA</td><td class="val">O</td><td class="val">4.5</td><td>9.2</td><td>21.87</td><td class="val">-1.1</td></tr>
@@ -185,15 +186,15 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>16</td><td>Ian Strong</td><td>CALIFORNIA</td><td class="val">O</td><td class="val">4.5</td><td>4.8</td><td>16.13</td><td class="val">-0.2</td></tr>
 <tr><td>19</td><td>Chase Hendricks</td><td>CALIFORNIA</td><td class="val">O</td><td class="val">4.5</td><td>4.5</td><td>15.53</td><td class="val">+1.5</td></tr>
 <tr><td>26</td><td>Griffin Wilde</td><td>NORTHWESTERN</td><td class="val">O</td><td class="val">4.5</td><td>2.1</td><td>12.51</td><td class="val">-1.8</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Anytime TD</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>Charlie Becker</td><td>INDIANA</td><td class="val">O</td><td class="val">0.5</td><td>9.2</td><td>21.87</td><td class="val">-0.0</td></tr>
 <tr><td>4</td><td>Adam Mohammed</td><td>CAL</td><td class="val">O</td><td class="val">0.5</td><td>8.9</td><td>23.53</td><td class="val">+0.3</td></tr>
 <tr><td>9</td><td>Nick Marsh</td><td>INDIANA</td><td class="val">O</td><td class="val">0.5</td><td>6.4</td><td>18.57</td><td class="val">+0.3</td></tr>
-</tbody></table>
+</tbody></table></div>
 </article>
 <article class="panel p3">
 <h3>Game Script</h3>
@@ -206,20 +207,20 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <h3>ETR VALUE</h3>
 <p>Top 14 by ETR thesis (main slate), grouped by type. Rank is 1–14 across types. Over on a starter-band role, Under when ETR is well below that band. Slightly negative Value can still be a starter. ETR fantasy points are not a book line.</p>
 <h4>Passing yards</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>9</td><td>Jaron-Keawe Sagapolutele</td><td>CALIFORNIA</td><td class="val">O</td><td class="val">259.5</td><td>4.6</td><td>18.16</td><td class="val">-15.6</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Rushing yards</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>2</td><td>Adam Mohammed</td><td>CAL</td><td class="val">O</td><td class="val">93.5</td><td>8.9</td><td>23.53</td><td class="val">-3.9</td></tr>
 <tr><td>12</td><td>Gideon Davidson</td><td>CLEM</td><td class="val">O</td><td class="val">76.5</td><td>4.3</td><td>16.69</td><td class="val">-22.0</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Receiving yards</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>3</td><td>Bryant Wesco Jr.</td><td>CLEM</td><td class="val">O</td><td class="val">59.5</td><td>7.1</td><td>17.24</td><td class="val">-12.5</td></tr>
@@ -228,22 +229,22 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>10</td><td>Chase Hendricks</td><td>CALIFORNIA</td><td class="val">O</td><td class="val">49.5</td><td>4.5</td><td>15.53</td><td class="val">+16.5</td></tr>
 <tr><td>13</td><td>Tyler Brown</td><td>CLEM</td><td class="val">U</td><td class="val">25.5</td><td>-3.8</td><td>4.97</td><td class="val">+2.2</td></tr>
 <tr><td>14</td><td>Olsen Patt-Henry</td><td>CLEM</td><td class="val">U</td><td class="val">14.5</td><td>-3.4</td><td>3.72</td><td class="val">-2.8</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Receptions</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>4</td><td>Bryant Wesco Jr.</td><td>CLEM</td><td class="val">O</td><td class="val">4.5</td><td>7.1</td><td>17.24</td><td class="val">-0.8</td></tr>
 <tr><td>6</td><td>T.J. Moore</td><td>CLEM</td><td class="val">O</td><td class="val">5.5</td><td>5.7</td><td>16.26</td><td class="val">-0.4</td></tr>
 <tr><td>8</td><td>Ian Strong</td><td>CALIFORNIA</td><td class="val">O</td><td class="val">4.5</td><td>4.8</td><td>16.13</td><td class="val">-0.2</td></tr>
 <tr><td>11</td><td>Chase Hendricks</td><td>CALIFORNIA</td><td class="val">O</td><td class="val">4.5</td><td>4.5</td><td>15.53</td><td class="val">+1.5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Anytime TD</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>Adam Mohammed</td><td>CAL</td><td class="val">O</td><td class="val">0.5</td><td>8.9</td><td>23.53</td><td class="val">+0.3</td></tr>
-</tbody></table>
+</tbody></table></div>
 </article>
 <article class="panel p4">
 <h3>Game Script</h3>
@@ -256,11 +257,11 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <h3>ETR VALUE</h3>
 <p>Top 1 by ETR thesis (main slate), grouped by type. Rank is 1–1 across types. Over on a starter-band role, Under when ETR is well below that band. Slightly negative Value can still be a starter. ETR fantasy points are not a book line.</p>
 <h4>Receiving yards</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>EJ Reid</td><td>UAB</td><td class="val">O</td><td class="val">48.5</td><td>2.5</td><td>10.61</td><td class="val">-14.8</td></tr>
-</tbody></table>
+</tbody></table></div>
 </article>
 <article class="panel p5">
 <h3>SOURCES</h3>

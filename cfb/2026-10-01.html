@@ -92,6 +92,7 @@ html.rail-closed .rail > *:not(.rail-head){display:none !important;}
 html.rail-closed .rail .rail-head{margin:0;width:100%;}
 html.rail-closed .rail .rail-head .brand{display:none;}
 .site-header{position:sticky;top:0;z-index:50;background:var(--bg,#161616);border-bottom:1px solid var(--rail-line,#393939);padding:.35rem .75rem;}a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.55rem;overflow:hidden;max-width:64rem;margin:0 auto;}a.gambit-home img{display:block;width:100%;height:auto;}.rail button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg,var(--fg));border:1px solid var(--pill-line,var(--line,#525252));border-radius:.5rem;padding:.62rem .85rem;min-height:2.35rem;text-align:center;}.rail button.theme:hover{background:var(--pill-hover,var(--pill,#393939));}</style>
+<link rel="stylesheet" data-gambit-responsive="1" href="../assets/gambit-responsive.css?v=20261029"/>
 </head><body>
 <header class="site-header noprint"><a class="gambit-home" href="../hub.html"><img src="../assets/gambit-home.jpg" alt="GAMBIT Home"/></a></header>
 <input class="tab" type="radio" name="g" id="g0" checked/>
@@ -106,7 +107,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <p class="brand">CFB PROPS<br/>2026-10-01</p>
 </div>
 <a class="pill back noprint" href="../cfb.html">Back</a>
-<a class="pill home noprint" href="../hub.html">Home</a>
+
 <label class="pill" for="g0">THE PACK</label>
 <label class="pill" for="g1">Slate times</label>
 <label class="pill" for="g2">ETR VALUE</label>
@@ -140,15 +141,15 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <h3>ETR VALUE</h3>
 <p>Top 28 by ETR thesis (main slate), grouped by type. Rank is 1–28 across types. Over on a starter-band role, Under when ETR is well below that band. Slightly negative Value can still be a starter. ETR fantasy points are not a book line.</p>
 <h4>Passing yards</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>6</td><td>Mason Heintschel</td><td>PITTSBURGH</td><td class="val">O</td><td class="val">239.5</td><td>7.5</td><td>21.49</td><td class="val">+213.5</td></tr>
 <tr><td>9</td><td>Rodney Tisdale Jr.</td><td>WKU</td><td class="val">O</td><td class="val">255.5</td><td>6.2</td><td>20.23</td><td class="val">-85.5</td></tr>
 <tr><td>15</td><td>Tayven Jackson</td><td>UNT</td><td class="val">O</td><td class="val">278.5</td><td>4.5</td><td>18.08</td><td class="val">+17.3</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Rushing yards</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>2</td><td>Jahiem White</td><td>NORTH TEXAS</td><td class="val">O</td><td class="val">73.5</td><td>10.3</td><td>23.38</td><td class="val">-9.3</td></tr>
@@ -156,9 +157,9 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>5</td><td>Jeffrey Overton Jr.</td><td>VT</td><td class="val">O</td><td class="val">89.5</td><td>9.1</td><td>20.07</td><td class="val">-3.7</td></tr>
 <tr><td>12</td><td>James Jones</td><td>NMSU</td><td class="val">O</td><td class="val">88.5</td><td>4.8</td><td>16.59</td><td class="val">-10.9</td></tr>
 <tr><td>18</td><td>Ajay Allen</td><td>WESTERN KENTUCKY</td><td class="val">O</td><td class="val">59.5</td><td>3.6</td><td>16.45</td><td class="val">+31.5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Receiving yards</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>7</td><td>Jonathan Stafford Jr.</td><td>WESTERN KENTUCKY</td><td class="val">O</td><td class="val">49.5</td><td>7.2</td><td>15.47</td><td class="val">-1.5</td></tr>
@@ -174,9 +175,9 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>25</td><td>Josiah Thomas</td><td>NMSU</td><td class="val">O</td><td class="val">28.5</td><td>2.5</td><td>10.08</td><td class="val">+26.5</td></tr>
 <tr><td>27</td><td>Cataurus Hicks</td><td>PITTSBURGH</td><td class="val">O</td><td class="val">39.5</td><td>1.8</td><td>12.2</td><td class="val">+63.1</td></tr>
 <tr><td>28</td><td>Corri Milliner</td><td>NORTH TEXAS</td><td class="val">O</td><td class="val">57.5</td><td>1.5</td><td>10.88</td><td class="val">+1.9</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Receptions</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>8</td><td>Jonathan Stafford Jr.</td><td>WESTERN KENTUCKY</td><td class="val">O</td><td class="val">5.5</td><td>7.2</td><td>15.47</td><td class="val">-0.5</td></tr>
@@ -184,14 +185,14 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>14</td><td>TK King</td><td>NMSU</td><td class="val">O</td><td class="val">5.5</td><td>4.8</td><td>15.54</td><td class="val">-1.5</td></tr>
 <tr><td>17</td><td>Que&#x27;Sean Brown</td><td>VIRGINIA TECH</td><td class="val">O</td><td class="val">5.5</td><td>4.4</td><td>14.39</td><td class="val">-0.4</td></tr>
 <tr><td>26</td><td>Josiah Thomas</td><td>NMSU</td><td class="val">O</td><td class="val">2.5</td><td>2.5</td><td>10.08</td><td class="val">+0.5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Anytime TD</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>Jahiem White</td><td>NORTH TEXAS</td><td class="val">O</td><td class="val">1.5</td><td>10.3</td><td>23.38</td><td class="val">-0.7</td></tr>
 <tr><td>4</td><td>Jeffrey Overton Jr.</td><td>VT</td><td class="val">O</td><td class="val">0.5</td><td>9.1</td><td>20.07</td><td class="val">+0.3</td></tr>
-</tbody></table>
+</tbody></table></div>
 </article>
 <article class="panel p3">
 <h3>Game Script</h3>
@@ -204,32 +205,32 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <h3>ETR VALUE</h3>
 <p>Top 7 by ETR thesis (main slate), grouped by type. Rank is 1–7 across types. Over on a starter-band role, Under when ETR is well below that band. Slightly negative Value can still be a starter. ETR fantasy points are not a book line.</p>
 <h4>Passing yards</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>4</td><td>Tayven Jackson</td><td>UNT</td><td class="val">O</td><td class="val">278.5</td><td>4.5</td><td>18.08</td><td class="val">+17.3</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Rushing yards</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>2</td><td>Jahiem White</td><td>NORTH TEXAS</td><td class="val">O</td><td class="val">73.5</td><td>10.3</td><td>23.38</td><td class="val">-9.3</td></tr>
 <tr><td>3</td><td>Damari Alston</td><td>TLSA</td><td class="val">O</td><td class="val">66.5</td><td>9.2</td><td>19.43</td><td class="val">-16.9</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Receiving yards</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>5</td><td>Justin Stevenson</td><td>UNT</td><td class="val">O</td><td class="val">64.5</td><td>3.4</td><td>13.37</td><td class="val">+5.7</td></tr>
 <tr><td>6</td><td>Donnell Gee Jr.</td><td>TLSA</td><td class="val">O</td><td class="val">39.5</td><td>3.4</td><td>10.22</td><td class="val">+4.0</td></tr>
 <tr><td>7</td><td>Corri Milliner</td><td>NORTH TEXAS</td><td class="val">O</td><td class="val">57.5</td><td>1.5</td><td>10.88</td><td class="val">+1.9</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Anytime TD</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>Jahiem White</td><td>NORTH TEXAS</td><td class="val">O</td><td class="val">1.5</td><td>10.3</td><td>23.38</td><td class="val">-0.7</td></tr>
-</tbody></table>
+</tbody></table></div>
 </article>
 <article class="panel p4">
 <h3>SOURCES</h3>

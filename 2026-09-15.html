@@ -132,6 +132,7 @@ html.rail-closed .rail > *:not(.rail-head){display:none !important;}
 html.rail-closed .rail .rail-head{margin:0;width:100%;}
 html.rail-closed .rail .rail-head .brand{display:none;}
 .site-header{position:sticky;top:0;z-index:50;background:var(--bg,#161616);border-bottom:1px solid var(--rail-line,#393939);padding:.35rem .75rem;}a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.55rem;overflow:hidden;max-width:64rem;margin:0 auto;}a.gambit-home img{display:block;width:100%;height:auto;}.rail button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg,var(--fg));border:1px solid var(--pill-line,var(--line,#525252));border-radius:.5rem;padding:.62rem .85rem;min-height:2.35rem;text-align:center;}.rail button.theme:hover{background:var(--pill-hover,var(--pill,#393939));}</style>
+<link rel="stylesheet" data-gambit-responsive="1" href="assets/gambit-responsive.css?v=20261029"/>
 </head><body>
 <header class="site-header noprint"><a class="gambit-home" href="./hub.html"><img src="./assets/gambit-home.jpg" alt="GAMBIT Home"/></a></header>
 <input class="tab" type="radio" name="g" id="g0" checked/>
@@ -144,7 +145,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <button class="rail-toggle" type="button" id="railToggle" onclick="toggleHubRail()" aria-label="Hide menu">‹</button>
 <p class="brand">MLB PROPS<br/>2026-09-15</p>
 </div>
-<a class="pill home noprint" href="https://norcalfish420-git.github.io/mlb-props/hub.html">Main Prop Page</a>
+
 <label class="pill" for="g0">Yesterday</label>
 <label class="pill" for="g1">Over</label>
 <label class="pill" for="g2">Under</label>
@@ -161,7 +162,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <h3>YESTERDAY&#x27;S RESULTS (2026-09-14)</h3>
 <p><b>10 games</b> (all Final) | <b>52 legs graded</b> | HIT 27 / MISS 22 / VOID 3 | <b>Overall hit rate: 27/49 (55.1%)</b></p>
 <h4>Card results</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">Card</th><th data-col="1">Record</th><th data-col="2">H/M/V</th></tr></thead>
 <tbody>
 <tr><td>Otto Lopez, Javier Sanoja, Jakob Marsee, Randy Arozarena, Cole Young, Josh Naylor</td><td>3/6</td><td>3/3/0</td></tr>
@@ -176,10 +177,10 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>Luis Campusano</td><td>0/1</td><td>0/1/0</td></tr>
 <tr><td>Standard · Pick 4 — Mookie Betts, Francisco Lindor, Juan Soto, Max Muncy</td><td>0/4</td><td>0/4/0</td></tr>
 <tr><td>Steven Kwan, Ke&#x27;Bryan Hayes, Ramón Urías, Victor Scott II, Pedro Pagés, Petey Halpin, JJ Bleday, Tyler Stephenson, Tommy Troy, Julio Rodríguez, Jung Hoo Lee, J.P. Crawford</td><td>8/9</td><td>8/1/3</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>Made the Cut — grade board</h3>
 <p>Every recommended bat with pick-time overall, boxscore result, and ship flags.</p>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">Pick</th><th data-col="1">Team</th><th data-col="2">Overall</th><th data-col="3">Line</th><th data-col="4">HRR</th><th data-col="5">Grade</th><th data-col="6">On $20 slip</th><th data-col="7">Lab P6</th></tr></thead>
 <tbody>
 <tr><td>Francisco Lindor</td><td>NYM</td><td class="val">100</td><td class="val">O1.5</td><td class="val">0</td><td class="val"><b>MISS</b></td><td>rec only</td><td>yes</td></tr>
@@ -194,9 +195,9 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>Cody Bellinger</td><td>NYY</td><td class="val">96</td><td class="val">O1.5</td><td class="val">2</td><td class="val"><b>HIT</b></td><td>rec only</td><td>—</td></tr>
 <tr><td>Kyle Tucker</td><td>LAD</td><td class="val">96</td><td class="val">O1.5</td><td class="val">4</td><td class="val"><b>HIT</b></td><td>rec only</td><td>—</td></tr>
 <tr><td>Gabriel Moreno</td><td>AZ</td><td class="val">92</td><td class="val">O1.5</td><td class="val">1</td><td class="val"><b>MISS</b></td><td>rec only</td><td>—</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Summary</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">Bucket</th><th data-col="1">HIT</th><th data-col="2">MISS</th><th data-col="3">VOID</th><th data-col="4">Hit rate</th></tr></thead>
 <tbody>
 <tr><td><b>Made the Cut (12)</b></td><td>4</td><td>8</td><td>0</td><td><b>33.3% (4/12)</b></td></tr>
@@ -206,10 +207,10 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>Overall 80–89</td><td>0</td><td>0</td><td>—</td><td>—</td></tr>
 <tr><td>Line O1.5</td><td>3</td><td>8</td><td>—</td><td>27.3% (3/11)</td></tr>
 <tr><td>Line O2.5</td><td>1</td><td>0</td><td>—</td><td>100.0% (1/1)</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>Under the Cut — grade board</h3>
 <p>Less / Under recs. HIT when hits+runs+RBIs stayed under the line (U1.5 → ≤1, U2.5 → ≤2).</p>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">Pick</th><th data-col="1">Team</th><th data-col="2">Overall</th><th data-col="3">Under line</th><th data-col="4">Under score</th><th data-col="5">HRR</th><th data-col="6">Grade</th></tr></thead>
 <tbody>
 <tr><td>Ke&#x27;Bryan Hayes</td><td>CIN</td><td class="val">31</td><td>U1.5*</td><td>132</td><td class="val">0</td><td class="val"><b>HIT</b></td></tr>
@@ -224,7 +225,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>Jung Hoo Lee</td><td>SF</td><td class="val">52</td><td>U1.5</td><td>90</td><td class="val">1</td><td class="val"><b>HIT</b></td></tr>
 <tr><td>J.P. Crawford</td><td>SEA</td><td class="val">55</td><td>U1.5*</td><td>87</td><td class="val">4</td><td class="val"><b>MISS</b></td></tr>
 <tr><td>Steven Kwan</td><td>CLE</td><td class="val">49</td><td>U1.5</td><td>85</td><td class="val">1</td><td class="val"><b>HIT</b></td></tr>
-</tbody></table>
+</tbody></table></div>
 <p><b>Under the Cut (12):</b> HIT 8 / MISS 1 / VOID 3 · hit rate 88.9% (8/9)</p>
 <p><b>Calibrated:</b> yes</p>
 </article>

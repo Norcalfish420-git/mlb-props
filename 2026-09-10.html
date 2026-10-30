@@ -68,6 +68,7 @@ html.rail-closed .rail > *:not(.rail-head){display:none !important;}
 html.rail-closed .rail .rail-head{margin:0;width:100%;}
 html.rail-closed .rail .rail-head .brand{display:none;}
 .site-header{position:sticky;top:0;z-index:50;background:var(--bg,#161616);border-bottom:1px solid var(--rail-line,#393939);padding:.35rem .75rem;}a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.55rem;overflow:hidden;max-width:64rem;margin:0 auto;}a.gambit-home img{display:block;width:100%;height:auto;}.rail button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg,var(--fg));border:1px solid var(--pill-line,var(--line,#525252));border-radius:.5rem;padding:.62rem .85rem;min-height:2.35rem;text-align:center;}.rail button.theme:hover{background:var(--pill-hover,var(--pill,#393939));}</style>
+<link rel="stylesheet" data-gambit-responsive="1" href="assets/gambit-responsive.css?v=20261029"/>
 </head><body>
 <header class="site-header noprint"><a class="gambit-home" href="./hub.html"><img src="./assets/gambit-home.jpg" alt="GAMBIT Home"/></a></header>
 <input class="tab" type="radio" name="g" id="g0" checked/>
@@ -93,7 +94,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <h3>YESTERDAY&#x27;S RESULTS (2026-09-09)</h3>
 <p><b>15 games</b> (all Final) | <b>57 legs graded</b> | HIT 21 / MISS 27 / VOID 9 | <b>Overall hit rate: 21/48 (43.8%)</b></p>
 <h4>Card results</h4>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>Card</th><th>Record</th><th>H/M/V</th></tr></thead>
 <tbody>
 <tr><td>Elly De La Cruz, Héctor Rodríguez, Dane Myers, Rafael Devers, Christian Koss, Bryce Eldridge</td><td>3/4</td><td>3/1/2</td></tr>
@@ -107,10 +108,10 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>Ben Rice</td><td>0/1</td><td>0/1/0</td></tr>
 <tr><td>Made the Cut · Pick 6 — Brett Bateman, Vladimir Guerrero Jr., Alejandro Kirk, Josh Naylor, Dominic Canzone, Randy Arozarena</td><td>1/6</td><td>1/5/0</td></tr>
 <tr><td>Samuel Basallo, Dylan Beavers, Tommy White, Garrett Stubbs, Nate Furman, Carlos Narváez, Jose Siri, Alec Bohm, Bryce Harper, Eugenio Suárez, Lawrence Butler, JJ Bleday</td><td>2/7</td><td>2/5/5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>Made the Cut — grade board</h3>
 <p>Every recommended bat with pick-time overall, boxscore result, and ship flags.</p>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>Pick</th><th>Team</th><th>Overall</th><th>Line</th><th>HRR</th><th>Grade</th><th>On $20 slip</th><th>Lab P6</th></tr></thead>
 <tbody>
 <tr><td>TJ Rumfield</td><td>COL</td><td class="val">97</td><td class="val">O1.5</td><td class="val">0</td><td class="val"><b>MISS</b></td><td>rec only</td><td>—</td></tr>
@@ -125,9 +126,9 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>Javier Sanoja</td><td>MIA</td><td class="val">98</td><td class="val">O1.5</td><td class="val">3</td><td class="val"><b>HIT</b></td><td>rec only</td><td>—</td></tr>
 <tr><td>Dominic Canzone</td><td>SEA</td><td class="val">97</td><td class="val">O1.5</td><td class="val">0</td><td class="val"><b>MISS</b></td><td>rec only</td><td>yes</td></tr>
 <tr><td>Randy Arozarena</td><td>SEA</td><td class="val">96</td><td class="val">O1.5</td><td class="val">1</td><td class="val"><b>MISS</b></td><td>rec only</td><td>yes</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Summary</h4>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>Bucket</th><th>HIT</th><th>MISS</th><th>VOID</th><th>Hit rate</th></tr></thead>
 <tbody>
 <tr><td><b>Made the Cut (12)</b></td><td>4</td><td>7</td><td>0</td><td><b>36.4% (4/11)</b></td></tr>
@@ -137,10 +138,10 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>Overall 80–89</td><td>0</td><td>0</td><td>—</td><td>—</td></tr>
 <tr><td>Line O1.5</td><td>4</td><td>5</td><td>—</td><td>44.4% (4/9)</td></tr>
 <tr><td>Line O2.5</td><td>0</td><td>2</td><td>—</td><td>0.0% (0/2)</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>Under the Cut — grade board</h3>
 <p>Less / Under recs. HIT when hits+runs+RBIs stayed under the line (U1.5 → ≤1, U2.5 → ≤2).</p>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>Pick</th><th>Team</th><th>Overall</th><th>Under line</th><th>Under score</th><th>HRR</th><th>Grade</th></tr></thead>
 <tbody>
 <tr><td>Samuel Basallo</td><td>BAL</td><td class="val">45</td><td>U1.5*</td><td>110</td><td class="val">0</td><td class="val"><b>VOID</b></td></tr>
@@ -155,14 +156,14 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>Eugenio Suárez</td><td>CIN</td><td class="val">50</td><td>U1.5*</td><td>92</td><td class="val">0</td><td class="val"><b>VOID</b></td></tr>
 <tr><td>Lawrence Butler</td><td>ATH</td><td class="val">56</td><td>U1.5</td><td>92</td><td class="val">0</td><td class="val"><b>HIT</b></td></tr>
 <tr><td>JJ Bleday</td><td>CIN</td><td class="val">49</td><td>U1.5*</td><td>91</td><td class="val">0</td><td class="val"><b>HIT</b></td></tr>
-</tbody></table>
+</tbody></table></div>
 <p><b>Under the Cut (12):</b> HIT 2 / MISS 5 / VOID 5 · hit rate 28.6% (2/7)</p>
 <p><b>Calibrated:</b> yes</p>
 </article>
 <article class="panel p1">
 <h2>MADE THE CUT — TOP 18 · 2026-09-10</h2>
 <p>Over and Under names that made a cut. Grouped by team (A–Z).</p>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>#</th><th>Player</th><th>Team</th><th>Side</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Matchup</th><th>Why</th><th>Ticket</th></tr></thead><tbody>
 <tr><td class="val">6</td><td>Lane Thomas</td><td>ATL</td><td>Under</td><td>6</td><td class="val">U1.5</td><td class="val">43</td><td>3/9/1</td><td>vs Martinez (soft)</td><td>overall 43 · cold last 7 days · quiet last 3 games · poor vs-hand split · weak matchup</td><td>rec only</td></tr>
 <tr><td class="val">15</td><td>Mike Yastrzemski</td><td>ATL</td><td>Under</td><td>6</td><td class="val">U1.5</td><td class="val">57</td><td>7/10/3</td><td>vs Martinez (soft)</td><td>overall 57 · cold last 7 days · poor vs-hand split · weak matchup</td><td>rec only</td></tr>
@@ -182,19 +183,19 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td class="val">17</td><td>Josh Naylor</td><td>SEA</td><td>Under</td><td>6</td><td class="val">U1.5</td><td class="val">62</td><td>11/23/5</td><td>vs deGrom (middling)</td><td>overall 62 · cold last 7 days · tough platoon · weak matchup</td><td>rec only</td></tr>
 <tr><td class="val">12</td><td>Jonny DeLuca</td><td>TB</td><td>Under</td><td>4</td><td class="val">U1.5</td><td class="val">51</td><td>9/22/3</td><td>vs Pérez (steady)</td><td>overall 51 · cold last 7 days · steady starter · tough platoon · weak matchup</td><td>rec only</td></tr>
 <tr><td class="val">13</td><td>Ryan Vilade</td><td>TB</td><td>Under</td><td>2</td><td class="val">U1.5</td><td class="val">48</td><td>5/21/0</td><td>vs Pérez (steady)</td><td>overall 48 · cold last 7 days · quiet last 3 games · steady starter · weak matchup</td><td>rec only</td></tr>
-</tbody></table>
+</tbody></table></div>
 </article>
 <article class="panel p2">
 <h2>Standard · Pick 4</h2>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Why</th></tr></thead><tbody>
 <tr><td class="val">1</td><td>Luis García Jr.</td><td>NYY</td><td>4</td><td class="val">1.5*</td><td class="val">100</td><td>12/36/8</td><td>Warm week vs Feltner (cold). Cooked pen.</td></tr>
 <tr><td class="val">2</td><td>Cody Bellinger</td><td>NYY</td><td>2</td><td class="val">1.5@0.8x</td><td class="val">90</td><td>22/35/8</td><td>Hot week vs Feltner (cold). Cooked pen.</td></tr>
 <tr><td class="val">3</td><td>Trea Turner</td><td>PHI</td><td>2</td><td class="val">O1.5</td><td class="val">94</td><td>17/28/12</td><td>Warm week vs Javier (soft). Cooked pen.</td></tr>
 <tr><td class="val">4</td><td>Alec Bohm</td><td>PHI</td><td>5</td><td class="val">O1.5</td><td class="val">88</td><td>13/21/4</td><td>Warm week vs Javier (soft). Cooked pen.</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h2>Best Overall · Pick 6</h2>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Why</th></tr></thead><tbody>
 <tr><td class="val">1</td><td>Luis García Jr.</td><td>NYY</td><td>4</td><td class="val">1.5*</td><td class="val">100</td><td>12/36/8</td><td>Warm week vs Feltner (cold). Cooked pen.</td></tr>
 <tr><td class="val">2</td><td>Trea Turner</td><td>PHI</td><td>2</td><td class="val">O1.5</td><td class="val">94</td><td>17/28/12</td><td>Warm week vs Javier (soft). Cooked pen.</td></tr>
@@ -202,15 +203,15 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td class="val">4</td><td>Luis Arraez</td><td>PHI</td><td>4</td><td class="val">O1.5</td><td class="val">87</td><td>13/20/5</td><td>Warm week vs Javier (soft). Cooked pen.</td></tr>
 <tr><td class="val">5</td><td>Cody Bellinger</td><td>NYY</td><td>2</td><td class="val">1.5@0.8x</td><td class="val">90</td><td>22/35/8</td><td>Hot week vs Feltner (cold). Cooked pen.</td></tr>
 <tr><td class="val">6</td><td>Yordan Alvarez</td><td>HOU</td><td>2</td><td class="val">O1.5</td><td class="val">76</td><td>13/23/7</td><td>Warm week vs Wheeler (cold).</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h2>Advanced · Pick 4</h2>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>#</th><th>Player</th><th>Team</th><th>Slot</th><th>Line</th><th>Overall</th><th>HRR L7/L14/L3</th><th>Why</th></tr></thead><tbody>
 <tr><td class="val">1</td><td>Luis García Jr.</td><td>NYY</td><td>4</td><td class="val">O1.5</td><td class="val">100</td><td>12/36/8</td><td>Warm week vs Feltner (cold). Pen ERA 5.5. Road ERA 5.36 (soft). Lineup rolling (3 hot). Team L3 14.</td></tr>
 <tr><td class="val">2</td><td>Trea Turner</td><td>PHI</td><td>2</td><td class="val">O1.5</td><td class="val">94</td><td>17/28/12</td><td>Warm week vs Javier (soft). Cooked pen. Road ERA 6.65 (leaky). Lineup rolling (2 hot). Team L3 17.</td></tr>
 <tr><td class="val">3</td><td>Kyle Schwarber</td><td>PHI</td><td>1</td><td class="val">1.5@0.8x</td><td class="val">93</td><td>23/38/13</td><td>Hot week vs Javier (soft). Cooked pen. Road ERA 6.65 (leaky). Lineup rolling (2 hot). Team L3 17.</td></tr>
 <tr><td class="val">4</td><td>Cody Bellinger</td><td>NYY</td><td>2</td><td class="val">1.5@0.8x</td><td class="val">90</td><td>22/35/8</td><td>Hot week vs Feltner (cold). Pen ERA 5.5. Road ERA 5.36 (soft). Lineup rolling (3 hot). Team L3 14.</td></tr>
-</tbody></table>
+</tbody></table></div>
 </article>
 </main></div>
 <script>

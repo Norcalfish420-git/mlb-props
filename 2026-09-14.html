@@ -101,6 +101,7 @@ html.rail-closed .rail > *:not(.rail-head){display:none !important;}
 html.rail-closed .rail .rail-head{margin:0;width:100%;}
 html.rail-closed .rail .rail-head .brand{display:none;}
 .site-header{position:sticky;top:0;z-index:50;background:var(--bg,#161616);border-bottom:1px solid var(--rail-line,#393939);padding:.35rem .75rem;}a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.55rem;overflow:hidden;max-width:64rem;margin:0 auto;}a.gambit-home img{display:block;width:100%;height:auto;}.rail button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg,var(--fg));border:1px solid var(--pill-line,var(--line,#525252));border-radius:.5rem;padding:.62rem .85rem;min-height:2.35rem;text-align:center;}.rail button.theme:hover{background:var(--pill-hover,var(--pill,#393939));}</style>
+<link rel="stylesheet" data-gambit-responsive="1" href="assets/gambit-responsive.css?v=20261029"/>
 </head><body>
 <header class="site-header noprint"><a class="gambit-home" href="./hub.html"><img src="./assets/gambit-home.jpg" alt="GAMBIT Home"/></a></header>
 <input class="tab" type="radio" name="g" id="g0" checked/>
@@ -129,7 +130,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <h3>YESTERDAY&#x27;S RESULTS (2026-09-13)</h3>
 <p><b>15 games</b> (all Final) | <b>52 legs graded</b> | HIT 23 / MISS 21 / VOID 8 | <b>Overall hit rate: 23/44 (52.3%)</b></p>
 <h4>Card results</h4>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>Card</th><th>Record</th><th>H/M/V</th></tr></thead>
 <tbody>
 <tr><td>A.J. Ewing, Francisco Lindor, Jared Young, Rafael Devers, Bryce Eldridge, Christian Koss</td><td>2/5</td><td>2/3/1</td></tr>
@@ -143,10 +144,10 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>A.J. Ewing, Francisco Lindor, Jackson Merrill, Pete Crow-Armstrong, Jake McCarthy, Teoscar Hernández</td><td>1/6</td><td>1/5/0</td></tr>
 <tr><td>Standard · Pick 4 — Elly De La Cruz, Dane Myers, Griffin Conine, Otto Lopez</td><td>2/4</td><td>2/2/0</td></tr>
 <tr><td>Jackson Holliday, Jordan Lawlar, Denzel Clarke, Turner Hill, Matt Shaw, Coby Mayo, TJ Friedl, Nick Loftin, Isaac Collins, Sung-Mun Song, Mickey Gasper, Trevor Story</td><td>6/8</td><td>6/2/4</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>Made the Cut — grade board</h3>
 <p>Every recommended bat with pick-time overall, boxscore result, and ship flags.</p>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>Pick</th><th>Team</th><th>Overall</th><th>Line</th><th>HRR</th><th>Grade</th><th>On $20 slip</th><th>Lab P6</th></tr></thead>
 <tbody>
 <tr><td>Elly De La Cruz</td><td>CIN</td><td class="val">100</td><td class="val">O1.5</td><td class="val">4</td><td class="val"><b>HIT</b></td><td>rec only</td><td>yes</td></tr>
@@ -161,9 +162,9 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>CJ Abrams</td><td>WSH</td><td class="val">99</td><td class="val">O1.5</td><td class="val">3</td><td class="val"><b>HIT</b></td><td>rec only</td><td>—</td></tr>
 <tr><td>Jake McCarthy</td><td>COL</td><td class="val">96</td><td class="val">O1.5</td><td class="val">0</td><td class="val"><b>MISS</b></td><td>rec only</td><td>—</td></tr>
 <tr><td>Mike Trout</td><td>LAA</td><td class="val">96</td><td class="val">1.5*</td><td class="val">—</td><td class="val"><b>—</b></td><td>rec only</td><td>—</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4>Summary</h4>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>Bucket</th><th>HIT</th><th>MISS</th><th>VOID</th><th>Hit rate</th></tr></thead>
 <tbody>
 <tr><td><b>Made the Cut (12)</b></td><td>5</td><td>3</td><td>0</td><td><b>62.5% (5/8)</b></td></tr>
@@ -173,10 +174,10 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>Overall 80–89</td><td>0</td><td>0</td><td>—</td><td>—</td></tr>
 <tr><td>Line O1.5</td><td>5</td><td>3</td><td>—</td><td>62.5% (5/8)</td></tr>
 <tr><td>Line O2.5</td><td>0</td><td>0</td><td>—</td><td>—</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>Under the Cut — grade board</h3>
 <p>Less / Under recs. HIT when hits+runs+RBIs stayed under the line (U1.5 → ≤1, U2.5 → ≤2).</p>
-<table>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table>
 <thead><tr><th>Pick</th><th>Team</th><th>Overall</th><th>Under line</th><th>Under score</th><th>HRR</th><th>Grade</th></tr></thead>
 <tbody>
 <tr><td>Jackson Holliday</td><td>BAL</td><td class="val">46</td><td>U1.5*</td><td>106</td><td class="val">0</td><td class="val"><b>HIT</b></td></tr>
@@ -191,7 +192,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>Sung-Mun Song</td><td>SD</td><td class="val">54</td><td>U1.5*</td><td>96</td><td class="val">0</td><td class="val"><b>VOID</b></td></tr>
 <tr><td>Mickey Gasper</td><td>BOS</td><td class="val">49</td><td>U1.5*</td><td>94</td><td class="val">0</td><td class="val"><b>VOID</b></td></tr>
 <tr><td>Trevor Story</td><td>BOS</td><td class="val">46</td><td>U1.5</td><td>91</td><td class="val">4</td><td class="val"><b>MISS</b></td></tr>
-</tbody></table>
+</tbody></table></div>
 <p><b>Under the Cut (12):</b> HIT 6 / MISS 2 / VOID 4 · hit rate 75.0% (6/8)</p>
 <p><b>Calibrated:</b> yes</p>
 </article>

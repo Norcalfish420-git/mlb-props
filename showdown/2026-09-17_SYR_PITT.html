@@ -132,6 +132,7 @@ html.rail-closed .rail > *:not(.rail-head){display:none !important;}
 html.rail-closed .rail .rail-head{margin:0;width:100%;}
 html.rail-closed .rail .rail-head .brand{display:none;}
 .site-header{position:sticky;top:0;z-index:50;background:var(--bg,#161616);border-bottom:1px solid var(--rail-line,#393939);padding:.35rem .75rem;}a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.55rem;overflow:hidden;max-width:64rem;margin:0 auto;}a.gambit-home img{display:block;width:100%;height:auto;}.rail button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg,var(--fg));border:1px solid var(--pill-line,var(--line,#525252));border-radius:.5rem;padding:.62rem .85rem;min-height:2.35rem;text-align:center;}.rail button.theme:hover{background:var(--pill-hover,var(--pill,#393939));}</style>
+<link rel="stylesheet" data-gambit-responsive="1" href="../assets/gambit-responsive.css?v=20261029"/>
 </head><body>
 <header class="site-header noprint"><a class="gambit-home" href="../hub.html"><img src="../assets/gambit-home.jpg" alt="GAMBIT Home"/></a></header>
 <input class="tab" type="radio" name="v" id="v-report" checked/>
@@ -144,7 +145,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <p class="brand">CFB SHOWDOWN<br/>2026-09-17<br/>Syracuse @ Pittsburgh</p>
 </div>
 <a class="pill back noprint" href="../showdown.html">Back</a>
-<a class="pill home noprint" href="../hub.html">Home</a>
+
 <div class="view-row">
 <label class="pill" for="v-report">Report</label>
 <label class="pill" for="v-value">Value</label>
@@ -304,7 +305,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <h3>DEPTH CHART</h3>
 <p>Offense skill. A missing name is —.</p>
 <h4 class="team-break">Pittsburgh</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
 <tbody>
 <tr><td>QB</td><td>Mason Heintschel</td><td>Holden Geriner</td></tr>
@@ -315,9 +316,9 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>TE</td><td>Carson Kent</td><td>Elijah Lagg</td></tr>
 <tr><td>K</td><td>Antonio Chadha</td><td>Sam Hunsaker</td></tr>
 <tr><td>PK</td><td>Antonio Chadha</td><td>Sam Hunsaker</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4 class="team-break">Syracuse</h4>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th scope="col" data-col="0">Pos</th><th scope="col" data-col="1">1</th><th scope="col" data-col="2">2</th></tr></thead>
 <tbody>
 <tr><td>QB</td><td>Steve Angeli</td><td>Amari Odom</td></tr>
@@ -328,10 +329,10 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>TE</td><td>David Clement</td><td>Daunte Bacheyie</td></tr>
 <tr><td>K</td><td>Tripp Woody</td><td>Shay Barker</td></tr>
 <tr><td>PK</td><td>Tripp Woody</td><td>Shay Barker</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>INJURIES</h3>
 <p>Who is out or in doubt for this game. A blank list means nobody on the board is tagged.</p>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Status</th><th scope="col" data-col="3">Tonight</th></tr></thead>
 <tbody>
 <tr><td>Calvin Russell III</td><td>Syracuse</td><td>Out</td><td>Not playing. Sit him.</td></tr>
@@ -339,16 +340,16 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>JaKyrian Turner</td><td>Pittsburgh</td><td>Game-time</td><td>Decision at kickoff.</td></tr>
 <tr><td>Malik Knight</td><td>Pittsburgh</td><td>Game-time</td><td>Decision at kickoff.</td></tr>
 <tr><td>Benny Haselrig</td><td>Pittsburgh</td><td>Expected</td><td>Expected to play.</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>CHART NOTES</h3>
 <p>When the listed chart does not match who is actually playing.</p>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Note</th></tr></thead>
 <tbody>
 <tr><td>Tony Kinsler</td><td>Pittsburgh</td><td>Pitt school recap: Knight out vs SYR; Kinsler charted X2 / co-starter; ETR 8.81 at 1600.</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>SCRIPT SIX</h3>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
 <tr><td>Captain</td><td>Mason Heintschel</td><td>Pittsburgh</td><td>QB</td><td>$16,500</td><td class="val">1.02×</td><td>passing yards 279.5</td></tr>
@@ -357,7 +358,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>FLEX</td><td>Damon Ferguson Jr.</td><td>Pittsburgh</td><td>RB</td><td>$7,000</td><td class="val">No line</td><td>—</td></tr>
 <tr><td>FLEX</td><td>Ju&#x27;Juan Johnson</td><td>Syracuse</td><td>RB</td><td>$5,200</td><td class="val">0.86×</td><td>rushing yards 44.5</td></tr>
 <tr><td>FLEX</td><td>Justus Ross-Simmons</td><td>Syracuse</td><td>WR</td><td>$2,400</td><td class="val">No line</td><td>—</td></tr>
-</tbody></table>
+</tbody></table></div>
 <p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
 <p><b>Why these six</b></p>
 <ul>
@@ -370,7 +371,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 </ul>
 <p>Projected points on this six: 108.09. The captain&#x27;s stats count extra.</p>
 <h3>ETR BUILD 1</h3>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
 <tr><td>Captain</td><td>Mason Heintschel</td><td>Pittsburgh</td><td>QB</td><td>$16,500</td><td class="val">1.02×</td><td>passing yards 279.5</td></tr>
@@ -379,7 +380,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>FLEX</td><td>Damon Ferguson Jr.</td><td>Pittsburgh</td><td>RB</td><td>$7,000</td><td class="val">No line</td><td>—</td></tr>
 <tr><td>FLEX</td><td>Ju&#x27;Juan Johnson</td><td>Syracuse</td><td>RB</td><td>$5,200</td><td class="val">0.86×</td><td>rushing yards 44.5</td></tr>
 <tr><td>FLEX</td><td>Justus Ross-Simmons</td><td>Syracuse</td><td>WR</td><td>$2,400</td><td class="val">No line</td><td>—</td></tr>
-</tbody></table>
+</tbody></table></div>
 <p class="left">Leftover: $100  (spent $49,900 / $50,000)</p>
 <p><b>Why these six</b></p>
 <ul>
@@ -393,7 +394,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 </ul>
 <p>Projected points on this six: 108.09. The captain&#x27;s stats count extra.</p>
 <h3>ETR BUILD 2</h3>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
 <tr><td>Captain</td><td>Cataurus Hicks</td><td>Pittsburgh</td><td>WR</td><td>$12,600</td><td class="val">0.79×</td><td>receiving yards 66.5</td></tr>
@@ -402,7 +403,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>FLEX</td><td>Umari Hatcher</td><td>Syracuse</td><td>WR</td><td>$8,000</td><td class="val">0.89×</td><td>receiving yards 71.5</td></tr>
 <tr><td>FLEX</td><td>Damon Ferguson Jr.</td><td>Pittsburgh</td><td>RB</td><td>$7,000</td><td class="val">No line</td><td>—</td></tr>
 <tr><td>FLEX</td><td>Daunte Bacheyie</td><td>Syracuse</td><td>WR</td><td>$1,000</td><td class="val">3.15×</td><td>receiving yards 31.5</td></tr>
-</tbody></table>
+</tbody></table></div>
 <p class="left">Leftover: $0  (spent $50,000 / $50,000)</p>
 <p><b>Why these six</b></p>
 <ul>
@@ -416,7 +417,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 </ul>
 <p>Projected points on this six: 107.66. The captain&#x27;s stats count extra.</p>
 <h3>ETR BUILD 3</h3>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th scope="col" data-col="0">Slot</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
 <tr><td>Captain</td><td>Steve Angeli</td><td>Syracuse</td><td>QB</td><td>$15,600</td><td class="val">0.96×</td><td>passing yards 249.5</td></tr>
@@ -425,7 +426,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>FLEX</td><td>Damon Ferguson Jr.</td><td>Pittsburgh</td><td>RB</td><td>$7,000</td><td class="val">No line</td><td>—</td></tr>
 <tr><td>FLEX</td><td>La&#x27;Vell Wright</td><td>Pittsburgh</td><td>RB</td><td>$5,800</td><td class="val">No line</td><td>—</td></tr>
 <tr><td>FLEX</td><td>Justus Ross-Simmons</td><td>Syracuse</td><td>WR</td><td>$2,400</td><td class="val">No line</td><td>—</td></tr>
-</tbody></table>
+</tbody></table></div>
 <p class="left">Leftover: $200  (spent $49,800 / $50,000)</p>
 <p><b>Why these six</b></p>
 <ul>
@@ -438,7 +439,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 </ul>
 <p>Projected points on this six: 105.44. The captain&#x27;s stats count extra.</p>
 <h3>SITS</h3>
-<table class="sortable">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Team</th><th scope="col" data-col="2">Why</th></tr></thead>
 <tbody>
 <tr><td>Calvin Russell III</td><td>Syracuse</td><td>Achilles, not cleared. $1,000 is a trap</td></tr>
@@ -448,12 +449,12 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>Malik Knight</td><td>Pittsburgh</td><td>shoulder, questionable</td></tr>
 <tr><td>DraftKings OUT</td><td>—</td><td>Max Hunt, Nate Edwards, Rodney Dunbar, Synkwan Smith, Terrell Wilfong</td></tr>
 <tr><td>Kickers</td><td>—</td><td>sitting both sides</td></tr>
-</tbody></table>
+</tbody></table></div>
 </div>
 <div class="value-board"><h3>OUR VALUE</h3>
 <p>Every salary-board skill player on each team — not a Top 20. <b>Value</b> is our book number versus DraftKings salary (<b>1.00× is even</b>). Below even and no posted line stay on the table (—). This is not ETR. Sorted highest value first.</p>
 <h4 class="team-break">Syracuse</h4>
-<table class="sortable" data-default-sort="Value">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable" data-default-sort="Value">
 <thead><tr><th scope="col" data-col="0">#</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>Daunte Bacheyie</td><td>Syracuse</td><td>WR</td><td>$1,000</td><td class="val">3.15×</td><td>receiving yards 31.5</td></tr>
@@ -492,9 +493,9 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>34</td><td>Zaid Lott</td><td>Syracuse</td><td>QB</td><td>$6,000</td><td class="val">—</td><td>—</td></tr>
 <tr><td>35</td><td>Tylik Hill</td><td>Syracuse</td><td>RB</td><td>$6,400</td><td class="val">—</td><td>—</td></tr>
 <tr><td>36</td><td>Amari Odom</td><td>Syracuse</td><td>QB</td><td>$9,000</td><td class="val">—</td><td>—</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4 class="team-break">Pittsburgh</h4>
-<table class="sortable" data-default-sort="Value">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable" data-default-sort="Value">
 <thead><tr><th scope="col" data-col="0">#</th><th scope="col" data-col="1">Player</th><th scope="col" data-col="2">Team</th><th scope="col" data-col="3">Pos</th><th scope="col" data-col="4">Salary</th><th scope="col" data-col="5">Value</th><th scope="col" data-col="6">Line</th></tr></thead>
 <tbody>
 <tr><td>1</td><td>Mason Heintschel</td><td>Pittsburgh</td><td>QB</td><td>$11,000</td><td class="val">1.02×</td><td>passing yards 279.5</td></tr>
@@ -536,11 +537,11 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>37</td><td>Damon Ferguson Jr.</td><td>Pittsburgh</td><td>RB</td><td>$7,000</td><td class="val">—</td><td>—</td></tr>
 <tr><td>38</td><td>Holden Geriner</td><td>Pittsburgh</td><td>QB</td><td>$9,400</td><td class="val">—</td><td>—</td></tr>
 <tr><td>39</td><td>Ja&#x27;Kyrian Turner</td><td>Pittsburgh</td><td>RB</td><td>$9,800</td><td class="val">—</td><td>—</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>ETR VALUE</h3>
 <p>ETR&#x27;s projection sheet for this game — not the Saturday main slate. Click a column to sort. A blank cell is —. <b>ETR salary</b> and <b>Owned</b> are their Showdown numbers. <b>Points per $1k</b> is their projected points versus our DraftKings salary for this game. Negative sheet values stay on the table. Every Showdown skill player on that team stays on the table (— if ETR did not list them). Not a Top 20.</p>
 <h4 class="team-break">Pittsburgh</h4>
-<table class="sortable" data-default-sort="Points per $1k">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable" data-default-sort="Points per $1k">
 <thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Pos</th><th scope="col" data-col="2">Opp</th><th scope="col" data-col="3">ETR salary</th><th scope="col" data-col="4">Projected points</th><th scope="col" data-col="5">Sheet value</th><th scope="col" data-col="6">Owned</th><th scope="col" data-col="7">Our salary</th><th scope="col" data-col="8">Points per $1k</th></tr></thead>
 <tbody>
 <tr><td>Tony Kinsler</td><td>WR</td><td>Syracuse</td><td>$1,600</td><td>8.81</td><td>4.4</td><td>17.5</td><td>$1,600</td><td class="val">5.51</td></tr>
@@ -582,9 +583,9 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>Tyreek Robinson</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
 <tr><td>Wyatt Villarreal</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
 <tr><td>Zaky Roberts</td><td>RB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h4 class="team-break">Syracuse</h4>
-<table class="sortable" data-default-sort="Points per $1k">
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable" data-default-sort="Points per $1k">
 <thead><tr><th scope="col" data-col="0">Player</th><th scope="col" data-col="1">Pos</th><th scope="col" data-col="2">Opp</th><th scope="col" data-col="3">ETR salary</th><th scope="col" data-col="4">Projected points</th><th scope="col" data-col="5">Sheet value</th><th scope="col" data-col="6">Owned</th><th scope="col" data-col="7">Our salary</th><th scope="col" data-col="8">Points per $1k</th></tr></thead>
 <tbody>
 <tr><td>Daunte Bacheyie</td><td>WR</td><td>Pittsburgh</td><td>$1,000</td><td>8.26</td><td>4.8</td><td>21.1</td><td>$1,000</td><td class="val">8.26</td></tr>
@@ -623,7 +624,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
 <tr><td>Shay Barker</td><td>K</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$4,600</td><td class="val">—</td></tr>
 <tr><td>Terrell Wilfong</td><td>WR</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$1,000</td><td class="val">—</td></tr>
 <tr><td>Zaid Lott</td><td>QB</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$6,000</td><td class="val">—</td></tr>
-</tbody></table></div>
+</tbody></table></div></div>
 <div class="player-book"><h3>Player book</h3><p class="sub">Quarterbacks, running backs, and receivers are separate tables. One row per player. Week 0 through last week sit side by side — one cell per week. Teal is up from last week, red is down. Click a header to sort. A blank cell is —.</p><div class="team-pills noprint"><button type="button" class="team-pill on" data-team="PITT">Pittsburgh</button><button type="button" class="team-pill" data-team="SYR">Syracuse</button></div><section class="pos-book" data-pos="QB"><h4>Quarterbacks</h4><div class="season-log-wrap"><table class="sortable season-log compact" data-default-sort="Salary"><thead><tr><th scope="col" class="who" data-col="0">Player</th><th scope="col" class="who" data-col="1">Team</th><th scope="col" class="who" data-col="2">Salary</th><th scope="col" class="wk-g w0" data-col="3">W0</th><th scope="col" class="wk-g w1" data-col="4">W1</th><th scope="col" class="wk-g w2" data-col="5">W2</th></tr></thead><tbody><tr data-team="PITT"><td class="who">Mason Heintschel</td><td class="who">Pittsburgh</td><td class="who" data-n="11000">$11,000</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="51.42"><span class="opp">Miami (OH)</span><span class="line">41-453-7 · 5-23-0</span><span class="dk">51.42</span></td><td class="w2 wk val trend-down" data-n="9.78"><span class="opp">UCF</span><span class="line">29-212-0 · 7-13-0</span><span class="dk">9.78<span class="delta">-41.6</span></span></td></tr><tr data-team="SYR" hidden><td class="who">Steve Angeli</td><td class="who">Syracuse</td><td class="who" data-n="10400">$10,400</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk val" data-n="15.84"><span class="opp">CAL</span><span class="line">49-306-1 · 6-(-4)-0</span><span class="dk">15.84</span></td></tr><tr data-team="PITT"><td class="who">Holden Geriner</td><td class="who">Pittsburgh</td><td class="who" data-n="9400">$9,400</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="1.58"><span class="opp">Miami (OH)</span><span class="line">3-27-0 · 1-5-0</span><span class="dk">1.58</span></td><td class="w2 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td></tr></tbody></table></div></section><section class="pos-book" data-pos="RB"><h4>Running backs</h4><div class="season-log-wrap"><table class="sortable season-log compact" data-default-sort="Salary"><thead><tr><th scope="col" class="who" data-col="0">Player</th><th scope="col" class="who" data-col="1">Team</th><th scope="col" class="who" data-col="2">Salary</th><th scope="col" class="wk-g w0" data-col="3">W0</th><th scope="col" class="wk-g w1" data-col="4">W1</th><th scope="col" class="wk-g w2" data-col="5">W2</th></tr></thead><tbody><tr data-team="PITT"><td class="who">Ja&#x27;Kyrian Turner</td><td class="who">Pittsburgh</td><td class="who" data-n="9800">$9,800</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="20.8"><span class="opp">Miami (OH)</span><span class="line">11-39-0 · 4-69-1</span><span class="dk">20.8</span></td><td class="w2 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td></tr><tr data-team="PITT"><td class="who">Damon Ferguson Jr.</td><td class="who">Pittsburgh</td><td class="who" data-n="7000">$7,000</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="13.4"><span class="opp">Miami (OH)</span><span class="line">6-22-0 · 3-22-1</span><span class="dk">13.4</span></td><td class="w2 wk val trend-up" data-n="17.6"><span class="opp">UCF</span><span class="line">20-59-1 · 3-27-0/4 tgt</span><span class="dk">17.6<span class="delta">+4.2</span></span></td></tr><tr data-team="SYR" hidden><td class="who">Tylik Hill</td><td class="who">Syracuse</td><td class="who" data-n="6400">$6,400</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk val" data-n="5.6"><span class="opp">CAL</span><span class="line">2-56-0</span><span class="dk">5.6</span></td></tr><tr data-team="PITT"><td class="who">La&#x27;Vell Wright</td><td class="who">Pittsburgh</td><td class="who" data-n="5800">$5,800</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="2.5"><span class="opp">Miami (OH)</span><span class="line">4-25-0</span><span class="dk">2.5</span></td><td class="w2 wk val trend-up" data-n="8.3"><span class="opp">UCF</span><span class="line">13-35-0 · 2-28-0/5 tgt</span><span class="dk">8.3<span class="delta">+5.8</span></span></td></tr><tr data-team="SYR" hidden><td class="who">Ju&#x27;Juan Johnson</td><td class="who">Syracuse</td><td class="who" data-n="5200">$5,200</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk val" data-n="11.7"><span class="opp">CAL</span><span class="line">15-46-1 · 1-1-0</span><span class="dk">11.7</span></td></tr><tr data-team="SYR" hidden><td class="who">Shavane Anderson Jr.</td><td class="who">Syracuse</td><td class="who" data-n="4400">$4,400</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk val" data-n="1.8"><span class="opp">CAL</span><span class="line">9-18-0</span><span class="dk">1.8</span></td></tr><tr data-team="SYR" hidden><td class="who">Ahmad Miller</td><td class="who">Syracuse</td><td class="who" data-n="1000">$1,000</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk val" data-n="0.2"><span class="opp">CAL</span><span class="line">2-2-0</span><span class="dk">0.2</span></td></tr><tr data-team="PITT"><td class="who">Jaylin Brown</td><td class="who">Pittsburgh</td><td class="who" data-n="1000">$1,000</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="0"><span class="opp">Miami (OH)</span><span class="line">1-0-0</span><span class="dk">0.0</span></td><td class="w2 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td></tr><tr data-team="PITT"><td class="who">Justin Cook</td><td class="who">Pittsburgh</td><td class="who" data-n="1000">$1,000</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="12.7"><span class="opp">Miami (OH)</span><span class="line">1-50-1 · 1-7-0</span><span class="dk">12.7</span></td><td class="w2 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td></tr></tbody></table></div></section><section class="pos-book" data-pos="WR"><h4>Wide receivers</h4><div class="season-log-wrap"><table class="sortable season-log compact" data-default-sort="Salary"><thead><tr><th scope="col" class="who" data-col="0">Player</th><th scope="col" class="who" data-col="1">Team</th><th scope="col" class="who" data-col="2">Salary</th><th scope="col" class="wk-g w0" data-col="3">W0</th><th scope="col" class="wk-g w1" data-col="4">W1</th><th scope="col" class="wk-g w2" data-col="5">W2</th></tr></thead><tbody><tr data-team="PITT"><td class="who">Cataurus Hicks</td><td class="who">Pittsburgh</td><td class="who" data-n="8400">$8,400</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="25.4"><span class="opp">Miami (OH)</span><span class="line">5-114-1</span><span class="dk">25.4</span></td><td class="w2 wk val trend-down" data-n="9.4"><span class="opp">UCF</span><span class="line">3-64-0/6 tgt</span><span class="dk">9.4<span class="delta">-16.0</span></span></td></tr><tr data-team="SYR" hidden><td class="who">Umari Hatcher</td><td class="who">Syracuse</td><td class="who" data-n="8000">$8,000</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk val" data-n="13.7"><span class="opp">CAL</span><span class="line">6-77-0/12 tgt</span><span class="dk">13.7</span></td></tr><tr data-team="PITT"><td class="who">Censere Lee</td><td class="who">Pittsburgh</td><td class="who" data-n="7400">$7,400</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="19.6"><span class="opp">Miami (OH)</span><span class="line">5-86-1</span><span class="dk">19.6</span></td><td class="w2 wk val trend-down" data-n="3.8"><span class="opp">UCF</span><span class="line">2-18-0/3 tgt</span><span class="dk">3.8<span class="delta">-15.8</span></span></td></tr><tr data-team="PITT"><td class="who">Malik Knight</td><td class="who">Pittsburgh</td><td class="who" data-n="5600">$5,600</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="16.3"><span class="opp">Miami (OH)</span><span class="line">5-53-1</span><span class="dk">16.3</span></td><td class="w2 wk val trend-down" data-n="4"><span class="opp">UCF</span><span class="line">2-20-0/3 tgt</span><span class="dk">4.0<span class="delta">-12.3</span></span></td></tr><tr data-team="SYR" hidden><td class="who">Cole Weaver</td><td class="who">Syracuse</td><td class="who" data-n="4800">$4,800</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td></tr><tr data-team="PITT"><td class="who">Bryce Yates</td><td class="who">Pittsburgh</td><td class="who" data-n="3600">$3,600</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="15.3"><span class="opp">Miami (OH)</span><span class="line">4-53-1</span><span class="dk">15.3</span></td><td class="w2 wk val trend-down" data-n="4.7"><span class="opp">UCF</span><span class="line">2-27-0/2 tgt</span><span class="dk">4.7<span class="delta">-10.6</span></span></td></tr><tr data-team="PITT"><td class="who">Elijah Lagg</td><td class="who">Pittsburgh</td><td class="who" data-n="3200">$3,200</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="11.3"><span class="opp">Miami (OH)</span><span class="line">3-23-1</span><span class="dk">11.3</span></td><td class="w2 wk val trend-down" data-n="3.7"><span class="opp">UCF</span><span class="line">2-17-0/2 tgt</span><span class="dk">3.7<span class="delta">-7.6</span></span></td></tr><tr data-team="SYR" hidden><td class="who">Justus Ross-Simmons</td><td class="who">Syracuse</td><td class="who" data-n="2400">$2,400</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk val" data-n="19.5"><span class="opp">CAL</span><span class="line">6-105-0</span><span class="dk">19.5</span></td></tr><tr data-team="PITT"><td class="who">Carson Kent</td><td class="who">Pittsburgh</td><td class="who" data-n="2000">$2,000</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="4.9"><span class="opp">Miami (OH)</span><span class="line">2-29-0</span><span class="dk">4.9</span></td><td class="w2 wk val trend-down" data-n="1.5"><span class="opp">UCF</span><span class="line">1-5-0/2 tgt</span><span class="dk">1.5<span class="delta">-3.4</span></span></td></tr><tr data-team="PITT"><td class="who">Tony Kinsler</td><td class="who">Pittsburgh</td><td class="who" data-n="1600">$1,600</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk val" data-n="1.6"><span class="opp">UCF</span><span class="line">1-6-0/2 tgt</span><span class="dk">1.6</span></td></tr><tr data-team="SYR" hidden><td class="who">Darien Williams</td><td class="who">Syracuse</td><td class="who" data-n="1000">$1,000</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk val" data-n="5.8"><span class="opp">CAL</span><span class="line">3-28-0/5 tgt</span><span class="dk">5.8</span></td></tr><tr data-team="SYR" hidden><td class="who">Darius Johnson</td><td class="who">Syracuse</td><td class="who" data-n="1000">$1,000</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk val" data-n="5"><span class="opp">CAL</span><span class="line">3-20-0/6 tgt</span><span class="dk">5.0</span></td></tr><tr data-team="SYR" hidden><td class="who">Daunte Bacheyie</td><td class="who">Syracuse</td><td class="who" data-n="1000">$1,000</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk val" data-n="17.3"><span class="opp">CAL</span><span class="line">4-73-1/5 tgt</span><span class="dk">17.3</span></td></tr><tr data-team="PITT"><td class="who">Demetrice McCray</td><td class="who">Pittsburgh</td><td class="who" data-n="1000">$1,000</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="4.4"><span class="opp">Miami (OH)</span><span class="line">2-24-0</span><span class="dk">4.4</span></td><td class="w2 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td></tr><tr data-team="PITT"><td class="who">Tyreek Robinson</td><td class="who">Pittsburgh</td><td class="who" data-n="1000">$1,000</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="0.2"><span class="opp">Miami (OH)</span><span class="line">1-2-0</span><span class="dk">0.2</span></td><td class="w2 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td></tr><tr data-team="SYR" hidden><td class="who">Zamondre Merriweather</td><td class="who">Syracuse</td><td class="who" data-n="1000">$1,000</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk val" data-n="1.2"><span class="opp">CAL</span><span class="line">1-2-0/1 tgt</span><span class="dk">1.2</span></td></tr><tr data-team="SYR" hidden><td class="who">David Omopariola</td><td class="who">Syracuse</td><td class="who">—</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk val" data-n="2.2"><span class="opp">CAL</span><span class="line">1-12-0/1 tgt</span><span class="dk">2.2</span></td></tr><tr data-team="SYR" hidden><td class="who">Demetres Samuel Jr.</td><td class="who">Syracuse</td><td class="who">—</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk val" data-n="0.2"><span class="opp">CAL</span><span class="line">1-2-0</span><span class="dk">0.2</span></td></tr><tr data-team="SYR" hidden><td class="who">Jimmy Gregg</td><td class="who">Syracuse</td><td class="who">—</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk val" data-n="0.48"><span class="opp">CAL</span><span class="line">—</span><span class="dk">0.48</span></td></tr><tr data-team="PITT"><td class="who">Samuel Hunsaker</td><td class="who">Pittsburgh</td><td class="who">—</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="1"><span class="opp">Miami (OH)</span><span class="line">—</span><span class="dk">1.0</span></td><td class="w2 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td></tr><tr data-team="PITT"><td class="who">Team</td><td class="who">Pittsburgh</td><td class="who">—</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="0"><span class="opp">Miami (OH)</span><span class="line">1-0-0</span><span class="dk">0.0</span></td><td class="w2 wk val trend-down" data-n="-0.4"><span class="opp">UCF</span><span class="line">3-(-4)-0</span><span class="dk">-0.4<span class="delta">-0.4</span></span></td></tr><tr data-team="SYR" hidden><td class="who">Team</td><td class="who">Syracuse</td><td class="who">—</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk val" data-n="-0.2"><span class="opp">CAL</span><span class="line">1-(-2)-0</span><span class="dk">-0.2</span></td></tr></tbody></table></div></section><section class="pos-book" data-pos="K"><h4>Kickers</h4><div class="season-log-wrap"><table class="sortable season-log compact" data-default-sort="Salary"><thead><tr><th scope="col" class="who" data-col="0">Player</th><th scope="col" class="who" data-col="1">Team</th><th scope="col" class="who" data-col="2">Salary</th><th scope="col" class="wk-g w0" data-col="3">W0</th><th scope="col" class="wk-g w1" data-col="4">W1</th><th scope="col" class="wk-g w2" data-col="5">W2</th></tr></thead><tbody><tr data-team="PITT"><td class="who">Antonio Chadha</td><td class="who">Pittsburgh</td><td class="who" data-n="5000">$5,000</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk val" data-n="10"><span class="opp">Miami (OH)</span><span class="line">1 FG · 7 XP</span><span class="dk">10.0</span></td><td class="w2 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td></tr><tr data-team="SYR" hidden><td class="who">Tripp Woody</td><td class="who">Syracuse</td><td class="who" data-n="4600">$4,600</td><td class="w0 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w1 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td><td class="w2 wk empty"><span class="opp">—</span><span class="line">—</span><span class="dk">—</span></td></tr></tbody></table></div></section></div>
 </article>
 </main></div>

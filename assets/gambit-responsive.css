@@ -1,0 +1,35 @@
+/* Shared report layout. Keep desktop styling and table semantics intact. */
+@media screen {
+  main { min-width: 0; }
+  main pre { max-width: 100%; box-sizing: border-box; overflow-x: auto; }
+  .gambit-table-scroll { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .gambit-table-scroll:focus-visible { outline: 2px solid var(--accent, #d97706); outline-offset: 2px; }
+}
+@media screen and (max-width: 720px) {
+  body { background-attachment: scroll; }
+  .site-header { position: static; }
+  .shell { display: block; min-height: 0; }
+  .shell .rail { display: flex; box-sizing: border-box; gap: .45rem; position: static; width: 100%; max-width: 100%; height: auto; padding: .75rem; flex-direction: row; flex-wrap: wrap; border-right: 0; border-bottom: 1px solid var(--rail-line, #393939); overflow: visible; }
+  .rail > .brand, .rail .rail-head { flex: 1 1 100%; min-width: 0; margin-bottom: .35rem; }
+  .rail .rail-head { flex-wrap: wrap; max-width: 100%; box-sizing: border-box; }
+  .rail .rail-head > .brand { flex: 1 1 calc(100% - 4rem); }
+  .rail .rail-head > * { max-width: 100%; box-sizing: border-box; }
+  .rail form { flex: 1 1 100%; min-width: 0; }
+  html.rail-closed .rail .rail-head > :not(.rail-toggle) { display: none; }
+  .rail .view-row { display: flex; flex: 1 1 100%; flex-direction: row; flex-wrap: wrap; gap: .45rem; margin: 0; }
+  .rail .pill { box-sizing: border-box; min-height: 44px; flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+  .rail .search-form, .rail .rail-search-theme-row { flex: 1 1 100%; min-width: 0; }
+  .rail button { min-height: 44px; }
+  main, .shell main { box-sizing: border-box; width: 100%; max-width: none; padding: 1rem .75rem 2rem; }
+  main h1 { font-size: 1.35rem; line-height: 1.3; overflow-wrap: anywhere; }
+  main p, main li, main h2, main h3, main h4 { overflow-wrap: anywhere; }
+  main img { max-width: 100%; box-sizing: border-box; }
+  .gpt-pick-image, .cursor-pick-image { margin: 0; }
+  .gpt-pick-image img, .cursor-pick-image img { width: 100%; height: auto; }
+  .bat-grid { grid-template-columns: minmax(0, 1fr); }
+  .gambit-table-scroll > table { min-width: 30rem; }
+  main pre { max-width: 100%; box-sizing: border-box; overflow-x: auto; }
+}
+@media print {
+  .gambit-table-scroll { overflow: visible; max-width: none; }
+}
