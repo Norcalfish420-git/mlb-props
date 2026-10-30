@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-29T17:40:00-05:00",
+  "checked_at": "2026-10-30T17:58:40-05:00",
   "source": "local_example_uploads",
   "index_revision": null,
   "cards": [
@@ -19,6 +19,14 @@
       "sha256": "8160cf7f53e6d66c8938ae6f4be8b5f364cc9a04784412fd4099ccc7f474b469",
       "action": "added",
       "placement": "TOP PROPS tab (g0), after week board heading, before table; not CAR @ GB pill"
+    },
+    {
+      "key": "NFL|DK|PROPS|2026-11-01|WEEK8|PRIMARY",
+      "hub_page": "nfl/2026-11-01.html",
+      "asset": "assets/gpt-picks/2026-11-01-week8-pick6-chatgpt.jpg",
+      "sha256": "b7c5606a82fb1725ebdaf0010bef56a8d913c770fec54b80f503086e334a912a",
+      "action": "added",
+      "placement": "TOP PROPS tab (g0), after week board heading, before the week-board table; not a game pill"
     }
   ],
   "published": true,
