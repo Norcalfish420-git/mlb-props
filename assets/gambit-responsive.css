@@ -42,7 +42,9 @@
   .rail a.pill.back,
   .rail label.pill[for="v-cards"],
   .rail label.pill[for="v-etr"],
-  .rail label.pill[for="v-script"] {
+  .rail label.pill[for="v-script"],
+  .rail label.pill[for="v-book"],
+  .rail label.pill[for="v-game"] {
     display: block !important;
     box-sizing: border-box !important;
     width: 100%;
@@ -68,21 +70,29 @@
   .rail label.pill[for="v-cards"] { background-image: url("./gambit-nav-card-build.svg") !important; }
   .rail label.pill[for="v-etr"] { background-image: url("./gambit-nav-etr-value.svg") !important; }
   .rail label.pill[for="v-script"] { background-image: url("./gambit-nav-open-checks.svg") !important; }
+  .rail label.pill[for="v-book"] { background-image: url("./gambit-nav-player-book.png") !important; }
+  .rail label.pill[for="v-game"] { background-image: url("./gambit-nav-game-report.png") !important; }
   .rail a.pill.back:hover,
   .rail label.pill[for="v-cards"]:hover,
   .rail label.pill[for="v-etr"]:hover,
-  .rail label.pill[for="v-script"]:hover {
+  .rail label.pill[for="v-script"]:hover,
+  .rail label.pill[for="v-book"]:hover,
+  .rail label.pill[for="v-game"]:hover {
     filter: brightness(1.18) drop-shadow(0 0 5px rgba(36,150,255,.6));
   }
   .rail a.pill.back:focus-visible,
   .rail label.pill[for="v-cards"]:focus-visible,
   .rail label.pill[for="v-etr"]:focus-visible,
-  .rail label.pill[for="v-script"]:focus-visible {
+  .rail label.pill[for="v-script"]:focus-visible,
+  .rail label.pill[for="v-book"]:focus-visible,
+  .rail label.pill[for="v-game"]:focus-visible {
     outline: 3px solid #5fbcff !important; outline-offset: 2px;
   }
   #v-cards:checked ~ .shell .rail label.pill[for="v-cards"],
   #v-etr:checked ~ .shell .rail label.pill[for="v-etr"],
-  #v-script:checked ~ .shell .rail label.pill[for="v-script"] {
+  #v-script:checked ~ .shell .rail label.pill[for="v-script"],
+  #v-book:checked ~ .shell .rail label.pill[for="v-book"],
+  #v-game:checked ~ .shell .rail label.pill[for="v-game"] {
     box-shadow: 0 0 0 2px #f33755, 0 0 14px rgba(29,146,255,.65) !important;
   }
 }
@@ -90,7 +100,9 @@
   .shell .rail a.pill.back,
   .shell .rail label.pill[for="v-cards"],
   .shell .rail label.pill[for="v-etr"],
-  .shell .rail label.pill[for="v-script"] {
+  .shell .rail label.pill[for="v-script"],
+  .shell .rail label.pill[for="v-book"],
+  .shell .rail label.pill[for="v-game"] {
     flex: 1 1 calc(50% - .5rem) !important;
     min-width: 8.65rem !important;
     max-width: none;

@@ -60,7 +60,7 @@ def transform(source, relative_path):
         out = out[:start] + '<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0">' + out[start:end] + '</div>' + out[end:]
     if 'data-gambit-responsive="1"' not in out:
         prefix = '../' * (len(relative_path.parts) - 1)
-        link = '<link rel="stylesheet" data-gambit-responsive="1" href="' + prefix + 'assets/gambit-responsive.css?v=20261029b"/>\n'
+        link = '<link rel="stylesheet" data-gambit-responsive="1" href="' + prefix + 'assets/gambit-responsive.css?v=20261030"/>\n'
         if '</head>' not in out: raise ValueError(f'No head closing tag: {relative_path}')
         out = out.replace('</head>', link + '</head>', 1)
     return out

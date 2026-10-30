@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-30T17:58:40-05:00",
+  "checked_at": "2026-10-30T18:37:33-05:00",
   "source": "local_example_uploads",
   "index_revision": null,
   "cards": [
@@ -27,6 +27,15 @@
       "sha256": "b7c5606a82fb1725ebdaf0010bef56a8d913c770fec54b80f503086e334a912a",
       "action": "added",
       "placement": "TOP PROPS tab (g0), after week board heading, before the week-board table; not a game pill"
+    },
+    {
+      "key": "CFB|DK|PROPS|2026-10-31|PRIMARY",
+      "hub_page": "cfb/2026-10-31.html",
+      "hub_page_mirror": "cfb/index.html",
+      "asset": "assets/gpt-picks/2026-10-31-cfb-pick6-chatgpt.jpg",
+      "sha256": "eaff38fc8394f9db93fef0c09d8e4da9bd742c2a9b83e5e050ab8fb31f7f2906",
+      "action": "added",
+      "placement": "THE PACK tab (g0), ChatGPT picks before Cursor picks / Pick 6 table"
     }
   ],
   "published": true,
