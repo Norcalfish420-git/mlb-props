@@ -99,3 +99,27 @@
     align-self: stretch;
   }
 }
+
+
+/* Exact text-matched ETR tabs on NFL and CFB props; non-ETR gN tabs unchanged. */
+@media screen {
+ .rail label.pill.gambit-nav-etr {
+   display:block!important; box-sizing:border-box!important; width:100%;
+   min-height:0!important; height:auto!important; aspect-ratio:500/112;
+   padding:0!important; border:0!important; border-radius:.6rem!important;
+   color:transparent!important; font-size:0!important; line-height:0!important;
+   text-shadow:none!important; overflow:hidden; cursor:pointer;
+   background-color:#050c17!important;
+   background-image:url("./gambit-nav-etr-value.svg")!important;
+   background-position:center!important; background-size:100% 100%!important;
+   background-repeat:no-repeat!important; box-shadow:0 2px 9px rgba(0,0,0,.3);
+ }
+ .rail label.pill.gambit-nav-etr:hover { filter:brightness(1.18) drop-shadow(0 0 5px rgba(36,150,255,.6)); }
+ .rail label.pill.gambit-nav-etr:focus-visible { outline:3px solid #5fbcff!important;outline-offset:2px; }
+}
+@media screen and (max-width:720px) {
+ .shell .rail label.pill.gambit-nav-etr {
+   flex:1 1 calc(50% - .5rem)!important;min-width:8.65rem!important;
+   min-height:44px!important;aspect-ratio:500/112;align-self:stretch;
+ }
+}
