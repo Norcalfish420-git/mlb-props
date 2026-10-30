@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="112" viewBox="0 0 500 112" role="img" aria-label="OPEN CHECKS">
+<defs>
+<linearGradient id="face" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#14000c"/><stop offset=".35" stop-color="#070d1e"/><stop offset=".65" stop-color="#060c19"/><stop offset="1" stop-color="#001f40"/></linearGradient>
+<linearGradient id="outline" x1="0" x2="1"><stop stop-color="#ff294a"/><stop offset=".4" stop-color="#ff4566"/><stop offset=".55" stop-color="#178aff"/><stop offset="1" stop-color="#11b5ff"/></linearGradient>
+<linearGradient id="chrome" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffffff"/><stop offset=".38" stop-color="#eff9ff"/><stop offset=".47" stop-color="#8b97bd"/><stop offset=".66" stop-color="#f9faff"/><stop offset="1" stop-color="#9aaec9"/></linearGradient>
+<radialGradient id="disc"><stop stop-color="#071730"/><stop offset="1" stop-color="#040913"/></radialGradient>
+<pattern id="mesh" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M0 9L9 0" stroke="#166ba4" stroke-opacity=".13" stroke-width=".75"/></pattern>
+<filter id="blueGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="redGlow" x="-40%" y="-60%" width="180%" height="220%"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="500" height="112" rx="33" fill="#060a13"/>
+<rect x="3" y="4" width="494" height="104" rx="31" fill="url(#face)" stroke="url(#outline)" stroke-width="4"/>
+<rect x="8" y="9" width="484" height="94" rx="27" fill="url(#mesh)" stroke="#dcefff" stroke-opacity=".25" stroke-width="1"/>
+<path d="M15 86Q50 70 116 89L172 95" fill="none" stroke="#ff2349" stroke-width="2" opacity=".72"/>
+<path d="M314 96L400 96l35-19" fill="none" stroke="#208cff" stroke-width="2" opacity=".8"/>
+<path d="M7 25L35 8h89" fill="none" stroke="#ff5167" stroke-width="2" opacity=".8"/>
+<path d="M386 8h74l30 24" fill="none" stroke="#41adff" stroke-width="2" opacity=".75"/>
+<g><rect x="21" y="15" width="76" height="79" rx="7" fill="#0a1326" stroke="#4daeff" stroke-width="3"/><rect x="39" y="9" width="40" height="13" rx="5" fill="#d6eaff"/><path d="M33 38l7 7 11-14M33 62l7 7 11-14" fill="none" stroke="#ff385b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M58 40h25M58 64h25M34 83h49" stroke="#52aaff" stroke-width="3"/></g>
+<text x="126" y="72" font-family="Arial Narrow,Arial,Helvetica,sans-serif" font-size="51" font-weight="900" letter-spacing="-2.8" fill="#020916" stroke="#ff3553" stroke-width="2" opacity=".7">OPEN CHECKS</text>
+<text x="126" y="70" font-family="Arial Narrow,Arial,Helvetica,sans-serif" font-size="51" font-weight="900" letter-spacing="-2.8" fill="url(#chrome)" stroke="#f5faff" stroke-width=".5">OPEN CHECKS</text>
+<path d="M457 37l17 18-17 18M445 37l17 18-17 18" fill="none" stroke="#3ebdff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#blueGlow)"/>
+<path d="M120 89h260" stroke="url(#outline)" stroke-width="2.5"/>
+</svg>

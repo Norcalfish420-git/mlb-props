@@ -33,3 +33,93 @@
 @media print {
   .gambit-table-scroll { overflow: visible; max-width: none; }
 }
+
+
+/* GAMBIT RED/BLUE NAV ART — centralized for all CFB Showdown report pages.
+   The existing <a> and <label> remain real, accessible click targets.
+   Use responsive background images instead of nested img tags so navigation works unchanged. */
+@media screen {
+  .rail a.pill.back,
+  .rail label.pill[for="v-cards"],
+  .rail label.pill[for="v-etr"],
+  .rail label.pill[for="v-script"] {
+    display: block !important;
+    box-sizing: border-box !important;
+    width: 100%;
+    min-height: 0 !important;
+    height: auto !important;
+    aspect-ratio: 500 / 112;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: .6rem !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    text-shadow: none !important;
+    background-color: #050c17 !important;
+    background-position: center !important;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 2px 9px rgba(0,0,0,.3);
+  }
+  .rail a.pill.back { background-image: url("./gambit-nav-back.svg") !important; }
+  .rail label.pill[for="v-cards"] { background-image: url("./gambit-nav-card-build.svg") !important; }
+  .rail label.pill[for="v-etr"] { background-image: url("./gambit-nav-etr-value.svg") !important; }
+  .rail label.pill[for="v-script"] { background-image: url("./gambit-nav-open-checks.svg") !important; }
+  .rail a.pill.back:hover,
+  .rail label.pill[for="v-cards"]:hover,
+  .rail label.pill[for="v-etr"]:hover,
+  .rail label.pill[for="v-script"]:hover {
+    filter: brightness(1.18) drop-shadow(0 0 5px rgba(36,150,255,.6));
+  }
+  .rail a.pill.back:focus-visible,
+  .rail label.pill[for="v-cards"]:focus-visible,
+  .rail label.pill[for="v-etr"]:focus-visible,
+  .rail label.pill[for="v-script"]:focus-visible {
+    outline: 3px solid #5fbcff !important; outline-offset: 2px;
+  }
+  #v-cards:checked ~ .shell .rail label.pill[for="v-cards"],
+  #v-etr:checked ~ .shell .rail label.pill[for="v-etr"],
+  #v-script:checked ~ .shell .rail label.pill[for="v-script"] {
+    box-shadow: 0 0 0 2px #f33755, 0 0 14px rgba(29,146,255,.65) !important;
+  }
+}
+@media screen and (max-width: 720px) {
+  .shell .rail a.pill.back,
+  .shell .rail label.pill[for="v-cards"],
+  .shell .rail label.pill[for="v-etr"],
+  .shell .rail label.pill[for="v-script"] {
+    flex: 1 1 calc(50% - .5rem) !important;
+    min-width: 8.65rem !important;
+    max-width: none;
+    min-height: 44px !important;
+    aspect-ratio: 500 / 112;
+    align-self: stretch;
+  }
+}
+
+
+/* Exact text-matched ETR tabs on NFL and CFB props; non-ETR gN tabs unchanged. */
+@media screen {
+ .rail label.pill.gambit-nav-etr {
+   display:block!important; box-sizing:border-box!important; width:100%;
+   min-height:0!important; height:auto!important; aspect-ratio:500/112;
+   padding:0!important; border:0!important; border-radius:.6rem!important;
+   color:transparent!important; font-size:0!important; line-height:0!important;
+   text-shadow:none!important; overflow:hidden; cursor:pointer;
+   background-color:#050c17!important;
+   background-image:url("./gambit-nav-etr-value.svg")!important;
+   background-position:center!important; background-size:100% 100%!important;
+   background-repeat:no-repeat!important; box-shadow:0 2px 9px rgba(0,0,0,.3);
+ }
+ .rail label.pill.gambit-nav-etr:hover { filter:brightness(1.18) drop-shadow(0 0 5px rgba(36,150,255,.6)); }
+ .rail label.pill.gambit-nav-etr:focus-visible { outline:3px solid #5fbcff!important;outline-offset:2px; }
+}
+@media screen and (max-width:720px) {
+ .shell .rail label.pill.gambit-nav-etr {
+   flex:1 1 calc(50% - .5rem)!important;min-width:8.65rem!important;
+   min-height:44px!important;aspect-ratio:500/112;align-self:stretch;
+ }
+}
