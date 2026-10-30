@@ -158,11 +158,14 @@ html.rail-closed .rail .rail-head{margin:0;width:100%;}
 html.rail-closed .rail .rail-head .brand{display:none;}
 .site-header{position:sticky;top:0;z-index:50;background:var(--bg,#161616);border-bottom:1px solid var(--rail-line,#393939);padding:.35rem .75rem;}a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.55rem;overflow:hidden;max-width:64rem;margin:0 auto;}a.gambit-home img{display:block;width:100%;height:auto;}.rail button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg,var(--fg));border:1px solid var(--pill-line,var(--line,#525252));border-radius:.5rem;padding:.62rem .85rem;min-height:2.35rem;text-align:center;}.rail button.theme:hover{background:var(--pill-hover,var(--pill,#393939));}
 .gpt-picks-block{margin:0 0 1.25rem;padding:0 0 1rem;border-bottom:1px solid var(--cell);}
-.gpt-picks-block h3{margin:0 0 .5rem;color:var(--h);}
+.gpt-picks-block h3{display:block;width:max-content;max-width:100%;font-size:1.7rem;font-weight:800;letter-spacing:.04em;line-height:1.1;margin:0 0 .7rem;padding:0 0 .28rem;border-bottom:3px solid #c8c8c8;background:linear-gradient(180deg,#fff 8%,#d5d5d5 52%,#8f8f8f 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}
+html.light .gpt-picks-block h3{border-bottom-color:#5e5e5e;background:linear-gradient(180deg,#4a4a4a,#1f1f1f);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}
 .gpt-pick-image{margin:0;}
 .gpt-pick-image img{display:block;width:100%;height:auto;border-radius:.65rem;border:1px solid var(--cell);}
 .cursor-picks-block{margin:1rem 0 .75rem;padding:0 0 .5rem;}
-.cursor-picks-title{margin:1.1rem 0 .55rem;color:var(--h);}
+h3.cursor-picks-title{display:block;width:max-content;max-width:100%;font-size:1.7rem;font-weight:800;letter-spacing:.04em;line-height:1.1;margin:1.15rem 0 .7rem;padding:0 0 .28rem;border-bottom:3px solid #e6c35c;background:linear-gradient(180deg,#fff8d6 8%,#f0d56a 48%,#c49214 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}
+html.light h3.cursor-picks-title{border-bottom-color:#8a6410;background:linear-gradient(180deg,#a67c12,#5c4308);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}
+@media print{.gpt-picks-block h3,h3.cursor-picks-title{color:#111 !important;-webkit-text-fill-color:#111 !important;background:none !important;border-bottom-color:#111 !important;}}
 .cursor-picks-block h4.cursor-choice{margin:0 0 .45rem;color:var(--h);font-size:1rem;font-weight:700;}
 .cursor-pick-image img{display:block;width:100%;max-width:720px;height:auto;border-radius:.65rem;border:1px solid var(--cell);}
 /* Keep report tables inside the content column at every screen width. */
@@ -187,7 +190,7 @@ html.rail-closed .rail .rail-head .brand{display:none;}
   .table-scroll{overflow:visible;max-width:none;}
 }
 </style>
-<link rel="stylesheet" data-gambit-responsive="1" href="../assets/gambit-responsive.css?v=20261029"/>
+<link rel="stylesheet" data-gambit-responsive="1" href="../assets/gambit-responsive.css?v=20261029b"/>
 </head><body>
 <header class="site-header noprint"><a class="gambit-home" href="../hub.html"><img src="../assets/gambit-home.jpg" alt="GAMBIT Home"/></a></header>
 <input class="tab" type="radio" name="v" id="v-script"/>
