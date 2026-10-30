@@ -17,6 +17,26 @@ def _money(n: int | float) -> str:
     return f"${int(n):,}"
 
 
+def _value_cell(raw) -> str:
+    """Right-hand value, or empty when the row has none."""
+    if raw is None or str(raw).strip() == "":
+        return ""
+    text = str(raw).strip()
+    cls = "value"
+    try:
+        num = float(text.replace("+", "").replace(",", ""))
+        text = f"{num:+.2f}"
+        if num < 0:
+            cls += " down"
+    except ValueError:
+        if text.startswith("-"):
+            cls += " down"
+    return (
+        '<div><div class="lbl">VAL</div>'
+        f'<div class="{cls}">{html.escape(text)}</div></div>'
+    )
+
+
 def _row_html(row: dict) -> str:
     slot = (row.get("slot") or "FLEX").strip()
     is_cpt = slot.lower().startswith("capt") or slot.upper() == "CPT"
@@ -26,12 +46,20 @@ def _row_html(row: dict) -> str:
     team = html.escape(str(row.get("team", "")))
     pos = html.escape(str(row.get("pos", "")))
     sal = _money(row.get("salary", 0))
+    value = _value_cell(row.get("value"))
+    if value:
+        tail = (
+            '<div class="nums"><div><div class="lbl">SAL</div>'
+            f'<div class="salary">{sal}</div></div>{value}</div>'
+        )
+    else:
+        tail = f'<div class="salary">{sal}</div>'
     return (
         f'<div class="{cls}">'
         f'<div class="slot">{html.escape(slot_label)}</div>'
         f"<div><div class=\"name\">{player}</div>"
         f'<div class="meta">{team} · {pos}</div></div>'
-        f'<div class="salary">{sal}</div></div>'
+        f"{tail}</div>"
     )
 
 

@@ -18,7 +18,8 @@
           "player": { "type": "string" },
           "team": { "type": "string" },
           "pos": { "type": "string" },
-          "salary": { "type": "number" }
+          "salary": { "type": "number" },
+          "value": { "description": "Optional sheet value, shown only when present" }
         }
       }
     },
