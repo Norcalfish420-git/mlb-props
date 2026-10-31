@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-31T10:52:38-05:00",
-  "source": "Downloads/Florida_vs_Georgia_GAMBIT_Showdown_Images_2026-10-31.zip + reapply_missing",
+  "checked_at": "2026-10-31T10:56:48-05:00",
+  "source": "user chat attachments 2026-10-31: existing CFB classic primary + Choice #2 Tournament Leverage (image-9771d1f7)",
   "index_revision": null,
   "cards": [
     {
@@ -112,11 +112,11 @@
     {
       "key": "CFB|DK|CLASSIC|2026-10-31|PRIMARY",
       "hub_page": "classic/2026-10-31.html",
-      "hub_page_mirror": "classic/index.html",
-      "asset": "assets/gpt-picks/2026-10-31_CFB-classic-chatgpt.jpg",
+      "asset": "assets/gpt-picks/2026-10-31_CFB_CLASSIC-choice1-chatgpt.jpg",
       "sha256": "31a195cf0ed34500c989685c9cd7cdfcb4a7403f976e04f99a01e246bd5cb54f",
-      "action": "added",
-      "placement": "Cards tab (t0, default), ChatGPT picks before Cursor picks; no Cursor engine tables yet"
+      "action": "updated",
+      "placement": "Cards tab (panel-cards), ChatGPT picks before Cursor picks; old URL assets/gpt-picks/2026-10-31_CFB-classic-chatgpt.jpg kept",
+      "hub_page_mirror": "classic/index.html"
     },
     {
       "key": "CFB|DK|SHOWDOWN|2026-10-31|ORST_FRES|CHOICE2",
@@ -125,13 +125,22 @@
       "sha256": "a6f0ef82233f7cd9766bf6018eb2a67ab57b97d414c123a6c70339f5ba7ceaa3",
       "action": "restored",
       "placement": "Card Build tab, ChatGPT picks before Cursor picks"
+    },
+    {
+      "key": "CFB|DK|CLASSIC|2026-10-31|CHOICE2",
+      "hub_page": "classic/2026-10-31.html",
+      "asset": "assets/gpt-picks/2026-10-31_CFB_CLASSIC-choice2-chatgpt.jpg",
+      "sha256": "06d740e7ec3fd92b08cae01dcca5ed866f0f5cbb9d6e20b62b23299c0ca0e15f",
+      "action": "updated",
+      "placement": "Cards tab (panel-cards), ChatGPT picks before Cursor picks; old URL assets/gpt-picks/2026-10-31_CFB-classic-chatgpt.jpg kept",
+      "hub_page_mirror": "classic/index.html"
     }
   ],
-  "published": true,
+  "published": false,
   "note": "UF/UGA ChatGPT Showdown choice PNGs from user zip; restored wiped GPT blocks on FAU/ARIZ/ORST/OSU via sync_gpt_pick_images.py. Published to mlb-props main 2026-10-31.",
-  "hub_page": "showdown/2026-10-31_UF_UGA.html",
-  "asset": "assets/gpt-picks/2026-10-31_UF_UGA-choice1-chatgpt.png",
-  "sha256": "012e3d58b041e06a260e815ae2b2bcf2a5f69000faa338c05ba65ce403f8ce37",
+  "hub_page": "classic/2026-10-31.html",
+  "asset": "assets/gpt-picks/2026-10-31_CFB_CLASSIC-choice1-chatgpt.jpg",
+  "sha256": "31a195cf0ed34500c989685c9cd7cdfcb4a7403f976e04f99a01e246bd5cb54f",
   "restored_at": "2026-10-31T08:06:24-05:00",
   "commit": "ee655e04d467fe6ec90b9d93e930c790c560527a",
   "tool": "tools/sync_gpt_pick_images.py"

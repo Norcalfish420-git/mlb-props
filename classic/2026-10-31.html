@@ -35,7 +35,9 @@ h1{font-size:2rem;margin:.1rem 0 .35rem;}
 table{width:100%;border-collapse:collapse;margin:.4rem 0 .6rem;}
 th,td{text-align:left;padding:.35rem .4rem;border-bottom:1px solid var(--line);font-size:.92rem;}
 table.sortable th{cursor:pointer;user-select:none;}table.sortable th[data-dir=asc]::after{content:' \25b2';font-size:.7em;}table.sortable th[data-dir=desc]::after{content:' \25bc';font-size:.7em;}
-@media print{.rail,.tabs,.noprint{display:none !important;} .panel-cards,.panel-results,.panel-pool{display:block !important;}}
+@media print{
+  .gpt-picks-block h3,h3.cursor-picks-title{color:#111 !important;-webkit-text-fill-color:#111 !important;background:none !important;border-bottom-color:#111 !important;}
+.rail,.tabs,.noprint{display:none !important;} .panel-cards,.panel-results,.panel-pool{display:block !important;}}
 .rail-head{display:flex;align-items:center;gap:.5rem;width:100%;margin:0 0 .85rem;flex:0 0 auto;}
 .rail-head .brand{margin:0;flex:1;min-width:0;line-height:1.1;}
 .rail-toggle{flex:0 0 auto;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
@@ -52,6 +54,7 @@ html.light .gpt-picks-block h3{border-bottom-color:#5e5e5e;background:linear-gra
 h3.cursor-picks-title{display:block;width:max-content;max-width:100%;font-size:1.7rem;font-weight:800;letter-spacing:.04em;line-height:1.1;margin:1.15rem 0 .7rem;padding:0 0 .28rem;border-bottom:3px solid #e6c35c;background:linear-gradient(180deg,#fff8d6 8%,#f0d56a 48%,#c49214 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}
 html.light h3.cursor-picks-title{border-bottom-color:#8a6410;background:linear-gradient(180deg,#a67c12,#5c4308);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}
 @media print{.gpt-picks-block h3,h3.cursor-picks-title{color:#111 !important;-webkit-text-fill-color:#111 !important;background:none !important;border-bottom-color:#111 !important;}}
+h4.cursor-choice{margin:.85rem 0 .45rem;font-size:1.05rem;font-weight:800;letter-spacing:.03em;}
 </style>
 <link rel="stylesheet" data-gambit-responsive="1" href="../assets/gambit-responsive.css?v=20261029"/>
 </head>
@@ -79,9 +82,7 @@ html.light h3.cursor-picks-title{border-bottom-color:#8a6410;background:linear-g
 <label for="t1">Results</label>
 <label for="t2">Pool</label>
 </div>
-<article class="panel-cards"><section class="gpt-picks-block" data-primary-key="CFB|DK|CLASSIC|2026-10-31|PRIMARY" data-sha256="31a195cf0ed34500c989685c9cd7cdfcb4a7403f976e04f99a01e246bd5cb54f"><h3>ChatGPT picks</h3><figure class="gpt-pick-image"><img src="../assets/gpt-picks/2026-10-31_CFB-classic-chatgpt.jpg" alt="ChatGPT CFB Classic lineup, October 31, 2026"/></figure></section>
-<h3 class="cursor-picks-title">Cursor picks</h3>
-<p>Cursor engine tables are not posted for this slate yet.</p>
+<article class="panel-cards"><section class="gpt-picks-block" data-primary-key="CFB|DK|CLASSIC|2026-10-31|PRIMARY" data-sha256="31a195cf0ed34500c989685c9cd7cdfcb4a7403f976e04f99a01e246bd5cb54f"><h3>ChatGPT picks</h3><h4 class="cursor-choice">Choice #1</h4><figure class="gpt-pick-image"><img src="../assets/gpt-picks/2026-10-31_CFB_CLASSIC-choice1-chatgpt.jpg" alt="ChatGPT Choice #1 — CFB Classic · October 31, 2026"/></figure><h4 class="cursor-choice">Choice #2</h4><figure class="gpt-pick-image"><img src="../assets/gpt-picks/2026-10-31_CFB_CLASSIC-choice2-chatgpt.jpg" alt="ChatGPT Choice #2 — CFB Classic · October 31, 2026"/></figure></section><h3 class="cursor-picks-title">Cursor picks</h3><p>Cursor engine tables are not posted for this slate yet.</p>
 </article>
 <article class="panel-results"><section class="plate"><h2>This slate</h2><p class="lede">Results are not posted for this slate yet.</p></section></article>
 <article class="panel-pool"><h2>Main slate pool</h2><p class="lede">The ETR pool is not posted for this slate yet.</p></article>

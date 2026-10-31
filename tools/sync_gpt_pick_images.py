@@ -51,6 +51,9 @@ PRINT_CSS = (
 
 HORSE_RE = re.compile(r"(^|/)horses(/|\.html)", re.I)
 SHOWDOWN_STEM = re.compile(r"^(\d{4}-\d{2}-\d{2})_([A-Z0-9]+_[A-Z0-9]+)$")
+DATE_STEM = re.compile(r"^(\d{4}-\d{2}-\d{2})$")
+CLASSIC_SLUG = "CFB_CLASSIC"
+CHOICE_CSS = "h4.cursor-choice{margin:.85rem 0 .45rem;font-size:1.05rem;font-weight:800;letter-spacing:.03em;}\n"
 CHOICE_ASSET = re.compile(
     r"^(\d{4}-\d{2}-\d{2})_([A-Z0-9]+_[A-Z0-9]+)-choice(\d+)-chatgpt\.(jpe?g|png)$",
     re.I,
@@ -112,9 +115,18 @@ def ensure_not_horses(page: Path) -> None:
 
 def parse_showdown_page(page: Path) -> tuple[str, str] | None:
     m = SHOWDOWN_STEM.match(page.stem)
-    if not m:
-        return None
-    return m.group(1), m.group(2)
+    if m:
+        return m.group(1), m.group(2)
+    m = DATE_STEM.match(page.stem)
+    if m and page.parts[:1] == ("classic",):
+        return m.group(1), CLASSIC_SLUG
+    return None
+
+
+def default_key(date: str, slug: str) -> str:
+    if slug == CLASSIC_SLUG:
+        return f"CFB|DK|CLASSIC|{date}|PRIMARY"
+    return f"CFB|DK|SHOWDOWN|{date}|{slug}|PRIMARY"
 
 
 def title_label(html: str) -> str:
@@ -130,6 +142,8 @@ def ensure_css(html: str) -> str:
         if "</style>" not in out:
             raise ValueError("page has no </style>; cannot inject GPT CSS")
         out = out.replace("</style>", CSS_BLOCK + "</style>", 1)
+    if "h4.cursor-choice{" not in out and "</style>" in out:
+        out = out.replace("</style>", CHOICE_CSS + "</style>", 1)
     if PRINT_CSS not in out and "@media print" in out:
         out = re.sub(
             r"(@media print\{)",
@@ -216,6 +230,7 @@ def inject_top_props(html: str, section: str) -> str:
         "<h3>TOP PROPS — week board</h3>",
         "<h3>THE PACK</h3>",
         "<h2>Cards</h2>",
+        '<article class="panel-cards">',
     ):
         if needle in html:
             return html.replace(needle, needle + section, 1)
@@ -416,7 +431,7 @@ def jobs_from_existing_assets(page: Path) -> SyncJob | None:
     label = re.sub(r"^CFB Showdown\s+\d{4}-\d{2}-\d{2}\s*[·\-]\s*", "", label).strip()
     return SyncJob(
         hub_page=page,
-        key=f"CFB|DK|SHOWDOWN|{date}|{slug}|PRIMARY",
+        key=default_key(date, slug),
         choices=found,
         alt_label=label or f"{slug.replace('_', ' at ')}, {date}",
     )
@@ -430,7 +445,10 @@ def apply_job(job: SyncJob, *, force: bool = False) -> dict:
     before = path.read_text(encoding="utf-8")
     primary = next((c for c in job.choices if c.number == 1), job.choices[0])
     embedded = page_embedded_sha(before)
-    if embedded and embedded == primary.sha256 and 'class="gpt-picks-block"' in before:
+    all_on_page = all(
+        img_src_for_page(job.hub_page, c.asset_name) in before for c in job.choices
+    )
+    if embedded and embedded == primary.sha256 and 'class="gpt-picks-block"' in before and all_on_page:
         return {
             "key": job.key,
             "hub_page": job.hub_page.as_posix(),
@@ -589,6 +607,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--image", type=Path, action="append", default=[], help="One or more image files")
     p.add_argument("--choice", type=int, action="append", default=[], help="Choice numbers matching --image order")
     p.add_argument("--key", type=str, help="data-primary-key override")
+    p.add_argument("--mirror", type=Path, action="append", default=[], help="Mirror page (e.g. classic/index.html) that gets the same block")
     p.add_argument("--jpeg", action="store_true", help="Convert staged assets to JPEG via sips")
     p.add_argument("--force", action="store_true", help="Replace a different on-page data-sha256")
     p.add_argument("--reapply-missing", action="store_true", help="Restore GPT blocks from existing assets")
@@ -635,9 +654,17 @@ def main(argv: list[str] | None = None) -> int:
         html = (ROOT / page).read_text(encoding="utf-8")
         label = title_label(html)
         label = re.sub(r"^CFB Showdown\s+\d{4}-\d{2}-\d{2}\s*[·\-]\s*", "", label).strip()
-        key = opts.key or f"CFB|DK|SHOWDOWN|{date}|{slug}|PRIMARY"
+        key = opts.key or default_key(date, slug)
         job = SyncJob(hub_page=page, key=key, choices=choices, alt_label=label)
-        results.append(apply_job(job, force=opts.force or True))
+        result = apply_job(job, force=opts.force or True)
+        for mirror in opts.mirror:
+            ensure_not_horses(mirror)
+            if mirror.parent != page.parent:
+                raise SystemExit(f"--mirror must sit beside --page: {mirror}")
+            apply_job(SyncJob(hub_page=mirror, key=key, choices=choices, alt_label=label), force=True)
+            for card in [result, *result.get("cards", [])]:
+                card["hub_page_mirror"] = mirror.as_posix()
+        results.append(result)
 
     if not results and not opts.check:
         raise SystemExit("nothing to do; pass --zip, --image, --reapply-missing, or --check")

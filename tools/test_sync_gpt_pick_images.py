@@ -102,6 +102,49 @@ class SyncGptPickImagesTests(unittest.TestCase):
             self.assertIsNotNone(restored)
             self.assertIn("gpt-picks-block", page.read_text(encoding="utf-8"))
 
+    def test_classic_date_page_multi_choice_with_mirror(self):
+        self.assertEqual(
+            sync.parse_showdown_page(Path("classic/2026-10-31.html")),
+            ("2026-10-31", "CFB_CLASSIC"),
+        )
+        self.assertIsNone(sync.parse_showdown_page(Path("nfl/2026-10-31.html")))
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "classic").mkdir()
+            html = (
+                "<html><head><style>.gpt-picks-block{x}</style></head><body>"
+                '<article class="panel-cards"><section class="gpt-picks-block" '
+                'data-primary-key="OLD" data-sha256="' + ("b" * 64) + '"><h3>ChatGPT picks</h3>'
+                "</section>\n<h3 class=\"cursor-picks-title\">Cursor picks</h3>\n<p>t</p></article>"
+                "</body></html>"
+            )
+            for name in ("2026-10-31.html", "index.html"):
+                (root / "classic" / name).write_text(html, encoding="utf-8")
+            imgs = []
+            for n in (1, 2):
+                img = root / f"in{n}.png"
+                img.write_bytes(MINI_PNG + bytes([n]))
+                imgs.append(img)
+            argv = ["--root", str(root), "--page", "classic/2026-10-31.html",
+                    "--mirror", "classic/index.html"]
+            self.assertEqual(sync.main(argv + ["--image", str(imgs[0])]), 0)
+            for img in imgs:
+                argv += ["--image", str(img)]
+            self.assertEqual(sync.main(argv), 0)
+            for name in ("2026-10-31.html", "index.html"):
+                out = (root / "classic" / name).read_text(encoding="utf-8")
+                self.assertIn('data-primary-key="CFB|DK|CLASSIC|2026-10-31|PRIMARY"', out)
+                self.assertIn('<h4 class="cursor-choice">Choice #2</h4>', out)
+                self.assertIn("2026-10-31_CFB_CLASSIC-choice2-chatgpt.png", out)
+                self.assertIn("h4.cursor-choice{", out)
+                self.assertEqual(out.count("gpt-picks-block\""), 1)
+                self.assertEqual(out.count("Cursor picks"), 1)
+                self.assertNotIn("OLD", out)
+            import json
+            receipt = json.loads((root / "handoffs" / "GPT_IMAGE_SYNC_RECEIPT.json").read_text())
+            keys = {c["key"] for c in receipt["cards"]}
+            self.assertIn("CFB|DK|CLASSIC|2026-10-31|CHOICE2", keys)
+
 
 if __name__ == "__main__":
     unittest.main()
