@@ -128,11 +128,11 @@
     }
   ],
   "published": true,
-  "note": "UF/UGA ChatGPT Showdown choice PNGs from user zip; restored wiped GPT blocks on FAU/ARIZ/ORST/OSU via sync_gpt_pick_images.py. Published to mlb-props main 2026-10-31; commit filled in by follow-up receipt commit.",
+  "note": "UF/UGA ChatGPT Showdown choice PNGs from user zip; restored wiped GPT blocks on FAU/ARIZ/ORST/OSU via sync_gpt_pick_images.py. Published to mlb-props main 2026-10-31.",
   "hub_page": "showdown/2026-10-31_UF_UGA.html",
   "asset": "assets/gpt-picks/2026-10-31_UF_UGA-choice1-chatgpt.png",
   "sha256": "012e3d58b041e06a260e815ae2b2bcf2a5f69000faa338c05ba65ce403f8ce37",
   "restored_at": "2026-10-31T08:06:24-05:00",
-  "commit": null,
+  "commit": "ee655e04d467fe6ec90b9d93e930c790c560527a",
   "tool": "tools/sync_gpt_pick_images.py"
 }
