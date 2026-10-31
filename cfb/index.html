@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/><script>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<script>
 (function(){
   try {
     var _th=localStorage.getItem('desk-hub-theme');
@@ -15,6 +16,7 @@
 <style>
 :root{--bg:#161616;--fg:#f4f4f4;--rail:#262626;--rail-line:#393939;--muted:#c6c6c6;--hint:#8d8d8d;--pill:#393939;--pill-fg:#fb7185;--pill-line:#525252;--pill-hover:#4c4c4c;--accent:#e11d48;--table:#262626;--cell:#525252;--th:#393939;--val:#fb7185;--h:#fb7185;--code:#fb7185;}
 html.light{--bg:#f2f4f8;--fg:#161616;--rail:#e0e5eb;--rail-line:#c1c7cd;--muted:#525252;--hint:#6f6f6f;--pill:#dde1e6;--pill-fg:#9f1239;--pill-line:#a2a9b0;--pill-hover:#c1c7cd;--accent:#be123c;--table:#ffffff;--cell:#c1c7cd;--th:#e0e5eb;--val:#be123c;--h:#be123c;--code:#9f1239;}
+.site-header{position:sticky;top:0;z-index:50;background:var(--bg,#161616);border-bottom:1px solid var(--rail-line,#393939);padding:.35rem .75rem;}a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.55rem;overflow:hidden;max-width:64rem;margin:0 auto;}a.gambit-home img{display:block;width:100%;height:auto;}.rail-search-theme-row{display:flex;flex-direction:row;align-items:flex-end;gap:.45rem;margin:.35rem 0 .25rem;}.rail-search-theme-row form.search-form{flex:1 1 auto;min-width:0;margin:0;}.rail-search-theme-row label.search-lab{margin:.12rem 0 0;}.rail-search-theme-row input.search,.rail-search-theme-row .search-form input{border:2px solid var(--val,var(--accent,#d4d4d4));}.rail-search-theme-row button.theme{flex:0 0 auto;width:auto;min-width:4.75rem;padding:.45rem .55rem;min-height:2.05rem;margin:0;align-self:flex-end;}.rail button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg,var(--fg));border:1px solid var(--pill-line,var(--line,#525252));border-radius:.5rem;padding:.62rem .85rem;min-height:2.35rem;text-align:center;}.rail button.theme:hover{background:var(--pill-hover,var(--pill,#393939));}
 html,body{margin:0;padding:0;background-color:var(--bg);color:var(--fg);font-family:Georgia,serif;}
 body{background-image:linear-gradient(180deg,rgba(22,22,22,.82),rgba(10,14,18,.93)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");background-size:cover;background-attachment:fixed;background-position:center top;}
 html.light body{background-image:linear-gradient(180deg,rgba(242,244,248,.88),rgba(242,244,248,.94)),url("https://norcalfish420-git.github.io/mlb-props/assets/desk-bg-cfb.jpg");}
@@ -47,6 +49,10 @@ h2{font-size:1.25rem;border-top:2px solid var(--accent);padding-top:1.1rem;margi
 .line-blast{font-size:1.42rem;line-height:1.35;font-weight:700;margin:.35rem 0 1.2rem;padding:.95rem 1.05rem;background:var(--table);border:2px solid var(--accent);border-left-width:8px;}
 .line-blast b{color:var(--val);font-size:1.08em;}
 h3{font-size:1.05rem;margin:1.2rem 0 .4rem;color:var(--h);}
+.gpt-picks-block h3{display:block;width:max-content;max-width:100%;font-size:1.7rem;font-weight:800;letter-spacing:.04em;line-height:1.1;margin:0 0 .7rem;padding:0 0 .28rem;border-bottom:3px solid #c8c8c8;background:linear-gradient(180deg,#fff 8%,#d5d5d5 52%,#8f8f8f 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}
+h3.cursor-picks-title{display:block;width:max-content;max-width:100%;font-size:1.7rem;font-weight:800;letter-spacing:.04em;line-height:1.1;margin:1.15rem 0 .7rem;padding:0 0 .28rem;border-bottom:3px solid #e6c35c;background:linear-gradient(180deg,#fff8d6 8%,#f0d56a 48%,#c49214 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}
+html.light .gpt-picks-block h3{border-bottom-color:#5e5e5e;background:linear-gradient(180deg,#4a4a4a,#1f1f1f);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}
+html.light h3.cursor-picks-title{border-bottom-color:#8a6410;background:linear-gradient(180deg,#a67c12,#5c4308);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}
 h4{margin:.8rem 0 .4rem;}
 .sub,.intro p{color:var(--muted);margin:0 0 .7rem;}
 table{width:100%;border-collapse:collapse;margin:.4rem 0 1rem;font-size:.88rem;background:var(--table);}
@@ -70,6 +76,7 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
   th{background:#eee;color:#333;}
   td.val{color:#000;}
   h2,h3,h4{page-break-after:avoid;color:#111;}
+  .gpt-picks-block h3,h3.cursor-picks-title{color:#111 !important;-webkit-text-fill-color:#111 !important;background:none !important;border-bottom-color:#111 !important;}
   .line-blast{background:#fff;border-color:#111;color:#111;}
   .line-blast b{color:#000;}
 }
@@ -82,172 +89,199 @@ code{font-family:Consolas,monospace;font-size:.88em;color:var(--code);}
 #g2:checked ~ .shell main .p2{display:block;}
 #g3:checked ~ .shell .rail label[for=g3]{background:var(--accent);color:#fff;border-color:var(--accent);}
 #g3:checked ~ .shell main .p3{display:block;}
-#g4:checked ~ .shell .rail label[for=g4]{background:var(--accent);color:#fff;border-color:var(--accent);}
-#g4:checked ~ .shell main .p4{display:block;}
-#g5:checked ~ .shell .rail label[for=g5]{background:var(--accent);color:#fff;border-color:var(--accent);}
-#g5:checked ~ .shell main .p5{display:block;}
-#g6:checked ~ .shell .rail label[for=g6]{background:var(--accent);color:#fff;border-color:var(--accent);}
-#g6:checked ~ .shell main .p6{display:block;}
-.rail-head{display:flex;align-items:center;gap:.5rem;width:100%;margin:0 0 .85rem;flex:0 0 auto;}
-.rail-head .brand{margin:0;flex:1;min-width:0;line-height:1.1;}
-.rail-toggle{flex:0 0 auto;width:1.9rem;height:1.9rem;border-radius:999px;border:1px solid var(--pill-line);background:var(--pill);color:var(--val);font:inherit;font-size:1.15rem;font-weight:700;cursor:pointer;line-height:1;padding:0;}
-html.rail-closed .rail{width:2.7rem;flex-basis:2.7rem;padding:.7rem .4rem;overflow:hidden;align-items:flex-start;}
-html.rail-closed .rail > *:not(.rail-head){display:none !important;}
-html.rail-closed .rail .rail-head{margin:0;width:100%;}
-html.rail-closed .rail .rail-head .brand{display:none;}
-.site-header{position:sticky;top:0;z-index:50;background:var(--bg,#161616);border-bottom:1px solid var(--rail-line,#393939);padding:.35rem .75rem;}a.gambit-home{display:block;line-height:0;text-decoration:none;border-radius:.55rem;overflow:hidden;max-width:64rem;margin:0 auto;}a.gambit-home img{display:block;width:100%;height:auto;}.rail button.theme{display:block;width:100%;box-sizing:border-box;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;background:transparent;color:var(--pill-fg,var(--fg));border:1px solid var(--pill-line,var(--line,#525252));border-radius:.5rem;padding:.62rem .85rem;min-height:2.35rem;text-align:center;}.rail button.theme:hover{background:var(--pill-hover,var(--pill,#393939));}
-.gpt-picks-block{margin:0 0 1.25rem;padding:0 0 1rem;border-bottom:1px solid var(--cell);}
-.gpt-picks-block h3{display:block;width:max-content;max-width:100%;font-size:1.7rem;font-weight:800;letter-spacing:.04em;line-height:1.1;margin:0 0 .7rem;padding:0 0 .28rem;border-bottom:3px solid #c8c8c8;background:linear-gradient(180deg,#fff 8%,#d5d5d5 52%,#8f8f8f 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}
-html.light .gpt-picks-block h3{border-bottom-color:#5e5e5e;background:linear-gradient(180deg,#4a4a4a,#1f1f1f);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}
-.gpt-pick-image{margin:0;}
-.gpt-pick-image img{display:block;width:100%;height:auto;border-radius:.65rem;border:1px solid var(--cell);}
-h3.cursor-picks-title{display:block;width:max-content;max-width:100%;font-size:1.7rem;font-weight:800;letter-spacing:.04em;line-height:1.1;margin:1.15rem 0 .7rem;padding:0 0 .28rem;border-bottom:3px solid #e6c35c;background:linear-gradient(180deg,#fff8d6 8%,#f0d56a 48%,#c49214 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}
-html.light h3.cursor-picks-title{border-bottom-color:#8a6410;background:linear-gradient(180deg,#a67c12,#5c4308);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}
-@media print{.gpt-picks-block h3,h3.cursor-picks-title{color:#111 !important;-webkit-text-fill-color:#111 !important;background:none !important;border-bottom-color:#111 !important;}}
 </style>
-<link rel="stylesheet" data-gambit-responsive="1" href="../assets/gambit-responsive.css?v=20261030-nav2"/>
+<link rel="stylesheet" data-gambit-responsive="1" href="../assets/gambit-responsive.css?v=20261030"/>
 </head><body>
 <header class="site-header noprint"><a class="gambit-home" href="../hub.html"><img src="../assets/gambit-home.jpg" alt="GAMBIT Home"/></a></header>
 <input class="tab" type="radio" name="g" id="g0" checked/>
 <input class="tab" type="radio" name="g" id="g1"/>
 <input class="tab" type="radio" name="g" id="g2"/>
 <input class="tab" type="radio" name="g" id="g3"/>
-<input class="tab" type="radio" name="g" id="g4"/>
-<input class="tab" type="radio" name="g" id="g5"/>
-<input class="tab" type="radio" name="g" id="g6"/>
 <div class="shell">
 <aside class="rail noprint">
-<div class="rail-head">
-<button class="rail-toggle" type="button" id="railToggle" onclick="toggleHubRail()" aria-label="Hide menu">‹</button>
 <p class="brand">CFB PROPS<br/>2026-10-31</p>
-</div>
-<a class="pill back noprint" href="../cfb.html">Back</a>
-
 <label class="pill" for="g0">THE PACK</label>
 <label class="pill" for="g1">Slate times</label>
-<label class="pill" for="g2">Arizona @ Texas Tech</label>
-<label class="pill" for="g3">Florida @ Georgia</label>
-<label class="pill" for="g4">Ohio State @ USC</label>
-<label class="pill" for="g5">Oregon State @ Fresno State</label>
-<label class="pill" for="g6">SOURCES</label>
-<form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form>
+<label class="pill" for="g2">ETR VALUE</label>
+<label class="pill" for="g3">SOURCES</label>
+<div class="rail-search-theme-row noprint"><form class="search-form noprint" id="playerSearchForm" action="#" role="search"><label class="search-lab" for="playerSearch">Search players</label><input class="search" id="playerSearch" type="search" placeholder="Name" autocomplete="off" spellcheck="false"/><p class="hint" id="playerSearchHint"></p></form><button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button></div>
 <button class="pdf" type="button" onclick="window.print()">Save as PDF</button>
-<button class="theme noprint" type="button" id="themeBtn" onclick="toggleDeskTheme()">Light mode</button>
 <p class="hint">Destination: Save as PDF or Microsoft Print to PDF. Tabs stay off the PDF.</p>
 </aside>
 <main>
 <h1>CFB Higher/Lower — October 31, 2026</h1>
-<p class="sub">Pick 6 on DK Showdown games. Posted numbers only.</p>
+<p class="sub">Pick 6 plus three $20 Pick 3s. Posted numbers only.</p>
 <article class="panel p0">
 <h3>GLOSSARY</h3>
 <ul>
 <li><b>Over / Under</b> — Higher or Lower than the posted player number (hits the book line, not a fantasy score).</li>
 <li><b>Pick 6</b> — six legs on one ticket.</li>
+<li><b>$20 Pick 3</b> — three disjoint three-leg tickets at $20 each.</li>
 </ul>
 <h3>THE PACK</h3>
 <section class="gpt-picks-block" data-primary-key="CFB|DK|PROPS|2026-10-31|PRIMARY" data-sha256="eaff38fc8394f9db93fef0c09d8e4da9bd742c2a9b83e5e050ab8fb31f7f2906"><h3>ChatGPT picks</h3><figure class="gpt-pick-image"><img src="../assets/gpt-picks/2026-10-31-cfb-pick6-chatgpt.jpg" alt="ChatGPT CFB Pick6 player props, October 31, 2026 — DK Showdown games"/></figure></section>
 <h3 class="cursor-picks-title">Cursor picks</h3>
-<p>Cursor engine tables are not posted for this slate yet.</p>
 <h4>Pick 6</h4>
 <div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th></tr></thead>
 <tbody>
-<tr><td>1</td><td>Noah Fifita</td><td>Arizona</td><td class="val">passing yards</td><td class="val">O</td><td class="val">254.5</td></tr>
-<tr><td>2</td><td>Kenny Johnson</td><td>Texas Tech</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">62.5</td></tr>
-<tr><td>3</td><td>Dwight Phillips Jr.</td><td>Georgia</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">59.5</td></tr>
-<tr><td>4</td><td>Zacharyus Williams</td><td>USC</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">24.5</td></tr>
-<tr><td>5</td><td>AJ Newberry</td><td>Oregon State</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">51.5</td></tr>
-<tr><td>6</td><td>Jayden Mandal</td><td>Fresno State</td><td class="val">passing yards</td><td class="val">U</td><td class="val">221.5</td></tr>
+<tr><td>1</td><td>Jackson Arnold</td><td>UNLV</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">61.5</td></tr>
+<tr><td>2</td><td>Dylan Riley</td><td>Boise State</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">133.5</td></tr>
+<tr><td>3</td><td>Jesse Legree</td><td>Oregon State</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">109.5</td></tr>
+<tr><td>4</td><td>Byrum Brown</td><td>Auburn</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">54.5</td></tr>
+<tr><td>5</td><td>Jeremiah Smith</td><td>Ohio State</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">109.5</td></tr>
+<tr><td>6</td><td>Maddux Madsen</td><td>Boise State</td><td class="val">passing yards</td><td class="val">O</td><td class="val">210.5</td></tr>
+</tbody></table></div>
+<h4>$20 Pick 3 A</h4>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Gio Lopez</td><td>Wake Forest</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">24.5</td></tr>
+<tr><td>2</td><td>Braden Atkinson</td><td>Oregon State</td><td class="val">passing yards</td><td class="val">O</td><td class="val">312.5</td></tr>
+<tr><td>3</td><td>Wayshawn Parker</td><td>Utah</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">99.5</td></tr>
+</tbody></table></div>
+<h4>$20 Pick 3 B</h4>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Jamal Roberts</td><td>Missouri</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">119.5</td></tr>
+<tr><td>2</td><td>Caleb Hawkins</td><td>Oklahoma State</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">89.5</td></tr>
+<tr><td>3</td><td>Drew Mestemaker</td><td>Oklahoma State</td><td class="val">passing yards</td><td class="val">O</td><td class="val">309.5</td></tr>
+</tbody></table></div>
+<h4>$20 Pick 3 C</h4>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>JC French IV</td><td>Cincinnati</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">26.5</td></tr>
+<tr><td>2</td><td>JV Gibson</td><td>Cincinnati</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">49.5</td></tr>
+<tr><td>3</td><td>Rasean Jones</td><td>Boise State</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">71.5</td></tr>
 </tbody></table></div>
 <h3>WHY THIS PACK</h3>
-<p>This card is DK Showdown games only, per the graphic tagline.</p>
+<p>Each ticket stays on one game script. We did not mix clock-kill rush with a favorite throwing the ball all day, or a dog passing Over with a favorite that wants to sit on the lead.</p>
 </article>
 <article class="panel p1">
 <h3>Slate times</h3>
-<p>Same recs as THE PACK, grouped by kick (Central Time).</p>
+<p>Same recs as THE PACK, grouped by kick. Morning is before 1 p.m. ET. Afternoon is 1–4 p.m. ET. Late is 4 p.m. ET and after.</p>
 <h4>Morning</h4>
-<p>Arizona @ Texas Tech — 11:00 AM CT</p>
 <div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th><th data-col="6">Kick</th></tr></thead>
 <tbody>
-<tr><td>1</td><td>Noah Fifita</td><td>Arizona</td><td class="val">passing yards</td><td class="val">O</td><td class="val">254.5</td><td>11:00 AM CT</td></tr>
-<tr><td>2</td><td>Kenny Johnson</td><td>Texas Tech</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">62.5</td><td>11:00 AM CT</td></tr>
+<tr><td>1</td><td>Byrum Brown</td><td>AUB</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">54.5</td><td>12:45 p.m. ET</td></tr>
 </tbody></table></div>
 <h4>Afternoon</h4>
-<p>Florida @ Georgia — 2:30 PM CT</p>
 <div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th><th data-col="6">Kick</th></tr></thead>
 <tbody>
-<tr><td>3</td><td>Dwight Phillips Jr.</td><td>Georgia</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">59.5</td><td>2:30 PM CT</td></tr>
+<tr><td>1</td><td>Wayshawn Parker</td><td>UTAH</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">99.5</td><td>3:45 p.m. ET</td></tr>
+<tr><td>2</td><td>JC French IV</td><td>CIN</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">26.5</td><td>3:45 p.m. ET</td></tr>
+<tr><td>3</td><td>JV Gibson</td><td>CIN</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">49.5</td><td>3:45 p.m. ET</td></tr>
 </tbody></table></div>
 <h4>Late</h4>
-<p>Ohio State @ USC — 6:30 PM CT; Oregon State @ Fresno State — 10:00 PM CT</p>
 <div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
 <thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th><th data-col="6">Kick</th></tr></thead>
 <tbody>
-<tr><td>4</td><td>Zacharyus Williams</td><td>USC</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">24.5</td><td>6:30 PM CT</td></tr>
-<tr><td>5</td><td>AJ Newberry</td><td>Oregon State</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">51.5</td><td>10:00 PM CT</td></tr>
-<tr><td>6</td><td>Jayden Mandal</td><td>Fresno State</td><td class="val">passing yards</td><td class="val">U</td><td class="val">221.5</td><td>10:00 PM CT</td></tr>
+<tr><td>1</td><td>Caleb Hawkins</td><td>OKST</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">89.5</td><td>7:00 p.m. ET</td></tr>
+<tr><td>2</td><td>Drew Mestemaker</td><td>OKST</td><td class="val">passing yards</td><td class="val">O</td><td class="val">309.5</td><td>7:00 p.m. ET</td></tr>
+<tr><td>3</td><td>Jeremiah Smith</td><td>OSU</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">109.5</td><td>7:30 p.m. ET</td></tr>
+<tr><td>4</td><td>Jamal Roberts</td><td>MIZ</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">119.5</td><td>7:45 p.m. ET</td></tr>
+<tr><td>5</td><td>Dylan Riley</td><td>BOIS</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">133.5</td><td>10:00 p.m. ET</td></tr>
+<tr><td>6</td><td>Maddux Madsen</td><td>BOIS</td><td class="val">passing yards</td><td class="val">O</td><td class="val">210.5</td><td>10:00 p.m. ET</td></tr>
+<tr><td>7</td><td>Rasean Jones</td><td>BOIS</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">71.5</td><td>10:00 p.m. ET</td></tr>
+<tr><td>8</td><td>Jackson Arnold</td><td>UNLV</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">61.5</td><td>10:30 p.m. ET</td></tr>
+<tr><td>9</td><td>Jesse Legree</td><td>ORST</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">109.5</td><td>11:00 p.m. ET</td></tr>
+<tr><td>10</td><td>Braden Atkinson</td><td>ORST</td><td class="val">passing yards</td><td class="val">O</td><td class="val">312.5</td><td>11:00 p.m. ET</td></tr>
 </tbody></table></div>
+<p>1 rec has no posted kick — they stay on THE PACK only.</p>
 </article>
 <article class="panel p2">
-<h3>Arizona @ Texas Tech</h3>
-<p>11:00 AM CT. Pack legs for this Showdown game.</p>
+<h3>ETR VALUE</h3>
+<p>Top 40 by ETR thesis (main slate), grouped by type. Rank is 1–40 across types. Over on a starter-band role, Under when ETR is well below that band. Slightly negative Value can still be a starter. ETR fantasy points are not a book line.</p>
+<h4>Passing yards</h4>
 <div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
-<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th></tr></thead>
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
 <tbody>
-<tr><td>1</td><td>Noah Fifita</td><td>Arizona</td><td class="val">passing yards</td><td class="val">O</td><td class="val">254.5</td></tr>
-<tr><td>2</td><td>Kenny Johnson</td><td>Texas Tech</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">62.5</td></tr>
+<tr><td>7</td><td>Trinidad Chambliss</td><td>Ole Miss</td><td class="val">O</td><td class="val">283.5</td><td>13.3</td><td>28.84</td><td class="val">-32.8</td></tr>
+<tr><td>15</td><td>Braden Atkinson</td><td>Oregon State</td><td class="val">O</td><td class="val">312.5</td><td>10.8</td><td>26.32</td><td class="val">+81.8</td></tr>
+<tr><td>24</td><td>Holden Geriner</td><td>Pittsburgh</td><td class="val">O</td><td class="val">236.5</td><td>9.3</td><td>19.53</td><td class="val">-99.5</td></tr>
+<tr><td>29</td><td>Maddux Madsen</td><td>Boise State</td><td class="val">O</td><td class="val">210.5</td><td>8.7</td><td>21.18</td><td class="val">+18.2</td></tr>
+<tr><td>30</td><td>Drew Mestemaker</td><td>Oklahoma State</td><td class="val">O</td><td class="val">309.5</td><td>8.6</td><td>25.17</td><td class="val">+43.2</td></tr>
+<tr><td>39</td><td>Darian Mensah</td><td>Miami</td><td class="val">O</td><td class="val">269.5</td><td>7.2</td><td>22.96</td><td class="val">+27.5</td></tr>
+</tbody></table></div>
+<h4>Rushing yards</h4>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Jackson Arnold</td><td>UNLV</td><td class="val">O</td><td class="val">61.5</td><td>21.1</td><td>34.91</td><td class="val">+2.0</td></tr>
+<tr><td>3</td><td>Dylan Riley</td><td>Boise State</td><td class="val">O</td><td class="val">133.5</td><td>15.2</td><td>29.4</td><td class="val">+27.3</td></tr>
+<tr><td>4</td><td>Bear Bachmeier</td><td>BYU</td><td class="val">O</td><td class="val">42.5</td><td>14.3</td><td>29.35</td><td class="val">-3.3</td></tr>
+<tr><td>9</td><td>Jai&#x27;Den Thomas</td><td>UNLV</td><td class="val">O</td><td class="val">98.5</td><td>12.7</td><td>25.35</td><td class="val">-13.7</td></tr>
+<tr><td>10</td><td>Byrum Brown</td><td>Auburn</td><td class="val">O</td><td class="val">54.5</td><td>12.1</td><td>25.33</td><td class="val">+33.9</td></tr>
+<tr><td>11</td><td>Gio Lopez</td><td>Wake Forest</td><td class="val">O</td><td class="val">24.5</td><td>11.6</td><td>25.33</td><td class="val">+10.7</td></tr>
+<tr><td>16</td><td>Ashton Daniels</td><td>Florida State</td><td class="val">O</td><td class="val">50.5</td><td>10.5</td><td>25.53</td><td class="val">-4.7</td></tr>
+<tr><td>17</td><td>Devon Dampier</td><td>Utah</td><td class="val">O</td><td class="val">47.5</td><td>10.4</td><td>25.62</td><td class="val">-10.4</td></tr>
+<tr><td>19</td><td>Wayshawn Parker</td><td>Utah</td><td class="val">O</td><td class="val">99.5</td><td>10.4</td><td>25.58</td><td class="val">+17.2</td></tr>
+<tr><td>20</td><td>Quintrevion Wisner</td><td>Florida State</td><td class="val">O</td><td class="val">67.5</td><td>10.0</td><td>19.65</td><td class="val">-16.3</td></tr>
+<tr><td>26</td><td>Jamal Roberts</td><td>Missouri</td><td class="val">O</td><td class="val">119.5</td><td>9.2</td><td>24.42</td><td class="val">+27.1</td></tr>
+<tr><td>28</td><td>Caleb Hawkins</td><td>Oklahoma State</td><td class="val">O</td><td class="val">89.5</td><td>8.7</td><td>24.32</td><td class="val">+30.8</td></tr>
+<tr><td>31</td><td>JC French IV</td><td>Cincinnati</td><td class="val">O</td><td class="val">26.5</td><td>8.6</td><td>21.08</td><td class="val">+8.5</td></tr>
+<tr><td>33</td><td>Kendrick Raphael</td><td>SMU</td><td class="val">O</td><td class="val">119.5</td><td>8.4</td><td>21.77</td><td class="val">-13.1</td></tr>
+<tr><td>37</td><td>Jaylen Raynor</td><td>Iowa State</td><td class="val">O</td><td class="val">16.5</td><td>7.7</td><td>19.42</td><td class="val">+14.8</td></tr>
+<tr><td>38</td><td>Brad Jackson</td><td>Texas State</td><td class="val">O</td><td class="val">99.5</td><td>7.4</td><td>22.02</td><td class="val">-59.5</td></tr>
+</tbody></table></div>
+<h4>Receiving yards</h4>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>5</td><td>Jesse Legree</td><td>Oregon State</td><td class="val">O</td><td class="val">109.5</td><td>13.4</td><td>28.93</td><td class="val">+42.2</td></tr>
+<tr><td>13</td><td>Malachi Toney</td><td>Miami</td><td class="val">O</td><td class="val">106.5</td><td>11.3</td><td>27.96</td><td class="val">-1.8</td></tr>
+<tr><td>22</td><td>Jeremiah Smith</td><td>Ohio State</td><td class="val">O</td><td class="val">109.5</td><td>9.3</td><td>26.13</td><td class="val">+12.8</td></tr>
+<tr><td>35</td><td>Rasean Jones</td><td>Boise State</td><td class="val">O</td><td class="val">71.5</td><td>7.9</td><td>18.89</td><td class="val">+2.5</td></tr>
+</tbody></table></div>
+<h4>Receptions</h4>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>6</td><td>Jesse Legree</td><td>Oregon State</td><td class="val">O</td><td class="val">6.5</td><td>13.4</td><td>28.93</td><td class="val">+1.1</td></tr>
+<tr><td>14</td><td>Malachi Toney</td><td>Miami</td><td class="val">O</td><td class="val">8.5</td><td>11.3</td><td>27.96</td><td class="val">+0.7</td></tr>
+<tr><td>23</td><td>Jeremiah Smith</td><td>Ohio State</td><td class="val">O</td><td class="val">6.5</td><td>9.3</td><td>26.13</td><td class="val">+0.7</td></tr>
+<tr><td>36</td><td>Rasean Jones</td><td>Boise State</td><td class="val">O</td><td class="val">4.5</td><td>7.9</td><td>18.89</td><td class="val">-0.2</td></tr>
+</tbody></table></div>
+<h4>Anytime TD</h4>
+<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
+<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Side</th><th data-col="4">Line</th><th data-col="5">ETR value</th><th data-col="6">ETR proj</th><th data-col="7">Edge</th></tr></thead>
+<tbody>
+<tr><td>2</td><td>Dylan Riley</td><td>Boise State</td><td class="val">O</td><td class="val">1.5</td><td>15.2</td><td>29.4</td><td class="val">-0.7</td></tr>
+<tr><td>8</td><td>Jai&#x27;Den Thomas</td><td>UNLV</td><td class="val">O</td><td class="val">1.5</td><td>12.7</td><td>25.35</td><td class="val">-1.2</td></tr>
+<tr><td>12</td><td>Malachi Toney</td><td>Miami</td><td class="val">O</td><td class="val">0.5</td><td>11.3</td><td>27.96</td><td class="val">+0.3</td></tr>
+<tr><td>18</td><td>Wayshawn Parker</td><td>Utah</td><td class="val">O</td><td class="val">0.5</td><td>10.4</td><td>25.58</td><td class="val">+0.3</td></tr>
+<tr><td>21</td><td>Jeremiah Smith</td><td>Ohio State</td><td class="val">O</td><td class="val">0.5</td><td>9.3</td><td>26.13</td><td class="val">-0.0</td></tr>
+<tr><td>25</td><td>Jamal Roberts</td><td>Missouri</td><td class="val">O</td><td class="val">0.5</td><td>9.2</td><td>24.42</td><td class="val">+0.3</td></tr>
+<tr><td>27</td><td>Caleb Hawkins</td><td>Oklahoma State</td><td class="val">O</td><td class="val">1.5</td><td>8.7</td><td>24.32</td><td class="val">-1.0</td></tr>
+<tr><td>32</td><td>Kendrick Raphael</td><td>SMU</td><td class="val">O</td><td class="val">1.5</td><td>8.4</td><td>21.77</td><td class="val">-1.0</td></tr>
+<tr><td>34</td><td>Rasean Jones</td><td>Boise State</td><td class="val">O</td><td class="val">0.5</td><td>7.9</td><td>18.89</td><td class="val">-0.2</td></tr>
+<tr><td>40</td><td>Isaiah Sategna III</td><td>Oklahoma</td><td class="val">O</td><td class="val">0.5</td><td>7.2</td><td>20.11</td><td class="val">-0.5</td></tr>
 </tbody></table></div>
 </article>
 <article class="panel p3">
-<h3>Florida @ Georgia</h3>
-<p>2:30 PM CT. Pack leg for this Showdown game.</p>
-<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
-<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th></tr></thead>
-<tbody>
-<tr><td>3</td><td>Dwight Phillips Jr.</td><td>Georgia</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">59.5</td></tr>
-</tbody></table></div>
-</article>
-<article class="panel p4">
-<h3>Ohio State @ USC</h3>
-<p>6:30 PM CT. Pack leg for this Showdown game.</p>
-<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
-<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th></tr></thead>
-<tbody>
-<tr><td>4</td><td>Zacharyus Williams</td><td>USC</td><td class="val">receiving yards</td><td class="val">O</td><td class="val">24.5</td></tr>
-</tbody></table></div>
-</article>
-<article class="panel p5">
-<h3>Oregon State @ Fresno State</h3>
-<p>10:00 PM CT. Pack legs for this Showdown game.</p>
-<div class="gambit-table-scroll" role="region" aria-label="Scrollable data table" tabindex="0"><table class="sortable">
-<thead><tr><th data-col="0">#</th><th data-col="1">Player</th><th data-col="2">Team</th><th data-col="3">Market</th><th data-col="4">Side</th><th data-col="5">Line</th></tr></thead>
-<tbody>
-<tr><td>5</td><td>AJ Newberry</td><td>Oregon State</td><td class="val">rushing yards</td><td class="val">O</td><td class="val">51.5</td></tr>
-<tr><td>6</td><td>Jayden Mandal</td><td>Fresno State</td><td class="val">passing yards</td><td class="val">U</td><td class="val">221.5</td></tr>
-</tbody></table></div>
-</article>
-<article class="panel p6">
 <h3>SOURCES</h3>
-<ul>
-<li>ChatGPT Pick6 image <code>assets/gpt-picks/2026-10-31-cfb-pick6-chatgpt.jpg</code> sha256 <code>eaff38fc8394f9db93fef0c09d8e4da9bd742c2a9b83e5e050ab8fb31f7f2906</code></li>
-<li>DK Showdown games only</li>
-<li>Posted lines from that card</li>
-</ul>
+<p>No writer recs were quoted for this slate.</p>
 </article>
 </main></div>
 <script>
 (function(){
-  var KEY='desk-report-theme';
+  var KEY='desk-hub-theme';
+  var LEGACY='desk-report-theme';
   function apply(mode){
     document.documentElement.classList.toggle('light', mode==='light');
     var b=document.getElementById('themeBtn');
     if(b) b.textContent = mode==='light' ? 'Dark mode' : 'Light mode';
-    try { localStorage.setItem(KEY, mode); } catch (e) {}
+    try { localStorage.setItem(KEY, mode); localStorage.setItem(LEGACY, mode); } catch (e) {}
   }
   var saved=null;
   try { saved=localStorage.getItem(KEY); } catch (e) {}
+  if(saved!=='light'&&saved!=='dark'){
+    try { saved=localStorage.getItem(LEGACY); } catch (e) {}
+  }
   apply(saved==='light'?'light':'dark');
   window.toggleDeskTheme=function(){
     apply(document.documentElement.classList.contains('light')?'dark':'light');
@@ -437,28 +471,4 @@ html.light h3.cursor-picks-title{border-bottom-color:#8a6410;background:linear-g
   });
 })();
 </script>
-<script>
-(function(){
-  var KEY='desk-hub-rail';
-  function paint(closed){
-    document.documentElement.classList.toggle('rail-closed', closed);
-    var b=document.getElementById('railToggle');
-    if(!b) return;
-    b.textContent = closed ? '\u203A' : '\u2039';
-    b.setAttribute('aria-label', closed ? 'Show menu' : 'Hide menu');
-  }
-  document.documentElement.classList.remove('rail-closed');
-  paint(false);
-  window.toggleHubRail=function(){
-    var closed=!document.documentElement.classList.contains('rail-closed');
-    paint(closed);
-    try { localStorage.setItem(KEY, closed ? 'closed' : 'open'); } catch (e) {}
-  };
-  setTimeout(function(){
-    if(!document.documentElement.classList.contains('rail-closed'))
-      window.toggleHubRail();
-  }, 10000);
-})();
-</script>
-
 </body></html>
