@@ -120,5 +120,10 @@
     }
   ],
   "published": true,
-  "note": "Pushed to Norcalfish420-git/mlb-props main for GitHub Pages (Oct 31 CFB Showdown ChatGPT choice images)"
+  "note": "Pushed to Norcalfish420-git/mlb-props main for GitHub Pages (Oct 31 CFB Showdown ChatGPT choice images)",
+  "hub_page": "nfl/2026-11-01.html",
+  "asset": "assets/gpt-picks/2026-11-01-week8-pick6-chatgpt.jpg",
+  "sha256": "b7c5606a82fb1725ebdaf0010bef56a8d913c770fec54b80f503086e334a912a",
+  "restored_at": "2026-10-31T08:06:24-05:00",
+  "commit": "84590f21bbadcf5967bb2b4ff425b809c556028e"
 }
