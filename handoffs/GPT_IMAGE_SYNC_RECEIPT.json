@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-30T20:16:31-05:00",
+  "checked_at": "2026-10-31T08:10:00-05:00",
   "source": "local_example_uploads",
   "index_revision": null,
   "cards": [
@@ -108,6 +108,15 @@
       "sha256": "ac0499259b998ebd70dc28ba1e7d75d475653c096737c5fe5b95f96500adce82",
       "action": "added",
       "placement": "Card Build tab, ChatGPT picks before Cursor picks"
+    },
+    {
+      "key": "CFB|DK|CLASSIC|2026-10-31|PRIMARY",
+      "hub_page": "classic/2026-10-31.html",
+      "hub_page_mirror": "classic/index.html",
+      "asset": "assets/gpt-picks/2026-10-31_CFB-classic-chatgpt.jpg",
+      "sha256": "31a195cf0ed34500c989685c9cd7cdfcb4a7403f976e04f99a01e246bd5cb54f",
+      "action": "added",
+      "placement": "Cards tab (t0, default), ChatGPT picks before Cursor picks; no Cursor engine tables yet"
     }
   ],
   "published": true,
