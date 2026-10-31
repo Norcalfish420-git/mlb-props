@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-30T18:37:33-05:00",
+  "checked_at": "2026-10-30T20:16:31-05:00",
   "source": "local_example_uploads",
   "index_revision": null,
   "cards": [
@@ -36,8 +36,80 @@
       "sha256": "eaff38fc8394f9db93fef0c09d8e4da9bd742c2a9b83e5e050ab8fb31f7f2906",
       "action": "added",
       "placement": "THE PACK tab (g0), ChatGPT picks before Cursor picks / Pick 6 table"
+    },
+    {
+      "key": "CFB|DK|SHOWDOWN|2026-10-31|ARIZ_TTU|PRIMARY",
+      "hub_page": "showdown/2026-10-31_ARIZ_TTU.html",
+      "asset": "assets/gpt-picks/2026-10-31_ARIZ_TTU-choice1-chatgpt.jpg",
+      "sha256": "da6335e623495235d660dc128eba2acd76a1b9ce443c0fdeb1f2a69601241c51",
+      "action": "added",
+      "placement": "Card Build tab, ChatGPT picks before Cursor picks"
+    },
+    {
+      "key": "CFB|DK|SHOWDOWN|2026-10-31|ARIZ_TTU|CHOICE2",
+      "hub_page": "showdown/2026-10-31_ARIZ_TTU.html",
+      "asset": "assets/gpt-picks/2026-10-31_ARIZ_TTU-choice2-chatgpt.jpg",
+      "sha256": "7a0f84f531a4f640df387d1f40ecedd89152fbd6cf2496cf44f506cae50cba6a",
+      "action": "added",
+      "placement": "Card Build tab, ChatGPT picks before Cursor picks"
+    },
+    {
+      "key": "CFB|DK|SHOWDOWN|2026-10-31|ARIZ_TTU|CHOICE3",
+      "hub_page": "showdown/2026-10-31_ARIZ_TTU.html",
+      "asset": "assets/gpt-picks/2026-10-31_ARIZ_TTU-choice3-chatgpt.jpg",
+      "sha256": "df3c49391daaae3ab0349ae2e3eb71e9c97ad4fd9d33cb0eb941ef915630ad3d",
+      "action": "added",
+      "placement": "Card Build tab, ChatGPT picks before Cursor picks"
+    },
+    {
+      "key": "CFB|DK|SHOWDOWN|2026-10-31|OSU_USC|PRIMARY",
+      "hub_page": "showdown/2026-10-31_OSU_USC.html",
+      "asset": "assets/gpt-picks/2026-10-31_OSU_USC-choice1-chatgpt.jpg",
+      "sha256": "b92d1b86480c8c429b5829d19cba83715df5754dddd9c3635fb8132e49bce812",
+      "action": "added",
+      "placement": "Card Build tab, ChatGPT picks before Cursor picks"
+    },
+    {
+      "key": "CFB|DK|SHOWDOWN|2026-10-31|ORST_FRES|PRIMARY",
+      "hub_page": "showdown/2026-10-31_ORST_FRES.html",
+      "asset": "assets/gpt-picks/2026-10-31_ORST_FRES-choice2-chatgpt.jpg",
+      "sha256": "a6f0ef82233f7cd9766bf6018eb2a67ab57b97d414c123a6c70339f5ba7ceaa3",
+      "action": "added",
+      "placement": "Card Build tab, ChatGPT picks before Cursor picks"
+    },
+    {
+      "key": "CFB|DK|SHOWDOWN|2026-10-31|ORST_FRES|CHOICE3",
+      "hub_page": "showdown/2026-10-31_ORST_FRES.html",
+      "asset": "assets/gpt-picks/2026-10-31_ORST_FRES-choice3-chatgpt.jpg",
+      "sha256": "61433e9490d982888fe330e878a64644dad593d3b7ff22a55d37fa3bee86b0bc",
+      "action": "added",
+      "placement": "Card Build tab, ChatGPT picks before Cursor picks"
+    },
+    {
+      "key": "CFB|DK|SHOWDOWN|2026-10-31|UF_UGA|PRIMARY",
+      "hub_page": "showdown/2026-10-31_UF_UGA.html",
+      "asset": "assets/gpt-picks/2026-10-31_UF_UGA-choice1-chatgpt.jpg",
+      "sha256": "7aa23611f33133d8d88105a333e7a1db3c13917d1651a1a76cd91ed9c47520fe",
+      "action": "added",
+      "placement": "Card Build tab, ChatGPT picks before Cursor picks"
+    },
+    {
+      "key": "CFB|DK|SHOWDOWN|2026-10-31|UF_UGA|CHOICE2",
+      "hub_page": "showdown/2026-10-31_UF_UGA.html",
+      "asset": "assets/gpt-picks/2026-10-31_UF_UGA-choice2-chatgpt.jpg",
+      "sha256": "ecba271191a87a4db4ad2eae9e87a78d810092a4f715fcb5e609d1de703a4ae7",
+      "action": "added",
+      "placement": "Card Build tab, ChatGPT picks before Cursor picks"
+    },
+    {
+      "key": "CFB|DK|SHOWDOWN|2026-10-31|UF_UGA|CHOICE3",
+      "hub_page": "showdown/2026-10-31_UF_UGA.html",
+      "asset": "assets/gpt-picks/2026-10-31_UF_UGA-choice3-chatgpt.jpg",
+      "sha256": "ac0499259b998ebd70dc28ba1e7d75d475653c096737c5fe5b95f96500adce82",
+      "action": "added",
+      "placement": "Card Build tab, ChatGPT picks before Cursor picks"
     }
   ],
   "published": true,
-  "note": "Pushed to Norcalfish420-git/mlb-props main for GitHub Pages"
+  "note": "Pushed to Norcalfish420-git/mlb-props main for GitHub Pages (Oct 31 CFB Showdown ChatGPT choice images)"
 }
