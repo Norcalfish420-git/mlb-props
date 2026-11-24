@@ -1,17 +1,17 @@
 {
   "pages": {
     "cfb-desk.html": "0558371e824b6e94c500d78932921ae888647c03c7f18614fdb93a755e9b0510",
-    "cfb.html": "caa387dcc0c6c10aa41e49a50bff24117f52974397f123721eceb1b72b1f806f",
+    "cfb.html": "e979b2c8edea608194a4ad9a9d63f4b6ea92e4d7be3a3311f9edea86a3e4f6be",
     "classic.html": "4e5764cfbc87d9d8a71759f024d133d2835aec59d58923a7ce54010764d98faa",
     "horses.html": "cfd3625f2f4bb616f4b377c5e6c0ae3468b92be31019460649c8fa6f059f8ebd",
-    "hub.html": "025a52845b5e03ecc6f5162a2b5a66faa673c660369f1c3200af551b698d7141",
+    "hub.html": "28361c106fc903e4d5c36923a925607b3d9628f784785dcf0ba765bfdef78c12",
     "mlb.html": "5da9bf923178f0779f91c485478bfbecbb9e4da1fa95e961ec193a1d04f001e2",
     "nfl-classic.html": "b52dd4ab891743543e6c7151d77601a8005f7754e3dcb226348d0011b5ced2a1",
     "nfl-desk.html": "bd8a134885f44d9802e3bde205422d153930463b7d05513a85d182f8b19066be",
-    "nfl-showdown.html": "429b3d7d4f0804ba7dc805b8a274937c5a2a7ee6615a7bb487b9469a172b5ad5",
+    "nfl-showdown.html": "f8f569b7acc08baf8c0f1190a453b3d4ec3d604861d21dab773e521cf4da7143",
     "nfl.html": "066203732c761ce736a2335cacb48209a5978b07ad22340f97b0fc5f1026a3c5",
     "results.html": "0dbeeb942883d49dbefdfe529b47088d8bdeff4abe6775c4fff7c6cf37e63fec",
-    "showdown.html": "c867df21b8ec20fe706f7d74d2f59dea7fa25943d8df7062e72d73a53135fda0"
+    "showdown.html": "73bac746fafebaf58595cdc01acb397182898ecf15be0b970adab137967a56bb"
   },
   "schema": 1
 }
